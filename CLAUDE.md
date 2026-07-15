@@ -18,8 +18,8 @@ library, or a design project scoped exclusively to CoreOps.
 - Framework: Nova Development Framework v1.0.0
 - Phase: Foundation / Pre-Design
 - First reference consumer: CoreOps (not the sole design target)
-- Completed work packages: CDS-WP-001, CDS-WP-001A
-- Next work package: CDS-WP-002 — Concept and Scope Registration
+- Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002
+- Next work package: CDS-WP-003 — Benchmark and Differentiation Research
 
 ## Execution environment
 
@@ -175,6 +175,12 @@ authority.
 Before beginning a work package, inspect at minimum:
 
 - [README.md](README.md)
+- [project-system/CONTEXT_PACK_FOUNDATION.md](project-system/CONTEXT_PACK_FOUNDATION.md)
+  — compact orientation; a summary, never a normative source
+- [docs/governance/CONCEPT_AND_SCOPE.md](docs/governance/CONCEPT_AND_SCOPE.md)
+  — normative source for concept, scope, non-goals, and ownership
+- [docs/governance/CONSUMER_AND_STAKEHOLDER_MODEL.md](docs/governance/CONSUMER_AND_STAKEHOLDER_MODEL.md)
+- [docs/governance/SCOPE_BOUNDARY_MATRIX.md](docs/governance/SCOPE_BOUNDARY_MATRIX.md)
 - [docs/governance/PROJECT_CHARTER.md](docs/governance/PROJECT_CHARTER.md)
 - [docs/decisions/DECISION_INDEX.md](docs/decisions/DECISION_INDEX.md)
 - [docs/risks/RISK_REGISTER.md](docs/risks/RISK_REGISTER.md)
@@ -182,6 +188,8 @@ Before beginning a work package, inspect at minimum:
 - [project-system/WORK_PACKAGES.md](project-system/WORK_PACKAGES.md)
 - [project-system/NEXT_PHASE.md](project-system/NEXT_PHASE.md)
 - [project-brain/PROJECT_BRAIN.md](project-brain/PROJECT_BRAIN.md)
+
+Where a summary disagrees with a normative source, the normative source wins.
 - the local Skills relevant to the assignment, selected per the Skills-first
   operating mode above ([inventory](project-system/NDF_SKILLS_INVENTORY.md))
 

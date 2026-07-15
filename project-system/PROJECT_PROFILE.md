@@ -23,9 +23,44 @@ Foundation / Pre-Design
 
 ## Work package status
 
-- Current work package: CDS-WP-002 — Concept and Scope Registration (Next)
-- Previous work package: CDS-WP-001A — NDF Skills Bootstrap (Completed)
-- Completed work packages: CDS-WP-001, CDS-WP-001A
+- Current work package: CDS-WP-003 — Benchmark and Differentiation Research (Next)
+- Previous work package: CDS-WP-002 — Concept and Scope Registration (Completed)
+- Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002
+
+## Registered scope
+
+Six capability domains (DEC-S-007):
+
+1. Brand and Identity
+2. Experience and Interaction
+3. Foundations and Tokens
+4. Components and Patterns
+5. Channels and Communication
+6. Governance and Enablement
+
+Cross-cutting concerns: accessibility, inclusive design, localization and
+internationalization, offline and self-hosted use, security-aware interaction
+design, privacy-aware interaction design, maintainability, provenance and
+licensing, quality evidence, design-code-documentation alignment.
+
+Registration is scope, not availability. Long-term scope creates no delivery,
+stability, support, release, or compatibility commitment (DEC-S-009).
+
+Normative source: [Concept and Scope](../docs/governance/CONCEPT_AND_SCOPE.md)
+
+## Consumer classes
+
+Three relationship classes (DEC-S-010):
+
+- Core Product Consumer
+- Associated Project Consumer
+- Potential External Consumer
+
+Classification grants no brand endorsement, public availability, licensing
+rights, or support.
+
+Normative source:
+[Consumer and Stakeholder Model](../docs/governance/CONSUMER_AND_STAKEHOLDER_MODEL.md)
 
 ## NDF Skills
 
@@ -72,10 +107,16 @@ Further anticipated consumers:
 Consumer inclusion does not automatically authorize full brand adoption.
 Product-family classes and adoption levels remain to be defined.
 
+CoreOps-specific solutions remain CoreOps-owned unless generalized and
+explicitly accepted through a CDS work package (see DEC-S-011). The concrete
+pilot contract is defined in CDS-WP-004.
+
 ## Register scope
 
-- Decisions: DEC-S-001 … DEC-S-006 (6 strategic foundation decisions)
-- Risks: RISK-001 … RISK-005 (5 initial risks)
+- Decisions: DEC-S-001 … DEC-S-012 (12) — 6 strategic foundation decisions
+  (CDS-WP-001) and 6 strategic scope decisions (CDS-WP-002)
+- Risks: RISK-001 … RISK-009 (9) — risk owner model provisional until
+  CDS-WP-006
 
 ## Intentionally open decision areas
 
@@ -101,13 +142,20 @@ No final decision exists for:
 - public release,
 - contribution model,
 - long-term compatibility commitments,
-- concrete product signatures.
+- concrete product signatures,
+- versioning and maturity model,
+- conformance and adoption policy,
+- product profile and override governance.
 
 These areas remain open until an explicitly authorized work package decides
 them (see DEC-S-003).
 
 ## Related documents
 
+- [Concept and Scope](../docs/governance/CONCEPT_AND_SCOPE.md) — normative scope source
+- [Consumer and Stakeholder Model](../docs/governance/CONSUMER_AND_STAKEHOLDER_MODEL.md)
+- [Scope Boundary Matrix](../docs/governance/SCOPE_BOUNDARY_MATRIX.md)
+- [Foundation Context Pack](CONTEXT_PACK_FOUNDATION.md)
 - [Work Packages](WORK_PACKAGES.md)
 - [Next Phase](NEXT_PHASE.md)
 - [Project Charter](../docs/governance/PROJECT_CHARTER.md)

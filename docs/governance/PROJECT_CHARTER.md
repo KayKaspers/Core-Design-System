@@ -35,34 +35,34 @@ CDS is deliberately **not**:
 
 ## Scope categories
 
-The long-term scope of CDS includes:
+The CDS scope is registered normatively in
+[Concept and Scope](CONCEPT_AND_SCOPE.md). That document takes precedence over
+this summary.
 
-- brand strategy,
-- corporate identity,
-- corporate design,
-- design principles,
-- UX,
-- UI,
-- components,
-- design tokens,
-- colors,
-- typography,
-- icons,
-- logos,
-- GitHub presentation,
-- document design,
-- PDF layouts,
-- presentations,
-- diagram standards,
-- dashboards,
-- accessibility,
-- motion,
-- marketing materials,
-- product-family governance.
+The long-term scope is classified through six capability domains (DEC-S-007):
 
-This list describes the long-term scope. It does **not** authorize concrete work
-in any of these areas. Each area requires an explicitly authorized work package
-before implementation begins.
+1. **Brand and Identity**
+2. **Experience and Interaction**
+3. **Foundations and Tokens**
+4. **Components and Patterns**
+5. **Channels and Communication**
+6. **Governance and Enablement**
+
+Cross-cutting quality concerns apply across all six: accessibility, inclusive
+design, localization and internationalization, offline and self-hosted use,
+security-aware interaction design, privacy-aware interaction design,
+maintainability, provenance and licensing, quality evidence, and
+design-code-documentation alignment. These are quality requirements — not
+certification, legal-compliance, or conformance commitments.
+
+This describes the long-term scope. It does **not** authorize concrete work in
+any of these areas, and inclusion creates no delivery, stability, support,
+release, or compatibility commitment (DEC-S-009). Each area requires an
+explicitly authorized work package before implementation begins.
+
+The per-area responsibility split between CDS and its consumers is registered
+in the [Scope Boundary Matrix](SCOPE_BOUNDARY_MATRIX.md); the non-goals are
+registered in [Concept and Scope](CONCEPT_AND_SCOPE.md).
 
 ## Current phase boundary
 
@@ -98,6 +98,16 @@ AirCore — are anticipated consumers. Consumer inclusion does not automatically
 authorize full brand adoption; product-family classes and adoption levels remain
 to be defined.
 
+CDS distinguishes three consumer relationship classes — Core Product Consumer,
+Associated Project Consumer, and Potential External Consumer (DEC-S-010).
+Classification grants no brand endorsement, public availability, licensing
+rights, or support. The full model is registered in the
+[Consumer and Stakeholder Model](CONSUMER_AND_STAKEHOLDER_MODEL.md).
+
+CoreOps-specific solutions remain CoreOps-owned unless they are generalized and
+explicitly accepted through a CDS work package (DEC-S-011). The concrete pilot
+contract is defined in CDS-WP-004.
+
 ## Authority model
 
 | Role | Authority |
@@ -129,11 +139,29 @@ policy is set, and the Foundation Milestone Review has passed.
 Only after that review may concrete visual and technical design decisions be
 authorized.
 
+### Foundation status
+
+| Step | Status |
+| --- | --- |
+| Governance foundation established (CDS-WP-001) | Done |
+| NDF Skills adopted and verified (CDS-WP-001A) | Done |
+| Concept and scope registered (CDS-WP-002) | Done |
+| Benchmark and differentiation research (CDS-WP-003) | Next |
+| Consumer requirements and CoreOps pilot contract (CDS-WP-004) | Planned |
+| Design-system architecture (CDS-WP-005) | Planned |
+| Governance, versioning, contribution model (CDS-WP-006) | Planned |
+| Accessibility and inclusive-design policy (CDS-WP-007) | Planned |
+| Foundation Milestone Review (CDS-WP-008) | Planned |
+
 ## Related documents
 
+- [Concept and Scope](CONCEPT_AND_SCOPE.md) — normative scope source
+- [Consumer and Stakeholder Model](CONSUMER_AND_STAKEHOLDER_MODEL.md)
+- [Scope Boundary Matrix](SCOPE_BOUNDARY_MATRIX.md)
 - [Decision Index](../decisions/DECISION_INDEX.md)
 - [Risk Register](../risks/RISK_REGISTER.md)
 - [Project Profile](../../project-system/PROJECT_PROFILE.md)
 - [Work Packages](../../project-system/WORK_PACKAGES.md)
 - [Next Phase](../../project-system/NEXT_PHASE.md)
+- [Foundation Context Pack](../../project-system/CONTEXT_PACK_FOUNDATION.md)
 - [Project Brain](../../project-brain/PROJECT_BRAIN.md)

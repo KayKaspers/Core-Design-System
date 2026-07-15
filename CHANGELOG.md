@@ -9,6 +9,22 @@ released and no release is announced.
 
 ### Added
 
+- Registered concept and scope as the normative scope source: problem
+  statement, mission, vision, strategic objectives, six capability domains,
+  cross-cutting concerns, current Foundation scope separated from long-term
+  scope, twelve binding non-goals, ownership boundaries, CoreOps pilot
+  boundary, assumptions, and deferred decisions. (CDS-WP-002)
+- Consumer and Stakeholder Model with direct users, indirect beneficiaries,
+  stakeholder roles, three consumer relationship classes, channel-consumer
+  categories, and the limits of the classification. (CDS-WP-002)
+- Scope Boundary Matrix registering the per-area split between CDS
+  responsibility, consumer responsibility, and shared or contract-controlled
+  responsibility. (CDS-WP-002)
+- Foundation Context Pack as a compact, explicitly non-normative continuation
+  summary. (CDS-WP-002)
+- Strategic scope decisions DEC-S-007 … DEC-S-012. (CDS-WP-002)
+- Risks RISK-006 … RISK-009. (CDS-WP-002)
+- Work-package evidence notes for CDS-WP-002.
 - Verified local adoption of the 38 docs-only NDF v1.0.0 Claude Skills under
   `.claude/skills/`, extracted byte-identically from the released NDF v1.0.0
   tag (commit `9dcadc12fb960914b9a5baeff2ab1aee75912b57`). Upstream contents
@@ -31,6 +47,24 @@ released and no release is announced.
 
 ### Changed
 
+- Project charter consolidated with the registered scope: capability domains,
+  consumer classes, pilot boundary, and Foundation status; it now references
+  the normative scope source instead of carrying its own scope list.
+  (CDS-WP-002)
+- Decision index extended to DEC-S-001 … DEC-S-012 and now distinguishes
+  strategic foundation decisions from strategic scope decisions.
+  DEC-S-001 … DEC-S-006 unchanged. (CDS-WP-002)
+- Risk register extended to RISK-001 … RISK-009 with an explicit note that the
+  risk owner model is provisional until CDS-WP-006. RISK-002 gained a
+  cross-reference to the CoreOps pilot boundary without changing its meaning.
+  (CDS-WP-002)
+- Work-package status advanced: CDS-WP-002 completed, CDS-WP-003 next.
+  (CDS-WP-002)
+- README, project profile, project brain, and next-phase definition updated
+  with the registered scope, consumer classes, register ranges, and the
+  CDS-WP-003 boundaries. (CDS-WP-002)
+- Claude working instructions updated with the context-pack and normative scope
+  references and the current work-package pointers. (CDS-WP-002)
 - Skills-first operating mode activated in the Claude working instructions,
   including selection, context-economy, authority-boundary, fail-closed, and
   Skill-maintenance rules. (CDS-WP-001A)

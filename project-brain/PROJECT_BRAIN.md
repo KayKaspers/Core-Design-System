@@ -53,10 +53,59 @@ areas today.
 Governance foundation established. No final design or technology decisions are
 approved.
 
-- Decisions: DEC-S-001 … DEC-S-006 (6) — all strategic foundation decisions
-- Risks: RISK-001 … RISK-005 (5)
-- Completed work packages: CDS-WP-001, CDS-WP-001A
-- Next work package: CDS-WP-002
+- Decisions: DEC-S-001 … DEC-S-012 (12) — 6 foundation + 6 scope decisions
+- Risks: RISK-001 … RISK-009 (9) — owner model provisional until CDS-WP-006
+- Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002
+- Next work package: CDS-WP-003
+
+## Registered scope
+
+Scope is registered normatively in
+[Concept and Scope](../docs/governance/CONCEPT_AND_SCOPE.md).
+
+Six capability domains (DEC-S-007): Brand and Identity · Experience and
+Interaction · Foundations and Tokens · Components and Patterns · Channels and
+Communication · Governance and Enablement.
+
+Cross-cutting concerns: accessibility, inclusive design, localization and
+internationalization, offline and self-hosted use, security-aware interaction
+design, privacy-aware interaction design, maintainability, provenance and
+licensing, quality evidence, design-code-documentation alignment. These are
+quality requirements — not certification or conformance claims.
+
+**Registration is not availability.** Long-term scope creates no delivery,
+stability, support, release, or compatibility commitment (DEC-S-009).
+
+Currently active: concept, scope, non-goals, user groups, consumer classes,
+ownership boundaries, governance foundations, and planning for the remaining
+Foundation work packages. Not implemented: brand identity, visual design,
+components, tokens, tools, packages, public releases.
+
+## Consumer classes and ownership
+
+Three relationship classes (DEC-S-010): Core Product Consumer · Associated
+Project Consumer · Potential External Consumer. Classification grants no brand
+endorsement, public availability, licensing rights, or support. It is a
+relationship model, not a brand architecture. See
+[Consumer and Stakeholder Model](../docs/governance/CONSUMER_AND_STAKEHOLDER_MODEL.md).
+
+CDS owns normative shared design rules and accepted shared artifacts; consumers
+own product strategy, business logic, domain data, backend, security
+architecture, operations, and integration of a chosen CDS version (DEC-S-008).
+Permanent non-goals: business logic, domain data, backend architecture,
+security architecture, deployment and operations. Shared/contract-controlled
+areas — new shared components and patterns, profiles, overrides, migrations,
+breaking changes, conformance claims — are governed in CDS-WP-006. Per-area
+split: [Scope Boundary Matrix](../docs/governance/SCOPE_BOUNDARY_MATRIX.md).
+
+## CoreOps pilot boundary
+
+CoreOps is the first reference consumer and supplies real requirements and
+validation cases, but does not alone determine CDS architecture.
+CoreOps-specific solutions stay CoreOps-owned unless multi-consumer relevant or
+justifiably generalizable, checked against CDS principles, explicitly accepted
+via a CDS work package, and documentable, testable, and versionable
+(DEC-S-011). Pilot contract: CDS-WP-004.
 
 ## NDF Skills
 
@@ -86,6 +135,12 @@ Details: [Provenance](../docs/governance/NDF_SKILLS_PROVENANCE.md) ·
 | DEC-S-004 | Normative sources must remain tool-independent; no proprietary tool as sole source of truth. |
 | DEC-S-005 | Human Maintainer holds exclusive authority over Git writes, releases, publication, and approvals. |
 | DEC-S-006 | Artifacts and consumer usage must support offline and self-hosted operation. |
+| DEC-S-007 | Scope classified through six capability domains plus cross-cutting concerns. |
+| DEC-S-008 | CDS owns shared design rules; consumers own their products. |
+| DEC-S-009 | Long-term scope is not a delivery, support, or compatibility commitment. |
+| DEC-S-010 | Three consumer relationship classes; classification grants nothing. |
+| DEC-S-011 | Pilot results become normative only when generalized and accepted. |
+| DEC-S-012 | Adoption/conformance claims require a version reference and evidence. |
 
 Details: [Decision Index](../docs/decisions/DECISION_INDEX.md)
 
@@ -98,7 +153,12 @@ Details: [Decision Index](../docs/decisions/DECISION_INDEX.md)
 | RISK-003 | Premature design decisions. | Monitored |
 | RISK-004 | Tool lock-in and source divergence. | Monitored |
 | RISK-005 | Design, code, and documentation drift. | Monitored |
+| RISK-006 | Ownership boundary ambiguity. | Monitored |
+| RISK-007 | Long-term scope interpreted as current commitment. | Monitored |
+| RISK-008 | Consumer fragmentation. | Monitored |
+| RISK-009 | Misleading adoption or association claims. | Monitored |
 
+Owner model provisional until CDS-WP-006.
 Details: [Risk Register](../docs/risks/RISK_REGISTER.md)
 
 ## Intentionally open decisions
@@ -107,27 +167,28 @@ No final decision exists for: logo, logo architecture, colors, typography,
 icons, illustration, imagery, dark theme, light theme, design tool, component
 framework, token format, token build system, documentation platform, package
 architecture, repository split, license, public release, contribution model,
-long-term compatibility commitments, or concrete product signatures.
-
-## Pilot consumer
-
-CoreOps is the first reference consumer of stable CDS foundations. It provides
-adoption evidence and real-world validation. It is explicitly not the sole
-design target and not the sole source of requirements. SpeakCore, CastCore,
-AirCore, and future Core products are anticipated consumers; inclusion does not
-by itself authorize full brand adoption.
+long-term compatibility commitments, concrete product signatures, versioning
+and maturity model, conformance and adoption policy, or product profile and
+override governance.
 
 ## Next step
 
-CDS-WP-002 — Concept and Scope Registration: formal registration of concept,
-scope, non-goals, target audiences, consumer classes, and project boundaries.
-Still no concrete visual or technical design decisions. Requires an explicit
-work-package prompt from Nova.
+CDS-WP-003 — Benchmark and Differentiation Research: analyze established design
+systems and derive the CDS differentiation position. Analysis and documentation
+only — no visual elements or foreign design content copied. Concrete research
+sources and web research require explicit authorization in the CDS-WP-003
+prompt. Still no final tool, branding, or technology decision. Requires an
+explicit work-package prompt from Nova.
 
 ## Related documents
 
+- [Concept and Scope](../docs/governance/CONCEPT_AND_SCOPE.md) — normative scope source
+- [Consumer and Stakeholder Model](../docs/governance/CONSUMER_AND_STAKEHOLDER_MODEL.md)
+- [Scope Boundary Matrix](../docs/governance/SCOPE_BOUNDARY_MATRIX.md)
+- [Foundation Context Pack](../project-system/CONTEXT_PACK_FOUNDATION.md)
 - [Project Charter](../docs/governance/PROJECT_CHARTER.md)
 - [Project Profile](../project-system/PROJECT_PROFILE.md)
 - [Work Packages](../project-system/WORK_PACKAGES.md)
 - [Next Phase](../project-system/NEXT_PHASE.md)
 - [CDS-WP-001 Governance Bootstrap Notes](CDS_WP_001_GOVERNANCE_BOOTSTRAP_NOTES.md)
+- [CDS-WP-002 Concept and Scope Registration Notes](CDS_WP_002_CONCEPT_AND_SCOPE_REGISTRATION_NOTES.md)

@@ -3,8 +3,8 @@
 Controlled work-package roadmap for the Core Design System (CDS).
 
 - **Phase:** Foundation / Pre-Design
-- **Completed work packages:** CDS-WP-001, CDS-WP-001A
-- **Next work package:** CDS-WP-002
+- **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002
+- **Next work package:** CDS-WP-003
 
 ## Status values
 
@@ -20,8 +20,8 @@ Controlled work-package roadmap for the Core Design System (CDS).
 | --- | --- | --- | --- |
 | CDS-WP-001 | Project Governance and NDF Bootstrap | Completed | — |
 | CDS-WP-001A | NDF Skills Bootstrap | Completed | CDS-WP-001 |
-| CDS-WP-002 | Concept and Scope Registration | Next | CDS-WP-001A |
-| CDS-WP-003 | Benchmark and Differentiation Research | Planned | CDS-WP-002 |
+| CDS-WP-002 | Concept and Scope Registration | Completed | CDS-WP-001A |
+| CDS-WP-003 | Benchmark and Differentiation Research | Next | CDS-WP-002 |
 | CDS-WP-004 | Consumer Requirements and CoreOps Pilot Contract | Planned | CDS-WP-002 |
 | CDS-WP-005 | Design System Architecture | Planned | CDS-WP-003, CDS-WP-004 |
 | CDS-WP-006 | Governance, Versioning, and Contribution Model | Planned | CDS-WP-005 |
@@ -52,18 +52,24 @@ operating mode. See
 
 ### CDS-WP-002 — Concept and Scope Registration
 
-**Status:** Next
+**Status:** Completed
 
-Formally registers the CDS concept, scope, non-goals, target audiences,
-consumer classes, and project boundaries, separating long-term scope from
-currently authorized scope. No concrete visual or technical design decisions.
+Registered the CDS concept, six capability domains, cross-cutting concerns,
+current and long-term scope, non-goals, user groups, three consumer classes,
+ownership boundaries, and the CoreOps pilot boundary. Added DEC-S-007…DEC-S-012
+and RISK-006…RISK-009, and established the Foundation Context Pack. See
+[Concept and Scope](../docs/governance/CONCEPT_AND_SCOPE.md),
+[Consumer and Stakeholder Model](../docs/governance/CONSUMER_AND_STAKEHOLDER_MODEL.md),
+and [Scope Boundary Matrix](../docs/governance/SCOPE_BOUNDARY_MATRIX.md).
 
 ### CDS-WP-003 — Benchmark and Differentiation Research
 
-**Status:** Planned
+**Status:** Next
 
 Analyzes established design systems and derives the differentiation position of
-CDS within the Core ecosystem.
+CDS within the Core ecosystem. Analysis and documentation only: no visual
+elements or foreign design content are copied, and concrete research sources
+require explicit authorization in the CDS-WP-003 prompt.
 
 ### CDS-WP-004 — Consumer Requirements and CoreOps Pilot Contract
 
