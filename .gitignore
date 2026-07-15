@@ -1,0 +1,35 @@
+﻿# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local Claude configuration
+.claude/settings.local.json
+
+# Editors
+.vscode/
+.idea/
+*.code-workspace
+
+# Operating systems
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+~$*
+
+# Generated output
+dist/
+build/
+coverage/
+generated/
