@@ -55,8 +55,26 @@ approved.
 
 - Decisions: DEC-S-001 … DEC-S-006 (6) — all strategic foundation decisions
 - Risks: RISK-001 … RISK-005 (5)
-- Completed work package: CDS-WP-001
-- Next work package: CDS-WP-001A
+- Completed work packages: CDS-WP-001, CDS-WP-001A
+- Next work package: CDS-WP-002
+
+## NDF Skills
+
+The released NDF v1.0.0 Claude Skills are adopted locally under
+`.claude/skills/`, pinned to commit
+`9dcadc12fb960914b9a5baeff2ab1aee75912b57`.
+
+- 38 docs-only Skills, all verified byte-identical against the released tag.
+- Provenance and a machine-readable hash manifest exist.
+- The local copy is a pinned consumption copy, not an independent fork.
+- **Skills-first operating mode is active:** select only the Skills relevant to
+  the assignment, never load all 38 by default, and never let a Skill extend
+  scope or Allowed Files. Prompt and Human Maintainer gates override any Skill.
+- Skill updates require a separate authorized Skill-Maintenance work package.
+
+Details: [Provenance](../docs/governance/NDF_SKILLS_PROVENANCE.md) ·
+[Inventory](../project-system/NDF_SKILLS_INVENTORY.md) ·
+[Manifest](../project-system/NDF_SKILLS_MANIFEST.json)
 
 ## Decisions in force
 
@@ -101,10 +119,10 @@ by itself authorize full brand adoption.
 
 ## Next step
 
-CDS-WP-001A — NDF Skills Bootstrap: controlled adoption and verification of the
-approved NDF v1.0.0 Skills, without modifying their normative upstream content
-and without any visual design decisions. Requires an explicit work-package
-prompt from Nova.
+CDS-WP-002 — Concept and Scope Registration: formal registration of concept,
+scope, non-goals, target audiences, consumer classes, and project boundaries.
+Still no concrete visual or technical design decisions. Requires an explicit
+work-package prompt from Nova.
 
 ## Related documents
 

@@ -23,8 +23,21 @@ Foundation / Pre-Design
 
 ## Work package status
 
-- Completed work package: CDS-WP-001 — Project Governance and NDF Bootstrap
-- Next work package: CDS-WP-001A — NDF Skills Bootstrap
+- Current work package: CDS-WP-002 — Concept and Scope Registration (Next)
+- Previous work package: CDS-WP-001A — NDF Skills Bootstrap (Completed)
+- Completed work packages: CDS-WP-001, CDS-WP-001A
+
+## NDF Skills
+
+- NDF Skills Version: v1.0.0
+- Skills Count: 38
+- Skills Status: Verified and locally available
+- Skills Source Commit: `9dcadc12fb960914b9a5baeff2ab1aee75912b57`
+- Skills-first Operating Mode: Active
+
+Details: [NDF Skills Inventory](NDF_SKILLS_INVENTORY.md),
+[NDF Skills Manifest](NDF_SKILLS_MANIFEST.json),
+[NDF Skills Provenance](../docs/governance/NDF_SKILLS_PROVENANCE.md)
 
 ## Current strategic position
 

@@ -3,8 +3,8 @@
 Controlled work-package roadmap for the Core Design System (CDS).
 
 - **Phase:** Foundation / Pre-Design
-- **Completed work package:** CDS-WP-001
-- **Next work package:** CDS-WP-001A
+- **Completed work packages:** CDS-WP-001, CDS-WP-001A
+- **Next work package:** CDS-WP-002
 
 ## Status values
 
@@ -19,8 +19,8 @@ Controlled work-package roadmap for the Core Design System (CDS).
 | ID | Title | Status | Depends on |
 | --- | --- | --- | --- |
 | CDS-WP-001 | Project Governance and NDF Bootstrap | Completed | — |
-| CDS-WP-001A | NDF Skills Bootstrap | Next | CDS-WP-001 |
-| CDS-WP-002 | Concept and Scope Registration | Planned | CDS-WP-001A |
+| CDS-WP-001A | NDF Skills Bootstrap | Completed | CDS-WP-001 |
+| CDS-WP-002 | Concept and Scope Registration | Next | CDS-WP-001A |
 | CDS-WP-003 | Benchmark and Differentiation Research | Planned | CDS-WP-002 |
 | CDS-WP-004 | Consumer Requirements and CoreOps Pilot Contract | Planned | CDS-WP-002 |
 | CDS-WP-005 | Design System Architecture | Planned | CDS-WP-003, CDS-WP-004 |
@@ -41,18 +41,22 @@ Governance and documentation work only; no visual design.
 
 ### CDS-WP-001A — NDF Skills Bootstrap
 
-**Status:** Next
+**Status:** Completed
 
 Controlled adoption and verification of the approved NDF v1.0.0 Skills into
-this repository, without modifying their normative upstream content. No visual
-design decisions are permitted in this work package.
+this repository, without modifying their normative upstream content. Adopted 38
+verified docs-only Skills pinned to NDF v1.0.0 and activated the Skills-first
+operating mode. See
+[NDF Skills Provenance](../docs/governance/NDF_SKILLS_PROVENANCE.md) and
+[NDF Skills Inventory](NDF_SKILLS_INVENTORY.md).
 
 ### CDS-WP-002 — Concept and Scope Registration
 
-**Status:** Planned
+**Status:** Next
 
-Registers the concrete CDS concept and the authorized scope per area,
-separating long-term scope from currently authorized scope.
+Formally registers the CDS concept, scope, non-goals, target audiences,
+consumer classes, and project boundaries, separating long-term scope from
+currently authorized scope. No concrete visual or technical design decisions.
 
 ### CDS-WP-003 — Benchmark and Differentiation Research
 

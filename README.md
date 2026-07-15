@@ -61,10 +61,24 @@ This project follows the Nova Development Framework v1.0.0.
 Claude Desktop with a locally connected repository is the execution environment
 for Claude work.
 
+### Skills-first operating mode
+
+**Active.** The NDF v1.0.0 Skills Bootstrap is complete: 38 locally verified
+docs-only Skills are available under `.claude/skills/`, pinned byte-identical to
+the released NDF v1.0.0 tag.
+
+Claude selects only the Skills relevant to a given work package rather than
+loading all of them. Skills provide procedural support; they never extend scope
+or override the work-package prompt or the Human Maintainer gates.
+
+- [NDF Skills Provenance](docs/governance/NDF_SKILLS_PROVENANCE.md)
+- [NDF Skills Inventory](project-system/NDF_SKILLS_INVENTORY.md)
+
 ## Work packages
 
 - **Completed:** CDS-WP-001 — Project Governance and NDF Bootstrap
-- **Next:** CDS-WP-001A — NDF Skills Bootstrap
+- **Completed:** CDS-WP-001A — NDF Skills Bootstrap
+- **Next:** CDS-WP-002 — Concept and Scope Registration
 
 The full controlled roadmap is in
 [project-system/WORK_PACKAGES.md](project-system/WORK_PACKAGES.md).

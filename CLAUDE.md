@@ -18,8 +18,8 @@ library, or a design project scoped exclusively to CoreOps.
 - Framework: Nova Development Framework v1.0.0
 - Phase: Foundation / Pre-Design
 - First reference consumer: CoreOps (not the sole design target)
-- Completed work package: CDS-WP-001
-- Next work package: CDS-WP-001A
+- Completed work packages: CDS-WP-001, CDS-WP-001A
+- Next work package: CDS-WP-002 — Concept and Scope Registration
 
 ## Execution environment
 
@@ -131,11 +131,44 @@ build systems, fonts, or icons.
    is written in German. File names and identifiers are English. Project and
    product names are not translated.
 
-## NDF Skills
+## Skills-first operating mode
 
-NDF Skills are **not** imported yet. Their controlled adoption and verification
-happens in CDS-WP-001A. Do not import, copy, or modify NDF Skills before that
-work package is explicitly authorized.
+**Status: Active** (activated in CDS-WP-001A).
+
+The 38 verified docs-only NDF v1.0.0 Skills are available locally under
+`.claude/skills/`. They are a controlled procedural aid — they never grant
+authority.
+
+### Selection and context economy
+
+1. Before a work package, first read `CLAUDE.md` and the project-control files.
+2. Then select only the Skills actually relevant to the concrete assignment.
+3. Do **not** load or reproduce all 38 Skills by default.
+4. Read only the necessary Skills and only their necessary sections.
+
+### Authority boundaries
+
+5. Skills are procedural support, not authorization.
+6. A Skill never extends scope or Allowed Files on its own.
+7. The explicit work-package prompt and the Human Maintainer gates remain
+   binding and override any Skill.
+8. On any conflict between prompt, project control, and Skill: **fail closed**
+   and report to Nova.
+
+### Skill maintenance
+
+9. Never modify a Skill file during normal product work.
+10. Skill changes or updates happen only in an explicitly authorized
+    Skill-Maintenance work package.
+11. Skill provenance is controlled by
+    [docs/governance/NDF_SKILLS_PROVENANCE.md](docs/governance/NDF_SKILLS_PROVENANCE.md)
+    and
+    [project-system/NDF_SKILLS_MANIFEST.json](project-system/NDF_SKILLS_MANIFEST.json).
+    The local copy is pinned to NDF v1.0.0 and is not an independent fork.
+
+### Reporting
+
+12. Name the Skills actually used in the completion report to Nova.
 
 ## Required project context
 
@@ -149,8 +182,8 @@ Before beginning a work package, inspect at minimum:
 - [project-system/WORK_PACKAGES.md](project-system/WORK_PACKAGES.md)
 - [project-system/NEXT_PHASE.md](project-system/NEXT_PHASE.md)
 - [project-brain/PROJECT_BRAIN.md](project-brain/PROJECT_BRAIN.md)
-- applicable local Claude Skills once the Skills Bootstrap (CDS-WP-001A) is
-  complete
+- the local Skills relevant to the assignment, selected per the Skills-first
+  operating mode above ([inventory](project-system/NDF_SKILLS_INVENTORY.md))
 
 ## Required completion report
 
