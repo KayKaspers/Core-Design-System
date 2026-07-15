@@ -53,10 +53,11 @@ areas today.
 Governance foundation established. No final design or technology decisions are
 approved.
 
-- Decisions: DEC-S-001 … DEC-S-012 (12) — 6 foundation + 6 scope decisions
-- Risks: RISK-001 … RISK-009 (9) — owner model provisional until CDS-WP-006
-- Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002
-- Next work package: CDS-WP-003
+- Decisions: DEC-S-001 … DEC-S-012 (12) — 6 foundation + 6 scope decisions;
+  unchanged by CDS-WP-003
+- Risks: RISK-001 … RISK-013 (13) — owner model provisional until CDS-WP-006
+- Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003
+- Next work package: CDS-WP-004
 
 ## Registered scope
 
@@ -157,9 +158,48 @@ Details: [Decision Index](../docs/decisions/DECISION_INDEX.md)
 | RISK-007 | Long-term scope interpreted as current commitment. | Monitored |
 | RISK-008 | Consumer fragmentation. | Monitored |
 | RISK-009 | Misleading adoption or association claims. | Monitored |
+| RISK-010 | Benchmark imitation. | Monitored |
+| RISK-011 | Research and source bias. | Monitored |
+| RISK-012 | Source volatility. | Monitored |
+| RISK-013 | Differentiation overstatement. | Monitored |
 
 Owner model provisional until CDS-WP-006.
 Details: [Risk Register](../docs/risks/RISK_REGISTER.md)
+
+## Benchmark research (CDS-WP-003)
+
+**Non-normative evidence**, snapshot dated 2026-07-15. No decision was added or
+changed.
+
+Ten systems reviewed against 14 dimensions from official publisher sources only:
+Carbon, Fluent 2, Material 3, Primer, Atlassian, Spectrum (with Spectrum 2), SAP
+Fiori, SLDS 2, GOV.UK, USWDS.
+
+Key cross-system findings:
+
+- Foundations → components → patterns is settled industry structure, not a
+  differentiator.
+- Token workflows are often coupled to a proprietary design tool, and this is
+  rarely documented as a risk — evidence supporting DEC-S-004 and RISK-004.
+- No reviewed system documented PDF, presentation, or diagram standards; they
+  are product-interface systems that touch brand at the edges.
+- No reviewed system stated an explicit offline or self-hosted guarantee,
+  though self-containable distribution is common.
+- Every system permits product-level variation; none published the limits of it.
+- Strongest observed practices: published per-component maturity states,
+  published accessibility conformance evidence, explicitly stating what the
+  system does **not** guarantee, and naming who maintains each contributed part.
+- Licensing is never one decision: documentation, code, fonts, icons, and brand
+  assets routinely sit on different terms.
+
+Hypotheses HYP-001 … HYP-008 are all **Research hypotheses**. None reached
+"Strongly supported". HYP-006 (evidence-based adoption) is common industry
+practice; HYP-003 (operational patterns) was not verifiable. Claims rest on
+absence from public documentation — weaker evidence than presence.
+
+Details: [Benchmark](../docs/research/DESIGN_SYSTEM_BENCHMARK.md) ·
+[Hypotheses](../docs/research/CDS_DIFFERENTIATION_HYPOTHESES.md) ·
+[Limitations](../docs/research/RESEARCH_LIMITATIONS.md)
 
 ## Intentionally open decisions
 
@@ -173,12 +213,12 @@ override governance.
 
 ## Next step
 
-CDS-WP-003 — Benchmark and Differentiation Research: analyze established design
-systems and derive the CDS differentiation position. Analysis and documentation
-only — no visual elements or foreign design content copied. Concrete research
-sources and web research require explicit authorization in the CDS-WP-003
-prompt. Still no final tool, branding, or technology decision. Requires an
-explicit work-package prompt from Nova.
+CDS-WP-004 — Consumer Requirements and CoreOps Pilot Contract: collect
+requirements from CoreOps and the further consumer classes, separate shared from
+product-specific requirements, define the pilot scope and validation contract,
+and test HYP-001 … HYP-008 against real consumer needs rather than against
+absence of public documentation. Still no concrete visual design and no
+technology selection. Requires an explicit work-package prompt from Nova.
 
 ## Related documents
 
@@ -192,3 +232,4 @@ explicit work-package prompt from Nova.
 - [Next Phase](../project-system/NEXT_PHASE.md)
 - [CDS-WP-001 Governance Bootstrap Notes](CDS_WP_001_GOVERNANCE_BOOTSTRAP_NOTES.md)
 - [CDS-WP-002 Concept and Scope Registration Notes](CDS_WP_002_CONCEPT_AND_SCOPE_REGISTRATION_NOTES.md)
+- [CDS-WP-003 Benchmark and Differentiation Research Notes](CDS_WP_003_BENCHMARK_AND_DIFFERENTIATION_RESEARCH_NOTES.md)

@@ -18,8 +18,9 @@ library, or a design project scoped exclusively to CoreOps.
 - Framework: Nova Development Framework v1.0.0
 - Phase: Foundation / Pre-Design
 - First reference consumer: CoreOps (not the sole design target)
-- Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002
-- Next work package: CDS-WP-003 — Benchmark and Differentiation Research
+- Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003
+- Next work package: CDS-WP-004 — Consumer Requirements and CoreOps Pilot
+  Contract
 
 ## Execution environment
 
@@ -188,10 +189,15 @@ Before beginning a work package, inspect at minimum:
 - [project-system/WORK_PACKAGES.md](project-system/WORK_PACKAGES.md)
 - [project-system/NEXT_PHASE.md](project-system/NEXT_PHASE.md)
 - [project-brain/PROJECT_BRAIN.md](project-brain/PROJECT_BRAIN.md)
-
-Where a summary disagrees with a normative source, the normative source wins.
 - the local Skills relevant to the assignment, selected per the Skills-first
   operating mode above ([inventory](project-system/NDF_SKILLS_INVENTORY.md))
+
+Where a summary disagrees with a normative source, the normative source wins.
+
+`docs/research/` holds **research evidence, not normative sources**. It informs
+later work packages and decides nothing. Research findings are dated snapshots
+that decay; re-verify a source before relying on it, and never cite a research
+hypothesis as a decision.
 
 ## Required completion report
 

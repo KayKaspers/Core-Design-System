@@ -125,12 +125,29 @@ or override the work-package prompt or the Human Maintainer gates.
 - [NDF Skills Provenance](docs/governance/NDF_SKILLS_PROVENANCE.md)
 - [NDF Skills Inventory](project-system/NDF_SKILLS_INVENTORY.md)
 
+## Benchmark research
+
+Benchmark and differentiation research is complete. Ten established design
+systems were reviewed against 14 dimensions using official publisher sources
+only, and eight CDS differentiation hypotheses were assessed.
+
+**The research is not normative.** It is evidence and hypotheses — not
+decisions, principles, or technology recommendations. No hypothesis reached
+"Strongly supported", and no decision was added or changed by the research.
+
+- [Design System Benchmark](docs/research/DESIGN_SYSTEM_BENCHMARK.md)
+- [Benchmark Evidence Matrix](docs/research/BENCHMARK_EVIDENCE_MATRIX.md)
+- [Benchmark Source Register](docs/research/BENCHMARK_SOURCE_REGISTER.md)
+- [CDS Differentiation Hypotheses](docs/research/CDS_DIFFERENTIATION_HYPOTHESES.md)
+- [Research Limitations](docs/research/RESEARCH_LIMITATIONS.md)
+
 ## Work packages
 
 - **Completed:** CDS-WP-001 — Project Governance and NDF Bootstrap
 - **Completed:** CDS-WP-001A — NDF Skills Bootstrap
 - **Completed:** CDS-WP-002 — Concept and Scope Registration
-- **Next:** CDS-WP-003 — Benchmark and Differentiation Research
+- **Completed:** CDS-WP-003 — Benchmark and Differentiation Research
+- **Next:** CDS-WP-004 — Consumer Requirements and CoreOps Pilot Contract
 
 The full controlled roadmap is in
 [project-system/WORK_PACKAGES.md](project-system/WORK_PACKAGES.md).
@@ -139,7 +156,7 @@ The full controlled roadmap is in
 
 - Decisions: DEC-S-001 … DEC-S-012 (12) — 6 strategic foundation decisions,
   6 strategic scope decisions
-- Risks: RISK-001 … RISK-009 (9) — owner model provisional until CDS-WP-006
+- Risks: RISK-001 … RISK-013 (13) — owner model provisional until CDS-WP-006
 
 ## Governance documents
 

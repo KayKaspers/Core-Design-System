@@ -9,6 +9,24 @@ released and no release is announced.
 
 ### Added
 
+- Official-source benchmark of ten established design systems against 14
+  dimensions, reviewed on 2026-07-15. Findings are research evidence and are
+  explicitly **non-normative**. (CDS-WP-003)
+- Benchmark source register recording every official URL opened, with access
+  date, evidence status, redirects, and access failures. (CDS-WP-003)
+- Benchmark evidence matrix covering all ten systems across all 14 dimensions,
+  using a fixed evidence-status vocabulary and no numeric scores or rankings.
+  (CDS-WP-003)
+- Assessment of the eight CDS differentiation hypotheses HYP-001 … HYP-008, each
+  with supporting evidence, counterevidence, and an explicit uniqueness risk. No
+  hypothesis reached "Strongly supported"; all remain research hypotheses.
+  (CDS-WP-003)
+- Research limitations documenting source, access, depth, language, version, and
+  copyright boundaries, and the difference between public documentation and
+  unknown internal practice. (CDS-WP-003)
+- Risks RISK-010 … RISK-013 covering benchmark imitation, research and source
+  bias, source volatility, and differentiation overstatement. (CDS-WP-003)
+- Work-package evidence notes for CDS-WP-003.
 - Registered concept and scope as the normative scope source: problem
   statement, mission, vision, strategic objectives, six capability domains,
   cross-cutting concerns, current Foundation scope separated from long-term
@@ -47,6 +65,15 @@ released and no release is announced.
 
 ### Changed
 
+- Work-package status advanced: CDS-WP-003 completed, CDS-WP-004 activated as
+  the next work package. (CDS-WP-003)
+- Risk register extended to RISK-001 … RISK-013. The provisional owner model is
+  unchanged. (CDS-WP-003)
+- Foundation Context Pack, project profile, project brain, and README extended
+  with the benchmark scope, hypotheses, and the non-normative status of
+  research. (CDS-WP-003)
+- Claude working instructions note that `docs/research/` is evidence rather than
+  a normative source. (CDS-WP-003)
 - Project charter consolidated with the registered scope: capability domains,
   consumer classes, pilot boundary, and Foundation status; it now references
   the normative scope source instead of carrying its own scope list.

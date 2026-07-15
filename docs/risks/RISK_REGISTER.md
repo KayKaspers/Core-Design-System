@@ -5,13 +5,14 @@ must be controlled from the start of the project.
 
 ## Register scope
 
-- Risk range: RISK-001 … RISK-009
-- Number of risks: 9
+- Risk range: RISK-001 … RISK-013
+- Number of risks: 13
 - Phase: Foundation / Pre-Design
 
 Risks RISK-001 … RISK-005 were registered by CDS-WP-001. Risks
 RISK-006 … RISK-009 were registered by CDS-WP-002 alongside the scope
-registration.
+registration. Risks RISK-010 … RISK-013 were registered by CDS-WP-003 alongside
+the benchmark research.
 
 ### Provisional owner model
 
@@ -282,3 +283,128 @@ evidence model. State explicitly that consumer classification grants no
 endorsement, availability, licensing, or support (see DEC-S-010). Define
 conformance criteria, adoption levels, and the evidence model in CDS-WP-006.
 Until then, no adoption or conformance claim is legitimate.
+
+---
+
+## RISK-010 — Benchmark imitation
+
+- **Status:** Monitored
+- **Owner role:** Nova (provisional)
+- **Initial likelihood:** Medium
+- **Initial severity:** High
+
+### Description
+
+Research findings may cause CDS to reproduce the visual identity, distinctive
+taxonomy, component structure, or wording of another design system instead of
+developing an independent identity.
+
+### Impact
+
+CDS becomes a derivative of the systems it studied, with no independent
+rationale for its own decisions. Beyond the loss of identity, reproducing a
+distinctive taxonomy, structure, or wording raises copyright and attribution
+exposure, and imports design decisions whose original context does not apply to
+the Core ecosystem.
+
+### Mitigation direction
+
+Synthesize rather than imitate. Describe foreign taxonomies abstractly only.
+Copy no design content, token values, naming schemes, palettes, typography,
+icon forms, layouts, long text passages, or documentation structures. Use system
+names solely for source attribution. Keep the non-copying boundary explicit in
+every research artifact, and treat any adoption of an observed practice as a
+decision requiring its own CDS rationale rather than a citation.
+
+---
+
+## RISK-011 — Research and source bias
+
+- **Status:** Monitored
+- **Owner role:** Nova (provisional)
+- **Initial likelihood:** High
+- **Initial severity:** Medium
+
+### Description
+
+Publicly documented systems and accessible English-language sources may
+overrepresent large technology companies and public-sector organizations.
+
+### Impact
+
+Conclusions reflect the practices of well-resourced publishers with dedicated
+teams, and are then applied to a project with fundamentally different capacity.
+Practices that are normal at that scale — public comment periods, parallel
+maintained generations, published conformance reports — may be mistaken for
+baseline expectations. Smaller, community, and commercial systems remain
+invisible, so any claim about what "no one does" is unsafe.
+
+### Mitigation direction
+
+State the bias wherever benchmark conclusions are used. The reviewed set was
+fixed in advance and consists only of large technology companies and national
+governments; it cannot speak to smaller or community systems, which directly
+caps hypotheses about small-team applicability. Test observed practices against
+actual CDS maintainer capacity before adopting them. Any broadening of the
+sample requires its own authorized work package.
+
+---
+
+## RISK-012 — Source volatility
+
+- **Status:** Monitored
+- **Owner role:** Nova (provisional)
+- **Initial likelihood:** High
+- **Initial severity:** Low
+
+### Description
+
+Referenced design-system documentation, releases, URLs, and publicly visible
+practices may change after the benchmark is completed.
+
+### Impact
+
+Findings decay. Later work packages may rely on observations that no longer
+hold, or cite URLs that have moved or disappeared. Evidence already exists that
+this is not hypothetical: one reviewed documentation domain has permanently
+redirected, and two reviewed systems are mid-generational-transition.
+
+### Mitigation direction
+
+Treat the benchmark as a dated snapshot rather than a standing description.
+Every observation carries its access date and a registered URL, so any finding
+can be re-checked. Re-verify a source before relying on it in a later decision.
+Do not restate benchmark findings as current fact without checking. Record
+redirects and access failures rather than silently substituting sources.
+
+---
+
+## RISK-013 — Differentiation overstatement
+
+- **Status:** Monitored
+- **Owner role:** Nova (provisional)
+- **Initial likelihood:** High
+- **Initial severity:** High
+
+### Description
+
+Common industry practices may be incorrectly presented as unique CDS
+differentiators.
+
+### Impact
+
+CDS claims distinction it does not have. Strategy is then built on a false
+premise, effort is spent defending a non-advantage, and credibility suffers when
+the claim meets an informed reader. The risk is structural rather than
+accidental: differentiation claims here rest on absence from public
+documentation, which is systematically weaker evidence than presence.
+
+### Mitigation direction
+
+Keep hypotheses labelled as hypotheses until validated against real consumer
+requirements (see the differentiation assessments and DEC-S-009). Require
+counterevidence and an explicit uniqueness risk for every hypothesis. Prefer the
+defensible framing — "no reviewed system publicly documented this" — over "no
+one does this." Assess common practice honestly as common, even when it is
+valuable. Make no claim that CDS is better than any reviewed system, and no
+comparative first/only/best claim without comparison evidence.

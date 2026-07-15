@@ -23,9 +23,32 @@ Foundation / Pre-Design
 
 ## Work package status
 
-- Current work package: CDS-WP-003 — Benchmark and Differentiation Research (Next)
-- Previous work package: CDS-WP-002 — Concept and Scope Registration (Completed)
-- Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002
+- Current work package: CDS-WP-004 — Consumer Requirements and CoreOps Pilot
+  Contract (Next)
+- Previous work package: CDS-WP-003 — Benchmark and Differentiation Research
+  (Completed)
+- Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003
+
+## Research status
+
+- Research status: Benchmark and differentiation research completed
+  (CDS-WP-003, evidence dated 2026-07-15)
+- Benchmarked systems: 10
+- Benchmark dimensions: 14
+- Official sources registered: 33 opened (31 benchmark + 2 standards), 27 with
+  usable evidence
+- Evidence matrix: 140 cells (10 systems × 14 dimensions), 105 with usable
+  evidence
+- Differentiation hypotheses: 8 (HYP-001 … HYP-008), all **Research hypothesis**
+- **Research findings are non-normative.** They are evidence and hypotheses, not
+  decisions, principles, or technology recommendations.
+
+Research documents:
+[Design System Benchmark](../docs/research/DESIGN_SYSTEM_BENCHMARK.md) ·
+[Benchmark Evidence Matrix](../docs/research/BENCHMARK_EVIDENCE_MATRIX.md) ·
+[Benchmark Source Register](../docs/research/BENCHMARK_SOURCE_REGISTER.md) ·
+[CDS Differentiation Hypotheses](../docs/research/CDS_DIFFERENTIATION_HYPOTHESES.md) ·
+[Research Limitations](../docs/research/RESEARCH_LIMITATIONS.md)
 
 ## Registered scope
 
@@ -114,8 +137,9 @@ pilot contract is defined in CDS-WP-004.
 ## Register scope
 
 - Decisions: DEC-S-001 … DEC-S-012 (12) — 6 strategic foundation decisions
-  (CDS-WP-001) and 6 strategic scope decisions (CDS-WP-002)
-- Risks: RISK-001 … RISK-009 (9) — risk owner model provisional until
+  (CDS-WP-001) and 6 strategic scope decisions (CDS-WP-002). Unchanged by
+  CDS-WP-003.
+- Risks: RISK-001 … RISK-013 (13) — risk owner model provisional until
   CDS-WP-006
 
 ## Intentionally open decision areas

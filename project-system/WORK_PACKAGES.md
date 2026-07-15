@@ -3,8 +3,8 @@
 Controlled work-package roadmap for the Core Design System (CDS).
 
 - **Phase:** Foundation / Pre-Design
-- **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002
-- **Next work package:** CDS-WP-003
+- **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003
+- **Next work package:** CDS-WP-004
 
 ## Status values
 
@@ -21,8 +21,8 @@ Controlled work-package roadmap for the Core Design System (CDS).
 | CDS-WP-001 | Project Governance and NDF Bootstrap | Completed | — |
 | CDS-WP-001A | NDF Skills Bootstrap | Completed | CDS-WP-001 |
 | CDS-WP-002 | Concept and Scope Registration | Completed | CDS-WP-001A |
-| CDS-WP-003 | Benchmark and Differentiation Research | Next | CDS-WP-002 |
-| CDS-WP-004 | Consumer Requirements and CoreOps Pilot Contract | Planned | CDS-WP-002 |
+| CDS-WP-003 | Benchmark and Differentiation Research | Completed | CDS-WP-002 |
+| CDS-WP-004 | Consumer Requirements and CoreOps Pilot Contract | Next | CDS-WP-002 |
 | CDS-WP-005 | Design System Architecture | Planned | CDS-WP-003, CDS-WP-004 |
 | CDS-WP-006 | Governance, Versioning, and Contribution Model | Planned | CDS-WP-005 |
 | CDS-WP-007 | Accessibility and Inclusive Design Policy | Planned | CDS-WP-005 |
@@ -64,20 +64,27 @@ and [Scope Boundary Matrix](../docs/governance/SCOPE_BOUNDARY_MATRIX.md).
 
 ### CDS-WP-003 — Benchmark and Differentiation Research
 
-**Status:** Next
+**Status:** Completed
 
-Analyzes established design systems and derives the differentiation position of
-CDS within the Core ecosystem. Analysis and documentation only: no visual
-elements or foreign design content are copied, and concrete research sources
-require explicit authorization in the CDS-WP-003 prompt.
+Reviewed ten established design systems against 14 dimensions using official
+sources only, and assessed eight CDS differentiation hypotheses
+(HYP-001 … HYP-008). Added RISK-010 … RISK-013. Findings are research evidence
+and remain **non-normative**; no decision was added or changed. See
+[Design System Benchmark](../docs/research/DESIGN_SYSTEM_BENCHMARK.md),
+[Evidence Matrix](../docs/research/BENCHMARK_EVIDENCE_MATRIX.md),
+[Source Register](../docs/research/BENCHMARK_SOURCE_REGISTER.md),
+[Differentiation Hypotheses](../docs/research/CDS_DIFFERENTIATION_HYPOTHESES.md),
+and [Research Limitations](../docs/research/RESEARCH_LIMITATIONS.md).
 
 ### CDS-WP-004 — Consumer Requirements and CoreOps Pilot Contract
 
-**Status:** Planned
+**Status:** Next
 
 Collects requirements from Core consumer products and defines the pilot
 contract with CoreOps, including adoption expectations and evidence
-obligations.
+obligations. Separates shared from product-specific requirements and tests the
+differentiation hypotheses against real consumer needs. No concrete visual
+design and no technology selection.
 
 ### CDS-WP-005 — Design System Architecture
 

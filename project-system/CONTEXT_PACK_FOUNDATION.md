@@ -6,7 +6,7 @@
 > it never defines. Where it disagrees with a normative source, the normative
 > source wins and this pack is wrong and must be corrected.
 
-- **Maintained by:** CDS-WP-002
+- **Maintained by:** CDS-WP-003
 - **Date:** 2026-07-15
 
 ## Project identity
@@ -31,6 +31,7 @@ concrete visual or technical design decisions are authorized (DEC-S-003).
 | CDS-WP-001 | Project Governance and NDF Bootstrap | Charter, authority model, DEC-S-001…006, RISK-001…005, initial roadmap. |
 | CDS-WP-001A | NDF Skills Bootstrap | 38 verified docs-only NDF v1.0.0 Skills; provenance, manifest, inventory; Skills-first mode active. |
 | CDS-WP-002 | Concept and Scope Registration | Concept and scope, consumer model, boundary matrix, DEC-S-007…012, RISK-006…009, this pack. |
+| CDS-WP-003 | Benchmark and Differentiation Research | Ten systems reviewed against 14 dimensions from official sources; HYP-001…008 assessed; RISK-010…013. **Non-normative.** No decision changed. |
 
 ## Normative source map
 
@@ -48,9 +49,18 @@ Read the source, not this summary, when the detail matters.
 | Roadmap and status | [project-system/WORK_PACKAGES.md](WORK_PACKAGES.md) |
 | Skills provenance | [docs/governance/NDF_SKILLS_PROVENANCE.md](../docs/governance/NDF_SKILLS_PROVENANCE.md) |
 
+**Research documents are evidence, not normative sources.** They inform later
+work packages; they decide nothing:
+[Benchmark](../docs/research/DESIGN_SYSTEM_BENCHMARK.md) ·
+[Evidence Matrix](../docs/research/BENCHMARK_EVIDENCE_MATRIX.md) ·
+[Source Register](../docs/research/BENCHMARK_SOURCE_REGISTER.md) ·
+[Hypotheses](../docs/research/CDS_DIFFERENTIATION_HYPOTHESES.md) ·
+[Limitations](../docs/research/RESEARCH_LIMITATIONS.md)
+
 ## Active decisions
 
-- Range: DEC-S-001 … DEC-S-012 · Count: 12 · All Accepted
+- Range: DEC-S-001 … DEC-S-012 · Count: 12 · All Accepted · **unchanged by
+  CDS-WP-003**
 - DEC-S-001…006: strategic foundation decisions (CDS-WP-001)
 - DEC-S-007…012: strategic scope decisions (CDS-WP-002)
 - No ADR files exist.
@@ -72,7 +82,7 @@ Read the source, not this summary, when the detail matters.
 
 ## Active risks
 
-- Range: RISK-001 … RISK-009 · Count: 9 · All Monitored
+- Range: RISK-001 … RISK-013 · Count: 13 · All Monitored
 - Owner model is **provisional** until CDS-WP-006.
 
 | ID | Summary |
@@ -86,6 +96,10 @@ Read the source, not this summary, when the detail matters.
 | RISK-007 | Long-term scope interpreted as current commitment. |
 | RISK-008 | Consumer fragmentation. |
 | RISK-009 | Misleading adoption or association claims. |
+| RISK-010 | Benchmark imitation. |
+| RISK-011 | Research and source bias. |
+| RISK-012 | Source volatility. |
+| RISK-013 | Differentiation overstatement. |
 
 ## Approved strategic principles
 
@@ -205,17 +219,42 @@ and adoption policy · product profile and override governance.
    package.
 7. Name the Skills actually used in the report to Nova.
 
+## Benchmark research (CDS-WP-003)
+
+**Non-normative.** Evidence and hypotheses only — no decisions, no principles,
+no design brief, no technology recommendation. Snapshot dated 2026-07-15.
+
+Ten systems reviewed against 14 dimensions using official publisher sources
+only: Carbon · Fluent 2 · Material 3 · Primer · Atlassian · Spectrum (with
+Spectrum 2) · SAP Fiori · SLDS 2 · GOV.UK · USWDS. 33 official URLs opened
+(31 benchmark + 2 standards), 27 with usable evidence. Evidence matrix: 140
+cells, 105 with usable evidence.
+
+Most decision-relevant findings:
+
+- Tool coupling in token workflows is common and rarely documented as a risk —
+  supports DEC-S-004 and RISK-004 with evidence.
+- No reviewed system documented PDF, presentation, or diagram standards; they
+  are product-interface systems.
+- No reviewed system stated an offline or self-hosted guarantee.
+- Every system permits product variation; none published its limits.
+- Strongest practices found: published per-component maturity states, published
+  conformance evidence, and explicitly stating what the system does not do.
+
+Hypotheses HYP-001 … HYP-008, all **Research hypothesis**: none reached
+"Strongly supported"; HYP-006 assessed as common industry practice; HYP-003 not
+verifiable. All rest on absence from public documentation, which is weaker
+evidence than presence.
+
 ## Current and next work package
 
-- **Completed:** CDS-WP-002 — Concept and Scope Registration
-- **Next:** CDS-WP-003 — Benchmark and Differentiation Research
+- **Completed:** CDS-WP-003 — Benchmark and Differentiation Research
+- **Next:** CDS-WP-004 — Consumer Requirements and CoreOps Pilot Contract
 
-CDS-WP-003 analyzes established design systems and derives the CDS
-differentiation position. It stays analysis- and documentation-oriented. No
-visual elements or foreign design content are copied. Concrete research sources
-and any web research require explicit authorization in the CDS-WP-003 prompt —
-they are not authorized by this pack. No final tool, branding, or technology
-decision.
+CDS-WP-004 collects requirements from CoreOps and the further consumer classes,
+separates shared from product-specific requirements, defines the pilot scope and
+validation contract, and tests the differentiation hypotheses against real
+consumer needs. No concrete visual design and no technology selection.
 
 Being listed as Next identifies sequence, not authorization. Every work package
 needs an explicit prompt from Nova.

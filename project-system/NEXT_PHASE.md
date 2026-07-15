@@ -1,8 +1,9 @@
 # Next Phase
 
 - **Phase:** Foundation / Pre-Design
-- **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002
-- **Next work package:** CDS-WP-003 — Benchmark and Differentiation Research
+- **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003
+- **Next work package:** CDS-WP-004 — Consumer Requirements and CoreOps Pilot
+  Contract
 
 ## Status of completed work packages
 
@@ -22,78 +23,81 @@ verified docs-only Skills, 39 files, pinned to commit
 
 ### CDS-WP-002 — Concept and Scope Registration — Completed
 
-Registered the binding project concept and its boundaries:
+Registered the binding project concept: six capability domains, ten
+cross-cutting concerns, current Foundation scope separated from long-term scope,
+twelve non-goals, direct users and indirect beneficiaries, three consumer
+relationship classes, ownership boundaries, and the CoreOps pilot boundary.
+Added DEC-S-007 … DEC-S-012 and RISK-006 … RISK-009.
 
-- problem statement, mission, vision, strategic objectives,
-- six capability domains and the cross-cutting quality concerns,
-- current Foundation scope separated from long-term scope,
-- twelve binding non-goals,
-- direct users and indirect beneficiaries,
-- three consumer relationship classes,
-- CDS versus consumer ownership boundaries,
-- the CoreOps pilot boundary,
-- the strategic scope decisions DEC-S-007 … DEC-S-012,
-- the risks RISK-006 … RISK-009,
-- the Foundation Context Pack.
+### CDS-WP-003 — Benchmark and Differentiation Research — Completed
 
-Normative sources: [Concept and Scope](../docs/governance/CONCEPT_AND_SCOPE.md),
-[Consumer and Stakeholder Model](../docs/governance/CONSUMER_AND_STAKEHOLDER_MODEL.md),
-[Scope Boundary Matrix](../docs/governance/SCOPE_BOUNDARY_MATRIX.md).
+Reviewed ten established design systems against 14 dimensions using official
+publisher sources only, and assessed the eight differentiation hypotheses
+HYP-001 … HYP-008. Added RISK-010 … RISK-013. No decision was added or changed.
+
+**The research results are explicitly non-normative.** They are research
+evidence and differentiation hypotheses — not decisions, not principles, not a
+design brief, and not a technology recommendation. No hypothesis reached
+"Strongly supported"; the strongest candidates rest on what mature systems do
+not *publicly document*, which is weaker evidence than what they do.
+
+Research documents:
+[Design System Benchmark](../docs/research/DESIGN_SYSTEM_BENCHMARK.md) ·
+[Evidence Matrix](../docs/research/BENCHMARK_EVIDENCE_MATRIX.md) ·
+[Source Register](../docs/research/BENCHMARK_SOURCE_REGISTER.md) ·
+[Differentiation Hypotheses](../docs/research/CDS_DIFFERENTIATION_HYPOTHESES.md) ·
+[Research Limitations](../docs/research/RESEARCH_LIMITATIONS.md)
 
 Completion is reported for Human Maintainer review. No Git write action was
 performed.
 
-## Next work package: CDS-WP-003 — Benchmark and Differentiation Research
+## Next work package: CDS-WP-004 — Consumer Requirements and CoreOps Pilot Contract
 
 ### Objective
 
-Analyze established design systems and derive the differentiation position of
-CDS within the Core ecosystem, so that later architecture and governance work
-rests on evidence rather than assumption.
+Capture requirements from CoreOps and the further consumer classes, separate
+shared from product-specific requirements, define the pilot scope and validation
+contract, and test the differentiation hypotheses against real consumer needs.
 
 ### Scope direction
 
-- analyze established design systems as a comparison baseline,
-- identify recurring structures, strengths, and weaknesses,
-- derive the CDS differentiation position against the registered concept,
-- test the assumptions recorded in
-  [Concept and Scope](../docs/governance/CONCEPT_AND_SCOPE.md),
-- feed open questions 1 and 2 from that document,
-- document results as analysis, not as decisions.
+- collect requirements from CoreOps and from further consumer classes,
+- separate shared requirements from product-specific requirements,
+- define the pilot scope and the validation contract,
+- test HYP-001 … HYP-008 against real consumer requirements rather than against
+  absence of public documentation,
+- state what CDS does **not** do for the pilot as explicitly as what it does,
+- apply the DEC-S-011 acceptance conditions to any candidate generalization,
+- validate the six assumptions registered in
+  [Concept and Scope](../docs/governance/CONCEPT_AND_SCOPE.md).
 
-### Boundaries
+### Research input to carry forward
 
-CDS-WP-003 remains **analysis- and documentation-oriented**. In particular:
+- The benchmark evidence is **not normative** and must not be cited as a
+  decision or a requirement.
+- Findings are a dated snapshot (2026-07-15) and decay; re-verify a source
+  before relying on it (RISK-012).
+- The reviewed sample consists only of large technology companies and national
+  governments, and cannot represent smaller or community systems (RISK-011).
+- Hypotheses stay hypotheses until validated against real consumer needs
+  (RISK-013).
+- Do not import any reviewed system's identity, taxonomy, structure, or wording
+  (RISK-010).
 
-- no visual elements are copied from any external design system,
-- no foreign design content, assets, or code are imported,
-- no external branding or trademarked material is reproduced,
-- the analysis produces findings, not adopted solutions.
+### Explicitly prohibited in CDS-WP-004
 
-### Authorization boundary for research sources
-
-Concrete research sources and any web research are **not** authorized by this
-document. They require explicit authorization in the CDS-WP-003 prompt, which
-must name the permitted sources and the permitted method.
-
-Until that prompt exists, no external research is authorized.
-
-### Explicitly prohibited in CDS-WP-003
-
-- final tool decisions,
-- final branding decisions,
-- final technology decisions,
-- selecting colors, typography, icons, logos, or themes,
-- selecting a design tool, component framework, or token format,
-- copying external design systems or their assets,
+- concrete visual design of any kind,
+- technology, tool, framework, or token-format selection,
+- selecting colours, typography, icons, logos, or themes,
 - licensing, publication, or support commitments,
-- modifying Skill files.
-
-Skills support the procedure; they do not extend scope.
+- promoting a differentiation hypothesis to a decision without evidence,
+- treating CoreOps requirements as automatically normative (DEC-S-011),
+- modifying Skill files,
+- extending the roadmap.
 
 ### Authorization note
 
-CDS-WP-003 requires an explicit work-package prompt from Nova before execution
+CDS-WP-004 requires an explicit work-package prompt from Nova before execution
 begins. Being listed as **Next** identifies the sequence; it does not by itself
 authorize the work.
 
