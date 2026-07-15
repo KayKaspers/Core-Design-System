@@ -1,67 +1,160 @@
-﻿# CLAUDE.md
+# CLAUDE.md
 
-## Project
+Binding local working instructions for Claude in this repository.
 
-Core Design System (CDS)
+## Project context
+
+**Core Design System (CDS)**
 
 CDS is the central design, brand, UX, UI, token, component, document, and
-multi-channel design foundation for the Core ecosystem.
+multi-channel design foundation for the Core ecosystem. It is a versioned
+platform product providing a normative Single Source of Truth.
 
-CDS is not merely a logo project, branding kit, or UI component library.
+CDS is **not** a logo-only project, a branding kit, an isolated UI component
+library, or a design project scoped exclusively to CoreOps.
 
-## Operating model
+- Repository: KayKaspers/Core-Design-System
+- Local path: `D:\Projects\Core-Design-System`
+- Framework: Nova Development Framework v1.0.0
+- Phase: Foundation / Pre-Design
+- First reference consumer: CoreOps (not the sole design target)
+- Completed work package: CDS-WP-001
+- Next work package: CDS-WP-001A
 
-This repository follows the Nova Development Framework v1.0.0.
+## Execution environment
 
-Roles:
+Claude Desktop with a locally connected repository is the execution environment
+for Claude work in this project. No other development environment or CLI is
+required.
 
-- Nova owns strategy, architecture, work-package planning, review, and approval recommendations.
-- Claude performs only explicitly scoped analysis or implementation work.
-- Cursor is the primary development environment.
-- The Human Maintainer owns commit, push, tag, release, merge, and publication actions.
+## Role and authority model
 
-## Mandatory working rules
+| Role | Authority |
+| --- | --- |
+| Human Maintainer (Kay) | Final normative approvals; exclusive authority over commit, push, pull, fetch, merge, branch creation and switching, tag, release, publication, and repository visibility. |
+| Nova | Strategy, architecture, work-package planning, review, project control, approval recommendations, Claude prompts. |
+| Claude | Only the explicitly scoped local analysis and file work authorized by the active work package. |
+
+## Mandatory preflight
+
+Before changing any file, verify with read-only local commands:
+
+1. The repository root is `D:\Projects\Core-Design-System`.
+2. The directory is a Git repository.
+3. The active branch is `main`.
+4. The Git status is known.
+5. No merge, rebase, or cherry-pick is active.
+6. The configured remotes (read-only inspection).
+7. The existing files and folders.
+8. The full content of every already-existing Allowed File.
+9. Whether a prior draft exists that must be consolidated rather than replaced.
+
+Suitable commands: `git rev-parse --show-toplevel`, `git branch --show-current`,
+`git status --short`, `git remote -v`, `git diff`, `git diff --check`.
+
+## Fail-closed behavior
+
+Work fail-closed. Stop without changing files and report to Nova if:
+
+- the repository root is not `D:\Projects\Core-Design-System`,
+- the directory is not a Git repository,
+- the active branch is not `main`,
+- a merge, rebase, or cherry-pick is active,
+- uncommitted changes exist outside the Allowed Files,
+- existing content fundamentally contradicts the assignment,
+- instructions, source material, or authority are unclear,
+- safe continuation is not unambiguously possible.
+
+A missing remote is not a blocker; report it rather than configuring it.
+
+If the context limit becomes tight, do not make incomplete or speculative
+changes. Stop at a clean intermediate state and deliver a Compact Context
+Summary for a continuation session.
+
+## Allowed Files principle
+
+Operate only inside the scope and file list of the active work package.
+
+- Change or create only the Allowed Files named in the active work package.
+- Missing parent folders of Allowed Files may be created.
+- Create no additional files.
+- Do not create scope merely because it appears useful.
+
+## Review existing content first
+
+Never discard, reset, or overwrite existing content without first reading it in
+full. Uncommitted changes inside the Allowed Files may be a prior bootstrap
+draft and must be reviewed and consolidated carefully.
+
+## Prohibited Git actions
+
+Claude must never: commit, push, pull, fetch, merge, rebase, cherry-pick, create
+tags, create releases, create or switch branches, rewrite Git history, change
+GitHub settings, or change repository visibility.
+
+Read-only Git inspection is permitted.
+
+## Prohibited decisions
+
+Until an active work package explicitly authorizes them, do not decide or
+implement:
+
+- logos or logo architecture,
+- colors,
+- typography,
+- icons, illustration, or imagery,
+- light or dark themes,
+- visual language,
+- design tooling,
+- component frameworks,
+- token formats or token build systems,
+- documentation platforms,
+- package architecture or repository split,
+- license,
+- public release, contribution model, or compatibility commitments,
+- concrete product signatures.
+
+Also prohibited without explicit approval: installing dependencies,
+initializing package managers, creating executable product code, downloading
+external assets, creating a license file, and introducing frameworks, packages,
+build systems, fonts, or icons.
+
+## Working principles
 
 1. Read the active work package and project context before changing files.
-2. Operate only inside the explicitly allowed scope and allowed files.
-3. Work fail-closed when instructions, source material, or authority are unclear.
-4. Do not create additional scope merely because it appears useful.
-5. Do not make final visual or technological design decisions unless the active work package explicitly authorizes them.
-6. Do not introduce frameworks, packages, build systems, fonts, icons, licenses, or external assets without explicit approval.
-7. Do not commit, push, merge, tag, release, publish, or rewrite Git history.
-8. Do not treat generated output as an authoritative source.
-9. Preserve a clear distinction between normative sources and generated artifacts.
-10. Accessibility, licensing, provenance, offline use, and maintainability are first-class concerns.
+2. Do not treat generated output as an authoritative source.
+3. Preserve a clear distinction between normative sources and generated
+   artifacts.
+4. Accessibility, licensing, provenance, offline use, and maintainability are
+   first-class concerns.
+5. Normative repository documentation is written in English. The report to Nova
+   is written in German. File names and identifiers are English. Project and
+   product names are not translated.
 
-## Current restrictions
+## NDF Skills
 
-Until explicitly authorized, do not decide or implement:
-
-- final logos,
-- final colors,
-- final typography,
-- final iconography,
-- final visual language,
-- concrete design tooling,
-- concrete component frameworks,
-- token build tooling,
-- package architecture,
-- public compatibility commitments.
+NDF Skills are **not** imported yet. Their controlled adoption and verification
+happens in CDS-WP-001A. Do not import, copy, or modify NDF Skills before that
+work package is explicitly authorized.
 
 ## Required project context
 
 Before beginning a work package, inspect at minimum:
 
-- `README.md`
-- `project-system/PROJECT_PROFILE.md`
-- `project-system/NEXT_PHASE.md`
-- `project-brain/PROJECT_BRAIN.md`
-- relevant governance and decision documents
-- applicable local Claude Skills after the Skills Bootstrap has been completed
+- [README.md](README.md)
+- [docs/governance/PROJECT_CHARTER.md](docs/governance/PROJECT_CHARTER.md)
+- [docs/decisions/DECISION_INDEX.md](docs/decisions/DECISION_INDEX.md)
+- [docs/risks/RISK_REGISTER.md](docs/risks/RISK_REGISTER.md)
+- [project-system/PROJECT_PROFILE.md](project-system/PROJECT_PROFILE.md)
+- [project-system/WORK_PACKAGES.md](project-system/WORK_PACKAGES.md)
+- [project-system/NEXT_PHASE.md](project-system/NEXT_PHASE.md)
+- [project-brain/PROJECT_BRAIN.md](project-brain/PROJECT_BRAIN.md)
+- applicable local Claude Skills once the Skills Bootstrap (CDS-WP-001A) is
+  complete
 
 ## Required completion report
 
-Every completed work package must end with:
+Every completed work package must end with a report to Nova, written in German.
 
 ### Rückmeldung an Nova
 
