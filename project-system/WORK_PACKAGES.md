@@ -4,8 +4,8 @@ Controlled work-package roadmap for the Core Design System (CDS).
 
 - **Phase:** Foundation / Pre-Design
 - **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004, CDS-WP-005
-- **Next work package:** CDS-WP-006
+  CDS-WP-004, CDS-WP-005, CDS-WP-006
+- **Next work package:** CDS-WP-007
 
 ## Status values
 
@@ -25,8 +25,8 @@ Controlled work-package roadmap for the Core Design System (CDS).
 | CDS-WP-003 | Benchmark and Differentiation Research | Completed | CDS-WP-002 |
 | CDS-WP-004 | Consumer Requirements and CoreOps Pilot Contract | Completed | CDS-WP-002 |
 | CDS-WP-005 | Design System Architecture | Completed | CDS-WP-003, CDS-WP-004 |
-| CDS-WP-006 | Governance, Versioning, and Contribution Model | Next | CDS-WP-005 |
-| CDS-WP-007 | Accessibility and Inclusive Design Policy | Planned | CDS-WP-005 |
+| CDS-WP-006 | Governance, Versioning, and Contribution Model | Completed | CDS-WP-005 |
+| CDS-WP-007 | Accessibility and Inclusive Design Policy | Next | CDS-WP-005 |
 | CDS-WP-008 | Foundation Milestone Review | Planned | CDS-WP-006, CDS-WP-007 |
 
 ## Descriptions
@@ -104,19 +104,28 @@ RISK-020 … RISK-028. **No technology, format, or visual decision.** See
 
 ### CDS-WP-006 — Governance, Versioning, and Contribution Model
 
-**Status:** Next
+**Status:** Completed
 
-Establishes governance roles, risk ownership, maturity states, versioning,
-compatibility, deprecation, contribution, exception governance, product profile
-governance, conformance and adoption claims, and the licensing and publication
-decision model. No concrete visual design and no technology selection.
+Established the governance operating model (six roles, two tracks), the source
+conflict resolution policy, the seven-state artifact maturity lifecycle,
+semantic versioning with eight compatibility axes, deprecation and removal,
+contribution and acceptance, exception and Product Profile governance, four
+graded adoption claim types, the **finalized risk owner model**, five publication
+states with a gate, licensing per ten artifact classes, and release and change
+control. Added DEC-S-033 … DEC-S-048 and RISK-029 … RISK-040. **No licence,
+publication, technology, or design selected.** See
+[Governance Operating Model](../docs/governance/GOVERNANCE_OPERATING_MODEL.md).
 
 ### CDS-WP-007 — Accessibility and Inclusive Design Policy
 
-**Status:** Planned
+**Status:** Next
 
 Defines the binding accessibility and inclusive-design policy and its
-verification approach.
+verification approach — the accessibility target (CR-024), inclusive design
+principles, role boundaries, component and pattern requirements, keyboard and
+focus, motion, contrast and non-colour semantics, localization, the evidence
+model, and consumer responsibilities. Unblocks the Stable gate, Product Profile
+approval, the publication gate, and a CoreOps pilot entry criterion.
 
 ### CDS-WP-008 — Foundation Milestone Review
 

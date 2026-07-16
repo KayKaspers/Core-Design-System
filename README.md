@@ -211,6 +211,56 @@ implementation evidence.
 - [Evidence, Traceability and Status Semantics](docs/architecture/EVIDENCE_TRACEABILITY_AND_STATUS_SEMANTICS.md)
 - [Architecture Requirements Traceability](docs/architecture/ARCHITECTURE_REQUIREMENTS_TRACEABILITY.md)
 
+## Governance
+
+The CDS governance model is defined. It states who decides what, and under which
+conditions — and **selects no licence, publication state, technology, or design**.
+
+**Six roles** — Human Maintainer (final approval; exclusive Git, release,
+publication, and licensing authority) · Nova (governance and risk control,
+review) · Claude (scoped executor) · Consumer Maintainer · Contributor ·
+Evidence Reviewer. Creating, implementing, or using an artifact grants no
+authority.
+
+**Two governance tracks** — Standard and Elevated. Ceremony scales with risk;
+the mandatory gates do not.
+
+**Seven maturity states** — Proposed · Exploratory · Experimental · Candidate ·
+Stable · Deprecated · Removed. Candidate is mandatory before Stable. Maturity,
+release version, and publication state are three **independent** axes. **No
+artifact is currently Candidate or Stable.**
+
+**Versioning and compatibility** — MAJOR.MINOR.PATCH with an honest pre-1.0
+policy. Compatibility is declared across eight contract axes; an unassessed axis
+is never reported as compatible. `latest` is not a valid identity.
+
+**Contribution and exception governance** — a controlled acceptance process where
+keeping something consumer-local is a first-class outcome. Exceptions are
+bounded, owned, and expiring.
+
+**Adoption claims** — four graded, scope- and version-bound claim types. The
+claim `CDS certified` is prohibited. **No adoption, validation, or conformance
+claim is currently valid — by anyone, including CDS itself.**
+
+**Risk ownership is finalized** — the Human Maintainer is accountable for all 40
+risks; Nova is the Risk Controller.
+
+**Publication state: `Private Development`.** Licensing is decided per ten
+artifact classes, and **no licence has been selected for any of them**. A
+publication-state change requires an explicit gate that cannot currently be
+satisfied.
+
+- [Governance Operating Model](docs/governance/GOVERNANCE_OPERATING_MODEL.md)
+- [Source Conflict Resolution Policy](docs/governance/SOURCE_CONFLICT_RESOLUTION_POLICY.md)
+- [Artifact Maturity Lifecycle](docs/governance/ARTIFACT_MATURITY_LIFECYCLE.md)
+- [Versioning, Compatibility and Deprecation Policy](docs/governance/VERSIONING_COMPATIBILITY_AND_DEPRECATION_POLICY.md)
+- [Contribution and Acceptance Model](docs/governance/CONTRIBUTION_AND_ACCEPTANCE_MODEL.md)
+- [Exception and Product Profile Governance](docs/governance/EXCEPTION_AND_PRODUCT_PROFILE_GOVERNANCE.md)
+- [Adoption, Conformance and Claims Policy](docs/governance/ADOPTION_CONFORMANCE_AND_CLAIMS_POLICY.md)
+- [Risk Governance Model](docs/governance/RISK_GOVERNANCE_MODEL.md)
+- [Licensing and Publication Decision Model](docs/governance/LICENSING_AND_PUBLICATION_DECISION_MODEL.md)
+- [Release and Change Control Policy](docs/governance/RELEASE_AND_CHANGE_CONTROL_POLICY.md)
+
 ## Work packages
 
 - **Completed:** CDS-WP-001 — Project Governance and NDF Bootstrap
@@ -219,17 +269,19 @@ implementation evidence.
 - **Completed:** CDS-WP-003 — Benchmark and Differentiation Research
 - **Completed:** CDS-WP-004 — Consumer Requirements and CoreOps Pilot Contract
 - **Completed:** CDS-WP-005 — Design System Architecture
-- **Next:** CDS-WP-006 — Governance, Versioning, and Contribution Model
+- **Completed:** CDS-WP-006 — Governance, Versioning, and Contribution Model
+- **Next:** CDS-WP-007 — Accessibility and Inclusive Design Policy
 
 The full controlled roadmap is in
 [project-system/WORK_PACKAGES.md](project-system/WORK_PACKAGES.md).
 
 ## Registers
 
-- Decisions: DEC-S-001 … DEC-S-032 (32) — 6 strategic foundation decisions,
+- Decisions: DEC-S-001 … DEC-S-048 (48) — 6 strategic foundation decisions,
   6 strategic scope decisions, 8 consumer and pilot scope decisions,
-  12 logical architecture decisions
-- Risks: RISK-001 … RISK-028 (28) — owner model provisional until CDS-WP-006
+  12 logical architecture decisions, 16 governance, lifecycle and publication
+  decisions
+- Risks: RISK-001 … RISK-040 (40) — all Monitored; owner model finalized
 
 ## Governance documents
 

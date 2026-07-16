@@ -11,8 +11,8 @@ authorized work packages.
 
 ## Register scope
 
-- Decision range: DEC-S-001 … DEC-S-032
-- Number of decisions: 32
+- Decision range: DEC-S-001 … DEC-S-048
+- Number of decisions: 48
 - Decision record format: index entries only; no ADR files exist in this phase.
 
 ## Decision types
@@ -23,10 +23,13 @@ authorized work packages.
 | Strategic scope decision | DEC-S-007 … DEC-S-012 | CDS-WP-002 | Scope classification, ownership, consumer relationships, and commitment limits. |
 | Consumer and pilot scope decision | DEC-S-013 … DEC-S-020 | CDS-WP-004 | Evidence binding, requirement classification, pilot boundaries, and claim limits. |
 | Logical architecture decision | DEC-S-021 … DEC-S-032 | CDS-WP-005 | Layers, authority, token flow, profiles, channels, distribution, traceability, status semantics. |
+| Governance, lifecycle and publication decision | DEC-S-033 … DEC-S-048 | CDS-WP-006 | Roles, conflict resolution, maturity, versioning, contribution, exceptions, claims, risk ownership, publication, licensing, release control. |
 
 None of these types is an implementation decision. Logical architecture decisions
 define structure, responsibility, and flow — they select no technology, format,
-tool, or visual design (DEC-S-032).
+tool, or visual design (DEC-S-032). Governance decisions define who decides and
+under what conditions — they select no licence, publication state, technology, or
+design.
 
 ## Status values
 
@@ -1096,3 +1099,570 @@ does not smuggle a technology in.
   all concrete visual decisions.
 - Introduces RISK-026 (architecture overdesign): structure without
   implementation evidence can outgrow the capacity that must run it.
+
+---
+
+## DEC-S-033 — Governance separates authority by function
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Governance, lifecycle and publication decision
+- **Work package:** CDS-WP-006
+
+### Decision
+
+CDS governance separates final approval, governance control, scoped execution,
+consumer responsibility, contribution, and evidence review.
+
+Creating, implementing, or frequently using an artifact does not grant normative
+authority.
+
+### Rationale
+
+Authority acquired by proximity is the most common governance failure: whoever
+built it decides what it means. Separating the functions makes authority a grant
+rather than a side effect of activity.
+
+### Consequences
+
+- Six roles: Human Maintainer, Nova, Claude, Consumer Maintainer, Contributor,
+  Evidence Reviewer.
+- Review and approval are separate acts, recorded separately.
+- A contributor never approves their own contribution — including Claude.
+- The Evidence Reviewer may never be the artifact itself or the executor of the
+  work being evidenced.
+- An automated check is input to a review, never the review.
+- Addresses RISK-030; concentrating final approval introduces RISK-029.
+
+---
+
+## DEC-S-034 — Neither normative source wins automatically
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Governance, lifecycle and publication decision
+- **Work package:** CDS-WP-006
+
+### Decision
+
+A conflict between human-readable and machine-readable normative sources
+invalidates the affected artifact state until a controlled decision restores
+consistency.
+
+Neither source wins automatically across all conflict types.
+
+### Rationale
+
+Intent without approved values is unimplementable; approved values without intent
+are meaningless. Neither is subordinate, so a blanket precedence rule would
+discard half the truth. The honest answer is that a conflict means the state is
+wrong — not that one side is.
+
+### Consequences
+
+- Conflict states: Consistent, Suspected, Confirmed, Under Resolution, Resolved.
+- `Suspected` already blocks release and distribution — blocking precedes
+  diagnosis.
+- Eight-step fail-closed procedure ending in re-synchronization and renewed
+  evidence.
+- Prohibited: recency wins, design tool wins, generated output wins,
+  implementation wins, consumer usage wins, silent overwrite, convenience,
+  automatic resolution.
+- Only meaning-vs-values, intra-class, and coverage-gap conflicts are true
+  conflicts; stale derivatives, tool divergence, and implementation gaps have
+  determinate answers already.
+- Recurring conflicts signal a class-boundary violation (RISK-020).
+
+---
+
+## DEC-S-035 — Seven-state artifact maturity lifecycle
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Governance, lifecycle and publication decision
+- **Work package:** CDS-WP-006
+
+### Decision
+
+CDS artifacts use the lifecycle:
+
+Proposed → Exploratory → Experimental → Candidate → Stable → Deprecated →
+Removed.
+
+Artifact maturity is separate from release version and publication state.
+
+### Rationale
+
+DEC-S-009 states that registered scope is not availability. That is only
+enforceable if availability has a name, criteria, and a gate. The benchmark's most
+effective observed practice was published per-component maturity.
+
+The three axes are separated because collapsing them is the mechanism by which
+"we released it" silently becomes "it is stable".
+
+### Consequences
+
+- Seven states with entry and exit criteria and a full transition matrix.
+- A release may contain artifacts of several maturities; the release version
+  never makes an artifact Stable.
+- Publication state is independent: public does not mean mature, and Stable does
+  not mean public.
+- **No existing artifact is declared Candidate or Stable by this work package.**
+  Defining a lifecycle does not populate it.
+- Addresses RISK-031.
+
+---
+
+## DEC-S-036 — Candidate and Stable require evidence and approval
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Governance, lifecycle and publication decision
+- **Work package:** CDS-WP-006
+
+### Decision
+
+Candidate and Stable transitions require evidence and explicit Human-Maintainer
+approval following Nova review.
+
+Stable cannot be reached directly from Proposed, Exploratory, or Experimental.
+
+### Rationale
+
+Candidate is the only state where a bounded, honest failure is cheap. Skipping it
+moves the discovery of a mistake to where it is expensive — after consumers
+depend on it.
+
+### Consequences
+
+- Candidate gate: ten requirements including an evidence plan and honest open
+  limitations.
+- Stable gate: seven further requirements including consumer validation and
+  accessibility evidence.
+- No artifact promotes itself.
+- Demotion is always permitted with rationale, and is a healthy act.
+- **The Stable gate is currently unsatisfiable** for artifacts with accessibility
+  obligations, because the accessibility target does not exist (CR-024,
+  RISK-028).
+
+---
+
+## DEC-S-037 — Semantic versioning with an honest pre-1.0 policy
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Governance, lifecycle and publication decision
+- **Work package:** CDS-WP-006
+
+### Decision
+
+CDS uses MAJOR.MINOR.PATCH semantic versioning for releases.
+
+Before v1.0.0 no blanket long-term compatibility promise exists, but breaking
+changes, migration needs, revisions, and deprecations remain documented.
+
+### Rationale
+
+Pre-1.0 removes the compatibility *promise*. It does not remove traceability,
+honesty, or migration duty — a pre-1.0 project that breaks consumers silently is
+not exercising a licence, it is failing at governance it already owes.
+
+### Consequences
+
+- MAJOR breaks a Stable contract; MINOR adds compatibly; PATCH corrects
+  compatibly.
+- The version describes the released state, never an artifact's maturity.
+- Pre-release states may be marked; naming a channel is not a publication
+  commitment.
+- The v1.x commitment begins only with an explicitly approved v1.0.0 release.
+  Claude may never assert that v1.0.0 has been reached.
+- No time-based cadence is invented — CDS has no evidence for what it could
+  sustain.
+
+---
+
+## DEC-S-038 — Releases require an immutable identity
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Governance, lifecycle and publication decision
+- **Work package:** CDS-WP-006
+
+### Decision
+
+Every released CDS state must be identifiable through a release version and an
+immutable source revision.
+
+`latest` is not a sufficient identity for evidence, adoption, migration, or
+conformance.
+
+### Rationale
+
+A consumer that can only say "latest" cannot make any checkable statement about
+what it uses. Identity that changes underneath a consumer is not identity —
+it makes every downstream claim unfalsifiable.
+
+### Consequences
+
+- Ten required release identity elements, including an artifact manifest, maturity
+  and compatibility declarations, and an approval state.
+- Consumer evidence must point to a version or immutable revision.
+- Generated outputs must prove their source and transformation revision
+  (DEC-S-031).
+- **A rebuild must not silently reuse the same identifier with different
+  content.**
+- No manifest structure or format is selected.
+
+---
+
+## DEC-S-039 — Compatibility is declared per contract axis
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Governance, lifecycle and publication decision
+- **Work package:** CDS-WP-006
+
+### Decision
+
+Compatibility is declared separately for relevant CDS contract axes.
+
+No blanket compatibility claim is valid when individual axes are unassessed,
+limited, migrating, or breaking.
+
+### Rationale
+
+"Compatible" as a single verdict hides which part a consumer actually depends on.
+A release may be compatible for documentation and breaking for tokens, and a
+consumer needs to know which applies to them.
+
+### Consequences
+
+- Eight axes: normative documentation, machine-readable source, token, component,
+  Product Profile, channel output, consumer integration, evidence.
+- Six permitted statements including `Not yet assessed`.
+- **An unassessed axis is never presented as compatible** — the temptation to
+  round it up because nothing broke in testing is exactly RISK-032.
+- Every release approval names the relevant axes.
+- Consumer-local artifacts are never automatically guaranteed.
+
+---
+
+## DEC-S-040 — Stable artifacts require deprecation before removal
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Governance, lifecycle and publication decision
+- **Work package:** CDS-WP-006
+
+### Decision
+
+Stable artifacts require documented deprecation and migration treatment before
+regular removal.
+
+Regular removal of a Stable contract is a MAJOR change.
+
+### Rationale
+
+A Stable artifact carries a promise. Removing it without a deprecation and a
+migration path breaks that promise silently, and a consumer discovers it at the
+worst possible moment.
+
+### Consequences
+
+- Nine required deprecation fields including migration guidance and a planned
+  earliest removal boundary.
+- **A deprecation without a viable migration path is a removal with extra steps**
+  (RISK-033). If no migration exists, the artifact is not ready to be deprecated.
+- The removal boundary is a boundary, not a schedule.
+- Emergency removal is narrowly bounded to security, legal, rights, or dangerous
+  behavior — and defers evidence rather than waiving it.
+- Removed artifacts retain historical traceability.
+
+---
+
+## DEC-S-041 — Contributions follow a controlled acceptance process
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Governance, lifecycle and publication decision
+- **Work package:** CDS-WP-006
+
+### Decision
+
+CDS contributions follow a controlled intake, evidence, review, validation,
+acceptance, deferral, rejection, or consumer-local retention process.
+
+Consumer use or popularity does not create automatic CDS acceptance.
+
+### Rationale
+
+The benchmark showed harvesting from real products works — but only with a gate.
+Without one, volume of use becomes authority and CDS becomes whatever its loudest
+consumer already built.
+
+### Consequences
+
+- Ten-step flow; steps 3–5 exist to reach a cheap *no*.
+- Eleven required contribution inputs, including a generalizability rationale and
+  rights provenance.
+- Five outcomes; **`Keep Consumer-local` is a first-class success**, not a soft
+  rejection.
+- Prohibited: auto-merge, self-approval, urgency bypass, bundling an Elevated
+  change into a Standard batch.
+- **External contributions are not yet possible** — they require an approved
+  publication state and a contribution licensing model, neither of which exists.
+- Addresses RISK-034.
+
+---
+
+## DEC-S-042 — Exceptions are explicit, bounded, and expiring
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Governance, lifecycle and publication decision
+- **Work package:** CDS-WP-006
+
+### Decision
+
+CDS exceptions must be explicit, scoped, owned, revision-bound, risk-assessed,
+reviewable, and time- or event-bounded.
+
+Silent or permanent unmanaged exceptions are prohibited.
+
+### Rationale
+
+An exception without an expiry and a path is an undocumented fork wearing a
+label. The expiry is what forces the decision that the exception was deferring.
+
+### Consequences
+
+- Thirteen required fields including impact on accessibility and status truth.
+- Six statuses; `Expired` is an **uncovered deviation**, not a grandfathered
+  permission.
+- Exceptions never extend CDS and are never a precedent.
+- **Recurring exceptions trigger a CDS gap review** — if several consumers need
+  the same exception, the core is wrong.
+- **Accessibility weakening is not approvable through a normal exception** — this
+  holds even though the target is currently undefined.
+- Status truth is not exceptable.
+- Addresses RISK-035.
+
+---
+
+## DEC-S-043 — Product Profiles are separately governed artifacts
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Governance, lifecycle and publication decision
+- **Work package:** CDS-WP-006
+
+### Decision
+
+Product Profiles are separately governed, version-bound CDS artifacts.
+
+They require approved extension points, compatibility and accessibility evidence,
+anti-fragmentation review, migration information, and explicit acceptance.
+
+### Rationale
+
+A profile is part of CDS, not a consumer's private arrangement. Governing it as a
+first-class artifact is what stops "profile" from becoming a label applied to
+divergence after the fact.
+
+### Consequences
+
+- Twelve required elements including named extension points and an
+  anti-fragmentation review.
+- **A Product Profile is not retrospective legitimation of an existing consumer
+  design.** Consumer-local design stays consumer-local until reconciled and
+  accepted (RISK-036).
+- A profile exceeding the DEC-S-025 bounds is a fork and must be named as one.
+- The anti-fragmentation review asks whether the request is really a core gap,
+  and whether an additive extension would serve instead.
+- **No Product Profile can be approved today** — accessibility evidence is
+  unobtainable (CR-024).
+- Addresses RISK-027.
+
+---
+
+## DEC-S-044 — Claims are scope-, version-, and evidence-bound
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Governance, lifecycle and publication decision
+- **Work package:** CDS-WP-006
+
+### Decision
+
+CDS adoption and conformance claims must be scope-bound, version-bound,
+consumer-revision-bound, evidence-backed, and explicitly approved.
+
+A global or unqualified `CDS compliant` claim is invalid.
+
+### Rationale
+
+An unqualified claim is unfalsifiable while transferring real trust. That
+asymmetry is the whole problem: the claim costs nothing to make and everything to
+disprove.
+
+### Consequences
+
+- Four graded claim types: Uses CDS Artifacts · CDS-integrated · CDS-validated ·
+  CDS-conformant. Each adds evidence.
+- **`CDS certified` is prohibited** — no certification programme exists, so the
+  word is unavailable rather than discouraged.
+- Eight mandatory claim fields; a claim missing any is not a weaker claim, it is
+  not a claim.
+- Eight re-assessment triggers; a stale claim must be withdrawn — silence is not
+  continuation.
+- Pilot completion is not adoption; naming a consumer is not endorsement; a
+  hypothesis is not a claim.
+- **No claim is currently valid, by anyone, including CDS itself.**
+- Addresses RISK-037.
+
+---
+
+## DEC-S-045 — Risk ownership is finalized
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Governance, lifecycle and publication decision
+- **Work package:** CDS-WP-006
+
+### Decision
+
+The Human Maintainer is the accountable owner for CDS project risks.
+
+Nova is the Risk Controller.
+
+Mitigation execution and evidence review are separately assigned roles.
+
+### Rationale
+
+The owner model has been provisional since CDS-WP-001 and deferred by every work
+package since. Separating accountability from control matters: a controller who
+could accept the risks they assess is not a control.
+
+### Consequences
+
+- Four roles per risk: Accountable Risk Owner (Human Maintainer), Risk Controller
+  (Nova), Mitigation Executor (named per mitigation), Evidence Reviewer (Nova or
+  an authorized reviewer, never the executor).
+- **Only the Human Maintainer may accept or close a risk.**
+- Five statuses; a `Mitigating` risk without a named executor is not mitigating.
+- Acceptance requires a review trigger — acceptance without one is abandonment
+  with paperwork.
+- All existing risks RISK-001…RISK-028 are updated to this model; **no
+  description, assessment, or status changed**, because no evidence justified it.
+- Anti-ceremonial rule: **documentation is not mitigation** (RISK-040).
+
+---
+
+## DEC-S-046 — Five publication states with an explicit gate
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Governance, lifecycle and publication decision
+- **Work package:** CDS-WP-006
+
+### Decision
+
+CDS publication states are: Private Development, Controlled Preview, Public
+Preview, Public Stable, Archived.
+
+A publication-state change requires an explicit publication gate and does not
+follow automatically from repository visibility or release maturity.
+
+### Rationale
+
+Repository visibility is a technical setting; publication is a commitment.
+Conflating them means CDS could become public by a checkbox, without licence
+review, provenance, or an accessibility statement (RISK-039).
+
+### Consequences
+
+- Fifteen-requirement publication gate including per-class licence review,
+  third-party provenance, and an accessibility statement.
+- **The current state is `Private Development`, and this work package does not
+  change it.**
+- The states are not a roadmap and commit CDS to nothing.
+- **Requirements 8, 9, and 11 are currently unsatisfiable** — no licensing
+  decision exists and no accessibility target exists. **No publication-state
+  change is possible today.**
+- Failing the gate is NO-GO, not "go with notes".
+- Publication requires stating plainly what CDS does not offer.
+
+---
+
+## DEC-S-047 — Licensing is decided per artifact class
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Governance, lifecycle and publication decision
+- **Work package:** CDS-WP-006
+
+### Decision
+
+Licensing and usage rights are decided separately by artifact class.
+
+No code, documentation, token, component, font, icon, template, example, or
+brand-asset license automatically governs the other classes.
+
+### Rationale
+
+The benchmark found this consistently: documentation, code, fonts, icons, and
+brand assets routinely sit on different terms, and brand assets are the most
+restricted almost everywhere. One reviewed system licenses repository files
+permissively while fonts and icons fall under a separate assets agreement.
+Treating licensing as one choice is an error that fails precisely where brand
+assets are involved.
+
+### Consequences
+
+- Ten artifact classes, each decided independently, with an eleven-field rights
+  and licence matrix.
+- **No licence is selected for any class**, and no `LICENSE` file is created.
+- Fonts are frequently not redistributable; logos are trademarks whose purpose is
+  to not be freely usable.
+- **Repository presence grants nothing.**
+- **Unknown or conflicting rights block publication** — absolute, fail closed.
+- Only the Human Maintainer selects terms; Claude never proposes a licence.
+- Addresses RISK-038.
+
+---
+
+## DEC-S-048 — Release control requires explicit human approval
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Governance, lifecycle and publication decision
+- **Work package:** CDS-WP-006
+
+### Decision
+
+CDS release and change control requires immutable revision identity, maturity and
+compatibility declarations, change and migration information, evidence, risk
+review, licensing and publication review, and explicit Human-Maintainer approval.
+
+No automated process may independently approve or publish a CDS release.
+
+### Rationale
+
+A release is the moment every other governance decision either holds or is
+bypassed. Automating that moment would automate the bypass — and a green build is
+evidence, not consent.
+
+### Consequences
+
+- Twelve release candidate requirements, including per-artifact maturity states.
+- Six change classes: Editorial, Corrective, Additive, Deprecating, Breaking,
+  Emergency — each with its own track, evidence, review, versioning, migration,
+  and approval profile.
+- Emergency changes defer evidence and ceremony, never the Human Maintainer
+  decision or the eventual full evidence. "Emergency" describes the timeline, not
+  the standard.
+- **No automatic publication from `main`; no tag or release without a Human
+  Maintainer action; Claude never creates a release or tag.**
+- Unclear readiness ⇒ NO-GO.
+- **No CDS release is currently possible** — licence review is unsatisfiable and
+  no artifact can reach Stable.

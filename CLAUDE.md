@@ -19,8 +19,8 @@ library, or a design project scoped exclusively to CoreOps.
 - Phase: Foundation / Pre-Design
 - First reference consumer: CoreOps (not the sole design target)
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004, CDS-WP-005
-- Next work package: CDS-WP-006 — Governance, Versioning, and Contribution Model
+  CDS-WP-004, CDS-WP-005, CDS-WP-006
+- Next work package: CDS-WP-007 — Accessibility and Inclusive Design Policy
 
 ## Execution environment
 
@@ -178,6 +178,9 @@ Before beginning a work package, inspect at minimum:
 - [README.md](README.md)
 - [project-system/CONTEXT_PACK_FOUNDATION.md](project-system/CONTEXT_PACK_FOUNDATION.md)
   — compact orientation; a summary, never a normative source
+- [docs/governance/GOVERNANCE_OPERATING_MODEL.md](docs/governance/GOVERNANCE_OPERATING_MODEL.md)
+  — normative source for roles, authority, and approval gates; entry point to the
+  governance policies
 - [docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md](docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md)
   — normative source for the logical architecture; entry point to the
   architecture documents
@@ -229,7 +232,72 @@ one is invalid and must be reconciled back into the source.
    verified.
 
 Full model:
-[Source of Truth and Authority Model](docs/architecture/SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md).
+[Source of Truth and Authority Model](docs/architecture/SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md) ·
+[Source Conflict Resolution Policy](docs/governance/SOURCE_CONFLICT_RESOLUTION_POLICY.md).
+
+**Neither normative source wins automatically** (DEC-S-034). A conflict between a
+human-readable source (meaning) and a machine-readable source (values)
+**invalidates the affected artifact state**: mark it not releasable, stop
+transformation and distribution, register a deviation, and escalate. Blocking
+precedes diagnosis.
+
+## Governance tracks
+
+Every change runs on one of two tracks (DEC-S-033):
+
+- **Standard** — corrections, bounded non-breaking additions, low-risk
+  documentation.
+- **Elevated** — breaking changes, Stable artifacts, accessibility obligations,
+  Product Profiles, exceptions, adoption or conformance claims, licensing and
+  publication, removal, security- or legally relevant changes.
+
+**Ceremony scales; obligations do not.** Authority boundaries, traceability,
+evidence, human approval, and fail-closed hold in **both** tracks. A change that
+looks Standard but touches an Elevated trigger **is Elevated**.
+
+Full model:
+[Governance Operating Model](docs/governance/GOVERNANCE_OPERATING_MODEL.md).
+
+## Claim and release boundaries
+
+**Claude never makes, approves, or implies a claim about CDS** (DEC-S-044):
+
+- Four graded claim types exist — Uses CDS Artifacts, CDS-integrated,
+  CDS-validated, CDS-conformant — each scope-, version-, and evidence-bound.
+- **`CDS certified` is prohibited.** No certification programme exists.
+- **No claim is currently valid, by anyone, including CDS itself.**
+- Pilot completion is not adoption; naming a consumer is not endorsement; a
+  research hypothesis is not a claim.
+
+**Claude never creates a release, tag, or publication** (DEC-S-048):
+
+- No automatic publication from `main`; no tag or release without a Human
+  Maintainer action — including in an emergency.
+- **A clean build or diff is not release approval.** Automated checks are input
+  to a review, never consent.
+- Unclear readiness ⇒ **NO-GO**, never "go with notes".
+- Claude may document release steps as instructions for the Human Maintainer, and
+  may never execute them.
+- Current publication state: **`Private Development`**. No licence is selected
+  for any artifact class.
+
+## Risk roles
+
+Finalized (DEC-S-045). Per risk:
+
+- **Accountable Risk Owner: Human Maintainer** — the **only** role that may set a
+  risk `Accepted` or `Closed`.
+- **Risk Controller: Nova** — observes, assesses, requests evidence, recommends;
+  **never accepts or closes**.
+- **Mitigation Executor:** named per mitigation; Claude only as scoped executor
+  for documentation-shaped work.
+- **Evidence Reviewer:** Nova or an authorized reviewer — **never the artifact
+  itself, never the executor of the work being evidenced**.
+
+**Claude may never accept a risk, close a risk, or approve a maturity state.**
+Documentation is not mitigation.
+
+Full model: [Risk Governance Model](docs/governance/RISK_GOVERNANCE_MODEL.md).
 
 ## Consumer repositories are read-only
 

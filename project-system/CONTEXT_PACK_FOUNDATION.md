@@ -6,7 +6,7 @@
 > it never defines. Where it disagrees with a normative source, the normative
 > source wins and this pack is wrong and must be corrected.
 
-- **Maintained by:** CDS-WP-005
+- **Maintained by:** CDS-WP-006
 - **Date:** 2026-07-16
 
 ## Project identity
@@ -34,6 +34,7 @@ concrete visual or technical design decisions are authorized (DEC-S-003).
 | CDS-WP-003 | Benchmark and Differentiation Research | Ten systems reviewed against 14 dimensions from official sources; HYP-001…008 assessed; RISK-010…013. **Non-normative.** No decision changed. |
 | CDS-WP-004 | Consumer Requirements and CoreOps Pilot Contract | 3 consumers analyzed at committed revisions; CR-001…040 registered and traced; CoreOps pilot Groups A–E with 9 scenarios; pilot contract; HYP consumer layer; DEC-S-013…020; RISK-014…019. |
 | CDS-WP-005 | Design System Architecture | Eight-layer logical architecture; authority model; token flow; profiles and reconciliation; channels and distribution; consumer contracts; status semantics; CR mapped to architecture; DEC-S-021…032; RISK-020…028. **No technology or design selected.** |
+| CDS-WP-006 | Governance, Versioning, Contribution, Risk and Publication Model | Six roles, two tracks; conflict resolution; 7 maturity states; versioning + 8 compatibility axes; deprecation; contribution; exceptions and profiles; 4 claim types; **risk ownership finalized**; 5 publication states; licensing per 10 classes; release control. DEC-S-033…048; RISK-029…040. **No licence, publication, technology, or design selected.** |
 
 ## Normative source map
 
@@ -50,6 +51,16 @@ Read the source, not this summary, when the detail matters.
 | Working rules, Skills-first mode | [CLAUDE.md](../CLAUDE.md) |
 | Roadmap and status | [project-system/WORK_PACKAGES.md](WORK_PACKAGES.md) |
 | Skills provenance | [docs/governance/NDF_SKILLS_PROVENANCE.md](../docs/governance/NDF_SKILLS_PROVENANCE.md) |
+| **Governance** | [docs/governance/GOVERNANCE_OPERATING_MODEL.md](../docs/governance/GOVERNANCE_OPERATING_MODEL.md) |
+| Source conflicts | [docs/governance/SOURCE_CONFLICT_RESOLUTION_POLICY.md](../docs/governance/SOURCE_CONFLICT_RESOLUTION_POLICY.md) |
+| Maturity states and gates | [docs/governance/ARTIFACT_MATURITY_LIFECYCLE.md](../docs/governance/ARTIFACT_MATURITY_LIFECYCLE.md) |
+| Versioning and compatibility | [docs/governance/VERSIONING_COMPATIBILITY_AND_DEPRECATION_POLICY.md](../docs/governance/VERSIONING_COMPATIBILITY_AND_DEPRECATION_POLICY.md) |
+| Contribution and acceptance | [docs/governance/CONTRIBUTION_AND_ACCEPTANCE_MODEL.md](../docs/governance/CONTRIBUTION_AND_ACCEPTANCE_MODEL.md) |
+| Exceptions and Product Profiles | [docs/governance/EXCEPTION_AND_PRODUCT_PROFILE_GOVERNANCE.md](../docs/governance/EXCEPTION_AND_PRODUCT_PROFILE_GOVERNANCE.md) |
+| Adoption and conformance claims | [docs/governance/ADOPTION_CONFORMANCE_AND_CLAIMS_POLICY.md](../docs/governance/ADOPTION_CONFORMANCE_AND_CLAIMS_POLICY.md) |
+| Risk ownership and control | [docs/governance/RISK_GOVERNANCE_MODEL.md](../docs/governance/RISK_GOVERNANCE_MODEL.md) |
+| Licensing and publication | [docs/governance/LICENSING_AND_PUBLICATION_DECISION_MODEL.md](../docs/governance/LICENSING_AND_PUBLICATION_DECISION_MODEL.md) |
+| Release and change control | [docs/governance/RELEASE_AND_CHANGE_CONTROL_POLICY.md](../docs/governance/RELEASE_AND_CHANGE_CONTROL_POLICY.md) |
 | **Logical architecture** | [docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md](../docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md) |
 | Artifact classes and authority | [docs/architecture/SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md](../docs/architecture/SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md) |
 | Token flow and theming | [docs/architecture/TOKEN_AND_THEME_ARCHITECTURE.md](../docs/architecture/TOKEN_AND_THEME_ARCHITECTURE.md) |
@@ -76,12 +87,13 @@ work packages; they decide nothing:
 
 ## Active decisions
 
-- Range: DEC-S-001 … DEC-S-032 · Count: 32 · All Accepted
+- Range: DEC-S-001 … DEC-S-048 · Count: 48 · All Accepted
 - DEC-S-001…006: strategic foundation decisions (CDS-WP-001)
 - DEC-S-007…012: strategic scope decisions (CDS-WP-002)
-- DEC-S-013…020: consumer and pilot scope decisions (CDS-WP-004) — unchanged by
-  CDS-WP-005
-- DEC-S-021…032: logical architecture decisions (CDS-WP-005)
+- DEC-S-013…020: consumer and pilot scope decisions (CDS-WP-004)
+- DEC-S-021…032: logical architecture decisions (CDS-WP-005) — unchanged by
+  CDS-WP-006
+- DEC-S-033…048: governance, lifecycle and publication decisions (CDS-WP-006)
 - No ADR files exist.
 
 | ID | Summary |
@@ -118,11 +130,30 @@ work packages; they decide nothing:
 | DEC-S-030 | Distribution supports offline, pinning, reproducibility. |
 | DEC-S-031 | Artifacts stay traceable to source revisions. |
 | DEC-S-032 | The architecture is technology-independent. |
+| DEC-S-033 | Governance separates authority by function; activity grants nothing. |
+| DEC-S-034 | Neither normative source wins automatically; a conflict invalidates the state. |
+| DEC-S-035 | Seven maturity states, separate from version and publication. |
+| DEC-S-036 | Candidate and Stable need evidence and approval; Candidate is mandatory. |
+| DEC-S-037 | MAJOR.MINOR.PATCH; honest pre-1.0 policy. |
+| DEC-S-038 | Releases need an immutable identity; `latest` is not one. |
+| DEC-S-039 | Compatibility declared per axis; no blanket claim. |
+| DEC-S-040 | Stable requires deprecation before removal; removal is MAJOR. |
+| DEC-S-041 | Controlled contribution process; use never equals acceptance. |
+| DEC-S-042 | Exceptions are explicit, bounded, expiring. |
+| DEC-S-043 | Product Profiles are separately governed; never retrospective legitimation. |
+| DEC-S-044 | Claims are scope-, version-, evidence-bound; `CDS certified` prohibited. |
+| DEC-S-045 | Risk ownership finalized: Human Maintainer accountable, Nova controller. |
+| DEC-S-046 | Five publication states with an explicit gate. |
+| DEC-S-047 | Licensing decided per artifact class; no inheritance. |
+| DEC-S-048 | Release control requires explicit human approval. |
 
 ## Active risks
 
-- Range: RISK-001 … RISK-028 · Count: 28 · All Monitored
-- Owner model is **provisional** until CDS-WP-006.
+- Range: RISK-001 … RISK-040 · Count: 40 · All Monitored
+- **Owner model finalized** (DEC-S-045): Accountable Risk Owner — Human
+  Maintainer · Risk Controller — Nova · Mitigation Executor — named per
+  mitigation · Evidence Reviewer — Nova or authorized reviewer.
+- Only the Human Maintainer may set a risk `Accepted` or `Closed`.
 
 | ID | Summary |
 | --- | --- |
@@ -154,6 +185,18 @@ work packages; they decide nothing:
 | RISK-026 | Architecture overdesign. |
 | RISK-027 | Product-profile fragmentation. |
 | RISK-028 | Deferred accessibility policy creates architecture debt. |
+| RISK-029 | Governance bottleneck and maintainer overload. |
+| RISK-030 | Governance role ambiguity. |
+| RISK-031 | Maturity inflation. |
+| RISK-032 | Compatibility ambiguity. |
+| RISK-033 | Deprecation without viable migration. |
+| RISK-034 | Contribution gate bypass. |
+| RISK-035 | Exception debt. |
+| RISK-036 | Product-profile governance bypass. |
+| RISK-037 | Misleading adoption or conformance claims. |
+| RISK-038 | Licensing and rights fragmentation. |
+| RISK-039 | Premature publication. |
+| RISK-040 | Ceremonial risk governance. |
 
 ## Approved strategic principles
 
@@ -388,19 +431,84 @@ the sole meaning carrier.
 24 partially addressed, 3 deferred to CDS-WP-007, 1 to CDS-WP-006, 2
 consumer-owned, 2 out of scope.
 
+## Governance (CDS-WP-006)
+
+**Normative.** Selects no licence, publication state, technology, or design.
+
+**Roles (6):** Human Maintainer (final approval, exclusive Git/release/
+publication/licensing authority, sole risk acceptor) · Nova (governance and risk
+controller, review — **recommends, never decides**) · Claude (scoped executor —
+no approval, no Git) · Consumer Maintainer (own project only) · Contributor (no
+acceptance authority) · Evidence Reviewer (never the artifact itself, never the
+executor). **Activity grants no authority** (DEC-S-033).
+
+**Tracks (2):** Standard (corrections, bounded non-breaking additions) ·
+Elevated (breaking, Stable, accessibility, profiles, exceptions, claims,
+licensing, publication, removal, security/legal). **Ceremony scales; obligations
+do not.** A change touching an Elevated trigger is Elevated.
+
+**Source conflict** (DEC-S-034): neither normative source wins automatically. A
+conflict **invalidates the affected state** and blocks release and distribution
+from `Suspected` onward. Prohibited: recency wins · design tool wins · generated
+wins · implementation wins · consumer usage wins · silent overwrite · automatic
+resolution.
+
+**Maturity (7):** Proposed → Exploratory → Experimental → **Candidate** →
+Stable → Deprecated → Removed. Candidate is mandatory before Stable. Maturity,
+release version, and publication state are **three separate axes**. **No existing
+artifact is Candidate or Stable.**
+
+**Versioning:** MAJOR.MINOR.PATCH. Pre-1.0 = no blanket compatibility promise,
+but breaking changes, migrations, revisions, and deprecations stay documented.
+**`latest` is not an identity.** Compatibility declared across **8 axes**; an
+unassessed axis is never "compatible".
+
+**Contribution:** 10-step flow, 5 outcomes. **`Keep Consumer-local` is a
+first-class success.** No auto-merge, no self-approval, no urgency bypass.
+**External contribution is not yet possible.**
+
+**Exceptions:** 13 mandatory fields, 6 statuses, expiry required. `Expired` = an
+**uncovered deviation**. Recurring exceptions trigger a **CDS gap review**.
+**Accessibility weakening is not approvable through a normal exception.**
+
+**Product Profiles:** 12 required elements. **Not retrospective legitimation** of
+an existing consumer design (RISK-036). A profile exceeding its bounds is a fork.
+
+**Claims (4):** Uses CDS Artifacts → CDS-integrated → CDS-validated →
+CDS-conformant, each scope- and version-bound with 8 mandatory fields.
+**`CDS certified` prohibited.** **No claim is currently valid, by anyone.**
+
+**Risk ownership finalized:** Human Maintainer accountable · Nova controller ·
+executor named per mitigation · reviewer never the executor. **Documentation is
+not mitigation** (RISK-040).
+
+**Publication (5 states):** Private Development · Controlled Preview · Public
+Preview · Public Stable · Archived. **Current: `Private Development`.**
+15-point gate. **Repository visibility is not a publication state.**
+
+**Licensing:** decided per **10 artifact classes**; no inheritance; **no licence
+selected**. Unknown rights **block publication**.
+
+**Release:** 12 requirements, **6 change classes**. No automatic publication from
+`main`; no tag without a Human Maintainer action; **Claude never releases**. A
+green build is not consent.
+
+### Currently blocked
+
+**No artifact can reach Stable · no Product Profile can be approved · no
+publication-state change is possible · no CDS release is possible.** All four
+trace to the undefined accessibility target (CR-024) and the absent licensing
+decisions (RISK-028, RISK-038).
+
 ## Current and next work package
 
-- **Completed:** CDS-WP-005 — Design System Architecture
-- **Next:** CDS-WP-006 — Governance, Versioning, and Contribution Model
+- **Completed:** CDS-WP-006 — Governance, Versioning, Contribution, Risk and
+  Publication Model
+- **Next:** CDS-WP-007 — Accessibility and Inclusive Design Policy
 
-CDS-WP-006 supplies the policy the architecture deferred: governance roles, risk
-ownership (currently **provisional** across all 28 risks), maturity states,
-versioning, compatibility, deprecation, contribution, exception governance,
-Product Profile governance, conformance and adoption claims, and the licensing
-and publication decision model.
-
-**Open for Nova:** CR-024, the accessibility target, is still undefined. It now
-blocks a CoreOps pilot entry criterion and Pilot Group E evidence (RISK-028).
+CDS-WP-007 is now the **critical path**: the undefined accessibility target
+blocks the Stable gate, Product Profile approval, the publication gate, and a
+CoreOps pilot entry criterion.
 
 Being listed as Next identifies sequence, not authorization. Every work package
 needs an explicit prompt from Nova.

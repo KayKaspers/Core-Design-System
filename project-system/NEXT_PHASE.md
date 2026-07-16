@@ -2,154 +2,175 @@
 
 - **Phase:** Foundation / Pre-Design
 - **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004, CDS-WP-005
-- **Next work package:** CDS-WP-006 — Governance, Versioning, and Contribution
-  Model
+  CDS-WP-004, CDS-WP-005, CDS-WP-006
+- **Next work package:** CDS-WP-007 — Accessibility and Inclusive Design Policy
 
 ## Status of completed work packages
 
 ### CDS-WP-001 — Project Governance and NDF Bootstrap — Completed
 
 Charter, role and authority model, DEC-S-001 … DEC-S-006, RISK-001 … RISK-005,
-controlled roadmap, local Claude operating instructions.
+controlled roadmap.
 
 ### CDS-WP-001A — NDF Skills Bootstrap — Completed
 
-38 verified docs-only NDF v1.0.0 Skills, 39 files, pinned byte-identical to
-commit `9dcadc12fb960914b9a5baeff2ab1aee75912b57`; Skills-first mode active.
+38 verified docs-only NDF v1.0.0 Skills pinned to commit
+`9dcadc12fb960914b9a5baeff2ab1aee75912b57`; Skills-first mode active.
 
 ### CDS-WP-002 — Concept and Scope Registration — Completed
 
-Six capability domains, ten cross-cutting concerns, current versus long-term
-scope, twelve non-goals, three consumer classes, ownership boundaries, CoreOps
-pilot boundary. DEC-S-007 … DEC-S-012, RISK-006 … RISK-009.
+Six capability domains, ten cross-cutting concerns, twelve non-goals, three
+consumer classes, ownership boundaries. DEC-S-007 … DEC-S-012,
+RISK-006 … RISK-009.
 
 ### CDS-WP-003 — Benchmark and Differentiation Research — Completed
 
-Ten design systems reviewed against 14 dimensions from official sources;
-HYP-001 … HYP-008 assessed. RISK-010 … RISK-013. **Non-normative.**
+Ten design systems reviewed from official sources; HYP-001 … HYP-008 assessed.
+RISK-010 … RISK-013. **Non-normative.**
 
 ### CDS-WP-004 — Consumer Requirements and CoreOps Pilot Contract — Completed
 
-Three consumers analyzed read-only at committed revisions; CR-001 … CR-040
-registered and traced; bounded CoreOps pilot (Groups A–E, 9 scenarios) and its
-contract; HYP consumer layer. DEC-S-013 … DEC-S-020, RISK-014 … RISK-019.
+Three consumers analyzed at committed revisions; CR-001 … CR-040 registered and
+traced; bounded CoreOps pilot and contract. DEC-S-013 … DEC-S-020,
+RISK-014 … RISK-019.
 
 ### CDS-WP-005 — Design System Architecture — Completed
 
-Defined the CDS logical architecture:
+Eight-layer logical architecture, authority model, token flow, profiles and
+reconciliation, channels and distribution, consumer contracts, status semantics.
+DEC-S-021 … DEC-S-032, RISK-020 … RISK-028. **No technology or design selected.**
 
-- **eight architecture layers** (DEC-S-021),
-- **source-of-truth and authority model** with eight artifact classes and an
-  authority matrix (DEC-S-022, DEC-S-023),
-- **five-level conceptual token flow** (DEC-S-024),
-- **product profile and extension model** with the existing-product
-  reconciliation flow (DEC-S-025, DEC-S-026),
-- **operations patterns as a domain family**, not the universal foundation
-  (DEC-S-027),
-- **status semantics with five separated axes** and the Unknown invariant
-  (DEC-S-028),
-- **channel and distribution model** with offline and provenance requirements
-  (DEC-S-029, DEC-S-030, DEC-S-031),
-- **five consumer contracts**,
-- **CR-001 … CR-040 mapped** to the architecture.
+### CDS-WP-006 — Governance, Versioning, Contribution, Risk and Publication Model — Completed
 
-Added DEC-S-021 … DEC-S-032 and RISK-020 … RISK-028.
+Operationalized the architecture into governance:
 
-**The architecture selects no technology and no design** (DEC-S-032). It is
-structure awaiting policy and implementation evidence.
+- **Governance operating model** — six roles, Standard and Elevated tracks, an
+  authority matrix, and the rule that ceremony scales but obligation does not
+  (DEC-S-033).
+- **Source conflict resolution** — neither normative source wins automatically; a
+  conflict invalidates the affected state (DEC-S-034).
+- **Seven-state maturity lifecycle** — Proposed → Exploratory → Experimental →
+  Candidate → Stable → Deprecated → Removed, on an axis separate from release
+  version and publication state (DEC-S-035, DEC-S-036).
+- **Versioning and compatibility** — MAJOR.MINOR.PATCH, an honest pre-1.0
+  policy, immutable release identity, and compatibility declared across eight
+  axes (DEC-S-037 … DEC-S-039).
+- **Deprecation and removal** — deprecation before removal, bounded emergency
+  removal (DEC-S-040).
+- **Contribution and acceptance** — a ten-step flow with five outcomes
+  (DEC-S-041).
+- **Exceptions and Product Profiles** — bounded, expiring, and never
+  retrospective legitimation (DEC-S-042, DEC-S-043).
+- **Adoption claims** — four graded types; `CDS certified` prohibited
+  (DEC-S-044).
+- **Risk ownership finalized** — Human Maintainer accountable, Nova controller
+  (DEC-S-045).
+- **Publication and licensing** — five states with a gate; licensing decided per
+  ten artifact classes (DEC-S-046, DEC-S-047).
+- **Release control** — no automated approval or publication (DEC-S-048).
+
+Added DEC-S-033 … DEC-S-048 and RISK-029 … RISK-040.
+
+**No licence was selected, no publication approved, no technology or design
+chosen, and no accessibility level set.** The current publication state remains
+`Private Development`.
 
 Documents:
-[Architecture](../docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md) ·
-[Authority](../docs/architecture/SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md) ·
-[Tokens](../docs/architecture/TOKEN_AND_THEME_ARCHITECTURE.md) ·
-[Profiles](../docs/architecture/PRODUCT_PROFILE_AND_EXTENSION_MODEL.md) ·
-[Channels](../docs/architecture/ARTIFACT_DISTRIBUTION_AND_CHANNEL_MODEL.md) ·
-[Contracts](../docs/architecture/CONSUMER_CONTRACT_AND_RECONCILIATION_MODEL.md) ·
-[Evidence & Status](../docs/architecture/EVIDENCE_TRACEABILITY_AND_STATUS_SEMANTICS.md) ·
-[Requirement Coverage](../docs/architecture/ARCHITECTURE_REQUIREMENTS_TRACEABILITY.md)
+[Governance Operating Model](../docs/governance/GOVERNANCE_OPERATING_MODEL.md) ·
+[Source Conflict Resolution](../docs/governance/SOURCE_CONFLICT_RESOLUTION_POLICY.md) ·
+[Artifact Maturity Lifecycle](../docs/governance/ARTIFACT_MATURITY_LIFECYCLE.md) ·
+[Versioning, Compatibility and Deprecation](../docs/governance/VERSIONING_COMPATIBILITY_AND_DEPRECATION_POLICY.md) ·
+[Contribution and Acceptance](../docs/governance/CONTRIBUTION_AND_ACCEPTANCE_MODEL.md) ·
+[Exception and Product Profile Governance](../docs/governance/EXCEPTION_AND_PRODUCT_PROFILE_GOVERNANCE.md) ·
+[Adoption, Conformance and Claims](../docs/governance/ADOPTION_CONFORMANCE_AND_CLAIMS_POLICY.md) ·
+[Risk Governance Model](../docs/governance/RISK_GOVERNANCE_MODEL.md) ·
+[Licensing and Publication](../docs/governance/LICENSING_AND_PUBLICATION_DECISION_MODEL.md) ·
+[Release and Change Control](../docs/governance/RELEASE_AND_CHANGE_CONTROL_POLICY.md)
 
 Completion is reported for Human Maintainer review. No Git write action was
 performed.
 
-## Next work package: CDS-WP-006 — Governance, Versioning, and Contribution Model
+## Next work package: CDS-WP-007 — Accessibility and Inclusive Design Policy
+
+### Why this is now the critical path
+
+CDS-WP-006 made the accessibility gap **load-bearing**. The undefined
+accessibility target (CR-024) now blocks four separate gates:
+
+| Blocked | Because |
+| --- | --- |
+| **Stable gate** | Requires accessibility evidence — so **no artifact can reach Stable** |
+| **Product Profile approval** | Requires accessibility evidence — so **no profile can be approved** |
+| **Publication gate** | Requires an accessibility statement — so **no publication-state change is possible** |
+| **CoreOps pilot entry** | An entry criterion; Pilot Group E cannot be evidenced |
+
+Consequently **no CDS release is currently possible**, and a conformance claim
+is unreachable by construction. This is recorded as RISK-028 and was not worked
+around.
 
 ### Objective
 
-Supply the policy the architecture deliberately deferred. The architecture
-defines structure; CDS-WP-006 defines the rules that operate it.
+Define the binding accessibility and inclusive-design policy and its verification
+approach.
 
 ### Scope direction
 
-- **Governance roles** — who decides what, and the escalation path.
-- **Risk ownership** — the risk owner model is currently **provisional** across
-  all 28 risks and must be settled here.
-- **Maturity states** — what makes a foundation Candidate or Stable.
-- **Versioning** — the scheme that gives "revision" a concrete meaning.
-- **Compatibility** — what makes pinning safe.
-- **Deprecation** — distinct states for unmaintained-but-present versus removed.
-- **Contribution** — proposal, review, and acceptance process.
-- **Exception governance** — recording, review, and expiry of Local Exceptions.
-- **Product Profile governance** — which extension points are approved, who
-  approves, and how a profile is revoked.
-- **Conformance and adoption claims** — the criteria and evidence model behind
-  DEC-S-012 and DEC-S-017.
-- **Licensing and publication decision model** — still with no assigned work
-  package until now.
+- **Accessibility target level** — the decision CR-024 has been waiting for.
+- **Inclusive design principles.**
+- **Role and responsibility boundaries** — what CDS guarantees versus what the
+  consumer must still do. The benchmark's clearest lesson: the strongest systems
+  state plainly that using them does not make a consumer's product accessible.
+- **Component and pattern requirements.**
+- **Keyboard and focus** (CR-021).
+- **Motion** (CR-022).
+- **Contrast and non-colour semantics** (CR-006) — already an architectural
+  invariant; the policy sets the threshold.
+- **Localization and language** (CR-023).
+- **Evidence model** — what substantiates the target, and who reviews it.
+- **Consumer responsibilities.**
+- **CoreOps pilot entry criterion CR-024.**
 
 ### Input to carry forward
 
-**Architecture dependencies explicitly deferred to CDS-WP-006:**
+- Accessibility is currently **weak in both evidence layers**: the benchmark found
+  it named everywhere but evidenced rarely, and consumer evidence is thin —
+  CoreOps names a baseline with no level, CastCore documentation contains none at
+  all, and only SpeakCore documents concrete practice (contrast, visible focus,
+  no colour-only coding).
+- The architecture already holds the constraints that are safe regardless of
+  level: colour never the sole meaning carrier, component contracts carry
+  accessibility behavior, profiles may not weaken guarantees (invariant 10).
+- **A normal exception may never weaken accessibility** (DEC-S-042) — a
+  prohibition currently protecting a requirement whose value is unknown.
+- The claim discipline applies: a stated target plus published evidence plus an
+  explicit consumer obligation — **never** "CDS is accessible" (DEC-S-044).
+- WCAG 2.2 itself states that even AAA conformance will not serve every
+  disability. Whatever target is chosen, it is a target — not a guarantee of
+  accessibility.
+- The target must be **evidenceable at actual maintainer capacity** (RISK-029,
+  RISK-040). A level CDS cannot substantiate is worse than a lower one it can.
 
-- the detailed conflict-resolution authority behind DEC-S-023,
-- the change-control process that turns an escalation into a decision,
-- how a deviation is formally recorded, reviewed, and expired,
-- which token extension points are approved (DEC-S-025),
-- profile and exception limits (RISK-021, RISK-027),
-- the versioning scheme underpinning DEC-S-031 and CR-034,
-- the evidence model behind the Adoption Evidence Contract.
+### Explicitly prohibited in CDS-WP-007
 
-**From the benchmark (non-normative):** published per-component maturity states
-and published conformance evidence were the two most effective practices found —
-but they come from publishers with dedicated teams (RISK-011). Governance rigour
-must be sized to actual capacity (RISK-026).
-
-**From consumers:** consumers are already **more mature at version-bound evidence
-than CDS is** — CDS has no version, no maturity model, and no evidence model
-(HYP-006). Licensing is never one decision: documentation, code, fonts, icons,
-and brand assets routinely sit on different terms.
-
-### Explicitly prohibited in CDS-WP-006
-
-- final visual design of any kind,
+- concrete visual design of any kind,
 - selecting colours, typography, icons, logos, or themes,
 - selecting a design tool, component framework, or token format,
-- selecting a build system, package manager, or repository topology,
 - implementing components or product code,
-- claiming adoption or conformance,
+- selecting a licence or approving publication,
+- claiming conformance or certification,
 - starting the CoreOps pilot,
+- declaring any existing artifact accessible,
 - modifying Skill files or consumer repositories,
 - extending the roadmap.
 
 ### Authorization note
 
-CDS-WP-006 requires an explicit work-package prompt from Nova. Being listed as
+CDS-WP-007 requires an explicit work-package prompt from Nova. Being listed as
 **Next** identifies sequence, not authorization.
-
-## Open question for Nova
-
-**CR-024 — the accessibility target — remains undefined**, and it now blocks
-more than a policy gap: it blocks a CoreOps pilot entry criterion and prevents
-Pilot Group E from being evidenced. Accessibility is weak in **both** the
-benchmark and the consumer evidence layers.
-
-RISK-028 records the resulting architecture debt. Nova may wish to consider
-advancing CDS-WP-007, or deciding the target earlier than the roadmap implies.
-**Claude does not reorder the roadmap.**
 
 ## Related documents
 
 - [Work Packages](WORK_PACKAGES.md)
 - [Project Profile](PROJECT_PROFILE.md)
 - [Foundation Context Pack](CONTEXT_PACK_FOUNDATION.md)
-- [Design System Architecture](../docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md)
+- [Governance Operating Model](../docs/governance/GOVERNANCE_OPERATING_MODEL.md)

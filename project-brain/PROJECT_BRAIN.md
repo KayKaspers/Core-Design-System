@@ -53,12 +53,12 @@ areas today.
 Governance foundation established. No final design or technology decisions are
 approved.
 
-- Decisions: DEC-S-001 … DEC-S-032 (32) — 6 foundation + 6 scope + 8 consumer
-  and pilot scope + 12 logical architecture decisions
-- Risks: RISK-001 … RISK-028 (28) — owner model provisional until CDS-WP-006
+- Decisions: DEC-S-001 … DEC-S-048 (48) — 6 foundation + 6 scope + 8 consumer
+  and pilot scope + 12 logical architecture + 16 governance decisions
+- Risks: RISK-001 … RISK-040 (40) — all Monitored; **owner model finalized**
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004, CDS-WP-005
-- Next work package: CDS-WP-006
+  CDS-WP-004, CDS-WP-005, CDS-WP-006
+- Next work package: CDS-WP-007
 
 ## Registered scope
 
@@ -163,6 +163,22 @@ Details: [Provenance](../docs/governance/NDF_SKILLS_PROVENANCE.md) ·
 | DEC-S-030 | Distribution supports offline, pinning, reproducibility. |
 | DEC-S-031 | Artifacts stay traceable to source revisions. |
 | DEC-S-032 | The architecture is technology-independent. |
+| DEC-S-033 | Governance separates authority by function; activity grants nothing. |
+| DEC-S-034 | Neither normative source wins automatically. |
+| DEC-S-035 | Seven maturity states, separate from version and publication. |
+| DEC-S-036 | Candidate and Stable need evidence and approval. |
+| DEC-S-037 | MAJOR.MINOR.PATCH; honest pre-1.0 policy. |
+| DEC-S-038 | Releases need an immutable identity; `latest` is not one. |
+| DEC-S-039 | Compatibility declared per axis. |
+| DEC-S-040 | Stable requires deprecation before removal. |
+| DEC-S-041 | Controlled contribution; use never equals acceptance. |
+| DEC-S-042 | Exceptions are explicit, bounded, expiring. |
+| DEC-S-043 | Product Profiles are separately governed. |
+| DEC-S-044 | Claims are scope-, version-, evidence-bound; `CDS certified` prohibited. |
+| DEC-S-045 | Risk ownership finalized. |
+| DEC-S-046 | Five publication states with an explicit gate. |
+| DEC-S-047 | Licensing decided per artifact class. |
+| DEC-S-048 | Release control requires explicit human approval. |
 
 Details: [Decision Index](../docs/decisions/DECISION_INDEX.md)
 
@@ -198,9 +214,83 @@ Details: [Decision Index](../docs/decisions/DECISION_INDEX.md)
 | RISK-026 | Architecture overdesign. | Monitored |
 | RISK-027 | Product-profile fragmentation. | Monitored |
 | RISK-028 | Deferred accessibility policy creates architecture debt. | Monitored |
+| RISK-029 | Governance bottleneck and maintainer overload. | Monitored |
+| RISK-030 | Governance role ambiguity. | Monitored |
+| RISK-031 | Maturity inflation. | Monitored |
+| RISK-032 | Compatibility ambiguity. | Monitored |
+| RISK-033 | Deprecation without viable migration. | Monitored |
+| RISK-034 | Contribution gate bypass. | Monitored |
+| RISK-035 | Exception debt. | Monitored |
+| RISK-036 | Product-profile governance bypass. | Monitored |
+| RISK-037 | Misleading adoption or conformance claims. | Monitored |
+| RISK-038 | Licensing and rights fragmentation. | Monitored |
+| RISK-039 | Premature publication. | Monitored |
+| RISK-040 | Ceremonial risk governance. | Monitored |
 
-Owner model provisional until CDS-WP-006.
+**Owner model finalized** (DEC-S-045): Human Maintainer accountable · Nova
+controller · executor named per mitigation · reviewer never the executor. Only
+the Human Maintainer may accept or close a risk.
 Details: [Risk Register](../docs/risks/RISK_REGISTER.md)
+
+## Governance model (CDS-WP-006)
+
+**Normative. Selects no licence, publication, technology, or design.**
+
+**Six roles** (DEC-S-033): Human Maintainer (final approval; exclusive Git,
+release, publication, licensing; sole risk acceptor) · Nova (governance and risk
+control, review — **recommends, never decides**) · Claude (scoped executor — no
+approval, no Git) · Consumer Maintainer · Contributor (no acceptance authority) ·
+Evidence Reviewer (never the artifact, never the executor). **Creating,
+implementing, or using an artifact grants no authority.**
+
+**Two tracks:** Standard and Elevated. **Ceremony scales; obligations do not** —
+authority, traceability, evidence, human approval, and fail-closed hold in both.
+
+**Source conflict** (DEC-S-034): neither normative source wins automatically. A
+conflict **invalidates the affected state**; `Suspected` already blocks release
+and distribution. Recency, tooling, generated output, implementation, and consumer
+usage never win.
+
+**Maturity lifecycle** (7 states, DEC-S-035/036): Proposed → Exploratory →
+Experimental → **Candidate** → Stable → Deprecated → Removed. Candidate mandatory.
+**Maturity, release version, and publication state are separate axes** — collapsing
+them is how "released" becomes "stable". **No existing artifact is Candidate or
+Stable**; defining a lifecycle did not populate it.
+
+**Versioning and compatibility** (DEC-S-037…040): MAJOR.MINOR.PATCH; pre-1.0
+removes the promise, not the duty to document. **`latest` is not an identity.**
+Compatibility per **8 axes**; unassessed is never "compatible". Deprecation before
+removal; **a deprecation without a migration path is a removal with extra steps**.
+
+**Contribution** (DEC-S-041): 10 steps, 5 outcomes. **`Keep Consumer-local` is a
+first-class success** — CDS absorbing everything is the failure mode. No
+auto-merge, no self-approval, no urgency bypass. External contribution not yet
+possible.
+
+**Exceptions and Profiles** (DEC-S-042/043): exceptions bounded, owned, expiring;
+`Expired` is an uncovered deviation; recurring exceptions trigger a core gap
+review; **accessibility weakening is not exceptable**. A Product Profile is **not
+retrospective legitimation** of an existing consumer design.
+
+**Claims** (DEC-S-044): four graded types, eight mandatory fields each.
+**`CDS certified` prohibited.** **No claim is currently valid, by anyone —
+including CDS.**
+
+**Publication and licensing** (DEC-S-046/047): five states, current
+**`Private Development`**; 15-point gate; **repository visibility is not
+publication**. Licensing per **10 artifact classes**, no inheritance, **none
+selected**; unknown rights block publication.
+
+**Release** (DEC-S-048): 12 requirements, 6 change classes; no automatic
+publication; **Claude never releases**; a green build is not consent.
+
+**Currently blocked:** no artifact can reach Stable · no profile can be approved ·
+no publication change · **no release is possible** — all tracing to the undefined
+accessibility target (CR-024) and absent licensing decisions.
+
+Details: [Governance Operating Model](../docs/governance/GOVERNANCE_OPERATING_MODEL.md) ·
+[Risk Governance](../docs/governance/RISK_GOVERNANCE_MODEL.md) ·
+[Claims](../docs/governance/ADOPTION_CONFORMANCE_AND_CLAIMS_POLICY.md)
 
 ## Logical architecture (CDS-WP-005)
 
@@ -352,16 +442,18 @@ override governance.
 
 ## Next step
 
-CDS-WP-006 — Governance, Versioning, and Contribution Model: supplies the policy
-the architecture deliberately deferred — governance roles, **risk ownership**
-(provisional across all 28 risks), maturity states, versioning, compatibility,
-deprecation, contribution, exception governance, Product Profile governance,
-conformance and adoption claims, and the licensing and publication decision
-model. Still no visual design and no technology selection.
+CDS-WP-007 — Accessibility and Inclusive Design Policy: the accessibility target
+(CR-024), inclusive design principles, role boundaries, component and pattern
+requirements, keyboard and focus, motion, contrast and non-colour semantics,
+localization, the evidence model, and consumer responsibilities. Still no visual
+design and no technology selection.
 
-**Open for Nova:** the accessibility target (CR-024) remains undefined and now
-blocks a CoreOps pilot entry criterion and Pilot Group E evidence (RISK-028).
-Advancing CDS-WP-007 is worth considering; Claude does not reorder the roadmap. Requires an explicit work-package prompt from Nova.
+**CDS-WP-007 is now the critical path.** The undefined accessibility target
+blocks four gates: the Stable gate, Product Profile approval, the publication
+gate, and a CoreOps pilot entry criterion — so **no artifact can reach Stable and
+no release is possible** until it is decided (RISK-028). Accessibility is weak in
+**both** evidence layers, and the target must be evidenceable at actual maintainer
+capacity: a level CDS cannot substantiate is worse than a lower one it can. Requires an explicit work-package prompt from Nova.
 
 ## Related documents
 
@@ -378,3 +470,4 @@ Advancing CDS-WP-007 is worth considering; Claude does not reorder the roadmap. 
 - [CDS-WP-003 Benchmark and Differentiation Research Notes](CDS_WP_003_BENCHMARK_AND_DIFFERENTIATION_RESEARCH_NOTES.md)
 - [CDS-WP-004 Consumer Requirements and CoreOps Pilot Notes](CDS_WP_004_CONSUMER_REQUIREMENTS_AND_COREOPS_PILOT_NOTES.md)
 - [CDS-WP-005 Design System Architecture Notes](CDS_WP_005_DESIGN_SYSTEM_ARCHITECTURE_NOTES.md)
+- [CDS-WP-006 Governance, Versioning and Contribution Notes](CDS_WP_006_GOVERNANCE_VERSIONING_AND_CONTRIBUTION_NOTES.md)

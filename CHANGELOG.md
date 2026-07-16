@@ -9,6 +9,46 @@ released and no release is announced.
 
 ### Added
 
+- Governance operating model defined as the normative governance source: six
+  roles, an authority matrix, Standard and Elevated tracks, approval gates,
+  separation of review and approval, the consumer governance boundary, and
+  escalation. (CDS-WP-006)
+- Normative source conflict policy: neither source wins automatically, five
+  conflict states, an eight-step fail-closed procedure, and prohibited automatic
+  precedence rules. (CDS-WP-006)
+- Seven-state artifact maturity lifecycle with entry and exit criteria, a full
+  transition matrix, Candidate and Stable gates, and maturity kept separate from
+  release version and publication state. (CDS-WP-006)
+- Semantic versioning and compatibility policy: MAJOR.MINOR.PATCH, a pre-1.0
+  policy, ten release identity elements, eight compatibility axes, and six
+  permitted compatibility statements. (CDS-WP-006)
+- Deprecation and removal policy with nine required deprecation fields and
+  narrowly bounded emergency removal. (CDS-WP-006)
+- Contribution and acceptance model: a ten-step flow, eleven required inputs,
+  five outcomes, and prohibited shortcuts. (CDS-WP-006)
+- Exception and Product Profile governance: thirteen exception fields, six
+  exception statuses, twelve Product Profile elements, and an anti-fragmentation
+  review. (CDS-WP-006)
+- Adoption and conformance claims policy: four graded claim types, eight
+  mandatory claim fields, eight re-assessment triggers, and a prohibited
+  certification claim. (CDS-WP-006)
+- Risk governance model finalizing the risk owner model across all risks:
+  Accountable Risk Owner, Risk Controller, Mitigation Executor, and Evidence
+  Reviewer, with five risk statuses and an anti-ceremonial rule. (CDS-WP-006)
+- Licensing and publication decision model: ten artifact classes with an
+  eleven-field rights matrix, five publication states, and a fifteen-point
+  publication gate. (CDS-WP-006)
+- Release and change control policy: twelve release candidate requirements, six
+  change classes, and release authority reserved to the Human Maintainer.
+  (CDS-WP-006)
+- Governance, lifecycle and publication decisions DEC-S-033 … DEC-S-048.
+  (CDS-WP-006)
+- Risks RISK-029 … RISK-040 covering governance bottleneck, role ambiguity,
+  maturity inflation, compatibility ambiguity, deprecation without migration,
+  contribution gate bypass, exception debt, Product Profile governance bypass,
+  misleading claims, licensing fragmentation, premature publication, and
+  ceremonial risk governance. (CDS-WP-006)
+- Work-package evidence notes for CDS-WP-006.
 - Logical design-system architecture defined as the normative architecture
   source, with architecture objectives, quality attributes, allowed and
   prohibited dependency directions, and sixteen architecture invariants.
@@ -129,6 +169,20 @@ released and no release is announced.
 
 ### Changed
 
+- Work-package status advanced: CDS-WP-006 completed, CDS-WP-007 activated as
+  the next work package. (CDS-WP-006)
+- Decision index extended to DEC-S-001 … DEC-S-048 with a fifth decision type for
+  governance, lifecycle and publication. DEC-S-001 … DEC-S-032 unchanged.
+  (CDS-WP-006)
+- Risk register extended to RISK-001 … RISK-040. **The provisional owner model
+  was replaced by the finalized four-role model across all existing risks**; no
+  existing description, assessment, or status was changed. (CDS-WP-006)
+- Foundation Context Pack, project profile, project brain, and README extended
+  with the governance roles, tracks, maturity states, claim types, risk
+  ownership, publication state, and licensing model. (CDS-WP-006)
+- Claude working instructions extended with the governance entry point, the
+  Standard and Elevated track rule, the source conflict rule, claim and release
+  boundaries, and the finalized risk roles. (CDS-WP-006)
 - Work-package status advanced: CDS-WP-005 completed, CDS-WP-006 activated as
   the next work package. (CDS-WP-005)
 - Decision index extended to DEC-S-001 … DEC-S-032 with a fourth decision type

@@ -23,11 +23,46 @@ Foundation / Pre-Design
 
 ## Work package status
 
-- Current work package: CDS-WP-006 — Governance, Versioning, and Contribution
-  Model (Next)
-- Previous work package: CDS-WP-005 — Design System Architecture (Completed)
+- Current work package: CDS-WP-007 — Accessibility and Inclusive Design Policy
+  (Next)
+- Previous work package: CDS-WP-006 — Governance, Versioning, Contribution, Risk
+  and Publication Model (Completed)
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004, CDS-WP-005
+  CDS-WP-004, CDS-WP-005, CDS-WP-006
+
+## Governance status
+
+- Governance status: Defined (CDS-WP-006, 2026-07-16)
+- Governance roles: **6** — Human Maintainer · Nova · Claude · Consumer
+  Maintainer · Contributor · Evidence Reviewer
+- Governance tracks: **2** — Standard, Elevated (ceremony scales; obligation
+  does not)
+- **Maturity states: 7** — Proposed · Exploratory · Experimental · Candidate ·
+  Stable · Deprecated · Removed
+- **Publication states: 5** — Private Development · Controlled Preview · Public
+  Preview · Public Stable · Archived
+- **Claim types: 4** — Uses CDS Artifacts · CDS-integrated · CDS-validated ·
+  CDS-conformant. `CDS certified` **prohibited**
+- Artifact licence classes: **10** · Change classes: **6** · Compatibility axes:
+  **8** · Exception statuses: **6** · Risk statuses: **5**
+- **Risk owner model: finalized** (DEC-S-045) — Accountable Risk Owner: Human
+  Maintainer · Risk Controller: Nova · Mitigation Executor: named per mitigation
+  · Evidence Reviewer: Nova or authorized reviewer. No longer provisional.
+- **Current publication state: `Private Development`** — unchanged by CDS-WP-006
+- **No licence selected for any artifact class. No release is currently
+  possible.** No artifact is Candidate or Stable.
+
+Documents:
+[Governance Operating Model](../docs/governance/GOVERNANCE_OPERATING_MODEL.md) ·
+[Source Conflict Resolution](../docs/governance/SOURCE_CONFLICT_RESOLUTION_POLICY.md) ·
+[Artifact Maturity Lifecycle](../docs/governance/ARTIFACT_MATURITY_LIFECYCLE.md) ·
+[Versioning, Compatibility and Deprecation](../docs/governance/VERSIONING_COMPATIBILITY_AND_DEPRECATION_POLICY.md) ·
+[Contribution and Acceptance](../docs/governance/CONTRIBUTION_AND_ACCEPTANCE_MODEL.md) ·
+[Exception and Product Profile Governance](../docs/governance/EXCEPTION_AND_PRODUCT_PROFILE_GOVERNANCE.md) ·
+[Adoption, Conformance and Claims](../docs/governance/ADOPTION_CONFORMANCE_AND_CLAIMS_POLICY.md) ·
+[Risk Governance Model](../docs/governance/RISK_GOVERNANCE_MODEL.md) ·
+[Licensing and Publication](../docs/governance/LICENSING_AND_PUBLICATION_DECISION_MODEL.md) ·
+[Release and Change Control](../docs/governance/RELEASE_AND_CHANGE_CONTROL_POLICY.md)
 
 ## Architecture status
 
@@ -185,12 +220,13 @@ pilot contract is defined in CDS-WP-004.
 
 ## Register scope
 
-- Decisions: DEC-S-001 … DEC-S-032 (32) — 6 strategic foundation decisions
+- Decisions: DEC-S-001 … DEC-S-048 (48) — 6 strategic foundation decisions
   (CDS-WP-001), 6 strategic scope decisions (CDS-WP-002), 8 consumer and pilot
-  scope decisions (CDS-WP-004), and 12 logical architecture decisions
-  (CDS-WP-005). Unchanged by CDS-WP-003.
-- Risks: RISK-001 … RISK-028 (28) — risk owner model provisional until
-  CDS-WP-006
+  scope decisions (CDS-WP-004), 12 logical architecture decisions (CDS-WP-005),
+  and 16 governance, lifecycle and publication decisions (CDS-WP-006). Unchanged
+  by CDS-WP-003.
+- Risks: RISK-001 … RISK-040 (40) — all `Monitored`; **risk owner model
+  finalized** by CDS-WP-006
 
 ## Intentionally open decision areas
 
