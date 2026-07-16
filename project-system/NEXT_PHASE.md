@@ -1,12 +1,13 @@
 # Next Phase
 
-- **Phase:** Foundation / Pre-Design — **review completed, closure pending
-  approval**
+- **Phase:** Pre-Candidate Operating Enablement — **Foundation / Pre-Design:
+  Closed with Notes**
 - **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008
-- **Next work package:** **None authorized.** The Foundation Milestone Review
-  (CDS-WP-008) recommends **GO WITH NOTES**; Foundation closure and the next phase
-  are pending Nova review and Human-Maintainer approval.
+  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009
+- **Next work package:** **CDS-WP-010 — Accessibility Support Baseline and
+  Evidence Strategy** (authorized as next; not yet executed). The Foundation is
+  closed with notes; operating enablement is in place; the accessibility support
+  baseline is the next substantive topic.
 
 ## Status of completed work packages
 
@@ -154,46 +155,80 @@ Documents:
 [Open Gaps](../docs/reviews/FOUNDATION_OPEN_GAPS_AND_DEPENDENCIES.md) ·
 [Next-phase Recommendation](../docs/reviews/NEXT_PHASE_RECOMMENDATION.md)
 
-## Foundation closure and next phase — pending decision
+### CDS-WP-009 — Operating Enablement and Pre-Candidate Readiness — Completed
 
-**The Foundation is not yet closed.** CDS-WP-008 *recommends* closure with notes;
-**Nova review and Human-Maintainer approval are required** before closure is
-effective. **The next phase is not authorized**, and **no work-package ID is
-created.**
+Recorded Foundation closure with notes and operationalized the committed
+governance without producing any design, token, component, tool, or product code:
 
-### Priorized recommendation (advisory — see [Next-phase Recommendation](../docs/reviews/NEXT_PHASE_RECOMMENDATION.md))
+- **Foundation Closure Record** — normative on the fact of closure, the authority
+  state, and the phase boundary (`GO WITH NOTES` accepted by the Human Maintainer
+  via commit of CDS-WP-008 and initiation of CDS-WP-009); no Candidate, claim,
+  licence, or publication effect.
+- **Operating playbook + Standard/Elevated change-dossier templates** — a
+  lightweight, non-normative operational view of the governance (DEC-S-063).
+- **Critical Risk Action Register** — the 12 Critical Risks made actionable with an
+  executor role, review trigger, expected evidence, and blocking effect (DEC-S-064).
+- **Foundation Reference Integrity Review** — PASS; 0 CDS-authored broken links.
+- **Pre-Candidate Operating Plan** — the phase entry state, prerequisites, and
+  Candidate entry conditions.
 
-Recommended next objective: **prove the Foundation operable on one thin, end-to-end
-vertical** — a Layer-3 semantic status foundation plus one Layer-4 component
-contract carrying the mandatory accessibility contract areas (DEC-S-055), taken to
-Candidate under the real gates.
+Added DEC-S-061 … DEC-S-064; moved RISK-040 `Monitored → Mitigating` (the only risk
+status change; no acceptance or closure). Publication state remains `Private
+Development`. No Git write action was performed.
 
-### Immediate Prerequisites (before any first Candidate or pilot)
+Documents:
+[Foundation Closure Record](../docs/governance/FOUNDATION_CLOSURE_RECORD.md) ·
+[Operating Playbook](../docs/operations/FOUNDATION_OPERATING_PLAYBOOK.md) ·
+[Standard Dossier](../docs/operations/STANDARD_CHANGE_DOSSIER_TEMPLATE.md) ·
+[Elevated Dossier](../docs/operations/ELEVATED_CHANGE_DOSSIER_TEMPLATE.md) ·
+[Critical Risk Action Register](../docs/operations/CRITICAL_RISK_ACTION_REGISTER.md) ·
+[Reference Integrity Review](../docs/reviews/FOUNDATION_REFERENCE_INTEGRITY_REVIEW.md) ·
+[Pre-Candidate Operating Plan](../docs/roadmap/PRE_CANDIDATE_OPERATING_PLAN.md)
 
-1. A lightweight operating playbook + Candidate/Elevated dossier templates
-   (governance affordability — FM-F-002; RISK-029, RISK-040).
-2. Declare an **accessibility support baseline** (FM-F-001; RISK-044).
-3. Staff the **Evidence Reviewer** (and, for a profile, a **Consumer Maintainer**)
-   — never the author (FM-F-006; DEC-S-045).
-4. Assign **executors and triggers** to next-phase-active risks (FM-F-003).
+## Next work package — CDS-WP-010 (authorized)
 
-### Explicitly prohibited until the next phase is authorized
+The Foundation is **Closed with Notes**; operating enablement is in place; the
+Foundation reference integrity is reviewed; and the Critical Risks are
+operationalized. The next authorized work package is:
+
+**CDS-WP-010 — Accessibility Support Baseline and Evidence Strategy.**
+
+### Objective of CDS-WP-010
+
+- define the **accessibility support baseline** (browser / platform / input /
+  assistive-technology / language matrix) — the gate for AE-3 and Stable
+  (RISK-044);
+- define the **evidence scope** and **environment categories**;
+- define the **manual and assistive-technology evidence strategy**;
+- define the **regression strategy**;
+- define a **capacity-aware test matrix** sized to real maintainer capacity
+  (RISK-048).
+
+### CDS-WP-010 explicitly establishes none of the following
+
+- no current accessibility conformance (a baseline is not a claim — DEC-S-050);
+- no Candidate or Stable artifact;
+- no CoreOps pilot start;
+- no design, token, component, colour, typography, icon, theme, tool, licence, or
+  publication decision.
+
+### Still prohibited in the Pre-Candidate phase
 
 - concrete visual design; selecting colours, typography, icons, logos, or themes,
 - selecting a design tool, component framework, or token format,
 - implementing components or product code,
 - selecting a licence or approving publication,
-- claiming conformance, accessibility, or certification,
+- claiming conformance, accessibility, adoption, or certification,
 - promoting any artifact to Candidate or Stable,
 - starting the CoreOps pilot,
 - modifying Skill files or consumer repositories,
-- creating a new work-package ID or extending the roadmap without Human-Maintainer
+- creating a new work-package ID beyond CDS-WP-010 without Human-Maintainer
   approval.
 
 ### Authorization note
 
-The next phase requires an explicit work-package prompt from Nova and
-Human-Maintainer authorization. A recommended outcome is **not** an approval.
+CDS-WP-010 is registered as `Next`; its execution requires an explicit work-package
+prompt from Nova and Human-Maintainer authorization. Registration is not execution.
 
 ## Related documents
 

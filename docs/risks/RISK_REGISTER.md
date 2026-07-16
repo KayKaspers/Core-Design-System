@@ -50,11 +50,16 @@ Full model: [Risk Governance Model](../governance/RISK_GOVERNANCE_MODEL.md).
 | **Accepted** | Consciously accepted with residual effect; requires a review trigger. |
 | **Closed** | No longer relevant, or fully mitigated with evidence. |
 
-**All 48 risks are currently `Monitored`.** CDS-WP-006 finalized the role model;
-it treated no risk and changed no assessment, because no evidence justified a
-change. CDS-WP-007 added RISK-041 … RISK-048 and likewise treated none — none is
-`Mitigating` and none carries a named executor, which RISK-040 explicitly warns
-about and which is recorded rather than obscured.
+**47 of the 48 risks are currently `Monitored`; RISK-040 is `Mitigating`.**
+CDS-WP-006 finalized the role model; it treated no risk and changed no assessment,
+because no evidence justified a change. CDS-WP-007 added RISK-041 … RISK-048 and
+likewise treated none. CDS-WP-009 changed exactly one status: **RISK-040 moved
+`Monitored → Mitigating`** on the strength of the
+[Critical Risk Action Register](../operations/CRITICAL_RISK_ACTION_REGISTER.md),
+which gives the twelve Critical Risks a named executor role, a review trigger,
+expected evidence, and a blocking effect (DEC-S-064). No description, likelihood,
+or severity was changed, and **no risk was accepted or closed** — only the Human
+Maintainer may do either.
 
 ## Assessment scale
 
@@ -1252,10 +1257,21 @@ public state to say plainly what CDS does not offer.
 
 ## RISK-040 — Ceremonial risk governance
 
-- **Status:** Monitored
-- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: Nova · Evidence Reviewer: Nova
+- **Status:** Mitigating *(changed from `Monitored` by CDS-WP-009; see the status note below)*
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: Nova · Evidence Reviewer: a separately authorized reviewer (Nova is precluded here as the Mitigation Executor; currently unstaffed — FM-F-006)
 - **Initial likelihood:** High
 - **Initial severity:** Medium
+
+### Status note (CDS-WP-009)
+
+RISK-040 moved from `Monitored` to `Mitigating`. The mitigation is the
+[Critical Risk Action Register](../operations/CRITICAL_RISK_ACTION_REGISTER.md),
+which gives all twelve Critical Risks (RISK-017, 020, 021, 023, 026, 028, 029,
+031, 038, 040, 044, 048) a named Mitigation Executor role, a review trigger, a
+next expected evidence artifact, and a blocking effect — the gate DEC-S-064
+requires. Nova is the named executor. Neither likelihood nor severity changed; the
+risk was neither accepted nor closed. This is the only risk status change
+authorized in CDS-WP-009.
 
 ### Description
 

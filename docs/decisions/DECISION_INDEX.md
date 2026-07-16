@@ -11,8 +11,8 @@ authorized work packages.
 
 ## Register scope
 
-- Decision range: DEC-S-001 … DEC-S-060
-- Number of decisions: 60
+- Decision range: DEC-S-001 … DEC-S-064
+- Number of decisions: 64
 - Decision record format: index entries only; no ADR files exist in this phase.
 
 ## Decision types
@@ -25,6 +25,7 @@ authorized work packages.
 | Logical architecture decision | DEC-S-021 … DEC-S-032 | CDS-WP-005 | Layers, authority, token flow, profiles, channels, distribution, traceability, status semantics. |
 | Governance, lifecycle and publication decision | DEC-S-033 … DEC-S-048 | CDS-WP-006 | Roles, conflict resolution, maturity, versioning, contribution, exceptions, claims, risk ownership, publication, licensing, release control. |
 | Accessibility and inclusive design decision | DEC-S-049 … DEC-S-060 | CDS-WP-007 | Accessibility target, target-versus-claim boundary, evidence levels, responsibility split, tooling limits, source authority, inclusive design, status truth, legal boundary, channel profiles, exception limit, CR-024 resolution. |
+| Operating enablement and pre-candidate decision | DEC-S-061 … DEC-S-064 | CDS-WP-009 | Foundation closure with notes, the Pre-Candidate phase, non-normativity of operating views, and critical-risk actionability before Elevated work. |
 
 None of these types is an implementation decision. Logical architecture decisions
 define structure, responsibility, and flow — they select no technology, format,
@@ -2133,3 +2134,141 @@ did.
   for CoreOps.** No evaluation has occurred, so no pass or fail can be stated.
 - **Claude does not declare the criterion met. The Human Maintainer's commit
   does.**
+
+---
+
+## DEC-S-061 — The Foundation milestone is closed with mandatory notes
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Operating enablement and pre-candidate decision
+- **Work package:** CDS-WP-009
+
+### Decision
+
+The CDS Foundation / Pre-Design milestone is closed with mandatory notes after
+completion of CDS-WP-008, Nova review, and Human-Maintainer approval.
+
+Foundation closure does not grant Candidate, Stable, adoption, conformance,
+release, or publication status.
+
+### Rationale
+
+The Foundation is complete, consistent, traceable, and free of blockers, and the
+Human Maintainer accepted closure by committing CDS-WP-008 and initiating
+CDS-WP-009. Closure must be recorded as a fact, together with an explicit statement
+of the many statuses it does **not** confer, so that a closed foundation is never
+misread as a released, mature, or conformant one.
+
+### Consequences
+
+- The [Foundation Closure Record](../governance/FOUNDATION_CLOSURE_RECORD.md) is
+  normative for the fact of closure, the authority state, and the phase boundary.
+- The mandatory closure notes (governance affordability, accessibility support
+  baseline, risk actionability, no user research, no Candidate/Stable, no
+  licence/publication, reference integrity, no automatic pilot) are carried into
+  the next phase.
+- Publication state remains `Private Development`; no claim is valid; no artifact
+  is Candidate or Stable; the CoreOps pilot stays inactive.
+
+---
+
+## DEC-S-062 — The first post-Foundation phase is Pre-Candidate Operating Enablement
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Operating enablement and pre-candidate decision
+- **Work package:** CDS-WP-009
+
+### Decision
+
+The first post-Foundation phase is Pre-Candidate Operating Enablement.
+
+Governance operationalization, role readiness, critical-risk actionability, and
+accessibility-support planning precede the first design Candidate.
+
+### Rationale
+
+An unaffordable or unstaffed governance model fails by being bypassed, not by being
+wrong (RISK-029, RISK-040). Making the governance runnable, staffing the reviewing
+roles, turning the critical risks into an instrument, and planning accessibility
+support must come **before** any design Candidate, or the first Candidate would be
+attempted on machinery that cannot carry it.
+
+### Consequences
+
+- The next phase produces operating enablement and prerequisite planning only —
+  no design, token, component, tool, or product artifact.
+- Candidate entry conditions are made explicit in the
+  [Pre-Candidate Operating Plan](../roadmap/PRE_CANDIDATE_OPERATING_PLAN.md).
+- The next authorized work package is CDS-WP-010 (Accessibility Support Baseline
+  and Evidence Strategy); design work begins only on an explicit Nova prompt and
+  Human-Maintainer authorization.
+
+---
+
+## DEC-S-063 — Operating playbooks and change dossiers are non-normative operational views
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Operating enablement and pre-candidate decision
+- **Work package:** CDS-WP-009
+
+### Decision
+
+Operating playbooks and change dossiers are non-normative operational views.
+
+They may reduce duplication and ceremony but may not replace normative policies,
+authority boundaries, traceability, evidence, approval gates, or fail-closed
+behavior.
+
+### Rationale
+
+Operationalizing governance is necessary for affordability, but an operational
+view that acquired normative force would become a second, competing source of
+truth — precisely the authority ambiguity the architecture forbids (DEC-S-022,
+DEC-S-034). The operating layer must lighten ceremony without ever lightening
+obligation.
+
+### Consequences
+
+- The [Foundation Operating Playbook](../operations/FOUNDATION_OPERATING_PLAYBOOK.md)
+  and the [Standard](../operations/STANDARD_CHANGE_DOSSIER_TEMPLATE.md) and
+  [Elevated](../operations/ELEVATED_CHANGE_DOSSIER_TEMPLATE.md) dossier templates
+  are explicitly non-normative and reference the governing policies.
+- Reducible: duplicate descriptions, repeated tables, unnecessary reports,
+  repeated manual counts, identical evidence references.
+- Never reducible: authority, scope, traceability, evidence, risk review, human
+  approval, and fail-closed behavior. On conflict, the normative policy wins.
+
+---
+
+## DEC-S-064 — Critical risks affecting Elevated work must be actionable first
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Operating enablement and pre-candidate decision
+- **Work package:** CDS-WP-009
+
+### Decision
+
+Critical risks affecting Candidate, Pilot, release, or publication work must have
+an explicitly named Mitigation Executor role, review trigger, expected evidence,
+and blocking effect before the affected Elevated work begins.
+
+### Rationale
+
+A register that records risks without driving mitigation is ceremonial (RISK-040).
+Requiring the four actionability attributes before the Elevated work a risk bears
+on is what turns the register from a diligence artifact into an instrument of
+control, without pretending that naming an executor is itself a mitigation.
+
+### Consequences
+
+- The [Critical Risk Action Register](../operations/CRITICAL_RISK_ACTION_REGISTER.md)
+  records the four attributes for the twelve Critical Risks; a named executor role
+  authorizes no work by itself.
+- On the strength of that register, RISK-040 moves `Monitored → Mitigating`; no
+  risk is accepted or closed, and only the Human Maintainer may do either.
+- Elevated work bearing on a critical risk that lacks the four attributes is
+  blocked until they exist. Documentation is not mitigation (DEC-S-045).

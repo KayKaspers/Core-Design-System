@@ -6,7 +6,7 @@
 > it never defines. Where it disagrees with a normative source, the normative
 > source wins and this pack is wrong and must be corrected.
 
-- **Maintained by:** CDS-WP-008
+- **Maintained by:** CDS-WP-009
 - **Date:** 2026-07-16
 
 ## Project identity
@@ -19,10 +19,14 @@
 
 ## Current phase
 
-Foundation / Pre-Design.
+Pre-Candidate Operating Enablement — **Foundation / Pre-Design: Closed with
+Notes** (CDS-WP-009; DEC-S-061, DEC-S-062).
 
-Governance, scope, architecture, and requirements are established before
-concrete visual or technical design decisions are authorized (DEC-S-003).
+Governance, scope, architecture, requirements, and accessibility policy are
+established; the Foundation is closed with mandatory notes and the committed
+governance is now operationalized. Concrete visual or technical design decisions
+remain unauthorized (DEC-S-003). The next work package is **CDS-WP-010 —
+Accessibility Support Baseline and Evidence Strategy**.
 
 ## Completed work packages
 
@@ -37,6 +41,7 @@ concrete visual or technical design decisions are authorized (DEC-S-003).
 | CDS-WP-006 | Governance, Versioning, Contribution, Risk and Publication Model | Six roles, two tracks; conflict resolution; 7 maturity states; versioning + 8 compatibility axes; deprecation; contribution; exceptions and profiles; 4 claim types; **risk ownership finalized**; 5 publication states; licensing per 10 classes; release control. DEC-S-033…048; RISK-029…040. **No licence, publication, technology, or design selected.** |
 | CDS-WP-007 | Accessibility and Inclusive Design Policy | Target **WCAG 2.2 Level AA** for the applicable web scope (CR-024 resolved at policy level); target-is-not-claim rule; A/AA applicability matrix (56 listed / 55 applicable); shared responsibility (49/55 need both sides); 5 evidence levels AE-0…AE-4; 6 channel profiles; limitations and exception policy; CoreOps pilot criterion. DEC-S-049…060; RISK-041…048. **Nothing tested — every artifact AE-0; no claim; publication state unchanged.** |
 | CDS-WP-008 | Foundation Milestone Review | Reviewed the Foundation across 12 dimensions (55 criteria), 3 governance dry runs, 4-axis Candidate readiness, 8-criterion pilot entry matrix, all 48 risks. **0 Foundation blockers**; recommended outcome **GO WITH NOTES**; 12 findings (FM-F-001…012). **No normative source changed; no Decision/Risk/ADR/WP-ID created; no artifact promoted; publication state unchanged.** Non-normative review evidence in `docs/reviews/`. |
+| CDS-WP-009 | Operating Enablement and Pre-Candidate Readiness | Recorded **Foundation closure with notes** (accepted by the Human Maintainer); operationalized governance without any design/token/component/tool. Created the Closure Record (normative on closure/authority/phase), Operating Playbook, Standard + Elevated dossier templates, Critical Risk Action Register (12 risks actionable), Reference Integrity Review (PASS), and Pre-Candidate Operating Plan. DEC-S-061…064 added; RISK-040 `Monitored → Mitigating` (only status change; no acceptance/closure). **No artifact promoted; publication state `Private Development`; CDS-WP-010 registered Next.** |
 
 ## Normative source map
 
@@ -63,6 +68,7 @@ Read the source, not this summary, when the detail matters.
 | Risk ownership and control | [docs/governance/RISK_GOVERNANCE_MODEL.md](../docs/governance/RISK_GOVERNANCE_MODEL.md) |
 | Licensing and publication | [docs/governance/LICENSING_AND_PUBLICATION_DECISION_MODEL.md](../docs/governance/LICENSING_AND_PUBLICATION_DECISION_MODEL.md) |
 | Release and change control | [docs/governance/RELEASE_AND_CHANGE_CONTROL_POLICY.md](../docs/governance/RELEASE_AND_CHANGE_CONTROL_POLICY.md) |
+| **Foundation closure (closure/authority/phase)** | [docs/governance/FOUNDATION_CLOSURE_RECORD.md](../docs/governance/FOUNDATION_CLOSURE_RECORD.md) |
 | **Logical architecture** | [docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md](../docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md) |
 | Artifact classes and authority | [docs/architecture/SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md](../docs/architecture/SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md) |
 | Token flow and theming | [docs/architecture/TOKEN_AND_THEME_ARCHITECTURE.md](../docs/architecture/TOKEN_AND_THEME_ARCHITECTURE.md) |
@@ -87,9 +93,18 @@ work packages; they decide nothing:
 [Consumer Evidence Register](../docs/research/CONSUMER_EVIDENCE_REGISTER.md) ·
 [Consumer Hypothesis Validation](../docs/research/CONSUMER_HYPOTHESIS_VALIDATION.md)
 
+**Operating views (non-normative — CDS-WP-009).** These make governance runnable
+and reference the normative policies; they do not replace them (DEC-S-063):
+[Operating Playbook](../docs/operations/FOUNDATION_OPERATING_PLAYBOOK.md) ·
+[Standard Dossier](../docs/operations/STANDARD_CHANGE_DOSSIER_TEMPLATE.md) ·
+[Elevated Dossier](../docs/operations/ELEVATED_CHANGE_DOSSIER_TEMPLATE.md) ·
+[Critical Risk Action Register](../docs/operations/CRITICAL_RISK_ACTION_REGISTER.md) ·
+[Reference Integrity Review](../docs/reviews/FOUNDATION_REFERENCE_INTEGRITY_REVIEW.md) ·
+[Pre-Candidate Operating Plan](../docs/roadmap/PRE_CANDIDATE_OPERATING_PLAN.md).
+
 ## Active decisions
 
-- Range: DEC-S-001 … DEC-S-060 · Count: 60 · All Accepted
+- Range: DEC-S-001 … DEC-S-064 · Count: 64 · All Accepted
 - DEC-S-001…006: strategic foundation decisions (CDS-WP-001)
 - DEC-S-007…012: strategic scope decisions (CDS-WP-002)
 - DEC-S-013…020: consumer and pilot scope decisions (CDS-WP-004)
@@ -98,6 +113,8 @@ work packages; they decide nothing:
 - DEC-S-033…048: governance, lifecycle and publication decisions (CDS-WP-006)
 - DEC-S-049…060: accessibility and inclusive design decisions (CDS-WP-007) —
   DEC-S-001…048 unchanged
+- DEC-S-061…064: operating enablement and pre-candidate decisions (CDS-WP-009) —
+  DEC-S-001…060 unchanged
 - No ADR files exist.
 
 | ID | Summary |
@@ -162,16 +179,22 @@ work packages; they decide nothing:
 | DEC-S-058 | Each channel needs its own profile; non-web is never WCAG-conformant. |
 | DEC-S-059 | Accessibility cannot be waived by an ordinary exception. |
 | DEC-S-060 | CR-024 resolved at policy level for the CoreOps pilot web scope. |
+| DEC-S-061 | Foundation milestone closed with mandatory notes; closure grants no Candidate/Stable/adoption/conformance/release/publication. |
+| DEC-S-062 | First post-Foundation phase is Pre-Candidate Operating Enablement; it precedes the first design Candidate. |
+| DEC-S-063 | Operating playbooks and dossiers are non-normative; they may reduce ceremony but never obligation. |
+| DEC-S-064 | Critical risks affecting Elevated work need an executor role, review trigger, expected evidence, and blocking effect first. |
 
 ## Active risks
 
-- Range: RISK-001 … RISK-048 · Count: 48 · All Monitored
+- Range: RISK-001 … RISK-048 · Count: 48 · **47 Monitored, RISK-040 Mitigating**
 - **Owner model finalized** (DEC-S-045): Accountable Risk Owner — Human
   Maintainer · Risk Controller — Nova · Mitigation Executor — named per
-  mitigation · Evidence Reviewer — Nova or authorized reviewer.
+  mitigation · Evidence Reviewer — Nova or authorized reviewer (never the executor).
 - Only the Human Maintainer may set a risk `Accepted` or `Closed`.
-- RISK-041…048 (accessibility) added by CDS-WP-007; existing risks unchanged;
-  none `Mitigating`, none with a named executor (RISK-040 pattern noted).
+- RISK-041…048 (accessibility) added by CDS-WP-007. **CDS-WP-009 moved RISK-040
+  `Monitored → Mitigating`** via the
+  [Critical Risk Action Register](../docs/operations/CRITICAL_RISK_ACTION_REGISTER.md)
+  (12 Critical Risks made actionable; DEC-S-064); no risk accepted or closed.
 
 | ID | Summary |
 | --- | --- |
@@ -558,5 +581,9 @@ Review docs: [Milestone Review](../docs/reviews/FOUNDATION_MILESTONE_REVIEW.md) 
 [Open Gaps](../docs/reviews/FOUNDATION_OPEN_GAPS_AND_DEPENDENCIES.md) ·
 [Next-phase](../docs/reviews/NEXT_PHASE_RECOMMENDATION.md)
 
-Foundation closure and the next phase are **pending Nova review and
-Human-Maintainer approval**. A recommended outcome is not an approval.
+Foundation closure and the next phase were subsequently **decided**: the Human
+Maintainer accepted `GO WITH NOTES` (commit of CDS-WP-008 + initiation of
+CDS-WP-009). **Foundation: Closed with Notes.** Operating enablement is in place
+(CDS-WP-009); the next authorized work package is **CDS-WP-010 — Accessibility
+Support Baseline and Evidence Strategy**. See the
+[Foundation Closure Record](../docs/governance/FOUNDATION_CLOSURE_RECORD.md).

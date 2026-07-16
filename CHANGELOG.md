@@ -9,6 +9,33 @@ released and no release is announced.
 
 ### Added
 
+- Foundation closure recorded (CDS-WP-009): the
+  [Foundation Closure Record](docs/governance/FOUNDATION_CLOSURE_RECORD.md)
+  registers the Foundation / Pre-Design milestone as **Closed with Notes** after
+  CDS-WP-008, Nova review, and Human-Maintainer acceptance (commit of CDS-WP-008 +
+  initiation of CDS-WP-009). It is normative for the fact of closure, the authority
+  state, and the phase boundary; it grants no Candidate, Stable, claim, licence, or
+  publication status. (CDS-WP-009)
+- Pre-Candidate Operating Enablement phase activated; the
+  [Pre-Candidate Operating Plan](docs/roadmap/PRE_CANDIDATE_OPERATING_PLAN.md)
+  records the phase entry state, prerequisites, Candidate entry conditions, and
+  exit criteria. (CDS-WP-009)
+- Foundation Operating Playbook created — a **non-normative** operational view that
+  makes the committed governance runnable (intake and classification, Standard and
+  Elevated tracks, stop conditions, decision/risk/evidence checks, approval gates,
+  post-commit reconciliation, and the lean operating rule). (CDS-WP-009)
+- Standard and Elevated change-dossier templates created — non-normative,
+  reference-oriented per-change records (19 Standard fields; 36 Elevated fields,
+  scalable via `Not applicable with rationale`). (CDS-WP-009)
+- Critical Risk Action Register created — the twelve Critical Risks (RISK-017,
+  020, 021, 023, 026, 028, 029, 031, 038, 040, 044, 048) each made actionable with
+  a named Mitigation Executor role, review trigger, expected evidence, and blocking
+  effect. (CDS-WP-009)
+- Full repository reference-integrity review completed (CDS-WP-009): 112 text files
+  in scope, 829 markdown links checked, **0 CDS-authored broken links**; the five
+  broken links are confined to the vendored, pinned `.claude/skills/README.md` and
+  are non-blocking; **PASS**. (CDS-WP-009)
+- Work-package evidence notes for CDS-WP-009. (CDS-WP-009)
 - Foundation Milestone Review completed (CDS-WP-008): a close-out review of the
   Foundation / Pre-Design phase across twelve dimensions, three governance dry
   runs, four-axis Candidate readiness, an eight-criterion CoreOps pilot entry
@@ -29,6 +56,24 @@ released and no release is announced.
 
 ### Changed
 
+- Foundation status: **Closed with Notes** — the Human Maintainer accepted the
+  `GO WITH NOTES` outcome; the Pre-Candidate Operating Enablement phase is active.
+  No version, Candidate, Stable, claim, release, or publication status is asserted;
+  publication state remains `Private Development`. (CDS-WP-009)
+- Decision index extended to DEC-S-001 … DEC-S-064 with a seventh decision type for
+  operating enablement and pre-candidate decisions (DEC-S-061 … DEC-S-064);
+  DEC-S-001 … DEC-S-060 unchanged; no ADR. (CDS-WP-009)
+- Risk register: **RISK-040 moved `Monitored → Mitigating`** on the strength of the
+  Critical Risk Action Register (DEC-S-064) — the only risk status change; no
+  description, likelihood, or severity changed; no risk accepted or closed; range
+  remains RISK-001 … RISK-048 (48). (CDS-WP-009)
+- Work-package status advanced: CDS-WP-009 completed; **CDS-WP-010 — Accessibility
+  Support Baseline and Evidence Strategy** activated as the next work package (not
+  yet executed). (CDS-WP-009)
+- Foundation Context Pack, project profile, project brain, README, work packages,
+  next phase, and Claude working instructions updated for Foundation closure,
+  operating enablement, the non-normative operating views, the critical-risk action
+  rule, and the CDS-WP-010 pointer. (CDS-WP-009)
 - Recommended milestone outcome: **GO WITH NOTES** — Foundation closable with
   mandatory next-phase notes, pending Nova review and Human-Maintainer approval.
   (CDS-WP-008)

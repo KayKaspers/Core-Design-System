@@ -2,12 +2,12 @@
 
 Controlled work-package roadmap for the Core Design System (CDS).
 
-- **Phase:** Foundation / Pre-Design
+- **Phase:** Pre-Candidate Operating Enablement — **Foundation / Pre-Design:
+  Closed with Notes**
 - **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008
-- **Next work package:** **None authorized** — next-phase roadmap pending Nova and
-  Human-Maintainer decision (Foundation Milestone Review recommends **GO WITH
-  NOTES**, awaiting approval)
+  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009
+- **Next work package:** **CDS-WP-010 — Accessibility Support Baseline and
+  Evidence Strategy** (authorized as the next work package; not yet executed)
 
 ## Status values
 
@@ -30,10 +30,13 @@ Controlled work-package roadmap for the Core Design System (CDS).
 | CDS-WP-006 | Governance, Versioning, and Contribution Model | Completed | CDS-WP-005 |
 | CDS-WP-007 | Accessibility and Inclusive Design Policy | Completed | CDS-WP-005 |
 | CDS-WP-008 | Foundation Milestone Review | Completed | CDS-WP-006, CDS-WP-007 |
+| CDS-WP-009 | Operating Enablement and Pre-Candidate Readiness | Completed | CDS-WP-008 |
+| CDS-WP-010 | Accessibility Support Baseline and Evidence Strategy | Next | CDS-WP-009 |
 
-**No next Work Package is authorized.** The next-phase roadmap is pending a Nova
-and Human-Maintainer decision on the Foundation Milestone Review. No CDS-WP-009 is
-created.
+**CDS-WP-010 is authorized as the next Work Package.** The Foundation is closed
+with notes (CDS-WP-009); the Pre-Candidate Operating Enablement phase is active.
+CDS-WP-010 is registered as `Next` and is not yet executed. No further
+work-package ID is created.
 
 ## Descriptions
 
@@ -153,8 +156,34 @@ was promoted; publication state remains `Private Development`.** The milestone
 decision belongs to Nova and the Human Maintainer. See
 [Foundation Milestone Review](../docs/reviews/FOUNDATION_MILESTONE_REVIEW.md).
 
-**No next Work Package is authorized.** The next phase begins only on an explicit
-Nova prompt and Human-Maintainer authorization.
+### CDS-WP-009 — Operating Enablement and Pre-Candidate Readiness
+
+**Status:** Completed
+
+Recorded Foundation closure with mandatory notes; operationalized the committed
+governance for daily use without creating any design, token, component, tool, or
+product code. Created the [Foundation Closure Record](../docs/governance/FOUNDATION_CLOSURE_RECORD.md),
+the [Foundation Operating Playbook](../docs/operations/FOUNDATION_OPERATING_PLAYBOOK.md),
+the [Standard](../docs/operations/STANDARD_CHANGE_DOSSIER_TEMPLATE.md) and
+[Elevated](../docs/operations/ELEVATED_CHANGE_DOSSIER_TEMPLATE.md) change-dossier
+templates, the [Critical Risk Action Register](../docs/operations/CRITICAL_RISK_ACTION_REGISTER.md)
+(12 Critical Risks made actionable), the
+[Foundation Reference Integrity Review](../docs/reviews/FOUNDATION_REFERENCE_INTEGRITY_REVIEW.md)
+(PASS), and the [Pre-Candidate Operating Plan](../docs/roadmap/PRE_CANDIDATE_OPERATING_PLAN.md).
+Added DEC-S-061 … DEC-S-064; moved RISK-040 `Monitored → Mitigating` (the only risk
+status change, no acceptance or closure). **No artifact promoted; no claim, tag,
+or release created; publication state remains `Private Development`.**
+
+### CDS-WP-010 — Accessibility Support Baseline and Evidence Strategy
+
+**Status:** Next
+
+Will define the accessibility support baseline, the evidence scope, environment
+categories, the manual/assistive-technology evidence strategy, the regression
+strategy, and a capacity-aware test matrix. It establishes **no current
+conformance, no Candidate, no pilot start, and no design or token work**. Not yet
+executed; begins only on an explicit Nova prompt and Human-Maintainer
+authorization.
 
 ## Roadmap evolution
 

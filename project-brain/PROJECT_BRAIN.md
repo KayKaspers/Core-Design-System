@@ -7,7 +7,8 @@ summarizes; it does not duplicate the normative documents it points to.
 - **Repository:** KayKaspers/Core-Design-System
 - **Local path:** `D:\Projects\Core-Design-System`
 - **Framework:** Nova Development Framework v1.0.0
-- **Phase:** Foundation / Pre-Design
+- **Phase:** Pre-Candidate Operating Enablement — **Foundation / Pre-Design:
+  Closed with Notes**
 
 ## Strategic purpose
 
@@ -53,14 +54,16 @@ areas today.
 Governance foundation established. No final design or technology decisions are
 approved.
 
-- Decisions: DEC-S-001 … DEC-S-060 (60) — 6 foundation + 6 scope + 8 consumer
-  and pilot scope + 12 logical architecture + 16 governance + 12 accessibility
-  decisions
-- Risks: RISK-001 … RISK-048 (48) — all Monitored; **owner model finalized**
+- Decisions: DEC-S-001 … DEC-S-064 (64) — 6 foundation + 6 scope + 8 consumer
+  and pilot scope + 12 logical architecture + 16 governance + 12 accessibility +
+  4 operating enablement and pre-candidate decisions
+- Risks: RISK-001 … RISK-048 (48) — **47 Monitored, RISK-040 Mitigating**
+  (CDS-WP-009); **owner model finalized**; no risk accepted or closed
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008
-- Next work package: **None authorized** — Foundation Milestone Review recommends
-  **GO WITH NOTES**; closure and next phase pending Nova/Human-Maintainer approval
+  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009
+- Next work package: **CDS-WP-010 — Accessibility Support Baseline and Evidence
+  Strategy** (authorized as next; not yet executed). Foundation **Closed with
+  Notes** (CDS-WP-009); operating enablement in place
 
 ## Registered scope
 
@@ -193,6 +196,10 @@ Details: [Provenance](../docs/governance/NDF_SKILLS_PROVENANCE.md) ·
 | DEC-S-058 | Each channel needs its own profile; non-web never WCAG-conformant. |
 | DEC-S-059 | Accessibility cannot be waived by an ordinary exception. |
 | DEC-S-060 | CR-024 resolved at policy level for the CoreOps pilot web scope. |
+| DEC-S-061 | Foundation milestone closed with mandatory notes; closure grants no Candidate/Stable/adoption/conformance/release/publication. |
+| DEC-S-062 | First post-Foundation phase is Pre-Candidate Operating Enablement. |
+| DEC-S-063 | Operating playbooks and dossiers are non-normative; reduce ceremony, never obligation. |
+| DEC-S-064 | Critical risks affecting Elevated work need executor, trigger, expected evidence, and blocking effect first. |
 
 Details: [Decision Index](../docs/decisions/DECISION_INDEX.md)
 
@@ -239,7 +246,7 @@ Details: [Decision Index](../docs/decisions/DECISION_INDEX.md)
 | RISK-037 | Misleading adoption or conformance claims. | Monitored |
 | RISK-038 | Licensing and rights fragmentation. | Monitored |
 | RISK-039 | Premature publication. | Monitored |
-| RISK-040 | Ceremonial risk governance. | Monitored |
+| RISK-040 | Ceremonial risk governance. | **Mitigating** |
 | RISK-041 | Accessibility target mistaken for conformance. | Monitored |
 | RISK-042 | Automated-testing substitution. | Monitored |
 | RISK-043 | Component-to-product responsibility gap. | Monitored |
@@ -251,7 +258,11 @@ Details: [Decision Index](../docs/decisions/DECISION_INDEX.md)
 
 **Owner model finalized** (DEC-S-045): Human Maintainer accountable · Nova
 controller · executor named per mitigation · reviewer never the executor. Only
-the Human Maintainer may accept or close a risk.
+the Human Maintainer may accept or close a risk. **CDS-WP-009 moved RISK-040
+`Monitored → Mitigating`** via the
+[Critical Risk Action Register](../docs/operations/CRITICAL_RISK_ACTION_REGISTER.md)
+(12 Critical Risks made actionable; DEC-S-064) — the only status change; no risk
+accepted or closed.
 Details: [Risk Register](../docs/risks/RISK_REGISTER.md)
 
 ## Governance model (CDS-WP-006)
@@ -530,15 +541,36 @@ demonstrated. Critical risks: RISK-029, 040, 048, 044, 017, 028, 020, 021, 023,
 promoted; publication state `Private Development`; no claim valid; no release
 possible (licence unsatisfiable, DEC-S-047).
 
+## Operating enablement (CDS-WP-009)
+
+The Human Maintainer accepted `GO WITH NOTES` (commit of CDS-WP-008 + initiation of
+CDS-WP-009). **Foundation: Closed with Notes.** CDS-WP-009 operationalized the
+committed governance without any design, token, component, tool, or product code:
+
+- **Foundation Closure Record** — normative on the fact of closure, the authority
+  state, and the phase boundary; no Candidate/claim/licence/publication effect.
+- **Operating Playbook + Standard/Elevated dossier templates** — a non-normative
+  operational view of the two tracks and the mandatory gates (DEC-S-063).
+- **Critical Risk Action Register** — the 12 Critical Risks (RISK-017, 020, 021,
+  023, 026, 028, 029, 031, 038, 040, 044, 048) each with an executor role, review
+  trigger, expected evidence, and blocking effect (DEC-S-064). On that basis
+  **RISK-040 moved `Monitored → Mitigating`** — the only status change.
+- **Reference Integrity Review** — PASS; 0 CDS-authored broken links.
+- **Pre-Candidate Operating Plan** — phase entry state, prerequisites, Candidate
+  entry conditions, exit criteria.
+
+Added DEC-S-061 … DEC-S-064. Publication state `Private Development`; no claim; no
+Candidate/Stable artifact; pilot inactive.
+
 ## Next step
 
-**Nova review and Human-Maintainer decision on Foundation closure.** No next work
-package is authorized. If closure is approved, the recommended first move is a
-**single thin design slice** — one Layer-3 semantic status foundation plus one
-Layer-4 component contract (DEC-S-055) taken to Candidate — preceded by an
-operating playbook, a declared accessibility support baseline (RISK-044), and a
-staffed Evidence Reviewer (DEC-S-045). The next phase begins only on an explicit
-Nova prompt and Human-Maintainer authorization.
+**CDS-WP-010 — Accessibility Support Baseline and Evidence Strategy** (authorized
+as next; not yet executed): define the accessibility support baseline, evidence
+scope, environment categories, manual/assistive-technology evidence strategy,
+regression strategy, and a capacity-aware test matrix (RISK-044, RISK-048). It
+establishes no current conformance, no Candidate, no pilot start, and no design or
+token work. Execution begins only on an explicit Nova prompt and Human-Maintainer
+authorization.
 
 ## Related documents
 
@@ -558,4 +590,6 @@ Nova prompt and Human-Maintainer authorization.
 - [CDS-WP-006 Governance, Versioning and Contribution Notes](CDS_WP_006_GOVERNANCE_VERSIONING_AND_CONTRIBUTION_NOTES.md)
 - [CDS-WP-007 Accessibility and Inclusive Design Policy Notes](CDS_WP_007_ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY_NOTES.md)
 - [CDS-WP-008 Foundation Milestone Review Notes](CDS_WP_008_FOUNDATION_MILESTONE_REVIEW_NOTES.md)
+- [CDS-WP-009 Operating Enablement and Pre-Candidate Notes](CDS_WP_009_OPERATING_ENABLEMENT_AND_PRE_CANDIDATE_NOTES.md)
 - [Foundation Milestone Review](../docs/reviews/FOUNDATION_MILESTONE_REVIEW.md)
+- [Foundation Closure Record](../docs/governance/FOUNDATION_CLOSURE_RECORD.md)

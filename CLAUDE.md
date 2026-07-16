@@ -16,18 +16,21 @@ library, or a design project scoped exclusively to CoreOps.
 - Repository: KayKaspers/Core-Design-System
 - Local path: `D:\Projects\Core-Design-System`
 - Framework: Nova Development Framework v1.0.0
-- Phase: Foundation / Pre-Design — **milestone review completed; closure pending
-  approval.** The [Foundation Milestone Review](docs/reviews/FOUNDATION_MILESTONE_REVIEW.md)
-  is **review evidence, not an automatic approval**: it closes nothing, promotes
-  nothing, and authorizes no phase. Closure requires Nova review and a
-  Human-Maintainer decision.
+- Phase: **Pre-Candidate Operating Enablement — Foundation / Pre-Design: Closed
+  with Notes.** The Human Maintainer accepted `GO WITH NOTES` (commit of
+  CDS-WP-008 + initiation of CDS-WP-009); the
+  [Foundation Closure Record](docs/governance/FOUNDATION_CLOSURE_RECORD.md) is
+  normative for the fact of closure, the authority state, and the phase boundary.
+  Closure grants **no** Candidate, Stable, adoption, conformance, release, or
+  publication status.
 - First reference consumer: CoreOps (not the sole design target)
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008
-- Next work package: **None authorized.** The Foundation Milestone Review
-  (CDS-WP-008) recommends **GO WITH NOTES**; Foundation closure and the next phase
-  are **pending Nova review and Human-Maintainer approval**. The next phase begins
-  only on an explicit Nova prompt.
+  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009
+- Next work package: **CDS-WP-010 — Accessibility Support Baseline and Evidence
+  Strategy** (authorized as next; **not yet executed**). It defines the
+  accessibility support baseline and evidence strategy only; it starts no design,
+  token, Candidate, pilot, licence, or publication work. Execution begins only on
+  an explicit Nova prompt and Human-Maintainer authorization.
 
 ## Execution environment
 
@@ -188,6 +191,12 @@ Before beginning a work package, inspect at minimum:
 - [docs/governance/GOVERNANCE_OPERATING_MODEL.md](docs/governance/GOVERNANCE_OPERATING_MODEL.md)
   — normative source for roles, authority, and approval gates; entry point to the
   governance policies
+- [docs/governance/FOUNDATION_CLOSURE_RECORD.md](docs/governance/FOUNDATION_CLOSURE_RECORD.md)
+  — normative for the fact of Foundation closure, the authority state, and the
+  phase boundary (no Candidate/Stable/claim/publication effect)
+- [docs/operations/FOUNDATION_OPERATING_PLAYBOOK.md](docs/operations/FOUNDATION_OPERATING_PLAYBOOK.md)
+  — **non-normative** operative entry aid for running a single change end to end;
+  it references the normative policies and never overrides them
 - [docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md](docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md)
   — normative source for the logical architecture; entry point to the
   architecture documents
@@ -268,6 +277,37 @@ looks Standard but touches an Elevated trigger **is Elevated**.
 
 Full model:
 [Governance Operating Model](docs/governance/GOVERNANCE_OPERATING_MODEL.md).
+
+## Operating enablement (Pre-Candidate phase)
+
+The Foundation is **Closed with Notes** (DEC-S-061); the active phase is
+**Pre-Candidate Operating Enablement** (DEC-S-062). To run a change day to day,
+use the
+[Foundation Operating Playbook](docs/operations/FOUNDATION_OPERATING_PLAYBOOK.md)
+as the operative entry aid, with the
+[Standard](docs/operations/STANDARD_CHANGE_DOSSIER_TEMPLATE.md) or
+[Elevated](docs/operations/ELEVATED_CHANGE_DOSSIER_TEMPLATE.md) change dossier.
+
+- **The playbook and dossiers are non-normative** (DEC-S-063). They may reduce
+  duplication and ceremony but never authority, scope, traceability, evidence,
+  risk review, human approval, or fail-closed behavior. On any conflict, the
+  **normative policy wins** and the operating view is corrected.
+- **Critical-risk action rule** (DEC-S-064). Elevated work bearing on a critical
+  risk requires that risk to carry a named Mitigation Executor role, a review
+  trigger, expected evidence, and a blocking effect first. These are recorded in
+  the [Critical Risk Action Register](docs/operations/CRITICAL_RISK_ACTION_REGISTER.md)
+  for the twelve Critical Risks. A named executor authorizes no work; documentation
+  is not mitigation.
+- **No design work before an explicit prompt.** The Pre-Candidate phase produces
+  operating enablement and prerequisite planning only. No token, component, colour,
+  typography, icon, theme, tool, format, Candidate, pilot, licence, or publication
+  is created or selected. The next work package (CDS-WP-010) defines the
+  accessibility support baseline and evidence strategy only, and starts no design
+  work. See the
+  [Pre-Candidate Operating Plan](docs/roadmap/PRE_CANDIDATE_OPERATING_PLAN.md).
+- Compact orientation stays in the
+  [Foundation Context Pack](project-system/CONTEXT_PACK_FOUNDATION.md) — a summary,
+  never a normative source.
 
 ## Claim and release boundaries
 

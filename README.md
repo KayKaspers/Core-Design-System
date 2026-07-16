@@ -14,10 +14,21 @@ Source of Truth. It is deliberately **not**:
 
 ## Project status
 
-**Foundation / Pre-Design**
+**Pre-Candidate Operating Enablement — Foundation / Pre-Design: Closed with Notes**
 
-The project currently establishes governance, scope, architecture, and
-requirements. It does not yet produce visual design.
+The Foundation is **closed with mandatory notes** (CDS-WP-009): governance, scope,
+architecture, requirements, and the accessibility policy are established, and the
+committed governance is now operationalized for daily use. A lightweight
+[operating playbook](docs/operations/FOUNDATION_OPERATING_PLAYBOOK.md) and
+[Standard](docs/operations/STANDARD_CHANGE_DOSSIER_TEMPLATE.md) /
+[Elevated](docs/operations/ELEVATED_CHANGE_DOSSIER_TEMPLATE.md) change-dossier
+templates exist, and the twelve Critical Risks are made actionable in a
+[Critical Risk Action Register](docs/operations/CRITICAL_RISK_ACTION_REGISTER.md).
+**No Candidate or Stable artifact exists, no claim is valid, no licence is
+selected, and the publication state remains `Private Development`.** The next work
+package is **CDS-WP-010 — Accessibility Support Baseline and Evidence Strategy**.
+
+The project does not yet produce visual design.
 
 The concept and scope are registered. See
 [Concept and Scope](docs/governance/CONCEPT_AND_SCOPE.md) for the normative
@@ -309,8 +320,9 @@ certification statement.
 - **Completed:** CDS-WP-006 — Governance, Versioning, and Contribution Model
 - **Completed:** CDS-WP-007 — Accessibility and Inclusive Design Policy
 - **Completed:** CDS-WP-008 — Foundation Milestone Review
-- **Next:** **None authorized** — next phase pending Nova and Human-Maintainer
-  decision
+- **Completed:** CDS-WP-009 — Operating Enablement and Pre-Candidate Readiness
+- **Next:** **CDS-WP-010 — Accessibility Support Baseline and Evidence Strategy**
+  (authorized; not yet executed)
 
 The full controlled roadmap is in
 [project-system/WORK_PACKAGES.md](project-system/WORK_PACKAGES.md).
@@ -323,28 +335,36 @@ an eight-criterion CoreOps pilot entry matrix, and all 48 risks, the review foun
 **zero Foundation blockers** and recommends the milestone outcome **`GO WITH
 NOTES`**.
 
-This is a **recommendation, not an approval** — Foundation closure and the next
-phase are pending Nova review and Human-Maintainer decision. The review implements,
-designs, and publishes nothing: **no artifact is promoted to Candidate or Stable,
-no claim is made, no licence or technology is selected, and the publication state
-remains `Private Development`.** The mandatory next-phase notes are governance
-affordability, an accessibility support baseline, licensing, role staffing, and
-user-research honesty.
+The review was a **recommendation, not an approval**. The Human Maintainer
+subsequently **accepted `GO WITH NOTES`** — by committing CDS-WP-008 and initiating
+CDS-WP-009 — so the **Foundation is now Closed with Notes** (see the
+[Foundation Closure Record](docs/governance/FOUNDATION_CLOSURE_RECORD.md)). Closure
+promoted, designed, and published nothing: **no artifact is Candidate or Stable, no
+claim is made, no licence or technology is selected, and the publication state
+remains `Private Development`.** The mandatory notes — governance affordability, an
+accessibility support baseline, risk actionability, licensing, role staffing, and
+user-research honesty — are carried into the Pre-Candidate Operating Enablement
+phase.
 
 - [Foundation Milestone Review](docs/reviews/FOUNDATION_MILESTONE_REVIEW.md)
+- [Foundation Closure Record](docs/governance/FOUNDATION_CLOSURE_RECORD.md)
 - [Foundation Completeness Matrix](docs/reviews/FOUNDATION_COMPLETENESS_MATRIX.md)
 - [Governance Affordability and Operating Readiness](docs/reviews/GOVERNANCE_AFFORDABILITY_AND_OPERATING_READINESS.md)
 - [Foundation Candidate and Pilot Readiness](docs/reviews/FOUNDATION_CANDIDATE_AND_PILOT_READINESS.md)
 - [Foundation Open Gaps and Dependencies](docs/reviews/FOUNDATION_OPEN_GAPS_AND_DEPENDENCIES.md)
 - [Next-phase Recommendation](docs/reviews/NEXT_PHASE_RECOMMENDATION.md)
+- [Foundation Reference Integrity Review](docs/reviews/FOUNDATION_REFERENCE_INTEGRITY_REVIEW.md)
+- [Pre-Candidate Operating Plan](docs/roadmap/PRE_CANDIDATE_OPERATING_PLAN.md)
 
 ## Registers
 
-- Decisions: DEC-S-001 … DEC-S-060 (60) — 6 strategic foundation decisions,
+- Decisions: DEC-S-001 … DEC-S-064 (64) — 6 strategic foundation decisions,
   6 strategic scope decisions, 8 consumer and pilot scope decisions,
   12 logical architecture decisions, 16 governance, lifecycle and publication
-  decisions, 12 accessibility and inclusive design decisions
-- Risks: RISK-001 … RISK-048 (48) — all Monitored; owner model finalized
+  decisions, 12 accessibility and inclusive design decisions, 4 operating
+  enablement and pre-candidate decisions
+- Risks: RISK-001 … RISK-048 (48) — 47 Monitored, RISK-040 Mitigating; owner
+  model finalized; no risk accepted or closed
 
 ## Governance documents
 

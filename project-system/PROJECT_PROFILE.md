@@ -19,15 +19,38 @@ library (see DEC-S-001).
 
 ## Current lifecycle status
 
-Foundation / Pre-Design
+Pre-Candidate Operating Enablement — **Foundation / Pre-Design: Closed with Notes**
 
 ## Work package status
 
-- Current work package: **None** — Foundation Milestone Review completed; next
-  phase pending approval
-- Previous work package: CDS-WP-008 — Foundation Milestone Review (Completed)
+- Current work package after CDS-WP-009: **CDS-WP-010 — Accessibility Support
+  Baseline and Evidence Strategy** (Next; not yet executed)
+- Previous work package: CDS-WP-009 — Operating Enablement and Pre-Candidate
+  Readiness (Completed)
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008
+  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009
+
+## Operating enablement status
+
+- Foundation status: **Closed with Notes** (CDS-WP-009, 2026-07-16) — see the
+  [Foundation Closure Record](../docs/governance/FOUNDATION_CLOSURE_RECORD.md);
+  normative on closure, authority state, and the phase boundary; no Candidate,
+  Stable, claim, licence, or publication effect
+- Operating playbook: **Present** (non-normative) —
+  [Foundation Operating Playbook](../docs/operations/FOUNDATION_OPERATING_PLAYBOOK.md)
+- Standard change dossier template: **Present** —
+  [Standard Change Dossier](../docs/operations/STANDARD_CHANGE_DOSSIER_TEMPLATE.md)
+- Elevated change dossier template: **Present** —
+  [Elevated Change Dossier](../docs/operations/ELEVATED_CHANGE_DOSSIER_TEMPLATE.md)
+- Critical risk actionability: **Present** — 12/12 Critical Risks carry an
+  executor role, review trigger, expected evidence, and blocking effect
+  ([Critical Risk Action Register](../docs/operations/CRITICAL_RISK_ACTION_REGISTER.md))
+- Reference integrity status: **Reviewed — PASS** (0 CDS-authored broken links)
+  ([Foundation Reference Integrity Review](../docs/reviews/FOUNDATION_REFERENCE_INTEGRITY_REVIEW.md))
+- Pre-Candidate operating plan:
+  [Pre-Candidate Operating Plan](../docs/roadmap/PRE_CANDIDATE_OPERATING_PLAN.md)
+- **Current publication state: `Private Development`. Current claims: None.
+  Candidate/Stable artifacts: None. CoreOps pilot: inactive.**
 
 ## Foundation review status
 
@@ -45,7 +68,11 @@ Foundation / Pre-Design
   Met, 1 partial, 3 not met, 1 not-yet-assessable)
 - Governance operating readiness: **Partially met** — Standard track operational;
   Elevated path High burden for current staffing (RISK-029, RISK-040, RISK-048)
-- No artifact promoted; no claim created; no next phase authorized
+- No artifact promoted; no claim created
+- **Closure decision (CDS-WP-009):** the Human Maintainer accepted `GO WITH NOTES`
+  by committing CDS-WP-008 and initiating CDS-WP-009. **Foundation: Closed with
+  Notes.** The next phase (Pre-Candidate Operating Enablement) is authorized; no
+  Candidate, pilot, licence, or publication is authorized.
 
 Documents:
 [Foundation Milestone Review](../docs/reviews/FOUNDATION_MILESTONE_REVIEW.md) ·
@@ -273,14 +300,18 @@ pilot contract is defined in CDS-WP-004.
 
 ## Register scope
 
-- Decisions: DEC-S-001 … DEC-S-060 (60) — 6 strategic foundation decisions
+- Decisions: DEC-S-001 … DEC-S-064 (64) — 6 strategic foundation decisions
   (CDS-WP-001), 6 strategic scope decisions (CDS-WP-002), 8 consumer and pilot
   scope decisions (CDS-WP-004), 12 logical architecture decisions (CDS-WP-005),
-  16 governance, lifecycle and publication decisions (CDS-WP-006), and **12
-  accessibility and inclusive design decisions (CDS-WP-007)**. Unchanged by
-  CDS-WP-003; DEC-S-001 … DEC-S-048 unchanged by CDS-WP-007.
-- Risks: RISK-001 … RISK-048 (48) — all `Monitored`; **risk owner model
-  finalized** by CDS-WP-006; RISK-041 … RISK-048 added by CDS-WP-007
+  16 governance, lifecycle and publication decisions (CDS-WP-006), 12
+  accessibility and inclusive design decisions (CDS-WP-007), and **4 operating
+  enablement and pre-candidate decisions (CDS-WP-009, DEC-S-061 … DEC-S-064)**.
+  Unchanged by CDS-WP-003 and CDS-WP-008; DEC-S-001 … DEC-S-060 unchanged by
+  CDS-WP-009.
+- Risks: RISK-001 … RISK-048 (48) — **47 `Monitored`, RISK-040 `Mitigating`**
+  (CDS-WP-009, via the Critical Risk Action Register; DEC-S-064); **risk owner
+  model finalized** by CDS-WP-006; RISK-041 … RISK-048 added by CDS-WP-007. No
+  risk accepted or closed.
 
 ## Intentionally open decision areas
 
