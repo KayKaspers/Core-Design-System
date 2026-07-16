@@ -9,6 +9,75 @@ released and no release is announced.
 
 ### Added
 
+- Accessibility and inclusive-design policy defined as the normative
+  accessibility source: purpose and authority, the target-versus-claim boundary,
+  principles, shared responsibility, architecture integration, maturity
+  relationship, inclusive-design scope, source hierarchy, and change control.
+  (CDS-WP-007)
+- **WCAG 2.2 Level AA** target defined for the applicable web-based scope,
+  resolving CR-024 at policy level. A target, not a conformance claim. (CDS-WP-007)
+- Accessibility responsibility model: CDS, consumer, and shared/contract-
+  controlled responsibilities, a RACI-style matrix, the component-to-product and
+  Product Profile boundaries, claim responsibility, and escalation. (CDS-WP-007)
+- Accessibility requirements baseline across ten areas, separating normative,
+  implementation-dependent, consumer-scope, channel-specific, and deferred
+  requirements. (CDS-WP-007)
+- WCAG 2.2 Level A and AA applicability matrix: 56 displayed rows — 31 current
+  Level A, 24 Level AA, and 1 historical removed reference row (4.1.1, obsolete
+  and removed by the standard) — for 55 currently applicable criteria, with
+  per-criterion
+  responsibility, policy status, architecture layers, and required evidence — no
+  pass/fail statement. (CDS-WP-007)
+- Five-level accessibility evidence model AE-0 … AE-4 with Candidate and Stable
+  gates, a support-baseline process, the automated-only insufficiency rule, the
+  component/product evidence boundaries, claim boundaries, and no numeric score.
+  (CDS-WP-007)
+- Six accessibility channel profiles, each with scope, target, owner, minimum
+  future evidence, current gap, and Candidate/Stable boundaries; only web UI and
+  web documentation carry a target; none is Candidate- or Stable-eligible.
+  (CDS-WP-007)
+- Accessibility limitation and exception policy: a fifteen-field limitation
+  record, impact and mitigation rules, maturity and claim effects, the exception
+  boundary and prohibited waivers, and the capacity-is-not-a-rationale rule.
+  (CDS-WP-007)
+- CoreOps pilot accessibility criterion operationalizing CR-024, with the entry
+  criterion `Accessibility target defined` satisfiable on Human Maintainer commit,
+  Pilot Group E minimum evidence, and confirmation that the pilot has not started.
+  (CDS-WP-007)
+- Accessibility source register (13 opened official W3C/WAI/ETSI URLs) and a
+  standard-status and limitations record (WCAG 2.2, WAI-ARIA, APG, WCAG-EM 2.0
+  draft, EN 301 549 on-approval), with no legal-advice statement. (CDS-WP-007)
+- Accessibility architecture alignment mapping accessibility onto the eight
+  layers, eight artifact classes, five token-flow levels, profiles, contracts,
+  status axes, channels, evidence flow, and maturity gates. (CDS-WP-007)
+- Accessibility and inclusive-design decisions DEC-S-049 … DEC-S-060. (CDS-WP-007)
+- Risks RISK-041 … RISK-048 covering target-mistaken-for-conformance,
+  automated-testing substitution, the component-to-product responsibility gap,
+  accessibility support-baseline drift, accessibility regression, the non-web
+  channel gap, inclusive-design undercoverage, and the accessibility evidence
+  burden. (CDS-WP-007)
+- Work-package evidence notes for CDS-WP-007.
+
+### Changed
+
+- CR-021, CR-022, CR-024, and CR-034 traceability reconciled: no requirement is
+  deferred to a policy work package any longer; the architecture status
+  distribution is 9 addressed, 27 partially addressed, 2 consumer-owned, 2 out of
+  scope. CR-024 is addressed because the target and policy exist — not because
+  anything was tested. (CDS-WP-007)
+- Artifact maturity lifecycle, exception and Product Profile governance, adoption
+  and claims policy, licensing and publication model, CoreOps pilot contract, and
+  consumer validation plan reconciled to reference the accessibility policy and
+  evidence model. No artifact was promoted; publication state remains
+  `Private Development`. (CDS-WP-007)
+- Work-package status advanced: CDS-WP-007 completed, CDS-WP-008 — Foundation
+  Milestone Review activated as the next work package. (CDS-WP-007)
+- Decision index extended to DEC-S-001 … DEC-S-060 with a sixth decision type for
+  accessibility and inclusive design; DEC-S-001 … DEC-S-048 unchanged; no ADR.
+  (CDS-WP-007)
+- Risk register extended to RISK-001 … RISK-048; existing risks unchanged; the
+  finalized four-role model applied. (CDS-WP-007)
+
 - Governance operating model defined as the normative governance source: six
   roles, an authority matrix, Standard and Elevated tracks, approval gates,
   separation of review and approval, the consumer governance boundary, and

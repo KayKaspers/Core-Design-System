@@ -51,15 +51,29 @@ The pilot may begin only when **all** hold:
 2. The pilot scope (Groups A–E) is approved.
 3. Consumer requirements are registered — CR-001 … CR-040.
 4. The CDS-WP-005 design-system architecture is approved.
-5. The relevant foundations have reached at least Candidate maturity, per a
-   maturity model that does not yet exist (CDS-WP-006).
+5. The relevant foundations have reached at least Candidate maturity, per the
+   [Artifact Maturity Lifecycle](ARTIFACT_MATURITY_LIFECYCLE.md) *(supplied by
+   CDS-WP-006)*.
 6. The CoreOps pilot area is named unambiguously by the Human Maintainer.
 7. No conflict with CoreOps' own governance and work-package queue.
-8. The accessibility target and its evidence method are decided (CR-024,
-   CDS-WP-007) — otherwise Group E cannot be evidenced.
+8. The accessibility target and its evidence method are decided (CR-024) —
+   otherwise Group E cannot be evidenced.
 
-**Current state: not met.** Criteria 4, 5, and 8 depend on work packages that
-have not run. **This contract starts no implementation.**
+### Current state — reconciled by CDS-WP-007
+
+**Not met. The pilot remains inactive.**
+
+| # | Criterion | State |
+| --- | --- | --- |
+| 8 | Accessibility target and evidence method decided | **`Accessibility target defined` — satisfiable upon Human Maintainer commit of CDS-WP-007.** The target (**WCAG 2.2 Level AA**, DEC-S-049, DEC-S-060) and the evidence method (**AE-0 … AE-4**, Evidence and Claims Model) now exist. Claude does not declare this met; **the commit does.** |
+| 4 | CDS-WP-005 architecture approved | **Pending** |
+| 5 | Foundations at Candidate maturity | **Unmet — structurally.** No artifact is Candidate; the Candidate accessibility gate cannot be passed (AE-0, no support baseline). |
+
+**Accessibility evidence remains not satisfied.** Criterion 8 concerns a
+*decision*, not evidence — and Group E still cannot be evidenced. See the
+[CoreOps Pilot Accessibility Criterion](COREOPS_PILOT_ACCESSIBILITY_CRITERION.md).
+
+**This contract starts no implementation** (DEC-S-015).
 
 ## In-scope pilot groups
 
@@ -97,8 +111,13 @@ Evidence must be produced for the pilot to be assessable. Required:
    via [Consumer Requirements Traceability](CONSUMER_REQUIREMENTS_TRACEABILITY.md).
 4. **Design rationale** — why a solution was chosen, so it can be reviewed rather
    than merely observed.
-5. **Accessibility evidence** — against the target decided in CDS-WP-007. Absent
-   that target, **no accessibility claim may be made**.
+5. **Accessibility evidence** — against the target **WCAG 2.2 Level AA** for the
+   declared web-based pilot scope, per the
+   [Accessibility Evidence and Claims Model](ACCESSIBILITY_EVIDENCE_AND_CLAIMS_MODEL.md):
+   **AE-1 + AE-2 + AE-3** against a declared support baseline for CDS pilot
+   artifacts, and **AE-4** for any CoreOps pilot claim.
+   **None of this evidence exists** — every artifact is AE-0 — so **no
+   accessibility claim may be made** (DEC-S-050).
 6. **Keyboard and focus verification** — CR-021.
 7. **State and status coverage** — every state in CR-015 demonstrably reachable
    and distinguishable, including unknown (CR-007).

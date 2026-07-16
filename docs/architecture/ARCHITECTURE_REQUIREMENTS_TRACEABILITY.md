@@ -37,9 +37,15 @@ A mapping records an **architectural response**, never an approval.
 decision remains.
 
 `Deferred to CDS-WP-006` - needs the governance, versioning, or contribution
-model.
+model. **Retired by CDS-WP-007: no requirement carries this status (0 rows).**
+CDS-WP-006 supplied the model.
 
-`Deferred to CDS-WP-007` - needs the accessibility policy.
+`Deferred to CDS-WP-007` - needs the accessibility policy. **Retired by
+CDS-WP-007: no requirement carries this status (0 rows).** The policy exists.
+
+Both values are retained in this vocabulary for **historical readability** of
+earlier revisions. **Neither may be assigned again** — a requirement needing
+policy that does not exist must name the work package that will supply it.
 
 `Consumer-owned` - belongs to the consumer project.
 
@@ -69,10 +75,10 @@ model.
 | CR-018 | Shared CDS Candidate | 5 Patterns and Experiences | Layer 5 pattern; mode must be programmatically determinable, not colour-signalled. | [Architecture](DESIGN_SYSTEM_ARCHITECTURE.md) | Whether mode is CDS, product, or both. | CDS-WP-006 | Partially addressed - later design decision required |
 | CR-019 | Shared CDS Candidate | 6 Channels and Communication | Layer 6 documentation channel; must degrade honestly offline (CR-031). | [Channels](ARTIFACT_DISTRIBUTION_AND_CHANNEL_MODEL.md) | Help delivery model. | CDS-WP-006 | Partially addressed - later design decision required |
 | CR-020 | Shared CDS Candidate | 5 Patterns and Experiences | Layer 5 and 6: plain language alongside, never instead of, technical detail. | [Channels](ARTIFACT_DISTRIBUTION_AND_CHANNEL_MODEL.md) | Error content model; DE/EN parity. | CDS-WP-007 | Partially addressed - later design decision required |
-| CR-021 | Shared CDS Candidate | 3 Foundations and Tokens | Architectural constraint: component contracts carry accessibility behavior; profiles may not weaken it (invariant 10). | [Evidence & Status](EVIDENCE_TRACEABILITY_AND_STATUS_SEMANTICS.md) | The target level and evidence method are undefined (CR-024). | CDS-WP-007 | Deferred to CDS-WP-007 |
-| CR-022 | Shared CDS Candidate | 3 Foundations and Tokens | Layer 3 motion foundation; reduced-motion is a foundation concern. | [Evidence & Status](EVIDENCE_TRACEABILITY_AND_STATUS_SEMANTICS.md) | Motion policy and thresholds. | CDS-WP-007 | Deferred to CDS-WP-007 |
+| CR-021 | Shared CDS Candidate | 3 Foundations and Tokens | Policy now mandates keyboard operability, visible focus, and no keyboard trap as a contract area (DEC-S-055); WCAG 2.1.1, 2.1.2, 2.4.3, 2.4.7, 2.4.11 mapped with responsibility. | [A11y Policy](../governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md) | Component and pattern keyboard contracts; implementation evidence (AE-2, AE-3). Policy defines the duty; nothing is evidenced. | CDS-WP-008 | Partially addressed - later design decision required |
+| CR-022 | Shared CDS Candidate | 3 Foundations and Tokens | Policy mandates reduced-motion support and forbids motion as sole meaning carrier; Layer 3 motion foundation confirmed. | [A11y Policy](../governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md) | Motion thresholds and the concrete mechanism; implementation evidence. | CDS-WP-008 | Partially addressed - later design decision required |
 | CR-023 | Shared CDS Candidate | 3 Foundations and Tokens | Layer 3 foundations plus Layer 6 channel parity; layouts must tolerate variable text length. | [Channels](ARTIFACT_DISTRIBUTION_AND_CHANNEL_MODEL.md) | Localization model; DE/EN parity mechanism. | CDS-WP-006 | Partially addressed - later design decision required |
-| CR-024 | Deferred Requirement | 1 Strategy and Governance | Layer 1 governance placement; architecture treats accessibility as a structural constraint without choosing a level. | [Architecture](DESIGN_SYSTEM_ARCHITECTURE.md) | The entire policy - target, method, evidence. | CDS-WP-007 | Deferred to CDS-WP-007 |
+| CR-024 | Deferred Requirement | 1 Strategy and Governance | **Resolved at policy level: WCAG 2.2 Level AA for the applicable web scope** (DEC-S-049, DEC-S-060). Target, scope, responsibilities, evidence model (AE-0…AE-4), and gates are defined. | [A11y Policy](../governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md) | None at policy level. **The target is not conformance** — evidence remains absent (all artifacts AE-0) and no baseline exists. | — | Addressed by architecture |
 | CR-025 | Shared CDS Candidate | 3 Foundations and Tokens | Layer 3 theme mechanism; theming flows through semantic tokens, never raw values. | [Tokens](TOKEN_AND_THEME_ARCHITECTURE.md) | Whether theme is a profile or a semantic concern; the token layering it implies. | CDS-WP-006 | Partially addressed - later design decision required |
 | CR-026 | Deferred Requirement | 6 Channels and Communication | Registered as a channel class at Layer 6. | [Channels](ARTIFACT_DISTRIBUTION_AND_CHANNEL_MODEL.md) | Whether demand justifies the scope. | CDS-WP-006 | Partially addressed - later design decision required |
 | CR-027 | Deferred Requirement | 6 Channels and Communication | Layer 6 documentation channel with DE/EN parity and staleness control as channel constraints. | [Channels](ARTIFACT_DISTRIBUTION_AND_CHANNEL_MODEL.md) | Standards themselves; parity mechanism. Strong evidence but outside the pilot. | CDS-WP-006 | Partially addressed - later design decision required |
@@ -82,7 +88,7 @@ model.
 | CR-031 | Shared CDS Candidate | 7 Distribution and Enablement | DEC-S-030 and invariant 12: no mandatory external runtime service; local assets; air-gap tolerance; distribution neutrality. | [Channels](ARTIFACT_DISTRIBUTION_AND_CHANNEL_MODEL.md) | Distribution technology (deliberately open). | CDS-WP-006 | Addressed by architecture |
 | CR-032 | Shared CDS Candidate | 8 Evidence and Quality | Offline, degraded, and restricted are distinct states across the five axes; degraded stays distinguishable from unavailable. | [Evidence & Status](EVIDENCE_TRACEABILITY_AND_STATUS_SEMANTICS.md) | Concrete state taxonomy. | CDS-WP-006 | Addressed by architecture |
 | CR-033 | Shared CDS Candidate | 1 Strategy and Governance | Layer 1 governance; the semantic-first principle makes shared vocabulary an architectural property of the token flow. | [Architecture](DESIGN_SYSTEM_ARCHITECTURE.md) | Glossary and terminology governance. | CDS-WP-006 | Partially addressed - later design decision required |
-| CR-034 | Shared CDS Candidate | 1 Strategy and Governance | Layer 8 traceability chain plus the required revision identities (DEC-S-031) supply the mechanism. | [Evidence & Status](EVIDENCE_TRACEABILITY_AND_STATUS_SEMANTICS.md) | The versioning and maturity model itself. | CDS-WP-006 | Deferred to CDS-WP-006 |
+| CR-034 | Shared CDS Candidate | 1 Strategy and Governance | Versioning governance now defined: MAJOR.MINOR.PATCH, immutable release identity, seven maturity states, eight compatibility axes (DEC-S-035…DEC-S-039). Layer 8 traceability supplies the mechanism (DEC-S-031). | [Maturity Lifecycle](../governance/ARTIFACT_MATURITY_LIFECYCLE.md) | Concrete foundations and implementation. Governance exists; **no artifact is versioned, Candidate, or Stable**. | CDS-WP-008 | Partially addressed - later design decision required |
 | CR-035 | Out of CDS Scope | Not applicable | Permanent non-goal. Consumer-owned business logic and domain semantics. | - | None. The boundary is final. | - | Out of CDS scope |
 | CR-036 | Out of CDS Scope | Not applicable | Permanent non-goal. Consumer-owned backend, infrastructure, and security architecture. | - | None. The boundary is final. | - | Out of CDS scope |
 | CR-037 | Product-local Requirement | 2 Brand and Identity | Consumer-local Artifact (class 7). Not CDS, not an override, not a defect. Enters only via reconciliation. | [Profiles](PRODUCT_PROFILE_AND_EXTENSION_MODEL.md) | Whether any part becomes a Profile Candidate - later, per consumer. | CDS-WP-006 | Consumer-owned |
@@ -97,15 +103,26 @@ Every total resolves to **40**.
 
 ### By architecture status
 
-| Status | Count |
-| --- | --- |
-| Partially addressed - later design decision required | 24 |
-| Addressed by architecture | 8 |
-| Deferred to CDS-WP-007 | 3 |
-| Consumer-owned | 2 |
-| Out of CDS scope | 2 |
-| Deferred to CDS-WP-006 | 1 |
-| **Total** | **40** |
+*(Reconciled by CDS-WP-007 — counts re-derived from the matrix above.)*
+
+| Status | Count | Change |
+| --- | --- | --- |
+| Partially addressed - later design decision required | **27** | +3 (CR-021, CR-022, CR-034) |
+| Addressed by architecture | **9** | +1 (CR-024) |
+| Consumer-owned | 2 | — |
+| Out of CDS scope | 2 | — |
+| Deferred to CDS-WP-006 | **0** | −1 (CR-034 reconciled) |
+| Deferred to CDS-WP-007 | **0** | −3 (CR-021, CR-022, CR-024 reconciled) |
+| **Total** | **40** | — |
+
+**No requirement is deferred to a policy work package any longer.** CDS-WP-006
+supplied governance and CDS-WP-007 supplied the accessibility target, so the four
+deferred requirements moved to their real state: three await *design and
+evidence*, one is answered at policy level.
+
+**This is not progress toward conformance.** CR-024 is `Addressed by
+architecture` because the **target and policy exist** — not because anything was
+tested. Every artifact remains AE-0.
 
 ### By architecture layer
 
@@ -124,33 +141,43 @@ Every total resolves to **40**.
 
 ## Reading the distribution honestly
 
-**Only 8 of 40 requirements are fully addressed by architecture, and that is the
+**Only 9 of 40 requirements are fully addressed by architecture, and that is the
 expected result.** An architecture that claimed to resolve most requirements
 would be doing design work it is not authorized to do (DEC-S-020, DEC-S-032).
 
-The 8 fully addressed requirements cluster tightly, and not by accident:
+The 9 fully addressed requirements cluster tightly, and not by accident:
 
 - **Status truthfulness** - CR-006, CR-007, CR-013, CR-015, CR-016, CR-032.
 - **Offline capability** - CR-031.
 - **Reconciliation** - CR-002.
+- **Accessibility target** - CR-024 *(added by CDS-WP-007)*.
 
-These are exactly the areas where the architecture *itself* is the answer: they
-are structural guarantees, not design choices. Unknown-is-not-healthy cannot be
-delegated to a later styling decision, and offline capability cannot be retrofitted
-onto a distribution model that assumed a service.
+These are exactly the areas where the architecture or policy *itself* is the
+answer: they are structural guarantees and governance decisions, not design
+choices. Unknown-is-not-healthy cannot be delegated to a later styling decision;
+offline capability cannot be retrofitted onto a distribution model that assumed a
+service; and an accessibility target is a decision, not an implementation.
 
-The 24 partially addressed requirements are positioned and await design. The 4
-deferred ones await policy that does not exist yet. This is deferral, not
-avoidance - each names its follow-up work package.
+The 27 partially addressed requirements are positioned and await design and
+evidence.
+
+**Nothing is deferred to a policy work package any longer.** CDS-WP-006 supplied
+governance and CDS-WP-007 supplied the accessibility target. What remains is
+design, implementation, and evidence — not policy.
+
+That shift is real but narrow: **the blocker moved from "against what?" to "show
+it".** No artifact became more mature, and nothing was tested.
 
 ## Open architecture gaps
 
 Requirements whose architectural answer is weakest, and why:
 
-1. **CR-024 accessibility target** - the architecture treats accessibility as a
-   constraint but **cannot choose a level**. Deferred to CDS-WP-007. This blocks
-   CR-021 and CR-022 and a CoreOps pilot entry criterion, and it is the single
-   most consequential gap (RISK-028).
+1. **CR-024 accessibility evidence** - *(reframed by CDS-WP-007)* the target is
+   now decided: **WCAG 2.2 Level AA** for the applicable web scope (DEC-S-049,
+   DEC-S-060). The gap is no longer the level — it is that **no artifact has been
+   evaluated against it**. Every artifact is **AE-0**, and no support baseline
+   exists (RISK-044, RISK-048). This still blocks the Stable gate, Product Profile
+   approval, and the CoreOps pilot; only the *reason* changed.
 2. **CR-030 presentations** - registered as a channel class with **no consumer
    evidence at all**. Structure without demand.
 3. **CR-028, CR-029 PDF and diagrams** - weak consumer evidence; registered but
@@ -160,8 +187,10 @@ Requirements whose architectural answer is weakest, and why:
 5. **CR-005, CR-009** - operations patterns confirmed as a real consumer need,
    but modelled as a Domain Pattern Family precisely because generalizability is
    unproven (DEC-S-027, RISK-023).
-6. **CR-034 versioning** - the traceability mechanism exists; the versioning and
-   maturity model does not (CDS-WP-006).
+6. **CR-034 versioning** - *(reframed by CDS-WP-007)* the traceability mechanism
+   exists and CDS-WP-006 supplied the versioning and maturity model. What is
+   missing is a **versioned artifact to apply it to** — the model has never been
+   exercised, because nothing has reached Candidate.
 7. **CR-017 setup** - all three consumers built their own. Whether this is a CDS
    pattern at all is unresolved.
 

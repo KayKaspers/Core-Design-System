@@ -82,8 +82,17 @@ been performed rigorously enough to be believed.
 | **Limits** | Scope-bound. Not certification. Not endorsement. Not global. |
 
 **No conformance claim is currently possible.** It requires Stable contracts, and
-no artifact can reach Stable while the accessibility target is undefined
-(CR-024, RISK-028).
+no artifact can reach Stable. *(Reconciled by CDS-WP-007: the accessibility
+target is now defined — **WCAG 2.2 Level AA** for the applicable web scope,
+CR-024, DEC-S-049. The Stable gate remains unreachable because the required
+**AE-2 and AE-3 evidence does not exist** and **no support baseline is
+declared** — RISK-028, RISK-044, RISK-048.)*
+
+**An accessibility claim is a claim** and is governed by the
+[Accessibility Evidence and Claims Model](ACCESSIBILITY_EVIDENCE_AND_CLAIMS_MODEL.md).
+**No accessibility claim of any level is valid today**, and a claim that omits a
+known limitation is invalid (DEC-S-044). Neither CDS nor any consumer may be
+presented as WCAG conformant — **a target is not conformance** (DEC-S-050).
 
 ## The prohibited claim
 
@@ -139,7 +148,11 @@ when:
 3. a relied-upon contract is deprecated or removed,
 4. an exception expires or changes,
 5. a Product Profile changes,
-6. the accessibility policy is established or changes (CR-024),
+6. the [accessibility policy](ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md), the
+   accessibility target, or the **declared accessibility support baseline**
+   changes (CR-024) — *(the policy itself was established by CDS-WP-007; a
+   baseline change invalidates AE-3 evidence, which was tested against the old
+   one)*,
 7. a critical deviation is discovered,
 8. the declared scope changes.
 

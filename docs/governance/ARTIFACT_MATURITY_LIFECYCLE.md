@@ -105,7 +105,7 @@ except under emergency removal.
 | 2 | Normative documentation exists |
 | 3 | Ownership assigned |
 | 4 | Source revision identified |
-| 5 | Known accessibility requirements stated |
+| 5 | Known accessibility requirements stated, per the [Accessibility and Inclusive Design Policy](ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md) — incl. the **Candidate accessibility gate** (mapping, responsibility, **AE-1**, AE-2 or plan, limitations, baseline plan, regression plan) |
 | 6 | Known risks registered |
 | 7 | Evidence plan |
 | 8 | Consumer validation plan |
@@ -123,7 +123,7 @@ has not been examined.
 | --- | --- |
 | 1 | Candidate gate satisfied |
 | 2 | Implementation or render evidence, where applicable |
-| 3 | **Accessibility evidence per the later policy** |
+| 3 | **Accessibility evidence** per the [Accessibility Evidence and Claims Model](ACCESSIBILITY_EVIDENCE_AND_CLAIMS_MODEL.md): **AE-2 complete + AE-3 against a declared support baseline** + consumer evidence + no critical limitations |
 | 4 | At least one bounded consumer validation |
 | 5 | Migration and compatibility statement |
 | 6 | No unresolved critical deviations |
@@ -131,12 +131,28 @@ has not been examined.
 
 ### The accessibility blocker
 
-Requirement 3 **cannot currently be satisfied**. The accessibility target and its
-evidence method do not exist (CR-024, CDS-WP-007).
+*(Reconciled by CDS-WP-007)*
 
-Therefore: **no artifact with an accessibility obligation can reach Stable
-today.** This is recorded, not worked around (RISK-028). It is a real constraint
-on the roadmap, and Nova may wish to advance CDS-WP-007.
+Requirement 3 **still cannot be satisfied** — but for a different reason than
+before.
+
+| | Before CDS-WP-007 | After CDS-WP-007 |
+| --- | --- | --- |
+| **Target** | Did not exist | **WCAG 2.2 Level AA** for the applicable web scope (DEC-S-049) |
+| **Evidence method** | Did not exist | **AE-0 … AE-4** (Evidence and Claims Model) |
+| **Blocker** | *"Against what?"* | *"Show it."* |
+
+The target and the evidence method now exist. **The evidence does not.** Every
+CDS artifact is **AE-0**, and **no accessibility support baseline has been
+declared** — which alone makes AE-3, and therefore Stable, unreachable
+(RISK-044, RISK-048).
+
+Therefore, unchanged in effect: **no artifact with an accessibility obligation
+can reach Stable today**, and the Candidate accessibility gate is equally unmet.
+This is recorded, not worked around (RISK-028).
+
+**CDS-WP-007 promoted no artifact.** A policy is an input to a gate, never a pass
+through one — and defining a target proves nothing (DEC-S-050).
 
 ## No retrospective maturity
 

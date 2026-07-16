@@ -23,12 +23,37 @@ Foundation / Pre-Design
 
 ## Work package status
 
-- Current work package: CDS-WP-007 — Accessibility and Inclusive Design Policy
-  (Next)
-- Previous work package: CDS-WP-006 — Governance, Versioning, Contribution, Risk
-  and Publication Model (Completed)
+- Current work package: CDS-WP-008 — Foundation Milestone Review (Next)
+- Previous work package: CDS-WP-007 — Accessibility and Inclusive Design Policy
+  (Completed)
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004, CDS-WP-005, CDS-WP-006
+  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007
+
+## Accessibility status
+
+- Accessibility policy status: **Defined** (CDS-WP-007, 2026-07-16)
+- Accessibility target: **WCAG 2.2 Level AA** for the applicable web-based scope
+  (DEC-S-049) — **a target, not a conformance claim** (DEC-S-050)
+- WCAG applicability criterion count: **56 listed** Level A + AA (**32 A · 24
+  AA**); **55 applicable** (**31 A · 24 AA**), excluding obsolete 4.1.1
+- Accessibility evidence levels: **5** — AE-0 … AE-4 (Accessibility Evidence and
+  Claims Model; the responsibility split they record is DEC-S-051)
+- Accessibility channel profiles: **6** — 2 with a target, 0 Candidate-eligible
+- CR-024 policy status: **Resolved at policy level** (DEC-S-060); entry criterion
+  `Accessibility target defined` satisfiable on Human Maintainer commit
+- **Current accessibility evidence: none — every artifact is AE-0**; no support
+  baseline declared; no accessibility claim of any level is valid
+
+Documents:
+[Accessibility and Inclusive Design Policy](../docs/governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md) ·
+[Responsibility Model](../docs/governance/ACCESSIBILITY_RESPONSIBILITY_MODEL.md) ·
+[Requirements Baseline](../docs/governance/ACCESSIBILITY_REQUIREMENTS_BASELINE.md) ·
+[WCAG 2.2 AA Applicability Matrix](../docs/governance/WCAG_2_2_AA_APPLICABILITY_MATRIX.md) ·
+[Evidence and Claims Model](../docs/governance/ACCESSIBILITY_EVIDENCE_AND_CLAIMS_MODEL.md) ·
+[Channel Profiles](../docs/governance/ACCESSIBILITY_CHANNEL_PROFILES.md) ·
+[Limitations and Exception Policy](../docs/governance/ACCESSIBILITY_LIMITATIONS_AND_EXCEPTION_POLICY.md) ·
+[CoreOps Pilot Accessibility Criterion](../docs/governance/COREOPS_PILOT_ACCESSIBILITY_CRITERION.md) ·
+[Architecture Alignment](../docs/architecture/ACCESSIBILITY_ARCHITECTURE_ALIGNMENT.md)
 
 ## Governance status
 
@@ -72,11 +97,13 @@ Documents:
 - Artifact classes: 8 · Token flow levels: 5 · Status axes: 5 · Consumer
   contracts: 5 · Architecture invariants: 16
 - Architecture requirement coverage: **40 / 40** requirements mapped —
-  8 Addressed by architecture · 24 Partially addressed · 3 Deferred to
-  CDS-WP-007 · 1 Deferred to CDS-WP-006 · 2 Consumer-owned · 2 Out of CDS scope
+  **9 Addressed by architecture · 27 Partially addressed · 0 Deferred to
+  CDS-WP-006 · 0 Deferred to CDS-WP-007 · 2 Consumer-owned · 2 Out of CDS scope**
+  (reconciled by CDS-WP-007; no requirement is deferred to a policy work package
+  any longer)
 - **The architecture selects no technology, format, tool, or visual design**
-  (DEC-S-032). It is structure awaiting policy (CDS-WP-006), the accessibility
-  target (CDS-WP-007), and implementation evidence.
+  (DEC-S-032). Governance (CDS-WP-006) and the accessibility target (CDS-WP-007)
+  now exist; what remains is design, implementation, and evidence — not policy.
 
 Documents:
 [Design System Architecture](../docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md) ·
@@ -220,13 +247,14 @@ pilot contract is defined in CDS-WP-004.
 
 ## Register scope
 
-- Decisions: DEC-S-001 … DEC-S-048 (48) — 6 strategic foundation decisions
+- Decisions: DEC-S-001 … DEC-S-060 (60) — 6 strategic foundation decisions
   (CDS-WP-001), 6 strategic scope decisions (CDS-WP-002), 8 consumer and pilot
   scope decisions (CDS-WP-004), 12 logical architecture decisions (CDS-WP-005),
-  and 16 governance, lifecycle and publication decisions (CDS-WP-006). Unchanged
-  by CDS-WP-003.
-- Risks: RISK-001 … RISK-040 (40) — all `Monitored`; **risk owner model
-  finalized** by CDS-WP-006
+  16 governance, lifecycle and publication decisions (CDS-WP-006), and **12
+  accessibility and inclusive design decisions (CDS-WP-007)**. Unchanged by
+  CDS-WP-003; DEC-S-001 … DEC-S-048 unchanged by CDS-WP-007.
+- Risks: RISK-001 … RISK-048 (48) — all `Monitored`; **risk owner model
+  finalized** by CDS-WP-006; RISK-041 … RISK-048 added by CDS-WP-007
 
 ## Intentionally open decision areas
 

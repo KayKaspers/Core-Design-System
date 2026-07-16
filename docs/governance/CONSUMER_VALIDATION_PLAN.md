@@ -33,7 +33,7 @@ Ordered weakest to strongest. **The current pilot rests entirely at Level 1.**
 | **1** | Committed consumer documentation | **Limited** | A need was *stated* or a behavior was *built*. Not that it works. |
 | **2** | Human Maintainer validation | **Moderate** | Informed judgement that a requirement is real and correctly classified. |
 | **3** | CoreOps implementation evidence | **Moderate to strong** | The pattern survives contact with real complexity. |
-| **4** | Accessibility verification | **Strong, bounded** | Verified against a stated target — never "accessible" unqualified. |
+| **4** | Accessibility verification — graded **AE-0 … AE-4** *(see [Accessibility evidence](#accessibility-evidence))* | **Strong, bounded** | Verified against a stated target, in a declared scope, against a declared baseline — never "accessible" unqualified. **Currently AE-0.** |
 | **5** | Consumer feedback from use | **Strong** | The pattern works for the people doing the work. |
 | **—** | User research, usability testing, observational study | **Not planned** | **Not part of this pilot.** Must never be implied. |
 
@@ -52,7 +52,7 @@ Level 1 evidence supports "documented as needed" — it does not support "works"
 | Evidence level reached | **Level 1 only** |
 | Human validation performed | **None** |
 | Implementation evidence | **None** |
-| Accessibility verification | **None** |
+| Accessibility verification | **None — AE-0 for every artifact**; no support baseline declared |
 | User research | **None, and none planned** |
 
 Every requirement is therefore **provisional**. CDS-WP-004 produced a
@@ -69,7 +69,9 @@ The Human Maintainer decides:
    Product-local (RISK-016),
 3. whether the two single-consumer CoreOps Pilot Requirements (CR-003, CR-014)
    are generalizable (DEC-S-016),
-4. the accessibility target and its evidence method (CR-024),
+4. the accessibility target and its evidence method (CR-024) — *proposed by
+   CDS-WP-007 as **WCAG 2.2 Level AA** with **AE-0 … AE-4**; **the decision takes
+   effect on the Human Maintainer's commit**, not before*,
 5. whether documentation evidence suffices, or real validation is required first,
 6. whether AirCore and further consumers must be reviewed before foundations
    freeze.
@@ -91,20 +93,63 @@ today.**
 
 ## Accessibility evidence
 
-Level 4, and **currently blocked**.
+*(Reconciled by CDS-WP-007)*
 
-CR-024 records that the accessibility target is undefined: CoreOps names a
-baseline with no conformance level, and CastCore documentation contains no
-accessibility evidence at all. Until CDS-WP-007 sets a target and an evidence
-method:
+Level 4, and **still blocked** — for a different reason.
 
-- **no accessibility claim of any kind may be made**,
-- Group E cannot be fully evidenced,
-- keyboard and focus verification (CR-021) can still be performed and reported as
-  a **specific check**, not as conformance.
+The target now exists: **WCAG 2.2 Level AA** for the applicable web scope
+(CR-024, DEC-S-049, DEC-S-060), with an evidence method (AE-0 … AE-4, per the
+[Accessibility Evidence and Claims Model](ACCESSIBILITY_EVIDENCE_AND_CLAIMS_MODEL.md)).
+What is missing is the **evidence**.
 
-Even once a target exists, the claim is bounded: a stated target, plus published
-evidence, plus the consumer's own obligation — never "CDS is accessible".
+### The accessibility evidence levels
+
+*(Normative source: [Accessibility Evidence and Claims Model](ACCESSIBILITY_EVIDENCE_AND_CLAIMS_MODEL.md). This plan does not define them.)*
+
+| Level | Meaning | Current state |
+| --- | --- | --- |
+| **AE-0** | **No evidence.** Nothing has been examined. | **Every CDS artifact** |
+| **AE-1** | Declared intent and mapping — requirements identified, responsibilities assigned. | None |
+| **AE-2** | Structured self-assessment against the target, in a declared scope. | None |
+| **AE-3** | Verification against a **declared accessibility support baseline** (browser / platform / assistive-technology matrix). | None — **no baseline is declared** |
+| **AE-4** | Consumer-level evidence for complete processes in a declared product scope. | None — pilot inactive |
+
+**AE-0 is not a passing state; it is the absence of a question having been
+asked.** It is where CDS is today, and this plan may not present it as anything
+else.
+
+### What remains blocked
+
+- **No accessibility claim of any level may be made** — for CDS, for CoreOps, or
+  for anyone.
+- Group E cannot be evidenced. See the
+  [CoreOps Pilot Accessibility Criterion](COREOPS_PILOT_ACCESSIBILITY_CRITERION.md).
+- Keyboard and focus verification (CR-021) may still be performed and reported as
+  a **specific check** — never as conformance.
+
+### Scope and claim boundaries
+
+*(Normative)*
+
+- Evidence is **bound to a revision, a scope, and a channel**, and **never
+  transfers** across any of them (DEC-S-052).
+- **AE-3 without a declared support baseline is unverifiable** — it does not say
+  what it was tested against.
+- **Automated checking alone is never sufficient** (DEC-S-053).
+- **Non-web channels are never presented as WCAG conformant** (DEC-S-058).
+- A claim omitting a known limitation is **invalid** (DEC-S-044).
+- **Using accessible CDS artifacts does not make a consumer product accessible**
+  (DEC-S-052). Accessible composition is the consumer's.
+
+Even once evidence exists, the claim stays bounded: a stated target, a declared
+scope and baseline, published evidence, and the consumer's own obligation —
+**never "CDS is accessible"**.
+
+### No validation has been performed
+
+**This plan describes intent, not activity.** No accessibility validation, test,
+audit, or user research has been carried out — by CDS or by any consumer — and
+none is scheduled (RISK-017). **A target is not conformance** (DEC-S-050).
 
 ## Consumer feedback
 

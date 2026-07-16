@@ -6,7 +6,7 @@
 > it never defines. Where it disagrees with a normative source, the normative
 > source wins and this pack is wrong and must be corrected.
 
-- **Maintained by:** CDS-WP-006
+- **Maintained by:** CDS-WP-007
 - **Date:** 2026-07-16
 
 ## Project identity
@@ -35,6 +35,7 @@ concrete visual or technical design decisions are authorized (DEC-S-003).
 | CDS-WP-004 | Consumer Requirements and CoreOps Pilot Contract | 3 consumers analyzed at committed revisions; CR-001…040 registered and traced; CoreOps pilot Groups A–E with 9 scenarios; pilot contract; HYP consumer layer; DEC-S-013…020; RISK-014…019. |
 | CDS-WP-005 | Design System Architecture | Eight-layer logical architecture; authority model; token flow; profiles and reconciliation; channels and distribution; consumer contracts; status semantics; CR mapped to architecture; DEC-S-021…032; RISK-020…028. **No technology or design selected.** |
 | CDS-WP-006 | Governance, Versioning, Contribution, Risk and Publication Model | Six roles, two tracks; conflict resolution; 7 maturity states; versioning + 8 compatibility axes; deprecation; contribution; exceptions and profiles; 4 claim types; **risk ownership finalized**; 5 publication states; licensing per 10 classes; release control. DEC-S-033…048; RISK-029…040. **No licence, publication, technology, or design selected.** |
+| CDS-WP-007 | Accessibility and Inclusive Design Policy | Target **WCAG 2.2 Level AA** for the applicable web scope (CR-024 resolved at policy level); target-is-not-claim rule; A/AA applicability matrix (56 listed / 55 applicable); shared responsibility (49/55 need both sides); 5 evidence levels AE-0…AE-4; 6 channel profiles; limitations and exception policy; CoreOps pilot criterion. DEC-S-049…060; RISK-041…048. **Nothing tested — every artifact AE-0; no claim; publication state unchanged.** |
 
 ## Normative source map
 
@@ -87,13 +88,15 @@ work packages; they decide nothing:
 
 ## Active decisions
 
-- Range: DEC-S-001 … DEC-S-048 · Count: 48 · All Accepted
+- Range: DEC-S-001 … DEC-S-060 · Count: 60 · All Accepted
 - DEC-S-001…006: strategic foundation decisions (CDS-WP-001)
 - DEC-S-007…012: strategic scope decisions (CDS-WP-002)
 - DEC-S-013…020: consumer and pilot scope decisions (CDS-WP-004)
 - DEC-S-021…032: logical architecture decisions (CDS-WP-005) — unchanged by
   CDS-WP-006
 - DEC-S-033…048: governance, lifecycle and publication decisions (CDS-WP-006)
+- DEC-S-049…060: accessibility and inclusive design decisions (CDS-WP-007) —
+  DEC-S-001…048 unchanged
 - No ADR files exist.
 
 | ID | Summary |
@@ -146,14 +149,28 @@ work packages; they decide nothing:
 | DEC-S-046 | Five publication states with an explicit gate. |
 | DEC-S-047 | Licensing decided per artifact class; no inheritance. |
 | DEC-S-048 | Release control requires explicit human approval. |
+| DEC-S-049 | WCAG 2.2 Level AA target for the applicable web scope; not a claim. |
+| DEC-S-050 | Target, evidence, validation, and claim are separate governance states. |
+| DEC-S-051 | Accessibility responsibility is shared by contract (CDS vs consumer). |
+| DEC-S-052 | Component/limited-scope evidence cannot be generalized into a product claim. |
+| DEC-S-053 | Automated checking is never sufficient alone. |
+| DEC-S-054 | Native semantics first; ARIA only where required; APG informative. |
+| DEC-S-055 | Mandatory contract areas: keyboard, focus, motion, non-colour, errors, status. |
+| DEC-S-056 | Status axes (Unknown ≠ Healthy) distinguishable via accessible semantics. |
+| DEC-S-057 | Inclusive design extends beyond WCAG conformance. |
+| DEC-S-058 | Each channel needs its own profile; non-web is never WCAG-conformant. |
+| DEC-S-059 | Accessibility cannot be waived by an ordinary exception. |
+| DEC-S-060 | CR-024 resolved at policy level for the CoreOps pilot web scope. |
 
 ## Active risks
 
-- Range: RISK-001 … RISK-040 · Count: 40 · All Monitored
+- Range: RISK-001 … RISK-048 · Count: 48 · All Monitored
 - **Owner model finalized** (DEC-S-045): Accountable Risk Owner — Human
   Maintainer · Risk Controller — Nova · Mitigation Executor — named per
   mitigation · Evidence Reviewer — Nova or authorized reviewer.
 - Only the Human Maintainer may set a risk `Accepted` or `Closed`.
+- RISK-041…048 (accessibility) added by CDS-WP-007; existing risks unchanged;
+  none `Mitigating`, none with a named executor (RISK-040 pattern noted).
 
 | ID | Summary |
 | --- | --- |
@@ -197,6 +214,14 @@ work packages; they decide nothing:
 | RISK-038 | Licensing and rights fragmentation. |
 | RISK-039 | Premature publication. |
 | RISK-040 | Ceremonial risk governance. |
+| RISK-041 | Accessibility target mistaken for conformance. |
+| RISK-042 | Automated-testing substitution. |
+| RISK-043 | Component-to-product responsibility gap. |
+| RISK-044 | Accessibility support baseline drift. |
+| RISK-045 | Accessibility regression. |
+| RISK-046 | Non-web channel accessibility gap. |
+| RISK-047 | Inclusive-design undercoverage. |
+| RISK-048 | Accessibility evidence burden. |
 
 ## Approved strategic principles
 
@@ -254,7 +279,8 @@ security architecture, deployment and operations.
 
 Shared/contract-controlled: new shared components and patterns, product profile
 overrides, extensions, migrations, breaking changes, pilot requirements,
-conformance claims. Governance deferred to CDS-WP-006.
+conformance claims. Governance defined by CDS-WP-006; accessibility governance by
+CDS-WP-007.
 
 ## CoreOps pilot boundary
 
@@ -427,9 +453,11 @@ severity, knowledge confidence, freshness, evidence availability. **Unknown is
 not Healthy. Stale is not Current. Unverified is not Verified.** Colour is never
 the sole meaning carrier.
 
-**Requirement coverage:** CR-001…040 all mapped — 8 addressed by architecture,
-24 partially addressed, 3 deferred to CDS-WP-007, 1 to CDS-WP-006, 2
-consumer-owned, 2 out of scope.
+**Requirement coverage:** CR-001…040 all mapped — **9 addressed by architecture,
+27 partially addressed, 0 deferred to CDS-WP-006, 0 deferred to CDS-WP-007, 2
+consumer-owned, 2 out of scope** (reconciled by CDS-WP-007; no requirement is
+deferred to a policy work package any longer — CR-024 is addressed because the
+target/policy exist, not because anything was tested).
 
 ## Governance (CDS-WP-006)
 
@@ -496,19 +524,24 @@ green build is not consent.
 ### Currently blocked
 
 **No artifact can reach Stable · no Product Profile can be approved · no
-publication-state change is possible · no CDS release is possible.** All four
-trace to the undefined accessibility target (CR-024) and the absent licensing
-decisions (RISK-028, RISK-038).
+publication-state change is possible · no CDS release is possible.** The
+accessibility target now exists (CR-024 resolved, DEC-S-049), so the blocker
+moved from *"against what?"* to *"show it"*: the remaining obstacles are the
+**absent accessibility evidence** (every artifact is AE-0; no support baseline —
+RISK-041, RISK-044) and the **absent licensing decisions** (DEC-S-047,
+RISK-038). No gate opened.
 
 ## Current and next work package
 
-- **Completed:** CDS-WP-006 — Governance, Versioning, Contribution, Risk and
-  Publication Model
-- **Next:** CDS-WP-007 — Accessibility and Inclusive Design Policy
+- **Completed:** CDS-WP-007 — Accessibility and Inclusive Design Policy
+- **Next:** CDS-WP-008 — Foundation Milestone Review
 
-CDS-WP-007 is now the **critical path**: the undefined accessibility target
-blocks the Stable gate, Product Profile approval, the publication gate, and a
-CoreOps pilot entry criterion.
+CDS-WP-008 reviews the completed Foundation phase — decision/risk consistency,
+architecture and governance coherence, accessibility-policy completeness,
+consumer-requirement coverage, unresolved blockers, governance affordability,
+Candidate-readiness, and CoreOps pilot entry readiness — and recommends whether
+concrete design and implementation may be authorized. It starts no
+implementation.
 
 Being listed as Next identifies sequence, not authorization. Every work package
 needs an explicit prompt from Nova.

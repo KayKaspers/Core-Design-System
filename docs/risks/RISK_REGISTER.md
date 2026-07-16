@@ -5,8 +5,8 @@ must be controlled from the start of the project.
 
 ## Register scope
 
-- Risk range: RISK-001 … RISK-040
-- Number of risks: 40
+- Risk range: RISK-001 … RISK-048
+- Number of risks: 48
 - Phase: Foundation / Pre-Design
 
 Risks RISK-001 … RISK-005 were registered by CDS-WP-001. Risks
@@ -16,7 +16,8 @@ the benchmark research. Risks RISK-014 … RISK-019 were registered by CDS-WP-00
 alongside the consumer requirements and the CoreOps pilot contract. Risks
 RISK-020 … RISK-028 were registered by CDS-WP-005 alongside the logical
 architecture. Risks RISK-029 … RISK-040 were registered by CDS-WP-006 alongside
-the governance model.
+the governance model. Risks RISK-041 … RISK-048 were registered by CDS-WP-007
+alongside the accessibility and inclusive design policy.
 
 ### Finalized risk role model
 
@@ -49,9 +50,11 @@ Full model: [Risk Governance Model](../governance/RISK_GOVERNANCE_MODEL.md).
 | **Accepted** | Consciously accepted with residual effect; requires a review trigger. |
 | **Closed** | No longer relevant, or fully mitigated with evidence. |
 
-**All risks are currently `Monitored`.** CDS-WP-006 finalized the role model; it
-treated no risk and changed no assessment, because no evidence justified a
-change.
+**All 48 risks are currently `Monitored`.** CDS-WP-006 finalized the role model;
+it treated no risk and changed no assessment, because no evidence justified a
+change. CDS-WP-007 added RISK-041 … RISK-048 and likewise treated none — none is
+`Mitigating` and none carries a named executor, which RISK-040 explicitly warns
+about and which is recorded rather than obscured.
 
 ## Assessment scale
 
@@ -1276,4 +1279,304 @@ mitigation**: a policy addressing a risk is a first step, not a treatment. Prefe
 fewer real risks over many decorative ones, and distinguish a long-unchanged risk
 that is genuinely stable from one that is genuinely ignored. Note honestly that
 **CDS-WP-006 added twelve risks and treated none** — which is exactly what this
-risk warns about, and is recorded rather than obscured.
+risk warns about, and is recorded rather than obscured. **CDS-WP-007 added eight
+more and treated none**, bringing the register to 48 risks, **none `Mitigating`,
+none with a named executor**. The pattern this risk describes is now two work
+packages long and getting stronger, not weaker.
+
+---
+
+## RISK-041 — Accessibility target mistaken for conformance
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: named per mitigation · Evidence Reviewer: Nova or authorized reviewer
+- **Initial likelihood:** High
+- **Initial severity:** High
+
+### Description
+
+The **WCAG 2.2 Level AA target** may be communicated as if CDS or a consumer had
+already demonstrated conformance — the documented target, applicability matrix,
+evidence model, and channel profiles read, internally or by consumers, as evidence
+that CDS is accessible.
+
+### Impact
+
+CDS-WP-007 produced eleven substantial accessibility documents and **zero
+accessibility**. That asymmetry is itself the hazard: the volume and specificity
+of the policy make it *more* credible as an achievement, not less. A consumer
+reading "WCAG 2.2 AA" in a CDS document may reasonably assume artifacts meet it,
+build on that assumption, and inherit barriers they never tested for — while
+believing the question was already answered.
+
+This is the same failure the project's core invariant names: **Unverified ≠
+Verified**. Every CDS artifact is **AE-0**.
+
+### Mitigation direction
+
+Carry the **target-versus-claim boundary** explicitly in every accessibility
+document (DEC-S-050). State **AE-0** wherever the target is stated. Permit no
+claim without evidence. Treat any statement implying conformance as a defect.
+**The honest sentence is: nothing has been tested.**
+
+---
+
+## RISK-042 — Automated-testing substitution
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: named per mitigation · Evidence Reviewer: Nova or authorized reviewer
+- **Initial likelihood:** High
+- **Initial severity:** Medium
+
+### Description
+
+Automated checks may be treated as a **replacement** for manual interaction,
+assistive-technology, complete-process, or consumer-scope evidence — a clean
+automated run read as accessibility evidence or as a pass.
+
+### Impact
+
+Automated tools detect a minority of barriers and cannot judge **meaning**:
+whether alternative text is correct, whether focus order is comprehensible,
+whether a status is honest. A clean run is fully consistent with an unusable
+product.
+
+This risk is attractive rather than merely possible: automation is cheap,
+repeatable, and produces a green result — everything the evidence model demands is
+expensive, manual, and produces a nuanced one. Under capacity pressure (RISK-048)
+the tool's silence becomes the claim.
+
+### Mitigation direction
+
+Enforce **DEC-S-053**: automated results may support evidence, never constitute
+it. Require AE-2 manual and AE-3 assistive-technology evidence against a declared
+baseline for Stable. Never present a tool result as a conformance statement. **No
+tooling is selected and no checks have been run.**
+
+---
+
+## RISK-043 — Component-to-product responsibility gap
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: named per mitigation · Evidence Reviewer: Nova or authorized reviewer
+- **Initial likelihood:** High
+- **Initial severity:** High
+
+### Description
+
+CDS and consumer maintainers may **each assume the other side owns** composition,
+content, runtime, process, or integration accessibility. With **49 of 55
+applicable criteria requiring action from both**, shared responsibility may become
+no responsibility.
+
+### Impact
+
+CDS assumes the consumer handles composition; the consumer assumes CDS handled
+accessibility because the components are "accessible components". Both assumptions
+are individually reasonable and jointly produce an inaccessible product that
+nobody believes they own.
+
+The structural asymmetry makes this worse: CDS has the authority to define but
+cannot test the product, and the consumer can test but cannot change the contract.
+The gap sits exactly where 49 criteria live.
+
+### Mitigation direction
+
+Hold the responsibility model per criterion, not per artifact. Enforce
+**DEC-S-052**: accessible artifacts do not produce accessible products. Require
+**AE-4** for any consumer claim. Make the Integration Contract carry the
+consumer's obligation explicitly rather than by implication.
+
+---
+
+## RISK-044 — Accessibility support baseline drift
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: named per mitigation · Evidence Reviewer: Nova or authorized reviewer
+- **Initial likelihood:** High
+- **Initial severity:** High
+
+### Description
+
+Browser, platform, input, rendering, and assistive-technology combinations may
+change **without evidence being reassessed** against the new baseline. The prior,
+sharper form of this today is that **no accessibility support baseline has been
+declared at all**, and none is scheduled.
+
+### Impact
+
+**AE-3 is unreachable, therefore Stable is unreachable**, for every artifact with
+an accessibility obligation. The baseline is a small-looking document that
+silently gates the entire maturity model, and once one exists, silent drift makes
+evidence gathered against the old combination quietly false.
+
+An undeclared or stale baseline also invites evidence produced against whatever
+the tester happened to have installed, which reads as verification and verifies
+nothing. **Accessibility evidence without a current declared baseline is
+unverifiable.**
+
+### Mitigation direction
+
+Require a declared baseline before any AE-3 evidence is accepted, and name
+baseline definition as an explicit roadmap prerequisite rather than assuming it
+appears with the first test. Treat a baseline change as **invalidating dependent
+evidence and triggering a claim review** (DEC-S-044). Re-verify the baseline on a
+defined trigger, not a date nobody honours.
+
+---
+
+## RISK-045 — Accessibility regression
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: named per mitigation · Evidence Reviewer: Nova or authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** High
+
+### Description
+
+Previously reviewed **semantics, keyboard behavior, focus, states, content, or
+channel output may regress** through later changes — a fix, a refactor, a profile
+override, or a copied pattern silently removing an accessibility property that was
+once present.
+
+### Impact
+
+Regression is uniquely corrosive because it defeats past evidence: an artifact
+that once satisfied AE-2 or AE-3 can become inaccessible while still *carrying* the
+old evidence, so the record asserts a property the artifact no longer has. Under
+the mandatory contract areas (DEC-S-055) any of keyboard operability, visible
+focus, non-colour meaning, or accessible status can be the casualty.
+
+A specific and likely vector: **copying a WAI-ARIA APG example as if it were a
+production component.** The APG states its objectives exclude production-ready
+code, so a pasted pattern is AE-0 code carrying an implicit reputation of
+correctness — a regression introduced under borrowed authority (DEC-S-054).
+
+### Mitigation direction
+
+Require a **regression plan** as part of the Candidate accessibility gate, and
+treat any change touching a mandatory contract area as invalidating dependent
+evidence until re-verified. Enforce **DEC-S-054**: APG examples are class 8
+research artifacts, never normative and never evidence; a pattern-derived artifact
+needs independent evidence regardless of source. Bind evidence to a revision so a
+later change cannot silently inherit it.
+
+---
+
+## RISK-046 — Non-web channel accessibility gap
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: named per mitigation · Evidence Reviewer: Nova or authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** Medium
+
+### Description
+
+PDFs, reports, presentations, diagrams, visualizations, and communication
+materials may be **published without channel-specific accessibility requirements
+or evidence** — or the web target (WCAG 2.2 AA) may be wrongly asserted across
+channels for which no profile and no target exist.
+
+### Impact
+
+Two failures share this risk. A non-web artifact may ship with **no accessibility
+requirements at all**, because WCAG is web-oriented and the channel has no profile
+yet. Or the web target may be **asserted where it does not apply** — a status
+error dressed as a standard, most tempting precisely where CDS has done the least
+work. Applying web success criteria to a paginated print artifact is a category
+error in some cases and undefined in others.
+
+**Four of six channel profiles have no target. Zero channels are Candidate- or
+Stable-eligible.**
+
+### Mitigation direction
+
+Enforce **DEC-S-058**: a channel without a profile cannot reach Candidate or
+Stable, and **non-web channels are never presented as WCAG conformant**. Keep
+per-channel targets explicit and separately evidenced, and hold that **evidence
+never transfers between channels**.
+
+---
+
+## RISK-047 — Inclusive-design undercoverage
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: named per mitigation · Evidence Reviewer: Nova or authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** Medium
+
+### Description
+
+WCAG-focused work may **underrepresent cognitive, language, situational,
+low-bandwidth, stress, complexity, or other user needs** not fully captured by a
+conformance target.
+
+### Impact
+
+WCAG AA is a floor, and DEC-S-057 states plainly that conformance does not by
+itself prove every inclusive-design need is met. The realistic failure is quiet: a
+team treats the 55-criterion matrix as the whole job, and the 69 inclusive-design
+requirements across the ten baseline areas — clear content, error recovery,
+flexible text, DE/EN parity, safe handling of dangerous actions — receive less
+attention because they do not carry a numbered success criterion.
+
+CDS consumers are operations products where the user is often tired, interrupted,
+and acting on consequential information — exactly the population an inclusive-design
+gap harms most. **No user research exists and none is planned** (RISK-017), so the
+gap would not be detected by evidence.
+
+### Mitigation direction
+
+Hold the inclusive-design requirements (DEC-S-057) as **first-class**, not as an
+appendix to WCAG. Keep the requirements baseline visible in Candidate and Stable
+gates. State honestly that meeting all 55 criteria is **necessary, not
+sufficient**, and that inclusive design is currently asserted from documentation,
+not validated with people.
+
+### Related documented concern — standards status
+
+*(Note, not a separate risk ID.)* Referenced standards can be cited at a status
+they do not hold — **EN 301 549 V4.1.0 is `On Approval`** and **WCAG-EM 2.0 is a
+Group Note Draft**. This is governed as an **evidence limitation** in the
+[Accessibility Standard Status and Limitations](../research/ACCESSIBILITY_STANDARD_STATUS_AND_LIMITATIONS.md):
+status is recorded as retrieved and dated, EN 301 549 is tracked as standards-watch
+and never adopted, WCAG-EM 2.0 is not adopted as the CDS conformance method, and
+status is re-verified at each accessibility work package.
+
+---
+
+## RISK-048 — Accessibility evidence burden exceeds maintainer capacity
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: named per mitigation · Evidence Reviewer: Nova or authorized reviewer
+- **Initial likelihood:** High
+- **Initial severity:** High
+
+### Description
+
+The evidence the policy requires — AE-1 through AE-3 against a declared baseline
+per artifact, AE-4 per consumer scope, manual and assistive-technology testing,
+per-channel profiles — may exceed what a single maintainer can produce.
+
+### Impact
+
+This is the risk most likely to break the policy, and it will not break it
+honestly. When the burden bites, the available shortcuts are all the ones already
+prohibited: substitute AE-1 where AE-3 is required, lean on automated checks
+(RISK-042), copy APG patterns as production components (RISK-045), or relabel a
+critical limitation (DEC-S-059).
+
+The realistic failure is not a decision to abandon accessibility. It is a series
+of individually defensible compromises under deadline, each one small.
+
+**No user research exists and none is planned** (RISK-017) — capacity is already
+binding before any evidence work has begun.
+
+### Mitigation direction
+
+Enforce **DEC-S-059**: **missing capacity is a planning limit, never a conformance
+justification.** The honest responses are a **smaller scope** or a **lower
+maturity** — never a weaker standard, and never a conformant artifact with an
+asterisk. Prefer few artifacts with real AE-3 evidence over many at AE-0 with a
+policy. Escalate capacity pressure as a governance decision for the Human
+Maintainer, rather than absorbing it as a quiet reduction in evidence.

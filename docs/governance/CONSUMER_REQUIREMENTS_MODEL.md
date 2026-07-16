@@ -148,10 +148,10 @@ Domains per DEC-S-007: `Brand` · `Experience` · `Foundations` · `Components` 
 | CR-018 | Shared CDS Candidate | Repeated across consumers | Repeated committed requirement | Should | Shared or contract-controlled | Pilot Group A and E evidence | CDS-WP-005 | Open |
 | CR-019 | Shared CDS Candidate | Repeated across consumers | Documented implemented behavior | Should | Shared or contract-controlled | Pilot Group E scenario evidence | CDS-WP-005 | Open |
 | CR-020 | Shared CDS Candidate | Repeated across consumers | Documented implemented behavior | Must | Shared or contract-controlled | Pilot Group D and E evidence | CDS-WP-005 | Open |
-| CR-021 | Shared CDS Candidate | Confirmed by committed evidence | Explicit committed requirement | Must | CDS-owned candidate | Pilot Group E keyboard and focus check | CDS-WP-007 | Open |
-| CR-022 | Shared CDS Candidate | Confirmed by committed evidence | Explicit committed requirement | Should | CDS-owned candidate | Pilot Group E reduced-motion check | CDS-WP-007 | Open |
+| CR-021 | Shared CDS Candidate | Confirmed by committed evidence | Explicit committed requirement | Must | CDS-owned candidate | Pilot Group E keyboard and focus check | CDS-WP-008 | Open |
+| CR-022 | Shared CDS Candidate | Confirmed by committed evidence | Explicit committed requirement | Should | CDS-owned candidate | Pilot Group E reduced-motion check | CDS-WP-008 | Open |
 | CR-023 | Shared CDS Candidate | Repeated across consumers | Explicit committed requirement | Must | Shared or contract-controlled | Pilot Group E text-length and DE/EN check | CDS-WP-005 | Open |
-| CR-024 | Deferred Requirement | Inferred – Human validation required | Inferred requirement requiring Human Maintainer validation | Should | CDS-owned candidate | Human Maintainer decision; no conformance claim meanwhile | CDS-WP-007 | Deferred |
+| CR-024 | Deferred Requirement | Inferred – Human validation required | Inferred requirement requiring Human Maintainer validation | Should | CDS-owned candidate | Resolved at policy level by CDS-WP-007 (WCAG 2.2 AA, DEC-S-060); activates on commit; evidence absent, no conformance claim | CDS-WP-008 | Open |
 | CR-025 | Shared CDS Candidate | Repeated across consumers | Documented planned capability | Could | Shared or contract-controlled | Deferred to foundations work | CDS-WP-005 | Open |
 | CR-026 | Deferred Requirement | Deferred – insufficient evidence | Documented implemented behavior | Not in pilot | Shared or contract-controlled | Deferred; needs multi-consumer demand | CDS-WP-005 | Deferred |
 | CR-027 | Deferred Requirement | Repeated across consumers | Explicit committed requirement | Not in pilot | Shared or contract-controlled | Deferred; strong evidence but outside pilot | CDS-WP-005 | Deferred |
@@ -244,9 +244,12 @@ generalizability review before becoming shared (DEC-S-016).
 product-specific domain views. SpeakCore and CastCore hold their own style
 direction, palette, and domain views. CDS must not absorb them (RISK-016).
 
-**Deferred Requirements:** CR-009 topology, CR-024 accessibility target, CR-026
-repository presentation, CR-027 documentation standards, CR-028 PDF and reports,
-CR-029 diagrams, CR-030 presentations, CR-039 recovery mode, CR-040 API parity.
+**Deferred Requirements:** CR-009 topology, CR-024 accessibility target *(its
+original CDS-WP-004 classification; **resolved at policy level by CDS-WP-007** —
+the classification is retained as the historical evidence verdict, not a current
+status)*, CR-026 repository presentation, CR-027 documentation standards, CR-028
+PDF and reports, CR-029 diagrams, CR-030 presentations, CR-039 recovery mode,
+CR-040 API parity.
 
 Note that CR-027 carries **strong** evidence (repeated across consumers, CI
 enforced in one) yet is still deferred — because it lies outside the bounded
@@ -262,7 +265,11 @@ where consumer documentation is dense with them.
 
 1. **What accessibility level does CDS commit to, and how is it evidenced?**
    CoreOps names an accessibility baseline with no conformance level; CastCore
-   documentation contains no accessibility evidence at all. CR-024. → CDS-WP-007
+   documentation contains no accessibility evidence at all. CR-024.
+   **→ Answered at policy level by CDS-WP-007: WCAG 2.2 Level AA for the
+   applicable web scope, evidenced via AE-0 … AE-4 (DEC-S-049, DEC-S-050,
+   DEC-S-060). The *evidence* question — actually demonstrating it — remains
+   open and moves to CDS-WP-008; every artifact is AE-0 today.**
 2. **How much product individuality is permitted?** SpeakCore and CastCore
    already hold product-local design decisions. CR-001, CR-002, CR-037. →
    CDS-WP-005

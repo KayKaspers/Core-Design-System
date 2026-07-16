@@ -4,8 +4,8 @@ Controlled work-package roadmap for the Core Design System (CDS).
 
 - **Phase:** Foundation / Pre-Design
 - **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004, CDS-WP-005, CDS-WP-006
-- **Next work package:** CDS-WP-007
+  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007
+- **Next work package:** CDS-WP-008
 
 ## Status values
 
@@ -26,8 +26,8 @@ Controlled work-package roadmap for the Core Design System (CDS).
 | CDS-WP-004 | Consumer Requirements and CoreOps Pilot Contract | Completed | CDS-WP-002 |
 | CDS-WP-005 | Design System Architecture | Completed | CDS-WP-003, CDS-WP-004 |
 | CDS-WP-006 | Governance, Versioning, and Contribution Model | Completed | CDS-WP-005 |
-| CDS-WP-007 | Accessibility and Inclusive Design Policy | Next | CDS-WP-005 |
-| CDS-WP-008 | Foundation Milestone Review | Planned | CDS-WP-006, CDS-WP-007 |
+| CDS-WP-007 | Accessibility and Inclusive Design Policy | Completed | CDS-WP-005 |
+| CDS-WP-008 | Foundation Milestone Review | Next | CDS-WP-006, CDS-WP-007 |
 
 ## Descriptions
 
@@ -118,21 +118,30 @@ publication, technology, or design selected.** See
 
 ### CDS-WP-007 — Accessibility and Inclusive Design Policy
 
-**Status:** Next
+**Status:** Completed
 
-Defines the binding accessibility and inclusive-design policy and its
-verification approach — the accessibility target (CR-024), inclusive design
-principles, role boundaries, component and pattern requirements, keyboard and
-focus, motion, contrast and non-colour semantics, localization, the evidence
-model, and consumer responsibilities. Unblocks the Stable gate, Product Profile
-approval, the publication gate, and a CoreOps pilot entry criterion.
+Defined the binding accessibility and inclusive-design policy and its
+verification approach — the target **WCAG 2.2 Level AA** for the applicable web
+scope (resolving CR-024 at policy level), the target-versus-claim boundary,
+inclusive-design scope, role boundaries, a complete Level A/AA applicability
+matrix (56 listed / 55 applicable), five evidence levels (AE-0…AE-4), six channel
+profiles, the limitations and exception policy, and the CoreOps pilot
+accessibility criterion. Reconciled CR-021, CR-022, CR-024, and CR-034
+traceability. Added DEC-S-049 … DEC-S-060 and RISK-041 … RISK-048. **No artifact
+promoted; no claim, tag, or release created; every artifact remains AE-0;
+publication state remains `Private Development`.** See
+[Accessibility and Inclusive Design Policy](../docs/governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md).
 
 ### CDS-WP-008 — Foundation Milestone Review
 
-**Status:** Planned
+**Status:** Next
 
-Reviews the completed Foundation phase and determines whether concrete visual
-and technical design decisions may be authorized.
+Reviews the completed Foundation phase — decision and risk consistency,
+architecture and governance coherence, accessibility-policy completeness,
+consumer-requirement coverage, unresolved blockers, governance affordability,
+Candidate-readiness, and CoreOps pilot entry readiness — and determines whether
+concrete visual and technical design decisions may be authorized. Starts no
+implementation.
 
 ## Roadmap evolution
 

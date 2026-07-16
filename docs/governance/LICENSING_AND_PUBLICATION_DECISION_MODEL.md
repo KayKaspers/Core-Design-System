@@ -133,7 +133,7 @@ sequence, no schedule, no intention to reach any of them.
 | 8 | **Licence and rights review per artifact class** |
 | 9 | **Third-party provenance** |
 | 10 | Security and privacy review, where relevant |
-| 11 | **Accessibility statement per CDS-WP-007** |
+| 11 | **Accessibility statement** per the [Accessibility and Inclusive Design Policy](ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md) |
 | 12 | Support and maintenance statement |
 | 13 | Claim restrictions |
 | 14 | Nova review |
@@ -141,13 +141,29 @@ sequence, no schedule, no intention to reach any of them.
 
 ### Currently unmet
 
-Requirements **8, 9, and 11 cannot be satisfied today**:
+Requirements **8 and 9 cannot be satisfied today**:
 
-- **8 and 9** — no licensing decision exists for any of the ten classes.
-- **11** — the accessibility target does not exist (CR-024, RISK-028).
+- **8 and 9** — no licensing decision exists for any of the ten classes
+  (DEC-S-047).
 
-**Therefore no publication-state change is possible.** Recorded, not worked
-around.
+**Therefore no publication-state change is possible.** The
+**publication state remains `Private Development`.** Recorded, not worked around.
+
+#### Requirement 11 — reconciled by CDS-WP-007
+
+Requirement 11 was previously unmet because no accessibility target existed. It
+is **now definable**: the policy exists, and the statement is simply *what the
+policy says*.
+
+What it would have to say is unflattering, and that is the point:
+
+> **Nothing has been tested. Every CDS artifact is AE-0. No support baseline is
+> declared. No accessibility claim of any level is valid.**
+
+An accessibility statement is **a disclosure obligation, not a quality claim**
+(DEC-S-050). Requirement 11 becoming satisfiable **does not move CDS toward
+publication** — it means CDS could now honestly describe its accessibility as
+*unknown*. Publication remains blocked by 8 and 9 regardless.
 
 ### Gate rules
 

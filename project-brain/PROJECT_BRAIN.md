@@ -53,12 +53,13 @@ areas today.
 Governance foundation established. No final design or technology decisions are
 approved.
 
-- Decisions: DEC-S-001 … DEC-S-048 (48) — 6 foundation + 6 scope + 8 consumer
-  and pilot scope + 12 logical architecture + 16 governance decisions
-- Risks: RISK-001 … RISK-040 (40) — all Monitored; **owner model finalized**
+- Decisions: DEC-S-001 … DEC-S-060 (60) — 6 foundation + 6 scope + 8 consumer
+  and pilot scope + 12 logical architecture + 16 governance + 12 accessibility
+  decisions
+- Risks: RISK-001 … RISK-048 (48) — all Monitored; **owner model finalized**
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004, CDS-WP-005, CDS-WP-006
-- Next work package: CDS-WP-007
+  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007
+- Next work package: CDS-WP-008 — Foundation Milestone Review
 
 ## Registered scope
 
@@ -179,6 +180,18 @@ Details: [Provenance](../docs/governance/NDF_SKILLS_PROVENANCE.md) ·
 | DEC-S-046 | Five publication states with an explicit gate. |
 | DEC-S-047 | Licensing decided per artifact class. |
 | DEC-S-048 | Release control requires explicit human approval. |
+| DEC-S-049 | WCAG 2.2 Level AA target for the applicable web scope; not a claim. |
+| DEC-S-050 | Target, evidence, validation, and claim are separate governance states. |
+| DEC-S-051 | Accessibility responsibility is shared by contract (CDS vs consumer). |
+| DEC-S-052 | Component/limited-scope evidence cannot be generalized into a product claim. |
+| DEC-S-053 | Automated checking is never sufficient alone. |
+| DEC-S-054 | Native semantics first; ARIA only where required; APG informative. |
+| DEC-S-055 | Mandatory contract areas: keyboard, focus, motion, non-colour, errors, status. |
+| DEC-S-056 | Status axes (Unknown ≠ Healthy) distinguishable via accessible semantics. |
+| DEC-S-057 | Inclusive design extends beyond WCAG conformance. |
+| DEC-S-058 | Each channel needs its own profile; non-web never WCAG-conformant. |
+| DEC-S-059 | Accessibility cannot be waived by an ordinary exception. |
+| DEC-S-060 | CR-024 resolved at policy level for the CoreOps pilot web scope. |
 
 Details: [Decision Index](../docs/decisions/DECISION_INDEX.md)
 
@@ -226,6 +239,14 @@ Details: [Decision Index](../docs/decisions/DECISION_INDEX.md)
 | RISK-038 | Licensing and rights fragmentation. | Monitored |
 | RISK-039 | Premature publication. | Monitored |
 | RISK-040 | Ceremonial risk governance. | Monitored |
+| RISK-041 | Accessibility target mistaken for conformance. | Monitored |
+| RISK-042 | Automated-testing substitution. | Monitored |
+| RISK-043 | Component-to-product responsibility gap. | Monitored |
+| RISK-044 | Accessibility support baseline drift. | Monitored |
+| RISK-045 | Accessibility regression. | Monitored |
+| RISK-046 | Non-web channel accessibility gap. | Monitored |
+| RISK-047 | Inclusive-design undercoverage. | Monitored |
+| RISK-048 | Accessibility evidence burden. | Monitored |
 
 **Owner model finalized** (DEC-S-045): Human Maintainer accountable · Nova
 controller · executor named per mitigation · reviewer never the executor. Only
@@ -337,10 +358,12 @@ not Healthy. Stale is not Current. Unverified is not Verified.** Placed in the
 architecture rather than in convention, because a convention can be forgotten
 under deadline.
 
-**Requirement coverage:** CR-001…040 fully mapped — 8 addressed, 24 partially
-addressed, 4 deferred to later policy, 2 consumer-owned, 2 out of scope. Only 8
-of 40 fully addressed is the **expected** result: an architecture resolving most
-requirements would be doing unauthorized design work.
+**Requirement coverage:** CR-001…040 fully mapped — **9 addressed, 27 partially
+addressed, 0 deferred to a policy work package, 2 consumer-owned, 2 out of
+scope** (reconciled by CDS-WP-007). Only 9 of 40 fully addressed is the
+**expected** result: an architecture resolving most requirements would be doing
+unauthorized design work. CR-024 became `addressed` because the target and policy
+now exist — **not because anything was tested; every artifact is AE-0**.
 
 Details: [Architecture](../docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md) ·
 [Authority](../docs/architecture/SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md) ·
@@ -440,20 +463,61 @@ long-term compatibility commitments, concrete product signatures, versioning
 and maturity model, conformance and adoption policy, or product profile and
 override governance.
 
+## Accessibility policy (CDS-WP-007)
+
+**Target:** WCAG 2.2 Level AA for the applicable web-based scope (DEC-S-049),
+resolving CR-024 at policy level (DEC-S-060). No AAA commitment. **A target is not
+conformance** (DEC-S-050) — and nothing has been tested.
+
+**Applicability:** all Level A and AA success criteria mapped — 56 listed (32 A ·
+24 AA), 55 applicable (31 A · 24 AA), excluding the obsolete 4.1.1. No pass/fail.
+
+**Responsibility boundary:** shared by contract; **49 of 55 applicable criteria
+need both CDS and the consumer** (DEC-S-051, DEC-S-052). CDS supplies contracts,
+status semantics, and reference evidence; the consumer supplies accessible
+composition, content, complete processes, and product claims. **Accessible
+artifacts do not compose into an accessible product by themselves.**
+
+**Evidence:** five levels AE-0 … AE-4 (Evidence and Claims Model); AE-3 needs a
+declared support baseline; automated-only never suffices (DEC-S-053). **Every CDS
+artifact is
+AE-0; no support baseline exists** (RISK-041, RISK-044).
+
+**Channels:** six profiles; only two (Web UI, Web Docs) have a target; **none is
+Candidate- or Stable-eligible** (DEC-S-058).
+
+**Limits:** accessibility cannot be waived by an ordinary exception (DEC-S-059);
+no legal or certification statement (policy boundary, standard-status doc); native
+semantics first, APG
+examples informative only (DEC-S-054).
+
+**CR-024 / pilot:** resolved at policy level; entry criterion satisfiable on
+Human Maintainer commit. **The CoreOps pilot has not started and cannot start; no
+WCAG 2.2 Level AA conformance has been demonstrated, reviewed, or approved for
+CoreOps** (not assessed, not failed).
+
+Details:
+[A11y Policy](../docs/governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md) ·
+[Matrix](../docs/governance/WCAG_2_2_AA_APPLICABILITY_MATRIX.md) ·
+[Evidence](../docs/governance/ACCESSIBILITY_EVIDENCE_AND_CLAIMS_MODEL.md) ·
+[Channels](../docs/governance/ACCESSIBILITY_CHANNEL_PROFILES.md) ·
+[Pilot criterion](../docs/governance/COREOPS_PILOT_ACCESSIBILITY_CRITERION.md)
+
 ## Next step
 
-CDS-WP-007 — Accessibility and Inclusive Design Policy: the accessibility target
-(CR-024), inclusive design principles, role boundaries, component and pattern
-requirements, keyboard and focus, motion, contrast and non-colour semantics,
-localization, the evidence model, and consumer responsibilities. Still no visual
-design and no technology selection.
+**CDS-WP-008 — Foundation Milestone Review.** With the accessibility policy done,
+**no policy work package remains.** CDS-WP-008 reviews the completed Foundation
+phase — decision and risk consistency, architecture and governance coherence,
+accessibility-policy completeness, consumer-requirement coverage, unresolved
+blockers, governance affordability, Candidate-readiness, and CoreOps pilot entry
+readiness — and recommends whether concrete design and implementation may be
+authorized.
 
-**CDS-WP-007 is now the critical path.** The undefined accessibility target
-blocks four gates: the Stable gate, Product Profile approval, the publication
-gate, and a CoreOps pilot entry criterion — so **no artifact can reach Stable and
-no release is possible** until it is decided (RISK-028). Accessibility is weak in
-**both** evidence layers, and the target must be evidenceable at actual maintainer
-capacity: a level CDS cannot substantiate is worse than a lower one it can. Requires an explicit work-package prompt from Nova.
+**No release is possible** — licence review is unsatisfiable (DEC-S-047) and no
+artifact can reach Stable (no accessibility evidence, no support baseline). The
+evidence-burden-versus-capacity question (RISK-048) is the most likely thing to
+break the foundation and is unresolved. CDS-WP-008 starts no implementation and
+requires an explicit work-package prompt from Nova.
 
 ## Related documents
 
@@ -471,3 +535,4 @@ capacity: a level CDS cannot substantiate is worse than a lower one it can. Requ
 - [CDS-WP-004 Consumer Requirements and CoreOps Pilot Notes](CDS_WP_004_CONSUMER_REQUIREMENTS_AND_COREOPS_PILOT_NOTES.md)
 - [CDS-WP-005 Design System Architecture Notes](CDS_WP_005_DESIGN_SYSTEM_ARCHITECTURE_NOTES.md)
 - [CDS-WP-006 Governance, Versioning and Contribution Notes](CDS_WP_006_GOVERNANCE_VERSIONING_AND_CONTRIBUTION_NOTES.md)
+- [CDS-WP-007 Accessibility and Inclusive Design Policy Notes](CDS_WP_007_ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY_NOTES.md)

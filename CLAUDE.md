@@ -19,8 +19,8 @@ library, or a design project scoped exclusively to CoreOps.
 - Phase: Foundation / Pre-Design
 - First reference consumer: CoreOps (not the sole design target)
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004, CDS-WP-005, CDS-WP-006
-- Next work package: CDS-WP-007 — Accessibility and Inclusive Design Policy
+  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007
+- Next work package: CDS-WP-008 — Foundation Milestone Review
 
 ## Execution environment
 
@@ -184,6 +184,10 @@ Before beginning a work package, inspect at minimum:
 - [docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md](docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md)
   — normative source for the logical architecture; entry point to the
   architecture documents
+- [docs/governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md](docs/governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md)
+  — normative source for the accessibility target, target-versus-claim boundary,
+  and inclusive design; entry point to the accessibility documents and the
+  evidence model
 - [docs/governance/CONCEPT_AND_SCOPE.md](docs/governance/CONCEPT_AND_SCOPE.md)
   — normative source for concept, scope, non-goals, and ownership
 - [docs/governance/CONSUMER_AND_STAKEHOLDER_MODEL.md](docs/governance/CONSUMER_AND_STAKEHOLDER_MODEL.md)
@@ -280,6 +284,37 @@ Full model:
   may never execute them.
 - Current publication state: **`Private Development`**. No licence is selected
   for any artifact class.
+
+## Accessibility boundaries
+
+The **normative source** is the
+[Accessibility and Inclusive Design Policy](docs/governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md)
+(CDS-WP-007), with its
+[Evidence and Claims Model](docs/governance/ACCESSIBILITY_EVIDENCE_AND_CLAIMS_MODEL.md)
+and
+[WCAG 2.2 AA Applicability Matrix](docs/governance/WCAG_2_2_AA_APPLICABILITY_MATRIX.md).
+
+- **A target is not a claim** (DEC-S-050). The CDS target is **WCAG 2.2 Level AA**
+  for the applicable web-based scope (DEC-S-049) — this establishes **no
+  conformance**. Claude never states, approves, or implies that CDS or any
+  consumer meets it. **No accessibility claim of any level is valid today.**
+- **Evidence is graded AE-0 … AE-4** (per the Accessibility Evidence and Claims
+  Model) and is bound to a revision,
+  scope, channel, and a **declared support baseline**. **Every CDS artifact is
+  AE-0.** Claude never records evidence that does not exist and never invents a
+  test, a baseline, or user validation.
+- **An automated check is never sufficient** (DEC-S-053) and is never equated with
+  accessibility evidence or a pass — the same rule as "a clean diff is not release
+  approval".
+- **Accessible artifacts do not make an accessible product** (DEC-S-052).
+  Accessible composition, content, complete processes, and product claims are the
+  **consumer's** responsibility; 49 of 55 applicable criteria need both sides.
+- Accessibility **cannot be waived by an ordinary exception** (DEC-S-059), and CDS
+  makes **no legal, regulatory-compliance, or certification statement** (a policy
+  boundary in the
+  [Accessibility Standard Status and Limitations](docs/research/ACCESSIBILITY_STANDARD_STATUS_AND_LIMITATIONS.md)).
+- Claude promotes no artifact to Candidate or Stable, and starts no CoreOps pilot,
+  on accessibility grounds or any other.
 
 ## Risk roles
 

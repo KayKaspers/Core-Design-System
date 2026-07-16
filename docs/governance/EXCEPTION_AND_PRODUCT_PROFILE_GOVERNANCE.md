@@ -89,11 +89,21 @@ one.
 **A normal exception may never weaken accessibility.** Not "requires stronger
 review" — **not approvable through this mechanism at all**.
 
-This holds even though the accessibility target is currently undefined (CR-024).
-That is deliberate: the prohibition protects a requirement whose value is unknown,
-which is genuinely awkward and genuinely correct. If a real case demands it, it
-requires an explicit, separately governed decision by the Human Maintainer with
-CDS-WP-007 context — never this route.
+*(Reconciled by CDS-WP-007)*
+
+This rule was written while the accessibility target was still undefined, to
+protect a requirement whose value was unknown. **The target now exists** —
+**WCAG 2.2 Level AA** for the applicable web scope (CR-024, DEC-S-049,
+DEC-S-060) — and the prohibition is **unchanged and now concrete**: it protects a
+requirement whose value is known.
+
+The binding statement, the prohibited waivers, and the rule that **missing
+capacity is never a conformance rationale** are held by the
+[Accessibility Limitations and Exception Policy](ACCESSIBILITY_LIMITATIONS_AND_EXCEPTION_POLICY.md)
+(DEC-S-059), which is normative for this limit.
+
+If a real case demands it, it requires an explicit, separately governed decision
+by the Human Maintainer under that policy — **never this route**.
 
 ## Exception lifecycle
 
@@ -133,7 +143,7 @@ distinguishes it from a Consumer Extension, which is consumer-owned.
 | 4 | **Named extension points** |
 | 5 | Profile-specific normative sources |
 | 6 | Compatibility declaration |
-| 7 | **Accessibility evidence** |
+| 7 | **Scope-appropriate accessibility evidence** per the [Accessibility Evidence and Claims Model](ACCESSIBILITY_EVIDENCE_AND_CLAIMS_MODEL.md) |
 | 8 | **Anti-fragmentation review** |
 | 9 | Migration information |
 | 10 | Consumer validation |
@@ -141,8 +151,12 @@ distinguishes it from a Consumer Extension, which is consumer-owned.
 | 12 | Human Maintainer approval |
 
 Element 4 is the boundary: a profile that cannot name the points it touches is
-not scoped. Element 7 **cannot currently be satisfied** (CR-024) — so **no
-Product Profile can be approved today**. This is recorded, not worked around.
+not scoped.
+
+Element 7 **still cannot be satisfied** — so **no Product Profile can be approved
+today**. *(Reconciled by CDS-WP-007: the obstacle is no longer a missing target
+but missing evidence. Every artifact is **AE-0** and no support baseline is
+declared — DEC-S-050, RISK-048.)* This is recorded, not worked around.
 
 ## Profile rules
 

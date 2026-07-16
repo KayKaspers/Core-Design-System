@@ -2,8 +2,8 @@
 
 - **Phase:** Foundation / Pre-Design
 - **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004, CDS-WP-005, CDS-WP-006
-- **Next work package:** CDS-WP-007 — Accessibility and Inclusive Design Policy
+  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007
+- **Next work package:** CDS-WP-008 — Foundation Milestone Review
 
 ## Status of completed work packages
 
@@ -90,82 +90,108 @@ Documents:
 Completion is reported for Human Maintainer review. No Git write action was
 performed.
 
-## Next work package: CDS-WP-007 — Accessibility and Inclusive Design Policy
+### CDS-WP-007 — Accessibility and Inclusive Design Policy — Completed
 
-### Why this is now the critical path
+Defined the normative CDS accessibility and inclusive-design policy:
 
-CDS-WP-006 made the accessibility gap **load-bearing**. The undefined
-accessibility target (CR-024) now blocks four separate gates:
+- **Target** — **WCAG 2.2 Level AA** for the applicable web-based scope
+  (DEC-S-049), resolving **CR-024** at policy level (DEC-S-060). No AAA
+  commitment. **A target is not a conformance claim** (DEC-S-050).
+- **Applicability matrix** — all Level A and AA success criteria: **56 listed**
+  (32 A · 24 AA), **55 applicable** (31 A · 24 AA), excluding the obsolete 4.1.1.
+  No pass/fail statement.
+- **Responsibility** — shared by contract; **49 of 55 applicable criteria require
+  both CDS and the consumer** (DEC-S-051, DEC-S-052).
+- **Evidence** — five levels AE-0 … AE-4 (Evidence and Claims Model); automated-
+  only is never sufficient (DEC-S-053). Every artifact is **AE-0**; no support
+  baseline exists.
+- **Channels** — six profiles; only two have a target; **none is Candidate- or
+  Stable-eligible** (DEC-S-058).
+- **Limits** — accessibility cannot be waived by an ordinary exception
+  (DEC-S-059); no legal or certification statement (policy boundary, standard-
+  status doc); native semantics first and APG examples are informative only
+  (DEC-S-054).
+- **Pilot** — CR-024 resolved at policy level; entry criterion satisfiable on
+  Human Maintainer commit; **the pilot has not started and cannot start.**
 
-| Blocked | Because |
-| --- | --- |
-| **Stable gate** | Requires accessibility evidence — so **no artifact can reach Stable** |
-| **Product Profile approval** | Requires accessibility evidence — so **no profile can be approved** |
-| **Publication gate** | Requires an accessibility statement — so **no publication-state change is possible** |
-| **CoreOps pilot entry** | An entry criterion; Pilot Group E cannot be evidenced |
+Reconciled CR-021, CR-022, CR-024, and CR-034 traceability. Added
+DEC-S-049 … DEC-S-060 and RISK-041 … RISK-048.
 
-Consequently **no CDS release is currently possible**, and a conformance claim
-is unreachable by construction. This is recorded as RISK-028 and was not worked
-around.
+**No artifact was promoted, no claim, tag, or release created, and every artifact
+remains AE-0.** Publication state remains `Private Development`. No Git write
+action was performed.
+
+Documents:
+[Accessibility and Inclusive Design Policy](../docs/governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md) ·
+[WCAG 2.2 AA Applicability Matrix](../docs/governance/WCAG_2_2_AA_APPLICABILITY_MATRIX.md) ·
+[Evidence and Claims Model](../docs/governance/ACCESSIBILITY_EVIDENCE_AND_CLAIMS_MODEL.md) ·
+[Channel Profiles](../docs/governance/ACCESSIBILITY_CHANNEL_PROFILES.md) ·
+[CoreOps Pilot Accessibility Criterion](../docs/governance/COREOPS_PILOT_ACCESSIBILITY_CRITERION.md)
+
+## Next work package: CDS-WP-008 — Foundation Milestone Review
+
+### Why this is now the next step
+
+The Foundation phase is materially complete: concept and scope, benchmark
+research, consumer requirements, logical architecture, governance, and the
+accessibility policy are all defined. **No policy work package remains** — the
+two `Deferred to CDS-WP-006/007` states in the traceability are retired.
+
+What is missing is not more policy. It is a **review** that decides whether the
+foundation is coherent and affordable enough to authorize concrete design and
+implementation.
 
 ### Objective
 
-Define the binding accessibility and inclusive-design policy and its verification
-approach.
+Review the completed Foundation phase and recommend whether — and how — to enter
+the design and implementation phase. **CDS-WP-008 starts no implementation.**
 
-### Scope direction
+### Review goals
 
-- **Accessibility target level** — the decision CR-024 has been waiting for.
-- **Inclusive design principles.**
-- **Role and responsibility boundaries** — what CDS guarantees versus what the
-  consumer must still do. The benchmark's clearest lesson: the strongest systems
-  state plainly that using them does not make a consumer's product accessible.
-- **Component and pattern requirements.**
-- **Keyboard and focus** (CR-021).
-- **Motion** (CR-022).
-- **Contrast and non-colour semantics** (CR-006) — already an architectural
-  invariant; the policy sets the threshold.
-- **Localization and language** (CR-023).
-- **Evidence model** — what substantiates the target, and who reviews it.
-- **Consumer responsibilities.**
-- **CoreOps pilot entry criterion CR-024.**
+- **Foundation completeness** — every registered concern has a home.
+- **Decision and risk consistency** — DEC-S-001 … DEC-S-060 and
+  RISK-001 … RISK-048 internally coherent; no contradictions.
+- **Architecture and governance coherence** — the eight layers, artifact classes,
+  and governance tracks hold together.
+- **Accessibility-policy completeness** — target, matrix, evidence model, channel
+  profiles, and pilot criterion form a usable whole; the AE-0 reality is visible.
+- **Consumer-requirement coverage** — CR-001 … CR-040 mapped and reconciled.
+- **Unresolved blockers** — no support baseline (RISK-044), no licence
+  (DEC-S-047), no artifact at Candidate.
+- **Governance affordability** — whether the evidence and ceremony burden is
+  sustainable at actual maintainer capacity (RISK-040, RISK-048).
+- **Candidate-readiness assessment** — what the first artifact to attempt
+  Candidate would need.
+- **CoreOps pilot entry readiness** — which entry criteria remain structurally
+  unmet.
+- **Next-phase roadmap recommendation** — what CDS-WP-009 onward should be.
 
 ### Input to carry forward
 
-- Accessibility is currently **weak in both evidence layers**: the benchmark found
-  it named everywhere but evidenced rarely, and consumer evidence is thin —
-  CoreOps names a baseline with no level, CastCore documentation contains none at
-  all, and only SpeakCore documents concrete practice (contrast, visible focus,
-  no colour-only coding).
-- The architecture already holds the constraints that are safe regardless of
-  level: colour never the sole meaning carrier, component contracts carry
-  accessibility behavior, profiles may not weaken guarantees (invariant 10).
-- **A normal exception may never weaken accessibility** (DEC-S-042) — a
-  prohibition currently protecting a requirement whose value is unknown.
-- The claim discipline applies: a stated target plus published evidence plus an
-  explicit consumer obligation — **never** "CDS is accessible" (DEC-S-044).
-- WCAG 2.2 itself states that even AAA conformance will not serve every
-  disability. Whatever target is chosen, it is a target — not a guarantee of
-  accessibility.
-- The target must be **evidenceable at actual maintainer capacity** (RISK-029,
-  RISK-040). A level CDS cannot substantiate is worse than a lower one it can.
+- **Nothing is tested.** Every artifact is AE-0; no accessibility, no
+  implementation, and no user evidence exists (RISK-017, RISK-041).
+- **No release is possible** — licence review is unsatisfiable (DEC-S-047) and no
+  artifact can reach Stable.
+- The **evidence-burden-versus-capacity** question (RISK-048) is the most likely
+  thing to break the foundation, and it is unresolved.
+- Publication state remains `Private Development`; no claim of any kind is valid.
 
-### Explicitly prohibited in CDS-WP-007
+### Explicitly prohibited in CDS-WP-008
 
 - concrete visual design of any kind,
 - selecting colours, typography, icons, logos, or themes,
 - selecting a design tool, component framework, or token format,
 - implementing components or product code,
 - selecting a licence or approving publication,
-- claiming conformance or certification,
+- claiming conformance, accessibility, or certification,
+- promoting any artifact to Candidate or Stable,
 - starting the CoreOps pilot,
-- declaring any existing artifact accessible,
 - modifying Skill files or consumer repositories,
-- extending the roadmap.
+- extending the roadmap without Human Maintainer approval.
 
 ### Authorization note
 
-CDS-WP-007 requires an explicit work-package prompt from Nova. Being listed as
+CDS-WP-008 requires an explicit work-package prompt from Nova. Being listed as
 **Next** identifies sequence, not authorization.
 
 ## Related documents

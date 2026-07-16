@@ -11,8 +11,8 @@ authorized work packages.
 
 ## Register scope
 
-- Decision range: DEC-S-001 … DEC-S-048
-- Number of decisions: 48
+- Decision range: DEC-S-001 … DEC-S-060
+- Number of decisions: 60
 - Decision record format: index entries only; no ADR files exist in this phase.
 
 ## Decision types
@@ -24,12 +24,15 @@ authorized work packages.
 | Consumer and pilot scope decision | DEC-S-013 … DEC-S-020 | CDS-WP-004 | Evidence binding, requirement classification, pilot boundaries, and claim limits. |
 | Logical architecture decision | DEC-S-021 … DEC-S-032 | CDS-WP-005 | Layers, authority, token flow, profiles, channels, distribution, traceability, status semantics. |
 | Governance, lifecycle and publication decision | DEC-S-033 … DEC-S-048 | CDS-WP-006 | Roles, conflict resolution, maturity, versioning, contribution, exceptions, claims, risk ownership, publication, licensing, release control. |
+| Accessibility and inclusive design decision | DEC-S-049 … DEC-S-060 | CDS-WP-007 | Accessibility target, target-versus-claim boundary, evidence levels, responsibility split, tooling limits, source authority, inclusive design, status truth, legal boundary, channel profiles, exception limit, CR-024 resolution. |
 
 None of these types is an implementation decision. Logical architecture decisions
 define structure, responsibility, and flow — they select no technology, format,
 tool, or visual design (DEC-S-032). Governance decisions define who decides and
 under what conditions — they select no licence, publication state, technology, or
-design.
+design. Accessibility decisions define a **target and an evidence discipline** —
+they select no test tooling, no component, no colour value, and **no conformance**
+(DEC-S-050).
 
 ## Status values
 
@@ -1666,3 +1669,467 @@ evidence, not consent.
 - Unclear readiness ⇒ NO-GO.
 - **No CDS release is currently possible** — licence review is unsatisfiable and
   no artifact can reach Stable.
+
+---
+
+## DEC-S-049 — WCAG 2.2 Level AA is the accessibility target for web-based scope
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Accessibility and inclusive design decision
+- **Work package:** CDS-WP-007
+
+### Decision
+
+The CDS accessibility target for the **applicable web-based scope** is **WCAG 2.2
+Level AA** (W3C Recommendation, 2024-12-12). This resolves **CR-024 at policy
+level**.
+
+Level AAA is **not** a target. Non-web channels are **not** covered by this target
+(DEC-S-058).
+
+### Rationale
+
+CR-024 had blocked the Stable gate, Product Profile approval, the publication
+gate, and a pilot entry criterion simultaneously — the single most consequential
+open requirement (RISK-028). WCAG 2.2 AA is the current W3C Recommendation and
+the level referenced by the regulatory environment CDS consumers operate in.
+
+W3C itself does not recommend AAA as a general policy for entire sites. Adopting
+it would be a claim CDS cannot support with an evidence capacity it does not have.
+
+### Consequences
+
+- A target exists for the first time. **It is a target, not conformance**
+  (DEC-S-050).
+- **55 applicable Level A and AA success criteria** — 31 A and 24 AA — per the
+  [WCAG 2.2 AA Applicability Matrix](../governance/WCAG_2_2_AA_APPLICABILITY_MATRIX.md).
+- **4.1.1 Parsing is excluded** because **WCAG 2.2 itself marks it obsolete and
+  removed** — this is the standard's own status, not a CDS opt-out.
+- The target takes normative effect **on the Human Maintainer's commit**.
+- **No CDS artifact has been evaluated against it.** Every artifact is AE-0.
+- **No legal, regulatory-compliance, or certification statement is made** — see the
+  [Accessibility Standard Status and Limitations](../research/ACCESSIBILITY_STANDARD_STATUS_AND_LIMITATIONS.md).
+
+---
+
+## DEC-S-050 — Target, evidence, validation, and claim are separate governance states
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Accessibility and inclusive design decision
+- **Work package:** CDS-WP-007
+
+### Decision
+
+Accessibility **targets, implementation evidence, consumer evidence, and
+conformance claims are separate governance states**. Defining a target does **not**
+prove that an artifact or a consumer satisfies it.
+
+Consequently: **no current CDS artifact has an approved WCAG 2.2 Level AA
+conformance claim**, and **no WCAG 2.2 Level AA conformance has been demonstrated,
+reviewed, or approved** for any consumer. Absence of evidence is **not** a pass
+and is **not** a demonstrated failure — every artifact is simply **AE-0, Not
+Assessed**.
+
+### Rationale
+
+The failure mode this decision exists to prevent is the most common one in design
+systems: a published policy read as an achievement. A target describes an
+intention; only evidence describes reality, and CDS has produced none yet.
+
+This mirrors the project's governing invariant — **Unverified ≠ Verified**. An
+accessibility policy without evidence is precisely an unverified state, and
+presenting it as either verified *or* failed would be the same category of
+dishonesty the architecture was built to make structurally impossible.
+
+### Consequences
+
+- The **target-versus-claim boundary** is normative in every accessibility
+  document, and the four states are never collapsed.
+- CDS-WP-007 **promotes no artifact** and **opens no gate**.
+- An accessibility statement is a **disclosure obligation, not a quality claim**.
+- The honest current statement is: *nothing has been assessed* — neither passed
+  nor failed.
+
+---
+
+## DEC-S-051 — Accessibility responsibility is shared by contract
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Accessibility and inclusive design decision
+- **Work package:** CDS-WP-007
+
+### Decision
+
+Accessibility responsibility is **shared by contract**.
+
+- **CDS owns** the accessibility requirements and reference evidence for **shared
+  CDS artifacts** — foundations, component and pattern contracts, status and state
+  semantics, channel-profile requirements, and known limitations.
+- **Consumers own** accessible **composition**, product content, domain behavior,
+  consumer-local extensions, complete processes, runtime behavior, and
+  **product-scope claims**.
+
+The graded evidence levels **AE-0 … AE-4** that record this responsibility are
+defined normatively by the
+[Accessibility Evidence and Claims Model](../governance/ACCESSIBILITY_EVIDENCE_AND_CLAIMS_MODEL.md);
+they are a model, not a separate decision.
+
+### Rationale
+
+The single most consequential fact of the applicability matrix is that most
+criteria cannot be satisfied by either party alone. Leaving that split implicit is
+how shared responsibility becomes no responsibility: CDS assumes the consumer
+composes correctly, the consumer assumes the components are already accessible, and
+the gap between them is exactly where accessibility is lost.
+
+Naming the boundary per artifact class — not per project — is what makes it
+enforceable through the consumer contracts.
+
+### Consequences
+
+- **49 of 55 applicable criteria require action from both CDS and the consumer**
+  (see DEC-S-052).
+- The **Integration Contract** carries the consumer's accessibility obligation.
+- CDS **certifies no consumer product** (DEC-S-026, class 7 artifacts).
+- Responsibility, like evidence, is **scope- and revision-bound** and does not
+  transfer between consumers or channels.
+
+---
+
+## DEC-S-052 — Component evidence cannot be generalized into a product claim
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Accessibility and inclusive design decision
+- **Work package:** CDS-WP-007
+
+### Decision
+
+Accessibility evidence for a **component, pattern, test harness, reference
+implementation, channel, or any limited scope cannot be generalized into a
+product-wide conformance claim**.
+
+It follows that **using accessible CDS artifacts does not make a consumer product
+accessible** — accessible composition, complete processes, and runtime behavior
+remain the consumer's (DEC-S-051). Evidence never transfers across scope, revision,
+channel, or consumer.
+
+### Rationale
+
+This is the central false promise of design systems, and the one CDS is best
+positioned to make by accident. Conforming components can be assembled into an
+unusable process: a correct focus order per component says nothing about focus
+order across a flow, and a perfect status token says nothing about whether the
+flow using it can be completed.
+
+CDS cannot supply composition, because composition is where the product is.
+
+### Consequences
+
+- **49 of 55 applicable criteria require action from both CDS and the consumer** —
+  the operative fact of the pilot.
+- CDS **certifies no consumer product** (DEC-S-026, class 7 artifacts).
+- A consumer claim requires **AE-4** — CDS artifact evidence is insufficient for
+  it, and a limited-scope result is never presented as a product-wide claim.
+
+---
+
+## DEC-S-053 — Automated checking alone is never sufficient
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Accessibility and inclusive design decision
+- **Work package:** CDS-WP-007
+
+### Decision
+
+Automated accessibility checking is **never sufficient** as evidence for AE-2,
+AE-3, AE-4, or any claim. **No test tooling is selected** (DEC-S-032).
+
+### Rationale
+
+Automated tools detect a minority of barriers and cannot judge meaning: whether
+alternative text is *correct*, whether a focus order is *comprehensible*, whether
+a status is *honest*. A clean automated run is consistent with an unusable
+product, and treating it as a pass converts a tool's silence into a claim.
+
+### Consequences
+
+- Automated results may **support** evidence, never constitute it.
+- AE-3 requires verification against a declared baseline, incl. assistive
+  technology.
+- **No checks have been run** — no tooling exists and none is selected.
+
+---
+
+## DEC-S-054 — Native semantics first; ARIA only where required; APG informative
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Accessibility and inclusive design decision
+- **Work package:** CDS-WP-007
+
+### Decision
+
+CDS follows a **native-semantics-first** principle. **WAI-ARIA is used only where
+required** to express semantics that native mechanisms do not adequately provide.
+
+The **WAI-ARIA Authoring Practices Guide (APG)** is **informative guidance** and
+**does not create an automatic production implementation**. APG patterns are
+**class 8 research / example artifacts** — never normative, never production-ready,
+never accessibility evidence. **WAI-ARIA 1.2** (W3C Recommendation) is normative
+for roles, states, and properties; the APG is not.
+
+### Rationale
+
+ARIA layered onto incorrect structure produces worse outcomes than correct native
+structure alone — it overrides the semantics the platform already gets right.
+Native-first keeps the accessible name, role, and state coming from the element
+rather than from a parallel declaration that can drift.
+
+On the APG the point is decisive and in its own words: it states that its
+objectives **exclude** providing a comprehensive design system or production-ready
+code. Treating an APG example as a component because it carries a W3C URL is
+exactly the shortcut the APG warns against — and the provenance makes the shortcut
+more tempting, not less wrong.
+
+### Consequences
+
+- ARIA is a **fallback**, not a default; a contract prefers native semantics.
+- An APG pattern is a **learning example, not an accessible component**; copying
+  one produces **AE-0 code**, not evidence.
+- Class 8 authority applies: the APG is never normative.
+
+---
+
+## DEC-S-055 — Mandatory accessibility contract areas
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Accessibility and inclusive design decision
+- **Work package:** CDS-WP-007
+
+### Decision
+
+The following are **mandatory accessibility contract areas** for CDS components
+and patterns:
+
+- **keyboard operability**,
+- **visible and managed focus**,
+- **reduced-motion support**,
+- **non-colour meaning** (colour is never the sole carrier),
+- **understandable errors**,
+- **accessible status communication**.
+
+A component or pattern contract that omits any applicable area is **incomplete**,
+regardless of visual quality.
+
+### Rationale
+
+These are the areas where composition-level accessibility most often fails and
+where the contract — not the consumer — is the right place to hold the obligation.
+A keyboard trap, an invisible focus ring, a colour-only status, or an error a
+screen-reader user cannot recover from are defects the design system can and must
+prevent at the contract, before any product composes them.
+
+### Consequences
+
+- Accessibility behavior is part of the **component contract** (Layer 4), not a
+  later review step.
+- CR-021 (keyboard and focus) and CR-022 (motion) map here with responsibility.
+- A contract missing an applicable area **cannot reach Candidate**.
+- The concrete thresholds and mechanisms are later design and evidence work; the
+  **obligation** is fixed now.
+
+---
+
+## DEC-S-056 — Status axes must be distinguishable through accessible semantics
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Accessibility and inclusive design decision
+- **Work package:** CDS-WP-007
+
+### Decision
+
+**Operational condition, severity, knowledge confidence, freshness, and evidence
+availability** must remain **distinguishable through accessible semantics** and
+**must not rely on a single sensory modality**.
+
+The architectural status invariant thereby becomes an accessibility invariant:
+
+> **Unknown ≠ Healthy · Stale ≠ Current · Unverified ≠ Verified — for every user,
+> through every modality.**
+
+All five axes must be perceivable **non-visually**. **Colour is never the sole
+carrier** (1.4.1), on **every channel**, including print.
+
+### Rationale
+
+Merging condition and confidence leaves "unknown" nowhere to live; conveying it
+only visually leaves it nowhere to live **for a screen-reader user**. Both are the
+same failure.
+
+An operator acting on a green that actually means *we have no idea* is the exact
+harm this project's status semantics exist to prevent — and the harm does not
+lessen because the operator could not see the green.
+
+### Consequences
+
+- 4.1.2 and 4.1.3 are where this is caught.
+- The **semantic-first token principle is an accessibility mechanism**: a token
+  named for appearance cannot express *unknown*.
+- Pilot Group E requirement 5 carries this into the pilot.
+- **The Unknown invariant is not exceptable** (DEC-S-059).
+
+---
+
+## DEC-S-057 — Inclusive design extends beyond WCAG conformance
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Accessibility and inclusive design decision
+- **Work package:** CDS-WP-007
+
+### Decision
+
+The CDS inclusive-design policy **includes cognitive accessibility, clear content,
+localization, internationalization, flexible text, error recovery, and different
+levels of user experience**.
+
+**WCAG conformance does not by itself prove that every inclusive-design need is
+met.** Meeting all 55 applicable criteria is **necessary, not sufficient**.
+
+### Rationale
+
+WCAG is a floor with real gaps — a fully conformant interface can still be
+incomprehensible under pressure. CDS consumers are operations products where the
+user is often tired, interrupted, and acting on consequential information; a
+technically conformant screen that misleads such a user has failed the person
+while passing the standard.
+
+### Consequences
+
+- **69 requirements across 10 areas** in the
+  [Accessibility Requirements Baseline](../governance/ACCESSIBILITY_REQUIREMENTS_BASELINE.md).
+- Requirements exceeding WCAG are **CDS requirements**, not WCAG criteria, and may
+  never be presented as WCAG conformance.
+- **No user research exists and none is planned** (RISK-017) — inclusive design is
+  asserted from documentation, not validated with people.
+- CDS makes **no legal, regulatory-compliance, or certification statement** (a
+  policy boundary held by the
+  [Accessibility Standard Status and Limitations](../research/ACCESSIBILITY_STANDARD_STATUS_AND_LIMITATIONS.md),
+  not a separate decision).
+
+---
+
+## DEC-S-058 — Each channel requires its own accessibility profile
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Accessibility and inclusive design decision
+- **Work package:** CDS-WP-007
+
+### Decision
+
+**Six accessibility channel profiles** are registered. Each channel requires an
+explicit profile before its artifacts may become Candidate or Stable.
+
+**Non-web channels are never presented as WCAG conformant.**
+
+### Rationale
+
+WCAG 2.2 is written for web content. Applying web success criteria to a paginated
+print artifact is a category error in some cases and undefined in others — and
+asserting a web standard outside the web is a status error, not a courtesy.
+
+### Consequences
+
+- **Only 2 of 6 profiles have a target** (Web Product UI; Web Documentation).
+  Profiles 3–6 are **undefined pending a profile**.
+- **0 channels are Candidate- or Stable-eligible today.**
+- No PDF, presentation, diagram, or brand accessibility standard is selected.
+- Semantics stay constant across channels; presentation may differ (DEC-S-029).
+
+---
+
+## DEC-S-059 — Accessibility cannot be waived by an ordinary exception
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Accessibility and inclusive design decision
+- **Work package:** CDS-WP-007
+
+### Decision
+
+> **Accessibility requirements for Stable or CDS-conformant scope cannot be waived
+> through an ordinary exception.**
+
+Not "requires stronger review" — **not available through that mechanism at all**.
+A Product Profile **may never weaken accessibility** (invariant 10).
+
+**Missing maintainer capacity is a planning limit, never a conformance
+justification.**
+
+### Rationale
+
+Exceptions exist to make deviation honest and bounded. Accessibility is where that
+mechanism would be abused first and most plausibly, under schedule pressure —
+which is precisely when the rule must already be in place, because that is when it
+will be tested.
+
+CDS may legitimately decide it cannot afford accessibility yet. That produces a
+**known limitation, no Stable, and no claim** — never a conformant artifact with
+an asterisk. The honest response to insufficient capacity is a smaller scope or a
+lower maturity, never a weaker standard.
+
+### Consequences
+
+- **Eight prohibited waivers**, including suppressing a known limitation from a
+  claim and **distorting status truth**.
+- Every limitation requires **affected user needs**, an **alternative**, and an
+  **expiry** — a limitation without them is an undecided permanent exclusion.
+- Critical limitations **block Candidate and Stable**.
+- **Recurring limitations trigger an architecture or scope review.**
+- **No limitation and no exception is created here** — nothing has been examined,
+  which is not the same as having none.
+
+---
+
+## DEC-S-060 — CR-024 is resolved at policy level for the CoreOps pilot
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Accessibility and inclusive design decision
+- **Work package:** CDS-WP-007
+
+### Decision
+
+**CR-024 is resolved at policy level: WCAG 2.2 Level AA for the declared
+web-based CoreOps pilot scope.**
+
+The pilot entry criterion **"the accessibility target and its evidence method are
+decided"** becomes **`Accessibility target defined` — satisfiable upon Human
+Maintainer commit of CDS-WP-007**.
+
+### Rationale
+
+CR-024 was the requirement everything else waited on. Closing it at policy level
+is the whole of what CDS-WP-007 was authorized to do — and the whole of what it
+did.
+
+### Consequences
+
+- **This closes a policy gap, not an evidence gap.**
+- **The pilot has not started and cannot start.** Two entry criteria remain
+  structurally unmet: no artifact can reach Candidate, and the architecture awaits
+  approval.
+- **Pilot Group E has not passed**; its 13 minimum evidence requirements are
+  defined and **none is met** — which is *not assessed*, not *failed*.
+- **No WCAG 2.2 Level AA conformance has been demonstrated, reviewed, or approved
+  for CoreOps.** No evaluation has occurred, so no pass or fail can be stated.
+- **Claude does not declare the criterion met. The Human Maintainer's commit
+  does.**

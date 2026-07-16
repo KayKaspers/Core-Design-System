@@ -198,9 +198,9 @@ are mapped to the architecture, with deferred items named rather than hidden.
 
 **Boundaries:** this is structure, not implementation. Nothing is built, no
 component or token exists, no repository topology, tool, format, framework, or
-licence is selected, and no accessibility conformance level is claimed. The
-architecture awaits governance policy, an accessibility target, and
-implementation evidence.
+licence is selected, and no accessibility conformance level is claimed. Governance
+policy and an accessibility target now exist; the architecture still awaits design,
+implementation, and evidence.
 
 - [Design System Architecture](docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md)
 - [Source of Truth and Authority Model](docs/architecture/SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md)
@@ -242,7 +242,7 @@ bounded, owned, and expiring.
 claim `CDS certified` is prohibited. **No adoption, validation, or conformance
 claim is currently valid — by anyone, including CDS itself.**
 
-**Risk ownership is finalized** — the Human Maintainer is accountable for all 40
+**Risk ownership is finalized** — the Human Maintainer is accountable for all 48
 risks; Nova is the Risk Controller.
 
 **Publication state: `Private Development`.** Licensing is decided per ten
@@ -261,6 +261,43 @@ satisfied.
 - [Licensing and Publication Decision Model](docs/governance/LICENSING_AND_PUBLICATION_DECISION_MODEL.md)
 - [Release and Change Control Policy](docs/governance/RELEASE_AND_CHANGE_CONTROL_POLICY.md)
 
+## Accessibility
+
+The CDS **accessibility and inclusive-design policy is defined**. It sets a
+target and an evidence discipline — and **claims nothing**.
+
+**Target: WCAG 2.2 Level AA** for the applicable web-based scope, resolving CR-024
+at policy level. This is a **target, not current conformance** — no CDS artifact
+has been evaluated, every artifact is at evidence level **AE-0**, and **no
+accessibility claim of any level is valid**, by anyone.
+
+**Applicability matrix** — all Level A and AA success criteria are mapped: 56
+listed, 55 applicable (the obsolete 4.1.1 excluded by the standard itself). No
+pass/fail judgement is made. **49 of the 55 need action from both CDS and the
+consumer** — accessible artifacts do not compose into an accessible product by
+themselves.
+
+**Five evidence levels** — AE-0 (not assessed) through AE-4 (consumer complete
+process). Automated checking alone is never sufficient; AE-3 requires a declared
+support baseline, which does not yet exist.
+
+**Six channel profiles** — only web UI and web documentation carry a WCAG target;
+non-web channels each need their own profile and are never presented as WCAG
+conformant. None is Candidate- or Stable-eligible today.
+
+Accessibility cannot be waived by an ordinary exception, and CDS makes no legal or
+certification statement.
+
+- [Accessibility and Inclusive Design Policy](docs/governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md)
+- [Accessibility Responsibility Model](docs/governance/ACCESSIBILITY_RESPONSIBILITY_MODEL.md)
+- [Accessibility Requirements Baseline](docs/governance/ACCESSIBILITY_REQUIREMENTS_BASELINE.md)
+- [WCAG 2.2 AA Applicability Matrix](docs/governance/WCAG_2_2_AA_APPLICABILITY_MATRIX.md)
+- [Accessibility Evidence and Claims Model](docs/governance/ACCESSIBILITY_EVIDENCE_AND_CLAIMS_MODEL.md)
+- [Accessibility Channel Profiles](docs/governance/ACCESSIBILITY_CHANNEL_PROFILES.md)
+- [Accessibility Limitations and Exception Policy](docs/governance/ACCESSIBILITY_LIMITATIONS_AND_EXCEPTION_POLICY.md)
+- [CoreOps Pilot Accessibility Criterion](docs/governance/COREOPS_PILOT_ACCESSIBILITY_CRITERION.md)
+- [Accessibility Architecture Alignment](docs/architecture/ACCESSIBILITY_ARCHITECTURE_ALIGNMENT.md)
+
 ## Work packages
 
 - **Completed:** CDS-WP-001 — Project Governance and NDF Bootstrap
@@ -270,18 +307,19 @@ satisfied.
 - **Completed:** CDS-WP-004 — Consumer Requirements and CoreOps Pilot Contract
 - **Completed:** CDS-WP-005 — Design System Architecture
 - **Completed:** CDS-WP-006 — Governance, Versioning, and Contribution Model
-- **Next:** CDS-WP-007 — Accessibility and Inclusive Design Policy
+- **Completed:** CDS-WP-007 — Accessibility and Inclusive Design Policy
+- **Next:** CDS-WP-008 — Foundation Milestone Review
 
 The full controlled roadmap is in
 [project-system/WORK_PACKAGES.md](project-system/WORK_PACKAGES.md).
 
 ## Registers
 
-- Decisions: DEC-S-001 … DEC-S-048 (48) — 6 strategic foundation decisions,
+- Decisions: DEC-S-001 … DEC-S-060 (60) — 6 strategic foundation decisions,
   6 strategic scope decisions, 8 consumer and pilot scope decisions,
   12 logical architecture decisions, 16 governance, lifecycle and publication
-  decisions
-- Risks: RISK-001 … RISK-040 (40) — all Monitored; owner model finalized
+  decisions, 12 accessibility and inclusive design decisions
+- Risks: RISK-001 … RISK-048 (48) — all Monitored; owner model finalized
 
 ## Governance documents
 
