@@ -18,9 +18,9 @@ library, or a design project scoped exclusively to CoreOps.
 - Framework: Nova Development Framework v1.0.0
 - Phase: Foundation / Pre-Design
 - First reference consumer: CoreOps (not the sole design target)
-- Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003
-- Next work package: CDS-WP-004 — Consumer Requirements and CoreOps Pilot
-  Contract
+- Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
+  CDS-WP-004
+- Next work package: CDS-WP-005 — Design System Architecture
 
 ## Execution environment
 
@@ -198,6 +198,28 @@ Where a summary disagrees with a normative source, the normative source wins.
 later work packages and decides nothing. Research findings are dated snapshots
 that decay; re-verify a source before relying on it, and never cite a research
 hypothesis as a decision.
+
+## Consumer repositories are read-only
+
+Consumer projects (CoreOps, SpeakCore, CastCore, and any other) are **strictly
+read-only** in every work package. Never write, create, modify, or stage
+anything in a consumer repository.
+
+When a work package authorizes consumer analysis:
+
+1. Read only the areas that work package permits — never secrets, environment
+   files, logs, databases, user data, build output, or product source outside
+   those areas.
+2. Bind evidence to the **committed HEAD revision** (DEC-S-013). Read via
+   `git show HEAD:<path>`, never from the working tree, even when a local file
+   is available.
+3. If a consumer working tree is dirty, record that fact and still read only
+   from HEAD.
+4. Use read-only Git only. No network commands, no clone, no fetch.
+5. Never reconstruct consumer content from memory or an earlier session.
+
+Committed documentation is **not** user research. It evidences stated intent or
+built behavior — never that an experience works for real people (RISK-017).
 
 ## Required completion report
 

@@ -5,14 +5,15 @@ must be controlled from the start of the project.
 
 ## Register scope
 
-- Risk range: RISK-001 … RISK-013
-- Number of risks: 13
+- Risk range: RISK-001 … RISK-019
+- Number of risks: 19
 - Phase: Foundation / Pre-Design
 
 Risks RISK-001 … RISK-005 were registered by CDS-WP-001. Risks
 RISK-006 … RISK-009 were registered by CDS-WP-002 alongside the scope
 registration. Risks RISK-010 … RISK-013 were registered by CDS-WP-003 alongside
-the benchmark research.
+the benchmark research. Risks RISK-014 … RISK-019 were registered by CDS-WP-004
+alongside the consumer requirements and the CoreOps pilot contract.
 
 ### Provisional owner model
 
@@ -408,3 +409,190 @@ defensible framing — "no reviewed system publicly documented this" — over "n
 one does this." Assess common practice honestly as common, even when it is
 valuable. Make no claim that CDS is better than any reviewed system, and no
 comparative first/only/best claim without comparison evidence.
+
+Consumer evidence sharpens this risk rather than resolving it: a confirmed
+consumer need justifies building a capability but says nothing about
+uniqueness (DEC-S-019).
+
+---
+
+## RISK-014 — Consumer evidence staleness
+
+- **Status:** Monitored
+- **Owner role:** Nova (provisional)
+- **Initial likelihood:** High
+- **Initial severity:** Low
+
+### Description
+
+Consumer requirements derived from repository documentation may become outdated
+as consumer projects evolve.
+
+### Impact
+
+CDS builds against needs that have moved. Requirements traced to a commit that
+no longer reflects the consumer become misleading rather than merely stale, and
+the traceability that made them credible now points at superseded content.
+
+### Mitigation direction
+
+Bind every requirement to a specific committed revision with a recorded date
+(DEC-S-013), so any trace can be re-checked rather than trusted. Treat the
+requirement register as a dated snapshot, not a standing description.
+Re-verify consumer sources before relying on a requirement in a later decision,
+particularly before foundations freeze. Consumer projects are active: two of the
+three carried uncommitted changes at evidence time.
+
+---
+
+## RISK-015 — Pilot scope inflation
+
+- **Status:** Monitored
+- **Owner role:** Human Maintainer (provisional)
+- **Initial likelihood:** High
+- **Initial severity:** High
+
+### Description
+
+The bounded CoreOps pilot may expand into a de facto redesign of the complete
+product or an attempt to implement the complete CDS.
+
+### Impact
+
+The pilot never finishes, consumes capacity CDS does not have, and produces no
+transferable result. It also becomes indistinguishable from a CoreOps redesign,
+which was never authorized and which no one agreed to resource.
+
+### Mitigation direction
+
+Hold the bounded slice defined in DEC-S-015: Pilot Groups A–E with an explicit,
+binding out-of-scope list. Register real needs discovered during the pilot as
+deferred candidates rather than absorbing them. Treat scope pressure as a
+classified deviation with a defined handling, never as a reason to widen the
+pilot. Scope changes require an authorized work package or an explicit
+Human Maintainer correction — the pilot cannot extend itself.
+
+---
+
+## RISK-016 — Product-specific requirement contamination
+
+- **Status:** Monitored
+- **Owner role:** Nova (provisional)
+- **Initial likelihood:** High
+- **Initial severity:** High
+
+### Description
+
+CoreOps-specific requirements may be generalized prematurely and become
+unnecessary complexity for other consumers.
+
+### Impact
+
+CDS accumulates operations-shaped complexity that other consumers must carry
+without needing it. The foundation grows heavier and less adoptable with each
+premature generalization, and eventually CDS becomes a CoreOps design library
+serving one product — the outcome Non-goal 11 and DEC-S-002 forbid.
+
+### Mitigation direction
+
+Require the generalizability gate in DEC-S-016 before any CoreOps-specific
+requirement becomes shared; origin in the pilot is never sufficient. Classify
+requirements explicitly (DEC-S-014) and keep product-local requirements with
+their products. Use secondary consumers to test whether a need generalizes.
+Apply particular scepticism to operations-shaped patterns, where consumer
+evidence is strongest and all reviewed consumers are infrastructure products —
+a sample that cannot distinguish "operational products need this" from "all
+products need this".
+
+---
+
+## RISK-017 — Document evidence mistaken for user validation
+
+- **Status:** Monitored
+- **Owner role:** Nova (provisional)
+- **Initial likelihood:** High
+- **Initial severity:** Medium
+
+### Description
+
+Committed documentation may be treated as equivalent to interviews,
+observational research, accessibility testing, or usability validation.
+
+### Impact
+
+CDS believes its requirements are validated when they are merely written down.
+Documented intent proves that someone considered a need; it does not prove the
+resulting experience works for anyone. Accessibility is the sharpest case: a
+documented "baseline" with no target, no method, and no test evidences nothing,
+yet reads as diligence.
+
+### Mitigation direction
+
+State the evidence level explicitly and report outcomes only at the level the
+evidence reaches. Documentation is Level 1 evidence and supports "documented as
+needed" — never "works", "validated", "usable", or "accessible". Never claim
+user research, interviews, or usability testing that did not happen. Keep
+`Not tested` available and use it. Require Human Maintainer validation before
+requirements are accepted, and real verification before any accessibility claim.
+
+---
+
+## RISK-018 — Pilot contract mistaken for adoption or conformance
+
+- **Status:** Monitored
+- **Owner role:** Human Maintainer (provisional)
+- **Initial likelihood:** Medium
+- **Initial severity:** High
+
+### Description
+
+The existence or completion of the pilot may be represented as full CDS
+adoption, certification, endorsement, or conformance.
+
+### Impact
+
+Unearned credibility transfers to both CDS and CoreOps. Other consumers adopt on
+the strength of a claim that a bounded slice cannot support, and any later
+quality failure discredits the whole foundation. Once "CoreOps is CDS compliant"
+circulates, it is very hard to retract.
+
+### Mitigation direction
+
+Apply DEC-S-015: the pilot is a bounded slice and constitutes neither adoption
+nor conformance. Apply DEC-S-012: any future claim requires a specific version
+reference and an evidence model, neither of which exists. Forbid informal
+"CDS compliant" statements in every pilot output. Keep the contract status
+explicit — normative only upon Human Maintainer commit following Nova approval,
+and currently not active with entry criteria unmet.
+
+---
+
+## RISK-019 — Secondary consumer underrepresentation
+
+- **Status:** Monitored
+- **Owner role:** Nova (provisional)
+- **Initial likelihood:** High
+- **Initial severity:** Medium
+
+### Description
+
+SpeakCore and CastCore evidence may be incomplete, outdated, or insufficient to
+represent future Core products, associated projects, and external consumers.
+
+### Impact
+
+Generalization is tested against a sample too narrow to detect overfitting. All
+three reviewed consumers are self-hosted infrastructure products maintained by
+the same small maintainer base, so agreement between them may reflect a shared
+origin rather than a genuinely general need. Associated projects and potential
+external consumers (DEC-S-010) are entirely unrepresented.
+
+### Mitigation direction
+
+Treat cross-consumer agreement as suggestive rather than conclusive, and record
+the sample's narrowness wherever generalization is argued. Note that secondary
+evidence is documentation-only and that authoritative design sources in those
+projects were outside the permitted read areas. Register unreviewed consumers —
+AirCore and further projects — as an open validation question rather than
+assuming they fit. Broadening the consumer sample requires its own authorized
+work package.

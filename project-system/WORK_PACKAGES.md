@@ -3,8 +3,9 @@
 Controlled work-package roadmap for the Core Design System (CDS).
 
 - **Phase:** Foundation / Pre-Design
-- **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003
-- **Next work package:** CDS-WP-004
+- **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
+  CDS-WP-004
+- **Next work package:** CDS-WP-005
 
 ## Status values
 
@@ -22,8 +23,8 @@ Controlled work-package roadmap for the Core Design System (CDS).
 | CDS-WP-001A | NDF Skills Bootstrap | Completed | CDS-WP-001 |
 | CDS-WP-002 | Concept and Scope Registration | Completed | CDS-WP-001A |
 | CDS-WP-003 | Benchmark and Differentiation Research | Completed | CDS-WP-002 |
-| CDS-WP-004 | Consumer Requirements and CoreOps Pilot Contract | Next | CDS-WP-002 |
-| CDS-WP-005 | Design System Architecture | Planned | CDS-WP-003, CDS-WP-004 |
+| CDS-WP-004 | Consumer Requirements and CoreOps Pilot Contract | Completed | CDS-WP-002 |
+| CDS-WP-005 | Design System Architecture | Next | CDS-WP-003, CDS-WP-004 |
 | CDS-WP-006 | Governance, Versioning, and Contribution Model | Planned | CDS-WP-005 |
 | CDS-WP-007 | Accessibility and Inclusive Design Policy | Planned | CDS-WP-005 |
 | CDS-WP-008 | Foundation Milestone Review | Planned | CDS-WP-006, CDS-WP-007 |
@@ -78,21 +79,25 @@ and [Research Limitations](../docs/research/RESEARCH_LIMITATIONS.md).
 
 ### CDS-WP-004 — Consumer Requirements and CoreOps Pilot Contract
 
-**Status:** Next
+**Status:** Completed
 
-Collects requirements from Core consumer products and defines the pilot
-contract with CoreOps, including adoption expectations and evidence
-obligations. Separates shared from product-specific requirements and tests the
-differentiation hypotheses against real consumer needs. No concrete visual
-design and no technology selection.
+Analyzed three consumer repositories at committed revisions, registered
+CR-001 … CR-040 with traceability, defined the bounded CoreOps pilot
+(Groups A–E, 9 scenarios) and its contract, and assessed HYP-001 … HYP-008
+against consumer evidence. Added DEC-S-013 … DEC-S-020 and RISK-014 … RISK-019.
+See [Consumer Requirements Model](../docs/governance/CONSUMER_REQUIREMENTS_MODEL.md),
+[CoreOps Pilot Contract](../docs/governance/COREOPS_PILOT_CONTRACT.md), and
+[Consumer Evidence Register](../docs/research/CONSUMER_EVIDENCE_REGISTER.md).
 
 ### CDS-WP-005 — Design System Architecture
 
-**Status:** Planned
+**Status:** Next
 
-Defines the architecture of CDS: layer model, separation of normative sources
-from generated artifacts, and distribution direction — evaluated against
-tool-independence (DEC-S-004) and offline usability (DEC-S-006).
+Defines the architecture of CDS: normative system layers, source-of-truth model,
+token flow as architecture without selecting a format, artifact classes, product
+profiles, distribution, consumer contracts, and evidence flows — evaluated
+against tool-independence (DEC-S-004) and offline usability (DEC-S-006). No final
+visual design and no concrete tool, framework, or token-format decision.
 
 ### CDS-WP-006 — Governance, Versioning, and Contribution Model
 

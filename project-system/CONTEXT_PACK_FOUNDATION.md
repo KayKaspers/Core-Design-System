@@ -6,7 +6,7 @@
 > it never defines. Where it disagrees with a normative source, the normative
 > source wins and this pack is wrong and must be corrected.
 
-- **Maintained by:** CDS-WP-003
+- **Maintained by:** CDS-WP-004
 - **Date:** 2026-07-15
 
 ## Project identity
@@ -32,6 +32,7 @@ concrete visual or technical design decisions are authorized (DEC-S-003).
 | CDS-WP-001A | NDF Skills Bootstrap | 38 verified docs-only NDF v1.0.0 Skills; provenance, manifest, inventory; Skills-first mode active. |
 | CDS-WP-002 | Concept and Scope Registration | Concept and scope, consumer model, boundary matrix, DEC-S-007…012, RISK-006…009, this pack. |
 | CDS-WP-003 | Benchmark and Differentiation Research | Ten systems reviewed against 14 dimensions from official sources; HYP-001…008 assessed; RISK-010…013. **Non-normative.** No decision changed. |
+| CDS-WP-004 | Consumer Requirements and CoreOps Pilot Contract | 3 consumers analyzed at committed revisions; CR-001…040 registered and traced; CoreOps pilot Groups A–E with 9 scenarios; pilot contract; HYP consumer layer; DEC-S-013…020; RISK-014…019. |
 
 ## Normative source map
 
@@ -48,6 +49,11 @@ Read the source, not this summary, when the detail matters.
 | Working rules, Skills-first mode | [CLAUDE.md](../CLAUDE.md) |
 | Roadmap and status | [project-system/WORK_PACKAGES.md](WORK_PACKAGES.md) |
 | Skills provenance | [docs/governance/NDF_SKILLS_PROVENANCE.md](../docs/governance/NDF_SKILLS_PROVENANCE.md) |
+| Consumer requirements and classification | [docs/governance/CONSUMER_REQUIREMENTS_MODEL.md](../docs/governance/CONSUMER_REQUIREMENTS_MODEL.md) |
+| Requirement provenance | [docs/governance/CONSUMER_REQUIREMENTS_TRACEABILITY.md](../docs/governance/CONSUMER_REQUIREMENTS_TRACEABILITY.md) |
+| CoreOps pilot scope | [docs/governance/COREOPS_PILOT_SCOPE_AND_SCENARIOS.md](../docs/governance/COREOPS_PILOT_SCOPE_AND_SCENARIOS.md) |
+| CoreOps pilot contract | [docs/governance/COREOPS_PILOT_CONTRACT.md](../docs/governance/COREOPS_PILOT_CONTRACT.md) |
+| How pilot evidence is judged | [docs/governance/CONSUMER_VALIDATION_PLAN.md](../docs/governance/CONSUMER_VALIDATION_PLAN.md) |
 
 **Research documents are evidence, not normative sources.** They inform later
 work packages; they decide nothing:
@@ -55,14 +61,17 @@ work packages; they decide nothing:
 [Evidence Matrix](../docs/research/BENCHMARK_EVIDENCE_MATRIX.md) ·
 [Source Register](../docs/research/BENCHMARK_SOURCE_REGISTER.md) ·
 [Hypotheses](../docs/research/CDS_DIFFERENTIATION_HYPOTHESES.md) ·
-[Limitations](../docs/research/RESEARCH_LIMITATIONS.md)
+[Limitations](../docs/research/RESEARCH_LIMITATIONS.md) ·
+[Consumer Evidence Register](../docs/research/CONSUMER_EVIDENCE_REGISTER.md) ·
+[Consumer Hypothesis Validation](../docs/research/CONSUMER_HYPOTHESIS_VALIDATION.md)
 
 ## Active decisions
 
-- Range: DEC-S-001 … DEC-S-012 · Count: 12 · All Accepted · **unchanged by
-  CDS-WP-003**
+- Range: DEC-S-001 … DEC-S-020 · Count: 20 · All Accepted
 - DEC-S-001…006: strategic foundation decisions (CDS-WP-001)
-- DEC-S-007…012: strategic scope decisions (CDS-WP-002)
+- DEC-S-007…012: strategic scope decisions (CDS-WP-002) — unchanged by
+  CDS-WP-003 and CDS-WP-004
+- DEC-S-013…020: consumer and pilot scope decisions (CDS-WP-004)
 - No ADR files exist.
 
 | ID | Summary |
@@ -79,10 +88,18 @@ work packages; they decide nothing:
 | DEC-S-010 | Three consumer relationship classes; classification grants nothing. |
 | DEC-S-011 | Pilot results become normative only when generalized and accepted. |
 | DEC-S-012 | Adoption/conformance claims require a version reference and evidence. |
+| DEC-S-013 | Consumer evidence must be bound to a committed revision. |
+| DEC-S-014 | Consumer requirements are classified; classification is not approval. |
+| DEC-S-015 | The initial CoreOps pilot is a bounded slice, not adoption or conformance. |
+| DEC-S-016 | Generalization requires explicit review and acceptance; CoreOps origin is insufficient. |
+| DEC-S-017 | Pilot outcomes are evaluated through version-bound evidence. |
+| DEC-S-018 | Secondary consumers provide evidence, not pilot authority. |
+| DEC-S-019 | Consumer need does not establish differentiation. |
+| DEC-S-020 | CDS-WP-004 authorizes requirements and a contract only. |
 
 ## Active risks
 
-- Range: RISK-001 … RISK-013 · Count: 13 · All Monitored
+- Range: RISK-001 … RISK-019 · Count: 19 · All Monitored
 - Owner model is **provisional** until CDS-WP-006.
 
 | ID | Summary |
@@ -100,6 +117,12 @@ work packages; they decide nothing:
 | RISK-011 | Research and source bias. |
 | RISK-012 | Source volatility. |
 | RISK-013 | Differentiation overstatement. |
+| RISK-014 | Consumer evidence staleness. |
+| RISK-015 | Pilot scope inflation. |
+| RISK-016 | Product-specific requirement contamination. |
+| RISK-017 | Document evidence mistaken for user validation. |
+| RISK-018 | Pilot contract mistaken for adoption or conformance. |
+| RISK-019 | Secondary consumer underrepresentation. |
 
 ## Approved strategic principles
 
@@ -246,15 +269,58 @@ Hypotheses HYP-001 … HYP-008, all **Research hypothesis**: none reached
 verifiable. All rest on absence from public documentation, which is weaker
 evidence than presence.
 
+## Consumer requirements and the CoreOps pilot (CDS-WP-004)
+
+**Evidence sources**, all bound to committed revisions (DEC-S-013):
+
+| Consumer | Role | HEAD commit | Tree |
+| --- | --- | --- | --- |
+| CoreOps | Primary pilot | `399de21c2d76cf84279badfcde58dacbb9eec1a2` | Dirty — read from HEAD only |
+| SpeakCore | Secondary | `a5e697715c1c7077bc6c53400b3e6411730720ba` | Clean |
+| CastCore | Secondary | `6c7614e3192a11479ae1c7431195daa042d38250` | Dirty — read from HEAD only |
+
+15 sources read (14 usable). **Documentation only — Level 1 evidence.** No user
+research took place (RISK-017).
+
+**Requirements:** CR-001 … CR-040 (40). Shared CDS Candidate 25 · CoreOps Pilot
+Requirement 2 · Product-local 2 · Deferred 9 · Out of CDS Scope 2. Priority:
+Must 16 · Should 11 · Could 1 · Not in pilot 12. **Classification is not
+approval** (DEC-S-014).
+
+**Strongest signal:** status semantics. All three consumers document graded
+status; two independently require that *unknown must never read as healthy*
+(CR-006, CR-007). Consumers also already hold **product-local design decisions
+and token sets** (CR-002, CR-037) — CDS arrives after them.
+
+**CoreOps pilot groups** (bounded slice, DEC-S-015) — 9 scenarios:
+
+| Group | Focus |
+| --- | --- |
+| A | Application Foundation — shell, navigation, orientation, modes |
+| B | Operations Overview — prioritized status, honest unknown |
+| C | Inventory and Dense Data — list/table, filter, sort, empty state |
+| D | State and Safety Patterns — full state set, dangerous action, confirmation |
+| E | Help, Accessibility, Localization — setup check, help, keyboard, DE/EN |
+
+**Pilot contract:** normative only upon Human Maintainer commit following Nova
+approval. **Not active; entry criteria unmet** — CDS-WP-005 architecture, a
+maturity model, and the accessibility target (CR-024) are all missing. Neither
+existence nor completion implies adoption or conformance (RISK-018).
+
+**Hypothesis consumer layer:** HYP-002, HYP-003, HYP-005 are *Confirmed consumer
+need*; HYP-007 needs *Human validation*; the rest are partially supported.
+Research assessments from CDS-WP-003 are **unchanged**. A confirmed need is not a
+differentiation claim (DEC-S-019).
+
 ## Current and next work package
 
-- **Completed:** CDS-WP-003 — Benchmark and Differentiation Research
-- **Next:** CDS-WP-004 — Consumer Requirements and CoreOps Pilot Contract
+- **Completed:** CDS-WP-004 — Consumer Requirements and CoreOps Pilot Contract
+- **Next:** CDS-WP-005 — Design System Architecture
 
-CDS-WP-004 collects requirements from CoreOps and the further consumer classes,
-separates shared from product-specific requirements, defines the pilot scope and
-validation contract, and tests the differentiation hypotheses against real
-consumer needs. No concrete visual design and no technology selection.
+CDS-WP-005 defines normative system layers, the source-of-truth model, token flow
+**as architecture without selecting a format**, artifact classes, product
+profiles, distribution, consumer contracts, and evidence flows. No final visual
+design and no concrete tool, framework, or token-format decision.
 
 Being listed as Next identifies sequence, not authorization. Every work package
 needs an explicit prompt from Nova.

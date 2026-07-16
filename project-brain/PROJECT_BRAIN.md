@@ -53,11 +53,12 @@ areas today.
 Governance foundation established. No final design or technology decisions are
 approved.
 
-- Decisions: DEC-S-001 … DEC-S-012 (12) — 6 foundation + 6 scope decisions;
-  unchanged by CDS-WP-003
-- Risks: RISK-001 … RISK-013 (13) — owner model provisional until CDS-WP-006
-- Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003
-- Next work package: CDS-WP-004
+- Decisions: DEC-S-001 … DEC-S-020 (20) — 6 foundation + 6 scope + 8 consumer
+  and pilot scope decisions
+- Risks: RISK-001 … RISK-019 (19) — owner model provisional until CDS-WP-006
+- Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
+  CDS-WP-004
+- Next work package: CDS-WP-005
 
 ## Registered scope
 
@@ -142,6 +143,14 @@ Details: [Provenance](../docs/governance/NDF_SKILLS_PROVENANCE.md) ·
 | DEC-S-010 | Three consumer relationship classes; classification grants nothing. |
 | DEC-S-011 | Pilot results become normative only when generalized and accepted. |
 | DEC-S-012 | Adoption/conformance claims require a version reference and evidence. |
+| DEC-S-013 | Consumer evidence must be bound to a committed revision. |
+| DEC-S-014 | Consumer requirements are classified; classification is not approval. |
+| DEC-S-015 | The initial CoreOps pilot is a bounded slice, not adoption or conformance. |
+| DEC-S-016 | Generalization requires explicit review and acceptance. |
+| DEC-S-017 | Pilot outcomes are evaluated through version-bound evidence. |
+| DEC-S-018 | Secondary consumers provide evidence, not pilot authority. |
+| DEC-S-019 | Consumer need does not establish differentiation. |
+| DEC-S-020 | CDS-WP-004 authorizes requirements and a contract only. |
 
 Details: [Decision Index](../docs/decisions/DECISION_INDEX.md)
 
@@ -162,9 +171,64 @@ Details: [Decision Index](../docs/decisions/DECISION_INDEX.md)
 | RISK-011 | Research and source bias. | Monitored |
 | RISK-012 | Source volatility. | Monitored |
 | RISK-013 | Differentiation overstatement. | Monitored |
+| RISK-014 | Consumer evidence staleness. | Monitored |
+| RISK-015 | Pilot scope inflation. | Monitored |
+| RISK-016 | Product-specific requirement contamination. | Monitored |
+| RISK-017 | Document evidence mistaken for user validation. | Monitored |
+| RISK-018 | Pilot contract mistaken for adoption or conformance. | Monitored |
+| RISK-019 | Secondary consumer underrepresentation. | Monitored |
 
 Owner model provisional until CDS-WP-006.
 Details: [Risk Register](../docs/risks/RISK_REGISTER.md)
+
+## Consumer requirements and the CoreOps pilot (CDS-WP-004)
+
+Three consumers analyzed **read-only** at committed revisions: CoreOps (primary
+pilot, `399de21c`), SpeakCore (`a5e69771`), CastCore (`6c7614e3`). 15 sources
+read, 14 usable. **Documentation only — no user research took place** (RISK-017).
+
+**Requirements CR-001 … CR-040 (40):** Shared CDS Candidate 25 · CoreOps Pilot
+Requirement 2 · Product-local 2 · Deferred 9 · Out of CDS Scope 2. Pilot-relevant
+28. Classification is **not** approval (DEC-S-014).
+
+Central shared requirements:
+
+- **Status semantics** — graded status documented by all three consumers;
+  semantic, never colour-only, always with text or icon (CR-006). Two consumers
+  independently require that **unknown must never read as healthy** (CR-007).
+  This is the clearest multi-consumer signal found.
+- **Safety before execution** — risk-tiered actions, preview or plan before
+  execute, deliberate confirmation with a cancel path, no misleading success
+  (CR-010 … CR-013).
+- **Complete state set** including offline, degraded, permission denied, and
+  unavailable capability (CR-015, CR-016, CR-032).
+- **Offline and self-hosted** without mandatory external runtime services
+  (CR-031) — a confirmed, accepted consumer requirement.
+- **DE/EN** with flexible text length (CR-023), enforced in CI by one consumer.
+- **Simple and Expert mode** plus guided setup with an environment check
+  (CR-017, CR-018) — documented by all three.
+
+Product-specific boundaries: SpeakCore and CastCore **already hold their own
+style direction, palette, and tokens** (CR-002, CR-037). CDS arrives after those
+decisions — this is reconciliation, not a blank slate. Business logic, domain
+data, backend, security architecture, and operations stay consumer-owned
+(CR-035, CR-036; permanent non-goals).
+
+**CoreOps pilot** — a bounded slice, **not** a redesign (DEC-S-015). Groups
+A Application Foundation · B Operations Overview · C Inventory and Dense Data ·
+D State and Safety Patterns · E Help, Accessibility, Localization. 9 scenarios.
+The contract is normative only upon Human Maintainer commit following Nova
+approval; **entry criteria are unmet and no pilot has started**.
+
+**Hypothesis consumer layer:** HYP-002 offline, HYP-003 operations patterns, and
+HYP-005 governed family flexibility are *Confirmed consumer need*; HYP-007
+requires *Human validation* (accessibility is weak in both layers); the rest are
+partially supported. CDS-WP-003 research assessments are **unchanged**. A
+confirmed need is never a differentiation claim (DEC-S-019).
+
+Details: [Requirements](../docs/governance/CONSUMER_REQUIREMENTS_MODEL.md) ·
+[Pilot Contract](../docs/governance/COREOPS_PILOT_CONTRACT.md) ·
+[Consumer Hypothesis Validation](../docs/research/CONSUMER_HYPOTHESIS_VALIDATION.md)
 
 ## Benchmark research (CDS-WP-003)
 
@@ -213,12 +277,12 @@ override governance.
 
 ## Next step
 
-CDS-WP-004 — Consumer Requirements and CoreOps Pilot Contract: collect
-requirements from CoreOps and the further consumer classes, separate shared from
-product-specific requirements, define the pilot scope and validation contract,
-and test HYP-001 … HYP-008 against real consumer needs rather than against
-absence of public documentation. Still no concrete visual design and no
-technology selection. Requires an explicit work-package prompt from Nova.
+CDS-WP-005 — Design System Architecture: normative system layers, source-of-truth
+model, token flow **as architecture without selecting a format**, artifact
+classes, product profiles and their governed limits, distribution, consumer
+contracts, evidence flows. Must reconcile with the product-local design decisions
+consumers already shipped, and treat offline usability as an explicit criterion.
+Still no final visual design and no tool, framework, or token-format decision. Requires an explicit work-package prompt from Nova.
 
 ## Related documents
 
@@ -233,3 +297,4 @@ technology selection. Requires an explicit work-package prompt from Nova.
 - [CDS-WP-001 Governance Bootstrap Notes](CDS_WP_001_GOVERNANCE_BOOTSTRAP_NOTES.md)
 - [CDS-WP-002 Concept and Scope Registration Notes](CDS_WP_002_CONCEPT_AND_SCOPE_REGISTRATION_NOTES.md)
 - [CDS-WP-003 Benchmark and Differentiation Research Notes](CDS_WP_003_BENCHMARK_AND_DIFFERENTIATION_RESEARCH_NOTES.md)
+- [CDS-WP-004 Consumer Requirements and CoreOps Pilot Notes](CDS_WP_004_CONSUMER_REQUIREMENTS_AND_COREOPS_PILOT_NOTES.md)

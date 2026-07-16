@@ -23,11 +23,36 @@ Foundation / Pre-Design
 
 ## Work package status
 
-- Current work package: CDS-WP-004 — Consumer Requirements and CoreOps Pilot
-  Contract (Next)
-- Previous work package: CDS-WP-003 — Benchmark and Differentiation Research
-  (Completed)
-- Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003
+- Current work package: CDS-WP-005 — Design System Architecture (Next)
+- Previous work package: CDS-WP-004 — Consumer Requirements and CoreOps Pilot
+  Contract (Completed)
+- Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
+  CDS-WP-004
+
+## Consumer research status
+
+- Consumer research status: Completed (CDS-WP-004, evidence dated 2026-07-15)
+- Consumer repositories analyzed: 3 — CoreOps (primary pilot), SpeakCore and
+  CastCore (secondary)
+- Evidence sources read: 15 (14 usable), all bound to committed revisions
+- Requirements registered: 40 (CR-001 … CR-040)
+- Pilot-relevant requirements: 28 (Must 16, Should 11, Could 1)
+- Shared CDS Candidates: 25
+- Pilot groups: 5 (A–E) with 9 scenarios
+- Hypothesis consumer validation: HYP-001 … HYP-008, all still **research
+  hypotheses**
+- **Evidence level: documentation only.** No user research, interviews, or
+  usability testing took place (RISK-017). No requirement is an accepted CDS
+  standard (DEC-S-014). The pilot contract is a proposal, not active.
+
+Documents:
+[Consumer Requirements Model](../docs/governance/CONSUMER_REQUIREMENTS_MODEL.md) ·
+[Traceability](../docs/governance/CONSUMER_REQUIREMENTS_TRACEABILITY.md) ·
+[Pilot Scope and Scenarios](../docs/governance/COREOPS_PILOT_SCOPE_AND_SCENARIOS.md) ·
+[Pilot Contract](../docs/governance/COREOPS_PILOT_CONTRACT.md) ·
+[Validation Plan](../docs/governance/CONSUMER_VALIDATION_PLAN.md) ·
+[Consumer Evidence Register](../docs/research/CONSUMER_EVIDENCE_REGISTER.md) ·
+[Consumer Hypothesis Validation](../docs/research/CONSUMER_HYPOTHESIS_VALIDATION.md)
 
 ## Research status
 
@@ -136,10 +161,10 @@ pilot contract is defined in CDS-WP-004.
 
 ## Register scope
 
-- Decisions: DEC-S-001 … DEC-S-012 (12) — 6 strategic foundation decisions
-  (CDS-WP-001) and 6 strategic scope decisions (CDS-WP-002). Unchanged by
-  CDS-WP-003.
-- Risks: RISK-001 … RISK-013 (13) — risk owner model provisional until
+- Decisions: DEC-S-001 … DEC-S-020 (20) — 6 strategic foundation decisions
+  (CDS-WP-001), 6 strategic scope decisions (CDS-WP-002), and 8 consumer and
+  pilot scope decisions (CDS-WP-004). Unchanged by CDS-WP-003.
+- Risks: RISK-001 … RISK-019 (19) — risk owner model provisional until
   CDS-WP-006
 
 ## Intentionally open decision areas

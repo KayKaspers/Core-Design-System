@@ -9,6 +9,34 @@ released and no release is announced.
 
 ### Added
 
+- Consumer evidence registered from three consumer repositories analyzed
+  read-only at committed revisions — CoreOps as primary pilot consumer,
+  SpeakCore and CastCore as secondary evidence. 15 sources, 14 usable, each
+  bound to a committed HEAD revision. (CDS-WP-004)
+- Consumer requirements model registering CR-001 … CR-040 with classification,
+  evidence status and strength, pilot priority, ownership boundary, and
+  validation method. (CDS-WP-004)
+- Consumer requirements traceability matrix mapping every requirement to its
+  committed consumer source. (CDS-WP-004)
+- CoreOps pilot scope and scenarios: five pilot groups (A–E) with nine
+  scenarios, an explicit out-of-scope list, and open design questions.
+  (CDS-WP-004)
+- CoreOps pilot contract with purpose, parties, entry criteria, evidence
+  requirements, exit criteria, success categories, and change control. Normative
+  only upon Human Maintainer commit following Nova approval; not active.
+  (CDS-WP-004)
+- Consumer validation plan defining evidence levels, the deviation model, the
+  exit review, and the explicit absence of any conformance promise.
+  (CDS-WP-004)
+- Consumer hypothesis validation layer assessing HYP-001 … HYP-008 against
+  consumer evidence, leaving the CDS-WP-003 research assessments unchanged.
+  (CDS-WP-004)
+- Consumer and pilot scope decisions DEC-S-013 … DEC-S-020. (CDS-WP-004)
+- Risks RISK-014 … RISK-019 covering consumer evidence staleness, pilot scope
+  inflation, product-specific contamination, document evidence mistaken for user
+  validation, pilot mistaken for adoption, and secondary consumer
+  underrepresentation. (CDS-WP-004)
+- Work-package evidence notes for CDS-WP-004.
 - Official-source benchmark of ten established design systems against 14
   dimensions, reviewed on 2026-07-15. Findings are research evidence and are
   explicitly **non-normative**. (CDS-WP-003)
@@ -65,6 +93,17 @@ released and no release is announced.
 
 ### Changed
 
+- Work-package status advanced: CDS-WP-004 completed, CDS-WP-005 activated as
+  the next work package. (CDS-WP-004)
+- Decision index extended to DEC-S-001 … DEC-S-020 with a third decision type
+  for consumer and pilot scope. DEC-S-001 … DEC-S-012 unchanged. (CDS-WP-004)
+- Risk register extended to RISK-001 … RISK-019. The provisional owner model is
+  unchanged. (CDS-WP-004)
+- Foundation Context Pack, project profile, project brain, and README extended
+  with consumer evidence sources, requirement counts, pilot groups, and the
+  hypothesis consumer layer. (CDS-WP-004)
+- Claude working instructions extended with a binding consumer-repository
+  read-only rule and the committed-evidence requirement. (CDS-WP-004)
 - Work-package status advanced: CDS-WP-003 completed, CDS-WP-004 activated as
   the next work package. (CDS-WP-003)
 - Risk register extended to RISK-001 … RISK-013. The provisional owner model is

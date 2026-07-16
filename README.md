@@ -141,22 +141,52 @@ decisions, principles, or technology recommendations. No hypothesis reached
 - [CDS Differentiation Hypotheses](docs/research/CDS_DIFFERENTIATION_HYPOTHESES.md)
 - [Research Limitations](docs/research/RESEARCH_LIMITATIONS.md)
 
+## Consumer requirements and the CoreOps pilot
+
+Requirements from real consumer projects are registered, and a bounded CoreOps
+pilot contract is defined.
+
+Three consumers were analyzed **read-only** at committed revisions: CoreOps as
+primary pilot consumer, with SpeakCore and CastCore as secondary cross-product
+evidence. 40 requirements (CR-001 … CR-040) are registered and traced to their
+source revisions.
+
+The CoreOps pilot is a **bounded representative slice**, not a redesign, across
+five groups: Application Foundation · Operations Overview · Inventory and Dense
+Data · State and Safety Patterns · Help, Accessibility and Localization.
+
+The eight research hypotheses were assessed against consumer evidence.
+
+**Boundaries:** evidence is committed documentation only — no user research,
+interviews, or usability testing took place. No requirement is an accepted CDS
+standard. The pilot contract is a proposal and is not active. **Nothing here
+constitutes CDS adoption, conformance, certification, or endorsement.**
+
+- [Consumer Requirements Model](docs/governance/CONSUMER_REQUIREMENTS_MODEL.md)
+- [Consumer Requirements Traceability](docs/governance/CONSUMER_REQUIREMENTS_TRACEABILITY.md)
+- [CoreOps Pilot Scope and Scenarios](docs/governance/COREOPS_PILOT_SCOPE_AND_SCENARIOS.md)
+- [CoreOps Pilot Contract](docs/governance/COREOPS_PILOT_CONTRACT.md)
+- [Consumer Validation Plan](docs/governance/CONSUMER_VALIDATION_PLAN.md)
+- [Consumer Evidence Register](docs/research/CONSUMER_EVIDENCE_REGISTER.md)
+- [Consumer Hypothesis Validation](docs/research/CONSUMER_HYPOTHESIS_VALIDATION.md)
+
 ## Work packages
 
 - **Completed:** CDS-WP-001 — Project Governance and NDF Bootstrap
 - **Completed:** CDS-WP-001A — NDF Skills Bootstrap
 - **Completed:** CDS-WP-002 — Concept and Scope Registration
 - **Completed:** CDS-WP-003 — Benchmark and Differentiation Research
-- **Next:** CDS-WP-004 — Consumer Requirements and CoreOps Pilot Contract
+- **Completed:** CDS-WP-004 — Consumer Requirements and CoreOps Pilot Contract
+- **Next:** CDS-WP-005 — Design System Architecture
 
 The full controlled roadmap is in
 [project-system/WORK_PACKAGES.md](project-system/WORK_PACKAGES.md).
 
 ## Registers
 
-- Decisions: DEC-S-001 … DEC-S-012 (12) — 6 strategic foundation decisions,
-  6 strategic scope decisions
-- Risks: RISK-001 … RISK-013 (13) — owner model provisional until CDS-WP-006
+- Decisions: DEC-S-001 … DEC-S-020 (20) — 6 strategic foundation decisions,
+  6 strategic scope decisions, 8 consumer and pilot scope decisions
+- Risks: RISK-001 … RISK-019 (19) — owner model provisional until CDS-WP-006
 
 ## Governance documents
 
