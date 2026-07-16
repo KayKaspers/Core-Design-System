@@ -5,9 +5,9 @@ must be controlled from the start of the project.
 
 ## Register scope
 
-- Risk range: RISK-001 … RISK-048
-- Number of risks: 48
-- Phase: Foundation / Pre-Design
+- Risk range: RISK-001 … RISK-054
+- Number of risks: 54
+- Phase: Pre-Candidate Operating Enablement (Foundation / Pre-Design closed with notes)
 
 Risks RISK-001 … RISK-005 were registered by CDS-WP-001. Risks
 RISK-006 … RISK-009 were registered by CDS-WP-002 alongside the scope
@@ -17,7 +17,9 @@ alongside the consumer requirements and the CoreOps pilot contract. Risks
 RISK-020 … RISK-028 were registered by CDS-WP-005 alongside the logical
 architecture. Risks RISK-029 … RISK-040 were registered by CDS-WP-006 alongside
 the governance model. Risks RISK-041 … RISK-048 were registered by CDS-WP-007
-alongside the accessibility and inclusive design policy.
+alongside the accessibility and inclusive design policy. Risks
+RISK-049 … RISK-054 were registered by CDS-WP-010 alongside the accessibility
+support baseline and evidence strategy.
 
 ### Finalized risk role model
 
@@ -50,16 +52,19 @@ Full model: [Risk Governance Model](../governance/RISK_GOVERNANCE_MODEL.md).
 | **Accepted** | Consciously accepted with residual effect; requires a review trigger. |
 | **Closed** | No longer relevant, or fully mitigated with evidence. |
 
-**47 of the 48 risks are currently `Monitored`; RISK-040 is `Mitigating`.**
-CDS-WP-006 finalized the role model; it treated no risk and changed no assessment,
-because no evidence justified a change. CDS-WP-007 added RISK-041 … RISK-048 and
-likewise treated none. CDS-WP-009 changed exactly one status: **RISK-040 moved
+**52 of the 54 risks are currently `Monitored`; RISK-040 and RISK-044 are
+`Mitigating`.** CDS-WP-006 finalized the role model; it treated no risk and changed
+no assessment, because no evidence justified a change. CDS-WP-007 added
+RISK-041 … RISK-048 and likewise treated none. CDS-WP-009 moved **RISK-040
 `Monitored → Mitigating`** on the strength of the
-[Critical Risk Action Register](../operations/CRITICAL_RISK_ACTION_REGISTER.md),
-which gives the twelve Critical Risks a named executor role, a review trigger,
-expected evidence, and a blocking effect (DEC-S-064). No description, likelihood,
-or severity was changed, and **no risk was accepted or closed** — only the Human
-Maintainer may do either.
+[Critical Risk Action Register](../operations/CRITICAL_RISK_ACTION_REGISTER.md).
+CDS-WP-010 added **RISK-049 … RISK-054** (all `Monitored`) and moved **RISK-044
+`Monitored → Mitigating`** on the strength of the defined
+[Accessibility Support Baseline](../governance/ACCESSIBILITY_SUPPORT_BASELINE.md)
+(A11Y-BL-001) and its
+[Maintenance Policy](../governance/ACCESSIBILITY_BASELINE_MAINTENANCE_POLICY.md).
+No description, likelihood, or severity was changed for any existing risk, and
+**no risk was accepted or closed** — only the Human Maintainer may do either.
 
 ## Assessment scale
 
@@ -1407,10 +1412,24 @@ consumer's obligation explicitly rather than by implication.
 
 ## RISK-044 — Accessibility support baseline drift
 
-- **Status:** Monitored
-- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: named per mitigation · Evidence Reviewer: Nova or authorized reviewer
+- **Status:** Mitigating *(changed from `Monitored` by CDS-WP-010; see the status note below)*
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: Claude as scoped executor (baseline/evidence-strategy documentation); baseline **approval** is the Human Maintainer's · Evidence Reviewer: Nova or authorized reviewer
 - **Initial likelihood:** High
 - **Initial severity:** High
+
+### Status note (CDS-WP-010)
+
+RISK-044 moved from `Monitored` to `Mitigating`. The mitigation is the defined
+[Accessibility Support Baseline](../governance/ACCESSIBILITY_SUPPORT_BASELINE.md)
+(A11Y-BL-001) and its
+[Maintenance Policy](../governance/ACCESSIBILITY_BASELINE_MAINTENANCE_POLICY.md):
+a concrete initial baseline is defined, maintenance/review triggers exist, a maximum
+six-month review gap is set, version and freshness are bound in the evidence model
+(DEC-S-068, DEC-S-070, DEC-S-071), and the next expected evidence artifact (AE-1 +
+AE-2 for the first Candidate slice against the Required Tier-1 pairings) is defined.
+Neither likelihood nor severity changed; the risk was neither accepted nor closed.
+The baseline itself remains pending Human-Maintainer commit and produces no
+evidence.
 
 ### Description
 
@@ -1596,3 +1615,179 @@ maturity** — never a weaker standard, and never a conformant artifact with an
 asterisk. Prefer few artifacts with real AE-3 evidence over many at AE-0 with a
 policy. Escalate capacity pressure as a governance decision for the Human
 Maintainer, rather than absorbing it as a quiet reduction in evidence.
+
+---
+
+## RISK-049 — Accessibility baseline representativeness gap
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: named per mitigation · Evidence Reviewer: Nova or authorized reviewer
+- **Initial likelihood:** High
+- **Initial severity:** Medium
+
+### Description
+
+A small capacity-aware baseline may fail to represent important user, platform,
+language, input, or assistive-technology environments.
+
+### Impact
+
+Evidence produced only against the Required Tier-1 environments may miss barriers
+that appear on WebKit/Safari, on mobile/touch, with commercial screen readers, with
+alternative input, or in languages beyond DE/EN. A baseline that is affordable but
+narrow can read as thorough while leaving whole user groups unevidenced.
+
+### Mitigation direction
+
+Keep the Required baseline honestly small **and** keep its coverage gaps visible
+(A11Y-BL-001, Environment and Scope Matrix). Assign Complementary and Scope-triggered
+tiers with explicit triggers so the declared scope, a Consumer Contract, a Product
+Profile, or a documented risk expands coverage before a matching claim. Never present
+Tier-1 coverage as universal (DEC-S-066, DEC-S-069).
+
+---
+
+## RISK-050 — Baseline interpreted as universal support
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: named per mitigation · Evidence Reviewer: Nova or authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** High
+
+### Description
+
+Consumers may treat the declared evidence baseline as a guarantee that all listed or
+unlisted environment combinations are supported.
+
+### Impact
+
+A baseline is a *test contract*, not a support statement. If it is read as "these
+environments are supported", a consumer builds on an assurance CDS never gave —
+inheriting untested barriers while believing the question was answered, and any later
+failure discredits the whole baseline.
+
+### Mitigation direction
+
+Carry the target-versus-support-versus-claim boundary in the baseline (DEC-S-065):
+listing an environment is never support. Permit no support or conformance claim
+without evidence, a declared scope, and approval (DEC-S-044). State plainly that
+every artifact is AE-0 and that undeclared environments are not supported (DEC-S-069).
+
+---
+
+## RISK-051 — Environment availability mismatch
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: named per mitigation · Evidence Reviewer: Nova or authorized reviewer
+- **Initial likelihood:** High
+- **Initial severity:** Medium
+
+### Description
+
+The approved baseline may include hardware, operating systems, browsers, or
+assistive technologies that the current maintainers cannot practically access for
+evidence execution.
+
+### Impact
+
+A baseline that names environments no one can run produces either no evidence or
+invented evidence. The sharp case is a commercial screen reader whose official
+requirements could not even be retrieved (JAWS, S-12/S-13) or an Apple/mobile
+platform no maintainer currently has — each a Required-looking commitment with no
+execution path.
+
+### Mitigation direction
+
+Never invent local availability. Record every environment's local execution
+availability as `Not asserted` until a real, capacity-checked slot exists, and track
+Execution Gaps in the matrix. Keep unrunnable environments in Complementary/
+Scope-triggered tiers with their gaps named, and verify official requirements before
+any environment becomes Required or claimed (DEC-S-067).
+
+---
+
+## RISK-052 — Evidence identity incompleteness
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: named per mitigation · Evidence Reviewer: Nova or authorized reviewer
+- **Initial likelihood:** High
+- **Initial severity:** Medium
+
+### Description
+
+Evidence may omit exact versions, language, channel, revisions, scope, or review
+identity and therefore become irreproducible or misleading.
+
+### Impact
+
+Evidence that only says `current` or `latest`, or that omits the reviewer or the
+artifact revision, cannot be reproduced or contested; it asserts a result no one can
+re-check. Under baseline drift such evidence quietly becomes false while still on the
+record.
+
+### Mitigation direction
+
+Require immutable evidence records binding exact OS, browser/renderer, assistive
+technology, input, language, channel, artifact/consumer revision, CDS version,
+baseline version, date, executor, and reviewer (DEC-S-071). Separate product-family
+rules from exact evidence identity (DEC-S-068). Carry a freshness state so stale
+evidence is not read as current.
+
+---
+
+## RISK-053 — Regression coverage gap
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: named per mitigation · Evidence Reviewer: Nova or authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** High
+
+### Description
+
+Changes may invalidate previously gathered accessibility evidence without triggering
+targeted revalidation.
+
+### Impact
+
+Accessibility regresses silently — a token change removes contrast, an override
+suppresses focus, a copied APG pattern drops a role — and the old evidence still
+asserts a property the artifact no longer has. Without a revalidation trigger, the
+record lies (this is the operational face of RISK-045).
+
+### Mitigation direction
+
+Bind evidence to a revision and hold that it **does not carry forward** across a
+change to what it evidenced or to the baseline. Trigger targeted revalidation on any
+change to a mandatory contract area and on any Blocking/High regression (Defect and
+Regression Model; Maintenance Policy, DEC-S-070, DEC-S-072). Treat a regression as a
+deviation, never a limitation.
+
+---
+
+## RISK-054 — Accessibility defect normalization
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: named per mitigation · Evidence Reviewer: Nova or authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** High
+
+### Description
+
+Known barriers or failed combinations may be accepted informally, hidden in
+aggregate reporting, or carried forward without explicit maturity and claim effects.
+
+### Impact
+
+A barrier that is quietly tolerated becomes permanent, and an aggregate or score
+hides exactly the unmet criterion that makes a process unusable for a user group.
+Informal acceptance turns the evidence model into paperwork that certifies comfort
+rather than accessibility.
+
+### Mitigation direction
+
+Classify every defect on its own four-level impact scale, separate from risk
+severity, and bind it to requirement, environment, evidence, scope, maturity, and
+claim effects (DEC-S-072). Forbid numeric/percentage accessibility scores and
+aggregate hiding (Evidence and Claims Model). Make `Accepted limitation` a
+Human-Maintainer decision that stays visible in every affected claim, and trigger an
+architecture/scope review on recurring limitations (DEC-S-059).

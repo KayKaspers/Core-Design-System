@@ -23,12 +23,12 @@ Pre-Candidate Operating Enablement — **Foundation / Pre-Design: Closed with No
 
 ## Work package status
 
-- Current work package after CDS-WP-009: **CDS-WP-010 — Accessibility Support
-  Baseline and Evidence Strategy** (Next; not yet executed)
-- Previous work package: CDS-WP-009 — Operating Enablement and Pre-Candidate
-  Readiness (Completed)
+- Current work package after CDS-WP-010: **CDS-WP-011 — Machine-Readable Source
+  and Token Format Decision** (Next; not yet executed)
+- Previous work package: CDS-WP-010 — Accessibility Support Baseline and Evidence
+  Strategy (Completed)
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009
+  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010
 
 ## Operating enablement status
 
@@ -51,6 +51,28 @@ Pre-Candidate Operating Enablement — **Foundation / Pre-Design: Closed with No
   [Pre-Candidate Operating Plan](../docs/roadmap/PRE_CANDIDATE_OPERATING_PLAN.md)
 - **Current publication state: `Private Development`. Current claims: None.
   Candidate/Stable artifacts: None. CoreOps pilot: inactive.**
+
+## Accessibility support baseline status
+
+- Accessibility Baseline ID: **A11Y-BL-001**
+- Accessibility Baseline Status: **Defined, no evidence executed** (CDS-WP-010,
+  2026-07-16) — pending Human-Maintainer commit; a test contract, not evidence
+- Baseline tier count: **3** (Required Core · Complementary · Scope-triggered)
+- Environment entry count: **14** (A11Y-ENV-001…014) — Required 6 · Conditional 4 ·
+  Deferred 4; Required browser/screen-reader pairings **2**
+- Accessibility evidence levels: **5** (AE-0 … AE-4) — unchanged
+- Accessibility evidence records: **0** — every artifact remains AE-0
+- RISK-044: **Mitigating** (baseline defined; gate met, DEC-S-070)
+
+Documents:
+[Accessibility Support Baseline](../docs/governance/ACCESSIBILITY_SUPPORT_BASELINE.md) ·
+[Environment and Scope Matrix](../docs/governance/ACCESSIBILITY_ENVIRONMENT_AND_SCOPE_MATRIX.md) ·
+[Baseline Maintenance Policy](../docs/governance/ACCESSIBILITY_BASELINE_MAINTENANCE_POLICY.md) ·
+[Evidence Strategy](../docs/governance/ACCESSIBILITY_EVIDENCE_STRATEGY.md) ·
+[Defect and Regression Model](../docs/governance/ACCESSIBILITY_DEFECT_AND_REGRESSION_MODEL.md) ·
+[Evidence Record Template](../docs/operations/ACCESSIBILITY_EVIDENCE_RECORD_TEMPLATE.md) ·
+[Source Register](../docs/research/ACCESSIBILITY_BASELINE_SOURCE_REGISTER.md) ·
+[Selection Rationale](../docs/research/ACCESSIBILITY_BASELINE_SELECTION_RATIONALE.md)
 
 ## Foundation review status
 
@@ -94,8 +116,9 @@ Documents:
 - Accessibility channel profiles: **6** — 2 with a target, 0 Candidate-eligible
 - CR-024 policy status: **Resolved at policy level** (DEC-S-060); entry criterion
   `Accessibility target defined` satisfiable on Human Maintainer commit
-- **Current accessibility evidence: none — every artifact is AE-0**; no support
-  baseline declared; no accessibility claim of any level is valid
+- **Current accessibility evidence: none — every artifact is AE-0**; a support
+  baseline is now **defined** (A11Y-BL-001, CDS-WP-010, pending commit) but **no
+  evidence has been executed**; no accessibility claim of any level is valid
 
 Documents:
 [Accessibility and Inclusive Design Policy](../docs/governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md) ·
@@ -300,18 +323,18 @@ pilot contract is defined in CDS-WP-004.
 
 ## Register scope
 
-- Decisions: DEC-S-001 … DEC-S-064 (64) — 6 strategic foundation decisions
+- Decisions: DEC-S-001 … DEC-S-072 (72) — 6 strategic foundation decisions
   (CDS-WP-001), 6 strategic scope decisions (CDS-WP-002), 8 consumer and pilot
   scope decisions (CDS-WP-004), 12 logical architecture decisions (CDS-WP-005),
   16 governance, lifecycle and publication decisions (CDS-WP-006), 12
-  accessibility and inclusive design decisions (CDS-WP-007), and **4 operating
-  enablement and pre-candidate decisions (CDS-WP-009, DEC-S-061 … DEC-S-064)**.
-  Unchanged by CDS-WP-003 and CDS-WP-008; DEC-S-001 … DEC-S-060 unchanged by
-  CDS-WP-009.
-- Risks: RISK-001 … RISK-048 (48) — **47 `Monitored`, RISK-040 `Mitigating`**
-  (CDS-WP-009, via the Critical Risk Action Register; DEC-S-064); **risk owner
-  model finalized** by CDS-WP-006; RISK-041 … RISK-048 added by CDS-WP-007. No
-  risk accepted or closed.
+  accessibility and inclusive design decisions (CDS-WP-007), 4 operating
+  enablement and pre-candidate decisions (CDS-WP-009), and **8 accessibility
+  support baseline and evidence decisions (CDS-WP-010, DEC-S-065 … DEC-S-072)**.
+  DEC-S-001 … DEC-S-064 unchanged by CDS-WP-010.
+- Risks: RISK-001 … RISK-054 (54) — **52 `Monitored`, RISK-040 and RISK-044
+  `Mitigating`**; **risk owner model finalized** by CDS-WP-006; RISK-041 … RISK-048
+  added by CDS-WP-007; **RISK-049 … RISK-054 added by CDS-WP-010**. No risk accepted
+  or closed.
 
 ## Intentionally open decision areas
 

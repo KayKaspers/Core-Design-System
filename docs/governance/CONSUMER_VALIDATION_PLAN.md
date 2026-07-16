@@ -151,6 +151,30 @@ scope and baseline, published evidence, and the consumer's own obligation —
 audit, or user research has been carried out — by CDS or by any consumer — and
 none is scheduled (RISK-017). **A target is not conformance** (DEC-S-050).
 
+### Accessibility support baseline and evidence discipline (CDS-WP-010)
+
+*(Additive — no validation is claimed and none has been performed)*
+
+- **Baseline selection:** consumer/pilot accessibility evidence targets
+  **A11Y-BL-001** ([Accessibility Support Baseline](ACCESSIBILITY_SUPPORT_BASELINE.md)) —
+  the Required Tier-1 baseline for the web scope, plus any environments the consumer
+  declares (DEC-S-066, DEC-S-069). A consumer may add environments; it may not narrow
+  the CDS Required baseline for a shared artifact.
+- **Environment identity:** every evidence run binds exact OS, browser/renderer,
+  assistive technology, input, language, channel, consumer revision, CDS version, and
+  date (DEC-S-068, DEC-S-071); `current`/`latest` is not an identity (RISK-052).
+- **Freshness:** evidence carries a freshness state; `Unknown`/`Stale` evidence is
+  not current and passes no exit gate (DEC-S-070).
+- **Regression:** a previously passed combination that later fails is a regression,
+  not a limitation; Blocking/High regressions block the affected scope's Stable,
+  claims, and "unchanged-compatible" statement (DEC-S-072, RISK-045, RISK-053).
+- **Complete-process evidence:** a consumer accessibility outcome requires **AE-4** —
+  the declared scope's complete processes at a consumer revision, with feedback and
+  documented limitations (DEC-S-052). Component evidence is not product evidence.
+- **Claim boundary:** no accessibility support or conformance claim is valid without
+  AE-4, a declared scope, a declared current baseline, evidence identity, known
+  limitations, and Human-Maintainer approval (DEC-S-044). **None is valid today.**
+
 ## Consumer feedback
 
 Level 5. Recorded as given, not summarized into agreement. Disagreement between

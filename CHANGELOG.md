@@ -9,6 +9,32 @@ released and no release is announced.
 
 ### Added
 
+- Initial accessibility support baseline defined (CDS-WP-010): **A11Y-BL-001**
+  ([Accessibility Support Baseline](docs/governance/ACCESSIBILITY_SUPPORT_BASELINE.md)),
+  pending Human-Maintainer commit — a **test contract, not evidence**; it declares
+  the environments future evidence will target and asserts no support and no
+  conformance. Composed from authorized official standards/vendor research only
+  (13 URLs opened, 9 usable). (CDS-WP-010)
+- Three-tier baseline model created — Required Core, Complementary, Scope-triggered
+  (DEC-S-066). (CDS-WP-010)
+- Accessibility environment and scope matrix created — 14 entries
+  (A11Y-ENV-001…014): Required 6, Conditional 4, Deferred 4; 2 Required
+  browser/screen-reader pairings. (CDS-WP-010)
+- Accessibility evidence strategy created — operationalizes AE-0…AE-4, required
+  evidence by maturity, manual/AT/consumer/pilot strategy, review independence, and
+  a capacity-aware execution rule; **no evidence executed**. (CDS-WP-010)
+- Accessibility evidence record template created — a non-normative operational form
+  binding exact environment identity; **not evidence**. (CDS-WP-010)
+- Accessibility baseline maintenance policy created — five freshness states, nine
+  review triggers, and a six-month maximum review gap; no automatic claim renewal.
+  (CDS-WP-010)
+- Accessibility defect and regression model created — four impact levels, six defect
+  statuses, and the rule that Blocking/High regressions block Stable and claims for
+  the affected scope; **no defect registered (AE-0)**. (CDS-WP-010)
+- Accessibility baseline source register and selection rationale created
+  (non-normative research evidence), recording every opened official URL and the
+  capacity-aware selection with its coverage gaps. (CDS-WP-010)
+- Work-package evidence notes for CDS-WP-010. (CDS-WP-010)
 - Foundation closure recorded (CDS-WP-009): the
   [Foundation Closure Record](docs/governance/FOUNDATION_CLOSURE_RECORD.md)
   registers the Foundation / Pre-Design milestone as **Closed with Notes** after
@@ -56,6 +82,30 @@ released and no release is announced.
 
 ### Changed
 
+- Decision index extended to DEC-S-001 … DEC-S-072 with an eighth decision type for
+  accessibility support baseline and evidence decisions (DEC-S-065 … DEC-S-072);
+  DEC-S-001 … DEC-S-064 unchanged; no ADR. (CDS-WP-010)
+- Risk register extended to RISK-001 … RISK-054: added **RISK-049 … RISK-054**
+  (accessibility baseline representativeness, universal-support misreading,
+  environment-availability mismatch, evidence-identity incompleteness,
+  regression-coverage gap, defect normalization), all `Monitored`; moved **RISK-044
+  `Monitored → Mitigating`** on the strength of the defined baseline; no existing
+  risk description/likelihood/severity changed; no risk accepted or closed.
+  (CDS-WP-010)
+- Accessibility Evidence and Claims Model, CoreOps Pilot Accessibility Criterion, and
+  Consumer Validation Plan reconciled to reference A11Y-BL-001 (product-family vs
+  execution identity, freshness, regression, complete-process evidence, claim
+  boundary); the AE-0…AE-4 meanings are unchanged. (CDS-WP-010)
+- Critical Risk Action Register updated: RISK-044 expected evidence delivered and set
+  to `Mitigating`; RISK-048 capacity-aware tiering recorded as partial mitigation;
+  RISK-040 first follow-evidence noted. RISK-049…054 not auto-added to the Critical
+  group. (CDS-WP-010)
+- Work-package status advanced: CDS-WP-010 completed; **CDS-WP-011 — Machine-Readable
+  Source and Token Format Decision** activated as the next work package (not yet
+  executed). Foundation Context Pack, project profile, project brain, README, work
+  packages, next phase, Pre-Candidate Operating Plan, and Claude working instructions
+  updated. Publication state remains `Private Development`; every artifact remains
+  AE-0; no environment claimed supported; pilot inactive. (CDS-WP-010)
 - Foundation status: **Closed with Notes** — the Human Maintainer accepted the
   `GO WITH NOTES` outcome; the Pre-Candidate Operating Enablement phase is active.
   No version, Candidate, Stable, claim, release, or publication status is asserted;

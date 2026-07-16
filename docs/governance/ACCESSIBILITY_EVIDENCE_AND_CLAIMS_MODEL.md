@@ -120,6 +120,33 @@ A baseline **may not**:
 and assistive technology change (RISK-044); each is a dated snapshot with a
 review trigger.
 
+### Reconciliation with A11Y-BL-001 (CDS-WP-010)
+
+*(Additive — the five evidence-level meanings above are unchanged)*
+
+The concrete initial baseline is now **A11Y-BL-001**
+([Accessibility Support Baseline](ACCESSIBILITY_SUPPORT_BASELINE.md)), pending
+Human-Maintainer commit. It supplies the nine baseline elements above through three
+tiers (Required / Complementary / Scope-triggered) and an
+[Environment and Scope Matrix](ACCESSIBILITY_ENVIRONMENT_AND_SCOPE_MATRIX.md).
+Applying it to this model:
+
+- **Product-family vs execution baseline** (DEC-S-068): A11Y-BL-001 names product
+  *families*; each AE-2/AE-3/AE-4 evidence run binds **exact** OS, browser,
+  renderer, assistive-technology, artifact, consumer, CDS, language, channel, and
+  date values. `current`/`latest` alone is not an evidence identity.
+- **Exact environment identity** is recorded in the
+  [Evidence Record](../operations/ACCESSIBILITY_EVIDENCE_RECORD_TEMPLATE.md).
+- **Evidence freshness** (DEC-S-070): evidence carries a freshness state; `Unknown`/
+  `Stale` evidence is **not current** and satisfies no gate — see the
+  [Baseline Maintenance Policy](ACCESSIBILITY_BASELINE_MAINTENANCE_POLICY.md).
+- **A baseline alone is not evidence** (DEC-S-065): declaring A11Y-BL-001 records
+  what future evidence will target; it establishes nothing. **Every artifact remains
+  AE-0.**
+- **Support-claim boundary**: a *support claim* (environments actually supported) is
+  distinct from the baseline and requires evidence plus the eight claim elements;
+  none is valid today (DEC-S-044).
+
 ## Candidate accessibility gate
 
 *(Normative — for accessibility-relevant artifacts)*

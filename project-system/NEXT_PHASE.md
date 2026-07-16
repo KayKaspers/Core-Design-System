@@ -3,11 +3,11 @@
 - **Phase:** Pre-Candidate Operating Enablement — **Foundation / Pre-Design:
   Closed with Notes**
 - **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009
-- **Next work package:** **CDS-WP-010 — Accessibility Support Baseline and
-  Evidence Strategy** (authorized as next; not yet executed). The Foundation is
-  closed with notes; operating enablement is in place; the accessibility support
-  baseline is the next substantive topic.
+  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010
+- **Next work package:** **CDS-WP-011 — Machine-Readable Source and Token Format
+  Decision** (authorized as next; not yet executed). The Foundation is closed with
+  notes; operating enablement is in place; the accessibility support baseline
+  (A11Y-BL-001) is defined (CDS-WP-010, pending commit, no evidence executed).
 
 ## Status of completed work packages
 
@@ -185,49 +185,79 @@ Documents:
 [Reference Integrity Review](../docs/reviews/FOUNDATION_REFERENCE_INTEGRITY_REVIEW.md) ·
 [Pre-Candidate Operating Plan](../docs/roadmap/PRE_CANDIDATE_OPERATING_PLAN.md)
 
-## Next work package — CDS-WP-010 (authorized)
+### CDS-WP-010 — Accessibility Support Baseline and Evidence Strategy — Completed
 
-The Foundation is **Closed with Notes**; operating enablement is in place; the
-Foundation reference integrity is reviewed; and the Critical Risks are
-operationalized. The next authorized work package is:
+Defined the first accessibility support baseline and its supporting policies using
+authorized official standards/vendor research — without running any test or
+selecting any tool:
 
-**CDS-WP-010 — Accessibility Support Baseline and Evidence Strategy.**
+- **A11Y-BL-001** ([Accessibility Support Baseline](../docs/governance/ACCESSIBILITY_SUPPORT_BASELINE.md)),
+  pending Human-Maintainer commit — a **test contract, not evidence**.
+- **Three tiers** (Required / Complementary / Scope-triggered) and a 14-entry
+  [Environment and Scope Matrix](../docs/governance/ACCESSIBILITY_ENVIRONMENT_AND_SCOPE_MATRIX.md)
+  (Required 6 · Conditional 4 · Deferred 4).
+- **Evidence Strategy** (AE-0…AE-4), **Maintenance Policy** (freshness + triggers +
+  six-month max gap), **Defect and Regression Model**, and a non-normative
+  **Evidence Record Template**.
+- Research evidence: **source register** (13 URLs opened; 9 usable) and **selection
+  rationale**.
 
-### Objective of CDS-WP-010
+Added DEC-S-065…072 and RISK-049…054; moved RISK-044 `Monitored → Mitigating`. **No
+test executed; every artifact AE-0; no environment claimed as supported; pilot
+inactive; publication state `Private Development`.** No Git write action was
+performed.
 
-- define the **accessibility support baseline** (browser / platform / input /
-  assistive-technology / language matrix) — the gate for AE-3 and Stable
-  (RISK-044);
-- define the **evidence scope** and **environment categories**;
-- define the **manual and assistive-technology evidence strategy**;
-- define the **regression strategy**;
-- define a **capacity-aware test matrix** sized to real maintainer capacity
-  (RISK-048).
+Documents:
+[Support Baseline](../docs/governance/ACCESSIBILITY_SUPPORT_BASELINE.md) ·
+[Environment Matrix](../docs/governance/ACCESSIBILITY_ENVIRONMENT_AND_SCOPE_MATRIX.md) ·
+[Maintenance Policy](../docs/governance/ACCESSIBILITY_BASELINE_MAINTENANCE_POLICY.md) ·
+[Evidence Strategy](../docs/governance/ACCESSIBILITY_EVIDENCE_STRATEGY.md) ·
+[Defect and Regression Model](../docs/governance/ACCESSIBILITY_DEFECT_AND_REGRESSION_MODEL.md) ·
+[Evidence Record Template](../docs/operations/ACCESSIBILITY_EVIDENCE_RECORD_TEMPLATE.md) ·
+[Source Register](../docs/research/ACCESSIBILITY_BASELINE_SOURCE_REGISTER.md) ·
+[Selection Rationale](../docs/research/ACCESSIBILITY_BASELINE_SELECTION_RATIONALE.md)
 
-### CDS-WP-010 explicitly establishes none of the following
+## Next work package — CDS-WP-011 (authorized)
 
-- no current accessibility conformance (a baseline is not a claim — DEC-S-050);
+The accessibility support baseline and evidence strategy exist (defined, pending
+commit; no evidence executed). The next authorized work package is:
+
+**CDS-WP-011 — Machine-Readable Source and Token Format Decision.**
+
+### Objective of CDS-WP-011
+
+- establish normative **machine-readable-source requirements**;
+- evaluate **token-format** options;
+- assess **interoperability**;
+- define **alias and reference validation**;
+- define **metadata and provenance** requirements;
+- define the **offline tooling boundary**;
+- prepare the corresponding **ADR/decision** input.
+
+### CDS-WP-011 explicitly establishes none of the following
+
+- no concrete design values, colours, typography, icons, or themes;
 - no Candidate or Stable artifact;
 - no CoreOps pilot start;
-- no design, token, component, colour, typography, icon, theme, tool, licence, or
-  publication decision.
+- no component work, licence, or publication decision.
 
 ### Still prohibited in the Pre-Candidate phase
 
 - concrete visual design; selecting colours, typography, icons, logos, or themes,
-- selecting a design tool, component framework, or token format,
 - implementing components or product code,
+- executing accessibility tests or asserting accessibility evidence (every artifact
+  is AE-0),
 - selecting a licence or approving publication,
 - claiming conformance, accessibility, adoption, or certification,
 - promoting any artifact to Candidate or Stable,
 - starting the CoreOps pilot,
 - modifying Skill files or consumer repositories,
-- creating a new work-package ID beyond CDS-WP-010 without Human-Maintainer
+- creating a new work-package ID beyond CDS-WP-011 without Human-Maintainer
   approval.
 
 ### Authorization note
 
-CDS-WP-010 is registered as `Next`; its execution requires an explicit work-package
+CDS-WP-011 is registered as `Next`; its execution requires an explicit work-package
 prompt from Nova and Human-Maintainer authorization. Registration is not execution.
 
 ## Related documents

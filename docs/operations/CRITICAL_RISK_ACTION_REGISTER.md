@@ -257,8 +257,12 @@ Titles are quoted from the committed [Risk Register](../risks/RISK_REGISTER.md).
 - **Next expected evidence:** this Critical Risk Action Register (executor,
   trigger, expected evidence, and blocking effect for all twelve critical risks —
   delivered by CDS-WP-009); subsequent evidence that risks drive decisions, not
-  only records.
-- **Affected upcoming work:** all critical-risk-bearing Elevated work; CDS-WP-010.
+  only records. **First follow-evidence delivered by CDS-WP-010:** RISK-044's
+  expected evidence (the Accessibility Support Baseline + Maintenance Policy) was
+  produced and RISK-044 moved to `Mitigating` — the register drove a real treatment,
+  not just a record.
+- **Affected upcoming work:** all critical-risk-bearing Elevated work; the first
+  Candidate slice.
 - **Blocking effect:** a critical risk lacking an executor, review trigger,
   expected evidence, and blocking effect blocks the affected Elevated work it
   bears on (DEC-S-064).
@@ -272,24 +276,32 @@ Titles are quoted from the committed [Risk Register](../risks/RISK_REGISTER.md).
 
 ### RISK-044 — Accessibility support baseline drift
 
-- **Current status:** Monitored
+- **Current status:** **Mitigating** *(changed from Monitored by CDS-WP-010)*
 - **Accountable owner:** Human Maintainer · **Risk Controller:** Nova
 - **Default Mitigation Executor role:** Claude as scoped executor (baseline and
   evidence-strategy documentation in CDS-WP-010); the baseline **decision** is the
   Human Maintainer's
 - **Evidence Reviewer:** Nova
-- **Next review trigger:** before any AE-3 evidence is accepted; at CDS-WP-010;
-  and on any baseline-composition change.
-- **Next expected evidence:** a **declared accessibility support baseline**
-  (browser / platform / input / assistive-technology / language matrix), approved
-  by the Human Maintainer.
-- **Affected upcoming work:** CDS-WP-010; every AE-3/Stable artifact; Pilot Group E.
-- **Blocking effect:** without a declared baseline, AE-3 and therefore **Stable
-  are unreachable** for any artifact with an accessibility obligation.
-- **Permitted status transition:** Monitored → Mitigating when CDS-WP-010 baseline
-  work is active.
-- **Notes:** accessibility evidence without a current declared baseline is
-  unverifiable.
+- **Next review trigger:** before Candidate/Stable/pilot/claim gates; on a Major
+  version or support-end change; on a critical regression; on a scope/Product-Profile
+  change; and at least every six months (DEC-S-070).
+- **Next expected evidence:** **delivered by CDS-WP-010** — the defined
+  [Accessibility Support Baseline](../governance/ACCESSIBILITY_SUPPORT_BASELINE.md)
+  (A11Y-BL-001), its
+  [Maintenance Policy](../governance/ACCESSIBILITY_BASELINE_MAINTENANCE_POLICY.md)
+  (freshness + triggers + six-month max gap), and the
+  [Evidence Strategy](../governance/ACCESSIBILITY_EVIDENCE_STRATEGY.md); next,
+  AE-1 + AE-2 for the first Candidate slice against the Required Tier-1 pairings.
+- **Affected upcoming work:** first Candidate slice; every AE-3/Stable artifact;
+  Pilot Group E.
+- **Blocking effect:** without a declared **current** baseline, AE-3 and therefore
+  **Stable are unreachable**; evidence against a `Stale`/`Unknown` baseline is not
+  current.
+- **Permitted status transition:** **Monitored → Mitigating — applied by CDS-WP-010**
+  (baseline defined, triggers set, six-month max gap, version/freshness bound, next
+  evidence artifact defined). Acceptance/closure by Human Maintainer only.
+- **Notes:** the baseline is a test contract, not evidence — every artifact remains
+  AE-0; A11Y-BL-001 is pending Human-Maintainer commit.
 
 ---
 
@@ -303,15 +315,20 @@ Titles are quoted from the committed [Risk Register](../risks/RISK_REGISTER.md).
   as executor; currently unstaffed — FM-F-006)
 - **Next review trigger:** at CDS-WP-010 (capacity-aware test matrix) and whenever
   evidence demand is planned for a Candidate/Stable artifact.
-- **Next expected evidence:** a capacity-aware evidence/test matrix; scope or
-  maturity chosen to fit capacity — never a weakened standard.
-- **Affected upcoming work:** CDS-WP-010; every accessibility-evidence effort;
-  first Candidate.
+- **Next expected evidence:** **partially delivered by CDS-WP-010** — a
+  capacity-aware three-tier baseline with a small, free-software-runnable Required set
+  and scope-triggered expansion (DEC-S-066, DEC-S-067) and the capacity-aware
+  [Evidence Strategy](../governance/ACCESSIBILITY_EVIDENCE_STRATEGY.md); next, an
+  execution plan that fits real slots (Execution Gaps closed) and scope/maturity
+  chosen to fit capacity — never a weakened standard.
+- **Affected upcoming work:** first Candidate; every accessibility-evidence effort;
+  Pilot Group E.
 - **Blocking effect:** missing capacity is a **planning limit, never a conformance
   justification** (DEC-S-059) — a capacity shortfall blocks the maturity or claim,
   not the standard.
-- **Permitted status transition:** Monitored → Mitigating when CDS-WP-010 capacity
-  planning is active.
+- **Permitted status transition:** Monitored → Mitigating when an authorized
+  execution effort is active (not applied by CDS-WP-010, which plans but runs no
+  evidence).
 - **Notes:** the realistic failure is a series of individually defensible
   compromises under deadline; the honest responses are smaller scope or lower
   maturity.
@@ -332,11 +349,21 @@ Titles are quoted from the committed [Risk Register](../risks/RISK_REGISTER.md).
 | RISK-031 | Nova | ✓ | ✓ | ✓ | Monitored |
 | RISK-038 | Human Maintainer | ✓ | ✓ | ✓ | Monitored |
 | RISK-040 | Nova | ✓ | ✓ | ✓ | **Mitigating** |
-| RISK-044 | Claude (scoped) | ✓ | ✓ | ✓ | Monitored |
+| RISK-044 | Claude (scoped) | ✓ | ✓ | ✓ | **Mitigating** |
 | RISK-048 | Nova | ✓ | ✓ | ✓ | Monitored |
 
 **All twelve** carry a named executor role, a review trigger, expected evidence,
-and a blocking effect.
+and a blocking effect. **Two are now `Mitigating`** — RISK-040 (CDS-WP-009) and
+RISK-044 (CDS-WP-010); the other ten remain `Monitored`.
+
+## New risks from CDS-WP-010 (not auto-added to the Critical group)
+
+CDS-WP-010 registered **RISK-049 … RISK-054** (accessibility baseline
+representativeness, baseline-as-universal-support, environment-availability mismatch,
+evidence-identity incompleteness, regression-coverage gap, defect normalization), all
+`Monitored`. They are **not** added to this Critical-Risk group by CDS-WP-010; a later
+Nova review decides their prioritization. They are governed under the standard
+finalized risk role model in the [Risk Register](../risks/RISK_REGISTER.md).
 
 ## RISK-040 gate — evaluated and met
 

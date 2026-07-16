@@ -6,7 +6,7 @@
 > it never defines. Where it disagrees with a normative source, the normative
 > source wins and this pack is wrong and must be corrected.
 
-- **Maintained by:** CDS-WP-009
+- **Maintained by:** CDS-WP-010
 - **Date:** 2026-07-16
 
 ## Project identity
@@ -23,10 +23,12 @@ Pre-Candidate Operating Enablement — **Foundation / Pre-Design: Closed with
 Notes** (CDS-WP-009; DEC-S-061, DEC-S-062).
 
 Governance, scope, architecture, requirements, and accessibility policy are
-established; the Foundation is closed with mandatory notes and the committed
-governance is now operationalized. Concrete visual or technical design decisions
-remain unauthorized (DEC-S-003). The next work package is **CDS-WP-010 —
-Accessibility Support Baseline and Evidence Strategy**.
+established; the Foundation is closed with mandatory notes; the committed governance
+is operationalized; and the accessibility support baseline **A11Y-BL-001** is defined
+(CDS-WP-010, pending commit, **no evidence executed — every artifact AE-0**).
+Concrete visual or technical design decisions remain unauthorized (DEC-S-003). The
+next work package is **CDS-WP-011 — Machine-Readable Source and Token Format
+Decision**.
 
 ## Completed work packages
 
@@ -41,7 +43,8 @@ Accessibility Support Baseline and Evidence Strategy**.
 | CDS-WP-006 | Governance, Versioning, Contribution, Risk and Publication Model | Six roles, two tracks; conflict resolution; 7 maturity states; versioning + 8 compatibility axes; deprecation; contribution; exceptions and profiles; 4 claim types; **risk ownership finalized**; 5 publication states; licensing per 10 classes; release control. DEC-S-033…048; RISK-029…040. **No licence, publication, technology, or design selected.** |
 | CDS-WP-007 | Accessibility and Inclusive Design Policy | Target **WCAG 2.2 Level AA** for the applicable web scope (CR-024 resolved at policy level); target-is-not-claim rule; A/AA applicability matrix (56 listed / 55 applicable); shared responsibility (49/55 need both sides); 5 evidence levels AE-0…AE-4; 6 channel profiles; limitations and exception policy; CoreOps pilot criterion. DEC-S-049…060; RISK-041…048. **Nothing tested — every artifact AE-0; no claim; publication state unchanged.** |
 | CDS-WP-008 | Foundation Milestone Review | Reviewed the Foundation across 12 dimensions (55 criteria), 3 governance dry runs, 4-axis Candidate readiness, 8-criterion pilot entry matrix, all 48 risks. **0 Foundation blockers**; recommended outcome **GO WITH NOTES**; 12 findings (FM-F-001…012). **No normative source changed; no Decision/Risk/ADR/WP-ID created; no artifact promoted; publication state unchanged.** Non-normative review evidence in `docs/reviews/`. |
-| CDS-WP-009 | Operating Enablement and Pre-Candidate Readiness | Recorded **Foundation closure with notes** (accepted by the Human Maintainer); operationalized governance without any design/token/component/tool. Created the Closure Record (normative on closure/authority/phase), Operating Playbook, Standard + Elevated dossier templates, Critical Risk Action Register (12 risks actionable), Reference Integrity Review (PASS), and Pre-Candidate Operating Plan. DEC-S-061…064 added; RISK-040 `Monitored → Mitigating` (only status change; no acceptance/closure). **No artifact promoted; publication state `Private Development`; CDS-WP-010 registered Next.** |
+| CDS-WP-009 | Operating Enablement and Pre-Candidate Readiness | Recorded **Foundation closure with notes** (accepted by the Human Maintainer); operationalized governance without any design/token/component/tool. Created the Closure Record (normative on closure/authority/phase), Operating Playbook, Standard + Elevated dossier templates, Critical Risk Action Register (12 risks actionable), Reference Integrity Review (PASS), and Pre-Candidate Operating Plan. DEC-S-061…064 added; RISK-040 `Monitored → Mitigating` (only status change; no acceptance/closure). **No artifact promoted; publication state `Private Development`.** |
+| CDS-WP-010 | Accessibility Support Baseline and Evidence Strategy | Defined **A11Y-BL-001** (pending commit) via authorized official research — 3 tiers, 14-entry environment matrix (Required 6 · Conditional 4 · Deferred 4), evidence strategy (AE-0…AE-4), maintenance policy (freshness + triggers + 6-month max gap), defect/regression model, evidence record template, source register + selection rationale. DEC-S-065…072 added; RISK-049…054 added; RISK-044 `Monitored → Mitigating`. **A test contract, not evidence — no test run, every artifact AE-0, no environment claimed supported, pilot inactive, publication `Private Development`. CDS-WP-011 registered Next.** |
 
 ## Normative source map
 
@@ -69,6 +72,11 @@ Read the source, not this summary, when the detail matters.
 | Licensing and publication | [docs/governance/LICENSING_AND_PUBLICATION_DECISION_MODEL.md](../docs/governance/LICENSING_AND_PUBLICATION_DECISION_MODEL.md) |
 | Release and change control | [docs/governance/RELEASE_AND_CHANGE_CONTROL_POLICY.md](../docs/governance/RELEASE_AND_CHANGE_CONTROL_POLICY.md) |
 | **Foundation closure (closure/authority/phase)** | [docs/governance/FOUNDATION_CLOSURE_RECORD.md](../docs/governance/FOUNDATION_CLOSURE_RECORD.md) |
+| **Accessibility support baseline (A11Y-BL-001)** | [docs/governance/ACCESSIBILITY_SUPPORT_BASELINE.md](../docs/governance/ACCESSIBILITY_SUPPORT_BASELINE.md) |
+| Accessibility environment/scope matrix | [docs/governance/ACCESSIBILITY_ENVIRONMENT_AND_SCOPE_MATRIX.md](../docs/governance/ACCESSIBILITY_ENVIRONMENT_AND_SCOPE_MATRIX.md) |
+| Accessibility baseline maintenance | [docs/governance/ACCESSIBILITY_BASELINE_MAINTENANCE_POLICY.md](../docs/governance/ACCESSIBILITY_BASELINE_MAINTENANCE_POLICY.md) |
+| Accessibility evidence strategy | [docs/governance/ACCESSIBILITY_EVIDENCE_STRATEGY.md](../docs/governance/ACCESSIBILITY_EVIDENCE_STRATEGY.md) |
+| Accessibility defect/regression model | [docs/governance/ACCESSIBILITY_DEFECT_AND_REGRESSION_MODEL.md](../docs/governance/ACCESSIBILITY_DEFECT_AND_REGRESSION_MODEL.md) |
 | **Logical architecture** | [docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md](../docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md) |
 | Artifact classes and authority | [docs/architecture/SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md](../docs/architecture/SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md) |
 | Token flow and theming | [docs/architecture/TOKEN_AND_THEME_ARCHITECTURE.md](../docs/architecture/TOKEN_AND_THEME_ARCHITECTURE.md) |
@@ -104,7 +112,7 @@ and reference the normative policies; they do not replace them (DEC-S-063):
 
 ## Active decisions
 
-- Range: DEC-S-001 … DEC-S-064 · Count: 64 · All Accepted
+- Range: DEC-S-001 … DEC-S-072 · Count: 72 · All Accepted
 - DEC-S-001…006: strategic foundation decisions (CDS-WP-001)
 - DEC-S-007…012: strategic scope decisions (CDS-WP-002)
 - DEC-S-013…020: consumer and pilot scope decisions (CDS-WP-004)
@@ -115,6 +123,8 @@ and reference the normative policies; they do not replace them (DEC-S-063):
   DEC-S-001…048 unchanged
 - DEC-S-061…064: operating enablement and pre-candidate decisions (CDS-WP-009) —
   DEC-S-001…060 unchanged
+- DEC-S-065…072: accessibility support baseline and evidence decisions (CDS-WP-010)
+  — DEC-S-001…064 unchanged
 - No ADR files exist.
 
 | ID | Summary |
@@ -183,10 +193,18 @@ and reference the normative policies; they do not replace them (DEC-S-063):
 | DEC-S-062 | First post-Foundation phase is Pre-Candidate Operating Enablement; it precedes the first design Candidate. |
 | DEC-S-063 | Operating playbooks and dossiers are non-normative; they may reduce ceremony but never obligation. |
 | DEC-S-064 | Critical risks affecting Elevated work need an executor role, review trigger, expected evidence, and blocking effect first. |
+| DEC-S-065 | The Accessibility Support Baseline defines what future evidence targets; it is not evidence, support, or a claim. |
+| DEC-S-066 | Three accessibility baseline tiers (Required / Complementary / Scope-triggered). |
+| DEC-S-067 | The Required Core Baseline: keyboard, Windows 11, Chromium + Firefox, a no-cost screenreader, ≥2 pairings, zoom/reflow, text spacing, forced-colors, reduced motion, accessible status, DE/EN. |
+| DEC-S-068 | Product-family baseline vs exact evidence identity are separate; `current`/`latest` is not an identity. |
+| DEC-S-069 | Complementary/mobile coverage is scope-triggered; undeclared environments are not supported. |
+| DEC-S-070 | Baseline freshness reviewed on gate/version/lifecycle/regression/scope triggers and ≥ every six months. |
+| DEC-S-071 | Evidence recorded through immutable, bound, reviewer-identified records; templates/automation/single passes are not global evidence. |
+| DEC-S-072 | Accessibility defects/regressions classified separately from risk; Blocking/High regressions block Stable and claims. |
 
 ## Active risks
 
-- Range: RISK-001 … RISK-048 · Count: 48 · **47 Monitored, RISK-040 Mitigating**
+- Range: RISK-001 … RISK-054 · Count: 54 · **52 Monitored, RISK-040 + RISK-044 Mitigating**
 - **Owner model finalized** (DEC-S-045): Accountable Risk Owner — Human
   Maintainer · Risk Controller — Nova · Mitigation Executor — named per
   mitigation · Evidence Reviewer — Nova or authorized reviewer (never the executor).
@@ -194,7 +212,9 @@ and reference the normative policies; they do not replace them (DEC-S-063):
 - RISK-041…048 (accessibility) added by CDS-WP-007. **CDS-WP-009 moved RISK-040
   `Monitored → Mitigating`** via the
   [Critical Risk Action Register](../docs/operations/CRITICAL_RISK_ACTION_REGISTER.md)
-  (12 Critical Risks made actionable; DEC-S-064); no risk accepted or closed.
+  (12 Critical Risks made actionable; DEC-S-064). **CDS-WP-010 added RISK-049…054**
+  (all Monitored) and moved **RISK-044 `Monitored → Mitigating`** (A11Y-BL-001
+  defined). No risk accepted or closed.
 
 | ID | Summary |
 | --- | --- |
@@ -246,6 +266,12 @@ and reference the normative policies; they do not replace them (DEC-S-063):
 | RISK-046 | Non-web channel accessibility gap. |
 | RISK-047 | Inclusive-design undercoverage. |
 | RISK-048 | Accessibility evidence burden. |
+| RISK-049 | Accessibility baseline representativeness gap. |
+| RISK-050 | Baseline interpreted as universal support. |
+| RISK-051 | Environment availability mismatch. |
+| RISK-052 | Evidence identity incompleteness. |
+| RISK-053 | Regression coverage gap. |
+| RISK-054 | Accessibility defect normalization. |
 
 ## Approved strategic principles
 
@@ -584,6 +610,7 @@ Review docs: [Milestone Review](../docs/reviews/FOUNDATION_MILESTONE_REVIEW.md) 
 Foundation closure and the next phase were subsequently **decided**: the Human
 Maintainer accepted `GO WITH NOTES` (commit of CDS-WP-008 + initiation of
 CDS-WP-009). **Foundation: Closed with Notes.** Operating enablement is in place
-(CDS-WP-009); the next authorized work package is **CDS-WP-010 — Accessibility
-Support Baseline and Evidence Strategy**. See the
+(CDS-WP-009), and the accessibility support baseline A11Y-BL-001 is defined
+(CDS-WP-010, pending commit, no evidence executed); the next authorized work package
+is **CDS-WP-011 — Machine-Readable Source and Token Format Decision**. See the
 [Foundation Closure Record](../docs/governance/FOUNDATION_CLOSURE_RECORD.md).

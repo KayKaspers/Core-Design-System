@@ -5,9 +5,9 @@ Controlled work-package roadmap for the Core Design System (CDS).
 - **Phase:** Pre-Candidate Operating Enablement — **Foundation / Pre-Design:
   Closed with Notes**
 - **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009
-- **Next work package:** **CDS-WP-010 — Accessibility Support Baseline and
-  Evidence Strategy** (authorized as the next work package; not yet executed)
+  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010
+- **Next work package:** **CDS-WP-011 — Machine-Readable Source and Token Format
+  Decision** (authorized as the next work package; not yet executed)
 
 ## Status values
 
@@ -31,11 +31,13 @@ Controlled work-package roadmap for the Core Design System (CDS).
 | CDS-WP-007 | Accessibility and Inclusive Design Policy | Completed | CDS-WP-005 |
 | CDS-WP-008 | Foundation Milestone Review | Completed | CDS-WP-006, CDS-WP-007 |
 | CDS-WP-009 | Operating Enablement and Pre-Candidate Readiness | Completed | CDS-WP-008 |
-| CDS-WP-010 | Accessibility Support Baseline and Evidence Strategy | Next | CDS-WP-009 |
+| CDS-WP-010 | Accessibility Support Baseline and Evidence Strategy | Completed | CDS-WP-009 |
+| CDS-WP-011 | Machine-Readable Source and Token Format Decision | Next | CDS-WP-010 |
 
-**CDS-WP-010 is authorized as the next Work Package.** The Foundation is closed
-with notes (CDS-WP-009); the Pre-Candidate Operating Enablement phase is active.
-CDS-WP-010 is registered as `Next` and is not yet executed. No further
+**CDS-WP-011 is authorized as the next Work Package.** The Foundation is closed
+with notes; the Pre-Candidate Operating Enablement phase is active; the accessibility
+support baseline (A11Y-BL-001) is defined (CDS-WP-010, pending commit, no evidence
+executed). CDS-WP-011 is registered as `Next` and is not yet executed. No further
 work-package ID is created.
 
 ## Descriptions
@@ -176,14 +178,34 @@ or release created; publication state remains `Private Development`.**
 
 ### CDS-WP-010 — Accessibility Support Baseline and Evidence Strategy
 
+**Status:** Completed
+
+Defined the first accessibility support baseline (**A11Y-BL-001**, pending commit)
+and its supporting policies, using authorized official standards/vendor research —
+three tiers (Required/Complementary/Scope-triggered), a 14-entry
+[Environment and Scope Matrix](../docs/governance/ACCESSIBILITY_ENVIRONMENT_AND_SCOPE_MATRIX.md),
+an [Evidence Strategy](../docs/governance/ACCESSIBILITY_EVIDENCE_STRATEGY.md)
+operationalizing AE-0…AE-4, a
+[Maintenance Policy](../docs/governance/ACCESSIBILITY_BASELINE_MAINTENANCE_POLICY.md)
+(freshness + triggers + six-month max gap), a
+[Defect and Regression Model](../docs/governance/ACCESSIBILITY_DEFECT_AND_REGRESSION_MODEL.md),
+a non-normative [Evidence Record Template](../docs/operations/ACCESSIBILITY_EVIDENCE_RECORD_TEMPLATE.md),
+and research evidence (source register + selection rationale). Added DEC-S-065…072
+and RISK-049…054; moved RISK-044 `Monitored → Mitigating`. **No test was run, no tool
+selected, every artifact remains AE-0, no environment is claimed as supported, the
+CoreOps pilot stays inactive, and the publication state remains `Private
+Development`.**
+
+### CDS-WP-011 — Machine-Readable Source and Token Format Decision
+
 **Status:** Next
 
-Will define the accessibility support baseline, the evidence scope, environment
-categories, the manual/assistive-technology evidence strategy, the regression
-strategy, and a capacity-aware test matrix. It establishes **no current
-conformance, no Candidate, no pilot start, and no design or token work**. Not yet
-executed; begins only on an explicit Nova prompt and Human-Maintainer
-authorization.
+Will establish normative machine-readable-source requirements and evaluate
+token-format options against interoperability, alias/reference validation, metadata
+and provenance, and the offline tooling boundary, preparing the corresponding
+decision. It creates **no concrete design values, no Candidate, no pilot start, and
+no component work**. Not yet executed; begins only on an explicit Nova prompt and
+Human-Maintainer authorization.
 
 ## Roadmap evolution
 

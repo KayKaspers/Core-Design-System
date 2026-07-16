@@ -11,8 +11,8 @@ authorized work packages.
 
 ## Register scope
 
-- Decision range: DEC-S-001 … DEC-S-064
-- Number of decisions: 64
+- Decision range: DEC-S-001 … DEC-S-072
+- Number of decisions: 72
 - Decision record format: index entries only; no ADR files exist in this phase.
 
 ## Decision types
@@ -26,6 +26,7 @@ authorized work packages.
 | Governance, lifecycle and publication decision | DEC-S-033 … DEC-S-048 | CDS-WP-006 | Roles, conflict resolution, maturity, versioning, contribution, exceptions, claims, risk ownership, publication, licensing, release control. |
 | Accessibility and inclusive design decision | DEC-S-049 … DEC-S-060 | CDS-WP-007 | Accessibility target, target-versus-claim boundary, evidence levels, responsibility split, tooling limits, source authority, inclusive design, status truth, legal boundary, channel profiles, exception limit, CR-024 resolution. |
 | Operating enablement and pre-candidate decision | DEC-S-061 … DEC-S-064 | CDS-WP-009 | Foundation closure with notes, the Pre-Candidate phase, non-normativity of operating views, and critical-risk actionability before Elevated work. |
+| Accessibility support baseline and evidence decision | DEC-S-065 … DEC-S-072 | CDS-WP-010 | Support baseline as a test contract not evidence, three baseline tiers, the Required Core Baseline, family-vs-execution identity, scope-triggered coverage, freshness review, immutable evidence records, and defect/regression classification. |
 
 None of these types is an implementation decision. Logical architecture decisions
 define structure, responsibility, and flow — they select no technology, format,
@@ -2272,3 +2273,266 @@ control, without pretending that naming an executor is itself a mitigation.
   risk is accepted or closed, and only the Human Maintainer may do either.
 - Elevated work bearing on a critical risk that lacks the four attributes is
   blocked until they exist. Documentation is not mitigation (DEC-S-045).
+
+---
+
+## DEC-S-065 — The Accessibility Support Baseline defines what future evidence targets
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Accessibility support baseline and evidence decision
+- **Work package:** CDS-WP-010
+
+### Decision
+
+The CDS Accessibility Support Baseline defines the environments against which
+future evidence is planned and evaluated.
+
+The baseline is not itself evidence, a support guarantee, or a conformance claim.
+
+### Rationale
+
+AE-3 and therefore Stable are unreachable without a declared support baseline
+(RISK-044, FM-F-001). But a baseline is a *test contract*: naming the environments
+future evidence will target says nothing about whether anything has been tested or
+works. Conflating the baseline with evidence would manufacture the appearance of
+accessibility from a planning document.
+
+### Consequences
+
+- [Accessibility Support Baseline](../governance/ACCESSIBILITY_SUPPORT_BASELINE.md)
+  (A11Y-BL-001) is normative for Required/Complementary/Scope-triggered environments,
+  pending Human-Maintainer commit.
+- Listing an environment is never a statement that CDS works in or supports it.
+- Every CDS artifact remains AE-0; no support or conformance claim is valid.
+
+---
+
+## DEC-S-066 — Three accessibility baseline tiers
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Accessibility support baseline and evidence decision
+- **Work package:** CDS-WP-010
+
+### Decision
+
+CDS uses three accessibility baseline tiers:
+
+- Required Core Baseline,
+- Complementary Coverage,
+- Scope-triggered Coverage.
+
+Tier assignment is governed by declared scope, risk, consumer requirements, and
+maintainer capacity.
+
+### Rationale
+
+A single flat "supported environments" list either over-commits a small team or
+under-covers real needs. Tiering separates what must always be evidenced (small,
+executable) from what becomes mandatory only when scope, a contract, a profile, or
+risk requires it — keeping the obligation honest and affordable (RISK-048,
+RISK-049).
+
+### Consequences
+
+- Tier 1 is mandatory for interactive desktop-web Candidate/Stable evidence in the
+  declared scope; Tier 2 and Tier 3 are trigger-bound.
+- Environment assignment is recorded in the
+  [Environment and Scope Matrix](../governance/ACCESSIBILITY_ENVIRONMENT_AND_SCOPE_MATRIX.md).
+- Undeclared Tier-2/Tier-3 environments are not represented as supported.
+
+---
+
+## DEC-S-067 — The Required Core Baseline composition
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Accessibility support baseline and evidence decision
+- **Work package:** CDS-WP-010
+
+### Decision
+
+The Required Core Baseline for interactive desktop-web Candidate evidence covers
+keyboard-only operation, at least one supported desktop operating-system family,
+Chromium and Firefox browser families, at least one no-cost desktop screenreader
+family, at least two browser/screenreader pairings, zoom and reflow, text spacing,
+forced-colors or high-contrast behavior where available, reduced motion, accessible
+dynamic status communication, and DE/EN scope.
+
+### Rationale
+
+This is the smallest set that exercises two rendering engines and a real
+screen reader on a supported OS while remaining runnable with free software, so
+capacity pressure cannot force a shortcut (RISK-048, DEC-S-059). The composition is
+justified by official current-support sources, not popularity (RISK-011).
+
+### Consequences
+
+- Required holds no more than three screen-reader/browser pairings unless
+  consumer/risk evidence justifies expansion.
+- No local execution availability is invented; missing capability is an Execution
+  Gap (RISK-051).
+- Concrete Required environments are A11Y-ENV-001 … A11Y-ENV-006.
+
+---
+
+## DEC-S-068 — Product-family baseline and exact evidence identity are separate
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Accessibility support baseline and evidence decision
+- **Work package:** CDS-WP-010
+
+### Decision
+
+Product-family baseline rules and concrete evidence execution identities are
+separate.
+
+Every evidence record must bind exact operating-system, browser, renderer,
+assistive-technology, artifact, consumer, CDS, language, channel, and date
+information.
+
+### Rationale
+
+Browsers and assistive technology release rapidly (official rolling/rapid-release
+cadences), so a family-level baseline must be allowed to roll while each piece of
+evidence stays immutable and reproducible. Evidence that only says `current` or
+`latest` is irreproducible and misleading (RISK-052).
+
+### Consequences
+
+- The baseline may use a rolling family policy; produced evidence is immutable and
+  version-bound.
+- `current` / `latest` / `supported` alone is not an evidence identity.
+- The [Evidence Record](../operations/ACCESSIBILITY_EVIDENCE_RECORD_TEMPLATE.md)
+  binds exact versions.
+
+---
+
+## DEC-S-069 — Complementary and mobile coverage is scope-triggered
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Accessibility support baseline and evidence decision
+- **Work package:** CDS-WP-010
+
+### Decision
+
+Complementary and mobile accessibility coverage becomes mandatory only when the
+declared scope, Product Profile, Consumer Contract, claim, or documented risk
+requires it.
+
+Undeclared environments must not be represented as supported.
+
+### Rationale
+
+A small team cannot evidence every platform at once; forcing all environments into
+Required would either exceed capacity or produce shallow evidence. Coverage must
+follow declared scope and real triggers, and the silence about untested
+environments must never read as support (RISK-049, RISK-050).
+
+### Consequences
+
+- Apple/WebKit, JAWS, Narrator, alternative input (Tier 2) and mobile/touch,
+  further languages, enterprise environments (Tier 3) are trigger-bound.
+- A consumer may declare additional environments for their evidence but may not
+  narrow the CDS Required baseline for a shared artifact.
+
+---
+
+## DEC-S-070 — Baseline freshness is reviewed on triggers and at least six-monthly
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Accessibility support baseline and evidence decision
+- **Work package:** CDS-WP-010
+
+### Decision
+
+Accessibility baseline freshness is reviewed before Candidate, Stable, pilot, and
+claim gates and after relevant version, lifecycle, regression, scope, or
+Product-Profile changes.
+
+The baseline must also receive a review at least every six months.
+
+### Rationale
+
+Evidence gathered against an old combination becomes quietly false as browsers and
+assistive technology change (RISK-044). A trigger-based review keeps evidence honest;
+the six-month interval is a maximum gap so a quiet baseline is still revisited.
+
+### Consequences
+
+- Freshness states: Current, Review due, Stale, Superseded, Unknown; `Unknown`/
+  `Stale` evidence is not current and passes no gate.
+- The six-month rule is a maximum review gap, not blanket re-testing without cause.
+- Governed by the
+  [Baseline Maintenance Policy](../governance/ACCESSIBILITY_BASELINE_MAINTENANCE_POLICY.md).
+
+---
+
+## DEC-S-071 — Evidence is recorded through immutable, bound evidence records
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Accessibility support baseline and evidence decision
+- **Work package:** CDS-WP-010
+
+### Decision
+
+Accessibility evidence is recorded through immutable, scope-bound, revision-bound,
+environment-bound, and reviewer-identified evidence records.
+
+Templates, plans, automated results, and single-environment passes do not create
+global evidence or claims.
+
+### Rationale
+
+Reproducible, reviewer-identified records are what let a reviewer check evidence
+rather than trust an assertion, and what stop a single green result from being read
+as a global claim (RISK-052, DEC-S-044). A template is not evidence; an automated
+result is input to review, not the review (DEC-S-053).
+
+### Consequences
+
+- The [Evidence Record Template](../operations/ACCESSIBILITY_EVIDENCE_RECORD_TEMPLATE.md)
+  is a non-normative operational form; a filled record is evidence only for its
+  exact environment identity.
+- The Evidence Reviewer is never the executor or the artifact (DEC-S-045).
+- No numeric accessibility score; `Not tested` is never read as `Passed`.
+
+---
+
+## DEC-S-072 — Accessibility defects and regressions are classified separately
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Accessibility support baseline and evidence decision
+- **Work package:** CDS-WP-010
+
+### Decision
+
+Accessibility defects and regressions are classified separately from risk severity
+and remain traceable to requirements, environments, evidence, scope, maturity, and
+claim effects.
+
+Blocking or High regressions block Stable and claims for the affected scope.
+
+### Rationale
+
+Regressions defeat past evidence: an artifact can keep old evidence while no longer
+holding the property (RISK-045). Classifying defects on their own scale — separate
+from project risk severity — and binding them to consequences prevents barriers from
+being normalized or averaged away (RISK-054).
+
+### Consequences
+
+- Four impact levels (Blocking, High, Medium, Low) and six defect statuses;
+  `Accepted limitation` requires Human-Maintainer decision and stays visible in
+  claims.
+- Blocking/High regressions block Stable, pilot/consumer evidence, claims, and
+  "unchanged-compatible" distribution for the affected scope.
+- Governed by the
+  [Defect and Regression Model](../governance/ACCESSIBILITY_DEFECT_AND_REGRESSION_MODEL.md);
+  no defect is registered today (AE-0).

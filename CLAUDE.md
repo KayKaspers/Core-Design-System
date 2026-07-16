@@ -25,12 +25,17 @@ library, or a design project scoped exclusively to CoreOps.
   publication status.
 - First reference consumer: CoreOps (not the sole design target)
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009
-- Next work package: **CDS-WP-010 — Accessibility Support Baseline and Evidence
-  Strategy** (authorized as next; **not yet executed**). It defines the
-  accessibility support baseline and evidence strategy only; it starts no design,
-  token, Candidate, pilot, licence, or publication work. Execution begins only on
-  an explicit Nova prompt and Human-Maintainer authorization.
+  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010
+- Accessibility support baseline: **A11Y-BL-001 defined** (CDS-WP-010, pending
+  commit) — a **test contract, not evidence**; **no test has been run and every
+  artifact is AE-0** (see the
+  [Accessibility Support Baseline](docs/governance/ACCESSIBILITY_SUPPORT_BASELINE.md)).
+- Next work package: **CDS-WP-011 — Machine-Readable Source and Token Format
+  Decision** (authorized as next; **not yet executed**). It establishes
+  machine-readable-source requirements and evaluates token formats only; it creates
+  no concrete design values, Candidate, pilot, component, licence, or publication.
+  Execution begins only on an explicit Nova prompt and Human-Maintainer
+  authorization.
 
 ## Execution environment
 
@@ -197,6 +202,10 @@ Before beginning a work package, inspect at minimum:
 - [docs/operations/FOUNDATION_OPERATING_PLAYBOOK.md](docs/operations/FOUNDATION_OPERATING_PLAYBOOK.md)
   — **non-normative** operative entry aid for running a single change end to end;
   it references the normative policies and never overrides them
+- [docs/governance/ACCESSIBILITY_SUPPORT_BASELINE.md](docs/governance/ACCESSIBILITY_SUPPORT_BASELINE.md)
+  — normative source for the accessibility support baseline (A11Y-BL-001); entry
+  point to the environment matrix, evidence strategy, maintenance policy, and
+  defect/regression model
 - [docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md](docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md)
   — normative source for the logical architecture; entry point to the
   architecture documents
@@ -362,6 +371,30 @@ and
   [Accessibility Standard Status and Limitations](docs/research/ACCESSIBILITY_STANDARD_STATUS_AND_LIMITATIONS.md)).
 - Claude promotes no artifact to Candidate or Stable, and starts no CoreOps pilot,
   on accessibility grounds or any other.
+
+### Accessibility support baseline (A11Y-BL-001, CDS-WP-010)
+
+- The **normative baseline source** is the
+  [Accessibility Support Baseline](docs/governance/ACCESSIBILITY_SUPPORT_BASELINE.md)
+  (A11Y-BL-001), with its
+  [Environment and Scope Matrix](docs/governance/ACCESSIBILITY_ENVIRONMENT_AND_SCOPE_MATRIX.md),
+  [Evidence Strategy](docs/governance/ACCESSIBILITY_EVIDENCE_STRATEGY.md),
+  [Maintenance Policy](docs/governance/ACCESSIBILITY_BASELINE_MAINTENANCE_POLICY.md),
+  and [Defect and Regression Model](docs/governance/ACCESSIBILITY_DEFECT_AND_REGRESSION_MODEL.md).
+- **A baseline is not evidence** (DEC-S-065). Declaring A11Y-BL-001 records what
+  future evidence will target; it establishes nothing. **Every artifact is AE-0.**
+  Listing an environment is never a statement that CDS supports it.
+- **Exact versions are required** (DEC-S-068, DEC-S-071): every evidence run binds
+  exact OS/browser/renderer/assistive-technology/artifact/consumer/CDS/language/
+  channel/date via the
+  [Evidence Record Template](docs/operations/ACCESSIBILITY_EVIDENCE_RECORD_TEMPLATE.md);
+  `current`/`latest` is not an identity.
+- **Freshness gates evidence** (DEC-S-070): `Unknown`/`Stale` evidence is not
+  current and passes no gate; review on gate/version/lifecycle/regression/scope
+  triggers and at least every six months.
+- **No test execution without an explicit prompt.** Claude runs no accessibility
+  test, installs no browser/screen reader/tool, selects no tool, and asserts no
+  evidence. A11Y-BL-001 is pending Human-Maintainer commit.
 
 ## Risk roles
 

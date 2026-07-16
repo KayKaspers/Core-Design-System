@@ -24,9 +24,12 @@ committed governance is now operationalized for daily use. A lightweight
 [Elevated](docs/operations/ELEVATED_CHANGE_DOSSIER_TEMPLATE.md) change-dossier
 templates exist, and the twelve Critical Risks are made actionable in a
 [Critical Risk Action Register](docs/operations/CRITICAL_RISK_ACTION_REGISTER.md).
-**No Candidate or Stable artifact exists, no claim is valid, no licence is
-selected, and the publication state remains `Private Development`.** The next work
-package is **CDS-WP-010 — Accessibility Support Baseline and Evidence Strategy**.
+The first **accessibility support baseline** (A11Y-BL-001) is now **defined**
+(CDS-WP-010, pending commit) — a **test contract, not evidence**. **No accessibility
+test has been run, every artifact is AE-0, no environment is claimed as supported,
+no Candidate or Stable artifact exists, no claim is valid, no licence is selected,
+and the publication state remains `Private Development`.** The next work package is
+**CDS-WP-011 — Machine-Readable Source and Token Format Decision**.
 
 The project does not yet produce visual design.
 
@@ -290,7 +293,10 @@ themselves.
 
 **Five evidence levels** — AE-0 (not assessed) through AE-4 (consumer complete
 process). Automated checking alone is never sufficient; AE-3 requires a declared
-support baseline, which does not yet exist.
+support baseline — now **defined** as **A11Y-BL-001** (CDS-WP-010, pending commit):
+three tiers, a 14-entry environment matrix, an evidence strategy, a maintenance
+policy, and a defect/regression model. The baseline is a **test contract, not
+evidence** — **no test has been run and every artifact remains AE-0**.
 
 **Six channel profiles** — only web UI and web documentation carry a WCAG target;
 non-web channels each need their own profile and are never presented as WCAG
@@ -308,6 +314,11 @@ certification statement.
 - [Accessibility Limitations and Exception Policy](docs/governance/ACCESSIBILITY_LIMITATIONS_AND_EXCEPTION_POLICY.md)
 - [CoreOps Pilot Accessibility Criterion](docs/governance/COREOPS_PILOT_ACCESSIBILITY_CRITERION.md)
 - [Accessibility Architecture Alignment](docs/architecture/ACCESSIBILITY_ARCHITECTURE_ALIGNMENT.md)
+- [Accessibility Support Baseline (A11Y-BL-001)](docs/governance/ACCESSIBILITY_SUPPORT_BASELINE.md)
+- [Accessibility Environment and Scope Matrix](docs/governance/ACCESSIBILITY_ENVIRONMENT_AND_SCOPE_MATRIX.md)
+- [Accessibility Baseline Maintenance Policy](docs/governance/ACCESSIBILITY_BASELINE_MAINTENANCE_POLICY.md)
+- [Accessibility Evidence Strategy](docs/governance/ACCESSIBILITY_EVIDENCE_STRATEGY.md)
+- [Accessibility Defect and Regression Model](docs/governance/ACCESSIBILITY_DEFECT_AND_REGRESSION_MODEL.md)
 
 ## Work packages
 
@@ -321,7 +332,8 @@ certification statement.
 - **Completed:** CDS-WP-007 — Accessibility and Inclusive Design Policy
 - **Completed:** CDS-WP-008 — Foundation Milestone Review
 - **Completed:** CDS-WP-009 — Operating Enablement and Pre-Candidate Readiness
-- **Next:** **CDS-WP-010 — Accessibility Support Baseline and Evidence Strategy**
+- **Completed:** CDS-WP-010 — Accessibility Support Baseline and Evidence Strategy
+- **Next:** **CDS-WP-011 — Machine-Readable Source and Token Format Decision**
   (authorized; not yet executed)
 
 The full controlled roadmap is in
@@ -358,13 +370,14 @@ phase.
 
 ## Registers
 
-- Decisions: DEC-S-001 … DEC-S-064 (64) — 6 strategic foundation decisions,
+- Decisions: DEC-S-001 … DEC-S-072 (72) — 6 strategic foundation decisions,
   6 strategic scope decisions, 8 consumer and pilot scope decisions,
   12 logical architecture decisions, 16 governance, lifecycle and publication
   decisions, 12 accessibility and inclusive design decisions, 4 operating
-  enablement and pre-candidate decisions
-- Risks: RISK-001 … RISK-048 (48) — 47 Monitored, RISK-040 Mitigating; owner
-  model finalized; no risk accepted or closed
+  enablement and pre-candidate decisions, 8 accessibility support baseline and
+  evidence decisions
+- Risks: RISK-001 … RISK-054 (54) — 52 Monitored, RISK-040 and RISK-044 Mitigating;
+  owner model finalized; no risk accepted or closed
 
 ## Governance documents
 

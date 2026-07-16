@@ -54,16 +54,18 @@ areas today.
 Governance foundation established. No final design or technology decisions are
 approved.
 
-- Decisions: DEC-S-001 … DEC-S-064 (64) — 6 foundation + 6 scope + 8 consumer
+- Decisions: DEC-S-001 … DEC-S-072 (72) — 6 foundation + 6 scope + 8 consumer
   and pilot scope + 12 logical architecture + 16 governance + 12 accessibility +
-  4 operating enablement and pre-candidate decisions
-- Risks: RISK-001 … RISK-048 (48) — **47 Monitored, RISK-040 Mitigating**
-  (CDS-WP-009); **owner model finalized**; no risk accepted or closed
+  4 operating enablement and pre-candidate + 8 accessibility support baseline and
+  evidence decisions
+- Risks: RISK-001 … RISK-054 (54) — **52 Monitored, RISK-040 + RISK-044 Mitigating**;
+  **owner model finalized**; no risk accepted or closed
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009
-- Next work package: **CDS-WP-010 — Accessibility Support Baseline and Evidence
-  Strategy** (authorized as next; not yet executed). Foundation **Closed with
-  Notes** (CDS-WP-009); operating enablement in place
+  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010
+- Next work package: **CDS-WP-011 — Machine-Readable Source and Token Format
+  Decision** (authorized as next; not yet executed). Foundation **Closed with
+  Notes**; operating enablement in place; accessibility support baseline
+  **A11Y-BL-001** defined (CDS-WP-010, pending commit, no evidence executed)
 
 ## Registered scope
 
@@ -200,6 +202,14 @@ Details: [Provenance](../docs/governance/NDF_SKILLS_PROVENANCE.md) ·
 | DEC-S-062 | First post-Foundation phase is Pre-Candidate Operating Enablement. |
 | DEC-S-063 | Operating playbooks and dossiers are non-normative; reduce ceremony, never obligation. |
 | DEC-S-064 | Critical risks affecting Elevated work need executor, trigger, expected evidence, and blocking effect first. |
+| DEC-S-065 | The Accessibility Support Baseline defines what future evidence targets; not evidence, support, or a claim. |
+| DEC-S-066 | Three accessibility baseline tiers (Required / Complementary / Scope-triggered). |
+| DEC-S-067 | Required Core Baseline: keyboard, Windows 11, Chromium + Firefox, no-cost screenreader, ≥2 pairings, zoom/reflow, text spacing, forced-colors, reduced motion, accessible status, DE/EN. |
+| DEC-S-068 | Product-family baseline vs exact evidence identity separate; `current`/`latest` is not an identity. |
+| DEC-S-069 | Complementary/mobile coverage is scope-triggered; undeclared environments not supported. |
+| DEC-S-070 | Baseline freshness reviewed on triggers and at least every six months. |
+| DEC-S-071 | Immutable, bound, reviewer-identified evidence records; templates/automation/single passes are not global evidence. |
+| DEC-S-072 | Accessibility defects/regressions classified separately from risk; Blocking/High regressions block Stable and claims. |
 
 Details: [Decision Index](../docs/decisions/DECISION_INDEX.md)
 
@@ -250,19 +260,26 @@ Details: [Decision Index](../docs/decisions/DECISION_INDEX.md)
 | RISK-041 | Accessibility target mistaken for conformance. | Monitored |
 | RISK-042 | Automated-testing substitution. | Monitored |
 | RISK-043 | Component-to-product responsibility gap. | Monitored |
-| RISK-044 | Accessibility support baseline drift. | Monitored |
+| RISK-044 | Accessibility support baseline drift. | **Mitigating** |
 | RISK-045 | Accessibility regression. | Monitored |
 | RISK-046 | Non-web channel accessibility gap. | Monitored |
 | RISK-047 | Inclusive-design undercoverage. | Monitored |
 | RISK-048 | Accessibility evidence burden. | Monitored |
+| RISK-049 | Accessibility baseline representativeness gap. | Monitored |
+| RISK-050 | Baseline interpreted as universal support. | Monitored |
+| RISK-051 | Environment availability mismatch. | Monitored |
+| RISK-052 | Evidence identity incompleteness. | Monitored |
+| RISK-053 | Regression coverage gap. | Monitored |
+| RISK-054 | Accessibility defect normalization. | Monitored |
 
 **Owner model finalized** (DEC-S-045): Human Maintainer accountable · Nova
 controller · executor named per mitigation · reviewer never the executor. Only
 the Human Maintainer may accept or close a risk. **CDS-WP-009 moved RISK-040
 `Monitored → Mitigating`** via the
 [Critical Risk Action Register](../docs/operations/CRITICAL_RISK_ACTION_REGISTER.md)
-(12 Critical Risks made actionable; DEC-S-064) — the only status change; no risk
-accepted or closed.
+(DEC-S-064). **CDS-WP-010 added RISK-049…054 and moved RISK-044
+`Monitored → Mitigating`** (A11Y-BL-001 defined; DEC-S-070). No risk accepted or
+closed.
 Details: [Risk Register](../docs/risks/RISK_REGISTER.md)
 
 ## Governance model (CDS-WP-006)
@@ -562,14 +579,37 @@ committed governance without any design, token, component, tool, or product code
 Added DEC-S-061 … DEC-S-064. Publication state `Private Development`; no claim; no
 Candidate/Stable artifact; pilot inactive.
 
+## Accessibility support baseline (CDS-WP-010)
+
+Defined the first accessibility support baseline **A11Y-BL-001** (pending
+Human-Maintainer commit) using authorized official standards/vendor research
+(13 URLs opened, 9 usable) — **no test run, no tool selected, every artifact AE-0,
+no environment claimed supported**:
+
+- **Three tiers** — Required Core (small, free-software-runnable), Complementary
+  (Conditional), Scope-triggered (Deferred) — with a 14-entry
+  [Environment and Scope Matrix](../docs/governance/ACCESSIBILITY_ENVIRONMENT_AND_SCOPE_MATRIX.md)
+  (Required 6 · Conditional 4 · Deferred 4; 2 Required NVDA×Chromium / NVDA×Firefox
+  pairings).
+- **Selected families** (officially sourced): Windows 11; Chromium (Edge/Chrome);
+  Firefox/ESR; NVDA; forced-colors → Windows High Contrast; reduced-motion → OS
+  setting. Product-family baseline vs exact per-run evidence identity kept separate
+  (DEC-S-068).
+- **Evidence Strategy** (AE-0…AE-4), **Maintenance Policy** (freshness states +
+  triggers + six-month max gap), **Defect and Regression Model** (4 impact levels;
+  Blocking/High regressions block Stable/claims), and a non-normative **Evidence
+  Record Template**.
+- The baseline is a **test contract, not evidence** (DEC-S-065); RISK-044 moved to
+  `Mitigating`; DEC-S-065…072 and RISK-049…054 added.
+
 ## Next step
 
-**CDS-WP-010 — Accessibility Support Baseline and Evidence Strategy** (authorized
-as next; not yet executed): define the accessibility support baseline, evidence
-scope, environment categories, manual/assistive-technology evidence strategy,
-regression strategy, and a capacity-aware test matrix (RISK-044, RISK-048). It
-establishes no current conformance, no Candidate, no pilot start, and no design or
-token work. Execution begins only on an explicit Nova prompt and Human-Maintainer
+**CDS-WP-011 — Machine-Readable Source and Token Format Decision** (authorized as
+next; not yet executed): establish normative machine-readable-source requirements,
+evaluate token formats against interoperability, alias/reference validation,
+metadata/provenance, and the offline tooling boundary, and prepare the decision. It
+creates no concrete design values, no Candidate, no pilot start, and no component
+work. Execution begins only on an explicit Nova prompt and Human-Maintainer
 authorization.
 
 ## Related documents
@@ -591,5 +631,7 @@ authorization.
 - [CDS-WP-007 Accessibility and Inclusive Design Policy Notes](CDS_WP_007_ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY_NOTES.md)
 - [CDS-WP-008 Foundation Milestone Review Notes](CDS_WP_008_FOUNDATION_MILESTONE_REVIEW_NOTES.md)
 - [CDS-WP-009 Operating Enablement and Pre-Candidate Notes](CDS_WP_009_OPERATING_ENABLEMENT_AND_PRE_CANDIDATE_NOTES.md)
+- [CDS-WP-010 Accessibility Support Baseline Notes](CDS_WP_010_ACCESSIBILITY_SUPPORT_BASELINE_NOTES.md)
 - [Foundation Milestone Review](../docs/reviews/FOUNDATION_MILESTONE_REVIEW.md)
 - [Foundation Closure Record](../docs/governance/FOUNDATION_CLOSURE_RECORD.md)
+- [Accessibility Support Baseline](../docs/governance/ACCESSIBILITY_SUPPORT_BASELINE.md)
