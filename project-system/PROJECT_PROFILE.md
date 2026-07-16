@@ -23,11 +23,37 @@ Foundation / Pre-Design
 
 ## Work package status
 
-- Current work package: CDS-WP-008 — Foundation Milestone Review (Next)
-- Previous work package: CDS-WP-007 — Accessibility and Inclusive Design Policy
-  (Completed)
+- Current work package: **None** — Foundation Milestone Review completed; next
+  phase pending approval
+- Previous work package: CDS-WP-008 — Foundation Milestone Review (Completed)
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007
+  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008
+
+## Foundation review status
+
+- Foundation review: **Completed** (CDS-WP-008, 2026-07-16), reviewed revision
+  `7b71652`
+- **Recommended milestone outcome: `GO WITH NOTES`** — *a Claude recommendation,
+  not a final Human-Maintainer decision*
+- Foundation blocker count: **0**
+- Non-blocking findings: **12** (FM-F-001 … FM-F-012)
+- Completeness matrix: **55 criteria** — 44 Met · 4 Met-with-notes · 3 Partially
+  met · 4 Not met · 0 N/A
+- Candidate readiness: governance **Met** · artifact **Not met** (none exists — not
+  a blocker) · evidence **Not met** · consumer-validation **Partially met**
+- CoreOps pilot entry readiness: **Partially met — pilot inactive** (8 criteria: 3
+  Met, 1 partial, 3 not met, 1 not-yet-assessable)
+- Governance operating readiness: **Partially met** — Standard track operational;
+  Elevated path High burden for current staffing (RISK-029, RISK-040, RISK-048)
+- No artifact promoted; no claim created; no next phase authorized
+
+Documents:
+[Foundation Milestone Review](../docs/reviews/FOUNDATION_MILESTONE_REVIEW.md) ·
+[Completeness Matrix](../docs/reviews/FOUNDATION_COMPLETENESS_MATRIX.md) ·
+[Governance Affordability](../docs/reviews/GOVERNANCE_AFFORDABILITY_AND_OPERATING_READINESS.md) ·
+[Candidate & Pilot Readiness](../docs/reviews/FOUNDATION_CANDIDATE_AND_PILOT_READINESS.md) ·
+[Open Gaps & Dependencies](../docs/reviews/FOUNDATION_OPEN_GAPS_AND_DEPENDENCIES.md) ·
+[Next-phase Recommendation](../docs/reviews/NEXT_PHASE_RECOMMENDATION.md)
 
 ## Accessibility status
 

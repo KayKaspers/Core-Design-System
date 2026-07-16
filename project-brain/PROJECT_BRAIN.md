@@ -58,8 +58,9 @@ approved.
   decisions
 - Risks: RISK-001 … RISK-048 (48) — all Monitored; **owner model finalized**
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007
-- Next work package: CDS-WP-008 — Foundation Milestone Review
+  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008
+- Next work package: **None authorized** — Foundation Milestone Review recommends
+  **GO WITH NOTES**; closure and next phase pending Nova/Human-Maintainer approval
 
 ## Registered scope
 
@@ -503,21 +504,41 @@ Details:
 [Channels](../docs/governance/ACCESSIBILITY_CHANNEL_PROFILES.md) ·
 [Pilot criterion](../docs/governance/COREOPS_PILOT_ACCESSIBILITY_CRITERION.md)
 
+## Foundation Milestone Review (CDS-WP-008)
+
+The Foundation was reviewed across twelve dimensions (55 criteria), three
+governance dry runs, four-axis Candidate readiness, an eight-criterion CoreOps
+pilot entry matrix, and all 48 risks. **Zero Foundation blockers.** Recommended
+milestone outcome: **`GO WITH NOTES`** — Claude recommends closure with mandatory
+next-phase notes; **Nova review and Human-Maintainer approval are required** before
+closure is effective.
+
+Completeness matrix: 55 criteria — 44 Met · 4 Met-with-notes · 3 Partially met · 4
+Not met. Twelve findings (FM-F-001…012), all next-phase / Candidate / pilot /
+publication prerequisites or long-term operating concerns.
+
+**Governance affordability is the standout note:** the Standard track is
+operational, but the Elevated + accessibility path is High burden for a single
+approver (Dry Run C), and the risk register is not yet operated as an instrument
+(48 risks, 0 executors — RISK-040). **Candidate readiness:** governance yes,
+artifact/evidence no (not a blocker). **CoreOps pilot:** inactive; criterion 8
+(accessibility target) became Met with the WP-007 commit; no conformance
+demonstrated. Critical risks: RISK-029, 040, 048, 044, 017, 028, 020, 021, 023,
+026, 031, 038.
+
+**No new Decision or Risk ID, no ADR, no work-package ID** was created. No artifact
+promoted; publication state `Private Development`; no claim valid; no release
+possible (licence unsatisfiable, DEC-S-047).
+
 ## Next step
 
-**CDS-WP-008 — Foundation Milestone Review.** With the accessibility policy done,
-**no policy work package remains.** CDS-WP-008 reviews the completed Foundation
-phase — decision and risk consistency, architecture and governance coherence,
-accessibility-policy completeness, consumer-requirement coverage, unresolved
-blockers, governance affordability, Candidate-readiness, and CoreOps pilot entry
-readiness — and recommends whether concrete design and implementation may be
-authorized.
-
-**No release is possible** — licence review is unsatisfiable (DEC-S-047) and no
-artifact can reach Stable (no accessibility evidence, no support baseline). The
-evidence-burden-versus-capacity question (RISK-048) is the most likely thing to
-break the foundation and is unresolved. CDS-WP-008 starts no implementation and
-requires an explicit work-package prompt from Nova.
+**Nova review and Human-Maintainer decision on Foundation closure.** No next work
+package is authorized. If closure is approved, the recommended first move is a
+**single thin design slice** — one Layer-3 semantic status foundation plus one
+Layer-4 component contract (DEC-S-055) taken to Candidate — preceded by an
+operating playbook, a declared accessibility support baseline (RISK-044), and a
+staffed Evidence Reviewer (DEC-S-045). The next phase begins only on an explicit
+Nova prompt and Human-Maintainer authorization.
 
 ## Related documents
 
@@ -536,3 +557,5 @@ requires an explicit work-package prompt from Nova.
 - [CDS-WP-005 Design System Architecture Notes](CDS_WP_005_DESIGN_SYSTEM_ARCHITECTURE_NOTES.md)
 - [CDS-WP-006 Governance, Versioning and Contribution Notes](CDS_WP_006_GOVERNANCE_VERSIONING_AND_CONTRIBUTION_NOTES.md)
 - [CDS-WP-007 Accessibility and Inclusive Design Policy Notes](CDS_WP_007_ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY_NOTES.md)
+- [CDS-WP-008 Foundation Milestone Review Notes](CDS_WP_008_FOUNDATION_MILESTONE_REVIEW_NOTES.md)
+- [Foundation Milestone Review](../docs/reviews/FOUNDATION_MILESTONE_REVIEW.md)

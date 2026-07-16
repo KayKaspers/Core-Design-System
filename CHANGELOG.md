@@ -9,6 +9,33 @@ released and no release is announced.
 
 ### Added
 
+- Foundation Milestone Review completed (CDS-WP-008): a close-out review of the
+  Foundation / Pre-Design phase across twelve dimensions, three governance dry
+  runs, four-axis Candidate readiness, an eight-criterion CoreOps pilot entry
+  matrix, and all 48 risks. Review evidence only — normative, no source changed.
+  (CDS-WP-008)
+- Foundation completeness matrix: 55 criteria (44 Met · 4 Met-with-notes · 3
+  Partially met · 4 Not met), **0 Foundation blockers**. (CDS-WP-008)
+- Governance affordability and operating-readiness review with three dry runs
+  (Editorial → Operational; Additive Candidate → Operational with simplification
+  notes; Elevated/accessibility → High burden). (CDS-WP-008)
+- Foundation Candidate and CoreOps pilot entry readiness assessed; pilot remains
+  inactive and no conformance is demonstrated; no artifact promoted. (CDS-WP-008)
+- Open gaps and dependencies classified as twelve review findings
+  (FM-F-001 … FM-F-012); none is a Foundation blocker. (CDS-WP-008)
+- Next-phase recommendation created (advisory; no phase activated, no work-package
+  ID assigned). (CDS-WP-008)
+- Work-package evidence notes for CDS-WP-008. (CDS-WP-008)
+
+### Changed
+
+- Recommended milestone outcome: **GO WITH NOTES** — Foundation closable with
+  mandatory next-phase notes, pending Nova review and Human-Maintainer approval.
+  (CDS-WP-008)
+- Work-package status: CDS-WP-008 completed; **no next work package authorized**;
+  next-phase roadmap pending decision. No new Decision or Risk IDs; no ADR; no new
+  work-package ID. Publication state remains `Private Development`. (CDS-WP-008)
+
 - Accessibility and inclusive-design policy defined as the normative
   accessibility source: purpose and authority, the target-versus-claim boundary,
   principles, shared responsibility, architecture integration, maturity

@@ -308,10 +308,35 @@ certification statement.
 - **Completed:** CDS-WP-005 — Design System Architecture
 - **Completed:** CDS-WP-006 — Governance, Versioning, and Contribution Model
 - **Completed:** CDS-WP-007 — Accessibility and Inclusive Design Policy
-- **Next:** CDS-WP-008 — Foundation Milestone Review
+- **Completed:** CDS-WP-008 — Foundation Milestone Review
+- **Next:** **None authorized** — next phase pending Nova and Human-Maintainer
+  decision
 
 The full controlled roadmap is in
 [project-system/WORK_PACKAGES.md](project-system/WORK_PACKAGES.md).
+
+## Foundation Milestone Review
+
+The Foundation / Pre-Design phase has been **reviewed** (CDS-WP-008). Across twelve
+dimensions (55 criteria), three governance dry runs, four-axis Candidate readiness,
+an eight-criterion CoreOps pilot entry matrix, and all 48 risks, the review found
+**zero Foundation blockers** and recommends the milestone outcome **`GO WITH
+NOTES`**.
+
+This is a **recommendation, not an approval** — Foundation closure and the next
+phase are pending Nova review and Human-Maintainer decision. The review implements,
+designs, and publishes nothing: **no artifact is promoted to Candidate or Stable,
+no claim is made, no licence or technology is selected, and the publication state
+remains `Private Development`.** The mandatory next-phase notes are governance
+affordability, an accessibility support baseline, licensing, role staffing, and
+user-research honesty.
+
+- [Foundation Milestone Review](docs/reviews/FOUNDATION_MILESTONE_REVIEW.md)
+- [Foundation Completeness Matrix](docs/reviews/FOUNDATION_COMPLETENESS_MATRIX.md)
+- [Governance Affordability and Operating Readiness](docs/reviews/GOVERNANCE_AFFORDABILITY_AND_OPERATING_READINESS.md)
+- [Foundation Candidate and Pilot Readiness](docs/reviews/FOUNDATION_CANDIDATE_AND_PILOT_READINESS.md)
+- [Foundation Open Gaps and Dependencies](docs/reviews/FOUNDATION_OPEN_GAPS_AND_DEPENDENCIES.md)
+- [Next-phase Recommendation](docs/reviews/NEXT_PHASE_RECOMMENDATION.md)
 
 ## Registers
 

@@ -6,7 +6,7 @@
 > it never defines. Where it disagrees with a normative source, the normative
 > source wins and this pack is wrong and must be corrected.
 
-- **Maintained by:** CDS-WP-007
+- **Maintained by:** CDS-WP-008
 - **Date:** 2026-07-16
 
 ## Project identity
@@ -36,6 +36,7 @@ concrete visual or technical design decisions are authorized (DEC-S-003).
 | CDS-WP-005 | Design System Architecture | Eight-layer logical architecture; authority model; token flow; profiles and reconciliation; channels and distribution; consumer contracts; status semantics; CR mapped to architecture; DEC-S-021…032; RISK-020…028. **No technology or design selected.** |
 | CDS-WP-006 | Governance, Versioning, Contribution, Risk and Publication Model | Six roles, two tracks; conflict resolution; 7 maturity states; versioning + 8 compatibility axes; deprecation; contribution; exceptions and profiles; 4 claim types; **risk ownership finalized**; 5 publication states; licensing per 10 classes; release control. DEC-S-033…048; RISK-029…040. **No licence, publication, technology, or design selected.** |
 | CDS-WP-007 | Accessibility and Inclusive Design Policy | Target **WCAG 2.2 Level AA** for the applicable web scope (CR-024 resolved at policy level); target-is-not-claim rule; A/AA applicability matrix (56 listed / 55 applicable); shared responsibility (49/55 need both sides); 5 evidence levels AE-0…AE-4; 6 channel profiles; limitations and exception policy; CoreOps pilot criterion. DEC-S-049…060; RISK-041…048. **Nothing tested — every artifact AE-0; no claim; publication state unchanged.** |
+| CDS-WP-008 | Foundation Milestone Review | Reviewed the Foundation across 12 dimensions (55 criteria), 3 governance dry runs, 4-axis Candidate readiness, 8-criterion pilot entry matrix, all 48 risks. **0 Foundation blockers**; recommended outcome **GO WITH NOTES**; 12 findings (FM-F-001…012). **No normative source changed; no Decision/Risk/ADR/WP-ID created; no artifact promoted; publication state unchanged.** Non-normative review evidence in `docs/reviews/`. |
 
 ## Normative source map
 
@@ -531,17 +532,31 @@ moved from *"against what?"* to *"show it"*: the remaining obstacles are the
 RISK-041, RISK-044) and the **absent licensing decisions** (DEC-S-047,
 RISK-038). No gate opened.
 
-## Current and next work package
+## Foundation Milestone Review (CDS-WP-008)
 
-- **Completed:** CDS-WP-007 — Accessibility and Inclusive Design Policy
-- **Next:** CDS-WP-008 — Foundation Milestone Review
+- **Completed:** CDS-WP-008 — Foundation Milestone Review (reviewed revision
+  `7b71652`). **No next work package authorized.**
+- **Recommended milestone outcome: `GO WITH NOTES`** — Claude recommendation,
+  pending Nova review and Human-Maintainer approval.
+- **Foundation blockers: 0.** Completeness matrix: 55 criteria — 44 Met · 4
+  Met-with-notes · 3 Partially met · 4 Not met.
+- **Candidate readiness:** governance Met; artifact/evidence Not met (not a
+  blocker); consumer-validation Partially met.
+- **CoreOps pilot entry:** Partially met — pilot inactive (8 criteria: 3 Met, 1
+  partial, 3 not met, 1 not-yet-assessable).
+- **Governance affordability:** Partially met — Standard track operational,
+  Elevated path High burden for current staffing (RISK-029, RISK-040, RISK-048).
+- **Critical risks (12):** RISK-029, 040, 048, 044, 017, 028, 020, 021, 023, 026,
+  031, 038.
+- **No new phase authorized; no work-package ID created; no artifact promoted; no
+  claim; publication state `Private Development`.**
 
-CDS-WP-008 reviews the completed Foundation phase — decision/risk consistency,
-architecture and governance coherence, accessibility-policy completeness,
-consumer-requirement coverage, unresolved blockers, governance affordability,
-Candidate-readiness, and CoreOps pilot entry readiness — and recommends whether
-concrete design and implementation may be authorized. It starts no
-implementation.
+Review docs: [Milestone Review](../docs/reviews/FOUNDATION_MILESTONE_REVIEW.md) ·
+[Completeness Matrix](../docs/reviews/FOUNDATION_COMPLETENESS_MATRIX.md) ·
+[Affordability](../docs/reviews/GOVERNANCE_AFFORDABILITY_AND_OPERATING_READINESS.md) ·
+[Candidate & Pilot](../docs/reviews/FOUNDATION_CANDIDATE_AND_PILOT_READINESS.md) ·
+[Open Gaps](../docs/reviews/FOUNDATION_OPEN_GAPS_AND_DEPENDENCIES.md) ·
+[Next-phase](../docs/reviews/NEXT_PHASE_RECOMMENDATION.md)
 
-Being listed as Next identifies sequence, not authorization. Every work package
-needs an explicit prompt from Nova.
+Foundation closure and the next phase are **pending Nova review and
+Human-Maintainer approval**. A recommended outcome is not an approval.

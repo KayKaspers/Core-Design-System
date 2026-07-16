@@ -4,8 +4,10 @@ Controlled work-package roadmap for the Core Design System (CDS).
 
 - **Phase:** Foundation / Pre-Design
 - **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007
-- **Next work package:** CDS-WP-008
+  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008
+- **Next work package:** **None authorized** — next-phase roadmap pending Nova and
+  Human-Maintainer decision (Foundation Milestone Review recommends **GO WITH
+  NOTES**, awaiting approval)
 
 ## Status values
 
@@ -27,7 +29,11 @@ Controlled work-package roadmap for the Core Design System (CDS).
 | CDS-WP-005 | Design System Architecture | Completed | CDS-WP-003, CDS-WP-004 |
 | CDS-WP-006 | Governance, Versioning, and Contribution Model | Completed | CDS-WP-005 |
 | CDS-WP-007 | Accessibility and Inclusive Design Policy | Completed | CDS-WP-005 |
-| CDS-WP-008 | Foundation Milestone Review | Next | CDS-WP-006, CDS-WP-007 |
+| CDS-WP-008 | Foundation Milestone Review | Completed | CDS-WP-006, CDS-WP-007 |
+
+**No next Work Package is authorized.** The next-phase roadmap is pending a Nova
+and Human-Maintainer decision on the Foundation Milestone Review. No CDS-WP-009 is
+created.
 
 ## Descriptions
 
@@ -134,14 +140,21 @@ publication state remains `Private Development`.** See
 
 ### CDS-WP-008 — Foundation Milestone Review
 
-**Status:** Next
+**Status:** Completed
 
-Reviews the completed Foundation phase — decision and risk consistency,
-architecture and governance coherence, accessibility-policy completeness,
-consumer-requirement coverage, unresolved blockers, governance affordability,
-Candidate-readiness, and CoreOps pilot entry readiness — and determines whether
-concrete visual and technical design decisions may be authorized. Starts no
-implementation.
+Reviewed the completed Foundation phase across twelve dimensions (55 criteria),
+three governance dry runs, four-axis Candidate readiness, an eight-criterion
+CoreOps pilot entry matrix, and all 48 risks. **Result: zero Foundation blockers.**
+Recommended milestone outcome **GO WITH NOTES** — the Foundation can be closed with
+mandatory next-phase notes (governance affordability, accessibility support
+baseline, licensing, role staffing, user-research honesty). **No normative source
+was changed; no Decision, Risk, ADR, or work-package ID was created; no artifact
+was promoted; publication state remains `Private Development`.** The milestone
+decision belongs to Nova and the Human Maintainer. See
+[Foundation Milestone Review](../docs/reviews/FOUNDATION_MILESTONE_REVIEW.md).
+
+**No next Work Package is authorized.** The next phase begins only on an explicit
+Nova prompt and Human-Maintainer authorization.
 
 ## Roadmap evolution
 

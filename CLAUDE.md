@@ -16,11 +16,18 @@ library, or a design project scoped exclusively to CoreOps.
 - Repository: KayKaspers/Core-Design-System
 - Local path: `D:\Projects\Core-Design-System`
 - Framework: Nova Development Framework v1.0.0
-- Phase: Foundation / Pre-Design
+- Phase: Foundation / Pre-Design — **milestone review completed; closure pending
+  approval.** The [Foundation Milestone Review](docs/reviews/FOUNDATION_MILESTONE_REVIEW.md)
+  is **review evidence, not an automatic approval**: it closes nothing, promotes
+  nothing, and authorizes no phase. Closure requires Nova review and a
+  Human-Maintainer decision.
 - First reference consumer: CoreOps (not the sole design target)
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007
-- Next work package: CDS-WP-008 — Foundation Milestone Review
+  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008
+- Next work package: **None authorized.** The Foundation Milestone Review
+  (CDS-WP-008) recommends **GO WITH NOTES**; Foundation closure and the next phase
+  are **pending Nova review and Human-Maintainer approval**. The next phase begins
+  only on an explicit Nova prompt.
 
 ## Execution environment
 

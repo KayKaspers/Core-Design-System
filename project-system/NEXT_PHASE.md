@@ -1,9 +1,12 @@
 # Next Phase
 
-- **Phase:** Foundation / Pre-Design
+- **Phase:** Foundation / Pre-Design — **review completed, closure pending
+  approval**
 - **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007
-- **Next work package:** CDS-WP-008 — Foundation Milestone Review
+  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008
+- **Next work package:** **None authorized.** The Foundation Milestone Review
+  (CDS-WP-008) recommends **GO WITH NOTES**; Foundation closure and the next phase
+  are pending Nova review and Human-Maintainer approval.
 
 ## Status of completed work packages
 
@@ -128,58 +131,55 @@ Documents:
 [Channel Profiles](../docs/governance/ACCESSIBILITY_CHANNEL_PROFILES.md) ·
 [CoreOps Pilot Accessibility Criterion](../docs/governance/COREOPS_PILOT_ACCESSIBILITY_CRITERION.md)
 
-## Next work package: CDS-WP-008 — Foundation Milestone Review
+### CDS-WP-008 — Foundation Milestone Review — Completed
 
-### Why this is now the next step
+Reviewed the completed Foundation phase across twelve dimensions (55 criteria),
+three governance dry runs, four-axis Candidate readiness, an eight-criterion
+CoreOps pilot entry matrix, and all 48 risks.
 
-The Foundation phase is materially complete: concept and scope, benchmark
-research, consumer requirements, logical architecture, governance, and the
-accessibility policy are all defined. **No policy work package remains** — the
-two `Deferred to CDS-WP-006/007` states in the traceability are retired.
+- **Result: zero Foundation blockers.** No normative contradiction; every register
+  balances (DEC 60 · RISK 48 · CR 40 · arch-status 9/27/2/2 · WCAG 55 applicable).
+- **Recommended milestone outcome: `GO WITH NOTES`** — the Foundation can be
+  closed with mandatory next-phase notes.
+- **12 findings (FM-F-001 … FM-F-012)**, all next-phase / Candidate / pilot /
+  publication prerequisites or long-term operating concerns — none a blocker.
+- **No normative source changed; no Decision, Risk, ADR, or work-package ID
+  created; no artifact promoted; publication state `Private Development`.**
 
-What is missing is not more policy. It is a **review** that decides whether the
-foundation is coherent and affordable enough to authorize concrete design and
-implementation.
+Documents:
+[Foundation Milestone Review](../docs/reviews/FOUNDATION_MILESTONE_REVIEW.md) ·
+[Completeness Matrix](../docs/reviews/FOUNDATION_COMPLETENESS_MATRIX.md) ·
+[Governance Affordability](../docs/reviews/GOVERNANCE_AFFORDABILITY_AND_OPERATING_READINESS.md) ·
+[Candidate & Pilot Readiness](../docs/reviews/FOUNDATION_CANDIDATE_AND_PILOT_READINESS.md) ·
+[Open Gaps](../docs/reviews/FOUNDATION_OPEN_GAPS_AND_DEPENDENCIES.md) ·
+[Next-phase Recommendation](../docs/reviews/NEXT_PHASE_RECOMMENDATION.md)
 
-### Objective
+## Foundation closure and next phase — pending decision
 
-Review the completed Foundation phase and recommend whether — and how — to enter
-the design and implementation phase. **CDS-WP-008 starts no implementation.**
+**The Foundation is not yet closed.** CDS-WP-008 *recommends* closure with notes;
+**Nova review and Human-Maintainer approval are required** before closure is
+effective. **The next phase is not authorized**, and **no work-package ID is
+created.**
 
-### Review goals
+### Priorized recommendation (advisory — see [Next-phase Recommendation](../docs/reviews/NEXT_PHASE_RECOMMENDATION.md))
 
-- **Foundation completeness** — every registered concern has a home.
-- **Decision and risk consistency** — DEC-S-001 … DEC-S-060 and
-  RISK-001 … RISK-048 internally coherent; no contradictions.
-- **Architecture and governance coherence** — the eight layers, artifact classes,
-  and governance tracks hold together.
-- **Accessibility-policy completeness** — target, matrix, evidence model, channel
-  profiles, and pilot criterion form a usable whole; the AE-0 reality is visible.
-- **Consumer-requirement coverage** — CR-001 … CR-040 mapped and reconciled.
-- **Unresolved blockers** — no support baseline (RISK-044), no licence
-  (DEC-S-047), no artifact at Candidate.
-- **Governance affordability** — whether the evidence and ceremony burden is
-  sustainable at actual maintainer capacity (RISK-040, RISK-048).
-- **Candidate-readiness assessment** — what the first artifact to attempt
-  Candidate would need.
-- **CoreOps pilot entry readiness** — which entry criteria remain structurally
-  unmet.
-- **Next-phase roadmap recommendation** — what CDS-WP-009 onward should be.
+Recommended next objective: **prove the Foundation operable on one thin, end-to-end
+vertical** — a Layer-3 semantic status foundation plus one Layer-4 component
+contract carrying the mandatory accessibility contract areas (DEC-S-055), taken to
+Candidate under the real gates.
 
-### Input to carry forward
+### Immediate Prerequisites (before any first Candidate or pilot)
 
-- **Nothing is tested.** Every artifact is AE-0; no accessibility, no
-  implementation, and no user evidence exists (RISK-017, RISK-041).
-- **No release is possible** — licence review is unsatisfiable (DEC-S-047) and no
-  artifact can reach Stable.
-- The **evidence-burden-versus-capacity** question (RISK-048) is the most likely
-  thing to break the foundation, and it is unresolved.
-- Publication state remains `Private Development`; no claim of any kind is valid.
+1. A lightweight operating playbook + Candidate/Elevated dossier templates
+   (governance affordability — FM-F-002; RISK-029, RISK-040).
+2. Declare an **accessibility support baseline** (FM-F-001; RISK-044).
+3. Staff the **Evidence Reviewer** (and, for a profile, a **Consumer Maintainer**)
+   — never the author (FM-F-006; DEC-S-045).
+4. Assign **executors and triggers** to next-phase-active risks (FM-F-003).
 
-### Explicitly prohibited in CDS-WP-008
+### Explicitly prohibited until the next phase is authorized
 
-- concrete visual design of any kind,
-- selecting colours, typography, icons, logos, or themes,
+- concrete visual design; selecting colours, typography, icons, logos, or themes,
 - selecting a design tool, component framework, or token format,
 - implementing components or product code,
 - selecting a licence or approving publication,
@@ -187,12 +187,13 @@ the design and implementation phase. **CDS-WP-008 starts no implementation.**
 - promoting any artifact to Candidate or Stable,
 - starting the CoreOps pilot,
 - modifying Skill files or consumer repositories,
-- extending the roadmap without Human Maintainer approval.
+- creating a new work-package ID or extending the roadmap without Human-Maintainer
+  approval.
 
 ### Authorization note
 
-CDS-WP-008 requires an explicit work-package prompt from Nova. Being listed as
-**Next** identifies sequence, not authorization.
+The next phase requires an explicit work-package prompt from Nova and
+Human-Maintainer authorization. A recommended outcome is **not** an approval.
 
 ## Related documents
 
