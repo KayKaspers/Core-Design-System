@@ -9,6 +9,42 @@ released and no release is announced.
 
 ### Added
 
+- Logical design-system architecture defined as the normative architecture
+  source, with architecture objectives, quality attributes, allowed and
+  prohibited dependency directions, and sixteen architecture invariants.
+  (CDS-WP-005)
+- Eight architecture layers registered: Strategy and Governance, Brand and
+  Identity, Foundations and Tokens, Components, Patterns and Experiences,
+  Channels and Communication, Distribution and Enablement, Evidence and Quality.
+  (CDS-WP-005)
+- Source-of-Truth and Authority Model with eight artifact classes, an authority
+  matrix, nine conflict scenarios, and fail-closed behavior. (CDS-WP-005)
+- Conceptual Token and Theme Architecture with five token layers, the
+  semantic-first principle, alias and dependency direction, validation
+  requirements, and prohibited shortcuts. No values, names, format, or tooling
+  selected. (CDS-WP-005)
+- Product Profile and Extension Model with Core Foundation, Product Profile,
+  Consumer Extension, Domain Pattern Family, and Local Exception; permitted and
+  forbidden override categories; anti-fragmentation rules; and the
+  existing-product reconciliation flow. (CDS-WP-005)
+- Artifact Distribution and Channel Model with logical artifact families, nine
+  channel classes, transformation boundaries, offline and self-hosted
+  requirements, provenance and pinning, and distribution neutrality.
+  (CDS-WP-005)
+- Consumer Contract and Reconciliation Model with the Source, Transformation,
+  Distribution, Integration, and Adoption Evidence contracts, plus CDS
+  obligations and the reconciliation flow. (CDS-WP-005)
+- Evidence, Traceability and Status Semantics architecture with the traceability
+  flow, required logical identities, deviation and feedback flows, five separated
+  status axes, and the Unknown invariant. (CDS-WP-005)
+- CR-001 … CR-040 mapped to the architecture with per-requirement layer,
+  response, remaining decision, follow-up, and status. (CDS-WP-005)
+- Logical architecture decisions DEC-S-021 … DEC-S-032. (CDS-WP-005)
+- Risks RISK-020 … RISK-028 covering authority ambiguity, token proliferation,
+  reconciliation failure, domain-pattern leakage, channel divergence, provenance
+  loss, architecture overdesign, profile fragmentation, and deferred
+  accessibility debt. (CDS-WP-005)
+- Work-package evidence notes for CDS-WP-005.
 - Consumer evidence registered from three consumer repositories analyzed
   read-only at committed revisions — CoreOps as primary pilot consumer,
   SpeakCore and CastCore as secondary evidence. 15 sources, 14 usable, each
@@ -93,6 +129,17 @@ released and no release is announced.
 
 ### Changed
 
+- Work-package status advanced: CDS-WP-005 completed, CDS-WP-006 activated as
+  the next work package. (CDS-WP-005)
+- Decision index extended to DEC-S-001 … DEC-S-032 with a fourth decision type
+  for logical architecture. DEC-S-001 … DEC-S-020 unchanged. (CDS-WP-005)
+- Risk register extended to RISK-001 … RISK-028. The provisional owner model is
+  unchanged. (CDS-WP-005)
+- Foundation Context Pack, project profile, project brain, and README extended
+  with the architecture layers, authority model, token flow, status invariants,
+  and requirement coverage. (CDS-WP-005)
+- Claude working instructions extended with the architecture entry point and a
+  binding authority and conflict rule. (CDS-WP-005)
 - Work-package status advanced: CDS-WP-004 completed, CDS-WP-005 activated as
   the next work package. (CDS-WP-004)
 - Decision index extended to DEC-S-001 … DEC-S-020 with a third decision type

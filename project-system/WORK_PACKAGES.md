@@ -4,8 +4,8 @@ Controlled work-package roadmap for the Core Design System (CDS).
 
 - **Phase:** Foundation / Pre-Design
 - **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004
-- **Next work package:** CDS-WP-005
+  CDS-WP-004, CDS-WP-005
+- **Next work package:** CDS-WP-006
 
 ## Status values
 
@@ -24,8 +24,8 @@ Controlled work-package roadmap for the Core Design System (CDS).
 | CDS-WP-002 | Concept and Scope Registration | Completed | CDS-WP-001A |
 | CDS-WP-003 | Benchmark and Differentiation Research | Completed | CDS-WP-002 |
 | CDS-WP-004 | Consumer Requirements and CoreOps Pilot Contract | Completed | CDS-WP-002 |
-| CDS-WP-005 | Design System Architecture | Next | CDS-WP-003, CDS-WP-004 |
-| CDS-WP-006 | Governance, Versioning, and Contribution Model | Planned | CDS-WP-005 |
+| CDS-WP-005 | Design System Architecture | Completed | CDS-WP-003, CDS-WP-004 |
+| CDS-WP-006 | Governance, Versioning, and Contribution Model | Next | CDS-WP-005 |
 | CDS-WP-007 | Accessibility and Inclusive Design Policy | Planned | CDS-WP-005 |
 | CDS-WP-008 | Foundation Milestone Review | Planned | CDS-WP-006, CDS-WP-007 |
 
@@ -91,20 +91,25 @@ See [Consumer Requirements Model](../docs/governance/CONSUMER_REQUIREMENTS_MODEL
 
 ### CDS-WP-005 — Design System Architecture
 
-**Status:** Next
+**Status:** Completed
 
-Defines the architecture of CDS: normative system layers, source-of-truth model,
-token flow as architecture without selecting a format, artifact classes, product
-profiles, distribution, consumer contracts, and evidence flows — evaluated
-against tool-independence (DEC-S-004) and offline usability (DEC-S-006). No final
-visual design and no concrete tool, framework, or token-format decision.
+Defined the eight-layer logical architecture, the source-of-truth and authority
+model with eight artifact classes, the five-level conceptual token flow, the
+product profile and extension model with existing-product reconciliation, the
+channel and distribution model, the five consumer contracts, and the evidence and
+status-semantics architecture including the Unknown invariant. Mapped
+CR-001 … CR-040 to the architecture. Added DEC-S-021 … DEC-S-032 and
+RISK-020 … RISK-028. **No technology, format, or visual decision.** See
+[Design System Architecture](../docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md).
 
 ### CDS-WP-006 — Governance, Versioning, and Contribution Model
 
-**Status:** Planned
+**Status:** Next
 
-Establishes versioning, release, review, deprecation, adoption levels, and the
-contribution model.
+Establishes governance roles, risk ownership, maturity states, versioning,
+compatibility, deprecation, contribution, exception governance, product profile
+governance, conformance and adoption claims, and the licensing and publication
+decision model. No concrete visual design and no technology selection.
 
 ### CDS-WP-007 — Accessibility and Inclusive Design Policy
 

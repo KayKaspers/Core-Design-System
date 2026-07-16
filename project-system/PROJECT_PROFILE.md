@@ -23,11 +23,35 @@ Foundation / Pre-Design
 
 ## Work package status
 
-- Current work package: CDS-WP-005 — Design System Architecture (Next)
-- Previous work package: CDS-WP-004 — Consumer Requirements and CoreOps Pilot
-  Contract (Completed)
+- Current work package: CDS-WP-006 — Governance, Versioning, and Contribution
+  Model (Next)
+- Previous work package: CDS-WP-005 — Design System Architecture (Completed)
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004
+  CDS-WP-004, CDS-WP-005
+
+## Architecture status
+
+- Architecture status: Logical architecture defined (CDS-WP-005, 2026-07-16)
+- Architecture layers: **8**
+- Architecture documents: **8**
+- Artifact classes: 8 · Token flow levels: 5 · Status axes: 5 · Consumer
+  contracts: 5 · Architecture invariants: 16
+- Architecture requirement coverage: **40 / 40** requirements mapped —
+  8 Addressed by architecture · 24 Partially addressed · 3 Deferred to
+  CDS-WP-007 · 1 Deferred to CDS-WP-006 · 2 Consumer-owned · 2 Out of CDS scope
+- **The architecture selects no technology, format, tool, or visual design**
+  (DEC-S-032). It is structure awaiting policy (CDS-WP-006), the accessibility
+  target (CDS-WP-007), and implementation evidence.
+
+Documents:
+[Design System Architecture](../docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md) ·
+[Source of Truth and Authority](../docs/architecture/SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md) ·
+[Token and Theme Architecture](../docs/architecture/TOKEN_AND_THEME_ARCHITECTURE.md) ·
+[Product Profile and Extension Model](../docs/architecture/PRODUCT_PROFILE_AND_EXTENSION_MODEL.md) ·
+[Artifact Distribution and Channel Model](../docs/architecture/ARTIFACT_DISTRIBUTION_AND_CHANNEL_MODEL.md) ·
+[Consumer Contract and Reconciliation Model](../docs/architecture/CONSUMER_CONTRACT_AND_RECONCILIATION_MODEL.md) ·
+[Evidence, Traceability and Status Semantics](../docs/architecture/EVIDENCE_TRACEABILITY_AND_STATUS_SEMANTICS.md) ·
+[Architecture Requirements Traceability](../docs/architecture/ARCHITECTURE_REQUIREMENTS_TRACEABILITY.md)
 
 ## Consumer research status
 
@@ -161,10 +185,11 @@ pilot contract is defined in CDS-WP-004.
 
 ## Register scope
 
-- Decisions: DEC-S-001 … DEC-S-020 (20) — 6 strategic foundation decisions
-  (CDS-WP-001), 6 strategic scope decisions (CDS-WP-002), and 8 consumer and
-  pilot scope decisions (CDS-WP-004). Unchanged by CDS-WP-003.
-- Risks: RISK-001 … RISK-019 (19) — risk owner model provisional until
+- Decisions: DEC-S-001 … DEC-S-032 (32) — 6 strategic foundation decisions
+  (CDS-WP-001), 6 strategic scope decisions (CDS-WP-002), 8 consumer and pilot
+  scope decisions (CDS-WP-004), and 12 logical architecture decisions
+  (CDS-WP-005). Unchanged by CDS-WP-003.
+- Risks: RISK-001 … RISK-028 (28) — risk owner model provisional until
   CDS-WP-006
 
 ## Intentionally open decision areas

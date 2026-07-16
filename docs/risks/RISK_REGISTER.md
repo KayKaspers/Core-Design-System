@@ -5,15 +5,17 @@ must be controlled from the start of the project.
 
 ## Register scope
 
-- Risk range: RISK-001 … RISK-019
-- Number of risks: 19
+- Risk range: RISK-001 … RISK-028
+- Number of risks: 28
 - Phase: Foundation / Pre-Design
 
 Risks RISK-001 … RISK-005 were registered by CDS-WP-001. Risks
 RISK-006 … RISK-009 were registered by CDS-WP-002 alongside the scope
 registration. Risks RISK-010 … RISK-013 were registered by CDS-WP-003 alongside
 the benchmark research. Risks RISK-014 … RISK-019 were registered by CDS-WP-004
-alongside the consumer requirements and the CoreOps pilot contract.
+alongside the consumer requirements and the CoreOps pilot contract. Risks
+RISK-020 … RISK-028 were registered by CDS-WP-005 alongside the logical
+architecture.
 
 ### Provisional owner model
 
@@ -596,3 +598,298 @@ projects were outside the permitted read areas. Register unreviewed consumers �
 AirCore and further projects — as an open validation question rather than
 assuming they fit. Broadening the consumer sample requires its own authorized
 work package.
+
+---
+
+## RISK-020 — Normative-source authority ambiguity
+
+- **Status:** Monitored
+- **Owner role:** Nova (provisional)
+- **Initial likelihood:** Medium
+- **Initial severity:** High
+
+### Description
+
+Human-readable and machine-readable normative sources may conflict without a
+sufficiently precise ownership and precedence model.
+
+### Impact
+
+The system has two authorities that disagree, and no rule to settle it. Meaning
+says one thing while approved values say another, so every downstream artifact
+inherits a contradiction. Because both sources are legitimately normative, the
+conflict cannot be resolved by demoting one — it stalls the whole chain until
+someone decides, and the temptation is to resolve it by whichever is easier to
+edit.
+
+### Mitigation direction
+
+Split authority precisely by artifact class: meaning belongs to human-readable
+sources, approved values to machine-readable sources (DEC-S-022). Never let the
+two overlap — a machine-readable source that carries meaning, or a human-readable
+source that carries authoritative values, is the defect that creates this risk.
+On conflict, fail closed and escalate rather than picking a winner (DEC-S-023).
+The detailed conflict authority and escalation path are deferred to CDS-WP-006;
+until then Nova recommends and the Human Maintainer decides.
+
+---
+
+## RISK-021 — Token and override proliferation
+
+- **Status:** Monitored
+- **Owner role:** Nova (provisional)
+- **Initial likelihood:** High
+- **Initial severity:** Medium
+
+### Description
+
+Token layers, aliases, component tokens, Product Profiles, and local exceptions
+may expand faster than they can be governed or validated.
+
+### Impact
+
+The system becomes technically correct and practically unusable. Every layer is
+individually justified while the total is incomprehensible, so nobody can predict
+what changing a semantic token affects. Governance degrades into rubber-stamping
+because reviewing the volume costs more than the maintainer capacity available.
+
+### Mitigation direction
+
+Constrain direction structurally — five layers, strictly downward dependency, no
+cycles (DEC-S-024). Note honestly that the architecture constrains *direction*
+but not *volume*: direction rules alone will not stop proliferation. Require
+machine-checkable validation for cycles, orphans, unused tokens, layer
+violations, and illegal overrides. Prefer additive extensions over overrides, and
+treat repeated overrides of the same thing as a core defect to fix rather than a
+pattern to accommodate. Profile and exception limits are deferred to CDS-WP-006,
+which must set an actual budget.
+
+---
+
+## RISK-022 — Existing-product reconciliation failure
+
+- **Status:** Monitored
+- **Owner role:** Nova (provisional)
+- **Initial likelihood:** Medium
+- **Initial severity:** High
+
+### Description
+
+Existing product-local design decisions may be overwritten, incompletely mapped,
+or forced into CDS without adequate migration and evidence.
+
+### Impact
+
+Consumers lose shipped decisions they had good reasons for, or are pushed into a
+migration they cannot afford. Either outcome makes CDS something done *to*
+products rather than *for* them — and a consumer burned once will route around
+the design system permanently. Incomplete mapping is the quieter failure: a
+decision is carried across without its meaning, and the loss surfaces much later.
+
+### Mitigation direction
+
+Follow the reconciliation flow: inventory, semantic mapping, conflict
+identification, classification, retention or migration, evidence and review
+(DEC-S-026). Map **semantics, not values** — the question is what a decision
+meant, never whether a value is right. Treat consumer-local retention as a valid
+final outcome rather than a failure to converge. No automatic adoption, no
+automatic overwrite, no retrospective conformance. Migration must be versioned,
+documented, and reversibly plannable before it is proposed.
+
+---
+
+## RISK-023 — Domain-pattern leakage into the universal foundation
+
+- **Status:** Monitored
+- **Owner role:** Nova (provisional)
+- **Initial likelihood:** High
+- **Initial severity:** High
+
+### Description
+
+Operations-oriented requirements may become universal CDS rules despite limited
+evidence from non-operational consumers.
+
+### Impact
+
+CDS becomes an operations design system wearing a universal label. Every future
+non-operational consumer inherits assumptions about density, severity, and
+monitoring that do not fit, and pays for them in complexity. The failure is
+insidious because the evidence *feels* overwhelming — all three reviewed
+consumers genuinely need these patterns.
+
+### Mitigation direction
+
+Model operations patterns as a Domain Pattern Family above the universal
+foundation, adopted only by consumers in that domain (DEC-S-027). Forbid domain
+requirements from pushing into Layers 3 and 4 without multi-consumer evidence
+from **outside** that domain — evidence from three infrastructure products is not
+evidence about products in general. Keep the sample bias explicit wherever
+operations patterns are argued: the benchmark could not verify generalizability
+either, so both evidence layers are silent on the same question.
+
+---
+
+## RISK-024 — Channel divergence
+
+- **Status:** Monitored
+- **Owner role:** Nova (provisional)
+- **Initial likelihood:** Medium
+- **Initial severity:** Medium
+
+### Description
+
+Product UI, documentation, PDF, presentation, diagram, and communication outputs
+may drift into inconsistent semantic or visual systems.
+
+### Impact
+
+The ecosystem produces artifacts that contradict each other. A status means one
+thing in a dashboard and another in the report about that dashboard, which is
+worse than having no standard at all — readers trust the inconsistency. Divergence
+also compounds: each channel that drifts makes the shared semantic source look
+more optional.
+
+### Mitigation direction
+
+Bind all channels to one governed semantic source while permitting
+channel-specific transformation, layout, and interaction (DEC-S-029). Enforce the
+line precisely: presentation may differ, meaning may not. Forbid transformations
+that collapse status axes or make colour the sole carrier — the non-interactive
+channels break first, and they break silently. Note that the shared source
+constrains divergence but does not eliminate it; governance of channel additions
+is deferred to CDS-WP-006. Registering a channel class is not a commitment to
+build it.
+
+---
+
+## RISK-025 — Generated-artifact provenance loss
+
+- **Status:** Monitored
+- **Owner role:** Nova (provisional)
+- **Initial likelihood:** Medium
+- **Initial severity:** High
+
+### Description
+
+Generated outputs may be distributed or edited without a reliable binding to
+their normative sources and transformation revision.
+
+### Impact
+
+An artifact whose origin cannot be established becomes **functionally normative**,
+because nobody can contradict it. A consumer integrating it cannot tell what it
+was derived from, cannot reproduce it, and cannot know whether it is current. A
+hand-edited output is worse: it is a decision that never passed through
+governance and now circulates as if it had.
+
+### Mitigation direction
+
+Require source revision, transformation revision, and output identity on every
+generated artifact (DEC-S-031). Require reproducibility — same source revision
+plus same transformation revision equals same output — since provenance without
+reproducibility is a claim rather than a fact. Treat manual edits to generated
+artifacts as invalid: they are discarded or reconciled back into the source,
+never allowed to stand. Treat distribution without provenance as a defect, not an
+oversight.
+
+---
+
+## RISK-026 — Architecture overdesign
+
+- **Status:** Monitored
+- **Owner role:** Nova (provisional)
+- **Initial likelihood:** High
+- **Initial severity:** Medium
+
+### Description
+
+The logical architecture may become too complex for the available maintainer
+capacity before implementation evidence exists.
+
+### Impact
+
+CDS spends its capacity maintaining structure instead of producing anything
+consumers can use. Eight layers, eight artifact classes, five token levels, five
+status axes, and five contracts are each defensible and collectively substantial
+— and none has yet met a real implementation. The architecture may be describing
+a system that a larger team would build.
+
+### Mitigation direction
+
+Recognise that this architecture is currently **unvalidated by implementation**:
+the benchmark's most rigorous practices come from publishers with dedicated teams
+(RISK-011), and adopting their structure without their capacity is the specific
+failure mode here. Use the bounded CoreOps pilot as the first real test, and
+treat pilot friction as evidence about the architecture rather than about the
+pilot. Prefer removing structure that earns nothing over defending it. Keep
+deferred decisions deferred — every decision not yet made is complexity not yet
+paid for.
+
+---
+
+## RISK-027 — Product-profile fragmentation
+
+- **Status:** Monitored
+- **Owner role:** Nova (provisional)
+- **Initial likelihood:** Medium
+- **Initial severity:** High
+
+### Description
+
+Product Profiles and consumer extensions may become de facto independent design
+systems.
+
+### Impact
+
+CDS becomes a shared vocabulary for systems that no longer share anything.
+Profiles accumulate overrides until each product effectively runs its own design
+system with a CDS label, and the label then misleads: consumers believe they are
+aligned when they are not. This is the endpoint RISK-008 describes, reached
+through legitimate-looking steps.
+
+### Mitigation direction
+
+Bound profiles absolutely: approved extension points only, and never redefining
+shared semantics, weakening accessibility, distorting status truth, or breaking
+contracts (DEC-S-025). Treat a profile that needs a prohibited change as a fork
+and name it as one — an honest fork is manageable; a profile pretending not to be
+one is not. Prefer additive extensions. Treat repeated identical overrides as a
+core defect. Note that consumers already hold their own design decisions
+(CR-002, CR-037), so the starting position is closer to fragmentation than to
+alignment. Profile governance and limits are deferred to CDS-WP-006.
+
+---
+
+## RISK-028 — Deferred accessibility policy creates architecture debt
+
+- **Status:** Monitored
+- **Owner role:** Human Maintainer (provisional)
+- **Initial likelihood:** Medium
+- **Initial severity:** High
+
+### Description
+
+Architecture decisions made before CDS-WP-007 may inadvertently constrain future
+accessibility requirements or make them costly to adopt.
+
+### Impact
+
+The architecture is being decided while the accessibility target is undefined
+(CR-024). If a structural decision turns out to preclude a later target, the cost
+lands after the structure is load-bearing and consumers depend on it. The
+evidence base makes this sharper: accessibility is weak in **both** the benchmark
+and the consumer layers — CoreOps names a baseline with no level and CastCore
+documentation contains none at all — so there is little to steer by. A CoreOps
+pilot entry criterion is also blocked until the target exists.
+
+### Mitigation direction
+
+Keep accessibility in the architecture as a **structural constraint rather than a
+threshold**: constraints survive a later policy, whereas specific thresholds would
+pre-empt it. Hold the constraints that are safe regardless of level — colour never
+the sole meaning carrier, component contracts carry accessibility behavior,
+profiles may not weaken guarantees (invariant 10), status perceivable
+non-visually. Make **no conformance claim of any kind** meanwhile. Consider
+advancing CDS-WP-007 or deciding the target earlier than the roadmap implies,
+since the architecture cannot fully validate Pilot Group E without it.

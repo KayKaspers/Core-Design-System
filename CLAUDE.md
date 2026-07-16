@@ -19,8 +19,8 @@ library, or a design project scoped exclusively to CoreOps.
 - Phase: Foundation / Pre-Design
 - First reference consumer: CoreOps (not the sole design target)
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004
-- Next work package: CDS-WP-005 — Design System Architecture
+  CDS-WP-004, CDS-WP-005
+- Next work package: CDS-WP-006 — Governance, Versioning, and Contribution Model
 
 ## Execution environment
 
@@ -178,6 +178,9 @@ Before beginning a work package, inspect at minimum:
 - [README.md](README.md)
 - [project-system/CONTEXT_PACK_FOUNDATION.md](project-system/CONTEXT_PACK_FOUNDATION.md)
   — compact orientation; a summary, never a normative source
+- [docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md](docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md)
+  — normative source for the logical architecture; entry point to the
+  architecture documents
 - [docs/governance/CONCEPT_AND_SCOPE.md](docs/governance/CONCEPT_AND_SCOPE.md)
   — normative source for concept, scope, non-goals, and ownership
 - [docs/governance/CONSUMER_AND_STAKEHOLDER_MODEL.md](docs/governance/CONSUMER_AND_STAKEHOLDER_MODEL.md)
@@ -198,6 +201,35 @@ Where a summary disagrees with a normative source, the normative source wins.
 later work packages and decides nothing. Research findings are dated snapshots
 that decay; re-verify a source before relying on it, and never cite a research
 hypothesis as a decision.
+
+## Authority and conflict rule
+
+Authority is divided by **artifact class** (DEC-S-022). Only two classes bind,
+and only through change control:
+
+- **Normative human-readable sources** define intent, meaning, governance, and
+  usage constraints.
+- **Normative machine-readable sources** define approved values, relationships,
+  and metadata.
+
+**Never normative:** generated artifacts, design-tool representations, reference
+implementations, evidence artifacts, consumer-local artifacts, research, and
+examples. A generated artifact never stands against its source; a manual edit to
+one is invalid and must be reconciled back into the source.
+
+**On conflict, fail closed** (DEC-S-023):
+
+1. Stop. Do not guess.
+2. **Never resolve by recency** — the most recently edited artifact has no
+   privilege. This is the default behavior of most tooling and must be resisted
+   explicitly.
+3. Never resolve by convenience.
+4. Record the conflict and escalate.
+5. Prefer the more conservative reading until resolved — unverified beats
+   verified.
+
+Full model:
+[Source of Truth and Authority Model](docs/architecture/SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md).
 
 ## Consumer repositories are read-only
 

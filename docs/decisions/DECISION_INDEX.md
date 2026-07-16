@@ -11,8 +11,8 @@ authorized work packages.
 
 ## Register scope
 
-- Decision range: DEC-S-001 … DEC-S-020
-- Number of decisions: 20
+- Decision range: DEC-S-001 … DEC-S-032
+- Number of decisions: 32
 - Decision record format: index entries only; no ADR files exist in this phase.
 
 ## Decision types
@@ -22,8 +22,11 @@ authorized work packages.
 | Strategic foundation decision | DEC-S-001 … DEC-S-006 | CDS-WP-001 | Purpose, boundaries, and authority of the project. |
 | Strategic scope decision | DEC-S-007 … DEC-S-012 | CDS-WP-002 | Scope classification, ownership, consumer relationships, and commitment limits. |
 | Consumer and pilot scope decision | DEC-S-013 … DEC-S-020 | CDS-WP-004 | Evidence binding, requirement classification, pilot boundaries, and claim limits. |
+| Logical architecture decision | DEC-S-021 … DEC-S-032 | CDS-WP-005 | Layers, authority, token flow, profiles, channels, distribution, traceability, status semantics. |
 
-None of these types is an implementation decision.
+None of these types is an implementation decision. Logical architecture decisions
+define structure, responsibility, and flow — they select no technology, format,
+tool, or visual design (DEC-S-032).
 
 ## Status values
 
@@ -653,3 +656,443 @@ assumed.
 - Scenarios describe what must be expressible and safe, never how it should look.
 - The pilot contract starts no implementation; entry criteria are unmet.
 - Implementation requires separate, explicitly authorized work packages.
+
+---
+
+## DEC-S-021 — Eight-layer logical architecture
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Logical architecture decision
+- **Work package:** CDS-WP-005
+
+### Decision
+
+CDS uses an eight-layer logical architecture:
+
+1. Strategy and Governance
+2. Brand and Identity
+3. Foundations and Tokens
+4. Components
+5. Patterns and Experiences
+6. Channels and Communication
+7. Distribution and Enablement
+8. Evidence and Quality
+
+The layer model is logical and does not select repository topology,
+implementation technology, or organizational structure.
+
+### Rationale
+
+The benchmark found foundations → components → patterns to be settled industry
+structure — expected by consumers and therefore not a differentiator worth
+inventing around. CDS adopts the convention and extends it where its own scope
+demands: brand, channels, distribution, and evidence are layers because CDS's
+registered scope covers them.
+
+Layering exists to make dependency direction arguable. Without it, "the token is
+like this because the component needs it" is unanswerable.
+
+### Consequences
+
+- Each layer has one clear responsibility and a defined dependency direction.
+- Upward dependencies are prohibited; violations are architectural defects.
+- The model maps to no directory, repository, package, team, or tool.
+- CDS-WP-005 positions each layer; it populates none.
+
+---
+
+## DEC-S-022 — Authority is divided by artifact class
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Logical architecture decision
+- **Work package:** CDS-WP-005
+
+### Decision
+
+CDS authority is divided by artifact class.
+
+Human-readable normative sources define intent, governance, meaning, and usage
+constraints.
+
+Machine-readable normative sources define approved values, relationships, and
+metadata where applicable.
+
+Generated artifacts, tool representations, examples, research, and consumer
+copies are not independently normative.
+
+### Rationale
+
+"Where is the truth?" must have one answer per question. Splitting meaning from
+values keeps intent reviewable by a human without a tool — the operational core
+of DEC-S-004. The benchmark found tool coupling common, largely undocumented, and
+never presented as a risk by the systems that have it; naming the classes makes
+the coupling visible instead of ambient.
+
+### Consequences
+
+- Eight artifact classes with an explicit authority matrix.
+- Only classes 1 and 2 are normative, and only through change control.
+- Generated artifacts never stand against their source; manual edits are invalid.
+- Research and examples cannot acquire covert authority — relevant because CDS
+  already holds a large research corpus.
+- Addresses RISK-004; introduces RISK-020 (human/machine source ambiguity).
+
+---
+
+## DEC-S-023 — Conflicts fail closed
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Logical architecture decision
+- **Work package:** CDS-WP-005
+
+### Decision
+
+Conflicts between normative sources, generated artifacts, design-tool
+representations, reference implementations, and consumer artifacts must fail
+closed.
+
+No artifact gains authority merely because it was edited most recently.
+
+### Rationale
+
+Recency-wins is the default behavior of nearly every tool and merge strategy, and
+it is silent. A system that resolves design conflicts by timestamp has no
+authority model — it has a race condition.
+
+### Consequences
+
+- On unclear authority: stop, record the conflict, escalate; never guess.
+- Never resolve by recency or convenience.
+- Prefer the more conservative reading until resolved — an unverified reading
+  beats a verified one.
+- Failing closed is sometimes inconvenient; that is the cost of not shipping a
+  contradiction.
+- The detailed conflict authority is deferred to CDS-WP-006; until then Nova
+  recommends and the Human Maintainer decides (DEC-S-005).
+
+---
+
+## DEC-S-024 — Conceptual token flow
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Logical architecture decision
+- **Work package:** CDS-WP-005
+
+### Decision
+
+The conceptual CDS token flow is:
+
+Reference Tokens → Semantic Tokens → Component Tokens → Product Profile Overrides
+→ Channel or Platform Outputs.
+
+This decision does not select a token format, naming convention, build tool, or
+design tool.
+
+### Rationale
+
+Semantics must sit between raw values and consumers. Without a semantic layer,
+consumers bind to values and lose meaning — which forecloses theming, profiles,
+and channel transformation simultaneously, and makes CR-006 impossible to keep.
+
+The reviewed token interoperability draft identifies itself as a preview that
+instructs readers not to implement it or cite it as authoritative. A flow can be
+decided today; a format cannot.
+
+### Consequences
+
+- Five layers with a strictly downward dependency direction.
+- Semantic-first: appearance-derived names in meaning-carrying positions are
+  defects.
+- A component binding a reference token directly is a defect — the most tempting
+  and most damaging shortcut.
+- Raw values in consumer projects become a reconciliation or migration topic.
+- Cycles, orphans, layer violations, and illegal overrides must be
+  machine-checkable later; no tool is chosen.
+- Introduces RISK-021 (token and override proliferation).
+
+---
+
+## DEC-S-025 — Product Profiles are bounded
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Logical architecture decision
+- **Work package:** CDS-WP-005
+
+### Decision
+
+Product Profiles may modify only explicitly approved extension points.
+
+They must not redefine shared semantics, weaken accessibility requirements, break
+consumer contracts, or create an incompatible independent design system.
+
+### Rationale
+
+Every mature system reviewed permits product variation; **none published its
+limits**. That silence is where fragmentation lives. The four prohibitions are
+absolute because each, if permitted, dissolves the reason CDS exists: shared
+meaning, accessibility, contracts, and one system.
+
+### Consequences
+
+- Extension points are named, finite, and approved. Anything unnamed is not one.
+- A profile needing a prohibited change is not a profile — it is a fork, and must
+  be named as one.
+- Additive consumer extensions are preferred over overrides.
+- Repeated overrides of the same thing indicate a core defect; fix the core.
+- Which points are approved, and who approves, is deferred to CDS-WP-006.
+- Addresses RISK-008; introduces RISK-027 (profile fragmentation).
+
+---
+
+## DEC-S-026 — Existing product-local designs are reconciled, not overwritten
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Logical architecture decision
+- **Work package:** CDS-WP-005
+
+### Decision
+
+Existing product-local design decisions are reconciled through inventory,
+semantic mapping, conflict identification, classification, and controlled
+migration.
+
+CDS does not automatically overwrite, absorb, or retrospectively certify existing
+consumer designs.
+
+### Rationale
+
+SpeakCore and CastCore already hold their own style direction, palette, and token
+sets (CR-002, CR-037). CDS is arriving late, and an architecture that assumes a
+blank slate would be describing a project that does not exist.
+
+### Consequences
+
+- An eight-step reconciliation flow, with semantic mapping as its core: the
+  question is what a decision *meant*, never whether a value is right.
+- Consumer-local retention is a **valid final outcome**, not a failure.
+- No automatic adoption, no automatic overwrite, no retrospective conformance.
+- Reusable insight still requires the DEC-S-016 gate.
+- Migration must later be versioned, documented, and reversibly plannable.
+- Addresses RISK-022.
+
+---
+
+## DEC-S-027 — Operations patterns are a domain family, not the foundation
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Logical architecture decision
+- **Work package:** CDS-WP-005
+
+### Decision
+
+Operations-oriented patterns are modeled as a potentially reusable domain pattern
+family above generic foundations and components.
+
+They do not automatically define the universal CDS foundation.
+
+### Rationale
+
+The consumer evidence for operations patterns is strong (HYP-003: *Confirmed
+consumer need*), and its generalizability is **entirely untested**: all three
+reviewed consumers are infrastructure products, so the sample cannot distinguish
+"operational products need this" from "all products need this". The benchmark
+could not verify it either — both evidence layers are silent on the same
+question.
+
+A domain family lets CDS serve a real need without silently redefining itself as
+an operations design system.
+
+### Consequences
+
+- Domain families sit above the universal foundation and are adopted only by
+  consumers in that domain.
+- Domain requirements must not push into Layers 3 or 4 without multi-consumer
+  evidence from **outside** that domain.
+- Addresses RISK-002 and RISK-016; introduces RISK-023 (domain-pattern leakage).
+
+---
+
+## DEC-S-028 — Status semantics are separated by axis
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Logical architecture decision
+- **Work package:** CDS-WP-005
+
+### Decision
+
+CDS status architecture separates operational condition, severity, knowledge
+confidence, freshness, and evidence availability.
+
+Unknown, stale, unavailable, incomplete, or unverified information must not be
+represented as healthy, successful, current, or verified.
+
+### Rationale
+
+This is the strongest multi-consumer evidence CDS holds: all three consumers
+document graded status, and two independently require that unknown must not read
+as healthy (CR-006, CR-007).
+
+Merging condition with knowledge confidence leaves "unknown" nowhere to live, so
+it becomes a false healthy — and an operator acts on a green that means *we have
+no idea*. Placing the separation in the architecture rather than in a convention
+is deliberate: a convention can be forgotten under deadline; a structural
+separation cannot be quietly ignored.
+
+### Consequences
+
+- Five axes that must never merge into one opaque value.
+- Colour may never be the sole meaning carrier.
+- Degraded and unavailable stay distinguishable; stale is not current;
+  unverified is not verified.
+- No transformation may collapse the axes; no profile may distort them.
+- Semantics stay consistent across channels while rendering may differ.
+- The concrete taxonomy and naming are deliberately deferred.
+
+---
+
+## DEC-S-029 — Channels share semantics and differ in presentation
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Logical architecture decision
+- **Work package:** CDS-WP-005
+
+### Decision
+
+CDS channels share governed semantic foundations while retaining channel-specific
+transformation, layout, interaction, and evidence requirements.
+
+Multi-channel governance does not require identical rendering across channels.
+
+### Rationale
+
+A paginated report and an interactive dashboard have different physics. Forcing
+visual identity on them produces bad artifacts in both. What must not vary is
+meaning — a status that means unknown in the UI means unknown in the PDF.
+
+The non-interactive channels are the hard case: no hover, no live update,
+possibly greyscale print. A status depending on colour, interaction, or refresh
+fails there — which makes the non-colour rule an architectural necessity rather
+than a courtesy.
+
+### Consequences
+
+- Nine channel classes registered as structure, not as demand.
+- Channels may transform presentation; they may not redefine meaning.
+- The benchmark found no reviewed system documenting PDF, presentation, or
+  diagram standards, and consumer evidence for them is weak to absent — CR-030
+  has none at all. Registration is not a commitment to build.
+- Introduces RISK-024 (channel divergence).
+
+---
+
+## DEC-S-030 — Distribution must support offline and self-hosted use
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Logical architecture decision
+- **Work package:** CDS-WP-005
+
+### Decision
+
+CDS distribution must support local and offline consumption, reproducible
+transformation, version or revision pinning, and operation without mandatory
+external runtime services.
+
+This decision does not select a distribution technology or package manager.
+
+### Rationale
+
+This is a confirmed consumer need, not a hypothesis: offline and air-gap capable
+operation is an accepted product requirement of the pilot consumer, and all three
+consumers position as self-hosted (CR-031, CR-032, HYP-002).
+
+The benchmark found no reviewed system stating an offline guarantee — self-
+containable distribution is common, but committing to it is not. CDS commits
+architecturally. That is a commitment, not a claim of uniqueness (DEC-S-019).
+
+### Consequences
+
+- No mandatory external runtime service; local assets; air-gap tolerance.
+- Optional services must stay optional.
+- Reproducibility makes provenance meaningful rather than merely asserted.
+- Consumers pin to an identifiable revision; "latest" is not a pin.
+- The architecture constrains properties, not mechanisms — any mechanism
+  satisfying them is acceptable; any that does not, is not.
+
+---
+
+## DEC-S-031 — Artifacts remain traceable to source revisions
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Logical architecture decision
+- **Work package:** CDS-WP-005
+
+### Decision
+
+Generated artifacts, consumer integrations, adoption evidence, and migration
+evidence must remain traceable to identified normative source revisions and
+transformation paths.
+
+### Rationale
+
+An artifact whose origin cannot be established is functionally normative, because
+nobody can contradict it. Traceability is what keeps a generated artifact
+subordinate to its source in practice rather than only on paper.
+
+### Consequences
+
+- Required logical identities: source revision, transformation revision, output
+  identity, consumer revision, evidence identity, deviation record, approval
+  state.
+- A break anywhere breaks the chain.
+- Distributing an output without provenance is a defect (RISK-025).
+- No metadata structure or file format is selected.
+- Underpins the Adoption Evidence Contract and DEC-S-012.
+
+---
+
+## DEC-S-032 — The architecture is technology-independent
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Logical architecture decision
+- **Work package:** CDS-WP-005
+
+### Decision
+
+The CDS logical architecture remains independent of final repository topology,
+design-tool choice, token format, component framework, programming language,
+build system, documentation platform, and package manager.
+
+### Rationale
+
+DEC-S-003 requires governance and architecture before concrete decisions, and
+DEC-S-004 requires tool independence. An architecture that embeds a tool choice
+inherits that tool's lifetime — and the benchmark showed exactly this pattern
+going undocumented elsewhere.
+
+Deciding structure now and technology later is only possible if the structure
+does not smuggle a technology in.
+
+### Consequences
+
+- The architecture is designed to survive any reasonable technology choice.
+- If a later choice cannot satisfy an architectural invariant, the **choice** is
+  wrong — not the invariant.
+- Deferred: repository topology, design tool, token format and naming, component
+  framework, language, build system, documentation platform, package manager,
+  distribution service, metadata structure, file formats, licence, publication,
+  maturity model, versioning scheme, accessibility level, status taxonomy, and
+  all concrete visual decisions.
+- Introduces RISK-026 (architecture overdesign): structure without
+  implementation evidence can outgrow the capacity that must run it.

@@ -170,6 +170,47 @@ constitutes CDS adoption, conformance, certification, or endorsement.**
 - [Consumer Evidence Register](docs/research/CONSUMER_EVIDENCE_REGISTER.md)
 - [Consumer Hypothesis Validation](docs/research/CONSUMER_HYPOTHESIS_VALIDATION.md)
 
+## Logical architecture
+
+The CDS logical architecture is defined. It describes structure, responsibility,
+authority, and flow — and **selects no technology and no design**.
+
+**Eight architecture layers:** Strategy and Governance · Brand and Identity ·
+Foundations and Tokens · Components · Patterns and Experiences · Channels and
+Communication · Distribution and Enablement · Evidence and Quality.
+
+**Source-of-Truth and Authority Model** — eight artifact classes with an explicit
+authority matrix. Only normative sources bind; generated artifacts, design-tool
+state, examples, and research never do. Conflicts fail closed, and recency
+confers no authority.
+
+**Conceptual token flow** — Reference → Semantic → Component → Product Profile
+Overrides → Channel/Platform Outputs. Semantic-first. No format, naming
+convention, or tool is chosen.
+
+**Product Profile and Reconciliation Model** — variation happens at approved
+extension points only, and may never redefine shared semantics, weaken
+accessibility, distort status truth, or break contracts. Consumers that already
+hold their own design decisions are **reconciled, not overwritten**.
+
+**Architecture traceability** — all 40 consumer requirements (CR-001 … CR-040)
+are mapped to the architecture, with deferred items named rather than hidden.
+
+**Boundaries:** this is structure, not implementation. Nothing is built, no
+component or token exists, no repository topology, tool, format, framework, or
+licence is selected, and no accessibility conformance level is claimed. The
+architecture awaits governance policy, an accessibility target, and
+implementation evidence.
+
+- [Design System Architecture](docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md)
+- [Source of Truth and Authority Model](docs/architecture/SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md)
+- [Token and Theme Architecture](docs/architecture/TOKEN_AND_THEME_ARCHITECTURE.md)
+- [Product Profile and Extension Model](docs/architecture/PRODUCT_PROFILE_AND_EXTENSION_MODEL.md)
+- [Artifact Distribution and Channel Model](docs/architecture/ARTIFACT_DISTRIBUTION_AND_CHANNEL_MODEL.md)
+- [Consumer Contract and Reconciliation Model](docs/architecture/CONSUMER_CONTRACT_AND_RECONCILIATION_MODEL.md)
+- [Evidence, Traceability and Status Semantics](docs/architecture/EVIDENCE_TRACEABILITY_AND_STATUS_SEMANTICS.md)
+- [Architecture Requirements Traceability](docs/architecture/ARCHITECTURE_REQUIREMENTS_TRACEABILITY.md)
+
 ## Work packages
 
 - **Completed:** CDS-WP-001 — Project Governance and NDF Bootstrap
@@ -177,16 +218,18 @@ constitutes CDS adoption, conformance, certification, or endorsement.**
 - **Completed:** CDS-WP-002 — Concept and Scope Registration
 - **Completed:** CDS-WP-003 — Benchmark and Differentiation Research
 - **Completed:** CDS-WP-004 — Consumer Requirements and CoreOps Pilot Contract
-- **Next:** CDS-WP-005 — Design System Architecture
+- **Completed:** CDS-WP-005 — Design System Architecture
+- **Next:** CDS-WP-006 — Governance, Versioning, and Contribution Model
 
 The full controlled roadmap is in
 [project-system/WORK_PACKAGES.md](project-system/WORK_PACKAGES.md).
 
 ## Registers
 
-- Decisions: DEC-S-001 … DEC-S-020 (20) — 6 strategic foundation decisions,
-  6 strategic scope decisions, 8 consumer and pilot scope decisions
-- Risks: RISK-001 … RISK-019 (19) — owner model provisional until CDS-WP-006
+- Decisions: DEC-S-001 … DEC-S-032 (32) — 6 strategic foundation decisions,
+  6 strategic scope decisions, 8 consumer and pilot scope decisions,
+  12 logical architecture decisions
+- Risks: RISK-001 … RISK-028 (28) — owner model provisional until CDS-WP-006
 
 ## Governance documents
 

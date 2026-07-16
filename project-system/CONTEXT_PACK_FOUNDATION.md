@@ -6,8 +6,8 @@
 > it never defines. Where it disagrees with a normative source, the normative
 > source wins and this pack is wrong and must be corrected.
 
-- **Maintained by:** CDS-WP-004
-- **Date:** 2026-07-15
+- **Maintained by:** CDS-WP-005
+- **Date:** 2026-07-16
 
 ## Project identity
 
@@ -33,6 +33,7 @@ concrete visual or technical design decisions are authorized (DEC-S-003).
 | CDS-WP-002 | Concept and Scope Registration | Concept and scope, consumer model, boundary matrix, DEC-S-007…012, RISK-006…009, this pack. |
 | CDS-WP-003 | Benchmark and Differentiation Research | Ten systems reviewed against 14 dimensions from official sources; HYP-001…008 assessed; RISK-010…013. **Non-normative.** No decision changed. |
 | CDS-WP-004 | Consumer Requirements and CoreOps Pilot Contract | 3 consumers analyzed at committed revisions; CR-001…040 registered and traced; CoreOps pilot Groups A–E with 9 scenarios; pilot contract; HYP consumer layer; DEC-S-013…020; RISK-014…019. |
+| CDS-WP-005 | Design System Architecture | Eight-layer logical architecture; authority model; token flow; profiles and reconciliation; channels and distribution; consumer contracts; status semantics; CR mapped to architecture; DEC-S-021…032; RISK-020…028. **No technology or design selected.** |
 
 ## Normative source map
 
@@ -49,6 +50,14 @@ Read the source, not this summary, when the detail matters.
 | Working rules, Skills-first mode | [CLAUDE.md](../CLAUDE.md) |
 | Roadmap and status | [project-system/WORK_PACKAGES.md](WORK_PACKAGES.md) |
 | Skills provenance | [docs/governance/NDF_SKILLS_PROVENANCE.md](../docs/governance/NDF_SKILLS_PROVENANCE.md) |
+| **Logical architecture** | [docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md](../docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md) |
+| Artifact classes and authority | [docs/architecture/SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md](../docs/architecture/SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md) |
+| Token flow and theming | [docs/architecture/TOKEN_AND_THEME_ARCHITECTURE.md](../docs/architecture/TOKEN_AND_THEME_ARCHITECTURE.md) |
+| Profiles, extensions, reconciliation | [docs/architecture/PRODUCT_PROFILE_AND_EXTENSION_MODEL.md](../docs/architecture/PRODUCT_PROFILE_AND_EXTENSION_MODEL.md) |
+| Channels and distribution | [docs/architecture/ARTIFACT_DISTRIBUTION_AND_CHANNEL_MODEL.md](../docs/architecture/ARTIFACT_DISTRIBUTION_AND_CHANNEL_MODEL.md) |
+| Consumer contracts | [docs/architecture/CONSUMER_CONTRACT_AND_RECONCILIATION_MODEL.md](../docs/architecture/CONSUMER_CONTRACT_AND_RECONCILIATION_MODEL.md) |
+| Evidence flow and status semantics | [docs/architecture/EVIDENCE_TRACEABILITY_AND_STATUS_SEMANTICS.md](../docs/architecture/EVIDENCE_TRACEABILITY_AND_STATUS_SEMANTICS.md) |
+| Architecture requirement coverage | [docs/architecture/ARCHITECTURE_REQUIREMENTS_TRACEABILITY.md](../docs/architecture/ARCHITECTURE_REQUIREMENTS_TRACEABILITY.md) |
 | Consumer requirements and classification | [docs/governance/CONSUMER_REQUIREMENTS_MODEL.md](../docs/governance/CONSUMER_REQUIREMENTS_MODEL.md) |
 | Requirement provenance | [docs/governance/CONSUMER_REQUIREMENTS_TRACEABILITY.md](../docs/governance/CONSUMER_REQUIREMENTS_TRACEABILITY.md) |
 | CoreOps pilot scope | [docs/governance/COREOPS_PILOT_SCOPE_AND_SCENARIOS.md](../docs/governance/COREOPS_PILOT_SCOPE_AND_SCENARIOS.md) |
@@ -67,11 +76,12 @@ work packages; they decide nothing:
 
 ## Active decisions
 
-- Range: DEC-S-001 … DEC-S-020 · Count: 20 · All Accepted
+- Range: DEC-S-001 … DEC-S-032 · Count: 32 · All Accepted
 - DEC-S-001…006: strategic foundation decisions (CDS-WP-001)
-- DEC-S-007…012: strategic scope decisions (CDS-WP-002) — unchanged by
-  CDS-WP-003 and CDS-WP-004
-- DEC-S-013…020: consumer and pilot scope decisions (CDS-WP-004)
+- DEC-S-007…012: strategic scope decisions (CDS-WP-002)
+- DEC-S-013…020: consumer and pilot scope decisions (CDS-WP-004) — unchanged by
+  CDS-WP-005
+- DEC-S-021…032: logical architecture decisions (CDS-WP-005)
 - No ADR files exist.
 
 | ID | Summary |
@@ -96,10 +106,22 @@ work packages; they decide nothing:
 | DEC-S-018 | Secondary consumers provide evidence, not pilot authority. |
 | DEC-S-019 | Consumer need does not establish differentiation. |
 | DEC-S-020 | CDS-WP-004 authorizes requirements and a contract only. |
+| DEC-S-021 | Eight-layer logical architecture; selects no topology or technology. |
+| DEC-S-022 | Authority divided by artifact class; only normative sources bind. |
+| DEC-S-023 | Conflicts fail closed; recency never confers authority. |
+| DEC-S-024 | Token flow: Reference → Semantic → Component → Profile → Output. |
+| DEC-S-025 | Profiles modify approved extension points only. |
+| DEC-S-026 | Existing product designs are reconciled, not overwritten. |
+| DEC-S-027 | Operations patterns are a domain family, not the foundation. |
+| DEC-S-028 | Status axes separated; unknown is never healthy. |
+| DEC-S-029 | Channels share semantics; rendering may differ. |
+| DEC-S-030 | Distribution supports offline, pinning, reproducibility. |
+| DEC-S-031 | Artifacts stay traceable to source revisions. |
+| DEC-S-032 | The architecture is technology-independent. |
 
 ## Active risks
 
-- Range: RISK-001 … RISK-019 · Count: 19 · All Monitored
+- Range: RISK-001 … RISK-028 · Count: 28 · All Monitored
 - Owner model is **provisional** until CDS-WP-006.
 
 | ID | Summary |
@@ -123,6 +145,15 @@ work packages; they decide nothing:
 | RISK-017 | Document evidence mistaken for user validation. |
 | RISK-018 | Pilot contract mistaken for adoption or conformance. |
 | RISK-019 | Secondary consumer underrepresentation. |
+| RISK-020 | Normative-source authority ambiguity. |
+| RISK-021 | Token and override proliferation. |
+| RISK-022 | Existing-product reconciliation failure. |
+| RISK-023 | Domain-pattern leakage into the universal foundation. |
+| RISK-024 | Channel divergence. |
+| RISK-025 | Generated-artifact provenance loss. |
+| RISK-026 | Architecture overdesign. |
+| RISK-027 | Product-profile fragmentation. |
+| RISK-028 | Deferred accessibility policy creates architecture debt. |
 
 ## Approved strategic principles
 
@@ -312,15 +343,64 @@ need*; HYP-007 needs *Human validation*; the rest are partially supported.
 Research assessments from CDS-WP-003 are **unchanged**. A confirmed need is not a
 differentiation claim (DEC-S-019).
 
+## Logical architecture (CDS-WP-005)
+
+**Normative.** Selects no technology and no design (DEC-S-032).
+
+**Eight layers** (DEC-S-021): 1 Strategy and Governance · 2 Brand and Identity ·
+3 Foundations and Tokens · 4 Components · 5 Patterns and Experiences ·
+6 Channels and Communication · 7 Distribution and Enablement · 8 Evidence and
+Quality. Dependencies flow **downward only**; upward dependencies are defects.
+
+**Source of truth** (DEC-S-022, DEC-S-023): eight artifact classes. Only
+*Normative Human-readable* (meaning) and *Normative Machine-readable* (values)
+bind, and only through change control. Generated artifacts, design-tool state,
+reference implementations, evidence, consumer-local artifacts, and research are
+**not normative**. Conflicts **fail closed**; recency never confers authority.
+
+**Token flow** (DEC-S-024), five levels, strictly downward: Reference → Semantic
+→ Component → Product Profile Overrides → Channel/Platform Outputs.
+Semantic-first; no format, naming, or tool selected.
+
+**Profiles and reconciliation** (DEC-S-025, DEC-S-026): Core Foundation · Product
+Profile · Consumer Extension · Domain Pattern Family · Local Exception. Profiles
+touch approved extension points only and may never redefine shared semantics,
+weaken accessibility, distort status truth, or break contracts. Existing consumer
+designs are **reconciled, not overwritten** — inventory → semantic mapping →
+conflict identification → classification → retention or migration. Consumer-local
+retention is a valid outcome.
+
+**Operations patterns** are a **Domain Pattern Family** above the universal
+foundation, not part of it (DEC-S-027) — the need is confirmed, generalizability
+is not.
+
+**Channels and distribution** (DEC-S-029, DEC-S-030, DEC-S-031): channels share
+semantics and may differ in rendering. Distribution requires **no mandatory
+external runtime**, supports offline and air-gap, is reproducible, and pins to an
+identifiable revision. Every artifact carries provenance.
+
+**Status invariants** (DEC-S-028): five separated axes — operational condition,
+severity, knowledge confidence, freshness, evidence availability. **Unknown is
+not Healthy. Stale is not Current. Unverified is not Verified.** Colour is never
+the sole meaning carrier.
+
+**Requirement coverage:** CR-001…040 all mapped — 8 addressed by architecture,
+24 partially addressed, 3 deferred to CDS-WP-007, 1 to CDS-WP-006, 2
+consumer-owned, 2 out of scope.
+
 ## Current and next work package
 
-- **Completed:** CDS-WP-004 — Consumer Requirements and CoreOps Pilot Contract
-- **Next:** CDS-WP-005 — Design System Architecture
+- **Completed:** CDS-WP-005 — Design System Architecture
+- **Next:** CDS-WP-006 — Governance, Versioning, and Contribution Model
 
-CDS-WP-005 defines normative system layers, the source-of-truth model, token flow
-**as architecture without selecting a format**, artifact classes, product
-profiles, distribution, consumer contracts, and evidence flows. No final visual
-design and no concrete tool, framework, or token-format decision.
+CDS-WP-006 supplies the policy the architecture deferred: governance roles, risk
+ownership (currently **provisional** across all 28 risks), maturity states,
+versioning, compatibility, deprecation, contribution, exception governance,
+Product Profile governance, conformance and adoption claims, and the licensing
+and publication decision model.
+
+**Open for Nova:** CR-024, the accessibility target, is still undefined. It now
+blocks a CoreOps pilot entry criterion and Pilot Group E evidence (RISK-028).
 
 Being listed as Next identifies sequence, not authorization. Every work package
 needs an explicit prompt from Nova.
