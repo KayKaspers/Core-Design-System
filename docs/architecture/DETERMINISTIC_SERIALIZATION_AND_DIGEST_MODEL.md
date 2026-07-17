@@ -73,8 +73,16 @@ manifest is produced**. Fixture and artifact digests are therefore carried as:
 
 > **`Not computed – validator implementation pending`**
 
-Implementing the canonicalizer, computing digests, and producing digest evidence are
-**CDS-WP-013**.
+**Update (CDS-WP-013):** the offline validator now computes RFC 8785 + SHA-256
+content digests via the pinned `rfc8785` implementation (ADR-0003, DEC-S-100). The
+executed harness digested 14 of the 15 fixtures; the duplicate-key fixture is
+V1-invalid and received **no** digest
+([digest report](../../artifacts/validation/wp013-fixture-digests.json)). These
+digests are **executor-produced integrity evidence, independently unreviewed** —
+still not a signature, approval, or release manifest (DEC-S-103, RISK-072). The
+`digestState` fields inside the committed fixtures intentionally keep their
+`Not computed` value: fixtures are frozen synthetic inputs, and recorded digests
+live in the evidence artifacts, not in the sources.
 
 ## Risks
 

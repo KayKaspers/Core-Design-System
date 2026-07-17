@@ -6,7 +6,7 @@
 > it never defines. Where it disagrees with a normative source, the normative
 > source wins and this pack is wrong and must be corrected.
 
-- **Maintained by:** CDS-WP-012
+- **Maintained by:** CDS-WP-013
 - **Date:** 2026-07-17
 
 ## Project identity
@@ -28,10 +28,13 @@ is operationalized; the accessibility support baseline **A11Y-BL-001** is define
 (CDS-WP-010, pending commit, **no evidence executed — every artifact AE-0**); and the
 **machine-readable source format is decided** (CDS-WP-011: DTCG 2025.10-based CDS
 profile, strict JSON, ADR-0001); and the **machine-readable bootstrap is implemented**
-(CDS-WP-012: 4 schemas, 15 fixtures, V1–V4 validation contract, RFC 8785/SHA-256, ADR-0002)
-— **Experimental, pending commit, no validator executed, no design value**. Concrete
-visual design values remain unauthorized (DEC-S-003). The next work package is
-**CDS-WP-013 — Offline Token Profile Validator and Fixture Harness**.
+(CDS-WP-012: 4 schemas, 15 fixtures, V1–V4 validation contract, RFC 8785/SHA-256, ADR-0002);
+and the **offline validator and fixture harness are implemented and executed**
+(CDS-WP-013: pinned Python/jsonschema/rfc8785 stack, ADR-0003, 71/71 unit tests,
+**15/15 expected/actual case matches**, 14 digests) — **Experimental, pending commit,
+executor-produced, independently unreviewed, no design value**. Concrete visual design
+values remain unauthorized (DEC-S-003). The next work package is **CDS-WP-014 —
+Semantic Status Foundation Contract and First Candidate Plan**.
 
 ## Completed work packages
 
@@ -50,6 +53,7 @@ visual design values remain unauthorized (DEC-S-003). The next work package is
 | CDS-WP-010 | Accessibility Support Baseline and Evidence Strategy | Defined **A11Y-BL-001** (pending commit) via authorized official research — 3 tiers, 14-entry environment matrix (Required 6 · Conditional 4 · Deferred 4), evidence strategy (AE-0…AE-4), maintenance policy (freshness + triggers + 6-month max gap), defect/regression model, evidence record template, source register + selection rationale. DEC-S-065…072 added; RISK-049…054 added; RISK-044 `Monitored → Mitigating`. **A test contract, not evidence — no test run, every artifact AE-0, no environment claimed supported, pilot inactive, publication `Private Development`.** |
 | CDS-WP-011 | Machine-Readable Source and Token Format Decision | Decided the normative machine-readable source format via authorized official research (13 URLs; stable vs preview separated): **DTCG 2025.10** (Format/Color/Resolver; a **Final CG Report, not a W3C Standard**) as external basis, **strict JSON `.tokens.json`**, **JSON Schema 2020-12** profile-schema foundation, an `io.github.kaykaspers.cds` `$extensions` namespace, four source-set layers, fail-closed references (curly-brace token-to-token vs `$ref`/JSON-Pointer for document/resolver/cross-file), machine-validatable naming, versioned provenance, and 4 validation layers. Created **ADR-0001** + 4 architecture docs + evaluation/register + implementation plan. DEC-S-073…082 added; RISK-055…063 added. **No token/schema/validator/design value; no Candidate/Stable; pilot inactive; publication `Private Development`.** |
 | CDS-WP-012 | Machine-Readable Source Bootstrap and Validation Contract | Implemented the value-neutral bootstrap (pending commit): **4 CDS-owned JSON Schema 2020-12 contracts** (token document, source-set manifest, resolver, validation case; stable `tag:` `$id`s, local `$ref`, offline), the `io.github.kaykaspers.cds` payload contract, **6 positive + 9 negative synthetic fixtures**, a **15-case validation-case matrix** (expected V1–V4 per fixture), an explicit **V1–V4 Validation Contract** (duplicate-key fails V1; no aggregate score), and the **RFC 8785 (JCS) + SHA-256** serialization decision (**ADR-0002**). DEC-S-083…092 added; RISK-064…072 added. **No real token/design value, productive validator, or canonicalizer; formal schema execution `Not assessed`; Experimental, not Candidate; publication `Private Development`. CDS-WP-013 registered Next.** |
+| CDS-WP-013 | Offline Token Profile Validator and Fixture Harness | Implemented and executed the offline validator (pending commit): `python -m tools.cds_validator` (Python 3.12.10; pinned `jsonschema==4.26.0` + `rfc8785==0.1.4`, ADR-0003), a single duplicate-key-rejecting loader, a local five-schema registry (incl. the new **validation-result schema**), the layered V1–V4 engine, manifest/resolver graph validation, and RFC 8785 + SHA-256 digests. **71/71 unit tests; 15/15 cases with 15/15 expected/actual matches; 14 fixtures digested** (duplicate-key: none). Evidence in `artifacts/validation/` + Execution Review — **executor-produced, `independentReviewState: pending`**. DEC-S-093…104 added; RISK-073…081 added; RISK-066/067/068/069/071 → `Mitigating`. **Bounded DTCG V2 (no full-DTCG statement); no design value; no Candidate; publication `Private Development`. CDS-WP-014 registered Next.** |
 
 ## Normative source map
 
@@ -90,8 +94,12 @@ Read the source, not this summary, when the detail matters.
 | Deterministic serialization / digest | [docs/architecture/DETERMINISTIC_SERIALIZATION_AND_DIGEST_MODEL.md](../docs/architecture/DETERMINISTIC_SERIALIZATION_AND_DIGEST_MODEL.md) |
 | Format decision (ADR-0001) | [docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md](../docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md) |
 | Serialization decision (ADR-0002) | [docs/decisions/ADR-0002-DETERMINISTIC_JSON_SERIALIZATION.md](../docs/decisions/ADR-0002-DETERMINISTIC_JSON_SERIALIZATION.md) |
-| CDS schemas (structural, non-normative-executed) | [schemas/](../schemas/) |
+| Validator stack decision (ADR-0003) | [docs/decisions/ADR-0003-OFFLINE_TOKEN_VALIDATOR_IMPLEMENTATION_STACK.md](../docs/decisions/ADR-0003-OFFLINE_TOKEN_VALIDATOR_IMPLEMENTATION_STACK.md) |
+| Offline validator architecture | [docs/architecture/OFFLINE_TOKEN_VALIDATOR_ARCHITECTURE.md](../docs/architecture/OFFLINE_TOKEN_VALIDATOR_ARCHITECTURE.md) |
+| Validator usage (non-normative) | [docs/operations/OFFLINE_TOKEN_VALIDATOR_USAGE.md](../docs/operations/OFFLINE_TOKEN_VALIDATOR_USAGE.md) |
+| CDS schemas (structural; five, incl. validation result) | [schemas/](../schemas/) |
 | Synthetic validation fixtures + case matrix | [tests/fixtures/machine-readable/](../tests/fixtures/machine-readable/) |
+| Validator execution evidence (executor-produced) | [artifacts/validation/](../artifacts/validation/) · [Execution Review](../docs/reviews/OFFLINE_TOKEN_VALIDATOR_EXECUTION_REVIEW.md) |
 | **Logical architecture** | [docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md](../docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md) |
 | Artifact classes and authority | [docs/architecture/SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md](../docs/architecture/SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md) |
 | Token flow and theming | [docs/architecture/TOKEN_AND_THEME_ARCHITECTURE.md](../docs/architecture/TOKEN_AND_THEME_ARCHITECTURE.md) |
@@ -127,7 +135,8 @@ and reference the normative policies; they do not replace them (DEC-S-063):
 
 ## Active decisions
 
-- Range: DEC-S-001 … DEC-S-092 · Count: 92 · All Accepted · ADRs: 2 (ADR-0001, ADR-0002)
+- Range: DEC-S-001 … DEC-S-104 · Count: 104 · All Accepted · ADRs: 3 (ADR-0001,
+  ADR-0002, ADR-0003)
 - DEC-S-001…006: strategic foundation decisions (CDS-WP-001)
 - DEC-S-007…012: strategic scope decisions (CDS-WP-002)
 - DEC-S-013…020: consumer and pilot scope decisions (CDS-WP-004)
@@ -144,8 +153,11 @@ and reference the normative policies; they do not replace them (DEC-S-063):
   DEC-S-001…072 unchanged
 - DEC-S-083…092: machine-readable bootstrap and validation decisions (CDS-WP-012) —
   DEC-S-001…082 unchanged
-- ADR-0001 (Machine-Readable Token Source Format) and ADR-0002 (Deterministic JSON
-  Serialization) exist — 2 ADRs.
+- DEC-S-093…104: offline validator implementation decisions (CDS-WP-013) —
+  DEC-S-001…092 unchanged
+- ADR-0001 (Machine-Readable Token Source Format), ADR-0002 (Deterministic JSON
+  Serialization), and ADR-0003 (Offline Token Validator Implementation Stack)
+  exist — 3 ADRs.
 
 | ID | Summary |
 | --- | --- |
@@ -241,10 +253,23 @@ and reference the normative policies; they do not replace them (DEC-S-063):
 | DEC-S-090 | RFC 8785 (JCS) + SHA-256 for canonical content digests; supplements, not replaces, revision/approval/provenance. |
 | DEC-S-091 | Cross-file references valid only via the declared local graph; undeclared/network/missing/cyclic fail closed. |
 | DEC-S-092 | Bootstrap stays Experimental until a validator executes, results are reviewed, and the Human Maintainer approves. |
+| DEC-S-093 | Validator stack: Python 3.11+, stdlib-first, pinned jsonschema + rfc8785; no runtime network. |
+| DEC-S-094 | Entry point `python -m tools.cds_validator`; version/validate-file/validate-cases/digest + exit-code contract. |
+| DEC-S-095 | Every validation path uses the duplicate-key-rejecting loader; bypassing parse paths prohibited. |
+| DEC-S-096 | Schema resolution via a committed local registry only; unknown/network resolution fails closed. |
+| DEC-S-097 | V1–V4 states stay separate and visible; no aggregate score. |
+| DEC-S-098 | DTCG coverage explicitly bounded; unsupported areas are limitations, never passes. |
+| DEC-S-099 | Manifest/resolver validation enforces the declared graph; implicit discovery prohibited. |
+| DEC-S-100 | Digests only from parsed content; never authenticity, approval, or revision replacement. |
+| DEC-S-101 | Results use the CDS-owned result schema binding runtime/dependency/case/digest/review identities. |
+| DEC-S-102 | Harness success = actual matches committed expected; a recognized negative is an observation, not approval. |
+| DEC-S-103 | WP-013 reports are Experimental executor-produced evidence; independently unreviewed until separately reviewed. |
+| DEC-S-104 | No Candidate before full harness pass, complete provenance, independent review, Nova review, and Human-Maintainer approval. |
 
 ## Active risks
 
-- Range: RISK-001 … RISK-072 · Count: 72 · **70 Monitored, RISK-040 + RISK-044 Mitigating**
+- Range: RISK-001 … RISK-081 · Count: 81 · **74 Monitored; RISK-040, RISK-044,
+  RISK-066, RISK-067, RISK-068, RISK-069, RISK-071 Mitigating**
 - **Owner model finalized** (DEC-S-045): Accountable Risk Owner — Human
   Maintainer · Risk Controller — Nova · Mitigation Executor — named per
   mitigation · Evidence Reviewer — Nova or authorized reviewer (never the executor).
@@ -256,7 +281,11 @@ and reference the normative policies; they do not replace them (DEC-S-063):
   and moved **RISK-044 `Monitored → Mitigating`** (A11Y-BL-001 defined).
   **CDS-WP-011 added RISK-055…063** (token-format/spec-drift/reference/provenance risks).
   **CDS-WP-012 added RISK-064…072** (all Monitored; schema/fixture/duplicate-key/
-  canonicalization/validation-coverage risks). No risk accepted or closed.
+  canonicalization/validation-coverage risks). **CDS-WP-013 added RISK-073…081**
+  (validator supply-chain/coverage/reproducibility/evidence risks, all Monitored) and
+  moved **RISK-066/067/068/069/071 `Monitored → Mitigating`** on executed,
+  executor-produced harness evidence (independently unreviewed). No risk accepted or
+  closed.
 
 | ID | Summary |
 | --- | --- |
@@ -332,6 +361,15 @@ and reference the normative policies; they do not replace them (DEC-S-063):
 | RISK-070 | Validation fixture coverage gap. |
 | RISK-071 | Validation expectation drift. |
 | RISK-072 | Digest mistaken for authenticity. |
+| RISK-073 | Validator dependency supply-chain exposure. |
+| RISK-074 | Partial DTCG coverage overstated. |
+| RISK-075 | Runtime reproducibility gap. |
+| RISK-076 | Duplicate-key loader bypass. |
+| RISK-077 | Diagnostic contract instability. |
+| RISK-078 | Fixture expectation self-confirmation. |
+| RISK-079 | Offline-boundary regression. |
+| RISK-080 | Validation-result provenance gap. |
+| RISK-081 | Validator evidence mistaken for Candidate approval. |
 
 ## Approved strategic principles
 
@@ -672,8 +710,10 @@ Maintainer accepted `GO WITH NOTES` (commit of CDS-WP-008 + initiation of
 CDS-WP-009). **Foundation: Closed with Notes.** Operating enablement is in place
 (CDS-WP-009), the accessibility support baseline A11Y-BL-001 is defined (CDS-WP-010,
 pending commit, no evidence executed), the machine-readable source format is
-decided (CDS-WP-011, ADR-0001), and the machine-readable bootstrap is implemented
-(CDS-WP-012, Experimental, ADR-0002, pending commit, no validator executed); the next
-authorized work package is **CDS-WP-013 — Offline Token Profile Validator and Fixture
-Harness**. See the
+decided (CDS-WP-011, ADR-0001), the machine-readable bootstrap is implemented
+(CDS-WP-012, Experimental, ADR-0002), and the offline validator and fixture harness
+are implemented and executed (CDS-WP-013, Experimental, ADR-0003, pending commit,
+15/15 expected/actual matches, executor-produced and independently unreviewed); the
+next authorized work package is **CDS-WP-014 — Semantic Status Foundation Contract
+and First Candidate Plan**. See the
 [Foundation Closure Record](../docs/governance/FOUNDATION_CLOSURE_RECORD.md).

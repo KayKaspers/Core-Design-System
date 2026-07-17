@@ -54,22 +54,26 @@ areas today.
 Governance foundation established. No final design or technology decisions are
 approved.
 
-- Decisions: DEC-S-001 … DEC-S-092 (92) — 6 foundation + 6 scope + 8 consumer
+- Decisions: DEC-S-001 … DEC-S-104 (104) — 6 foundation + 6 scope + 8 consumer
   and pilot scope + 12 logical architecture + 16 governance + 12 accessibility +
   4 operating enablement and pre-candidate + 8 accessibility support baseline and
   evidence + 10 machine-readable source and token format + 10 machine-readable
-  bootstrap and validation decisions · **ADRs: 2 (ADR-0001, ADR-0002)**
-- Risks: RISK-001 … RISK-072 (72) — **70 Monitored, RISK-040 + RISK-044 Mitigating**;
-  **owner model finalized**; no risk accepted or closed
+  bootstrap and validation + 12 offline validator implementation decisions ·
+  **ADRs: 3 (ADR-0001, ADR-0002, ADR-0003)**
+- Risks: RISK-001 … RISK-081 (81) — **74 Monitored; RISK-040, RISK-044, RISK-066,
+  RISK-067, RISK-068, RISK-069, RISK-071 Mitigating**; **owner model finalized**;
+  no risk accepted or closed
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
-  CDS-WP-011, CDS-WP-012
-- Next work package: **CDS-WP-013 — Offline Token Profile Validator and Fixture
-  Harness** (authorized as next; not yet executed). Foundation **Closed with
+  CDS-WP-011, CDS-WP-012, CDS-WP-013
+- Next work package: **CDS-WP-014 — Semantic Status Foundation Contract and First
+  Candidate Plan** (authorized as next; not yet executed). Foundation **Closed with
   Notes**; operating enablement in place; accessibility support baseline
   **A11Y-BL-001** defined (CDS-WP-010); machine-readable format decided
   (CDS-WP-011, ADR-0001); machine-readable bootstrap implemented (CDS-WP-012,
-  Experimental, ADR-0002, pending commit, no validator executed)
+  Experimental, ADR-0002); offline validator implemented and executed
+  (CDS-WP-013, Experimental, ADR-0003, pending commit, 15/15 expected/actual
+  matches, executor-produced and independently unreviewed)
 
 ## Registered scope
 
@@ -325,7 +329,10 @@ the Human Maintainer may accept or close a risk. **CDS-WP-009 moved RISK-040
 `Monitored → Mitigating`** (A11Y-BL-001 defined; DEC-S-070). **CDS-WP-011 added
 RISK-055…063** (token-format/spec-drift/reference/provenance risks). **CDS-WP-012 added
 RISK-064…072** (schema/fixture/duplicate-key/canonicalization/validation-coverage risks;
-all Monitored). No risk accepted or closed.
+all Monitored). **CDS-WP-013 added RISK-073…081** (validator supply-chain/coverage/
+reproducibility/evidence risks; all Monitored) **and moved RISK-066/067/068/069/071
+`Monitored → Mitigating`** on executed, executor-produced harness evidence
+(independently unreviewed; DEC-S-103). No risk accepted or closed.
 Details: [Risk Register](../docs/risks/RISK_REGISTER.md)
 
 ## Governance model (CDS-WP-006)
@@ -701,14 +708,35 @@ productive validator**:
   execution is CDS-WP-013). Added DEC-S-083…092 and RISK-064…072; created ADR-0002.
   **Experimental, not Candidate** (DEC-S-092).
 
+## Offline validator and fixture harness (CDS-WP-013)
+
+Implemented and executed the offline validator (pending commit) — **executor-produced,
+independently unreviewed, no design value**:
+
+- **Stack (ADR-0003):** Python 3.11+ (executed 3.12.10), pinned `jsonschema==4.26.0`
+  + `rfc8785==0.1.4` (7 packages exactly pinned in `requirements-validator.lock`);
+  entry point `python -m tools.cds_validator`; no runtime network (DEC-S-093/094).
+- **Single duplicate-key-rejecting loader** (DEC-S-095); **local five-schema
+  registry** incl. the new `cds-validation-result` schema (DEC-S-096); layered
+  V1–V4 with separate states, bounded DTCG V2, declared-graph enforcement
+  (DEC-S-097…099); RFC 8785 + SHA-256 digests from parsed content only (DEC-S-100).
+- **Executed:** 71/71 unit tests; **15/15 harness cases with 15/15 expected/actual
+  matches**; 14 fixtures digested (duplicate-key: none). Evidence:
+  `artifacts/validation/wp013-fixture-results.json` + `wp013-fixture-digests.json` +
+  [Execution Review](../docs/reviews/OFFLINE_TOKEN_VALIDATOR_EXECUTION_REVIEW.md)
+  — `independentReviewState: pending` (DEC-S-101…103).
+- Added DEC-S-093…104, RISK-073…081; RISK-066/067/068/069/071 → `Mitigating`;
+  created ADR-0003. **No full-DTCG statement, no Candidate (DEC-S-104).**
+
 ## Next step
 
-**CDS-WP-013 — Offline Token Profile Validator and Fixture Harness** (authorized as next;
-not yet executed): an offline validator (duplicate-key detection), a fixture harness
-executing the validation cases, RFC 8785 canonicalization + SHA-256 digests,
-machine-readable results, and an independent evidence-review boundary. **Still no design
-values, no Candidate, no component work, no pilot.** Execution begins only on an explicit
-Nova prompt and Human-Maintainer authorization.
+**CDS-WP-014 — Semantic Status Foundation Contract and First Candidate Plan**
+(authorized as next; not yet executed): the semantic status foundation (five status
+axes; Unknown/Stale/confidence semantics), a first bounded Candidate scope plan,
+token/component contract boundaries, and an evidence plan (incl. independent review
+of the CDS-WP-013 results). **Still no design values, no Candidate award, no broad
+component work, no pilot.** Execution begins only on an explicit Nova prompt and
+Human-Maintainer authorization.
 
 ## Related documents
 
@@ -732,8 +760,10 @@ Nova prompt and Human-Maintainer authorization.
 - [CDS-WP-010 Accessibility Support Baseline Notes](CDS_WP_010_ACCESSIBILITY_SUPPORT_BASELINE_NOTES.md)
 - [CDS-WP-011 Machine-Readable Source and Token Format Notes](CDS_WP_011_MACHINE_READABLE_SOURCE_AND_TOKEN_FORMAT_NOTES.md)
 - [CDS-WP-012 Machine-Readable Bootstrap and Validation Notes](CDS_WP_012_MACHINE_READABLE_BOOTSTRAP_AND_VALIDATION_NOTES.md)
+- [CDS-WP-013 Offline Validator and Fixture Harness Notes](CDS_WP_013_OFFLINE_VALIDATOR_AND_FIXTURE_HARNESS_NOTES.md)
 - [Foundation Milestone Review](../docs/reviews/FOUNDATION_MILESTONE_REVIEW.md)
 - [Foundation Closure Record](../docs/governance/FOUNDATION_CLOSURE_RECORD.md)
 - [Accessibility Support Baseline](../docs/governance/ACCESSIBILITY_SUPPORT_BASELINE.md)
 - [ADR-0001 — Machine-Readable Token Source Format](../docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)
 - [ADR-0002 — Deterministic JSON Serialization](../docs/decisions/ADR-0002-DETERMINISTIC_JSON_SERIALIZATION.md)
+- [ADR-0003 — Offline Token Validator Implementation Stack](../docs/decisions/ADR-0003-OFFLINE_TOKEN_VALIDATOR_IMPLEMENTATION_STACK.md)

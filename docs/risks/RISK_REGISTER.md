@@ -5,8 +5,8 @@ must be controlled from the start of the project.
 
 ## Register scope
 
-- Risk range: RISK-001 … RISK-072
-- Number of risks: 72
+- Risk range: RISK-001 … RISK-081
+- Number of risks: 81
 - Phase: Pre-Candidate Operating Enablement (Foundation / Pre-Design closed with notes)
 
 Risks RISK-001 … RISK-005 were registered by CDS-WP-001. Risks
@@ -22,7 +22,8 @@ RISK-049 … RISK-054 were registered by CDS-WP-010 alongside the accessibility
 support baseline and evidence strategy. Risks RISK-055 … RISK-063 were registered
 by CDS-WP-011 alongside the machine-readable source and token format decision. Risks
 RISK-064 … RISK-072 were registered by CDS-WP-012 alongside the machine-readable source
-bootstrap and validation contract.
+bootstrap and validation contract. Risks RISK-073 … RISK-081 were registered by
+CDS-WP-013 alongside the offline token profile validator and fixture harness.
 
 ### Finalized risk role model
 
@@ -55,19 +56,23 @@ Full model: [Risk Governance Model](../governance/RISK_GOVERNANCE_MODEL.md).
 | **Accepted** | Consciously accepted with residual effect; requires a review trigger. |
 | **Closed** | No longer relevant, or fully mitigated with evidence. |
 
-**70 of the 72 risks are currently `Monitored`; RISK-040 and RISK-044 are
-`Mitigating`.** CDS-WP-006 finalized the role model; it treated no risk and changed
-no assessment, because no evidence justified a change. CDS-WP-007 added
-RISK-041 … RISK-048 and likewise treated none. CDS-WP-009 moved **RISK-040
-`Monitored → Mitigating`** on the strength of the
+**74 of the 81 risks are currently `Monitored`; RISK-040, RISK-044, RISK-066,
+RISK-067, RISK-068, RISK-069, and RISK-071 are `Mitigating`.** CDS-WP-006 finalized
+the role model; it treated no risk and changed no assessment, because no evidence
+justified a change. CDS-WP-007 added RISK-041 … RISK-048 and likewise treated none.
+CDS-WP-009 moved **RISK-040 `Monitored → Mitigating`** on the strength of the
 [Critical Risk Action Register](../operations/CRITICAL_RISK_ACTION_REGISTER.md).
 CDS-WP-010 added **RISK-049 … RISK-054** and moved **RISK-044
 `Monitored → Mitigating`** on the strength of the defined
 [Accessibility Support Baseline](../governance/ACCESSIBILITY_SUPPORT_BASELINE.md).
 CDS-WP-011 added **RISK-055 … RISK-063** and changed no existing status. CDS-WP-012
-added **RISK-064 … RISK-072** (all `Monitored`) and changed no existing status. No
-description, likelihood, or severity was changed for any existing risk, and **no risk
-was accepted or closed** — only the Human Maintainer may do either.
+added **RISK-064 … RISK-072** (all `Monitored`) and changed no existing status.
+CDS-WP-013 added **RISK-073 … RISK-081** (all `Monitored`) and moved **RISK-066,
+RISK-067, RISK-068, RISK-069, and RISK-071 `Monitored → Mitigating`** on the strength
+of the executed offline validator and fixture harness — an executor-produced,
+independently unreviewed evidence basis (DEC-S-103). No description, likelihood, or
+severity was changed for any existing risk, and **no risk was accepted or closed** —
+only the Human Maintainer may do either.
 
 ## Assessment scale
 
@@ -2106,7 +2111,7 @@ No fixture is Candidate or approved.
 
 ## RISK-066 — Schema and validator divergence
 
-- **Status:** Monitored
+- **Status:** Mitigating *(changed from `Monitored` by CDS-WP-013: the committed schemas and the offline validator are now bound by 15/15 expected/actual matches across VAL-CASE-001…015; executor-produced, independently unreviewed. Mitigation Executor: Claude (scoped, validator/harness maintenance).)*
 - **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
 - **Initial likelihood:** Medium
 - **Initial severity:** Medium
@@ -2133,7 +2138,7 @@ independent review (DEC-S-092). Re-verify on any schema/profile/DTCG change (RIS
 
 ## RISK-067 — Canonicalization and digest mismatch
 
-- **Status:** Monitored
+- **Status:** Mitigating *(changed from `Monitored` by CDS-WP-013: RFC 8785 canonicalization invariance tests (indentation, key order, value change, duplicate-key, unsupported input) pass on the exactly pinned `rfc8785` implementation; executor-produced. Mitigation Executor: Claude (scoped, canonicalization tests).)*
 - **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
 - **Initial likelihood:** Medium
 - **Initial severity:** Medium
@@ -2160,7 +2165,7 @@ CDS-WP-013 before any digest is used as evidence.
 
 ## RISK-068 — Duplicate-key ambiguity
 
-- **Status:** Monitored
+- **Status:** Mitigating *(changed from `Monitored` by CDS-WP-013: every validator JSON input uses the single duplicate-key-rejecting loader, and the duplicate-key fixture is blocked at V1 in the executed harness; executor-produced. Mitigation Executor: Claude (scoped, loader maintenance).)*
 - **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
 - **Initial likelihood:** Medium
 - **Initial severity:** High
@@ -2185,7 +2190,7 @@ negative fixture. Never rely on first/last-key-wins.
 
 ## RISK-069 — Manifest and resolver graph inconsistency
 
-- **Status:** Monitored
+- **Status:** Mitigating *(changed from `Monitored` by CDS-WP-013: manifest, resolver, cycle, and layer-direction cases are recognized exactly as expected in the executed harness (VAL-CASE-005/006/007/010/011); executor-produced. Mitigation Executor: Claude (scoped, graph validation).)*
 - **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
 - **Initial likelihood:** Medium
 - **Initial severity:** Medium
@@ -2238,7 +2243,7 @@ are identified; state known coverage gaps honestly rather than implying complete
 
 ## RISK-071 — Validation expectation drift
 
-- **Status:** Monitored
+- **Status:** Mitigating *(changed from `Monitored` by CDS-WP-013: actual results are machine-compared against the committed expected results and stored revision-bound in `artifacts/validation/wp013-fixture-results.json`; executor-produced. Mitigation Executor: Claude (scoped, harness reporting).)*
 - **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
 - **Initial likelihood:** Medium
 - **Initial severity:** Medium
@@ -2286,3 +2291,249 @@ Hold that a content digest is an integrity/reproducibility aid only — not a si
 not proof of authorship, approval, trust, security, or release (DEC-S-090, ADR-0002). A
 digest never replaces the immutable source revision, approval, or provenance evidence, and
 never confers Candidate/Stable or a claim.
+
+---
+
+## RISK-073 — Validator dependency supply-chain exposure
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** High
+
+### Description
+
+The validator depends on external Python packages whose provenance, maintenance,
+transitive dependencies, or compromise could affect validation trust.
+
+### Impact
+
+A compromised or silently changed dependency can alter validation outcomes, forge or
+weaken digests, or exfiltrate content — and its output would still read as a trusted
+green result. Validation trust then rests on an unaudited third party instead of the
+committed CDS contracts.
+
+### Mitigation direction
+
+Pin every direct and transitive dependency to an exact version in
+`requirements-validator.lock` (DEC-S-093); install only into a temporary environment
+outside the repository; keep the runtime fully offline; document provenance in the
+[Dependency Source Register](../research/OFFLINE_VALIDATOR_DEPENDENCY_SOURCE_REGISTER.md);
+upgrade only through a governed change with re-run evidence (ADR-0003).
+
+---
+
+## RISK-074 — Partial DTCG coverage overstated
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** Medium
+
+### Description
+
+The implemented DTCG subset may be represented as complete DTCG-2025.10 validation.
+
+### Impact
+
+A "V2 Pass" read as full DTCG conformance would let documents that violate unimplemented
+DTCG rules (color-module value semantics, resolver modifier semantics, composite-type
+internals) circulate as DTCG-clean, and would turn the bounded validator into an
+unearned conformance authority.
+
+### Mitigation direction
+
+Bound V2 explicitly to the pinned subset required by the CDS profile and committed
+fixtures (DEC-S-098); report unsupported DTCG areas as limitations in every
+machine-readable result; never emit or accept a "full DTCG conformance" statement from
+validator output (DEC-S-044).
+
+---
+
+## RISK-075 — Runtime reproducibility gap
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** Medium
+
+### Description
+
+Different Python, dependency, operating-system, locale, or filesystem environments may
+produce different validation behavior.
+
+### Impact
+
+Evidence produced on one machine may not reproduce on another; a divergence between
+environments silently undermines the deterministic-resolution guarantee (DEC-S-080) and
+makes expected/actual comparisons environment-dependent instead of contract-dependent.
+
+### Mitigation direction
+
+Bind every execution report to the exact runtime and dependency identities
+(DEC-S-101); pin dependencies exactly; avoid locale-, ordering-, and
+path-separator-dependent logic; treat a cross-environment divergence as a defect, never
+as tolerable noise. Independent re-execution in a second environment is future review
+work.
+
+---
+
+## RISK-076 — Duplicate-key loader bypass
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** High
+
+### Description
+
+A future code path may bypass the controlled loader and silently accept duplicate object
+member names.
+
+### Impact
+
+A bypassing path re-introduces first-key-wins/last-key-wins ambiguity (RISK-068): the
+same document then parses differently in different code paths, and a V1-invalid source
+can reach V2–V4 or receive a digest it must never have.
+
+### Mitigation direction
+
+Route every JSON input through the single controlled loader (DEC-S-095); prohibit direct
+`json.load` paths in the validator; cover the loader and the duplicate-key fixture in
+unit tests and the harness; review any new input path against this rule before merge.
+
+---
+
+## RISK-077 — Diagnostic contract instability
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** Medium
+
+### Description
+
+Diagnostic identifiers or meanings may change and make automation or evidence comparison
+unreliable.
+
+### Impact
+
+If `CDS-V…` codes or their meanings drift, stored evidence, case expectations, and any
+future automation compare against a moving target; historical reports become
+unintelligible and regression detection silently breaks.
+
+### Mitigation direction
+
+Treat the diagnostic code set as a published contract: codes are added, never silently
+renamed or redefined; changes run through governed change control (DEC-S-082) with a
+migration note; every report binds the validator version so old evidence stays
+interpretable (DEC-S-101).
+
+---
+
+## RISK-078 — Fixture expectation self-confirmation
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** High
+
+### Description
+
+The implementation and expected outcomes may reinforce the same mistaken assumption
+without independent review.
+
+### Impact
+
+When the same executor writes the fixtures, the expected outcomes, and the validator, a
+shared misunderstanding produces a green 15/15 harness that proves internal consistency,
+not correctness. The error becomes invisible precisely because everything agrees.
+
+### Mitigation direction
+
+Keep expected outcomes committed and unchangeable by the implementation (DEC-S-102);
+record every harness result as executor-produced and independently unreviewed
+(DEC-S-103); require a separately authorized Evidence Review before any maturity
+transition (DEC-S-104); never let the executor review its own evidence (DEC-S-045).
+
+---
+
+## RISK-079 — Offline-boundary regression
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Low
+- **Initial severity:** High
+
+### Description
+
+A dependency or future feature may introduce remote schema, registry, telemetry, or
+reference access.
+
+### Impact
+
+A single network-touching path breaks the offline guarantee (DEC-S-093), makes
+validation results dependent on external availability and mutable remote content, and
+can leak private development content — all invisibly, because the result still renders
+locally.
+
+### Mitigation direction
+
+Keep the schema registry local-only and fail closed on unknown identities (DEC-S-096);
+reject network references at V1; add no dependency without governed review (ADR-0003);
+verify on every dependency upgrade that no network path was introduced.
+
+---
+
+## RISK-080 — Validation-result provenance gap
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** Medium
+
+### Description
+
+Execution reports may omit runtime, dependency, input, revision, digest, or review-state
+identity.
+
+### Impact
+
+A result without complete provenance cannot be tied to what was actually validated,
+with what, by whom, in which state — it becomes unusable as evidence and dangerous as a
+basis for review or maturity decisions (RISK-072 applied to reports).
+
+### Mitigation direction
+
+Require the CDS-owned result schema for every machine-readable report (DEC-S-101):
+runtime, dependency, schema, profile, DTCG, case, source-revision, digest, worktree, and
+review-state identities are mandatory; a worktree execution is never presented as a
+committed revision; schema-validate every report before use.
+
+---
+
+## RISK-081 — Validator evidence mistaken for Candidate approval
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** High
+
+### Description
+
+A successful fixture harness may be communicated as Candidate, Stable, token, consumer,
+or product conformance.
+
+### Impact
+
+A green harness is fifteen synthetic observations about a bounded contract — nothing
+more. Read as an approval, it would skip independent review, Nova review, and the
+Human-Maintainer maturity gate (DEC-S-104), and would create exactly the unearned claim
+DEC-S-044 prohibits.
+
+### Mitigation direction
+
+Bind every report to `independentReviewState: pending` and an executor-produced evidence
+class (DEC-S-103); hold that harness success is a successful observation, never a
+passing token artifact or maturity transition (DEC-S-102, DEC-S-104); keep all claim
+language prohibited (DEC-S-044).

@@ -1,0 +1,193 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tag:github.com,2026:KayKaspers/Core-Design-System/schema/cds-validation-result/1",
+  "title": "CDS Validation Result Report (v1)",
+  "description": "Structural JSON Schema for a machine-readable CDS validator execution report (DEC-S-101). Binds runtime, dependency, schema, profile, DTCG, case, source, expected-result, actual-result, diagnostic, digest, and review-state identities. A report is executor-produced evidence: independentReviewState stays 'pending' until a separately authorized reviewer records an assessment (DEC-S-103). No numeric quality score exists. A worktree execution is never a committed-revision claim. Contains no personal data.",
+  "type": "object",
+  "required": [
+    "reportVersion",
+    "validatorVersion",
+    "profileVersion",
+    "dtcgReportVersion",
+    "runtimeIdentity",
+    "dependencyVersions",
+    "executionIdentity",
+    "repositoryRevision",
+    "worktreeState",
+    "offlineMode",
+    "schemaIds",
+    "startedAtUtc",
+    "completedAtUtc",
+    "cases",
+    "summary",
+    "limitations",
+    "independentReviewState"
+  ],
+  "properties": {
+    "reportVersion": { "type": "string", "const": "1" },
+    "validatorVersion": { "type": "string", "minLength": 1 },
+    "profileVersion": { "type": "string", "const": "1" },
+    "dtcgReportVersion": { "type": "string", "const": "2025.10" },
+    "runtimeIdentity": {
+      "type": "object",
+      "required": ["pythonVersion", "pythonImplementation", "platform"],
+      "properties": {
+        "pythonVersion": { "type": "string", "minLength": 1 },
+        "pythonImplementation": { "type": "string", "minLength": 1 },
+        "platform": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+    "dependencyVersions": {
+      "type": "object",
+      "description": "Exact installed versions of the pinned direct dependencies; 'latest' is not an identity (DEC-S-093).",
+      "patternProperties": {
+        "^[A-Za-z0-9._-]+$": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+    "executionIdentity": {
+      "type": "object",
+      "required": ["executedBy", "executionContext", "evidenceClass"],
+      "properties": {
+        "executedBy": { "type": "string", "minLength": 1 },
+        "executionContext": { "type": "string", "minLength": 1 },
+        "evidenceClass": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+    "repositoryRevision": { "type": "string", "minLength": 1 },
+    "worktreeState": {
+      "type": "string",
+      "enum": ["clean", "modified worktree", "unknown"],
+      "description": "A 'modified worktree' execution binds to uncommitted content and must never be presented as the committed revision's result."
+    },
+    "offlineMode": { "type": "boolean", "const": true },
+    "schemaIds": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-z][a-z-]*$": { "type": "string", "pattern": "^tag:github\\.com,2026:KayKaspers/Core-Design-System/schema/[a-z-]+/[0-9]+$" }
+      },
+      "additionalProperties": false
+    },
+    "startedAtUtc": { "$ref": "#/$defs/utcTimestamp" },
+    "completedAtUtc": { "$ref": "#/$defs/utcTimestamp" },
+    "cases": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/caseResult" }
+    },
+    "summary": {
+      "type": "object",
+      "description": "Counts only — never a numeric quality score and never a collapsed layer state (DEC-S-097).",
+      "required": ["totalCases", "expectedMatches", "expectedMismatches", "executionErrors", "canonicalizationMethod", "digestAlgorithm"],
+      "properties": {
+        "totalCases": { "type": "integer", "minimum": 0 },
+        "expectedMatches": { "type": "integer", "minimum": 0 },
+        "expectedMismatches": { "type": "integer", "minimum": 0 },
+        "executionErrors": { "type": "integer", "minimum": 0 },
+        "canonicalizationMethod": { "type": "string", "minLength": 1 },
+        "digestAlgorithm": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+    "limitations": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "independentReviewState": {
+      "type": "string",
+      "const": "pending",
+      "description": "Executor-produced evidence is independently unreviewed (DEC-S-103). A recorded independent review is a separate future artifact, not an edit of this field by the executor."
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "utcTimestamp": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$"
+    },
+    "resultState": {
+      "type": "string",
+      "enum": ["Pass", "Pass with limitations", "Fail", "Blocked", "Not assessed", "Not applicable with rationale"]
+    },
+    "layerResults": {
+      "type": "object",
+      "required": ["V1", "V2", "V3", "V4"],
+      "properties": {
+        "V1": { "$ref": "#/$defs/resultState" },
+        "V2": { "$ref": "#/$defs/resultState" },
+        "V3": { "$ref": "#/$defs/resultState" },
+        "V4": { "$ref": "#/$defs/resultState" }
+      },
+      "additionalProperties": false
+    },
+    "diagnostic": {
+      "type": "object",
+      "required": ["code", "layer", "severity", "category", "message", "sourcePath", "decisionReferences", "riskReferences"],
+      "properties": {
+        "code": { "type": "string", "pattern": "^CDS-(V[1-4]-[A-Z-]+|INTERNAL)$" },
+        "layer": { "type": "string", "enum": ["V1", "V2", "V3", "V4", "internal"] },
+        "severity": { "type": "string", "enum": ["error", "warning", "info"] },
+        "category": { "type": "string", "minLength": 1 },
+        "message": { "type": "string", "minLength": 1 },
+        "sourcePath": { "type": "string", "minLength": 1 },
+        "jsonPointer": { "type": "string" },
+        "relatedPath": { "type": "string" },
+        "decisionReferences": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^DEC-S-[0-9]{3}$" }
+        },
+        "riskReferences": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^RISK-[0-9]{3}$" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "caseResult": {
+      "type": "object",
+      "required": ["caseId", "fixturePaths", "classification", "expected", "actual", "expectedMatch", "blockingLayer", "diagnostics", "contentDigests", "sourceRevisions", "executionStatus"],
+      "properties": {
+        "caseId": { "type": "string", "pattern": "^VAL-CASE-[0-9]{3}$" },
+        "fixturePaths": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "classification": { "type": "string", "enum": ["positive", "negative"] },
+        "expected": { "$ref": "#/$defs/layerResults" },
+        "actual": {
+          "description": "Actual layered results; an object with V1..V4 when executed, or an empty object when execution failed internally.",
+          "anyOf": [
+            { "$ref": "#/$defs/layerResults" },
+            { "type": "object", "additionalProperties": false }
+          ]
+        },
+        "expectedMatch": { "type": "boolean" },
+        "blockingLayer": { "type": "string", "enum": ["V1", "V2", "V3", "V4", "none"] },
+        "diagnostics": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/diagnostic" }
+        },
+        "contentDigests": {
+          "type": "object",
+          "description": "sha256: lowercase-hex digests of the RFC 8785 canonical content (integrity aid, not authenticity — DEC-S-100).",
+          "patternProperties": {
+            "^.+$": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" }
+          },
+          "additionalProperties": false
+        },
+        "sourceRevisions": {
+          "type": "object",
+          "patternProperties": {
+            "^.+$": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": false
+        },
+        "executionStatus": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    }
+  }
+}

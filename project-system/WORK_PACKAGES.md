@@ -6,9 +6,9 @@ Controlled work-package roadmap for the Core Design System (CDS).
   Closed with Notes**
 - **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
-  CDS-WP-011, CDS-WP-012
-- **Next work package:** **CDS-WP-013 — Offline Token Profile Validator and Fixture
-  Harness** (authorized as the next work package; not yet executed)
+  CDS-WP-011, CDS-WP-012, CDS-WP-013
+- **Next work package:** **CDS-WP-014 — Semantic Status Foundation Contract and First
+  Candidate Plan** (authorized as the next work package; not yet executed)
 
 ## Status values
 
@@ -35,15 +35,16 @@ Controlled work-package roadmap for the Core Design System (CDS).
 | CDS-WP-010 | Accessibility Support Baseline and Evidence Strategy | Completed | CDS-WP-009 |
 | CDS-WP-011 | Machine-Readable Source and Token Format Decision | Completed | CDS-WP-010 |
 | CDS-WP-012 | Machine-Readable Source Bootstrap and Validation Contract | Completed | CDS-WP-011 |
-| CDS-WP-013 | Offline Token Profile Validator and Fixture Harness | Next | CDS-WP-012 |
+| CDS-WP-013 | Offline Token Profile Validator and Fixture Harness | Completed | CDS-WP-012 |
+| CDS-WP-014 | Semantic Status Foundation Contract and First Candidate Plan | Next | CDS-WP-013 |
 
-**CDS-WP-013 is authorized as the next Work Package.** The Foundation is closed with
-notes; the Pre-Candidate Operating Enablement phase is active; the accessibility support
-baseline (A11Y-BL-001) is defined; the machine-readable source format is decided (ADR-0001);
-and the value-neutral bootstrap (4 schemas, 15 fixtures, V1–V4 validation contract, RFC
-8785/SHA-256 serialization decision, ADR-0002) is implemented but Experimental and not
-executed by a validator. CDS-WP-013 is registered as `Next` and is not yet executed. No
-further work-package ID is created.
+**CDS-WP-014 is authorized as the next Work Package.** The Foundation is closed with
+notes; the Pre-Candidate Operating Enablement phase is active; the machine-readable source
+format is decided (ADR-0001); the value-neutral bootstrap (ADR-0002) is implemented; and
+the offline validator and fixture harness (ADR-0003) are implemented and executed —
+**Experimental, executor-produced, independently unreviewed; 15/15 expected/actual
+matches**. CDS-WP-014 is registered as `Next` and is not yet executed. No further
+work-package ID is created.
 
 ## Descriptions
 
@@ -244,13 +245,32 @@ formal schema execution `Not assessed`; Experimental, not Candidate; publication
 
 ### CDS-WP-013 — Offline Token Profile Validator and Fixture Harness
 
+**Status:** Completed
+
+Implemented and executed the offline validator (pending commit): the
+`python -m tools.cds_validator` CLI on Python 3.11+ with exactly pinned `jsonschema`
+4.26.0 and `rfc8785` 0.1.4 ([lock](../requirements-validator.lock), ADR-0003); a single
+duplicate-key-rejecting JSON loader; a local five-schema registry including the new
+[validation-result schema](../schemas/cds-validation-result.schema.json); the layered
+V1–V4 engine with manifest/resolver graph validation; RFC 8785 + SHA-256 digests; and
+71 passing unit tests. The fixture harness executed **15/15 validation cases with 15/15
+expected/actual matches** and produced machine-readable, revision-bound evidence
+([results](../artifacts/validation/wp013-fixture-results.json),
+[digests](../artifacts/validation/wp013-fixture-digests.json),
+[Execution Review](../docs/reviews/OFFLINE_TOKEN_VALIDATOR_EXECUTION_REVIEW.md)).
+Added DEC-S-093…104 and RISK-073…081; moved RISK-066/067/068/069/071 to `Mitigating`;
+created ADR-0003. **Executor-produced, independently unreviewed; no real design value,
+no full-DTCG claim, no Candidate; publication state `Private Development`.**
+
+### CDS-WP-014 — Semantic Status Foundation Contract and First Candidate Plan
+
 **Status:** Next
 
-Will implement an offline validator (with duplicate-key detection), a fixture harness that
-executes the validation cases, RFC 8785 canonicalization + SHA-256 digest generation,
-machine-readable validation results, and an independent evidence-review boundary. It creates
-**no real design values, no Candidate, no component work, and no pilot start**. Not yet
-executed; begins only on an explicit Nova prompt and Human-Maintainer authorization.
+Will define the semantic status foundation contract (five status axes with
+Unknown/Stale/confidence semantics), a first bounded Candidate scope plan, token and
+component contract boundaries, and an evidence plan. It creates **no design values, no
+broad component work, no Candidate award, and no pilot start**. Not yet executed; begins
+only on an explicit Nova prompt and Human-Maintainer authorization.
 
 ## Roadmap evolution
 

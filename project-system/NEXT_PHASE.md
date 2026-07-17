@@ -4,13 +4,14 @@
   Closed with Notes**
 - **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
-  CDS-WP-011, CDS-WP-012
-- **Next work package:** **CDS-WP-013 — Offline Token Profile Validator and Fixture
-  Harness** (authorized as next; not yet executed). The Foundation is closed with notes;
-  operating enablement is in place; the accessibility support baseline (A11Y-BL-001) is
-  defined; the machine-readable source format is decided (ADR-0001); and the
-  value-neutral bootstrap (4 schemas, 15 fixtures, V1–V4 contract, RFC 8785/SHA-256
-  serialization, ADR-0002) is implemented but Experimental and not executed.
+  CDS-WP-011, CDS-WP-012, CDS-WP-013
+- **Next work package:** **CDS-WP-014 — Semantic Status Foundation Contract and First
+  Candidate Plan** (authorized as next; not yet executed). The Foundation is closed with
+  notes; the machine-readable source format is decided (ADR-0001); the value-neutral
+  bootstrap is implemented (ADR-0002); and the offline validator and fixture harness are
+  implemented and executed (ADR-0003) — **Experimental, executor-produced, independently
+  unreviewed; 15/15 expected/actual matches; validator status: Implemented,
+  Experimental, independently unreviewed.**
 
 ## Status of completed work packages
 
@@ -282,28 +283,62 @@ Documents:
 [ADR-0002](../docs/decisions/ADR-0002-DETERMINISTIC_JSON_SERIALIZATION.md) ·
 [Validation Cases](../tests/fixtures/machine-readable/VALIDATION_CASES.json)
 
-## Next work package — CDS-WP-013 (authorized)
+### CDS-WP-013 — Offline Token Profile Validator and Fixture Harness — Completed
 
-The value-neutral bootstrap is defined (Experimental; not executed by a validator). The
-next authorized work package is:
+Implemented and executed the offline validator and fixture harness (pending commit):
 
-**CDS-WP-013 — Offline Token Profile Validator and Fixture Harness.**
+- **Validator stack** (ADR-0003): Python 3.11+ (executed 3.12.10), pinned
+  `jsonschema` 4.26.0 and `rfc8785` 0.1.4
+  ([lock](../requirements-validator.lock)); entry point
+  `python -m tools.cds_validator` with `version` / `validate-file` /
+  `validate-cases` / `digest` and a stable exit-code contract.
+- **Single duplicate-key-rejecting loader** (DEC-S-095) and a **local five-schema
+  registry** including the new
+  [validation-result schema](../schemas/cds-validation-result.schema.json)
+  (DEC-S-096).
+- **Layered V1–V4 execution** with separated states and no aggregate score
+  (DEC-S-097); bounded DTCG V2 coverage reported as limitations (DEC-S-098);
+  manifest/resolver/graph enforcement (DEC-S-099); RFC 8785 + SHA-256 digests from
+  parsed content only (DEC-S-100).
+- **Executed evidence:** 71/71 unit tests; **15/15 cases with 15/15 expected/actual
+  matches**; 14 fixtures digested (duplicate-key: none) —
+  [results](../artifacts/validation/wp013-fixture-results.json) ·
+  [digests](../artifacts/validation/wp013-fixture-digests.json) ·
+  [Execution Review](../docs/reviews/OFFLINE_TOKEN_VALIDATOR_EXECUTION_REVIEW.md).
 
-### Objective of CDS-WP-013
+Added DEC-S-093…104 and RISK-073…081; moved RISK-066/067/068/069/071
+`Monitored → Mitigating`; created ADR-0003. **Executor-produced, independently
+unreviewed (DEC-S-103); no design value, no full-DTCG statement, no Candidate
+(DEC-S-104); publication `Private Development`.** No Git write action was performed.
 
-- an **offline validator architecture**;
-- **JSON parsing with duplicate-key detection**;
-- **V1 validation**; the **V2 DTCG validation boundary**; **V3 CDS schema and profile
-  validation**; the **V4 governance hook contract**;
-- a **fixture harness** executing the validation cases;
-- **RFC 8785 canonicalization** and **SHA-256 digest generation**;
-- **machine-readable validation results**;
-- an **independent evidence-review boundary**.
+Documents:
+[Validator Architecture](../docs/architecture/OFFLINE_TOKEN_VALIDATOR_ARCHITECTURE.md) ·
+[Validator Usage](../docs/operations/OFFLINE_TOKEN_VALIDATOR_USAGE.md) ·
+[ADR-0003](../docs/decisions/ADR-0003-OFFLINE_TOKEN_VALIDATOR_IMPLEMENTATION_STACK.md) ·
+[Dependency Source Register](../docs/research/OFFLINE_VALIDATOR_DEPENDENCY_SOURCE_REGISTER.md) ·
+[Stack Evaluation](../docs/research/OFFLINE_VALIDATOR_STACK_EVALUATION.md)
 
-### CDS-WP-013 explicitly establishes none of the following
+## Next work package — CDS-WP-014 (authorized)
 
-- no design values; no Candidate or Stable artifact; no component work; no CoreOps pilot
-  start; no licence; no publication.
+The machine-readable machinery is implemented and executed (Experimental;
+independently unreviewed). The next authorized work package is:
+
+**CDS-WP-014 — Semantic Status Foundation Contract and First Candidate Plan.**
+
+### Objective of CDS-WP-014
+
+- the **Semantic Status Foundation Contract**;
+- the **five status axes** with **Unknown/Stale/confidence semantics**;
+- a **first bounded Candidate scope** plan;
+- **token and component contract boundaries**;
+- an **evidence plan** (including the independent review of the CDS-WP-013
+  execution results);
+- still **no broad component work**.
+
+### CDS-WP-014 explicitly establishes none of the following
+
+- no design values; no Candidate or Stable award; no component implementation; no
+  CoreOps pilot start; no licence; no publication.
 
 ### Still prohibited in the Pre-Candidate phase
 
@@ -317,12 +352,12 @@ next authorized work package is:
 - promoting any artifact to Candidate or Stable,
 - starting the CoreOps pilot,
 - modifying Skill files or consumer repositories,
-- creating a new work-package ID beyond CDS-WP-013 without Human-Maintainer
+- creating a new work-package ID beyond CDS-WP-014 without Human-Maintainer
   approval.
 
 ### Authorization note
 
-CDS-WP-013 is registered as `Next`; its execution requires an explicit work-package
+CDS-WP-014 is registered as `Next`; its execution requires an explicit work-package
 prompt from Nova and Human-Maintainer authorization. Registration is not execution.
 
 ## Related documents

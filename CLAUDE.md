@@ -26,7 +26,7 @@ library, or a design project scoped exclusively to CoreOps.
 - First reference consumer: CoreOps (not the sole design target)
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
-  CDS-WP-011, CDS-WP-012
+  CDS-WP-011, CDS-WP-012, CDS-WP-013
 - Accessibility support baseline: **A11Y-BL-001 defined** (CDS-WP-010, pending
   commit) — a **test contract, not evidence**; **no test has been run and every
   artifact is AE-0**.
@@ -34,13 +34,20 @@ library, or a design project scoped exclusively to CoreOps.
   2025.10-based CDS profile** in **strict JSON `.tokens.json`**; its **value-neutral
   bootstrap is implemented** (CDS-WP-012, ADR-0002): 4 CDS-owned JSON Schema 2020-12
   contracts, 15 synthetic fixtures, a V1–V4 validation contract, and the RFC 8785 +
-  SHA-256 serialization decision — **Experimental, no productive validator, no real
-  token value**.
-- Next work package: **CDS-WP-013 — Offline Token Profile Validator and Fixture
-  Harness** (authorized as next; **not yet executed**). It implements the offline
-  validator, executes the validation cases, and computes canonicalization/digests; it
-  creates no real design values, Candidate, pilot, component, licence, or publication.
-  Execution begins only on an explicit Nova prompt and Human-Maintainer authorization.
+  SHA-256 serialization decision — **Experimental, no real token value**.
+- Offline validator: **implemented and executed** (CDS-WP-013, ADR-0003, pending
+  commit) — `python -m tools.cds_validator` on a pinned Python/`jsonschema`/`rfc8785`
+  stack; 71/71 unit tests; **15/15 validation cases matching committed expected
+  outcomes**; 14 fixture digests. **Executor-produced, independently unreviewed
+  (DEC-S-103); bounded DTCG V2 coverage — never a full-DTCG statement (DEC-S-098);
+  Experimental, no Candidate (DEC-S-104).**
+- Next work package: **CDS-WP-014 — Semantic Status Foundation Contract and First
+  Candidate Plan** (authorized as next; **not yet executed**). It defines the semantic
+  status foundation (five status axes, Unknown/Stale/confidence semantics), a first
+  bounded Candidate scope plan, token/component contract boundaries, and an evidence
+  plan; it creates no design values, Candidate award, broad component work, pilot,
+  licence, or publication. Execution begins only on an explicit Nova prompt and
+  Human-Maintainer authorization.
 
 ## Execution environment
 
@@ -364,8 +371,11 @@ and the [Serialization/Digest Model](docs/architecture/DETERMINISTIC_SERIALIZATI
 
 - **Schemas and fixtures are a structural boundary, not correctness.** A JSON Schema
   pass proves no V2 (DTCG), V3 (profile), or V4 (semantic/governance) pass (DEC-S-083,
-  DEC-S-089); **no schema pass may be claimed without an actual validator run** — none
-  has run (execution is CDS-WP-013).
+  DEC-S-089); **no schema pass may be claimed without an actual validator run**. The
+  CDS-WP-013 offline validator has executed the schemas and all 15 cases (see the
+  [Execution Review](docs/reviews/OFFLINE_TOKEN_VALIDATOR_EXECUTION_REVIEW.md)) —
+  that evidence is **executor-produced and independently unreviewed**, never a
+  correctness or Candidate statement.
 - **Fixtures are synthetic, test-only, non-normative** (DEC-S-087). Their values are
   neutral placeholders and are **never real CDS design tokens or Product Profiles**;
   never publish, consume, or describe a fixture value as a design decision.
@@ -374,8 +384,10 @@ and the [Serialization/Digest Model](docs/architecture/DETERMINISTIC_SERIALIZATI
 - **Duplicate JSON member names fail closed at V1** and are never repaired via
   first/last-key-wins (DEC-S-088).
 - **RFC 8785 (JCS) + SHA-256 digests are integrity aids, not authenticity** (DEC-S-090,
-  RISK-072): a digest is not a signature and proves no authorship, approval, or release;
-  no canonicalizer is implemented and digests are `Not computed`.
+  DEC-S-100, RISK-072): a digest is not a signature and proves no authorship, approval,
+  or release. The CDS-WP-013 validator computes digests from parsed content only;
+  duplicate-key input never receives a digest; the recorded fixture digests in
+  `artifacts/validation/` are executor-produced integrity evidence.
 - Compact orientation stays in the
   [Foundation Context Pack](project-system/CONTEXT_PACK_FOUNDATION.md) — a summary, never
   a normative source.

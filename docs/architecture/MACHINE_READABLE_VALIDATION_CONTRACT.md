@@ -105,14 +105,17 @@ case points to a missing file (DEC-S-089).
 
 ## Execution status
 
-**No validator is implemented in CDS-WP-012.** Structural checks (strict JSON parse,
-duplicate-key detection, schema-ID and local-`$ref` integrity, case coverage and
-contiguity, source-set-ID syntax, manifest dependency/graph consistency) were run
-locally with a temporary, non-committed, read-only script. **Formal JSON Schema
-2020-12 execution against the fixtures was `Not assessed`** — no standards-conformant
-validator was available locally and none was installed; validator execution and the
-resulting evidence are **CDS-WP-013**. No validation result is invented; no schema pass
-is claimed (DEC-S-092).
+**CDS-WP-013 implemented and executed the offline validator** (Experimental —
+[architecture](OFFLINE_TOKEN_VALIDATOR_ARCHITECTURE.md), ADR-0003): the five CDS
+schemas pass `check_schema` and execute from a local registry, and the full
+fixture harness ran **15/15 cases with 15/15 expected/actual matches**
+([execution review](../reviews/OFFLINE_TOKEN_VALIDATOR_EXECUTION_REVIEW.md),
+[machine-readable results](../../artifacts/validation/wp013-fixture-results.json)).
+V2 covers only the bounded DTCG 2025.10 subset required by this contract and the
+committed fixtures (DEC-S-098); V4 automates only the objective edge. The results are
+**executor-produced, pre-commit, independently unreviewed evidence**
+(`independentReviewState: pending`, DEC-S-103) and confer **no Candidate, Stable,
+conformance, or claim status** (DEC-S-092, DEC-S-104).
 
 ## Change control
 

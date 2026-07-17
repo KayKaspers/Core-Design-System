@@ -31,11 +31,16 @@ JSON** ([ADR-0001](docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.
 its **value-neutral bootstrap is implemented** (CDS-WP-012): four CDS-owned JSON Schema
 2020-12 contracts, synthetic-only fixtures, a V1–V4 validation contract, and an RFC 8785
 + SHA-256 serialization decision ([ADR-0002](docs/decisions/ADR-0002-DETERMINISTIC_JSON_SERIALIZATION.md))
-— **Experimental, no productive validator, no real token value**. **No accessibility test
-has been run, every artifact is AE-0, no Candidate or Stable artifact exists, no claim
-is valid, no licence is selected, and the publication state remains `Private
-Development`.** The next work package is **CDS-WP-013 — Offline Token Profile Validator
-and Fixture Harness**.
+— **Experimental, no real token value**. The **offline validator and fixture harness
+are implemented and executed** (CDS-WP-013): the `python -m tools.cds_validator` CLI
+on a pinned Python/`jsonschema`/`rfc8785` stack
+([ADR-0003](docs/decisions/ADR-0003-OFFLINE_TOKEN_VALIDATOR_IMPLEMENTATION_STACK.md)),
+71/71 unit tests, and **15/15 validation cases matching their committed expected
+outcomes** — **executor-produced, independently unreviewed evidence**. **No
+accessibility test has been run, every artifact is AE-0, no Candidate or Stable
+artifact exists, no claim is valid, no licence is selected, and the publication state
+remains `Private Development`.** The next work package is **CDS-WP-014 — Semantic
+Status Foundation Contract and First Candidate Plan**.
 
 The project does not yet produce visual design.
 
@@ -345,12 +350,28 @@ extension payload, **six synthetic positive and nine synthetic negative fixtures
 **15-case validation-case matrix** binding every fixture to expected V1–V4 outcomes, an
 explicit **V1–V4 Validation Contract** (duplicate keys fail V1; no aggregate score), and
 the **RFC 8785 + SHA-256** deterministic-serialization decision. **The fixtures are
-synthetic, test-only, and non-normative — not real design tokens. No productive validator
-or canonicalizer is implemented; formal schema execution is not assessed; the bootstrap is
-Experimental, not Candidate.**
+synthetic, test-only, and non-normative — not real design tokens.**
+
+The **offline token profile validator is implemented and executed** (CDS-WP-013,
+Experimental): `python -m tools.cds_validator` on Python 3.11+ with exactly pinned
+`jsonschema` 4.26.0 and `rfc8785` 0.1.4 ([requirements-validator.lock](requirements-validator.lock)),
+a single duplicate-key-rejecting loader, a local five-schema registry (including the
+new [validation-result schema](schemas/cds-validation-result.schema.json)), layered
+V1–V4 execution, and RFC 8785 + SHA-256 digests. The fixture harness executed
+**15/15 cases with 15/15 expected/actual matches** (71/71 unit tests); evidence lives
+in [artifacts/validation/](artifacts/validation/) and the
+[Execution Review](docs/reviews/OFFLINE_TOKEN_VALIDATOR_EXECUTION_REVIEW.md).
+**V2 covers a bounded DTCG subset — this is not a full-DTCG conformance statement.
+The evidence is executor-produced and independently unreviewed; the validator and
+bootstrap remain Experimental, not Candidate.**
 
 - [ADR-0001 — Machine-Readable Token Source Format](docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)
 - [ADR-0002 — Deterministic JSON Serialization](docs/decisions/ADR-0002-DETERMINISTIC_JSON_SERIALIZATION.md)
+- [ADR-0003 — Offline Token Validator Implementation Stack](docs/decisions/ADR-0003-OFFLINE_TOKEN_VALIDATOR_IMPLEMENTATION_STACK.md)
+- [Offline Token Validator Architecture](docs/architecture/OFFLINE_TOKEN_VALIDATOR_ARCHITECTURE.md) ·
+  [Validator Usage](docs/operations/OFFLINE_TOKEN_VALIDATOR_USAGE.md)
+- [Dependency Source Register](docs/research/OFFLINE_VALIDATOR_DEPENDENCY_SOURCE_REGISTER.md) ·
+  [Stack Evaluation](docs/research/OFFLINE_VALIDATOR_STACK_EVALUATION.md)
 - [Machine-Readable Source Model](docs/architecture/MACHINE_READABLE_SOURCE_MODEL.md)
 - [CDS Token Format Profile](docs/architecture/CDS_TOKEN_FORMAT_PROFILE.md)
 - [Token Reference, Resolution and Validation Model](docs/architecture/TOKEN_REFERENCE_RESOLUTION_AND_VALIDATION_MODEL.md)
@@ -376,7 +397,8 @@ Experimental, not Candidate.**
 - **Completed:** CDS-WP-010 — Accessibility Support Baseline and Evidence Strategy
 - **Completed:** CDS-WP-011 — Machine-Readable Source and Token Format Decision
 - **Completed:** CDS-WP-012 — Machine-Readable Source Bootstrap and Validation Contract
-- **Next:** **CDS-WP-013 — Offline Token Profile Validator and Fixture Harness**
+- **Completed:** CDS-WP-013 — Offline Token Profile Validator and Fixture Harness
+- **Next:** **CDS-WP-014 — Semantic Status Foundation Contract and First Candidate Plan**
   (authorized; not yet executed)
 
 The full controlled roadmap is in

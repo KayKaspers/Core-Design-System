@@ -1,0 +1,15 @@
+# CDS offline token validator — exact dependency pins (CDS-WP-013, ADR-0003).
+# Install into a temporary virtual environment OUTSIDE the repository:
+#   python -m venv <outside-path>\cds-validator-venv
+#   <venv>\Scripts\python -m pip install -r requirements-validator.lock
+# After installation the validator runs fully offline; no runtime network access.
+# Direct dependencies: jsonschema (JSON Schema Draft 2020-12 execution),
+# rfc8785 (RFC 8785 JSON Canonicalization Scheme). All others are transitive
+# dependencies of jsonschema. `latest` is not an identity (DEC-S-093).
+attrs==26.1.0
+jsonschema==4.26.0
+jsonschema-specifications==2025.9.1
+referencing==0.37.0
+rfc8785==0.1.4
+rpds-py==2026.6.3
+typing_extensions==4.16.0

@@ -29,11 +29,28 @@ and the [deterministic-serialization decision](../architecture/DETERMINISTIC_SER
 implemented; no design value was created; formal schema execution against the fixtures
 is `Not assessed`.** The bootstrap is **Experimental**, not Candidate (DEC-S-092).
 
-## Implementation scope (next work package)
+## CDS-WP-013 outcome (validator executed)
+
+**CDS-WP-013 implemented and executed the offline validator** (pending commit,
+Experimental): the `python -m tools.cds_validator` CLI (ADR-0003; Python 3.11+,
+pinned `jsonschema` 4.26.0 + `rfc8785` 0.1.4, exact pins in
+[requirements-validator.lock](../../requirements-validator.lock)), a single
+duplicate-key-rejecting loader, a local five-schema registry (including the new
+[validation-result schema](../../schemas/cds-validation-result.schema.json)), the
+layered V1–V4 engine, manifest/resolver graph validation, and RFC 8785 + SHA-256
+digests. **71/71 unit tests passed; the harness executed 15/15 cases with 15/15
+expected/actual matches; 14 fixtures digested** — see the
+[Execution Review](../reviews/OFFLINE_TOKEN_VALIDATOR_EXECUTION_REVIEW.md) and the
+[machine-readable results](../../artifacts/validation/wp013-fixture-results.json).
+The evidence is **executor-produced and independently unreviewed** (DEC-S-103);
+**no design value, no Candidate, no claim** (DEC-S-104).
+
+## Implementation scope (delivered by CDS-WP-013)
 
 Turn the decided profile and bootstrap into an **executing offline validator with
-evidence** — still without any real design value. Nothing here is authorized until
-CDS-WP-013 is prompted.
+evidence** — still without any real design value. This scope is now delivered (see
+above); the remaining open element of the exit criteria is the **independent
+review** of the executed results.
 
 ## Required future artifacts
 
@@ -43,7 +60,7 @@ CDS-WP-013 is prompted.
 | **Source-Set Manifest schema** | Validate set inventory, identity, layer, dependencies | Enforces downward dependency + identity (DEC-S-079, DEC-S-080) |
 | **Validation fixtures** | Positive and negative cases per V1–V4 | Value-neutral; exercise rules, not design |
 | **Resolver fixtures** | Multi-context composition (e.g. two abstract contexts) | Value-neutral; test ordering/determinism |
-| **Deterministic-serialization decision** | Choose canonicalization (RFC 8785 or alternative) | Currently open (DEC-S-080) |
+| **Deterministic-serialization decision** | Choose canonicalization (RFC 8785 or alternative) | Decided: RFC 8785 + SHA-256 (ADR-0002, DEC-S-090); computed by the CDS-WP-013 validator |
 | **Provenance evidence** | Bind source/transformation/output identity | No `latest`; offline-computable (DEC-S-031) |
 
 ## CDS profile schema
@@ -115,12 +132,14 @@ the schemas, fixtures, contract, and serialization decision; **CDS-WP-013 execut
 
 ## Next work package
 
-**CDS-WP-013 — Offline Token Profile Validator and Fixture Harness** (registered as
-`Next`; not executed here): an offline validator (with duplicate-key detection), a
-fixture harness executing the validation cases, RFC 8785 canonicalization + SHA-256
-digest generation, machine-readable validation results, and an independent
-evidence-review boundary — **no design values, no Candidate, no pilot**. It requires an
-explicit Nova prompt and Human-Maintainer authorization. Registration is not execution.
+**CDS-WP-014 — Semantic Status Foundation Contract and First Candidate Plan**
+(registered as `Next`; not executed here): the semantic status foundation (five
+status axes, Unknown/Stale/confidence semantics), a first bounded Candidate scope
+plan, token/component contract boundaries, and an evidence plan — **still no design
+values, no broad component work, no Candidate award, no pilot**. It requires an
+explicit Nova prompt and Human-Maintainer authorization. Registration is not
+execution. The exit criteria above additionally require **independent review** of the
+CDS-WP-013 execution results before any maturity transition (DEC-S-104).
 
 ## Related documents
 

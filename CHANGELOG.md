@@ -9,6 +9,36 @@ released and no release is announced.
 
 ### Added
 
+- Offline token profile validator implemented (CDS-WP-013): entry point
+  `python -m tools.cds_validator` with `version`, `validate-file`, `validate-cases`,
+  and `digest` commands and a stable exit-code contract; Python 3.11+ with exactly
+  pinned `jsonschema==4.26.0` and `rfc8785==0.1.4` (`requirements-validator.lock`);
+  no runtime network access. (CDS-WP-013)
+- Single duplicate-key-rejecting JSON loader and a local five-schema registry
+  implemented; unknown or network schema resolution fails closed. (CDS-WP-013)
+- CDS validation-result schema created
+  (`schemas/cds-validation-result.schema.json`) binding runtime, dependency, schema,
+  case, source-revision, digest, and review-state identities; no numeric score.
+  (CDS-WP-013)
+- Layered V1–V4 validation executed against all fixtures: the fixture harness ran
+  **15/15 validation cases with 15/15 expected/actual matches** (71/71 unit tests);
+  machine-readable evidence recorded in `artifacts/validation/` and reviewed in the
+  Offline Token Validator Execution Review — executor-produced, independently
+  unreviewed. (CDS-WP-013)
+- RFC 8785 + SHA-256 content digests computed for the 14 V1-parsable fixtures; the
+  duplicate-key fixture received no digest. (CDS-WP-013)
+- ADR-0003 created (Offline Token Validator Implementation Stack); dependency
+  provenance recorded in the Offline Validator Dependency Source Register and Stack
+  Evaluation; validator architecture and usage documented. (CDS-WP-013)
+- DEC-S-093 … DEC-S-104 added (validator stack, CLI contract, controlled loader,
+  local registry, layered states, bounded DTCG coverage, graph enforcement, digest
+  boundary, result contract, harness semantics, evidence class, Candidate gate).
+  (CDS-WP-013)
+- RISK-073 … RISK-081 added; RISK-066, RISK-067, RISK-068, RISK-069, and RISK-071
+  moved `Monitored → Mitigating` on executed harness evidence (executor-produced,
+  independently unreviewed); no risk accepted or closed. (CDS-WP-013)
+- CDS-WP-014 — Semantic Status Foundation Contract and First Candidate Plan
+  activated as the next work package. (CDS-WP-013)
 - Four CDS-owned JSON Schema Draft 2020-12 contracts created (CDS-WP-012): token
   document, source-set manifest, resolver document, and validation case — each with a
   stable `tag:` `$id`, same-document local `$ref`, and no remote dependency

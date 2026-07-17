@@ -1,0 +1,677 @@
+{
+  "reportVersion": "1",
+  "validatorVersion": "0.1.0",
+  "profileVersion": "1",
+  "dtcgReportVersion": "2025.10",
+  "runtimeIdentity": {
+    "pythonVersion": "3.12.10",
+    "pythonImplementation": "CPython",
+    "platform": "win32"
+  },
+  "dependencyVersions": {
+    "jsonschema": "4.26.0",
+    "rfc8785": "0.1.4"
+  },
+  "executionIdentity": {
+    "executedBy": "Claude (scoped executor)",
+    "executionContext": "CDS-WP-013 offline fixture harness",
+    "evidenceClass": "executor-produced, pre-commit, not independently reviewed"
+  },
+  "repositoryRevision": "1ad9787012aaf507f2483dc891d4cb03e12c1b5b",
+  "worktreeState": "modified worktree",
+  "offlineMode": true,
+  "schemaIds": {
+    "token-document": "tag:github.com,2026:KayKaspers/Core-Design-System/schema/cds-token-document/1",
+    "source-set-manifest": "tag:github.com,2026:KayKaspers/Core-Design-System/schema/cds-source-set-manifest/1",
+    "resolver-document": "tag:github.com,2026:KayKaspers/Core-Design-System/schema/cds-resolver-document/1",
+    "validation-case": "tag:github.com,2026:KayKaspers/Core-Design-System/schema/cds-validation-case/1",
+    "validation-result": "tag:github.com,2026:KayKaspers/Core-Design-System/schema/cds-validation-result/1"
+  },
+  "startedAtUtc": "2026-07-17T12:46:48Z",
+  "completedAtUtc": "2026-07-17T12:46:48Z",
+  "cases": [
+    {
+      "caseId": "VAL-CASE-001",
+      "fixturePaths": [
+        "tests/fixtures/machine-readable/positive/reference-set.tokens.json"
+      ],
+      "classification": "positive",
+      "expected": {
+        "V1": "Pass",
+        "V2": "Pass",
+        "V3": "Pass",
+        "V4": "Not applicable with rationale"
+      },
+      "actual": {
+        "V1": "Pass",
+        "V2": "Pass",
+        "V3": "Pass",
+        "V4": "Not applicable with rationale"
+      },
+      "expectedMatch": true,
+      "blockingLayer": "none",
+      "diagnostics": [],
+      "contentDigests": {
+        "tests/fixtures/machine-readable/positive/reference-set.tokens.json": "sha256:10b6f5417a0a0fe51aeeb96c620250daf092c099002337d801b3083978da2b82"
+      },
+      "sourceRevisions": {
+        "tests/fixtures/machine-readable/positive/reference-set.tokens.json": "fixture-rev-0001-synthetic"
+      },
+      "executionStatus": "executed"
+    },
+    {
+      "caseId": "VAL-CASE-002",
+      "fixturePaths": [
+        "tests/fixtures/machine-readable/positive/semantic-set.tokens.json"
+      ],
+      "classification": "positive",
+      "expected": {
+        "V1": "Pass",
+        "V2": "Pass",
+        "V3": "Pass",
+        "V4": "Not applicable with rationale"
+      },
+      "actual": {
+        "V1": "Pass",
+        "V2": "Pass",
+        "V3": "Pass",
+        "V4": "Not applicable with rationale"
+      },
+      "expectedMatch": true,
+      "blockingLayer": "none",
+      "diagnostics": [],
+      "contentDigests": {
+        "tests/fixtures/machine-readable/positive/semantic-set.tokens.json": "sha256:591ee007c334517f4bb1e0d14c0dc7f9466f08f24d7e80957b90e0053d2cf886"
+      },
+      "sourceRevisions": {
+        "tests/fixtures/machine-readable/positive/semantic-set.tokens.json": "fixture-rev-0001-synthetic"
+      },
+      "executionStatus": "executed"
+    },
+    {
+      "caseId": "VAL-CASE-003",
+      "fixturePaths": [
+        "tests/fixtures/machine-readable/positive/component-set.tokens.json"
+      ],
+      "classification": "positive",
+      "expected": {
+        "V1": "Pass",
+        "V2": "Pass",
+        "V3": "Pass",
+        "V4": "Not applicable with rationale"
+      },
+      "actual": {
+        "V1": "Pass",
+        "V2": "Pass",
+        "V3": "Pass",
+        "V4": "Not applicable with rationale"
+      },
+      "expectedMatch": true,
+      "blockingLayer": "none",
+      "diagnostics": [],
+      "contentDigests": {
+        "tests/fixtures/machine-readable/positive/component-set.tokens.json": "sha256:7080d8547ba3e5c9d77b413d0ff13c5540093ba51da3018b0c9db8935e837bad"
+      },
+      "sourceRevisions": {
+        "tests/fixtures/machine-readable/positive/component-set.tokens.json": "fixture-rev-0001-synthetic"
+      },
+      "executionStatus": "executed"
+    },
+    {
+      "caseId": "VAL-CASE-004",
+      "fixturePaths": [
+        "tests/fixtures/machine-readable/positive/product-profile-set.tokens.json"
+      ],
+      "classification": "positive",
+      "expected": {
+        "V1": "Pass",
+        "V2": "Pass",
+        "V3": "Pass",
+        "V4": "Not applicable with rationale"
+      },
+      "actual": {
+        "V1": "Pass",
+        "V2": "Pass",
+        "V3": "Pass",
+        "V4": "Not applicable with rationale"
+      },
+      "expectedMatch": true,
+      "blockingLayer": "none",
+      "diagnostics": [],
+      "contentDigests": {
+        "tests/fixtures/machine-readable/positive/product-profile-set.tokens.json": "sha256:2e98d58c107b6514a055f7da40213acec316b45c0ef81fca2ae67c7c5d8a222b"
+      },
+      "sourceRevisions": {
+        "tests/fixtures/machine-readable/positive/product-profile-set.tokens.json": "fixture-rev-0001-synthetic"
+      },
+      "executionStatus": "executed"
+    },
+    {
+      "caseId": "VAL-CASE-005",
+      "fixturePaths": [
+        "tests/fixtures/machine-readable/positive/source-set-manifest.source-set.json"
+      ],
+      "classification": "positive",
+      "expected": {
+        "V1": "Pass",
+        "V2": "Not applicable with rationale",
+        "V3": "Pass",
+        "V4": "Not applicable with rationale"
+      },
+      "actual": {
+        "V1": "Pass",
+        "V2": "Not applicable with rationale",
+        "V3": "Pass",
+        "V4": "Not applicable with rationale"
+      },
+      "expectedMatch": true,
+      "blockingLayer": "none",
+      "diagnostics": [],
+      "contentDigests": {
+        "tests/fixtures/machine-readable/positive/source-set-manifest.source-set.json": "sha256:d8d6a819727639dc948d96747a3dc536d1969fed1e9dbfb654d0cd03b24b7e0f"
+      },
+      "sourceRevisions": {
+        "tests/fixtures/machine-readable/positive/source-set-manifest.source-set.json": "fixture-rev-0001-synthetic"
+      },
+      "executionStatus": "executed"
+    },
+    {
+      "caseId": "VAL-CASE-006",
+      "fixturePaths": [
+        "tests/fixtures/machine-readable/positive/resolver.resolver.json"
+      ],
+      "classification": "positive",
+      "expected": {
+        "V1": "Pass",
+        "V2": "Pass",
+        "V3": "Pass",
+        "V4": "Not applicable with rationale"
+      },
+      "actual": {
+        "V1": "Pass",
+        "V2": "Pass",
+        "V3": "Pass",
+        "V4": "Not applicable with rationale"
+      },
+      "expectedMatch": true,
+      "blockingLayer": "none",
+      "diagnostics": [],
+      "contentDigests": {
+        "tests/fixtures/machine-readable/positive/resolver.resolver.json": "sha256:10354d499844eee7f2b8884b3079cf9c334c554ddcd44f4ba5d9e77371a7eafb"
+      },
+      "sourceRevisions": {
+        "tests/fixtures/machine-readable/positive/resolver.resolver.json": "fixture-rev-0001-synthetic"
+      },
+      "executionStatus": "executed"
+    },
+    {
+      "caseId": "VAL-CASE-007",
+      "fixturePaths": [
+        "tests/fixtures/machine-readable/positive/reference-set.tokens.json",
+        "tests/fixtures/machine-readable/positive/semantic-set.tokens.json",
+        "tests/fixtures/machine-readable/positive/component-set.tokens.json",
+        "tests/fixtures/machine-readable/positive/product-profile-set.tokens.json",
+        "tests/fixtures/machine-readable/positive/source-set-manifest.source-set.json",
+        "tests/fixtures/machine-readable/positive/resolver.resolver.json"
+      ],
+      "classification": "positive",
+      "expected": {
+        "V1": "Pass",
+        "V2": "Pass",
+        "V3": "Pass",
+        "V4": "Not applicable with rationale"
+      },
+      "actual": {
+        "V1": "Pass",
+        "V2": "Pass",
+        "V3": "Pass",
+        "V4": "Not applicable with rationale"
+      },
+      "expectedMatch": true,
+      "blockingLayer": "none",
+      "diagnostics": [],
+      "contentDigests": {
+        "tests/fixtures/machine-readable/positive/reference-set.tokens.json": "sha256:10b6f5417a0a0fe51aeeb96c620250daf092c099002337d801b3083978da2b82",
+        "tests/fixtures/machine-readable/positive/semantic-set.tokens.json": "sha256:591ee007c334517f4bb1e0d14c0dc7f9466f08f24d7e80957b90e0053d2cf886",
+        "tests/fixtures/machine-readable/positive/component-set.tokens.json": "sha256:7080d8547ba3e5c9d77b413d0ff13c5540093ba51da3018b0c9db8935e837bad",
+        "tests/fixtures/machine-readable/positive/product-profile-set.tokens.json": "sha256:2e98d58c107b6514a055f7da40213acec316b45c0ef81fca2ae67c7c5d8a222b",
+        "tests/fixtures/machine-readable/positive/source-set-manifest.source-set.json": "sha256:d8d6a819727639dc948d96747a3dc536d1969fed1e9dbfb654d0cd03b24b7e0f",
+        "tests/fixtures/machine-readable/positive/resolver.resolver.json": "sha256:10354d499844eee7f2b8884b3079cf9c334c554ddcd44f4ba5d9e77371a7eafb"
+      },
+      "sourceRevisions": {
+        "tests/fixtures/machine-readable/positive/reference-set.tokens.json": "fixture-rev-0001-synthetic",
+        "tests/fixtures/machine-readable/positive/semantic-set.tokens.json": "fixture-rev-0001-synthetic",
+        "tests/fixtures/machine-readable/positive/component-set.tokens.json": "fixture-rev-0001-synthetic",
+        "tests/fixtures/machine-readable/positive/product-profile-set.tokens.json": "fixture-rev-0001-synthetic",
+        "tests/fixtures/machine-readable/positive/source-set-manifest.source-set.json": "fixture-rev-0001-synthetic",
+        "tests/fixtures/machine-readable/positive/resolver.resolver.json": "fixture-rev-0001-synthetic"
+      },
+      "executionStatus": "executed"
+    },
+    {
+      "caseId": "VAL-CASE-008",
+      "fixturePaths": [
+        "tests/fixtures/machine-readable/negative/duplicate-key.tokens.json"
+      ],
+      "classification": "negative",
+      "expected": {
+        "V1": "Fail",
+        "V2": "Not assessed",
+        "V3": "Not assessed",
+        "V4": "Not assessed"
+      },
+      "actual": {
+        "V1": "Fail",
+        "V2": "Not assessed",
+        "V3": "Not assessed",
+        "V4": "Not assessed"
+      },
+      "expectedMatch": true,
+      "blockingLayer": "V1",
+      "diagnostics": [
+        {
+          "code": "CDS-V1-DUPLICATE-KEY",
+          "layer": "V1",
+          "severity": "error",
+          "category": "duplicate-key",
+          "message": "Duplicate object member name 'alpha' at /alpha (prohibited; not repaired via first-key-wins or last-key-wins)",
+          "sourcePath": "D:\\Projects\\Core-Design-System\\tests\\fixtures\\machine-readable\\negative\\duplicate-key.tokens.json",
+          "decisionReferences": [
+            "DEC-S-088",
+            "DEC-S-095"
+          ],
+          "riskReferences": [
+            "RISK-068"
+          ],
+          "jsonPointer": "/alpha"
+        }
+      ],
+      "contentDigests": {},
+      "sourceRevisions": {},
+      "executionStatus": "executed"
+    },
+    {
+      "caseId": "VAL-CASE-009",
+      "fixturePaths": [
+        "tests/fixtures/machine-readable/negative/dangling-reference.tokens.json"
+      ],
+      "classification": "negative",
+      "expected": {
+        "V1": "Pass",
+        "V2": "Fail",
+        "V3": "Not assessed",
+        "V4": "Not assessed"
+      },
+      "actual": {
+        "V1": "Pass",
+        "V2": "Fail",
+        "V3": "Not assessed",
+        "V4": "Not assessed"
+      },
+      "expectedMatch": true,
+      "blockingLayer": "V2",
+      "diagnostics": [
+        {
+          "code": "CDS-V2-DTCG-REFERENCE",
+          "layer": "V2",
+          "severity": "error",
+          "category": "dangling-reference",
+          "message": "Dangling reference: {test-role.does-not-exist} has no target token",
+          "sourcePath": "D:\\Projects\\Core-Design-System\\tests\\fixtures\\machine-readable\\negative\\dangling-reference.tokens.json",
+          "decisionReferences": [
+            "DEC-S-078"
+          ],
+          "riskReferences": [
+            "RISK-059"
+          ],
+          "jsonPointer": "/test-role/primary"
+        }
+      ],
+      "contentDigests": {
+        "tests/fixtures/machine-readable/negative/dangling-reference.tokens.json": "sha256:ee04fefa259c74a78165e729c89894d41eee3cf9f2d01a77b0db803c22c41a8c"
+      },
+      "sourceRevisions": {
+        "tests/fixtures/machine-readable/negative/dangling-reference.tokens.json": "fixture-rev-0001-synthetic"
+      },
+      "executionStatus": "executed"
+    },
+    {
+      "caseId": "VAL-CASE-010",
+      "fixturePaths": [
+        "tests/fixtures/machine-readable/negative/circular-reference-a.tokens.json",
+        "tests/fixtures/machine-readable/negative/circular-reference-b.tokens.json"
+      ],
+      "classification": "negative",
+      "expected": {
+        "V1": "Pass",
+        "V2": "Fail",
+        "V3": "Not assessed",
+        "V4": "Not assessed"
+      },
+      "actual": {
+        "V1": "Pass",
+        "V2": "Fail",
+        "V3": "Not assessed",
+        "V4": "Not assessed"
+      },
+      "expectedMatch": true,
+      "blockingLayer": "V2",
+      "diagnostics": [
+        {
+          "code": "CDS-V2-DTCG-REFERENCE",
+          "layer": "V2",
+          "severity": "error",
+          "category": "reference-cycle",
+          "message": "Reference cycle: cycle-a.token -> cycle-b.token -> cycle-a.token",
+          "sourcePath": "D:\\Projects\\Core-Design-System\\tests\\fixtures\\machine-readable\\negative\\circular-reference-a.tokens.json",
+          "decisionReferences": [
+            "DEC-S-078"
+          ],
+          "riskReferences": [
+            "RISK-059"
+          ]
+        }
+      ],
+      "contentDigests": {
+        "tests/fixtures/machine-readable/negative/circular-reference-a.tokens.json": "sha256:8f3b62582efe3f8649fff3160de46f4109d6fe9b1ccdf7673b9456be0c6c875e",
+        "tests/fixtures/machine-readable/negative/circular-reference-b.tokens.json": "sha256:591ced1a0b080424186e50bb7ad96f36951349c4836dc99e6d08aedb02c82b8a"
+      },
+      "sourceRevisions": {
+        "tests/fixtures/machine-readable/negative/circular-reference-a.tokens.json": "fixture-rev-0001-synthetic",
+        "tests/fixtures/machine-readable/negative/circular-reference-b.tokens.json": "fixture-rev-0001-synthetic"
+      },
+      "executionStatus": "executed"
+    },
+    {
+      "caseId": "VAL-CASE-011",
+      "fixturePaths": [
+        "tests/fixtures/machine-readable/negative/backward-layer-dependency.source-set.json"
+      ],
+      "classification": "negative",
+      "expected": {
+        "V1": "Pass",
+        "V2": "Not applicable with rationale",
+        "V3": "Fail",
+        "V4": "Not assessed"
+      },
+      "actual": {
+        "V1": "Pass",
+        "V2": "Not applicable with rationale",
+        "V3": "Fail",
+        "V4": "Not assessed"
+      },
+      "expectedMatch": true,
+      "blockingLayer": "V3",
+      "diagnostics": [
+        {
+          "code": "CDS-V3-MANIFEST",
+          "layer": "V3",
+          "severity": "error",
+          "category": "backward-layer-dependency",
+          "message": "Prohibited dependency direction: 'fixture/back-reference' (layer reference) depends on 'fixture/back-semantic' (layer semantic); dependencies must point strictly downward (DEC-S-079)",
+          "sourcePath": "D:\\Projects\\Core-Design-System\\tests\\fixtures\\machine-readable\\negative\\backward-layer-dependency.source-set.json",
+          "decisionReferences": [
+            "DEC-S-079",
+            "DEC-S-085",
+            "DEC-S-099"
+          ],
+          "riskReferences": [
+            "RISK-060",
+            "RISK-069"
+          ]
+        },
+        {
+          "code": "CDS-V3-MANIFEST",
+          "layer": "V3",
+          "severity": "error",
+          "category": "missing-source-set",
+          "message": "Declared source-set path for 'fixture/back-reference' does not exist locally: 'back-reference-set.tokens.json'",
+          "sourcePath": "D:\\Projects\\Core-Design-System\\tests\\fixtures\\machine-readable\\negative\\backward-layer-dependency.source-set.json",
+          "decisionReferences": [
+            "DEC-S-079",
+            "DEC-S-085",
+            "DEC-S-099"
+          ],
+          "riskReferences": [
+            "RISK-060",
+            "RISK-069"
+          ],
+          "relatedPath": "D:\\Projects\\Core-Design-System\\tests\\fixtures\\machine-readable\\negative\\back-reference-set.tokens.json"
+        },
+        {
+          "code": "CDS-V3-MANIFEST",
+          "layer": "V3",
+          "severity": "error",
+          "category": "missing-source-set",
+          "message": "Declared source-set path for 'fixture/back-semantic' does not exist locally: 'back-semantic-set.tokens.json'",
+          "sourcePath": "D:\\Projects\\Core-Design-System\\tests\\fixtures\\machine-readable\\negative\\backward-layer-dependency.source-set.json",
+          "decisionReferences": [
+            "DEC-S-079",
+            "DEC-S-085",
+            "DEC-S-099"
+          ],
+          "riskReferences": [
+            "RISK-060",
+            "RISK-069"
+          ],
+          "relatedPath": "D:\\Projects\\Core-Design-System\\tests\\fixtures\\machine-readable\\negative\\back-semantic-set.tokens.json"
+        }
+      ],
+      "contentDigests": {
+        "tests/fixtures/machine-readable/negative/backward-layer-dependency.source-set.json": "sha256:8645f76e8d23766649c540440b1ec235d0bf34213b8711e036c49e88a4582d18"
+      },
+      "sourceRevisions": {
+        "tests/fixtures/machine-readable/negative/backward-layer-dependency.source-set.json": "fixture-rev-0001-synthetic"
+      },
+      "executionStatus": "executed"
+    },
+    {
+      "caseId": "VAL-CASE-012",
+      "fixturePaths": [
+        "tests/fixtures/machine-readable/negative/type-mismatch.tokens.json"
+      ],
+      "classification": "negative",
+      "expected": {
+        "V1": "Pass",
+        "V2": "Fail",
+        "V3": "Not assessed",
+        "V4": "Not assessed"
+      },
+      "actual": {
+        "V1": "Pass",
+        "V2": "Fail",
+        "V3": "Not assessed",
+        "V4": "Not assessed"
+      },
+      "expectedMatch": true,
+      "blockingLayer": "V2",
+      "diagnostics": [
+        {
+          "code": "CDS-V2-DTCG-REFERENCE",
+          "layer": "V2",
+          "severity": "error",
+          "category": "type-mismatch",
+          "message": "Type mismatch: 'test-consumer.numeric-slot' (number) references 'test-source.text-primitive' (string)",
+          "sourcePath": "D:\\Projects\\Core-Design-System\\tests\\fixtures\\machine-readable\\negative\\type-mismatch.tokens.json",
+          "decisionReferences": [
+            "DEC-S-078"
+          ],
+          "riskReferences": [
+            "RISK-059"
+          ],
+          "jsonPointer": "/test-consumer/numeric-slot"
+        }
+      ],
+      "contentDigests": {
+        "tests/fixtures/machine-readable/negative/type-mismatch.tokens.json": "sha256:5dc5aceb8dca7b42701365cb719c830f3335bea3e4325c18577d005813b207f6"
+      },
+      "sourceRevisions": {
+        "tests/fixtures/machine-readable/negative/type-mismatch.tokens.json": "fixture-rev-0001-synthetic"
+      },
+      "executionStatus": "executed"
+    },
+    {
+      "caseId": "VAL-CASE-013",
+      "fixturePaths": [
+        "tests/fixtures/machine-readable/negative/undeclared-cross-file-reference.tokens.json"
+      ],
+      "classification": "negative",
+      "expected": {
+        "V1": "Pass",
+        "V2": "Pass",
+        "V3": "Fail",
+        "V4": "Not assessed"
+      },
+      "actual": {
+        "V1": "Pass",
+        "V2": "Pass",
+        "V3": "Fail",
+        "V4": "Not assessed"
+      },
+      "expectedMatch": true,
+      "blockingLayer": "V3",
+      "diagnostics": [
+        {
+          "code": "CDS-V3-UNDECLARED-CROSS-FILE",
+          "layer": "V3",
+          "severity": "error",
+          "category": "undeclared-cross-file-reference",
+          "message": "Cross-file reference {undeclared-external-set.some-token} cannot be bound: no declared Source-Set Manifest is available (references are valid only through the declared local graph, DEC-S-091)",
+          "sourcePath": "D:\\Projects\\Core-Design-System\\tests\\fixtures\\machine-readable\\negative\\undeclared-cross-file-reference.tokens.json",
+          "decisionReferences": [
+            "DEC-S-091",
+            "DEC-S-099"
+          ],
+          "riskReferences": [
+            "RISK-059",
+            "RISK-069"
+          ],
+          "jsonPointer": "/test-role/primary"
+        }
+      ],
+      "contentDigests": {
+        "tests/fixtures/machine-readable/negative/undeclared-cross-file-reference.tokens.json": "sha256:bd41111da79bea827ac7a64bfa21f5623f5b64752ac50bd4d8d0d1cd4fc27c05"
+      },
+      "sourceRevisions": {
+        "tests/fixtures/machine-readable/negative/undeclared-cross-file-reference.tokens.json": "fixture-rev-0001-synthetic"
+      },
+      "executionStatus": "executed"
+    },
+    {
+      "caseId": "VAL-CASE-014",
+      "fixturePaths": [
+        "tests/fixtures/machine-readable/negative/invalid-extension.tokens.json"
+      ],
+      "classification": "negative",
+      "expected": {
+        "V1": "Pass",
+        "V2": "Pass",
+        "V3": "Fail",
+        "V4": "Not assessed"
+      },
+      "actual": {
+        "V1": "Pass",
+        "V2": "Pass",
+        "V3": "Fail",
+        "V4": "Not assessed"
+      },
+      "expectedMatch": true,
+      "blockingLayer": "V3",
+      "diagnostics": [
+        {
+          "code": "CDS-V3-EXTENSION",
+          "layer": "V3",
+          "severity": "error",
+          "category": "invalid-extension",
+          "message": "Schema violation: 'io.github.kaykaspers.cds' is a required property",
+          "sourcePath": "D:\\Projects\\Core-Design-System\\tests\\fixtures\\machine-readable\\negative\\invalid-extension.tokens.json",
+          "decisionReferences": [
+            "DEC-S-084"
+          ],
+          "riskReferences": [
+            "RISK-064"
+          ],
+          "jsonPointer": "/$extensions"
+        },
+        {
+          "code": "CDS-V3-EXTENSION",
+          "layer": "V3",
+          "severity": "error",
+          "category": "invalid-extension",
+          "message": "Missing CDS extension payload at $extensions.io.github.kaykaspers.cds (required for source-set identity, DEC-S-084)",
+          "sourcePath": "D:\\Projects\\Core-Design-System\\tests\\fixtures\\machine-readable\\negative\\invalid-extension.tokens.json",
+          "decisionReferences": [
+            "DEC-S-084"
+          ],
+          "riskReferences": [
+            "RISK-064"
+          ]
+        }
+      ],
+      "contentDigests": {
+        "tests/fixtures/machine-readable/negative/invalid-extension.tokens.json": "sha256:a09a896baa75e0aaa002e0fb9577dc1aa079d1b13bba2c9df461e4fe44268a2d"
+      },
+      "sourceRevisions": {},
+      "executionStatus": "executed"
+    },
+    {
+      "caseId": "VAL-CASE-015",
+      "fixturePaths": [
+        "tests/fixtures/machine-readable/negative/preview-feature.tokens.json"
+      ],
+      "classification": "negative",
+      "expected": {
+        "V1": "Pass",
+        "V2": "Fail",
+        "V3": "Not assessed",
+        "V4": "Not assessed"
+      },
+      "actual": {
+        "V1": "Pass",
+        "V2": "Fail",
+        "V3": "Not assessed",
+        "V4": "Not assessed"
+      },
+      "expectedMatch": true,
+      "blockingLayer": "V2",
+      "diagnostics": [
+        {
+          "code": "CDS-V2-PREVIEW-FEATURE",
+          "layer": "V2",
+          "severity": "error",
+          "category": "preview-feature",
+          "message": "Token $type 'cds-preview-only-type-not-in-2025-10' is not defined by the pinned DTCG 2025.10 reports; treated as an unapproved preview/draft feature (DEC-S-074)",
+          "sourcePath": "D:\\Projects\\Core-Design-System\\tests\\fixtures\\machine-readable\\negative\\preview-feature.tokens.json",
+          "decisionReferences": [
+            "DEC-S-074"
+          ],
+          "riskReferences": [
+            "RISK-056"
+          ],
+          "jsonPointer": "/test-primitive/alpha"
+        }
+      ],
+      "contentDigests": {
+        "tests/fixtures/machine-readable/negative/preview-feature.tokens.json": "sha256:94ecd2eb3c545a4444c7b01f60b2cbcdf605e4d1c5b668013389a5d99d445e63"
+      },
+      "sourceRevisions": {
+        "tests/fixtures/machine-readable/negative/preview-feature.tokens.json": "fixture-rev-0001-synthetic"
+      },
+      "executionStatus": "executed"
+    }
+  ],
+  "summary": {
+    "totalCases": 15,
+    "expectedMatches": 15,
+    "expectedMismatches": 0,
+    "executionErrors": 0,
+    "canonicalizationMethod": "RFC 8785 (JSON Canonicalization Scheme)",
+    "digestAlgorithm": "SHA-256"
+  },
+  "limitations": [
+    "V2 covers only the bounded DTCG 2025.10 subset required by the CDS profile and the committed fixtures (DEC-S-098); unsupported DTCG areas (full color-module value validation, resolver modifier semantics, composite-type internals) are not validated and are not represented as passed.",
+    "V4 assesses only objectively machine-checkable aspects; status truth, semantics, accessibility relevance, and compatibility remain human/governance review (Not assessed).",
+    "This report is executor-produced, pre-commit evidence and is not independently reviewed (DEC-S-103); it confers no Candidate, Stable, conformance, or release status (DEC-S-104)."
+  ],
+  "independentReviewState": "pending"
+}

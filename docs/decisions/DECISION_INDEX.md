@@ -11,13 +11,15 @@ authorized work packages.
 
 ## Register scope
 
-- Decision range: DEC-S-001 … DEC-S-092
-- Number of decisions: 92
+- Decision range: DEC-S-001 … DEC-S-104
+- Number of decisions: 104
 - Decision record format: index entries, plus ADR files where a decision warrants an
-  Architecture Decision Record. **ADR range: ADR-0001 … ADR-0002 (2 ADRs).**
+  Architecture Decision Record. **ADR range: ADR-0001 … ADR-0003 (3 ADRs).**
 - [ADR-0001 — Machine-Readable Token Source Format](ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)
   (accepted upon Human-Maintainer commit following Nova approval).
 - [ADR-0002 — Deterministic JSON Serialization](ADR-0002-DETERMINISTIC_JSON_SERIALIZATION.md)
+  (accepted upon Human-Maintainer commit following Nova approval).
+- [ADR-0003 — Offline Token Validator Implementation Stack](ADR-0003-OFFLINE_TOKEN_VALIDATOR_IMPLEMENTATION_STACK.md)
   (accepted upon Human-Maintainer commit following Nova approval).
 
 ## Decision types
@@ -34,6 +36,7 @@ authorized work packages.
 | Accessibility support baseline and evidence decision | DEC-S-065 … DEC-S-072 | CDS-WP-010 | Support baseline as a test contract not evidence, three baseline tiers, the Required Core Baseline, family-vs-execution identity, scope-triggered coverage, freshness review, immutable evidence records, and defect/regression classification. |
 | Machine-readable source and token format decision | DEC-S-073 … DEC-S-082 | CDS-WP-011 | DTCG 2025.10 as external format basis, pinned-stable-only, strict JSON `.tokens.json`, CDS profile over DTCG, JSON Schema 2020-12 foundation, fail-closed references, source-set layers, versioned provenance identity, machine-validatable naming, and governed format upgrades (ADR-0001). |
 | Machine-readable bootstrap and validation decision | DEC-S-083 … DEC-S-092 | CDS-WP-012 | CDS-owned schema + fixture bootstrap, `io.github.kaykaspers.cds` payload, strict-JSON manifests and resolvers, synthetic non-normative fixtures, duplicate-key prohibition, bound V1–V4 validation cases, RFC 8785 + SHA-256 digests (ADR-0002), fail-closed local references, and Experimental-not-Candidate status. |
+| Offline validator implementation decision | DEC-S-093 … DEC-S-104 | CDS-WP-013 | Pinned Python/jsonschema/rfc8785 stack, the `python -m tools.cds_validator` CLI contract, the single duplicate-key loader, the local-only schema registry, separated V1–V4 states, bounded DTCG coverage, declared-graph enforcement, digest boundaries, the CDS-owned result schema, expected/actual harness semantics, executor-produced evidence, and the Candidate gate (ADR-0003). |
 
 None of these types is an implementation decision. Logical architecture decisions
 define structure, responsibility, and flow — they select no technology, format,
@@ -3139,3 +3142,285 @@ be maturity inflation (RISK-031).
   execution is `Not assessed` in CDS-WP-012.
 - Validator execution, evidence, and review are CDS-WP-013; the Evidence Reviewer must
   not be the executor (DEC-S-045).
+
+---
+
+## DEC-S-093 — The offline validator stack is Python 3.11+, pinned jsonschema, and pinned rfc8785
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Offline validator implementation decision
+- **Work package:** CDS-WP-013
+
+### Decision
+
+The initial CDS offline token validator is implemented in Python 3.11 or later using
+the standard library, the pinned `jsonschema` implementation for Draft 2020-12
+execution, and the pinned `rfc8785` implementation for canonical JSON.
+
+No runtime network access is permitted.
+
+### Rationale
+
+The two pinned packages implement exactly the standards CDS already decided
+(JSON Schema Draft 2020-12, DEC-S-077; RFC 8785, DEC-S-090) — re-implementing either
+would create untested standards code, while any broader framework would add unneeded
+supply-chain surface (RISK-073). Standard-library-first keeps the validator auditable
+and offline (ADR-0003).
+
+### Consequences
+
+- Exact pins live in [requirements-validator.lock](../../requirements-validator.lock);
+  `latest` is not an identity; upgrades are governed changes.
+- Installation happens only in a temporary environment outside the repository; after
+  installation the validator runs fully offline (RISK-079).
+
+---
+
+## DEC-S-094 — The validator entry point and CLI contract
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Offline validator implementation decision
+- **Work package:** CDS-WP-013
+
+### Decision
+
+The validator entry point is `python -m tools.cds_validator`.
+
+Its `version`, `validate-file`, `validate-cases`, and `digest` commands and their
+documented exit-code contract form the initial operational interface.
+
+### Consequences
+
+- Exit codes are stable: 0 pass/match, 1 fail/mismatch, 2 blocked, 3 internal error;
+  a recognized expected failure of a negative fixture is exit 0 (DEC-S-102).
+- The interface is documented in the
+  [Validator Usage guide](../operations/OFFLINE_TOKEN_VALIDATOR_USAGE.md); changes are
+  governed (DEC-S-082, RISK-077).
+
+---
+
+## DEC-S-095 — Every validation path uses the duplicate-key-rejecting loader
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Offline validator implementation decision
+- **Work package:** CDS-WP-013
+
+### Decision
+
+Every CDS JSON validation path uses a duplicate-key-rejecting loader.
+
+Direct parsing paths that can silently apply first-key-wins or last-key-wins behavior
+are prohibited.
+
+### Rationale
+
+DEC-S-088 prohibits duplicate members, but a single bypassing `json.load` call would
+silently re-introduce the ambiguity (RISK-068, RISK-076). Centralizing the loader makes
+the prohibition testable.
+
+### Consequences
+
+- The single loader lives in `tools/cds_validator/json_loader.py`; unit tests and the
+  duplicate-key fixture verify the rejection at V1.
+
+---
+
+## DEC-S-096 — Schema resolution is a committed local registry only
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Offline validator implementation decision
+- **Work package:** CDS-WP-013
+
+### Decision
+
+Schema resolution uses a committed local registry containing only approved CDS schema
+identities and local references.
+
+Unknown or network-dependent schema resolution fails closed.
+
+### Consequences
+
+- The registry contains exactly the five committed CDS schemas (token document,
+  manifest, resolver, validation case, validation result), `check_schema`-verified,
+  resolved via their stable `tag:` identities without HTTP (RISK-079).
+
+---
+
+## DEC-S-097 — Layered execution states stay separate
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Offline validator implementation decision
+- **Work package:** CDS-WP-013
+
+### Decision
+
+Validator execution preserves the V1, V2, V3, and V4 layers separately.
+
+Blocked, failed, limited, and not-assessed states remain visible and are not collapsed
+into an aggregate score.
+
+### Consequences
+
+- Machine-readable results carry four explicit layer states per case (DEC-S-089);
+  the result schema contains no numeric quality score.
+
+---
+
+## DEC-S-098 — Initial DTCG coverage is explicitly bounded
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Offline validator implementation decision
+- **Work package:** CDS-WP-013
+
+### Decision
+
+The initial DTCG validator coverage is explicitly bounded to the pinned DTCG-2025.10
+rules required by the CDS profile and committed fixtures.
+
+Unsupported DTCG areas are reported as limitations and are not represented as passed.
+
+### Rationale
+
+A bounded, honest V2 beats a broad, unverified one (RISK-074): a fixture-scope pass is
+only a pass of the declared validator scope, never full DTCG conformance.
+
+### Consequences
+
+- Every machine-readable report lists the unsupported areas under `limitations`;
+  no full-conformance statement is ever emitted (DEC-S-044).
+
+---
+
+## DEC-S-099 — Manifest and resolver validation enforces the declared graph
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Offline validator implementation decision
+- **Work package:** CDS-WP-013
+
+### Decision
+
+Manifest and Resolver validation enforces registered identity, local paths, dependency
+order, layer direction, cycle freedom, resolver order, and declared cross-file
+boundaries.
+
+Implicit discovery is prohibited.
+
+### Consequences
+
+- Graph checks run in `tools/cds_validator/graph.py` and the V3 layer; undeclared,
+  cyclic, backward, or unregistered references fail closed (DEC-S-091, RISK-069).
+
+---
+
+## DEC-S-100 — Digests only from parsed content; never authenticity
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Offline validator implementation decision
+- **Work package:** CDS-WP-013
+
+### Decision
+
+RFC-8785/SHA-256 content digests are produced only from successfully parsed JSON and
+never replace source revision, provenance, approval, signature, or authenticity
+evidence.
+
+### Consequences
+
+- Duplicate-key or otherwise V1-invalid input receives no digest; the digest report
+  records such inputs as undigestible (DEC-S-088, DEC-S-090, RISK-072).
+
+---
+
+## DEC-S-101 — Machine-readable results use the CDS-owned result schema
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Offline validator implementation decision
+- **Work package:** CDS-WP-013
+
+### Decision
+
+Machine-readable validator results use a CDS-owned result schema and bind runtime,
+dependency, schema, profile, DTCG, case, source, expected-result, actual-result,
+diagnostic, digest, and review-state identities.
+
+### Consequences
+
+- The [result schema](../../schemas/cds-validation-result.schema.json) is the fifth
+  registry schema; every report is schema-validated before use; a worktree execution is
+  never presented as a committed revision (RISK-080).
+
+---
+
+## DEC-S-102 — Harness success is expected/actual agreement, not artifact approval
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Offline validator implementation decision
+- **Work package:** CDS-WP-013
+
+### Decision
+
+Fixture-harness success means that actual layered outcomes match the committed expected
+outcomes.
+
+Expected failure of a negative fixture is a successful harness observation, not a
+passing token artifact.
+
+### Consequences
+
+- Expected outcomes are never edited to make the implementation succeed; a conflict
+  between implementation and committed expectations is a BLOCKED state for Nova
+  (RISK-071, RISK-078).
+
+---
+
+## DEC-S-103 — Validator reports are Experimental, executor-produced evidence
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Offline validator implementation decision
+- **Work package:** CDS-WP-013
+
+### Decision
+
+Validator execution reports produced in CDS-WP-013 are Experimental, executor-produced
+evidence.
+
+They remain independently unreviewed until a separately authorized reviewer assesses
+the implementation and results.
+
+### Consequences
+
+- Every report carries `independentReviewState: pending` and an executor-produced
+  evidence class; the executor never reviews its own evidence (DEC-S-045, RISK-078).
+
+---
+
+## DEC-S-104 — No Candidate before harness, provenance, independent review, and approval
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Offline validator implementation decision
+- **Work package:** CDS-WP-013
+
+### Decision
+
+Neither the validator nor the machine-readable bootstrap may become Candidate until the
+full committed harness passes, dependency and execution provenance are complete, an
+independent Evidence Review is recorded, Nova reviews the result, and the Human
+Maintainer approves the maturity transition.
+
+### Consequences
+
+- A green harness alone confers nothing (RISK-081); the maturity gate remains a
+  Human-Maintainer decision on top of independent review and Nova review (DEC-S-036,
+  DEC-S-092).
