@@ -11,9 +11,12 @@ authorized work packages.
 
 ## Register scope
 
-- Decision range: DEC-S-001 … DEC-S-072
-- Number of decisions: 72
-- Decision record format: index entries only; no ADR files exist in this phase.
+- Decision range: DEC-S-001 … DEC-S-082
+- Number of decisions: 82
+- Decision record format: index entries, plus ADR files where a decision warrants an
+  Architecture Decision Record. **ADR range: ADR-0001 … ADR-0001 (1 ADR).**
+- [ADR-0001 — Machine-Readable Token Source Format](ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)
+  (accepted upon Human-Maintainer commit following Nova approval).
 
 ## Decision types
 
@@ -27,6 +30,7 @@ authorized work packages.
 | Accessibility and inclusive design decision | DEC-S-049 … DEC-S-060 | CDS-WP-007 | Accessibility target, target-versus-claim boundary, evidence levels, responsibility split, tooling limits, source authority, inclusive design, status truth, legal boundary, channel profiles, exception limit, CR-024 resolution. |
 | Operating enablement and pre-candidate decision | DEC-S-061 … DEC-S-064 | CDS-WP-009 | Foundation closure with notes, the Pre-Candidate phase, non-normativity of operating views, and critical-risk actionability before Elevated work. |
 | Accessibility support baseline and evidence decision | DEC-S-065 … DEC-S-072 | CDS-WP-010 | Support baseline as a test contract not evidence, three baseline tiers, the Required Core Baseline, family-vs-execution identity, scope-triggered coverage, freshness review, immutable evidence records, and defect/regression classification. |
+| Machine-readable source and token format decision | DEC-S-073 … DEC-S-082 | CDS-WP-011 | DTCG 2025.10 as external format basis, pinned-stable-only, strict JSON `.tokens.json`, CDS profile over DTCG, JSON Schema 2020-12 foundation, fail-closed references, source-set layers, versioned provenance identity, machine-validatable naming, and governed format upgrades (ADR-0001). |
 
 None of these types is an implementation decision. Logical architecture decisions
 define structure, responsibility, and flow — they select no technology, format,
@@ -2536,3 +2540,305 @@ being normalized or averaged away (RISK-054).
 - Governed by the
   [Defect and Regression Model](../governance/ACCESSIBILITY_DEFECT_AND_REGRESSION_MODEL.md);
   no defect is registered today (AE-0).
+
+---
+
+## DEC-S-073 — DTCG 2025.10 is the external normative format basis
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Machine-readable source and token format decision
+- **Work package:** CDS-WP-011
+
+### Decision
+
+CDS adopts the Design Tokens Community Group Technical Reports 2025.10, including the
+Format, Color, and Resolver modules where applicable, as the external normative basis
+of the CDS Token Format Profile.
+
+The reports are stable Community Group reports and are not W3C Standards.
+
+### Rationale
+
+DTCG 2025.10 is the first stable, implementation-ready, vendor-neutral token format
+(published 2025-10-28), giving CDS interoperability without tool lock-in (DEC-S-004,
+RISK-004) while keeping sources human-reviewable and offline-processable. It is a
+Community Group report, not a W3C Standard, so CDS retains responsibility for its own
+profile and records the status honestly.
+
+### Consequences
+
+- The [ADR-0001](ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md) and the
+  [CDS Token Format Profile](../architecture/CDS_TOKEN_FORMAT_PROFILE.md) bind to
+  DTCG 2025.10 (Format, Color, Resolver).
+- DTCG conformance is not a CDS quality, semantic, or accessibility statement.
+- No token value is created; the format is a constraint, not content.
+
+---
+
+## DEC-S-074 — Only pinned DTCG 2025.10 is authoritative; previews are inputs
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Machine-readable source and token format decision
+- **Work package:** CDS-WP-011
+
+### Decision
+
+Only the pinned DTCG 2025.10 reports are authoritative for the initial CDS profile.
+
+Preview, draft, editor, or future report versions are research inputs only until a
+controlled compatibility and migration decision accepts them.
+
+### Rationale
+
+The DTCG preview drafts explicitly state "do not implement … do not reference as
+authoritative." Pinning a stable version and treating previews as inputs prevents
+unstable behavior from contaminating the normative profile (RISK-056) and keeps
+upgrades controlled (RISK-055).
+
+### Consequences
+
+- No preview/draft feature may be implemented or documented as part of the stable
+  profile.
+- A later DTCG report is adopted only through a governed compatibility and migration
+  decision (DEC-S-082).
+
+---
+
+## DEC-S-075 — Strict JSON and `.tokens.json` are the normative source form
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Machine-readable source and token format decision
+- **Work package:** CDS-WP-011
+
+### Decision
+
+Normative CDS token source documents use strict JSON according to RFC 8259 and the
+`.tokens.json` file extension.
+
+YAML, JSONC, JSON5, tool-native formats, CSS, generated code, and platform outputs
+are not normative CDS token sources.
+
+### Rationale
+
+Strict JSON is interoperable with DTCG tooling, human-reviewable, deterministically
+parseable, and offline-validatable. Comment-bearing or non-strict encodings undermine
+determinism and invite out-of-band meaning; generated forms invert the authority
+model.
+
+### Consequences
+
+- Non-strict-JSON and generated forms may be authoring input or generated output,
+  never a normative source without controlled reconciliation (DEC-S-026).
+- A generated artifact is never a normative source (DEC-S-079).
+
+---
+
+## DEC-S-076 — The CDS profile constrains DTCG and adds metadata only via extensions
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Machine-readable source and token format decision
+- **Work package:** CDS-WP-011
+
+### Decision
+
+The CDS Token Format Profile applies DTCG rules and adds CDS-specific constraints and
+metadata only through documented, namespaced extension and validation mechanisms.
+
+CDS must not redefine reserved DTCG semantics.
+
+### Rationale
+
+Adding constraints and governance metadata through DTCG `$extensions` keeps CDS
+sources interoperable (a generic tool still reads them) while CDS validation enforces
+what a generic tool cannot. Redefining reserved DTCG semantics would break
+interoperability and hide meaning (RISK-057).
+
+### Consequences
+
+- CDS metadata lives only inside `$extensions` under the `io.github.kaykaspers.cds`
+  namespace (ADR-0001); foreign extensions are preserved and not automatically
+  normative.
+- The profile may restrict and add validation gates; it may not reinterpret reserved
+  `$`-properties.
+
+---
+
+## DEC-S-077 — JSON Schema 2020-12 is the profile-validation foundation
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Machine-readable source and token format decision
+- **Work package:** CDS-WP-011
+
+### Decision
+
+CDS uses JSON Schema Draft 2020-12 as the structural-schema foundation for a future
+CDS-owned profile validator.
+
+A CDS schema is not an official DTCG schema and cannot alone prove DTCG, semantic,
+accessibility, or governance conformance.
+
+### Rationale
+
+2020-12 is the current JSON Schema version and expresses the structural constraints of
+the CDS profile. But structure is not semantics: a schema pass does not establish
+correct meaning, accessibility, or governance (RISK-058), which remain V4 human
+review.
+
+### Consequences
+
+- CDS-WP-011 creates no schema; the schema is a CDS-WP-012 artifact, CDS-owned.
+- A schema pass is input to review, never approval (DEC-S-053 applied to format).
+
+---
+
+## DEC-S-078 — Token references and resolution fail closed
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Machine-readable source and token format decision
+- **Work package:** CDS-WP-011
+
+### Decision
+
+Token and Source-Set references follow the pinned DTCG 2025.10 reference and resolver
+rules.
+
+Cycles, dangling references, type conflicts, missing source sets, invalid layer
+dependencies, and unresolved overrides fail closed.
+
+### Rationale
+
+A reference graph that silently tolerates cycles or dangling links produces invalid or
+misleading generated artifacts (RISK-059, RISK-060). Failing closed keeps a
+contradiction from shipping (DEC-S-023, DEC-S-034).
+
+### Consequences
+
+- The [Token Reference, Resolution and Validation Model](../architecture/TOKEN_REFERENCE_RESOLUTION_AND_VALIDATION_MODEL.md)
+  lists the fail-closed conditions; no automatic repair.
+- Failing states block transformation and distribution until corrected at the source.
+
+---
+
+## DEC-S-079 — Normative source sets are layered; outputs are not normative
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Machine-readable source and token format decision
+- **Work package:** CDS-WP-011
+
+### Decision
+
+Normative machine-readable source sets are separated into Reference, Semantic,
+Component, and Product Profile layers.
+
+Channel and platform outputs are generated artifacts and are not independently
+normative.
+
+### Rationale
+
+The layer separation operationalizes the five-layer token flow (DEC-S-024) and the
+class-1/class-2/class-3 authority split (DEC-S-022) in the machine-readable source,
+keeping meaning, values, and generated forms distinct.
+
+### Consequences
+
+- Dependencies flow strictly downward; upward/cyclic dependencies fail closed
+  (DEC-S-078).
+- Product Profiles override only approved extension points (DEC-S-025); generated
+  outputs carry provenance and are never hand-edited (DEC-S-031).
+
+---
+
+## DEC-S-080 — Sources and outputs carry versioned, non-`latest` identity
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Machine-readable source and token format decision
+- **Work package:** CDS-WP-011
+
+### Decision
+
+Every normative Source Set and generated output must remain bound to an identified CDS
+profile version, DTCG report version, immutable source revision, dependency set,
+transformation revision where applicable, maturity state, approval state, and
+provenance record.
+
+`latest` is not a sufficient evidence identity.
+
+### Rationale
+
+An artifact whose origin cannot be established becomes functionally normative because
+nobody can contradict it (RISK-025, RISK-062). Versioned, immutable identity keeps
+generated artifacts subordinate to their sources and makes processing reproducible
+(DEC-S-031, DEC-S-038).
+
+### Consequences
+
+- The [Token Metadata, Provenance and Identity Model](../architecture/TOKEN_METADATA_PROVENANCE_AND_IDENTITY_MODEL.md)
+  defines required identity; a missing element fails closed.
+- Deterministic serialization/canonicalization is required; the concrete mechanism
+  (e.g. RFC 8785) is deferred to CDS-WP-012.
+
+---
+
+## DEC-S-081 — A restrictive, machine-validatable naming profile
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Machine-readable source and token format decision
+- **Work package:** CDS-WP-011
+
+### Decision
+
+CDS uses a restrictive, machine-validatable naming and identifier profile that
+prevents case-only collisions, reserved-character conflicts, empty segments, and
+tool-specific shared semantics.
+
+Technical identifiers and human-facing display labels are separate concerns.
+
+### Rationale
+
+Case conversion, reserved characters, and export transformations cause distinct
+identifiers to collide across tools and platforms (RISK-061). A restrictive,
+checkable syntax and a technical/display split keep identity stable and portable.
+
+### Consequences
+
+- The [CDS Token Format Profile](../architecture/CDS_TOKEN_FORMAT_PROFILE.md) fixes a
+  segment syntax; renames are migration events (DEC-S-082).
+- No real token name is created.
+
+---
+
+## DEC-S-082 — Format, profile, and contract upgrades are governed
+
+- **Status:** Accepted
+- **Date:** 2026-07-16
+- **Type:** Machine-readable source and token format decision
+- **Work package:** CDS-WP-011
+
+### Decision
+
+Changes to the CDS Token Format Profile, DTCG version binding, reference model,
+extension model, or validation contract require compatibility, migration, evidence,
+Nova review, and explicit Human-Maintainer approval.
+
+No format upgrade is automatic.
+
+### Rationale
+
+The pinned DTCG version will drift as the CG publishes (RISK-055), and a silent
+upgrade could break interoperability or consumers. Governed upgrades keep the format
+stable and migrations honest (DEC-S-037 … DEC-S-040 applied to the format).
+
+### Consequences
+
+- Adopting a later DTCG report or a preview feature is an Elevated, governed decision
+  (DEC-S-074).
+- The profile version, DTCG report version, and CDS release version stay distinct.

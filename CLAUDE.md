@@ -25,17 +25,20 @@ library, or a design project scoped exclusively to CoreOps.
   publication status.
 - First reference consumer: CoreOps (not the sole design target)
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010
+  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
+  CDS-WP-011
 - Accessibility support baseline: **A11Y-BL-001 defined** (CDS-WP-010, pending
   commit) — a **test contract, not evidence**; **no test has been run and every
-  artifact is AE-0** (see the
-  [Accessibility Support Baseline](docs/governance/ACCESSIBILITY_SUPPORT_BASELINE.md)).
-- Next work package: **CDS-WP-011 — Machine-Readable Source and Token Format
-  Decision** (authorized as next; **not yet executed**). It establishes
-  machine-readable-source requirements and evaluates token formats only; it creates
-  no concrete design values, Candidate, pilot, component, licence, or publication.
-  Execution begins only on an explicit Nova prompt and Human-Maintainer
-  authorization.
+  artifact is AE-0**.
+- Machine-readable source format: **decided** (CDS-WP-011,
+  [ADR-0001](docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md), pending
+  commit) — a **DTCG 2025.10-based CDS profile** in **strict JSON `.tokens.json`**;
+  **no token value, schema, or validator is implemented**.
+- Next work package: **CDS-WP-012 — Machine-Readable Source Bootstrap and Validation
+  Contract** (authorized as next; **not yet executed**). It builds value-neutral
+  schema/fixtures/validation-contract machinery only; it creates no real design
+  values, Candidate, pilot, component, licence, or publication. Execution begins only
+  on an explicit Nova prompt and Human-Maintainer authorization.
 
 ## Execution environment
 
@@ -206,6 +209,11 @@ Before beginning a work package, inspect at minimum:
   — normative source for the accessibility support baseline (A11Y-BL-001); entry
   point to the environment matrix, evidence strategy, maintenance policy, and
   defect/regression model
+- [docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md](docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)
+  and [docs/architecture/MACHINE_READABLE_SOURCE_MODEL.md](docs/architecture/MACHINE_READABLE_SOURCE_MODEL.md)
+  — the machine-readable source format decision (DTCG 2025.10-based CDS profile);
+  entry point to the token format profile, reference/validation model, and
+  metadata/provenance model
 - [docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md](docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md)
   — normative source for the logical architecture; entry point to the
   architecture documents
@@ -317,6 +325,32 @@ as the operative entry aid, with the
 - Compact orientation stays in the
   [Foundation Context Pack](project-system/CONTEXT_PACK_FOUNDATION.md) — a summary,
   never a normative source.
+
+## Machine-readable source and token format (CDS-WP-011)
+
+The normative machine-readable source format is **decided**
+([ADR-0001](docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md), pending
+commit) and **not implemented**.
+
+- **External basis: DTCG 2025.10 only** (Format, Color, Resolver) — a **Final
+  Community Group Report, not a W3C Standard** (DEC-S-073). Only the **pinned stable**
+  version is authoritative; **preview/draft/future reports are not normative** and
+  must not be implemented or documented as if they were (DEC-S-074).
+- **Strict JSON rule:** normative token sources are **strict JSON (RFC 8259),
+  `.tokens.json`** (DEC-S-075). YAML, JSONC, JSON5, tool-native, CSS, and generated
+  forms are **not** normative sources.
+- **Generated is not normative:** channel/platform outputs are class-3 generated
+  artifacts — never a source, never hand-edited, always provenance-carrying
+  (DEC-S-079, DEC-S-031). CDS metadata lives only in the `io.github.kaykaspers.cds`
+  `$extensions` namespace (DEC-S-076); foreign/unknown extensions are preserved and not
+  automatically normative. Curly-brace `{group.token}` is the canonical token-to-token
+  reference; DTCG `$ref` / RFC 6901 JSON Pointer is the required form for
+  document/property/resolver/source-set and controlled cross-file references.
+- **No token value without an explicit prompt.** Claude creates no token, colour,
+  typography, spacing, size, name, schema, resolver, or validator. The next work
+  package (CDS-WP-012) builds value-neutral machinery only. See the
+  [Machine-Readable Source Model](docs/architecture/MACHINE_READABLE_SOURCE_MODEL.md)
+  and the [Implementation Plan](docs/roadmap/MACHINE_READABLE_SOURCE_IMPLEMENTATION_PLAN.md).
 
 ## Claim and release boundaries
 

@@ -24,12 +24,15 @@ committed governance is now operationalized for daily use. A lightweight
 [Elevated](docs/operations/ELEVATED_CHANGE_DOSSIER_TEMPLATE.md) change-dossier
 templates exist, and the twelve Critical Risks are made actionable in a
 [Critical Risk Action Register](docs/operations/CRITICAL_RISK_ACTION_REGISTER.md).
-The first **accessibility support baseline** (A11Y-BL-001) is now **defined**
-(CDS-WP-010, pending commit) — a **test contract, not evidence**. **No accessibility
-test has been run, every artifact is AE-0, no environment is claimed as supported,
-no Candidate or Stable artifact exists, no claim is valid, no licence is selected,
-and the publication state remains `Private Development`.** The next work package is
-**CDS-WP-011 — Machine-Readable Source and Token Format Decision**.
+The first **accessibility support baseline** (A11Y-BL-001) is **defined** (CDS-WP-010,
+pending commit) — a **test contract, not evidence**. The **machine-readable source
+format is decided** (CDS-WP-011): a **DTCG 2025.10-based CDS profile** in **strict
+JSON**, recorded in [ADR-0001](docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)
+(pending commit) — **no token value or schema is implemented**. **No accessibility test
+has been run, every artifact is AE-0, no Candidate or Stable artifact exists, no claim
+is valid, no licence is selected, and the publication state remains `Private
+Development`.** The next work package is **CDS-WP-012 — Machine-Readable Source
+Bootstrap and Validation Contract**.
 
 The project does not yet produce visual design.
 
@@ -46,7 +49,7 @@ No final decision exists for:
 - light and dark themes,
 - design tool,
 - component framework,
-- token format and token build system,
+- token build system,
 - documentation platform,
 - package architecture and repository split,
 - license, public release, and contribution model,
@@ -320,6 +323,28 @@ certification statement.
 - [Accessibility Evidence Strategy](docs/governance/ACCESSIBILITY_EVIDENCE_STRATEGY.md)
 - [Accessibility Defect and Regression Model](docs/governance/ACCESSIBILITY_DEFECT_AND_REGRESSION_MODEL.md)
 
+## Machine-readable source and token format
+
+The **normative machine-readable source format is decided** (CDS-WP-011), and
+**nothing is implemented**. CDS adopts the **Design Tokens Community Group Technical
+Reports 2025.10** (Format, Color, Resolver) — a **Final Community Group Report, not a
+W3C Standard** — as the external basis, in **strict JSON (`.tokens.json`)**, under a
+**CDS Token Format Profile**, with **JSON Schema 2020-12** as the future
+profile-schema foundation. Source sets are layered (Reference → Semantic → Component →
+Product Profile); channel outputs are generated and non-normative; references and
+resolution **fail closed**; four validation layers separate syntax, DTCG, CDS profile,
+and semantic/governance checks. **No token value, schema, resolver, or validator
+exists.**
+
+- [ADR-0001 — Machine-Readable Token Source Format](docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)
+- [Machine-Readable Source Model](docs/architecture/MACHINE_READABLE_SOURCE_MODEL.md)
+- [CDS Token Format Profile](docs/architecture/CDS_TOKEN_FORMAT_PROFILE.md)
+- [Token Reference, Resolution and Validation Model](docs/architecture/TOKEN_REFERENCE_RESOLUTION_AND_VALIDATION_MODEL.md)
+- [Token Metadata, Provenance and Identity Model](docs/architecture/TOKEN_METADATA_PROVENANCE_AND_IDENTITY_MODEL.md)
+- [Token Format Evaluation](docs/research/TOKEN_FORMAT_EVALUATION.md) ·
+  [Source Register](docs/research/TOKEN_FORMAT_SOURCE_REGISTER.md)
+- [Implementation Plan](docs/roadmap/MACHINE_READABLE_SOURCE_IMPLEMENTATION_PLAN.md)
+
 ## Work packages
 
 - **Completed:** CDS-WP-001 — Project Governance and NDF Bootstrap
@@ -333,7 +358,8 @@ certification statement.
 - **Completed:** CDS-WP-008 — Foundation Milestone Review
 - **Completed:** CDS-WP-009 — Operating Enablement and Pre-Candidate Readiness
 - **Completed:** CDS-WP-010 — Accessibility Support Baseline and Evidence Strategy
-- **Next:** **CDS-WP-011 — Machine-Readable Source and Token Format Decision**
+- **Completed:** CDS-WP-011 — Machine-Readable Source and Token Format Decision
+- **Next:** **CDS-WP-012 — Machine-Readable Source Bootstrap and Validation Contract**
   (authorized; not yet executed)
 
 The full controlled roadmap is in
@@ -370,13 +396,14 @@ phase.
 
 ## Registers
 
-- Decisions: DEC-S-001 … DEC-S-072 (72) — 6 strategic foundation decisions,
+- Decisions: DEC-S-001 … DEC-S-082 (82) — 6 strategic foundation decisions,
   6 strategic scope decisions, 8 consumer and pilot scope decisions,
   12 logical architecture decisions, 16 governance, lifecycle and publication
   decisions, 12 accessibility and inclusive design decisions, 4 operating
   enablement and pre-candidate decisions, 8 accessibility support baseline and
-  evidence decisions
-- Risks: RISK-001 … RISK-054 (54) — 52 Monitored, RISK-040 and RISK-044 Mitigating;
+  evidence decisions, 10 machine-readable source and token format decisions ·
+  ADRs: 1 (ADR-0001)
+- Risks: RISK-001 … RISK-063 (63) — 61 Monitored, RISK-040 and RISK-044 Mitigating;
   owner model finalized; no risk accepted or closed
 
 ## Governance documents

@@ -3,11 +3,13 @@
 - **Phase:** Pre-Candidate Operating Enablement — **Foundation / Pre-Design:
   Closed with Notes**
 - **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010
-- **Next work package:** **CDS-WP-011 — Machine-Readable Source and Token Format
-  Decision** (authorized as next; not yet executed). The Foundation is closed with
-  notes; operating enablement is in place; the accessibility support baseline
-  (A11Y-BL-001) is defined (CDS-WP-010, pending commit, no evidence executed).
+  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
+  CDS-WP-011
+- **Next work package:** **CDS-WP-012 — Machine-Readable Source Bootstrap and
+  Validation Contract** (authorized as next; not yet executed). The Foundation is
+  closed with notes; operating enablement is in place; the accessibility support
+  baseline (A11Y-BL-001) is defined; and the machine-readable source format is decided
+  (DTCG 2025.10-based CDS profile, ADR-0001, pending commit; not implemented).
 
 ## Status of completed work packages
 
@@ -217,33 +219,70 @@ Documents:
 [Source Register](../docs/research/ACCESSIBILITY_BASELINE_SOURCE_REGISTER.md) ·
 [Selection Rationale](../docs/research/ACCESSIBILITY_BASELINE_SELECTION_RATIONALE.md)
 
-## Next work package — CDS-WP-011 (authorized)
+### CDS-WP-011 — Machine-Readable Source and Token Format Decision — Completed
 
-The accessibility support baseline and evidence strategy exist (defined, pending
-commit; no evidence executed). The next authorized work package is:
+Decided the normative machine-readable source format using authorized official
+research, without implementing anything:
 
-**CDS-WP-011 — Machine-Readable Source and Token Format Decision.**
+- **DTCG 2025.10** (Format, Color, Resolver) as the external basis — a **Final
+  Community Group Report, not a W3C Standard**; only the pinned stable version is
+  authoritative, previews are inputs only ([ADR-0001](../docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)).
+- **Strict JSON `.tokens.json`**; YAML/JSONC/JSON5/tool/CSS/generated forms are not
+  normative sources.
+- **JSON Schema 2020-12** as the future CDS-owned profile-schema foundation (no schema
+  created; a schema pass is not full correctness).
+- **CDS Token Format Profile** over DTCG with an `io.github.kaykaspers.cds`
+  `$extensions` namespace (foreign extensions preserved, not automatically normative);
+  reserved DTCG semantics never redefined.
+- **Four source-set layers** (Reference/Semantic/Component/Product Profile); channel
+  outputs are generated, non-normative; fail-closed references/resolution; a
+  machine-validatable naming profile; versioned, non-`latest` provenance identity;
+  **four validation layers** (V1 Syntax · V2 DTCG · V3 CDS Profile · V4 Semantic/
+  Governance).
 
-### Objective of CDS-WP-011
+Added DEC-S-073…082 and RISK-055…063; created ADR-0001. **No token value, schema,
+resolver, validator, or design value; no Candidate/Stable; pilot inactive; publication
+state `Private Development`.** No Git write action was performed.
 
-- establish normative **machine-readable-source requirements**;
-- evaluate **token-format** options;
-- assess **interoperability**;
-- define **alias and reference validation**;
-- define **metadata and provenance** requirements;
-- define the **offline tooling boundary**;
-- prepare the corresponding **ADR/decision** input.
+Documents:
+[ADR-0001](../docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md) ·
+[Machine-Readable Source Model](../docs/architecture/MACHINE_READABLE_SOURCE_MODEL.md) ·
+[CDS Token Format Profile](../docs/architecture/CDS_TOKEN_FORMAT_PROFILE.md) ·
+[Reference, Resolution and Validation Model](../docs/architecture/TOKEN_REFERENCE_RESOLUTION_AND_VALIDATION_MODEL.md) ·
+[Metadata, Provenance and Identity Model](../docs/architecture/TOKEN_METADATA_PROVENANCE_AND_IDENTITY_MODEL.md) ·
+[Evaluation](../docs/research/TOKEN_FORMAT_EVALUATION.md) ·
+[Source Register](../docs/research/TOKEN_FORMAT_SOURCE_REGISTER.md) ·
+[Implementation Plan](../docs/roadmap/MACHINE_READABLE_SOURCE_IMPLEMENTATION_PLAN.md)
 
-### CDS-WP-011 explicitly establishes none of the following
+## Next work package — CDS-WP-012 (authorized)
 
-- no concrete design values, colours, typography, icons, or themes;
+The machine-readable source format is decided (ADR-0001 accepted upon commit; not
+implemented). The next authorized work package is:
+
+**CDS-WP-012 — Machine-Readable Source Bootstrap and Validation Contract.**
+
+### Objective of CDS-WP-012
+
+- a **CDS profile JSON Schema** and a **source-set manifest schema**;
+- a **minimal value-neutral fixture set**;
+- **positive and negative validation fixtures**;
+- **reference and cycle tests**;
+- the **layer-dependency validation contract**;
+- the **offline-validation boundary**;
+- the **deterministic-serialization decision** (e.g. RFC 8785 or an alternative);
+- **provenance evidence**.
+
+### CDS-WP-012 explicitly establishes none of the following
+
+- no real design values (colours, typography, spacing, sizes, token names);
 - no Candidate or Stable artifact;
-- no CoreOps pilot start;
-- no component work, licence, or publication decision.
+- no component work;
+- no CoreOps pilot start; no licence; no publication.
 
 ### Still prohibited in the Pre-Candidate phase
 
 - concrete visual design; selecting colours, typography, icons, logos, or themes,
+- creating real token values or names,
 - implementing components or product code,
 - executing accessibility tests or asserting accessibility evidence (every artifact
   is AE-0),
@@ -252,12 +291,12 @@ commit; no evidence executed). The next authorized work package is:
 - promoting any artifact to Candidate or Stable,
 - starting the CoreOps pilot,
 - modifying Skill files or consumer repositories,
-- creating a new work-package ID beyond CDS-WP-011 without Human-Maintainer
+- creating a new work-package ID beyond CDS-WP-012 without Human-Maintainer
   approval.
 
 ### Authorization note
 
-CDS-WP-011 is registered as `Next`; its execution requires an explicit work-package
+CDS-WP-012 is registered as `Next`; its execution requires an explicit work-package
 prompt from Nova and Human-Maintainer authorization. Registration is not execution.
 
 ## Related documents

@@ -5,9 +5,10 @@ Controlled work-package roadmap for the Core Design System (CDS).
 - **Phase:** Pre-Candidate Operating Enablement — **Foundation / Pre-Design:
   Closed with Notes**
 - **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010
-- **Next work package:** **CDS-WP-011 — Machine-Readable Source and Token Format
-  Decision** (authorized as the next work package; not yet executed)
+  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
+  CDS-WP-011
+- **Next work package:** **CDS-WP-012 — Machine-Readable Source Bootstrap and
+  Validation Contract** (authorized as the next work package; not yet executed)
 
 ## Status values
 
@@ -32,13 +33,15 @@ Controlled work-package roadmap for the Core Design System (CDS).
 | CDS-WP-008 | Foundation Milestone Review | Completed | CDS-WP-006, CDS-WP-007 |
 | CDS-WP-009 | Operating Enablement and Pre-Candidate Readiness | Completed | CDS-WP-008 |
 | CDS-WP-010 | Accessibility Support Baseline and Evidence Strategy | Completed | CDS-WP-009 |
-| CDS-WP-011 | Machine-Readable Source and Token Format Decision | Next | CDS-WP-010 |
+| CDS-WP-011 | Machine-Readable Source and Token Format Decision | Completed | CDS-WP-010 |
+| CDS-WP-012 | Machine-Readable Source Bootstrap and Validation Contract | Next | CDS-WP-011 |
 
-**CDS-WP-011 is authorized as the next Work Package.** The Foundation is closed
-with notes; the Pre-Candidate Operating Enablement phase is active; the accessibility
-support baseline (A11Y-BL-001) is defined (CDS-WP-010, pending commit, no evidence
-executed). CDS-WP-011 is registered as `Next` and is not yet executed. No further
-work-package ID is created.
+**CDS-WP-012 is authorized as the next Work Package.** The Foundation is closed with
+notes; the Pre-Candidate Operating Enablement phase is active; the accessibility
+support baseline (A11Y-BL-001) is defined; and the machine-readable source format is
+decided (DTCG 2025.10-based CDS profile, ADR-0001, pending commit; not implemented).
+CDS-WP-012 is registered as `Next` and is not yet executed. No further work-package ID
+is created.
 
 ## Descriptions
 
@@ -198,13 +201,35 @@ Development`.**
 
 ### CDS-WP-011 — Machine-Readable Source and Token Format Decision
 
+**Status:** Completed
+
+Decided the normative machine-readable source format using authorized official
+research (13 DTCG/W3C/RFC/JSON-Schema URLs; stable vs preview separated). Selected
+**DTCG 2025.10** (Format, Color, Resolver; a Final Community Group Report, **not** a
+W3C Standard) as the external basis, in **strict JSON `.tokens.json`**, under a
+**CDS Token Format Profile**, with **JSON Schema 2020-12** as the future
+profile-schema foundation, an `io.github.kaykaspers.cds` `$extensions` namespace, a
+four-layer source-set model, fail-closed reference/resolution rules (curly-brace
+`{group.token}` for canonical token-to-token references and DTCG `$ref` / RFC 6901
+JSON Pointer for document/property/resolver/source-set and controlled cross-file
+references), a machine-validatable naming profile, versioned provenance identity, and
+governed upgrades. Created
+[ADR-0001](../docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md), four
+normative architecture docs, an evaluation and source register, and an implementation
+plan. Added DEC-S-073…082 and RISK-055…063. **No token value, schema, resolver,
+validator, or design value created; no Candidate/Stable; pilot inactive; publication
+state `Private Development`.**
+
+### CDS-WP-012 — Machine-Readable Source Bootstrap and Validation Contract
+
 **Status:** Next
 
-Will establish normative machine-readable-source requirements and evaluate
-token-format options against interoperability, alias/reference validation, metadata
-and provenance, and the offline tooling boundary, preparing the corresponding
-decision. It creates **no concrete design values, no Candidate, no pilot start, and
-no component work**. Not yet executed; begins only on an explicit Nova prompt and
+Will build value-neutral machinery for the decided format: a CDS profile JSON Schema,
+a source-set manifest schema, positive/negative validation fixtures, resolver and
+reference/cycle fixtures, the layer-dependency validation contract, an
+offline-validation boundary, a deterministic-serialization decision, and provenance
+evidence. It creates **no real design values, no Candidate, no component work, and no
+pilot start**. Not yet executed; begins only on an explicit Nova prompt and
 Human-Maintainer authorization.
 
 ## Roadmap evolution

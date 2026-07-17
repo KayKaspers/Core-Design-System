@@ -5,8 +5,8 @@ must be controlled from the start of the project.
 
 ## Register scope
 
-- Risk range: RISK-001 … RISK-054
-- Number of risks: 54
+- Risk range: RISK-001 … RISK-063
+- Number of risks: 63
 - Phase: Pre-Candidate Operating Enablement (Foundation / Pre-Design closed with notes)
 
 Risks RISK-001 … RISK-005 were registered by CDS-WP-001. Risks
@@ -19,7 +19,8 @@ architecture. Risks RISK-029 … RISK-040 were registered by CDS-WP-006 alongsid
 the governance model. Risks RISK-041 … RISK-048 were registered by CDS-WP-007
 alongside the accessibility and inclusive design policy. Risks
 RISK-049 … RISK-054 were registered by CDS-WP-010 alongside the accessibility
-support baseline and evidence strategy.
+support baseline and evidence strategy. Risks RISK-055 … RISK-063 were registered
+by CDS-WP-011 alongside the machine-readable source and token format decision.
 
 ### Finalized risk role model
 
@@ -52,18 +53,17 @@ Full model: [Risk Governance Model](../governance/RISK_GOVERNANCE_MODEL.md).
 | **Accepted** | Consciously accepted with residual effect; requires a review trigger. |
 | **Closed** | No longer relevant, or fully mitigated with evidence. |
 
-**52 of the 54 risks are currently `Monitored`; RISK-040 and RISK-044 are
+**61 of the 63 risks are currently `Monitored`; RISK-040 and RISK-044 are
 `Mitigating`.** CDS-WP-006 finalized the role model; it treated no risk and changed
 no assessment, because no evidence justified a change. CDS-WP-007 added
 RISK-041 … RISK-048 and likewise treated none. CDS-WP-009 moved **RISK-040
 `Monitored → Mitigating`** on the strength of the
 [Critical Risk Action Register](../operations/CRITICAL_RISK_ACTION_REGISTER.md).
-CDS-WP-010 added **RISK-049 … RISK-054** (all `Monitored`) and moved **RISK-044
+CDS-WP-010 added **RISK-049 … RISK-054** and moved **RISK-044
 `Monitored → Mitigating`** on the strength of the defined
-[Accessibility Support Baseline](../governance/ACCESSIBILITY_SUPPORT_BASELINE.md)
-(A11Y-BL-001) and its
-[Maintenance Policy](../governance/ACCESSIBILITY_BASELINE_MAINTENANCE_POLICY.md).
-No description, likelihood, or severity was changed for any existing risk, and
+[Accessibility Support Baseline](../governance/ACCESSIBILITY_SUPPORT_BASELINE.md).
+CDS-WP-011 added **RISK-055 … RISK-063** (all `Monitored`) and changed no existing
+status. No description, likelihood, or severity was changed for any existing risk, and
 **no risk was accepted or closed** — only the Human Maintainer may do either.
 
 ## Assessment scale
@@ -1791,3 +1791,256 @@ claim effects (DEC-S-072). Forbid numeric/percentage accessibility scores and
 aggregate hiding (Evidence and Claims Model). Make `Accepted limitation` a
 Human-Maintainer decision that stays visible in every affected claim, and trigger an
 architecture/scope review on recurring limitations (DEC-S-059).
+
+---
+
+## RISK-055 — Token specification version drift
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** High
+- **Initial severity:** Medium
+
+### Description
+
+The pinned DTCG version may become outdated while later reports introduce changes
+relevant to interoperability, types, references, or tooling.
+
+### Impact
+
+CDS pins DTCG 2025.10, but the Community Group will publish further reports. If CDS
+drifts far behind, external tooling and consumers may expect newer behavior, and a
+late catch-up upgrade could be large and breaking. The report is a CG report, not a
+standard, so its evolution is not guaranteed stable.
+
+### Mitigation direction
+
+Pin only the stable 2025.10 reports (DEC-S-073, DEC-S-074) and treat later reports as
+research inputs until a governed compatibility and migration decision accepts them
+(DEC-S-082). Watch DTCG releases as a standards-watch item; re-verify the pinned
+version's status before each format-affecting change. No upgrade is automatic.
+
+---
+
+## RISK-056 — Preview specification contamination
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** Medium
+
+### Description
+
+Preview or draft DTCG behavior may be implemented or documented as if it were part of
+the pinned stable profile.
+
+### Impact
+
+The DTCG preview drafts explicitly say "do not implement." A preview feature that
+leaks into the normative profile ties CDS to shifting, unstable behavior and breaks
+the pinned-stable guarantee — the format equivalent of building on sand.
+
+### Mitigation direction
+
+Hold that only pinned 2025.10 is authoritative (DEC-S-074); previews are for
+status and future-change awareness only. Fail closed on use of a non-approved draft
+feature (DEC-S-078). Keep stable and preview sources separated in the source register
+and forbid preview features in the profile and any later implementation.
+
+---
+
+## RISK-057 — CDS profile divergence
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** Medium
+
+### Description
+
+CDS-specific restrictions or extensions may diverge from DTCG semantics and reduce
+interoperability with external tools.
+
+### Impact
+
+CDS adds constraints and metadata a generic DTCG tool will not enforce or understand.
+If CDS extensions or restrictions drift from DTCG semantics, sources may round-trip
+incorrectly through external tools, eroding the interoperability that motivated
+adopting DTCG.
+
+### Mitigation direction
+
+Constrain and extend only through documented, namespaced `$extensions` and added
+validation gates; never redefine reserved DTCG semantics (DEC-S-076). Keep extensions
+additive so a DTCG-only tool still reads a valid token. Document the profile centrally
+and version it; treat divergence as a defect to reconcile, not a feature.
+
+---
+
+## RISK-058 — Schema-validation false assurance
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** High
+- **Initial severity:** Medium
+
+### Description
+
+A successful JSON Schema validation may be mistaken for complete token, semantic,
+accessibility, governance, or interoperability correctness.
+
+### Impact
+
+A green schema result is attractive and cheap, and it is easy to read as "the tokens
+are correct." But a schema checks structure, not meaning: semantic layer direction,
+accessibility relevance, status truth, and governance traceability are beyond its
+reach. A clean schema pass is fully consistent with a semantically wrong or
+inaccessible token set.
+
+### Mitigation direction
+
+Enforce four separate validation layers (DEC-S-077, DEC-S-078); a V1/V2 or schema pass
+proves no V3/V4 pass. Hold that a tool result is input to review, never approval
+(DEC-S-053 applied to format), and that there is no aggregate score. Require V4
+semantic and governance review, and Human-Maintainer approval, before any maturity or
+claim.
+
+---
+
+## RISK-059 — Reference-resolution failure
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** High
+
+### Description
+
+Cycles, dangling references, ambiguous resolution, type conflicts, or missing source
+sets may produce invalid or misleading generated artifacts.
+
+### Impact
+
+A reference graph that resolves incorrectly can emit outputs that look valid but carry
+wrong or missing values — a silent corruption that reaches consumers through generated
+channel outputs. Ambiguous resolution order in multi-context theming is a particular
+hazard.
+
+### Mitigation direction
+
+Fail closed on cycles, dangling references, type conflicts, and missing source sets
+(DEC-S-078); no automatic repair. Require deterministic resolution order via the DTCG
+resolver and the declared source-set graph (DEC-S-080). Make reference/cycle/type
+checks part of the future validation contract and its negative fixtures (CDS-WP-012).
+
+---
+
+## RISK-060 — Cross-layer dependency violation
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** High
+
+### Description
+
+Reference, Semantic, Component, Product Profile, or Channel layers may depend on one
+another in prohibited directions and undermine the architecture.
+
+### Impact
+
+An upward or cyclic dependency — a component binding a reference token directly, or a
+profile reaching into the core — silently strips meaning and defeats the five-layer
+flow (DEC-S-024). The system becomes technically working but architecturally
+incoherent, and theming/profiling foreclose.
+
+### Mitigation direction
+
+Make the downward dependency direction machine-checkable from declared layer and
+dependency-set metadata (DEC-S-079); fail closed on any upward/cyclic dependency,
+component→reference bypass, or profile→core redefinition (DEC-S-078). Encode these as
+negative validation fixtures in CDS-WP-012.
+
+---
+
+## RISK-061 — Token identifier collision
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** Medium
+
+### Description
+
+Case conversion, reserved characters, export transformation, renaming, or platform
+constraints may cause distinct token identifiers to collide.
+
+### Impact
+
+Two identifiers that differ only by case, or that normalize to the same string on a
+platform, silently overwrite each other in a generated output — a corruption that is
+hard to detect and easy to ship. Reserved-character or empty-segment names break
+tooling unpredictably.
+
+### Mitigation direction
+
+Enforce a restrictive, machine-validatable naming profile (DEC-S-081): no case-only
+collisions, no reserved characters, no empty segments, a checkable segment syntax, and
+a technical/display-label split. Treat renames as governed migration events
+(DEC-S-082). Validate naming at V3.
+
+---
+
+## RISK-062 — Token provenance incompleteness
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** High
+
+### Description
+
+Token sources or generated outputs may lack profile version, source revision,
+dependency, transformation, approval, maturity, or provenance identity.
+
+### Impact
+
+An artifact whose origin cannot be established becomes functionally normative because
+nobody can contradict it (RISK-025). A consumer integrating an output cannot tell what
+it derived from, cannot reproduce it, and cannot know whether it is current; a
+`latest`-only reference is unfalsifiable.
+
+### Mitigation direction
+
+Require complete identity on every source set and output — CDS profile version, DTCG
+report version, immutable source revision, dependency set, transformation revision,
+maturity, approval, provenance — and fail closed on a missing element (DEC-S-080). Ban
+`latest` as an identity. No secrets or personal data in provenance.
+
+---
+
+## RISK-063 — Transformation-tool lock-in
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** High
+
+### Description
+
+A future transformation tool may introduce proprietary assumptions or extensions that
+become de facto normative and obstruct offline or tool-neutral operation.
+
+### Impact
+
+If a transformation tool adds behavior or extensions the normative source depends on,
+the tool quietly becomes the source of truth — the exact coupling DEC-S-004 forbids
+(RISK-004) — and offline/self-hosted operation and reproducibility are lost.
+
+### Mitigation direction
+
+Keep the normative source strict-JSON DTCG and tool-independent (DEC-S-004, DEC-S-075);
+require offline, deterministic, registry-free processing (DEC-S-030, DEC-S-080). Treat
+any tool-specific assumption in a normative source as a defect. Select tools in a later
+work package under explicit tool-neutrality and offline constraints; never let a
+generated output or tool state become normative (DEC-S-079).

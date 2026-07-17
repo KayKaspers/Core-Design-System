@@ -23,12 +23,13 @@ Pre-Candidate Operating Enablement — **Foundation / Pre-Design: Closed with No
 
 ## Work package status
 
-- Current work package after CDS-WP-010: **CDS-WP-011 — Machine-Readable Source
-  and Token Format Decision** (Next; not yet executed)
-- Previous work package: CDS-WP-010 — Accessibility Support Baseline and Evidence
-  Strategy (Completed)
+- Current work package after CDS-WP-011: **CDS-WP-012 — Machine-Readable Source
+  Bootstrap and Validation Contract** (Next; not yet executed)
+- Previous work package: CDS-WP-011 — Machine-Readable Source and Token Format
+  Decision (Completed)
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010
+  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
+  CDS-WP-011
 
 ## Operating enablement status
 
@@ -73,6 +74,36 @@ Documents:
 [Evidence Record Template](../docs/operations/ACCESSIBILITY_EVIDENCE_RECORD_TEMPLATE.md) ·
 [Source Register](../docs/research/ACCESSIBILITY_BASELINE_SOURCE_REGISTER.md) ·
 [Selection Rationale](../docs/research/ACCESSIBILITY_BASELINE_SELECTION_RATIONALE.md)
+
+## Machine-readable source status
+
+- Machine-readable source status: **Decided, not implemented** (CDS-WP-011,
+  2026-07-16; ADR-0001 pending Human-Maintainer commit)
+- Token Format Profile: **DTCG 2025.10-based CDS profile**
+- DTCG binding: **2025.10** (Format, Color, Resolver modules; Final Community Group
+  Report — **not** a W3C Standard)
+- Canonical source syntax: **strict JSON (RFC 8259), `.tokens.json`**
+- Schema foundation: **JSON Schema Draft 2020-12** (future CDS-owned profile
+  validator; no schema created)
+- Extension namespace: **`io.github.kaykaspers.cds`** (single reserved root within DTCG
+  `$extensions`; foreign extensions preserved, not automatically normative)
+- Source-set layers: Reference · Semantic · Component · Product Profile; channel
+  outputs are generated (non-normative)
+- Validation layers: **4** (V1 Syntax · V2 DTCG · V3 CDS Profile · V4 Semantic/
+  Governance)
+- ADR count: **1** (ADR-0001)
+- **No token value, schema, resolver, or validator implemented; no Candidate/Stable
+  artifact; publication state `Private Development`.**
+
+Documents:
+[ADR-0001](../docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md) ·
+[Machine-Readable Source Model](../docs/architecture/MACHINE_READABLE_SOURCE_MODEL.md) ·
+[CDS Token Format Profile](../docs/architecture/CDS_TOKEN_FORMAT_PROFILE.md) ·
+[Reference, Resolution and Validation Model](../docs/architecture/TOKEN_REFERENCE_RESOLUTION_AND_VALIDATION_MODEL.md) ·
+[Metadata, Provenance and Identity Model](../docs/architecture/TOKEN_METADATA_PROVENANCE_AND_IDENTITY_MODEL.md) ·
+[Token Format Evaluation](../docs/research/TOKEN_FORMAT_EVALUATION.md) ·
+[Token Format Source Register](../docs/research/TOKEN_FORMAT_SOURCE_REGISTER.md) ·
+[Implementation Plan](../docs/roadmap/MACHINE_READABLE_SOURCE_IMPLEMENTATION_PLAN.md)
 
 ## Foundation review status
 
@@ -323,17 +354,18 @@ pilot contract is defined in CDS-WP-004.
 
 ## Register scope
 
-- Decisions: DEC-S-001 … DEC-S-072 (72) — 6 strategic foundation decisions
+- Decisions: DEC-S-001 … DEC-S-082 (82) — 6 strategic foundation decisions
   (CDS-WP-001), 6 strategic scope decisions (CDS-WP-002), 8 consumer and pilot
   scope decisions (CDS-WP-004), 12 logical architecture decisions (CDS-WP-005),
   16 governance, lifecycle and publication decisions (CDS-WP-006), 12
   accessibility and inclusive design decisions (CDS-WP-007), 4 operating
-  enablement and pre-candidate decisions (CDS-WP-009), and **8 accessibility
-  support baseline and evidence decisions (CDS-WP-010, DEC-S-065 … DEC-S-072)**.
-  DEC-S-001 … DEC-S-064 unchanged by CDS-WP-010.
-- Risks: RISK-001 … RISK-054 (54) — **52 `Monitored`, RISK-040 and RISK-044
-  `Mitigating`**; **risk owner model finalized** by CDS-WP-006; RISK-041 … RISK-048
-  added by CDS-WP-007; **RISK-049 … RISK-054 added by CDS-WP-010**. No risk accepted
+  enablement and pre-candidate decisions (CDS-WP-009), 8 accessibility support
+  baseline and evidence decisions (CDS-WP-010), and **10 machine-readable source
+  and token format decisions (CDS-WP-011, DEC-S-073 … DEC-S-082)**. DEC-S-001 …
+  DEC-S-072 unchanged by CDS-WP-011. **ADRs: 1 (ADR-0001).**
+- Risks: RISK-001 … RISK-063 (63) — **61 `Monitored`, RISK-040 and RISK-044
+  `Mitigating`**; **risk owner model finalized** by CDS-WP-006; RISK-049 … RISK-054
+  added by CDS-WP-010; **RISK-055 … RISK-063 added by CDS-WP-011**. No risk accepted
   or closed.
 
 ## Intentionally open decision areas

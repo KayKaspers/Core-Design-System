@@ -9,6 +9,48 @@ released and no release is announced.
 
 ### Added
 
+- Machine-readable source model defined (CDS-WP-011): the normative machine-readable
+  CDS source (artifact class 2) with eight source-set classes, a strictly downward
+  dependency model, and the boundary to generated artifacts and human-readable sources
+  ([Machine-Readable Source Model](docs/architecture/MACHINE_READABLE_SOURCE_MODEL.md)).
+  (CDS-WP-011)
+- **DTCG 2025.10 selected** as the external normative format basis (Format, Color,
+  Resolver modules) — a Final Community Group Report, **not** a W3C Standard; only the
+  pinned stable version is authoritative, previews are inputs only. Chosen from a
+  seven-option evaluation using authorized official research (13 DTCG/W3C/RFC/
+  JSON-Schema URLs). (CDS-WP-011)
+- CDS Token Format Profile defined over DTCG with an `io.github.kaykaspers.cds`
+  `$extensions` namespace (a collision-resistant, repository-identity-derived reserved
+  root; foreign extensions preserved, not automatically normative), a
+  machine-validatable naming/identifier profile, and Product-Profile bounds
+  ([CDS Token Format Profile](docs/architecture/CDS_TOKEN_FORMAT_PROFILE.md)).
+  (CDS-WP-011)
+- **Strict JSON (RFC 8259) and `.tokens.json`** selected as the normative source form;
+  YAML/JSONC/JSON5/tool-native/CSS/generated forms are not normative sources.
+  (CDS-WP-011)
+- **JSON Schema 2020-12** selected as the foundation for a future CDS-owned profile
+  validator (no schema created; a schema pass is not full correctness). (CDS-WP-011)
+- Token reference, resolution, and validation model defined: curly-brace
+  `{group.token}` for canonical token-to-token references and DTCG `$ref` / RFC 6901
+  JSON Pointer for document/property/resolver/source-set and controlled cross-file
+  references; the resolver relationship; fail-closed cycle/dangling/type/layer/
+  missing-set/undeclared-cross-file handling; and **four validation layers** (V1 Syntax
+  · V2 DTCG · V3 CDS Profile · V4 Semantic/Governance)
+  ([model](docs/architecture/TOKEN_REFERENCE_RESOLUTION_AND_VALIDATION_MODEL.md)).
+  (CDS-WP-011)
+- Token metadata, provenance, and identity model defined: source-set identity,
+  governance metadata, versioned non-`latest` provenance, and an open
+  canonicalization decision state (RFC 8785 evaluated, not selected)
+  ([model](docs/architecture/TOKEN_METADATA_PROVENANCE_AND_IDENTITY_MODEL.md)).
+  (CDS-WP-011)
+- **ADR-0001 — Machine-Readable Token Source Format** created (the first ADR; accepted
+  upon Human-Maintainer commit following Nova approval)
+  ([ADR-0001](docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)).
+  (CDS-WP-011)
+- Token format source register and evaluation created (non-normative research
+  evidence); machine-readable source implementation plan created (roadmap for
+  CDS-WP-012). (CDS-WP-011)
+- Work-package evidence notes for CDS-WP-011. (CDS-WP-011)
 - Initial accessibility support baseline defined (CDS-WP-010): **A11Y-BL-001**
   ([Accessibility Support Baseline](docs/governance/ACCESSIBILITY_SUPPORT_BASELINE.md)),
   pending Human-Maintainer commit — a **test contract, not evidence**; it declares
@@ -82,6 +124,23 @@ released and no release is announced.
 
 ### Changed
 
+- Decision index extended to DEC-S-001 … DEC-S-082 with a ninth decision type for
+  machine-readable source and token format decisions (DEC-S-073 … DEC-S-082);
+  DEC-S-001 … DEC-S-072 unchanged. **ADR-0001 is the first ADR**; the decision-record
+  format note now covers ADR files. (CDS-WP-011)
+- Risk register extended to RISK-001 … RISK-063: added **RISK-055 … RISK-063** (token
+  specification version drift, preview contamination, profile divergence,
+  schema-validation false assurance, reference-resolution failure, cross-layer
+  dependency violation, token identifier collision, provenance incompleteness,
+  transformation-tool lock-in), all `Monitored`; no existing risk changed; no risk
+  accepted or closed. RISK-040 and RISK-044 remain `Mitigating`. (CDS-WP-011)
+- Work-package status advanced: CDS-WP-011 completed; **CDS-WP-012 — Machine-Readable
+  Source Bootstrap and Validation Contract** activated as the next work package (not
+  yet executed). Foundation Context Pack, project profile, project brain, README, work
+  packages, next phase, and Claude working instructions updated; "token format" removed
+  from the intentionally-open-decisions list. Publication state remains `Private
+  Development`; no token/schema/validator/design value; no Candidate/Stable; pilot
+  inactive. (CDS-WP-011)
 - Decision index extended to DEC-S-001 … DEC-S-072 with an eighth decision type for
   accessibility support baseline and evidence decisions (DEC-S-065 … DEC-S-072);
   DEC-S-001 … DEC-S-064 unchanged; no ADR. (CDS-WP-010)

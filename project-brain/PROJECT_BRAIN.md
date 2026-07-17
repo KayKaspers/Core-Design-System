@@ -54,18 +54,21 @@ areas today.
 Governance foundation established. No final design or technology decisions are
 approved.
 
-- Decisions: DEC-S-001 … DEC-S-072 (72) — 6 foundation + 6 scope + 8 consumer
+- Decisions: DEC-S-001 … DEC-S-082 (82) — 6 foundation + 6 scope + 8 consumer
   and pilot scope + 12 logical architecture + 16 governance + 12 accessibility +
   4 operating enablement and pre-candidate + 8 accessibility support baseline and
-  evidence decisions
-- Risks: RISK-001 … RISK-054 (54) — **52 Monitored, RISK-040 + RISK-044 Mitigating**;
+  evidence + 10 machine-readable source and token format decisions · **ADRs: 1
+  (ADR-0001)**
+- Risks: RISK-001 … RISK-063 (63) — **61 Monitored, RISK-040 + RISK-044 Mitigating**;
   **owner model finalized**; no risk accepted or closed
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
-  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010
-- Next work package: **CDS-WP-011 — Machine-Readable Source and Token Format
-  Decision** (authorized as next; not yet executed). Foundation **Closed with
+  CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
+  CDS-WP-011
+- Next work package: **CDS-WP-012 — Machine-Readable Source Bootstrap and Validation
+  Contract** (authorized as next; not yet executed). Foundation **Closed with
   Notes**; operating enablement in place; accessibility support baseline
-  **A11Y-BL-001** defined (CDS-WP-010, pending commit, no evidence executed)
+  **A11Y-BL-001** defined (CDS-WP-010); machine-readable source format decided
+  (CDS-WP-011, ADR-0001, pending commit, not implemented)
 
 ## Registered scope
 
@@ -210,8 +213,19 @@ Details: [Provenance](../docs/governance/NDF_SKILLS_PROVENANCE.md) ·
 | DEC-S-070 | Baseline freshness reviewed on triggers and at least every six months. |
 | DEC-S-071 | Immutable, bound, reviewer-identified evidence records; templates/automation/single passes are not global evidence. |
 | DEC-S-072 | Accessibility defects/regressions classified separately from risk; Blocking/High regressions block Stable and claims. |
+| DEC-S-073 | DTCG 2025.10 (Format/Color/Resolver) is the external format basis; a CG report, not a W3C Standard. |
+| DEC-S-074 | Only pinned DTCG 2025.10 is authoritative; previews/drafts are inputs only. |
+| DEC-S-075 | Strict JSON (RFC 8259) `.tokens.json` is the normative source form. |
+| DEC-S-076 | CDS profile constrains DTCG; metadata only via namespaced `$extensions`; reserved semantics unchanged. |
+| DEC-S-077 | JSON Schema 2020-12 is the profile-schema foundation; a schema pass is not full correctness. |
+| DEC-S-078 | Token references fail closed on cycles/dangling/type/missing/bad-layer/unresolved-override. |
+| DEC-S-079 | Source sets layered (Reference/Semantic/Component/Product Profile); channel outputs generated, not normative. |
+| DEC-S-080 | Versioned, non-`latest` provenance identity for sources and outputs. |
+| DEC-S-081 | Restrictive, machine-validatable naming; technical IDs separate from display labels. |
+| DEC-S-082 | Format/profile/binding upgrades are governed; no automatic upgrade. |
 
-Details: [Decision Index](../docs/decisions/DECISION_INDEX.md)
+Details: [Decision Index](../docs/decisions/DECISION_INDEX.md) ·
+[ADR-0001](../docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)
 
 ## Active risks
 
@@ -271,6 +285,15 @@ Details: [Decision Index](../docs/decisions/DECISION_INDEX.md)
 | RISK-052 | Evidence identity incompleteness. | Monitored |
 | RISK-053 | Regression coverage gap. | Monitored |
 | RISK-054 | Accessibility defect normalization. | Monitored |
+| RISK-055 | Token specification version drift. | Monitored |
+| RISK-056 | Preview specification contamination. | Monitored |
+| RISK-057 | CDS profile divergence. | Monitored |
+| RISK-058 | Schema-validation false assurance. | Monitored |
+| RISK-059 | Reference-resolution failure. | Monitored |
+| RISK-060 | Cross-layer dependency violation. | Monitored |
+| RISK-061 | Token identifier collision. | Monitored |
+| RISK-062 | Token provenance incompleteness. | Monitored |
+| RISK-063 | Transformation-tool lock-in. | Monitored |
 
 **Owner model finalized** (DEC-S-045): Human Maintainer accountable · Nova
 controller · executor named per mitigation · reviewer never the executor. Only
@@ -278,8 +301,9 @@ the Human Maintainer may accept or close a risk. **CDS-WP-009 moved RISK-040
 `Monitored → Mitigating`** via the
 [Critical Risk Action Register](../docs/operations/CRITICAL_RISK_ACTION_REGISTER.md)
 (DEC-S-064). **CDS-WP-010 added RISK-049…054 and moved RISK-044
-`Monitored → Mitigating`** (A11Y-BL-001 defined; DEC-S-070). No risk accepted or
-closed.
+`Monitored → Mitigating`** (A11Y-BL-001 defined; DEC-S-070). **CDS-WP-011 added
+RISK-055…063** (token-format/spec-drift/reference/provenance risks; all Monitored). No
+risk accepted or closed.
 Details: [Risk Register](../docs/risks/RISK_REGISTER.md)
 
 ## Governance model (CDS-WP-006)
@@ -486,7 +510,7 @@ Details: [Benchmark](../docs/research/DESIGN_SYSTEM_BENCHMARK.md) ·
 
 No final decision exists for: logo, logo architecture, colors, typography,
 icons, illustration, imagery, dark theme, light theme, design tool, component
-framework, token format, token build system, documentation platform, package
+framework, token build system, documentation platform, package
 architecture, repository split, license, public release, contribution model,
 long-term compatibility commitments, concrete product signatures, versioning
 and maturity model, conformance and adoption policy, or product profile and
@@ -602,15 +626,47 @@ no environment claimed supported**:
 - The baseline is a **test contract, not evidence** (DEC-S-065); RISK-044 moved to
   `Mitigating`; DEC-S-065…072 and RISK-049…054 added.
 
+## Machine-readable source and token format (CDS-WP-011)
+
+Decided the normative machine-readable source format using authorized official
+research (13 DTCG/W3C/RFC/JSON-Schema URLs; stable vs preview separated) — **without
+implementing anything**:
+
+- **External basis:** **DTCG 2025.10** (Format, Color, Resolver) — a **Final Community
+  Group Report, not a W3C Standard**; only the pinned stable version is authoritative,
+  previews are inputs only (DEC-S-073, DEC-S-074).
+- **Canonical form:** **strict JSON (RFC 8259), `.tokens.json`**; YAML/JSONC/JSON5/
+  tool/CSS/generated forms are not normative sources (DEC-S-075).
+- **Profile:** a CDS Token Format Profile over DTCG; metadata only via a
+  **`io.github.kaykaspers.cds` `$extensions`** namespace (repository-identity-derived,
+  collision-resistant; foreign extensions preserved, not automatically normative);
+  reserved DTCG semantics never redefined (DEC-S-076).
+- **Schema:** **JSON Schema 2020-12** as the future CDS-owned profile-schema
+  foundation (no schema created; a schema pass is not full correctness — DEC-S-077).
+- **Source sets:** Reference → Semantic → Component → Product Profile (downward only);
+  channel outputs are generated, non-normative (DEC-S-079). **References:** curly-brace
+  `{group.token}` for canonical token-to-token authoring; DTCG `$ref` / RFC 6901 JSON
+  Pointer for document/property/resolver/source-set and controlled cross-file
+  references. Fail-closed on cycles/dangling/type/missing-set/bad-layer/override/
+  undeclared-cross-file (DEC-S-078); only the provenance-pointer form stays open.
+  Machine-validatable naming (DEC-S-081). Versioned, non-`latest` provenance identity
+  (DEC-S-080).
+- **Validation:** four layers — V1 Syntax · V2 DTCG · V3 CDS Profile · V4 Semantic/
+  Governance; a lower-layer pass proves no higher layer; a tool result is not
+  approval.
+- Created **ADR-0001** + four architecture docs + evaluation/register + implementation
+  plan; DEC-S-073…082 and RISK-055…063 added. **No token/schema/validator/design
+  value; publication `Private Development`.**
+
 ## Next step
 
-**CDS-WP-011 — Machine-Readable Source and Token Format Decision** (authorized as
-next; not yet executed): establish normative machine-readable-source requirements,
-evaluate token formats against interoperability, alias/reference validation,
-metadata/provenance, and the offline tooling boundary, and prepare the decision. It
-creates no concrete design values, no Candidate, no pilot start, and no component
-work. Execution begins only on an explicit Nova prompt and Human-Maintainer
-authorization.
+**CDS-WP-012 — Machine-Readable Source Bootstrap and Validation Contract** (authorized
+as next; not yet executed): build value-neutral machinery — CDS profile JSON Schema,
+source-set manifest schema, positive/negative + reference/cycle fixtures, the
+layer-dependency validation contract, the offline-validation boundary, the
+deterministic-serialization decision (e.g. RFC 8785), and provenance evidence. **Still
+no real design values, no Candidate, no component work, no pilot.** Execution begins
+only on an explicit Nova prompt and Human-Maintainer authorization.
 
 ## Related documents
 
@@ -632,6 +688,8 @@ authorization.
 - [CDS-WP-008 Foundation Milestone Review Notes](CDS_WP_008_FOUNDATION_MILESTONE_REVIEW_NOTES.md)
 - [CDS-WP-009 Operating Enablement and Pre-Candidate Notes](CDS_WP_009_OPERATING_ENABLEMENT_AND_PRE_CANDIDATE_NOTES.md)
 - [CDS-WP-010 Accessibility Support Baseline Notes](CDS_WP_010_ACCESSIBILITY_SUPPORT_BASELINE_NOTES.md)
+- [CDS-WP-011 Machine-Readable Source and Token Format Notes](CDS_WP_011_MACHINE_READABLE_SOURCE_AND_TOKEN_FORMAT_NOTES.md)
 - [Foundation Milestone Review](../docs/reviews/FOUNDATION_MILESTONE_REVIEW.md)
 - [Foundation Closure Record](../docs/governance/FOUNDATION_CLOSURE_RECORD.md)
 - [Accessibility Support Baseline](../docs/governance/ACCESSIBILITY_SUPPORT_BASELINE.md)
+- [ADR-0001 — Machine-Readable Token Source Format](../docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)

@@ -6,7 +6,7 @@
 > it never defines. Where it disagrees with a normative source, the normative
 > source wins and this pack is wrong and must be corrected.
 
-- **Maintained by:** CDS-WP-010
+- **Maintained by:** CDS-WP-011
 - **Date:** 2026-07-16
 
 ## Project identity
@@ -24,11 +24,12 @@ Notes** (CDS-WP-009; DEC-S-061, DEC-S-062).
 
 Governance, scope, architecture, requirements, and accessibility policy are
 established; the Foundation is closed with mandatory notes; the committed governance
-is operationalized; and the accessibility support baseline **A11Y-BL-001** is defined
-(CDS-WP-010, pending commit, **no evidence executed — every artifact AE-0**).
-Concrete visual or technical design decisions remain unauthorized (DEC-S-003). The
-next work package is **CDS-WP-011 — Machine-Readable Source and Token Format
-Decision**.
+is operationalized; the accessibility support baseline **A11Y-BL-001** is defined
+(CDS-WP-010, pending commit, **no evidence executed — every artifact AE-0**); and the
+**machine-readable source format is decided** (CDS-WP-011: DTCG 2025.10-based CDS
+profile, strict JSON, ADR-0001, pending commit, **not implemented**). Concrete visual
+design values remain unauthorized (DEC-S-003). The next work package is **CDS-WP-012 —
+Machine-Readable Source Bootstrap and Validation Contract**.
 
 ## Completed work packages
 
@@ -44,7 +45,8 @@ Decision**.
 | CDS-WP-007 | Accessibility and Inclusive Design Policy | Target **WCAG 2.2 Level AA** for the applicable web scope (CR-024 resolved at policy level); target-is-not-claim rule; A/AA applicability matrix (56 listed / 55 applicable); shared responsibility (49/55 need both sides); 5 evidence levels AE-0…AE-4; 6 channel profiles; limitations and exception policy; CoreOps pilot criterion. DEC-S-049…060; RISK-041…048. **Nothing tested — every artifact AE-0; no claim; publication state unchanged.** |
 | CDS-WP-008 | Foundation Milestone Review | Reviewed the Foundation across 12 dimensions (55 criteria), 3 governance dry runs, 4-axis Candidate readiness, 8-criterion pilot entry matrix, all 48 risks. **0 Foundation blockers**; recommended outcome **GO WITH NOTES**; 12 findings (FM-F-001…012). **No normative source changed; no Decision/Risk/ADR/WP-ID created; no artifact promoted; publication state unchanged.** Non-normative review evidence in `docs/reviews/`. |
 | CDS-WP-009 | Operating Enablement and Pre-Candidate Readiness | Recorded **Foundation closure with notes** (accepted by the Human Maintainer); operationalized governance without any design/token/component/tool. Created the Closure Record (normative on closure/authority/phase), Operating Playbook, Standard + Elevated dossier templates, Critical Risk Action Register (12 risks actionable), Reference Integrity Review (PASS), and Pre-Candidate Operating Plan. DEC-S-061…064 added; RISK-040 `Monitored → Mitigating` (only status change; no acceptance/closure). **No artifact promoted; publication state `Private Development`.** |
-| CDS-WP-010 | Accessibility Support Baseline and Evidence Strategy | Defined **A11Y-BL-001** (pending commit) via authorized official research — 3 tiers, 14-entry environment matrix (Required 6 · Conditional 4 · Deferred 4), evidence strategy (AE-0…AE-4), maintenance policy (freshness + triggers + 6-month max gap), defect/regression model, evidence record template, source register + selection rationale. DEC-S-065…072 added; RISK-049…054 added; RISK-044 `Monitored → Mitigating`. **A test contract, not evidence — no test run, every artifact AE-0, no environment claimed supported, pilot inactive, publication `Private Development`. CDS-WP-011 registered Next.** |
+| CDS-WP-010 | Accessibility Support Baseline and Evidence Strategy | Defined **A11Y-BL-001** (pending commit) via authorized official research — 3 tiers, 14-entry environment matrix (Required 6 · Conditional 4 · Deferred 4), evidence strategy (AE-0…AE-4), maintenance policy (freshness + triggers + 6-month max gap), defect/regression model, evidence record template, source register + selection rationale. DEC-S-065…072 added; RISK-049…054 added; RISK-044 `Monitored → Mitigating`. **A test contract, not evidence — no test run, every artifact AE-0, no environment claimed supported, pilot inactive, publication `Private Development`.** |
+| CDS-WP-011 | Machine-Readable Source and Token Format Decision | Decided the normative machine-readable source format via authorized official research (13 URLs; stable vs preview separated): **DTCG 2025.10** (Format/Color/Resolver; a **Final CG Report, not a W3C Standard**) as external basis, **strict JSON `.tokens.json`**, **JSON Schema 2020-12** profile-schema foundation, an `io.github.kaykaspers.cds` `$extensions` namespace, four source-set layers, fail-closed references (curly-brace token-to-token vs `$ref`/JSON-Pointer for document/resolver/cross-file), machine-validatable naming, versioned provenance, and 4 validation layers. Created **ADR-0001** + 4 architecture docs + evaluation/register + implementation plan. DEC-S-073…082 added; RISK-055…063 added. **No token/schema/validator/design value; no Candidate/Stable; pilot inactive; publication `Private Development`. CDS-WP-012 registered Next.** |
 
 ## Normative source map
 
@@ -77,6 +79,11 @@ Read the source, not this summary, when the detail matters.
 | Accessibility baseline maintenance | [docs/governance/ACCESSIBILITY_BASELINE_MAINTENANCE_POLICY.md](../docs/governance/ACCESSIBILITY_BASELINE_MAINTENANCE_POLICY.md) |
 | Accessibility evidence strategy | [docs/governance/ACCESSIBILITY_EVIDENCE_STRATEGY.md](../docs/governance/ACCESSIBILITY_EVIDENCE_STRATEGY.md) |
 | Accessibility defect/regression model | [docs/governance/ACCESSIBILITY_DEFECT_AND_REGRESSION_MODEL.md](../docs/governance/ACCESSIBILITY_DEFECT_AND_REGRESSION_MODEL.md) |
+| **Machine-readable source model** | [docs/architecture/MACHINE_READABLE_SOURCE_MODEL.md](../docs/architecture/MACHINE_READABLE_SOURCE_MODEL.md) |
+| CDS token format profile | [docs/architecture/CDS_TOKEN_FORMAT_PROFILE.md](../docs/architecture/CDS_TOKEN_FORMAT_PROFILE.md) |
+| Token reference/resolution/validation | [docs/architecture/TOKEN_REFERENCE_RESOLUTION_AND_VALIDATION_MODEL.md](../docs/architecture/TOKEN_REFERENCE_RESOLUTION_AND_VALIDATION_MODEL.md) |
+| Token metadata/provenance/identity | [docs/architecture/TOKEN_METADATA_PROVENANCE_AND_IDENTITY_MODEL.md](../docs/architecture/TOKEN_METADATA_PROVENANCE_AND_IDENTITY_MODEL.md) |
+| Format decision (ADR) | [docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md](../docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md) |
 | **Logical architecture** | [docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md](../docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md) |
 | Artifact classes and authority | [docs/architecture/SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md](../docs/architecture/SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md) |
 | Token flow and theming | [docs/architecture/TOKEN_AND_THEME_ARCHITECTURE.md](../docs/architecture/TOKEN_AND_THEME_ARCHITECTURE.md) |
@@ -112,7 +119,7 @@ and reference the normative policies; they do not replace them (DEC-S-063):
 
 ## Active decisions
 
-- Range: DEC-S-001 … DEC-S-072 · Count: 72 · All Accepted
+- Range: DEC-S-001 … DEC-S-082 · Count: 82 · All Accepted · ADRs: 1 (ADR-0001)
 - DEC-S-001…006: strategic foundation decisions (CDS-WP-001)
 - DEC-S-007…012: strategic scope decisions (CDS-WP-002)
 - DEC-S-013…020: consumer and pilot scope decisions (CDS-WP-004)
@@ -125,7 +132,9 @@ and reference the normative policies; they do not replace them (DEC-S-063):
   DEC-S-001…060 unchanged
 - DEC-S-065…072: accessibility support baseline and evidence decisions (CDS-WP-010)
   — DEC-S-001…064 unchanged
-- No ADR files exist.
+- DEC-S-073…082: machine-readable source and token format decisions (CDS-WP-011) —
+  DEC-S-001…072 unchanged
+- ADR-0001 (Machine-Readable Token Source Format) exists — the first ADR.
 
 | ID | Summary |
 | --- | --- |
@@ -201,10 +210,20 @@ and reference the normative policies; they do not replace them (DEC-S-063):
 | DEC-S-070 | Baseline freshness reviewed on gate/version/lifecycle/regression/scope triggers and ≥ every six months. |
 | DEC-S-071 | Evidence recorded through immutable, bound, reviewer-identified records; templates/automation/single passes are not global evidence. |
 | DEC-S-072 | Accessibility defects/regressions classified separately from risk; Blocking/High regressions block Stable and claims. |
+| DEC-S-073 | DTCG 2025.10 (Format/Color/Resolver) is the external normative format basis; a CG report, not a W3C Standard. |
+| DEC-S-074 | Only pinned DTCG 2025.10 is authoritative; previews/drafts are inputs until a governed migration accepts them. |
+| DEC-S-075 | Strict JSON (RFC 8259) `.tokens.json` is the normative source form; YAML/JSONC/JSON5/tool/CSS/generated are not. |
+| DEC-S-076 | The CDS profile constrains DTCG and adds metadata only via namespaced `$extensions`; reserved DTCG semantics unchanged. |
+| DEC-S-077 | JSON Schema 2020-12 is the profile-schema foundation; a schema pass is not full/semantic/a11y/governance correctness. |
+| DEC-S-078 | Token references follow DTCG rules; cycles, dangling refs, type conflicts, missing sets, bad layers, unresolved overrides fail closed. |
+| DEC-S-079 | Source sets are layered (Reference/Semantic/Component/Product Profile); channel outputs are generated, not normative. |
+| DEC-S-080 | Sources/outputs carry versioned identity (profile+DTCG version, immutable revision, deps, transformation, maturity, approval, provenance); no `latest`. |
+| DEC-S-081 | A restrictive, machine-validatable naming profile; technical IDs separate from display labels. |
+| DEC-S-082 | Format/profile/binding/reference/extension/validation upgrades are governed; no automatic upgrade. |
 
 ## Active risks
 
-- Range: RISK-001 … RISK-054 · Count: 54 · **52 Monitored, RISK-040 + RISK-044 Mitigating**
+- Range: RISK-001 … RISK-063 · Count: 63 · **61 Monitored, RISK-040 + RISK-044 Mitigating**
 - **Owner model finalized** (DEC-S-045): Accountable Risk Owner — Human
   Maintainer · Risk Controller — Nova · Mitigation Executor — named per
   mitigation · Evidence Reviewer — Nova or authorized reviewer (never the executor).
@@ -213,8 +232,9 @@ and reference the normative policies; they do not replace them (DEC-S-063):
   `Monitored → Mitigating`** via the
   [Critical Risk Action Register](../docs/operations/CRITICAL_RISK_ACTION_REGISTER.md)
   (12 Critical Risks made actionable; DEC-S-064). **CDS-WP-010 added RISK-049…054**
-  (all Monitored) and moved **RISK-044 `Monitored → Mitigating`** (A11Y-BL-001
-  defined). No risk accepted or closed.
+  and moved **RISK-044 `Monitored → Mitigating`** (A11Y-BL-001 defined).
+  **CDS-WP-011 added RISK-055…063** (all Monitored; token-format/spec-drift/
+  reference/provenance risks). No risk accepted or closed.
 
 | ID | Summary |
 | --- | --- |
@@ -272,6 +292,15 @@ and reference the normative policies; they do not replace them (DEC-S-063):
 | RISK-052 | Evidence identity incompleteness. |
 | RISK-053 | Regression coverage gap. |
 | RISK-054 | Accessibility defect normalization. |
+| RISK-055 | Token specification version drift. |
+| RISK-056 | Preview specification contamination. |
+| RISK-057 | CDS profile divergence. |
+| RISK-058 | Schema-validation false assurance. |
+| RISK-059 | Reference-resolution failure. |
+| RISK-060 | Cross-layer dependency violation. |
+| RISK-061 | Token identifier collision. |
+| RISK-062 | Token provenance incompleteness. |
+| RISK-063 | Transformation-tool lock-in. |
 
 ## Approved strategic principles
 
@@ -610,7 +639,9 @@ Review docs: [Milestone Review](../docs/reviews/FOUNDATION_MILESTONE_REVIEW.md) 
 Foundation closure and the next phase were subsequently **decided**: the Human
 Maintainer accepted `GO WITH NOTES` (commit of CDS-WP-008 + initiation of
 CDS-WP-009). **Foundation: Closed with Notes.** Operating enablement is in place
-(CDS-WP-009), and the accessibility support baseline A11Y-BL-001 is defined
-(CDS-WP-010, pending commit, no evidence executed); the next authorized work package
-is **CDS-WP-011 — Machine-Readable Source and Token Format Decision**. See the
+(CDS-WP-009), the accessibility support baseline A11Y-BL-001 is defined (CDS-WP-010,
+pending commit, no evidence executed), and the machine-readable source format is
+decided (CDS-WP-011, ADR-0001, pending commit, not implemented); the next authorized
+work package is **CDS-WP-012 — Machine-Readable Source Bootstrap and Validation
+Contract**. See the
 [Foundation Closure Record](../docs/governance/FOUNDATION_CLOSURE_RECORD.md).
