@@ -9,6 +9,32 @@ released and no release is announced.
 
 ### Added
 
+- Semantic Status Foundation Contract defined (CDS-WP-014): five independent status
+  axes (`condition`, `severity`, `confidence`, `freshness`, `evidence`) with a fixed
+  25-value vocabulary and explicit `unknown` on every axis; ten invariants including
+  no-aggregate-health-score and degraded-knowledge-never-as-success; the 11-field
+  complete status object with 6 review-required combinations, 8 fail-closed states,
+  and a 6-level disclosure priority. (CDS-WP-014)
+- Status communication, accessibility, and localization contract created: text-first
+  accessible meaning, no colour-/icon-/position-/shape-/motion-only encoding, DE/EN
+  semantic parity, language-neutral technical IDs with separately localized labels,
+  reduced-motion boundary. No final UI copy and no visual value. (CDS-WP-014)
+- Semantic Status Token Contract created (value-neutral roles for a future Semantic
+  source set under the CDS Token Format Profile; no token source file, no token
+  name, no value). (CDS-WP-014)
+- First Semantic Status Candidate Plan created: 8-element Candidate package, fixed
+  scope and exclusions, 10 cumulative prerequisites (none met), evidence plan, and
+  an executor-produced readiness review — no artifact promoted. (CDS-WP-014)
+- DEC-S-105 … DEC-S-114 added (five-axis model, fixed vocabulary, truthfulness
+  rules, no aggregate score, combination rules, localization boundaries, text-first
+  accessibility, downstream preservation, first Candidate definition and gates).
+  (CDS-WP-014)
+- RISK-082 … RISK-089 added (axis conflation, unknown-state optimism, aggregate
+  masking, combination ambiguity, localization drift, visual-only encoding,
+  consumer remapping divergence, first-candidate scope expansion); no existing risk
+  status changed. (CDS-WP-014)
+- CDS-WP-015 — Semantic Status Foundation Source Set and Candidate Evidence
+  activated as the next work package. (CDS-WP-014)
 - Offline token profile validator implemented (CDS-WP-013): entry point
   `python -m tools.cds_validator` with `version`, `validate-file`, `validate-cases`,
   and `digest` commands and a stable exit-code contract; Python 3.11+ with exactly

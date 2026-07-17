@@ -39,8 +39,13 @@ on a pinned Python/`jsonschema`/`rfc8785` stack
 outcomes** — **executor-produced, independently unreviewed evidence**. **No
 accessibility test has been run, every artifact is AE-0, no Candidate or Stable
 artifact exists, no claim is valid, no licence is selected, and the publication state
-remains `Private Development`.** The next work package is **CDS-WP-014 — Semantic
-Status Foundation Contract and First Candidate Plan**.
+remains `Private Development`.** The **first concrete design foundation is defined**
+(CDS-WP-014): the **Semantic Status Foundation Contract** — five independent status
+axes with a fixed 25-value vocabulary and explicit `unknown`, ten invariants,
+combination/communication/token contracts, and a gated
+[First Semantic Status Candidate Plan](docs/roadmap/FIRST_SEMANTIC_STATUS_CANDIDATE_PLAN.md)
+— **Experimental, no Candidate status, no visual value**. The next work package is
+**CDS-WP-015 — Semantic Status Foundation Source Set and Candidate Evidence**.
 
 The project does not yet produce visual design.
 
@@ -382,6 +387,27 @@ bootstrap remain Experimental, not Candidate.**
   [Source Register](docs/research/TOKEN_FORMAT_SOURCE_REGISTER.md)
 - [Implementation Plan](docs/roadmap/MACHINE_READABLE_SOURCE_IMPLEMENTATION_PLAN.md)
 
+## Semantic Status Foundation
+
+The **first concrete CDS design foundation is defined** (CDS-WP-014, Experimental):
+the channel-independent **Semantic Status Foundation Contract** — **five independent
+status axes** (`condition` · `severity` · `confidence` · `freshness` · `evidence`)
+with a fixed **25-value vocabulary** (`unknown` explicit on every axis), **ten
+invariants** (no aggregate health score; unknown/stale/unverified never represented
+as success), explicit **combination and conflict rules**, a text-first
+**communication/accessibility/localization contract** (DE/EN semantic parity, no
+colour-/icon-only meaning), and a value-neutral **Semantic Status Token Contract**.
+**No visual value, no token source file, no component exists; nothing is Candidate;
+the first Candidate is planned and fully gated.**
+
+- [Semantic Status Foundation Contract](docs/foundations/SEMANTIC_STATUS_FOUNDATION_CONTRACT.md)
+- [Status Axis Vocabulary](docs/foundations/STATUS_AXIS_VOCABULARY.md)
+- [Status Composition and Conflict Rules](docs/foundations/STATUS_COMPOSITION_AND_CONFLICT_RULES.md)
+- [Status Communication and Accessibility Contract](docs/foundations/STATUS_COMMUNICATION_AND_ACCESSIBILITY_CONTRACT.md)
+- [Semantic Status Token Contract](docs/foundations/SEMANTIC_STATUS_TOKEN_CONTRACT.md)
+- [First Semantic Status Candidate Plan](docs/roadmap/FIRST_SEMANTIC_STATUS_CANDIDATE_PLAN.md) ·
+  [Readiness Review](docs/reviews/SEMANTIC_STATUS_FOUNDATION_READINESS_REVIEW.md)
+
 ## Work packages
 
 - **Completed:** CDS-WP-001 — Project Governance and NDF Bootstrap
@@ -398,7 +424,8 @@ bootstrap remain Experimental, not Candidate.**
 - **Completed:** CDS-WP-011 — Machine-Readable Source and Token Format Decision
 - **Completed:** CDS-WP-012 — Machine-Readable Source Bootstrap and Validation Contract
 - **Completed:** CDS-WP-013 — Offline Token Profile Validator and Fixture Harness
-- **Next:** **CDS-WP-014 — Semantic Status Foundation Contract and First Candidate Plan**
+- **Completed:** CDS-WP-014 — Semantic Status Foundation Contract and First Candidate Plan
+- **Next:** **CDS-WP-015 — Semantic Status Foundation Source Set and Candidate Evidence**
   (authorized; not yet executed)
 
 The full controlled roadmap is in

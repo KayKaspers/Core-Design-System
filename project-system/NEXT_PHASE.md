@@ -4,14 +4,14 @@
   Closed with Notes**
 - **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
-  CDS-WP-011, CDS-WP-012, CDS-WP-013
-- **Next work package:** **CDS-WP-014 — Semantic Status Foundation Contract and First
-  Candidate Plan** (authorized as next; not yet executed). The Foundation is closed with
-  notes; the machine-readable source format is decided (ADR-0001); the value-neutral
-  bootstrap is implemented (ADR-0002); and the offline validator and fixture harness are
-  implemented and executed (ADR-0003) — **Experimental, executor-produced, independently
-  unreviewed; 15/15 expected/actual matches; validator status: Implemented,
-  Experimental, independently unreviewed.**
+  CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014
+- **Next work package:** **CDS-WP-015 — Semantic Status Foundation Source Set and
+  Candidate Evidence** (authorized as next; not yet executed). The Foundation is closed
+  with notes; the machine-readable machinery is implemented and executed
+  (ADR-0001…0003; validator Experimental, independently unreviewed); and the
+  **Semantic Status Foundation Contract is defined** (CDS-WP-014: five axes, 25
+  values, ten invariants, Candidate plan) — **Contract defined, no Candidate status,
+  no visual value.**
 
 ## Status of completed work packages
 
@@ -318,32 +318,69 @@ Documents:
 [Dependency Source Register](../docs/research/OFFLINE_VALIDATOR_DEPENDENCY_SOURCE_REGISTER.md) ·
 [Stack Evaluation](../docs/research/OFFLINE_VALIDATOR_STACK_EVALUATION.md)
 
-## Next work package — CDS-WP-014 (authorized)
+### CDS-WP-014 — Semantic Status Foundation Contract and First Candidate Plan — Completed
 
-The machine-readable machinery is implemented and executed (Experimental;
-independently unreviewed). The next authorized work package is:
+Defined the first concrete CDS design foundation (pending commit) — meaning before
+appearance, no visual value:
 
-**CDS-WP-014 — Semantic Status Foundation Contract and First Candidate Plan.**
+- **Five independent status axes** (`condition` · `severity` · `confidence` ·
+  `freshness` · `evidence`) with a **fixed 25-value vocabulary**; `unknown` is
+  explicit on every axis and never an omitted default (DEC-S-105…107).
+- **Ten invariants**, the complete **11-field status object**, **6 review-required
+  combinations**, **8 fail-closed states**, a 6-level disclosure priority, and **no
+  aggregate health score** (DEC-S-108, DEC-S-109).
+- **Communication/accessibility/localization contract:** text-first accessible
+  meaning, no single-modality encoding, DE/EN semantic parity, flexible labels,
+  reduced-motion boundary (DEC-S-110, DEC-S-111).
+- **Semantic Status Token Contract** (roles, not values; no token file, no token
+  name, no value) and truth-preserving downstream boundaries (DEC-S-112).
+- **First Semantic Status Candidate Plan:** 8-element Candidate package, fixed scope
+  and exclusions, **10 cumulative prerequisites — none met or waived**; an
+  executor-produced readiness review (Candidate criterion honestly `Not met`)
+  (DEC-S-113, DEC-S-114).
 
-### Objective of CDS-WP-014
+Added DEC-S-105…114 and RISK-082…089 (all Monitored; no existing status changed).
+**No Candidate/Stable, no claim, no pilot, no visual value; WP-013 evidence remains
+independently unreviewed; publication `Private Development`.** No Git write action was
+performed.
 
-- the **Semantic Status Foundation Contract**;
-- the **five status axes** with **Unknown/Stale/confidence semantics**;
-- a **first bounded Candidate scope** plan;
-- **token and component contract boundaries**;
-- an **evidence plan** (including the independent review of the CDS-WP-013
-  execution results);
-- still **no broad component work**.
+Documents:
+[Foundation Contract](../docs/foundations/SEMANTIC_STATUS_FOUNDATION_CONTRACT.md) ·
+[Axis Vocabulary](../docs/foundations/STATUS_AXIS_VOCABULARY.md) ·
+[Composition Rules](../docs/foundations/STATUS_COMPOSITION_AND_CONFLICT_RULES.md) ·
+[Communication Contract](../docs/foundations/STATUS_COMMUNICATION_AND_ACCESSIBILITY_CONTRACT.md) ·
+[Token Contract](../docs/foundations/SEMANTIC_STATUS_TOKEN_CONTRACT.md) ·
+[Candidate Plan](../docs/roadmap/FIRST_SEMANTIC_STATUS_CANDIDATE_PLAN.md) ·
+[Readiness Review](../docs/reviews/SEMANTIC_STATUS_FOUNDATION_READINESS_REVIEW.md)
 
-### CDS-WP-014 explicitly establishes none of the following
+## Next work package — CDS-WP-015 (authorized)
 
-- no design values; no Candidate or Stable award; no component implementation; no
-  CoreOps pilot start; no licence; no publication.
+The Semantic Status Foundation Contract is defined (Experimental; no machine-readable
+source yet). The next authorized work package is:
+
+**CDS-WP-015 — Semantic Status Foundation Source Set and Candidate Evidence.**
+
+### Objective of CDS-WP-015
+
+- the **machine-readable Semantic Status source set** (value-neutral roles and
+  identifiers under the CDS Token Format Profile);
+- **positive and negative status validation fixtures** (including conflation,
+  unknown-as-default, and meaning-losing-remapping negatives);
+- **validator execution** with committed expected outcomes and machine-readable
+  evidence;
+- **accessibility and content evidence** preparation (non-visual meaning, DE/EN
+  parity);
+- **Candidate-dossier preparation**;
+- still **no visual values** and **no Candidate without the complete gates**.
+
+### CDS-WP-015 explicitly establishes none of the following
+
+- no visual values; no components; no Candidate or Stable award; no Product
+  Profiles; no CoreOps pilot start; no licence; no publication.
 
 ### Still prohibited in the Pre-Candidate phase
 
 - concrete visual design; selecting colours, typography, icons, logos, or themes,
-- creating real token values or names,
 - implementing components or product code,
 - executing accessibility tests or asserting accessibility evidence (every artifact
   is AE-0),
@@ -352,12 +389,12 @@ independently unreviewed). The next authorized work package is:
 - promoting any artifact to Candidate or Stable,
 - starting the CoreOps pilot,
 - modifying Skill files or consumer repositories,
-- creating a new work-package ID beyond CDS-WP-014 without Human-Maintainer
+- creating a new work-package ID beyond CDS-WP-015 without Human-Maintainer
   approval.
 
 ### Authorization note
 
-CDS-WP-014 is registered as `Next`; its execution requires an explicit work-package
+CDS-WP-015 is registered as `Next`; its execution requires an explicit work-package
 prompt from Nova and Human-Maintainer authorization. Registration is not execution.
 
 ## Related documents

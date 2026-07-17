@@ -5,8 +5,8 @@ must be controlled from the start of the project.
 
 ## Register scope
 
-- Risk range: RISK-001 … RISK-081
-- Number of risks: 81
+- Risk range: RISK-001 … RISK-089
+- Number of risks: 89
 - Phase: Pre-Candidate Operating Enablement (Foundation / Pre-Design closed with notes)
 
 Risks RISK-001 … RISK-005 were registered by CDS-WP-001. Risks
@@ -24,6 +24,8 @@ by CDS-WP-011 alongside the machine-readable source and token format decision. R
 RISK-064 … RISK-072 were registered by CDS-WP-012 alongside the machine-readable source
 bootstrap and validation contract. Risks RISK-073 … RISK-081 were registered by
 CDS-WP-013 alongside the offline token profile validator and fixture harness.
+Risks RISK-082 … RISK-089 were registered by CDS-WP-014 alongside the semantic
+status foundation contract.
 
 ### Finalized risk role model
 
@@ -56,7 +58,7 @@ Full model: [Risk Governance Model](../governance/RISK_GOVERNANCE_MODEL.md).
 | **Accepted** | Consciously accepted with residual effect; requires a review trigger. |
 | **Closed** | No longer relevant, or fully mitigated with evidence. |
 
-**74 of the 81 risks are currently `Monitored`; RISK-040, RISK-044, RISK-066,
+**82 of the 89 risks are currently `Monitored`; RISK-040, RISK-044, RISK-066,
 RISK-067, RISK-068, RISK-069, and RISK-071 are `Mitigating`.** CDS-WP-006 finalized
 the role model; it treated no risk and changed no assessment, because no evidence
 justified a change. CDS-WP-007 added RISK-041 … RISK-048 and likewise treated none.
@@ -70,7 +72,9 @@ added **RISK-064 … RISK-072** (all `Monitored`) and changed no existing status
 CDS-WP-013 added **RISK-073 … RISK-081** (all `Monitored`) and moved **RISK-066,
 RISK-067, RISK-068, RISK-069, and RISK-071 `Monitored → Mitigating`** on the strength
 of the executed offline validator and fixture harness — an executor-produced,
-independently unreviewed evidence basis (DEC-S-103). No description, likelihood, or
+independently unreviewed evidence basis (DEC-S-103). CDS-WP-014 added
+**RISK-082 … RISK-089** (all `Monitored`, semantic-status truthfulness risks) and
+changed no existing status. No description, likelihood, or
 severity was changed for any existing risk, and **no risk was accepted or closed** —
 only the Human Maintainer may do either.
 
@@ -2537,3 +2541,225 @@ Bind every report to `independentReviewState: pending` and an executor-produced 
 class (DEC-S-103); hold that harness success is a successful observation, never a
 passing token artifact or maturity transition (DEC-S-102, DEC-S-104); keep all claim
 language prohibited (DEC-S-044).
+
+---
+
+## RISK-082 — Status-axis conflation
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** High
+- **Initial severity:** High
+
+### Description
+
+Consumers or implementations may collapse condition, severity, confidence,
+freshness, or evidence into a single ambiguous status.
+
+### Impact
+
+A merged status destroys exactly the information the axes protect: unknown has
+nowhere to live and becomes a false green or a false alarm; a claim and a guess
+become indistinguishable. The operator acting on a green that means "we have no
+idea" is the failure the entire foundation exists to prevent (DEC-S-028).
+
+### Mitigation direction
+
+Keep the five axes independent and named (DEC-S-105); prohibit irreversible token
+aggregation ([Token Contract](../foundations/SEMANTIC_STATUS_TOKEN_CONTRACT.md));
+cover conflation with future negative fixtures; treat any collapsing
+transformation as fail-closed (DEC-S-112).
+
+---
+
+## RISK-083 — Unknown-state optimism
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** High
+- **Initial severity:** High
+
+### Description
+
+Unknown or unavailable information may be displayed or interpreted as nominal,
+successful, current, or verified.
+
+### Impact
+
+Silent-positive defaults are the most dangerous truthfulness failure: they are
+invisible precisely when they are wrong, and they train users to trust green
+states that carry no knowledge. Every downstream decision inherits the false
+optimism.
+
+### Mitigation direction
+
+`unknown` is explicit on every axis and never an omitted default (DEC-S-106,
+DEC-S-107); a missing axis fails closed; future fixtures must prove
+unknown-never-validates-as-positive; communication rules require perceivable,
+non-visual unknown language (baseline 7.4).
+
+---
+
+## RISK-084 — Aggregate-status masking
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** High
+
+### Description
+
+A summary status, score, badge, color, or icon may hide material limitations on
+one or more axes.
+
+### Impact
+
+An aggregate that swallows a stale, unverified, or evidence-free qualifier
+converts an honest multi-axis state into an overclaim — the summary becomes the
+lie even though every underlying value is true.
+
+### Mitigation direction
+
+No normative aggregate health score (DEC-S-108); disclosure priority orders
+attention without overriding semantics; summaries must carry material qualifiers
+and offer full five-axis disclosure
+([Communication Contract](../foundations/STATUS_COMMUNICATION_AND_ACCESSIBILITY_CONTRACT.md)).
+
+---
+
+## RISK-085 — Status-combination ambiguity
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** Medium
+
+### Description
+
+Valid but unusual combinations may be treated as contradictions, while actually
+contradictory combinations may pass without rationale.
+
+### Impact
+
+Both directions damage truth: rejecting honest-but-unusual states (nominal with
+stale knowledge) forces false simplification, while accepting unexplained
+contradictions (verified without evidence) lets overclaims through unreviewed.
+
+### Mitigation direction
+
+Explicit review-required combinations with mandatory rationale, and explicit
+fail-closed states — kept distinct (DEC-S-109,
+[Composition Rules](../foundations/STATUS_COMPOSITION_AND_CONFLICT_RULES.md));
+future fixtures exercise both directions.
+
+---
+
+## RISK-086 — Status-localization drift
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** Medium
+
+### Description
+
+Localized labels or descriptions may change or weaken the normative meaning of a
+status value.
+
+### Impact
+
+A DE label that reads `supported` as *geprüft* (verified) or renders `unknown`
+as a neutral positive silently breaks the truthfulness invariants for every
+German-language user while the English contract stays formally intact.
+
+### Mitigation direction
+
+Language-neutral technical IDs separate from localized labels (DEC-S-110);
+DE/EN semantic parity with prohibited contradictory translations; parity review
+as Candidate evidence; label changes never change meaning without a governed
+vocabulary change.
+
+---
+
+## RISK-087 — Visual-only status encoding
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** High
+
+### Description
+
+Status meaning may rely on color, icon, position, shape, or motion without an
+equivalent textual and semantic representation.
+
+### Impact
+
+Meaning that lives only in a visual channel fails assistive technology,
+greyscale documents, and reduced-motion users — and fails silently: the sighted
+majority never notices the loss. This also breaks the non-interactive channels
+architecturally (channel consistency).
+
+### Mitigation direction
+
+Text-first meaning with accessible semantics; visual channels are redundant
+modalities only (DEC-S-111); non-visual perceivability of unknown/freshness/
+confidence is a normative baseline requirement (7.3/7.4); future accessibility
+evidence must cover non-visual expression.
+
+---
+
+## RISK-088 — Consumer status remapping divergence
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** High
+
+### Description
+
+Consumer Extensions or Product Profiles may rename, merge, or remap status
+values in ways that break CDS meaning and evidence traceability.
+
+### Impact
+
+A remapped status severs the traceability chain (which CDS value did this
+represent?) and can invert truthfulness locally — one consumer's "OK" may be
+another's `unknown`. Divergence is invisible at the CDS layer and surfaces as
+inconsistent operator behavior across products.
+
+### Mitigation direction
+
+Meaning-preserving mappings only; approved extension points only; remappings
+with meaning loss fail closed (DEC-S-112, fail-closed state 8); the CDS/consumer
+semantic boundary (CR-035) stays an explicit open question, not a blur zone;
+future CoreOps reconciliation is read-only, revision-bound evidence.
+
+---
+
+## RISK-089 — First-candidate scope expansion
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** Medium
+
+### Description
+
+The initial Semantic Status Foundation Candidate may expand into visual
+foundations, components, Product Profiles, or CoreOps implementation before its
+contract and evidence are ready.
+
+### Impact
+
+Scope creep at the first Candidate would smuggle unreviewed design decisions in
+under the momentum of the status work — precisely the premature design decision
+the phase forbids (RISK-003) — and would dilute the evidence discipline the
+first promotion is meant to establish.
+
+### Mitigation direction
+
+Fixed Candidate scope and exclusions with expansion as a NO-GO trigger
+(DEC-S-113, [Candidate Plan](../roadmap/FIRST_SEMANTIC_STATUS_CANDIDATE_PLAN.md));
+ten cumulative prerequisites (DEC-S-114); visual values enter only through a
+later explicitly authorized design work package.

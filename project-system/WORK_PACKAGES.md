@@ -6,9 +6,9 @@ Controlled work-package roadmap for the Core Design System (CDS).
   Closed with Notes**
 - **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
-  CDS-WP-011, CDS-WP-012, CDS-WP-013
-- **Next work package:** **CDS-WP-014 — Semantic Status Foundation Contract and First
-  Candidate Plan** (authorized as the next work package; not yet executed)
+  CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014
+- **Next work package:** **CDS-WP-015 — Semantic Status Foundation Source Set and
+  Candidate Evidence** (authorized as the next work package; not yet executed)
 
 ## Status values
 
@@ -36,15 +36,16 @@ Controlled work-package roadmap for the Core Design System (CDS).
 | CDS-WP-011 | Machine-Readable Source and Token Format Decision | Completed | CDS-WP-010 |
 | CDS-WP-012 | Machine-Readable Source Bootstrap and Validation Contract | Completed | CDS-WP-011 |
 | CDS-WP-013 | Offline Token Profile Validator and Fixture Harness | Completed | CDS-WP-012 |
-| CDS-WP-014 | Semantic Status Foundation Contract and First Candidate Plan | Next | CDS-WP-013 |
+| CDS-WP-014 | Semantic Status Foundation Contract and First Candidate Plan | Completed | CDS-WP-013 |
+| CDS-WP-015 | Semantic Status Foundation Source Set and Candidate Evidence | Next | CDS-WP-014 |
 
-**CDS-WP-014 is authorized as the next Work Package.** The Foundation is closed with
-notes; the Pre-Candidate Operating Enablement phase is active; the machine-readable source
-format is decided (ADR-0001); the value-neutral bootstrap (ADR-0002) is implemented; and
-the offline validator and fixture harness (ADR-0003) are implemented and executed —
-**Experimental, executor-produced, independently unreviewed; 15/15 expected/actual
-matches**. CDS-WP-014 is registered as `Next` and is not yet executed. No further
-work-package ID is created.
+**CDS-WP-015 is authorized as the next Work Package.** The Foundation is closed with
+notes; the Pre-Candidate Operating Enablement phase is active; the machine-readable
+machinery (ADR-0001…0003) is implemented and executed; and the **Semantic Status
+Foundation Contract is defined** (CDS-WP-014: five axes, 25 values, ten invariants,
+combination/communication/token contracts, first Candidate plan) — **Experimental, no
+Candidate status, no visual value**. CDS-WP-015 is registered as `Next` and is not yet
+executed. No further work-package ID is created.
 
 ## Descriptions
 
@@ -264,13 +265,32 @@ no full-DTCG claim, no Candidate; publication state `Private Development`.**
 
 ### CDS-WP-014 — Semantic Status Foundation Contract and First Candidate Plan
 
+**Status:** Completed
+
+Defined the first concrete CDS design foundation (pending commit): the **Semantic
+Status Foundation Contract** with **five independent axes** (`condition`, `severity`,
+`confidence`, `freshness`, `evidence`), a **fixed 25-value vocabulary** with explicit
+`unknown` on every axis, **ten invariants**, the complete 11-field status object with
+**combination/conflict rules** (6 review-required combinations, 8 fail-closed states,
+disclosure priority, no aggregate score), the **communication/accessibility/
+localization contract** (text-first meaning, DE/EN semantic parity, no single-modality
+encoding), the **value-neutral Semantic Status Token Contract**, the
+**[First Semantic Status Candidate Plan](../docs/roadmap/FIRST_SEMANTIC_STATUS_CANDIDATE_PLAN.md)**
+(8-element package, 10 gated prerequisites — none met), and an executor-produced
+readiness review. Added DEC-S-105…114 and RISK-082…089. **No visual value, no token
+source file, no component, no Candidate/Stable, no claim; WP-013 evidence stays
+independently unreviewed; publication `Private Development`.**
+
+### CDS-WP-015 — Semantic Status Foundation Source Set and Candidate Evidence
+
 **Status:** Next
 
-Will define the semantic status foundation contract (five status axes with
-Unknown/Stale/confidence semantics), a first bounded Candidate scope plan, token and
-component contract boundaries, and an evidence plan. It creates **no design values, no
-broad component work, no Candidate award, and no pilot start**. Not yet executed; begins
-only on an explicit Nova prompt and Human-Maintainer authorization.
+Will implement the machine-readable Semantic Status source set (value-neutral roles
+and identifiers under the CDS Token Format Profile), positive and negative status
+validation fixtures, validator execution with committed expected outcomes,
+accessibility/content evidence preparation, and Candidate-dossier preparation. It
+creates **no visual values and awards no Candidate**. Not yet executed; begins only on
+an explicit Nova prompt and Human-Maintainer authorization.
 
 ## Roadmap evolution
 

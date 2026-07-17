@@ -26,7 +26,7 @@ library, or a design project scoped exclusively to CoreOps.
 - First reference consumer: CoreOps (not the sole design target)
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
-  CDS-WP-011, CDS-WP-012, CDS-WP-013
+  CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014
 - Accessibility support baseline: **A11Y-BL-001 defined** (CDS-WP-010, pending
   commit) — a **test contract, not evidence**; **no test has been run and every
   artifact is AE-0**.
@@ -41,13 +41,21 @@ library, or a design project scoped exclusively to CoreOps.
   outcomes**; 14 fixture digests. **Executor-produced, independently unreviewed
   (DEC-S-103); bounded DTCG V2 coverage — never a full-DTCG statement (DEC-S-098);
   Experimental, no Candidate (DEC-S-104).**
-- Next work package: **CDS-WP-014 — Semantic Status Foundation Contract and First
-  Candidate Plan** (authorized as next; **not yet executed**). It defines the semantic
-  status foundation (five status axes, Unknown/Stale/confidence semantics), a first
-  bounded Candidate scope plan, token/component contract boundaries, and an evidence
-  plan; it creates no design values, Candidate award, broad component work, pilot,
-  licence, or publication. Execution begins only on an explicit Nova prompt and
-  Human-Maintainer authorization.
+- Semantic Status Foundation: **Contract defined** (CDS-WP-014, pending commit) —
+  five independent axes (`condition`/`severity`/`confidence`/`freshness`/`evidence`),
+  a fixed 25-value vocabulary with explicit `unknown`, ten invariants, combination/
+  conflict rules, a text-first communication/accessibility contract, and a
+  value-neutral token contract. **Experimental, no Candidate status (DEC-S-113/114);
+  no visual value, no token source file, no component; the first Candidate is
+  planned and fully gated** — see the
+  [Candidate Plan](docs/roadmap/FIRST_SEMANTIC_STATUS_CANDIDATE_PLAN.md) and the
+  [Foundation Contract](docs/foundations/SEMANTIC_STATUS_FOUNDATION_CONTRACT.md).
+- Next work package: **CDS-WP-015 — Semantic Status Foundation Source Set and
+  Candidate Evidence** (authorized as next; **not yet executed**). It implements the
+  machine-readable Semantic Status source set (value-neutral roles), status
+  validation fixtures, validator execution, and accessibility/content evidence
+  preparation; it creates no visual values and awards no Candidate. Execution begins
+  only on an explicit Nova prompt and Human-Maintainer authorization.
 
 ## Execution environment
 

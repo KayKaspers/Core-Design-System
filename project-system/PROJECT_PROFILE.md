@@ -23,13 +23,13 @@ Pre-Candidate Operating Enablement — **Foundation / Pre-Design: Closed with No
 
 ## Work package status
 
-- Current work package after CDS-WP-013: **CDS-WP-014 — Semantic Status Foundation
-  Contract and First Candidate Plan** (Next; not yet executed)
-- Previous work package: CDS-WP-013 — Offline Token Profile Validator and Fixture
-  Harness (Completed)
+- Current work package after CDS-WP-014: **CDS-WP-015 — Semantic Status Foundation
+  Source Set and Candidate Evidence** (Next; not yet executed)
+- Previous work package: CDS-WP-014 — Semantic Status Foundation Contract and First
+  Candidate Plan (Completed)
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
-  CDS-WP-011, CDS-WP-012, CDS-WP-013
+  CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014
 
 ## Operating enablement status
 
@@ -84,7 +84,7 @@ Documents:
   Report — **not** a W3C Standard)
 - Canonical source syntax: **strict JSON (RFC 8259), `.tokens.json`**
 - Schema foundation: **JSON Schema Draft 2020-12** (CDS-owned profile contracts
-  created by CDS-WP-012 — see the bootstrap status below; no validator)
+  created by CDS-WP-012; executed by the CDS-WP-013 offline validator — see below)
 - Extension namespace: **`io.github.kaykaspers.cds`** (single reserved root within DTCG
   `$extensions`; foreign extensions preserved, not automatically normative)
 - Source-set layers: Reference · Semantic · Component · Product Profile; channel
@@ -92,8 +92,9 @@ Documents:
 - Validation layers: **4** (V1 Syntax · V2 DTCG · V3 CDS Profile · V4 Semantic/
   Governance)
 - ADR count: **3** (ADR-0001, ADR-0002, ADR-0003)
-- **No token value and no validator implemented. The schema and resolver contracts
-  created by CDS-WP-012 are Experimental and carry no Candidate/Stable status;
+- **No token value implemented. The schema and resolver contracts created by
+  CDS-WP-012 are Experimental and carry no Candidate/Stable status; the offline
+  validator exists since CDS-WP-013 (Experimental, independently unreviewed);
   publication state `Private Development`.**
 
 Documents:
@@ -113,12 +114,15 @@ Documents:
 - Token Document Schema: **Present** · Source-Set Manifest Schema: **Present** ·
   Resolver Schema: **Present** · Validation Case Schema: **Present** (4 CDS-owned JSON
   Schema Draft 2020-12 contracts; stable `tag:` `$id`s; local `$ref`; offline)
-- Schema execution: **Not assessed** — no local JSON Schema 2020-12 validator was
-  available and none was installed; validator execution is CDS-WP-013
+- Schema execution: **Executed by the CDS-WP-013 offline validator** (all five
+  schemas pass `check_schema`; 15/15 harness matches — executor-produced,
+  independently unreviewed; the WP-012-era `Not assessed` state is superseded)
 - Positive fixture count: **6** · Negative fixture file count: **9** · Validation case
   count: **15** (VAL-CASE-001…015); every fixture covered
 - Deterministic serialization: **RFC 8785 (JCS)** · Digest: **SHA-256** (`sha256:`
-  lowercase hex); no canonicalizer implemented; digests `Not computed`
+  lowercase hex); computed by the CDS-WP-013 validator for the 14 V1-parsable
+  fixtures (evidence artifacts; fixtures' internal `digestState` intentionally
+  unchanged)
 - Extension namespace: `io.github.kaykaspers.cds` (payload requires `profileVersion`)
 - **No real token/design value, transformer, or build; no Candidate/Stable artifact;
   publication state `Private Development`.**
@@ -153,6 +157,35 @@ Documents:
 [ADR-0003](../docs/decisions/ADR-0003-OFFLINE_TOKEN_VALIDATOR_IMPLEMENTATION_STACK.md) ·
 [Dependency Source Register](../docs/research/OFFLINE_VALIDATOR_DEPENDENCY_SOURCE_REGISTER.md) ·
 [Stack Evaluation](../docs/research/OFFLINE_VALIDATOR_STACK_EVALUATION.md)
+
+## Semantic Status Foundation status (CDS-WP-014)
+
+- Semantic Status Foundation: **Contract defined** (CDS-WP-014, 2026-07-17; pending
+  Human-Maintainer commit) — **Experimental, not Candidate** (DEC-S-113, DEC-S-114)
+- Status axis count: **5** (`condition` · `severity` · `confidence` · `freshness` ·
+  `evidence`) · Status value count: **25** (5 per axis; `unknown` explicit on every
+  axis) · Status invariant count: **10**
+- Combination model: 11-field complete status object · 6 review-required
+  combinations · 8 fail-closed states · 6-level disclosure priority · **no aggregate
+  health score**
+- Communication: text-first accessible meaning; no single-modality encoding; DE/EN
+  semantic parity; technical IDs language-neutral
+- Token contract: value-neutral roles only — **no token source file, no token name,
+  no value, no component**
+- Candidate status: **Not Candidate** — first Candidate planned per the
+  [Candidate Plan](../docs/roadmap/FIRST_SEMANTIC_STATUS_CANDIDATE_PLAN.md)
+  (10 prerequisites, none met)
+- Validator independent review: **Pending** (WP-013 evidence executor-produced)
+- **Publication state `Private Development`; current claims: None.**
+
+Documents:
+[Foundation Contract](../docs/foundations/SEMANTIC_STATUS_FOUNDATION_CONTRACT.md) ·
+[Axis Vocabulary](../docs/foundations/STATUS_AXIS_VOCABULARY.md) ·
+[Composition Rules](../docs/foundations/STATUS_COMPOSITION_AND_CONFLICT_RULES.md) ·
+[Communication Contract](../docs/foundations/STATUS_COMMUNICATION_AND_ACCESSIBILITY_CONTRACT.md) ·
+[Token Contract](../docs/foundations/SEMANTIC_STATUS_TOKEN_CONTRACT.md) ·
+[Candidate Plan](../docs/roadmap/FIRST_SEMANTIC_STATUS_CANDIDATE_PLAN.md) ·
+[Readiness Review](../docs/reviews/SEMANTIC_STATUS_FOUNDATION_READINESS_REVIEW.md)
 
 Documents:
 [Machine-Readable Validation Contract](../docs/architecture/MACHINE_READABLE_VALIDATION_CONTRACT.md) ·
@@ -422,15 +455,15 @@ pilot contract is defined in CDS-WP-004.
   baseline and evidence decisions (CDS-WP-010), 10 machine-readable source and
   token format decisions (CDS-WP-011, DEC-S-073 … DEC-S-082), 10 machine-readable
   bootstrap and validation decisions (CDS-WP-012, DEC-S-083 … DEC-S-092), and
-  **12 offline validator implementation decisions (CDS-WP-013, DEC-S-093 …
-  DEC-S-104)**. DEC-S-001 … DEC-S-092 unchanged by CDS-WP-013. **ADRs: 3 (ADR-0001,
+  12 offline validator implementation decisions (CDS-WP-013, DEC-S-093 …
+  DEC-S-104), and **10 semantic status foundation decisions (CDS-WP-014, DEC-S-105 …
+  DEC-S-114)**. DEC-S-001 … DEC-S-104 unchanged by CDS-WP-014. **ADRs: 3 (ADR-0001,
   ADR-0002, ADR-0003).**
-- Risks: RISK-001 … RISK-081 (81) — **74 `Monitored`; RISK-040, RISK-044, RISK-066,
+- Risks: RISK-001 … RISK-089 (89) — **82 `Monitored`; RISK-040, RISK-044, RISK-066,
   RISK-067, RISK-068, RISK-069, and RISK-071 `Mitigating`**; **risk owner model
-  finalized** by CDS-WP-006; RISK-064 … RISK-072 added by CDS-WP-012;
-  **RISK-073 … RISK-081 added by CDS-WP-013**, which also moved
-  RISK-066/067/068/069/071 to `Mitigating` on executed, executor-produced harness
-  evidence. No risk accepted or closed.
+  finalized** by CDS-WP-006; RISK-073 … RISK-081 added by CDS-WP-013;
+  **RISK-082 … RISK-089 added by CDS-WP-014** (all `Monitored`; no existing status
+  changed). No risk accepted or closed.
 
 ## Intentionally open decision areas
 

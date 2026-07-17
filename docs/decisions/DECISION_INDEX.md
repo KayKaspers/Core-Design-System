@@ -11,8 +11,8 @@ authorized work packages.
 
 ## Register scope
 
-- Decision range: DEC-S-001 … DEC-S-104
-- Number of decisions: 104
+- Decision range: DEC-S-001 … DEC-S-114
+- Number of decisions: 114
 - Decision record format: index entries, plus ADR files where a decision warrants an
   Architecture Decision Record. **ADR range: ADR-0001 … ADR-0003 (3 ADRs).**
 - [ADR-0001 — Machine-Readable Token Source Format](ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)
@@ -37,6 +37,7 @@ authorized work packages.
 | Machine-readable source and token format decision | DEC-S-073 … DEC-S-082 | CDS-WP-011 | DTCG 2025.10 as external format basis, pinned-stable-only, strict JSON `.tokens.json`, CDS profile over DTCG, JSON Schema 2020-12 foundation, fail-closed references, source-set layers, versioned provenance identity, machine-validatable naming, and governed format upgrades (ADR-0001). |
 | Machine-readable bootstrap and validation decision | DEC-S-083 … DEC-S-092 | CDS-WP-012 | CDS-owned schema + fixture bootstrap, `io.github.kaykaspers.cds` payload, strict-JSON manifests and resolvers, synthetic non-normative fixtures, duplicate-key prohibition, bound V1–V4 validation cases, RFC 8785 + SHA-256 digests (ADR-0002), fail-closed local references, and Experimental-not-Candidate status. |
 | Offline validator implementation decision | DEC-S-093 … DEC-S-104 | CDS-WP-013 | Pinned Python/jsonschema/rfc8785 stack, the `python -m tools.cds_validator` CLI contract, the single duplicate-key loader, the local-only schema registry, separated V1–V4 states, bounded DTCG coverage, declared-graph enforcement, digest boundaries, the CDS-owned result schema, expected/actual harness semantics, executor-produced evidence, and the Candidate gate (ADR-0003). |
+| Semantic status foundation decision | DEC-S-105 … DEC-S-114 | CDS-WP-014 | Five independent status axes with a fixed 25-value vocabulary and explicit `unknown`, no degraded-knowledge-as-success, no aggregate health score, explicit combination/conflict rules, language-neutral IDs with meaning-preserving localization, text-first accessible meaning, truth-preserving downstream mappings, and the gated first Candidate plan (no promotion). |
 
 None of these types is an implementation decision. Logical architecture decisions
 define structure, responsibility, and flow — they select no technology, format,
@@ -3424,3 +3425,237 @@ Maintainer approves the maturity transition.
 - A green harness alone confers nothing (RISK-081); the maturity gate remains a
   Human-Maintainer decision on top of independent review and Nova review (DEC-S-036,
   DEC-S-092).
+
+---
+
+## DEC-S-105 — Status semantics consist of five independent axes
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Semantic status foundation decision
+- **Work package:** CDS-WP-014
+
+### Decision
+
+CDS status semantics consist of five independent axes:
+
+- Operational Condition,
+- Severity and Impact,
+- Knowledge Confidence,
+- Freshness,
+- Evidence Availability.
+
+No axis substitutes for another.
+
+### Rationale
+
+The architecture separates these axes because merging them destroys exactly the
+information that matters most — an unknown collapsed into a health value becomes a
+false green or a false alarm (DEC-S-028, CR-006/CR-007). The
+[Semantic Status Foundation Contract](../foundations/SEMANTIC_STATUS_FOUNDATION_CONTRACT.md)
+makes the separation a concrete, named contract.
+
+### Consequences
+
+- Five technical axis IDs (`condition`, `severity`, `confidence`, `freshness`,
+  `evidence`) become the stable semantic backbone for tokens, components, and
+  channels (RISK-082 controlled).
+
+---
+
+## DEC-S-106 — Each axis uses the fixed initial five-value vocabulary; unknown is explicit
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Semantic status foundation decision
+- **Work package:** CDS-WP-014
+
+### Decision
+
+Each status axis uses the fixed initial five-value vocabulary defined by the
+Semantic Status Foundation Contract.
+
+Unknown is an explicit value on every axis and is never an omitted default.
+
+### Consequences
+
+- Exactly 25 normative axis values ([Vocabulary](../foundations/STATUS_AXIS_VOCABULARY.md));
+  vocabulary changes are governed, Elevated changes (DEC-S-082 applied).
+- A missing axis is a fail-closed state, never an implicit positive.
+
+---
+
+## DEC-S-107 — Degraded knowledge is never represented as success
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Semantic status foundation decision
+- **Work package:** CDS-WP-014
+
+### Decision
+
+Unknown, stale, expired, unverified, partial, or unavailable information must not
+be represented as nominal, current, verified, complete, healthy, or successful.
+
+### Rationale
+
+This operationalizes architecture invariants 7–9 (Unknown ≠ Healthy, Stale ≠
+Current, Unverified ≠ Verified) at the vocabulary level, backed by the strongest
+multi-consumer evidence CDS has (CR-006, CR-007).
+
+### Consequences
+
+- Fail-closed conditions 3–5 of the
+  [Composition Rules](../foundations/STATUS_COMPOSITION_AND_CONFLICT_RULES.md);
+  future validator fixtures must prove the prohibition (RISK-083).
+
+---
+
+## DEC-S-108 — No normative aggregate health score
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Semantic status foundation decision
+- **Work package:** CDS-WP-014
+
+### Decision
+
+CDS does not use a normative aggregate health score that hides the five status
+axes.
+
+Summaries may prioritize disclosure but must preserve material qualifiers.
+
+### Consequences
+
+- The disclosure priority is an attention ordering, never a semantic override;
+  prohibited unqualified claims are named in the
+  [Communication Contract](../foundations/STATUS_COMMUNICATION_AND_ACCESSIBILITY_CONTRACT.md)
+  (RISK-084 controlled).
+
+---
+
+## DEC-S-109 — Combinations stay independent under explicit conflict rules
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Semantic status foundation decision
+- **Work package:** CDS-WP-014
+
+### Decision
+
+Status combinations remain independently represented and are subject to explicit
+conflict, rationale, evidence, and provenance rules.
+
+Contradictory or insufficiently explained combinations fail closed.
+
+### Consequences
+
+- Six review-required combinations and eight fail-closed states are the mandated
+  minimum ([Composition Rules](../foundations/STATUS_COMPOSITION_AND_CONFLICT_RULES.md));
+  RISK-085 is controlled by treating unusual-but-honest combinations as
+  representable with rationale.
+
+---
+
+## DEC-S-110 — Technical IDs are language-neutral; labels are localized separately
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Semantic status foundation decision
+- **Work package:** CDS-WP-014
+
+### Decision
+
+Technical status identifiers are stable and language-neutral.
+
+Human-facing labels and descriptions are localized separately and must preserve
+the normative semantic meaning.
+
+### Consequences
+
+- DE/EN semantic parity with no contradictory translations (RISK-086); label
+  length flexibility; renames are migration events (DEC-S-082).
+
+---
+
+## DEC-S-111 — Status meaning is textual and accessible, never single-modality
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Semantic status foundation decision
+- **Work package:** CDS-WP-014
+
+### Decision
+
+Status meaning must be available through text and accessible semantics and must
+not rely solely on color, iconography, position, shape, or motion.
+
+### Consequences
+
+- Non-visual perceivability of unknown/freshness/confidence (baseline 7.4)
+  becomes a contract obligation on every future representation (RISK-087);
+  reduced-motion never removes meaning.
+
+---
+
+## DEC-S-112 — Downstream artifacts preserve axis distinction and truthfulness
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Semantic status foundation decision
+- **Work package:** CDS-WP-014
+
+### Decision
+
+Channel outputs, Component Contracts, Product Profiles, and Consumer Extensions
+must preserve the semantic distinction and truthfulness of every status axis.
+
+### Consequences
+
+- Meaning-losing remappings fail closed (fail-closed state 8); Product Profiles
+  touch approved extension points only; consumer remapping divergence is a
+  registered risk (RISK-088).
+
+---
+
+## DEC-S-113 — The first planned Candidate is the Semantic Status Foundation
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Semantic status foundation decision
+- **Work package:** CDS-WP-014
+
+### Decision
+
+The first planned CDS design Candidate is the Semantic Status Foundation Contract
+and its future machine-readable Semantic Source Set.
+
+The planned Candidate excludes visual values, product integration, Product
+Profiles, and Stable or conformance claims.
+
+### Consequences
+
+- The Candidate Package, scope, and exclusions are fixed in the
+  [First Semantic Status Candidate Plan](../roadmap/FIRST_SEMANTIC_STATUS_CANDIDATE_PLAN.md);
+  scope expansion before readiness is a NO-GO trigger (RISK-089).
+
+---
+
+## DEC-S-114 — Candidate promotion is gated on complete evidence and approval
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Semantic status foundation decision
+- **Work package:** CDS-WP-014
+
+### Decision
+
+The Semantic Status Foundation cannot become Candidate until its machine-readable
+source, validation evidence, accessibility and content evidence, independent
+Evidence Review, Nova review, and Human-Maintainer approval are complete.
+
+### Consequences
+
+- Ten cumulative prerequisites, none met or waived by CDS-WP-014; the WP-013
+  harness result is executor-produced observation, never Candidate evidence
+  (DEC-S-104 applied to the first design foundation).

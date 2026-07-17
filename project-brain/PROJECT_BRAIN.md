@@ -54,26 +54,25 @@ areas today.
 Governance foundation established. No final design or technology decisions are
 approved.
 
-- Decisions: DEC-S-001 … DEC-S-104 (104) — 6 foundation + 6 scope + 8 consumer
+- Decisions: DEC-S-001 … DEC-S-114 (114) — 6 foundation + 6 scope + 8 consumer
   and pilot scope + 12 logical architecture + 16 governance + 12 accessibility +
   4 operating enablement and pre-candidate + 8 accessibility support baseline and
   evidence + 10 machine-readable source and token format + 10 machine-readable
-  bootstrap and validation + 12 offline validator implementation decisions ·
-  **ADRs: 3 (ADR-0001, ADR-0002, ADR-0003)**
-- Risks: RISK-001 … RISK-081 (81) — **74 Monitored; RISK-040, RISK-044, RISK-066,
+  bootstrap and validation + 12 offline validator implementation + 10 semantic
+  status foundation decisions · **ADRs: 3 (ADR-0001, ADR-0002, ADR-0003)**
+- Risks: RISK-001 … RISK-089 (89) — **82 Monitored; RISK-040, RISK-044, RISK-066,
   RISK-067, RISK-068, RISK-069, RISK-071 Mitigating**; **owner model finalized**;
   no risk accepted or closed
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
-  CDS-WP-011, CDS-WP-012, CDS-WP-013
-- Next work package: **CDS-WP-014 — Semantic Status Foundation Contract and First
-  Candidate Plan** (authorized as next; not yet executed). Foundation **Closed with
-  Notes**; operating enablement in place; accessibility support baseline
-  **A11Y-BL-001** defined (CDS-WP-010); machine-readable format decided
-  (CDS-WP-011, ADR-0001); machine-readable bootstrap implemented (CDS-WP-012,
-  Experimental, ADR-0002); offline validator implemented and executed
-  (CDS-WP-013, Experimental, ADR-0003, pending commit, 15/15 expected/actual
-  matches, executor-produced and independently unreviewed)
+  CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014
+- Next work package: **CDS-WP-015 — Semantic Status Foundation Source Set and
+  Candidate Evidence** (authorized as next; not yet executed). Foundation **Closed
+  with Notes**; machine-readable format decided (CDS-WP-011, ADR-0001);
+  machine-readable bootstrap implemented (CDS-WP-012, ADR-0002); offline validator
+  implemented and executed (CDS-WP-013, ADR-0003, 15/15 matches, executor-produced
+  and independently unreviewed); **Semantic Status Foundation Contract defined**
+  (CDS-WP-014, Experimental, pending commit, no Candidate status, no visual value)
 
 ## Registered scope
 
@@ -728,15 +727,38 @@ independently unreviewed, no design value**:
 - Added DEC-S-093…104, RISK-073…081; RISK-066/067/068/069/071 → `Mitigating`;
   created ADR-0003. **No full-DTCG statement, no Candidate (DEC-S-104).**
 
+## Semantic Status Foundation (CDS-WP-014)
+
+Defined the first concrete design foundation (pending commit) — **meaning before
+appearance, no visual value, no Candidate**:
+
+- **Five independent axes** with stable IDs (`condition` · `severity` ·
+  `confidence` · `freshness` · `evidence`) and a **fixed 25-value vocabulary**
+  (5 per axis; `unknown` explicit everywhere, never an omitted default —
+  DEC-S-105…106).
+- **Ten invariants** incl. no aggregate health score and
+  degraded-knowledge-never-as-success (DEC-S-107…108); **11-field status object**,
+  **6 review-required combinations**, **8 fail-closed states**, 6-level disclosure
+  priority (DEC-S-109).
+- **Communication contract:** text-first accessible meaning, no single-modality
+  encoding, DE/EN semantic parity, language-neutral IDs (DEC-S-110…111);
+  downstream mappings preserve axis distinction and truth (DEC-S-112).
+- **Semantic Status Token Contract** (roles only — no token file, no name, no
+  value) and the **First Semantic Status Candidate Plan** (8-element package,
+  10 unmet prerequisites; promotion gated — DEC-S-113…114). Readiness review is
+  executor-produced; Candidate criterion honestly `Not met`.
+- Added DEC-S-105…114 and RISK-082…089 (all Monitored; no existing status
+  changed).
+
 ## Next step
 
-**CDS-WP-014 — Semantic Status Foundation Contract and First Candidate Plan**
-(authorized as next; not yet executed): the semantic status foundation (five status
-axes; Unknown/Stale/confidence semantics), a first bounded Candidate scope plan,
-token/component contract boundaries, and an evidence plan (incl. independent review
-of the CDS-WP-013 results). **Still no design values, no Candidate award, no broad
-component work, no pilot.** Execution begins only on an explicit Nova prompt and
-Human-Maintainer authorization.
+**CDS-WP-015 — Semantic Status Foundation Source Set and Candidate Evidence**
+(authorized as next; not yet executed): the machine-readable Semantic Status
+source set (value-neutral roles/identifiers), positive and negative status
+fixtures, validator execution with committed expected outcomes, accessibility/
+content evidence preparation, and Candidate-dossier preparation. **Still no visual
+values, no Candidate award, no component work, no pilot.** Execution begins only on
+an explicit Nova prompt and Human-Maintainer authorization.
 
 ## Related documents
 
@@ -761,6 +783,7 @@ Human-Maintainer authorization.
 - [CDS-WP-011 Machine-Readable Source and Token Format Notes](CDS_WP_011_MACHINE_READABLE_SOURCE_AND_TOKEN_FORMAT_NOTES.md)
 - [CDS-WP-012 Machine-Readable Bootstrap and Validation Notes](CDS_WP_012_MACHINE_READABLE_BOOTSTRAP_AND_VALIDATION_NOTES.md)
 - [CDS-WP-013 Offline Validator and Fixture Harness Notes](CDS_WP_013_OFFLINE_VALIDATOR_AND_FIXTURE_HARNESS_NOTES.md)
+- [CDS-WP-014 Semantic Status Foundation Notes](CDS_WP_014_SEMANTIC_STATUS_FOUNDATION_NOTES.md)
 - [Foundation Milestone Review](../docs/reviews/FOUNDATION_MILESTONE_REVIEW.md)
 - [Foundation Closure Record](../docs/governance/FOUNDATION_CLOSURE_RECORD.md)
 - [Accessibility Support Baseline](../docs/governance/ACCESSIBILITY_SUPPORT_BASELINE.md)
