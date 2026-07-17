@@ -1,0 +1,20 @@
+{
+  "$description": "NEGATIVE FIXTURE (part A of a pair). Intentionally invalid for CDS: forms a reference cycle with circular-reference-b. Primary failure: reference cycle (V2).",
+  "$extensions": {
+    "io.github.kaykaspers.cds": {
+      "profileVersion": "1",
+      "sourceSetId": "fixture/negative-cycle-a",
+      "layer": "semantic",
+      "dtcgReportVersion": "2025.10",
+      "sourceRevision": "fixture-rev-0001-synthetic",
+      "testOnly": true,
+      "nonNormative": true
+    }
+  },
+  "cycle-a": {
+    "token": {
+      "$type": "number",
+      "$value": "{cycle-b.token}"
+    }
+  }
+}

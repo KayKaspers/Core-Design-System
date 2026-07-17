@@ -1,0 +1,28 @@
+{
+  "$description": "Synthetic reference-layer source set. TEST ONLY, NON-NORMATIVE. All values are neutral placeholders and are NOT CDS design decisions.",
+  "$extensions": {
+    "io.github.kaykaspers.cds": {
+      "profileVersion": "1",
+      "sourceSetId": "fixture/reference",
+      "layer": "reference",
+      "dtcgReportVersion": "2025.10",
+      "sourceRevision": "fixture-rev-0001-synthetic",
+      "manifestRef": "source-set-manifest.source-set.json",
+      "testOnly": true,
+      "nonNormative": true,
+      "maturityState": "Experimental",
+      "approvalState": "Unapproved"
+    }
+  },
+  "test-primitive": {
+    "$description": "Synthetic reference group; placeholder primitives only.",
+    "alpha": {
+      "$type": "number",
+      "$value": 0
+    },
+    "beta": {
+      "$type": "number",
+      "$value": 1
+    }
+  }
+}

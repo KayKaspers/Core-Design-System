@@ -1,0 +1,28 @@
+{
+  "$description": "Synthetic semantic-layer source set. TEST ONLY, NON-NORMATIVE. References reference-layer tokens only; introduces no raw value.",
+  "$extensions": {
+    "io.github.kaykaspers.cds": {
+      "profileVersion": "1",
+      "sourceSetId": "fixture/semantic",
+      "layer": "semantic",
+      "dtcgReportVersion": "2025.10",
+      "sourceRevision": "fixture-rev-0001-synthetic",
+      "manifestRef": "source-set-manifest.source-set.json",
+      "testOnly": true,
+      "nonNormative": true,
+      "maturityState": "Experimental",
+      "approvalState": "Unapproved"
+    }
+  },
+  "test-role": {
+    "$description": "Synthetic semantic group; each token references a reference token via {group.token}.",
+    "primary": {
+      "$type": "number",
+      "$value": "{test-primitive.alpha}"
+    },
+    "secondary": {
+      "$type": "number",
+      "$value": "{test-primitive.beta}"
+    }
+  }
+}

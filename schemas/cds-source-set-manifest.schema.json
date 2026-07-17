@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tag:github.com,2026:KayKaspers/Core-Design-System/schema/cds-source-set-manifest/1",
+  "title": "CDS Source-Set Manifest (v1)",
+  "description": "Structural JSON Schema for a CDS Source-Set Manifest (strict JSON, .source-set.json — a CDS-owned extension, not a DTCG extension). Declares source-set identity, layer, local path, dependency graph, revisions, versions, maturity, approval, provenance, and digest state. It does NOT verify dependency-direction correctness, cross-file resolvability, or semantic/governance validity (V3/V4). Non-normative structural contract.",
+  "type": "object",
+  "required": [
+    "manifestVersion",
+    "profileVersion",
+    "dtcgReportVersion",
+    "manifestId",
+    "sourceRevision",
+    "maturityState",
+    "approvalState",
+    "ownerRole",
+    "sourceSets",
+    "dependencyGraph",
+    "resolverDocuments",
+    "productProfileBoundary",
+    "provenanceState",
+    "digestState"
+  ],
+  "properties": {
+    "manifestVersion": { "type": "string", "const": "1" },
+    "profileVersion": { "type": "string", "const": "1" },
+    "dtcgReportVersion": { "type": "string", "const": "2025.10" },
+    "manifestId": { "$ref": "#/$defs/sourceSetId" },
+    "sourceRevision": { "type": "string", "minLength": 1 },
+    "maturityState": { "$ref": "#/$defs/maturityState" },
+    "approvalState": { "$ref": "#/$defs/approvalState" },
+    "ownerRole": { "type": "string", "minLength": 1 },
+    "testOnly": { "type": "boolean" },
+    "nonNormative": { "type": "boolean" },
+    "sourceSets": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/sourceSetEntry" }
+    },
+    "dependencyGraph": {
+      "type": "object",
+      "description": "sourceSetId -> array of dependency sourceSetIds. Must be consistent with each entry's dependencies (V3 cross-check). Backward/cyclic direction fails closed at V3.",
+      "patternProperties": {
+        "^[a-z][a-z0-9-]*(?:/[a-z][a-z0-9-]*)*$": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/sourceSetId" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "resolverDocuments": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/localRef" }
+    },
+    "productProfileBoundary": {
+      "type": "object",
+      "description": "Approved extension points for product-profile source sets. An empty list means no approved override points.",
+      "required": ["approvedExtensionPoints"],
+      "properties": {
+        "approvedExtensionPoints": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "provenanceState": { "$ref": "#/$defs/provenanceState" },
+    "digestState": { "$ref": "#/$defs/digestState" }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "sourceSetId": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*(?:/[a-z][a-z0-9-]*)*$"
+    },
+    "localRef": {
+      "type": "string",
+      "pattern": "^(?!https?:|file:|//|\\\\).+$",
+      "description": "Local / relative path only; no network scheme, no absolute UNC path (DEC-S-085)."
+    },
+    "layer": {
+      "type": "string",
+      "enum": ["reference", "semantic", "component", "product-profile"]
+    },
+    "maturityState": {
+      "type": "string",
+      "enum": ["Proposed", "Exploratory", "Experimental", "Candidate", "Stable", "Deprecated", "Removed"]
+    },
+    "approvalState": {
+      "type": "string",
+      "enum": ["Unapproved", "Proposed", "Approved"]
+    },
+    "provenanceState": {
+      "type": "string",
+      "enum": ["Bound", "Incomplete", "Unknown"]
+    },
+    "digestState": {
+      "type": "object",
+      "required": ["status"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["Not computed – validator implementation pending", "Computed"]
+        },
+        "canonicalizationMethod": { "type": "string" },
+        "digestAlgorithm": { "type": "string" },
+        "contentDigest": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "sourceSetEntry": {
+      "type": "object",
+      "required": [
+        "sourceSetId",
+        "path",
+        "layer",
+        "dependencies",
+        "sourceRevision",
+        "expectedProfileVersion",
+        "expectedDtcgVersion",
+        "maturityState",
+        "approvalState"
+      ],
+      "properties": {
+        "sourceSetId": { "$ref": "#/$defs/sourceSetId" },
+        "path": { "$ref": "#/$defs/localRef" },
+        "layer": { "$ref": "#/$defs/layer" },
+        "dependencies": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/sourceSetId" }
+        },
+        "sourceRevision": { "type": "string", "minLength": 1 },
+        "expectedProfileVersion": { "type": "string", "const": "1" },
+        "expectedDtcgVersion": { "type": "string", "const": "2025.10" },
+        "maturityState": { "$ref": "#/$defs/maturityState" },
+        "approvalState": { "$ref": "#/$defs/approvalState" },
+        "approvedExtensionPoint": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -4,12 +4,13 @@
   Closed with Notes**
 - **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
-  CDS-WP-011
-- **Next work package:** **CDS-WP-012 — Machine-Readable Source Bootstrap and
-  Validation Contract** (authorized as next; not yet executed). The Foundation is
-  closed with notes; operating enablement is in place; the accessibility support
-  baseline (A11Y-BL-001) is defined; and the machine-readable source format is decided
-  (DTCG 2025.10-based CDS profile, ADR-0001, pending commit; not implemented).
+  CDS-WP-011, CDS-WP-012
+- **Next work package:** **CDS-WP-013 — Offline Token Profile Validator and Fixture
+  Harness** (authorized as next; not yet executed). The Foundation is closed with notes;
+  operating enablement is in place; the accessibility support baseline (A11Y-BL-001) is
+  defined; the machine-readable source format is decided (ADR-0001); and the
+  value-neutral bootstrap (4 schemas, 15 fixtures, V1–V4 contract, RFC 8785/SHA-256
+  serialization, ADR-0002) is implemented but Experimental and not executed.
 
 ## Status of completed work packages
 
@@ -254,30 +255,55 @@ Documents:
 [Source Register](../docs/research/TOKEN_FORMAT_SOURCE_REGISTER.md) ·
 [Implementation Plan](../docs/roadmap/MACHINE_READABLE_SOURCE_IMPLEMENTATION_PLAN.md)
 
-## Next work package — CDS-WP-012 (authorized)
+### CDS-WP-012 — Machine-Readable Source Bootstrap and Validation Contract — Completed
 
-The machine-readable source format is decided (ADR-0001 accepted upon commit; not
-implemented). The next authorized work package is:
+Implemented the value-neutral machine-readable bootstrap without any design value or
+productive validator:
 
-**CDS-WP-012 — Machine-Readable Source Bootstrap and Validation Contract.**
+- **Four CDS-owned JSON Schema 2020-12 contracts** (token document, source-set manifest,
+  resolver document, validation case) with stable `tag:` `$id`s, local `$ref`, offline.
+- **`io.github.kaykaspers.cds` extension payload** requiring `profileVersion` and
+  source-set identity; foreign extensions preserved, not automatically normative.
+- **6 synthetic positive + 9 synthetic negative fixtures** (testOnly / nonNormative;
+  `fixture/` IDs); a **15-case validation-case matrix** binding every fixture to expected
+  V1–V4 outcomes.
+- An explicit **V1–V4 Validation Contract** (duplicate-key fails V1; no aggregate score;
+  a schema pass proves no higher layer) and the **RFC 8785 (JCS) + SHA-256** deterministic
+  serialization decision (**ADR-0002**).
 
-### Objective of CDS-WP-012
+Added DEC-S-083…092 and RISK-064…072; created ADR-0002. **No real token/design value, no
+productive validator/canonicalizer/transformer/build; formal schema execution `Not
+assessed` (no local validator available, none installed); Experimental, not Candidate;
+publication `Private Development`.** No Git write action was performed.
 
-- a **CDS profile JSON Schema** and a **source-set manifest schema**;
-- a **minimal value-neutral fixture set**;
-- **positive and negative validation fixtures**;
-- **reference and cycle tests**;
-- the **layer-dependency validation contract**;
-- the **offline-validation boundary**;
-- the **deterministic-serialization decision** (e.g. RFC 8785 or an alternative);
-- **provenance evidence**.
+Documents:
+[Validation Contract](../docs/architecture/MACHINE_READABLE_VALIDATION_CONTRACT.md) ·
+[Serialization/Digest Model](../docs/architecture/DETERMINISTIC_SERIALIZATION_AND_DIGEST_MODEL.md) ·
+[ADR-0002](../docs/decisions/ADR-0002-DETERMINISTIC_JSON_SERIALIZATION.md) ·
+[Validation Cases](../tests/fixtures/machine-readable/VALIDATION_CASES.json)
 
-### CDS-WP-012 explicitly establishes none of the following
+## Next work package — CDS-WP-013 (authorized)
 
-- no real design values (colours, typography, spacing, sizes, token names);
-- no Candidate or Stable artifact;
-- no component work;
-- no CoreOps pilot start; no licence; no publication.
+The value-neutral bootstrap is defined (Experimental; not executed by a validator). The
+next authorized work package is:
+
+**CDS-WP-013 — Offline Token Profile Validator and Fixture Harness.**
+
+### Objective of CDS-WP-013
+
+- an **offline validator architecture**;
+- **JSON parsing with duplicate-key detection**;
+- **V1 validation**; the **V2 DTCG validation boundary**; **V3 CDS schema and profile
+  validation**; the **V4 governance hook contract**;
+- a **fixture harness** executing the validation cases;
+- **RFC 8785 canonicalization** and **SHA-256 digest generation**;
+- **machine-readable validation results**;
+- an **independent evidence-review boundary**.
+
+### CDS-WP-013 explicitly establishes none of the following
+
+- no design values; no Candidate or Stable artifact; no component work; no CoreOps pilot
+  start; no licence; no publication.
 
 ### Still prohibited in the Pre-Candidate phase
 
@@ -291,12 +317,12 @@ implemented). The next authorized work package is:
 - promoting any artifact to Candidate or Stable,
 - starting the CoreOps pilot,
 - modifying Skill files or consumer repositories,
-- creating a new work-package ID beyond CDS-WP-012 without Human-Maintainer
+- creating a new work-package ID beyond CDS-WP-013 without Human-Maintainer
   approval.
 
 ### Authorization note
 
-CDS-WP-012 is registered as `Next`; its execution requires an explicit work-package
+CDS-WP-013 is registered as `Next`; its execution requires an explicit work-package
 prompt from Nova and Human-Maintainer authorization. Registration is not execution.
 
 ## Related documents

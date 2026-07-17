@@ -1,0 +1,73 @@
+{
+  "manifestVersion": "1",
+  "profileVersion": "1",
+  "dtcgReportVersion": "2025.10",
+  "manifestId": "fixture/manifest-default",
+  "sourceRevision": "fixture-rev-0001-synthetic",
+  "maturityState": "Experimental",
+  "approvalState": "Unapproved",
+  "ownerRole": "Claude (scoped executor)",
+  "testOnly": true,
+  "nonNormative": true,
+  "sourceSets": [
+    {
+      "sourceSetId": "fixture/reference",
+      "path": "reference-set.tokens.json",
+      "layer": "reference",
+      "dependencies": [],
+      "sourceRevision": "fixture-rev-0001-synthetic",
+      "expectedProfileVersion": "1",
+      "expectedDtcgVersion": "2025.10",
+      "maturityState": "Experimental",
+      "approvalState": "Unapproved"
+    },
+    {
+      "sourceSetId": "fixture/semantic",
+      "path": "semantic-set.tokens.json",
+      "layer": "semantic",
+      "dependencies": ["fixture/reference"],
+      "sourceRevision": "fixture-rev-0001-synthetic",
+      "expectedProfileVersion": "1",
+      "expectedDtcgVersion": "2025.10",
+      "maturityState": "Experimental",
+      "approvalState": "Unapproved"
+    },
+    {
+      "sourceSetId": "fixture/component",
+      "path": "component-set.tokens.json",
+      "layer": "component",
+      "dependencies": ["fixture/semantic"],
+      "sourceRevision": "fixture-rev-0001-synthetic",
+      "expectedProfileVersion": "1",
+      "expectedDtcgVersion": "2025.10",
+      "maturityState": "Experimental",
+      "approvalState": "Unapproved"
+    },
+    {
+      "sourceSetId": "fixture/product-profile",
+      "path": "product-profile-set.tokens.json",
+      "layer": "product-profile",
+      "dependencies": ["fixture/component"],
+      "sourceRevision": "fixture-rev-0001-synthetic",
+      "expectedProfileVersion": "1",
+      "expectedDtcgVersion": "2025.10",
+      "maturityState": "Experimental",
+      "approvalState": "Unapproved",
+      "approvedExtensionPoint": "fixture/test-extension-point"
+    }
+  ],
+  "dependencyGraph": {
+    "fixture/reference": [],
+    "fixture/semantic": ["fixture/reference"],
+    "fixture/component": ["fixture/semantic"],
+    "fixture/product-profile": ["fixture/component"]
+  },
+  "resolverDocuments": ["resolver.resolver.json"],
+  "productProfileBoundary": {
+    "approvedExtensionPoints": ["fixture/test-extension-point"]
+  },
+  "provenanceState": "Bound",
+  "digestState": {
+    "status": "Not computed – validator implementation pending"
+  }
+}

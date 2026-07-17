@@ -23,13 +23,13 @@ Pre-Candidate Operating Enablement — **Foundation / Pre-Design: Closed with No
 
 ## Work package status
 
-- Current work package after CDS-WP-011: **CDS-WP-012 — Machine-Readable Source
-  Bootstrap and Validation Contract** (Next; not yet executed)
-- Previous work package: CDS-WP-011 — Machine-Readable Source and Token Format
-  Decision (Completed)
+- Current work package after CDS-WP-012: **CDS-WP-013 — Offline Token Profile
+  Validator and Fixture Harness** (Next; not yet executed)
+- Previous work package: CDS-WP-012 — Machine-Readable Source Bootstrap and Validation
+  Contract (Completed)
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
-  CDS-WP-011
+  CDS-WP-011, CDS-WP-012
 
 ## Operating enablement status
 
@@ -83,17 +83,18 @@ Documents:
 - DTCG binding: **2025.10** (Format, Color, Resolver modules; Final Community Group
   Report — **not** a W3C Standard)
 - Canonical source syntax: **strict JSON (RFC 8259), `.tokens.json`**
-- Schema foundation: **JSON Schema Draft 2020-12** (future CDS-owned profile
-  validator; no schema created)
+- Schema foundation: **JSON Schema Draft 2020-12** (CDS-owned profile contracts
+  created by CDS-WP-012 — see the bootstrap status below; no validator)
 - Extension namespace: **`io.github.kaykaspers.cds`** (single reserved root within DTCG
   `$extensions`; foreign extensions preserved, not automatically normative)
 - Source-set layers: Reference · Semantic · Component · Product Profile; channel
   outputs are generated (non-normative)
 - Validation layers: **4** (V1 Syntax · V2 DTCG · V3 CDS Profile · V4 Semantic/
   Governance)
-- ADR count: **1** (ADR-0001)
-- **No token value, schema, resolver, or validator implemented; no Candidate/Stable
-  artifact; publication state `Private Development`.**
+- ADR count: **2** (ADR-0001, ADR-0002)
+- **No token value and no validator implemented. The schema and resolver contracts
+  created by CDS-WP-012 are Experimental and carry no Candidate/Stable status;
+  publication state `Private Development`.**
 
 Documents:
 [ADR-0001](../docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md) ·
@@ -104,6 +105,33 @@ Documents:
 [Token Format Evaluation](../docs/research/TOKEN_FORMAT_EVALUATION.md) ·
 [Token Format Source Register](../docs/research/TOKEN_FORMAT_SOURCE_REGISTER.md) ·
 [Implementation Plan](../docs/roadmap/MACHINE_READABLE_SOURCE_IMPLEMENTATION_PLAN.md)
+
+## Machine-readable bootstrap status
+
+- Machine-readable bootstrap: **Implemented, Experimental** (CDS-WP-012, 2026-07-17;
+  ADR-0002 pending Human-Maintainer commit) — no Candidate status (DEC-S-092)
+- Token Document Schema: **Present** · Source-Set Manifest Schema: **Present** ·
+  Resolver Schema: **Present** · Validation Case Schema: **Present** (4 CDS-owned JSON
+  Schema Draft 2020-12 contracts; stable `tag:` `$id`s; local `$ref`; offline)
+- Schema execution: **Not assessed** — no local JSON Schema 2020-12 validator was
+  available and none was installed; validator execution is CDS-WP-013
+- Positive fixture count: **6** · Negative fixture file count: **9** · Validation case
+  count: **15** (VAL-CASE-001…015); every fixture covered
+- Deterministic serialization: **RFC 8785 (JCS)** · Digest: **SHA-256** (`sha256:`
+  lowercase hex); no canonicalizer implemented; digests `Not computed`
+- Extension namespace: `io.github.kaykaspers.cds` (payload requires `profileVersion`)
+- **No real token/design value, productive validator, canonicalizer, transformer, or
+  build; no Candidate/Stable artifact; publication state `Private Development`.**
+
+Documents:
+[Machine-Readable Validation Contract](../docs/architecture/MACHINE_READABLE_VALIDATION_CONTRACT.md) ·
+[Deterministic Serialization and Digest Model](../docs/architecture/DETERMINISTIC_SERIALIZATION_AND_DIGEST_MODEL.md) ·
+[ADR-0002](../docs/decisions/ADR-0002-DETERMINISTIC_JSON_SERIALIZATION.md) ·
+[Token Document Schema](../schemas/cds-token-document.schema.json) ·
+[Manifest Schema](../schemas/cds-source-set-manifest.schema.json) ·
+[Resolver Schema](../schemas/cds-resolver-document.schema.json) ·
+[Validation Case Schema](../schemas/cds-validation-case.schema.json) ·
+[Validation Cases](../tests/fixtures/machine-readable/VALIDATION_CASES.json)
 
 ## Foundation review status
 
@@ -361,11 +389,13 @@ pilot contract is defined in CDS-WP-004.
   accessibility and inclusive design decisions (CDS-WP-007), 4 operating
   enablement and pre-candidate decisions (CDS-WP-009), 8 accessibility support
   baseline and evidence decisions (CDS-WP-010), and **10 machine-readable source
-  and token format decisions (CDS-WP-011, DEC-S-073 … DEC-S-082)**. DEC-S-001 …
-  DEC-S-072 unchanged by CDS-WP-011. **ADRs: 1 (ADR-0001).**
-- Risks: RISK-001 … RISK-063 (63) — **61 `Monitored`, RISK-040 and RISK-044
-  `Mitigating`**; **risk owner model finalized** by CDS-WP-006; RISK-049 … RISK-054
-  added by CDS-WP-010; **RISK-055 … RISK-063 added by CDS-WP-011**. No risk accepted
+  and token format decisions (CDS-WP-011, DEC-S-073 … DEC-S-082), and **10
+  machine-readable bootstrap and validation decisions (CDS-WP-012, DEC-S-083 …
+  DEC-S-092)**. DEC-S-001 … DEC-S-082 unchanged by CDS-WP-012. **ADRs: 2 (ADR-0001,
+  ADR-0002).**
+- Risks: RISK-001 … RISK-072 (72) — **70 `Monitored`, RISK-040 and RISK-044
+  `Mitigating`**; **risk owner model finalized** by CDS-WP-006; RISK-055 … RISK-063
+  added by CDS-WP-011; **RISK-064 … RISK-072 added by CDS-WP-012**. No risk accepted
   or closed.
 
 ## Intentionally open decision areas

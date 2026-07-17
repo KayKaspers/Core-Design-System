@@ -9,6 +9,31 @@ released and no release is announced.
 
 ### Added
 
+- Four CDS-owned JSON Schema Draft 2020-12 contracts created (CDS-WP-012): token
+  document, source-set manifest, resolver document, and validation case — each with a
+  stable `tag:` `$id`, same-document local `$ref`, and no remote dependency
+  (`schemas/`). (CDS-WP-012)
+- CDS extension payload contract implemented under `io.github.kaykaspers.cds`
+  (requiring `profileVersion` and source-set identity; foreign extensions preserved and
+  not automatically normative). (CDS-WP-012)
+- Source-Set Manifest schema and Resolver schema created — explicit local declaration of
+  identity, layer, path, dependency graph, and ordered composition; no implicit or
+  network-discovered sets. (CDS-WP-012)
+- Validation Case schema created; a 15-case validation-case matrix
+  (`tests/fixtures/machine-readable/VALIDATION_CASES.json`) binds every fixture to
+  expected V1–V4 outcomes with contiguous `VAL-CASE-###` IDs. (CDS-WP-012)
+- Six synthetic positive fixtures and nine synthetic negative fixtures created (test-only,
+  non-normative; `fixture/` IDs). (CDS-WP-012)
+- V1–V4 Validation Contract created; the duplicate-key policy operationalized (duplicate
+  object member names fail V1; no first/last-key-wins repair; a duplicate-key-aware parser
+  is required). (CDS-WP-012)
+- RFC 8785 (JSON Canonicalization Scheme) and SHA-256 digest model decided
+  ([Deterministic Serialization and Digest Model](docs/architecture/DETERMINISTIC_SERIALIZATION_AND_DIGEST_MODEL.md));
+  a content digest is an integrity aid, not authenticity, and no canonicalizer is
+  implemented. (CDS-WP-012)
+- **ADR-0002 — Deterministic JSON Serialization** created (the second ADR; accepted upon
+  Human-Maintainer commit following Nova approval). (CDS-WP-012)
+- Work-package evidence notes for CDS-WP-012. (CDS-WP-012)
 - Machine-readable source model defined (CDS-WP-011): the normative machine-readable
   CDS source (artifact class 2) with eight source-set classes, a strictly downward
   dependency model, and the boundary to generated artifacts and human-readable sources
@@ -124,6 +149,23 @@ released and no release is announced.
 
 ### Changed
 
+- Decision index extended to DEC-S-001 … DEC-S-092 with a tenth decision type for
+  machine-readable bootstrap and validation decisions (DEC-S-083 … DEC-S-092);
+  DEC-S-001 … DEC-S-082 unchanged. **ADR range is now ADR-0001 … ADR-0002 (2 ADRs).**
+  (CDS-WP-012)
+- Risk register extended to RISK-001 … RISK-072: added **RISK-064 … RISK-072** (CDS schema
+  contract incompleteness, synthetic fixtures mistaken for design tokens, schema/validator
+  divergence, canonicalization/digest mismatch, duplicate-key ambiguity, manifest/resolver
+  graph inconsistency, validation fixture coverage gap, validation expectation drift,
+  digest mistaken for authenticity), all `Monitored`; no existing risk changed; no risk
+  accepted or closed. RISK-040 and RISK-044 remain `Mitigating`. (CDS-WP-012)
+- Work-package status advanced: CDS-WP-012 completed; **CDS-WP-013 — Offline Token Profile
+  Validator and Fixture Harness** activated as the next work package (not yet executed).
+  Foundation Context Pack, project profile, project brain, README, work packages, next
+  phase, implementation plan, and Claude working instructions updated. Publication state
+  remains `Private Development`; no real token/design value; no productive validator or
+  canonicalizer; formal schema execution not assessed; the bootstrap is Experimental, not
+  Candidate; pilot inactive. (CDS-WP-012)
 - Decision index extended to DEC-S-001 … DEC-S-082 with a ninth decision type for
   machine-readable source and token format decisions (DEC-S-073 … DEC-S-082);
   DEC-S-001 … DEC-S-072 unchanged. **ADR-0001 is the first ADR**; the decision-record

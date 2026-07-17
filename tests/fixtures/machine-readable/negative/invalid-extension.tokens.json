@@ -1,0 +1,15 @@
+{
+  "$description": "NEGATIVE FIXTURE. Intentionally invalid for CDS: uses the old/unknown CDS extension key `cds` instead of `io.github.kaykaspers.cds`, and the payload lacks `profileVersion`. Primary failure: invalid/absent CDS namespace or missing profileVersion (V3). The old key is treated as a foreign extension and does not satisfy the CDS source-set identity requirement.",
+  "$extensions": {
+    "cds": {
+      "sourceSetId": "fixture/negative-invalid-extension",
+      "layer": "reference"
+    }
+  },
+  "test-primitive": {
+    "alpha": {
+      "$type": "number",
+      "$value": 0
+    }
+  }
+}

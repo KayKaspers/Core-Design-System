@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tag:github.com,2026:KayKaspers/Core-Design-System/schema/cds-token-document/1",
+  "title": "CDS Token Document (v1)",
+  "description": "Structural JSON Schema for a CDS machine-readable token source document (strict JSON, .tokens.json) over DTCG 2025.10. Validates strict structure, DTCG group/token shape, the CDS $extensions payload, and the segment naming profile. It does NOT establish full DTCG, semantic, accessibility, governance, reference-resolution, or Product-Profile correctness (those are V2, V3, V4). Non-normative structural contract; asserts no Candidate or Stable status.",
+  "type": "object",
+  "required": ["$extensions"],
+  "properties": {
+    "$description": { "type": "string" },
+    "$type": { "type": "string" },
+    "$extensions": { "$ref": "#/$defs/rootExtensions" }
+  },
+  "patternProperties": {
+    "^[a-z][a-z0-9-]*$": { "$ref": "#/$defs/node" }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "nameSegment": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$",
+      "description": "A single technical name segment: lower-case start, lower-case alphanumerics and single hyphens; no reserved characters, no whitespace, no empty segments (DEC-S-081)."
+    },
+    "sourceSetId": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*(?:/[a-z][a-z0-9-]*)*$",
+      "description": "Segment-based source-set identity (DEC-S-081). Case-sensitive; case-only collisions are prohibited but not detectable by pattern alone (V3 responsibility)."
+    },
+    "localRef": {
+      "type": "string",
+      "pattern": "^(?!https?:|file:|//|\\\\).+$",
+      "description": "A local / relative reference only. No network scheme (http(s)/file) and no absolute UNC path (DEC-S-091)."
+    },
+    "layer": {
+      "type": "string",
+      "enum": ["reference", "semantic", "component", "product-profile"]
+    },
+    "rootExtensions": {
+      "type": "object",
+      "description": "Document-root $extensions. Requires the CDS source-set identity payload; foreign extensions are preserved (not automatically normative for CDS).",
+      "required": ["io.github.kaykaspers.cds"],
+      "properties": {
+        "io.github.kaykaspers.cds": { "$ref": "#/$defs/cdsSourceSetPayload" }
+      },
+      "additionalProperties": true
+    },
+    "tokenExtensions": {
+      "type": "object",
+      "description": "Token- or group-level $extensions. The CDS token payload is optional; foreign extensions are preserved.",
+      "properties": {
+        "io.github.kaykaspers.cds": { "$ref": "#/$defs/cdsTokenPayload" }
+      },
+      "additionalProperties": true
+    },
+    "cdsSourceSetPayload": {
+      "type": "object",
+      "description": "CDS source-set identity, carried at the document root under io.github.kaykaspers.cds. Unknown CDS payload fields fail closed (additionalProperties false).",
+      "required": ["profileVersion", "sourceSetId", "layer", "dtcgReportVersion", "sourceRevision"],
+      "properties": {
+        "profileVersion": { "type": "string", "const": "1" },
+        "sourceSetId": { "$ref": "#/$defs/sourceSetId" },
+        "layer": { "$ref": "#/$defs/layer" },
+        "dtcgReportVersion": { "type": "string", "const": "2025.10" },
+        "sourceRevision": { "type": "string", "minLength": 1 },
+        "manifestRef": { "$ref": "#/$defs/localRef" },
+        "testOnly": { "type": "boolean" },
+        "nonNormative": { "type": "boolean" },
+        "maturityState": { "type": "string" },
+        "approvalState": { "type": "string" },
+        "ownerRole": { "type": "string" },
+        "originatingDecision": { "type": "string" },
+        "originatingRequirement": { "type": "string" },
+        "accessibilityRelevance": { "type": ["boolean", "string"] },
+        "approvedExtensionPoint": { "type": "string" },
+        "compatibilityImpact": { "type": "string" },
+        "migrationReference": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "cdsTokenPayload": {
+      "type": "object",
+      "description": "Optional per-token/group CDS governance metadata. Unknown CDS payload fields fail closed.",
+      "required": ["profileVersion"],
+      "properties": {
+        "profileVersion": { "type": "string", "const": "1" },
+        "testOnly": { "type": "boolean" },
+        "nonNormative": { "type": "boolean" },
+        "maturityState": { "type": "string" },
+        "approvalState": { "type": "string" },
+        "ownerRole": { "type": "string" },
+        "originatingDecision": { "type": "string" },
+        "originatingRequirement": { "type": "string" },
+        "accessibilityRelevance": { "type": ["boolean", "string"] },
+        "approvedExtensionPoint": { "type": "string" },
+        "compatibilityImpact": { "type": "string" },
+        "migrationReference": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "node": {
+      "type": "object",
+      "description": "A DTCG node: a token (has $value) or a group (has named child nodes). Only $value/$type/$description/$deprecated/$extensions and lower-case name segments are permitted; any other member (including unknown $-prefixed or upper-case keys such as preview features) fails closed.",
+      "properties": {
+        "$value": true,
+        "$type": { "type": "string" },
+        "$description": { "type": "string" },
+        "$deprecated": { "type": ["boolean", "string"] },
+        "$extensions": { "$ref": "#/$defs/tokenExtensions" }
+      },
+      "patternProperties": {
+        "^[a-z][a-z0-9-]*$": { "$ref": "#/$defs/node" }
+      },
+      "additionalProperties": false
+    }
+  }
+}

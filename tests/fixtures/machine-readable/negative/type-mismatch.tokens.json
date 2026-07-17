@@ -1,0 +1,26 @@
+{
+  "$description": "NEGATIVE FIXTURE. Intentionally invalid for CDS: a number-typed token references a string-typed token. Primary failure: incompatible referenced type (V2). Structurally well-formed.",
+  "$extensions": {
+    "io.github.kaykaspers.cds": {
+      "profileVersion": "1",
+      "sourceSetId": "fixture/negative-type-mismatch",
+      "layer": "component",
+      "dtcgReportVersion": "2025.10",
+      "sourceRevision": "fixture-rev-0001-synthetic",
+      "testOnly": true,
+      "nonNormative": true
+    }
+  },
+  "test-source": {
+    "text-primitive": {
+      "$type": "string",
+      "$value": "x-synthetic-placeholder"
+    }
+  },
+  "test-consumer": {
+    "numeric-slot": {
+      "$type": "number",
+      "$value": "{test-source.text-primitive}"
+    }
+  }
+}

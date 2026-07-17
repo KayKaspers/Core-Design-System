@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tag:github.com,2026:KayKaspers/Core-Design-System/schema/cds-validation-case/1",
+  "title": "CDS Validation Case Matrix (v1)",
+  "description": "Structural JSON Schema for the CDS validation-case matrix. Binds every fixture to explicit expected V1..V4 outcomes for a future offline validator. Expected outcomes are declared, not executed; a schema pass here proves nothing about the fixtures' actual validation. Non-normative.",
+  "type": "object",
+  "required": ["caseSetVersion", "profileVersion", "cases"],
+  "properties": {
+    "caseSetVersion": { "type": "string", "const": "1" },
+    "profileVersion": { "type": "string", "const": "1" },
+    "cases": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/case" }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "resultState": {
+      "type": "string",
+      "enum": ["Pass", "Pass with limitations", "Fail", "Blocked", "Not assessed", "Not applicable with rationale"]
+    },
+    "layerRef": {
+      "type": "string",
+      "enum": ["V1", "V2", "V3", "V4", "none"]
+    },
+    "diagnosticCategory": {
+      "type": "string",
+      "enum": [
+        "none",
+        "duplicate-key",
+        "invalid-json",
+        "invalid-file-identity",
+        "dtcg-profile-violation",
+        "unresolvable-reference",
+        "dangling-reference",
+        "reference-cycle",
+        "type-mismatch",
+        "backward-layer-dependency",
+        "missing-source-set",
+        "undeclared-cross-file-reference",
+        "illegal-override",
+        "invalid-extension",
+        "missing-metadata",
+        "preview-feature",
+        "unknown-source-revision",
+        "conflicting-source-set-identity"
+      ]
+    },
+    "case": {
+      "type": "object",
+      "required": [
+        "caseId",
+        "title",
+        "fixturePaths",
+        "classification",
+        "primaryFailureReason",
+        "expectedV1",
+        "expectedV2",
+        "expectedV3",
+        "expectedV4",
+        "blockingLayer",
+        "expectedDiagnosticCategory",
+        "applicableDecisionIds",
+        "applicableRiskIds",
+        "notes"
+      ],
+      "properties": {
+        "caseId": {
+          "type": "string",
+          "pattern": "^VAL-CASE-[0-9]{3}$"
+        },
+        "title": { "type": "string", "minLength": 1 },
+        "fixturePaths": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/fixturePath" }
+        },
+        "classification": {
+          "type": "string",
+          "enum": ["positive", "negative"]
+        },
+        "primaryFailureReason": {
+          "type": "string",
+          "description": "For a positive case: 'none'. For a negative case: the single primary intended failure."
+        },
+        "expectedV1": { "$ref": "#/$defs/resultState" },
+        "expectedV2": { "$ref": "#/$defs/resultState" },
+        "expectedV3": { "$ref": "#/$defs/resultState" },
+        "expectedV4": { "$ref": "#/$defs/resultState" },
+        "blockingLayer": { "$ref": "#/$defs/layerRef" },
+        "expectedDiagnosticCategory": { "$ref": "#/$defs/diagnosticCategory" },
+        "applicableDecisionIds": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^DEC-S-[0-9]{3}$" }
+        },
+        "applicableRiskIds": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^RISK-[0-9]{3}$" }
+        },
+        "notes": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "fixturePath": {
+      "type": "string",
+      "pattern": "^tests/fixtures/machine-readable/(positive|negative)/[a-z0-9-]+\\.(tokens|source-set|resolver)\\.json$"
+    }
+  }
+}

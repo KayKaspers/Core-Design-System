@@ -5,8 +5,8 @@ must be controlled from the start of the project.
 
 ## Register scope
 
-- Risk range: RISK-001 … RISK-063
-- Number of risks: 63
+- Risk range: RISK-001 … RISK-072
+- Number of risks: 72
 - Phase: Pre-Candidate Operating Enablement (Foundation / Pre-Design closed with notes)
 
 Risks RISK-001 … RISK-005 were registered by CDS-WP-001. Risks
@@ -20,7 +20,9 @@ the governance model. Risks RISK-041 … RISK-048 were registered by CDS-WP-007
 alongside the accessibility and inclusive design policy. Risks
 RISK-049 … RISK-054 were registered by CDS-WP-010 alongside the accessibility
 support baseline and evidence strategy. Risks RISK-055 … RISK-063 were registered
-by CDS-WP-011 alongside the machine-readable source and token format decision.
+by CDS-WP-011 alongside the machine-readable source and token format decision. Risks
+RISK-064 … RISK-072 were registered by CDS-WP-012 alongside the machine-readable source
+bootstrap and validation contract.
 
 ### Finalized risk role model
 
@@ -53,7 +55,7 @@ Full model: [Risk Governance Model](../governance/RISK_GOVERNANCE_MODEL.md).
 | **Accepted** | Consciously accepted with residual effect; requires a review trigger. |
 | **Closed** | No longer relevant, or fully mitigated with evidence. |
 
-**61 of the 63 risks are currently `Monitored`; RISK-040 and RISK-044 are
+**70 of the 72 risks are currently `Monitored`; RISK-040 and RISK-044 are
 `Mitigating`.** CDS-WP-006 finalized the role model; it treated no risk and changed
 no assessment, because no evidence justified a change. CDS-WP-007 added
 RISK-041 … RISK-048 and likewise treated none. CDS-WP-009 moved **RISK-040
@@ -62,9 +64,10 @@ RISK-041 … RISK-048 and likewise treated none. CDS-WP-009 moved **RISK-040
 CDS-WP-010 added **RISK-049 … RISK-054** and moved **RISK-044
 `Monitored → Mitigating`** on the strength of the defined
 [Accessibility Support Baseline](../governance/ACCESSIBILITY_SUPPORT_BASELINE.md).
-CDS-WP-011 added **RISK-055 … RISK-063** (all `Monitored`) and changed no existing
-status. No description, likelihood, or severity was changed for any existing risk, and
-**no risk was accepted or closed** — only the Human Maintainer may do either.
+CDS-WP-011 added **RISK-055 … RISK-063** and changed no existing status. CDS-WP-012
+added **RISK-064 … RISK-072** (all `Monitored`) and changed no existing status. No
+description, likelihood, or severity was changed for any existing risk, and **no risk
+was accepted or closed** — only the Human Maintainer may do either.
 
 ## Assessment scale
 
@@ -2044,3 +2047,242 @@ require offline, deterministic, registry-free processing (DEC-S-030, DEC-S-080).
 any tool-specific assumption in a normative source as a defect. Select tools in a later
 work package under explicit tool-neutrality and offline constraints; never let a
 generated output or tool state become normative (DEC-S-079).
+
+---
+
+## RISK-064 — CDS schema contract incompleteness
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** High
+- **Initial severity:** Medium
+
+### Description
+
+The initial CDS schemas may fail to express required DTCG or CDS profile constraints and
+therefore accept structurally misleading documents.
+
+### Impact
+
+A schema that under-constrains lets an invalid document pass V1/V3 structurally, and a
+green schema result then reads as "correct" while the document violates DTCG semantics,
+the profile, or governance. The gap is quiet because the tooling reports success.
+
+### Mitigation direction
+
+Keep the schemas as a bounded structural layer and hold that a schema pass proves no V2/
+V3/V4 correctness (DEC-S-083, DEC-S-089). Cover known failure classes with negative
+fixtures and validation cases; extend the schemas under governed change (DEC-S-082) as
+gaps are found; require V4 human review before any maturity.
+
+---
+
+## RISK-065 — Synthetic fixtures mistaken for design tokens
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** High
+
+### Description
+
+Test-only fixture names or values may be copied, distributed, or interpreted as approved
+CDS design decisions.
+
+### Impact
+
+A synthetic placeholder read as a real token injects an unauthorized, unreviewed design
+value into a consumer or a later build — the precise "premature design decision" the phase
+forbids (RISK-003). Once copied, a fixture value is hard to retract.
+
+### Mitigation direction
+
+Mark every fixture `testOnly: true` and `nonNormative: true`, use `fixture/` IDs and
+neutral placeholder values, and state the boundary in each fixture and in the validation
+cases (DEC-S-087). Never publish fixtures as sources; keep them under `tests/fixtures/`.
+No fixture is Candidate or approved.
+
+---
+
+## RISK-066 — Schema and validator divergence
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** Medium
+
+### Description
+
+A future validator may implement behavior that differs from the committed schemas or
+validation-case expectations.
+
+### Impact
+
+If the validator and the schemas/cases disagree, "validated" means different things in
+different runs, and the evidence is untrustworthy. Divergence is easy to introduce quietly
+when the validator is built separately (CDS-WP-013).
+
+### Mitigation direction
+
+Treat the schemas and the validation-case matrix's
+expected outcomes as the contract the validator must satisfy (DEC-S-089), and keep the
+bootstrap Experimental until executed results match the declared expectations under
+independent review (DEC-S-092). Re-verify on any schema/profile/DTCG change (RISK-071).
+
+---
+
+## RISK-067 — Canonicalization and digest mismatch
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** Medium
+
+### Description
+
+Different implementations may canonicalize or hash the same logical JSON content
+differently and produce conflicting identities.
+
+### Impact
+
+If two tools compute different digests for the same content, content identity becomes
+unreliable and reproducibility — the point of the digest — is lost. Divergence typically
+comes from number formatting, key ordering, or Unicode handling.
+
+### Mitigation direction
+
+Fix a specified canonicalization (RFC 8785 / JCS) plus SHA-256 (DEC-S-090, ADR-0002) so
+independent implementations agree; compute digests from the parsed content, not authoring
+bytes; require offline deterministic computation. Validate digest reproducibility in
+CDS-WP-013 before any digest is used as evidence.
+
+---
+
+## RISK-068 — Duplicate-key ambiguity
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** High
+
+### Description
+
+Parsers without duplicate-key detection may silently accept invalid CDS sources using
+first-key-wins or last-key-wins behavior.
+
+### Impact
+
+A duplicate member silently overwrites a value, so the source that ships differs from the
+source that was reviewed — an undetected corruption. JSON Schema alone cannot catch this.
+
+### Mitigation direction
+
+Prohibit duplicate object member names and fail them at V1 without repair (DEC-S-088);
+require the future validator to use a duplicate-key-aware parser; encode the case as a
+negative fixture. Never rely on first/last-key-wins.
+
+---
+
+## RISK-069 — Manifest and resolver graph inconsistency
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** Medium
+
+### Description
+
+Token documents, Source-Set manifests, resolver order, embedded identities, and dependency
+declarations may drift apart.
+
+### Impact
+
+If the manifest's declared graph, the per-entry dependencies, the embedded source-set
+identities, and the resolver order disagree, resolution produces wrong or unpredictable
+output while every individual file looks valid.
+
+### Mitigation direction
+
+Require the manifest to declare identity, layer, path, dependencies, and a dependency graph
+consistent with per-entry dependencies, and require manifest ↔ document identity agreement
+(DEC-S-085); the resolver references only declared source sets (DEC-S-086). Cross-check
+consistency at V3 and fail closed on mismatch.
+
+---
+
+## RISK-070 — Validation fixture coverage gap
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** Medium
+
+### Description
+
+The positive and negative fixtures may omit important profile, reference, type, layer,
+metadata, or interoperability failures.
+
+### Impact
+
+A failure class with no fixture is a validation blind spot: a future validator may pass it
+by omission, and the contract's "coverage" is overstated. Coverage gaps are invisible until
+a real document hits the untested case.
+
+### Mitigation direction
+
+Bind every fixture to a validation case and keep the case matrix the visible coverage
+record (DEC-S-089); extend fixtures and cases under governed change as new failure classes
+are identified; state known coverage gaps honestly rather than implying completeness.
+
+---
+
+## RISK-071 — Validation expectation drift
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** Medium
+
+### Description
+
+Expected V1…V4 outcomes may become stale after profile, DTCG, schema, or governance
+changes.
+
+### Impact
+
+Stale expected outcomes make the validation cases assert the wrong result, so a validator
+"passing" the suite proves the wrong thing — or a correct change is flagged as a
+regression. The record silently decays.
+
+### Mitigation direction
+
+Treat the expected outcomes as revision-bound and re-verify them on any profile, DTCG,
+schema, or governance change (DEC-S-089, DEC-S-082); keep the case matrix under governed
+change; bind cases to the applicable Decision and Risk IDs so impact is traceable.
+
+---
+
+## RISK-072 — Digest mistaken for authenticity
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** High
+
+### Description
+
+A matching content digest may be treated as proof of authorship, approval, trust,
+security, or release legitimacy.
+
+### Impact
+
+A digest proves only that content is unchanged, not who made it, whether it was approved,
+or whether it is safe to ship. Reading a digest as a signature or an approval would let an
+unreviewed, unapproved artifact circulate as trusted.
+
+### Mitigation direction
+
+Hold that a content digest is an integrity/reproducibility aid only — not a signature and
+not proof of authorship, approval, trust, security, or release (DEC-S-090, ADR-0002). A
+digest never replaces the immutable source revision, approval, or provenance evidence, and
+never confers Candidate/Stable or a claim.

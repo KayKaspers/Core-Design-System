@@ -11,11 +11,13 @@ authorized work packages.
 
 ## Register scope
 
-- Decision range: DEC-S-001 … DEC-S-082
-- Number of decisions: 82
+- Decision range: DEC-S-001 … DEC-S-092
+- Number of decisions: 92
 - Decision record format: index entries, plus ADR files where a decision warrants an
-  Architecture Decision Record. **ADR range: ADR-0001 … ADR-0001 (1 ADR).**
+  Architecture Decision Record. **ADR range: ADR-0001 … ADR-0002 (2 ADRs).**
 - [ADR-0001 — Machine-Readable Token Source Format](ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)
+  (accepted upon Human-Maintainer commit following Nova approval).
+- [ADR-0002 — Deterministic JSON Serialization](ADR-0002-DETERMINISTIC_JSON_SERIALIZATION.md)
   (accepted upon Human-Maintainer commit following Nova approval).
 
 ## Decision types
@@ -31,6 +33,7 @@ authorized work packages.
 | Operating enablement and pre-candidate decision | DEC-S-061 … DEC-S-064 | CDS-WP-009 | Foundation closure with notes, the Pre-Candidate phase, non-normativity of operating views, and critical-risk actionability before Elevated work. |
 | Accessibility support baseline and evidence decision | DEC-S-065 … DEC-S-072 | CDS-WP-010 | Support baseline as a test contract not evidence, three baseline tiers, the Required Core Baseline, family-vs-execution identity, scope-triggered coverage, freshness review, immutable evidence records, and defect/regression classification. |
 | Machine-readable source and token format decision | DEC-S-073 … DEC-S-082 | CDS-WP-011 | DTCG 2025.10 as external format basis, pinned-stable-only, strict JSON `.tokens.json`, CDS profile over DTCG, JSON Schema 2020-12 foundation, fail-closed references, source-set layers, versioned provenance identity, machine-validatable naming, and governed format upgrades (ADR-0001). |
+| Machine-readable bootstrap and validation decision | DEC-S-083 … DEC-S-092 | CDS-WP-012 | CDS-owned schema + fixture bootstrap, `io.github.kaykaspers.cds` payload, strict-JSON manifests and resolvers, synthetic non-normative fixtures, duplicate-key prohibition, bound V1–V4 validation cases, RFC 8785 + SHA-256 digests (ADR-0002), fail-closed local references, and Experimental-not-Candidate status. |
 
 None of these types is an implementation decision. Logical architecture decisions
 define structure, responsibility, and flow — they select no technology, format,
@@ -2842,3 +2845,297 @@ stable and migrations honest (DEC-S-037 … DEC-S-040 applied to the format).
 - Adopting a later DTCG report or a preview feature is an Elevated, governed decision
   (DEC-S-074).
 - The profile version, DTCG report version, and CDS release version stay distinct.
+
+---
+
+## DEC-S-083 — The machine-readable bootstrap is CDS-owned schemas plus synthetic fixtures
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Machine-readable bootstrap and validation decision
+- **Work package:** CDS-WP-012
+
+### Decision
+
+The initial CDS machine-readable bootstrap consists of CDS-owned JSON Schema Draft
+2020-12 contracts and synthetic validation fixtures.
+
+Schema or fixture presence does not establish complete DTCG, semantic, accessibility,
+governance, Candidate, or Stable conformance.
+
+### Rationale
+
+Structural schemas and fixtures make the format profile testable, but structure is not
+correctness (RISK-058, RISK-064): a schema pass proves no semantic, accessibility, or
+governance validity, and a synthetic fixture is not a real source. Recording the
+boundary keeps the bootstrap honest.
+
+### Consequences
+
+- Four schemas ([token document](../../schemas/cds-token-document.schema.json),
+  [manifest](../../schemas/cds-source-set-manifest.schema.json),
+  [resolver](../../schemas/cds-resolver-document.schema.json),
+  [validation case](../../schemas/cds-validation-case.schema.json)) and synthetic
+  fixtures under `tests/fixtures/machine-readable/`.
+- The bootstrap is Experimental, not Candidate (DEC-S-092).
+
+---
+
+## DEC-S-084 — CDS profile metadata lives under a stable extension root requiring profileVersion
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Machine-readable bootstrap and validation decision
+- **Work package:** CDS-WP-012
+
+### Decision
+
+CDS profile metadata is carried under the stable `io.github.kaykaspers.cds` extension
+root. The payload requires `profileVersion` and source-set identity metadata.
+
+Foreign extensions must be preserved but are not automatically normative for CDS.
+
+### Rationale
+
+A required, versioned payload under a single stable root makes CDS metadata
+machine-checkable while keeping DTCG interoperability — a generic tool ignores it, and
+CDS validation enforces it (DEC-S-076). Preserving foreign extensions honours the
+DTCG ecosystem without granting foreign data CDS authority.
+
+### Consequences
+
+- The token-document schema requires the CDS namespace with `profileVersion` at the
+  document root; unknown CDS payload fields fail closed.
+- An old/unknown namespace or a missing `profileVersion` fails V3 (RISK-064).
+
+---
+
+## DEC-S-085 — Source-Set manifests explicitly declare identity, layer, path, and graph
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Machine-readable bootstrap and validation decision
+- **Work package:** CDS-WP-012
+
+### Decision
+
+CDS Source-Set manifests are strict JSON documents that explicitly declare source-set
+identity, layer, local path, dependency graph, revisions, profile and DTCG versions,
+maturity, approval, and provenance state.
+
+Implicit or network-discovered source sets are prohibited.
+
+### Rationale
+
+An explicit, local, declared graph is what makes dependency direction, cross-file
+references, and provenance machine-checkable and offline-resolvable (RISK-069). Implicit
+or network discovery would reintroduce hidden coupling and non-reproducibility.
+
+### Consequences
+
+- The manifest schema requires the full identity/graph fields; the dependency graph
+  must be consistent with per-entry dependencies (V3).
+- Manifests use the CDS-owned `.source-set.json` extension (not a DTCG extension).
+
+---
+
+## DEC-S-086 — Resolver documents declare explicit, local, ordered composition
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Machine-readable bootstrap and validation decision
+- **Work package:** CDS-WP-012
+
+### Decision
+
+CDS Resolver documents use strict JSON, DTCG-compatible resolver concepts, `$ref`,
+RFC-6901 JSON Pointer, explicit ordered composition, and locally declared source sets.
+
+Hidden network resolution is prohibited.
+
+### Rationale
+
+Explicit, reproducible ordering over locally declared sets makes multi-context
+composition deterministic and offline (DEC-S-080), and keeps `$ref`/JSON Pointer as the
+resolver reference form (ADR-0001). Automatic discovery or network resolution would break
+reproducibility and tool neutrality (RISK-063).
+
+### Consequences
+
+- The resolver schema requires an ordered source-set list with local `$ref` (optional
+  JSON Pointer) and a `localOnly` flag; resolver output is generated and non-normative.
+- Resolver documents use the CDS-owned `.resolver.json` extension.
+
+---
+
+## DEC-S-087 — Validation fixtures are synthetic, test-only, non-normative
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Machine-readable bootstrap and validation decision
+- **Work package:** CDS-WP-012
+
+### Decision
+
+CDS validation fixtures are synthetic, test-only, non-normative artifacts.
+
+They must not be published, consumed, or described as real CDS design tokens or Product
+Profiles.
+
+### Rationale
+
+Fixtures exercise the contract, not the design; treating a fixture value as a design
+decision would smuggle unauthorized design into the system (RISK-065). Explicit
+`testOnly`/`nonNormative` marking keeps the boundary unambiguous.
+
+### Consequences
+
+- Every fixture carries `testOnly: true` and `nonNormative: true`, uses `fixture/` IDs,
+  and contains only neutral placeholder values.
+- No fixture is marked Candidate or approved.
+
+---
+
+## DEC-S-088 — Duplicate JSON object member names are prohibited and fail V1
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Machine-readable bootstrap and validation decision
+- **Work package:** CDS-WP-012
+
+### Decision
+
+Duplicate JSON object member names are prohibited in normative CDS machine-readable
+sources.
+
+Duplicate-key input fails V1 and is not repaired through first-key-wins or
+last-key-wins behavior.
+
+### Rationale
+
+Duplicate keys are silently accepted by many parsers (last-wins), corrupting content
+undetectably (RISK-068). Prohibiting them and failing V1 — rather than "repairing" —
+keeps the source unambiguous; JSON Schema alone cannot detect this, so a duplicate-key-
+aware parser is required.
+
+### Consequences
+
+- The Validation Contract V1 rejects duplicate members; the `duplicate-key` fixture
+  encodes this and the future validator must detect it.
+- Later layers are `Not assessed` when V1 fails.
+
+---
+
+## DEC-S-089 — Validation cases bind every fixture to explicit expected outcomes
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Machine-readable bootstrap and validation decision
+- **Work package:** CDS-WP-012
+
+### Decision
+
+CDS validation cases bind every fixture to explicit expected outcomes for V1, V2, V3,
+and V4.
+
+A blocked or unexecuted validation layer remains visible and cannot be collapsed into an
+aggregate score.
+
+### Rationale
+
+Declared per-layer expectations make a future validator's behavior checkable and keep a
+partial result honest (RISK-058, RISK-071). An aggregate score would hide exactly the
+layer that failed.
+
+### Consequences
+
+- The [validation-case matrix](../../tests/fixtures/machine-readable/VALIDATION_CASES.json)
+  records expected V1–V4 per case with contiguous `VAL-CASE-###` IDs; every fixture is
+  covered; no numeric score.
+
+---
+
+## DEC-S-090 — CDS uses RFC 8785 JCS with SHA-256 for canonical content digests
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Machine-readable bootstrap and validation decision
+- **Work package:** CDS-WP-012
+
+### Decision
+
+CDS uses RFC 8785 JSON Canonicalization Scheme with SHA-256 for future canonical content
+digests.
+
+Canonical content digests supplement but do not replace immutable source revision,
+approval, provenance, or signature evidence.
+
+### Rationale
+
+A specified canonicalization plus a standard hash gives reproducible content identity
+across implementations, offline (RISK-067), while a digest remains an integrity aid, not
+authenticity (RISK-072). See [ADR-0002](ADR-0002-DETERMINISTIC_JSON_SERIALIZATION.md).
+
+### Consequences
+
+- Digest representation is lowercase hex prefixed `sha256:`; authoring formatting is
+  separate from canonicalization.
+- No canonicalizer is implemented in CDS-WP-012; digests are `Not computed – validator
+  implementation pending`.
+
+---
+
+## DEC-S-091 — Cross-file references are valid only through the declared local graph
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Machine-readable bootstrap and validation decision
+- **Work package:** CDS-WP-012
+
+### Decision
+
+Cross-file token, resolver, and source-set references are valid only through the declared
+local Manifest and Resolver graph.
+
+Undeclared, network-dependent, missing, circular, or provenance-unknown references fail
+closed.
+
+### Rationale
+
+Confining cross-file references to the declared, local, offline-resolvable graph is what
+keeps resolution reproducible and prevents hidden coupling or silent corruption
+(RISK-059, RISK-069). This operationalizes DEC-S-078 for the bootstrap.
+
+### Consequences
+
+- The schemas restrict references to local paths (no network scheme/UNC); the future
+  validator fails closed on undeclared/missing/cyclic/provenance-unknown references.
+- Negative fixtures encode dangling, cyclic, and undeclared-cross-file cases.
+
+---
+
+## DEC-S-092 — The bootstrap stays Experimental until an authorized validator executes and is reviewed
+
+- **Status:** Accepted
+- **Date:** 2026-07-17
+- **Type:** Machine-readable bootstrap and validation decision
+- **Work package:** CDS-WP-012
+
+### Decision
+
+The CDS schemas and fixture bootstrap remain Experimental and do not become Candidate
+until an authorized offline validator executes the defined cases, the results are
+independently reviewed, and Human-Maintainer approval is recorded.
+
+### Rationale
+
+A defined-but-unexecuted contract is not evidence; only executed, independently reviewed
+results justify maturity (RISK-066, DEC-S-053, DEC-S-036). Claiming Candidate now would
+be maturity inflation (RISK-031).
+
+### Consequences
+
+- The bootstrap is Experimental; no Candidate/Stable status is conferred; formal schema
+  execution is `Not assessed` in CDS-WP-012.
+- Validator execution, evidence, and review are CDS-WP-013; the Evidence Reviewer must
+  not be the executor (DEC-S-045).

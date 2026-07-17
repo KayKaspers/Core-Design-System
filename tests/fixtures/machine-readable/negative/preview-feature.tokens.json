@@ -1,0 +1,20 @@
+{
+  "$description": "NEGATIVE FIXTURE. Intentionally invalid for CDS: uses an unreleased/preview DTCG feature (a token $type that is not defined by the pinned DTCG 2025.10 reports). Primary failure: unapproved draft/preview feature (V2). The root CDS extension is otherwise valid, so the only defect is the preview feature.",
+  "$extensions": {
+    "io.github.kaykaspers.cds": {
+      "profileVersion": "1",
+      "sourceSetId": "fixture/negative-preview-feature",
+      "layer": "reference",
+      "dtcgReportVersion": "2025.10",
+      "sourceRevision": "fixture-rev-0001-synthetic",
+      "testOnly": true,
+      "nonNormative": true
+    }
+  },
+  "test-primitive": {
+    "alpha": {
+      "$type": "cds-preview-only-type-not-in-2025-10",
+      "$value": 0
+    }
+  }
+}

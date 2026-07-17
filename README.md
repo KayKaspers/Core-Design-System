@@ -27,12 +27,15 @@ templates exist, and the twelve Critical Risks are made actionable in a
 The first **accessibility support baseline** (A11Y-BL-001) is **defined** (CDS-WP-010,
 pending commit) — a **test contract, not evidence**. The **machine-readable source
 format is decided** (CDS-WP-011): a **DTCG 2025.10-based CDS profile** in **strict
-JSON**, recorded in [ADR-0001](docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)
-(pending commit) — **no token value or schema is implemented**. **No accessibility test
+JSON** ([ADR-0001](docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)), and
+its **value-neutral bootstrap is implemented** (CDS-WP-012): four CDS-owned JSON Schema
+2020-12 contracts, synthetic-only fixtures, a V1–V4 validation contract, and an RFC 8785
++ SHA-256 serialization decision ([ADR-0002](docs/decisions/ADR-0002-DETERMINISTIC_JSON_SERIALIZATION.md))
+— **Experimental, no productive validator, no real token value**. **No accessibility test
 has been run, every artifact is AE-0, no Candidate or Stable artifact exists, no claim
 is valid, no licence is selected, and the publication state remains `Private
-Development`.** The next work package is **CDS-WP-012 — Machine-Readable Source
-Bootstrap and Validation Contract**.
+Development`.** The next work package is **CDS-WP-013 — Offline Token Profile Validator
+and Fixture Harness**.
 
 The project does not yet produce visual design.
 
@@ -333,14 +336,27 @@ W3C Standard** — as the external basis, in **strict JSON (`.tokens.json`)**, u
 profile-schema foundation. Source sets are layered (Reference → Semantic → Component →
 Product Profile); channel outputs are generated and non-normative; references and
 resolution **fail closed**; four validation layers separate syntax, DTCG, CDS profile,
-and semantic/governance checks. **No token value, schema, resolver, or validator
-exists.**
+and semantic/governance checks.
+
+Its **value-neutral bootstrap is implemented** (CDS-WP-012): **four CDS-owned JSON Schema
+Draft 2020-12 contracts** (token document, source-set manifest, resolver document,
+validation case; stable `tag:` identifiers, offline), the `io.github.kaykaspers.cds`
+extension payload, **six synthetic positive and nine synthetic negative fixtures**, a
+**15-case validation-case matrix** binding every fixture to expected V1–V4 outcomes, an
+explicit **V1–V4 Validation Contract** (duplicate keys fail V1; no aggregate score), and
+the **RFC 8785 + SHA-256** deterministic-serialization decision. **The fixtures are
+synthetic, test-only, and non-normative — not real design tokens. No productive validator
+or canonicalizer is implemented; formal schema execution is not assessed; the bootstrap is
+Experimental, not Candidate.**
 
 - [ADR-0001 — Machine-Readable Token Source Format](docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)
+- [ADR-0002 — Deterministic JSON Serialization](docs/decisions/ADR-0002-DETERMINISTIC_JSON_SERIALIZATION.md)
 - [Machine-Readable Source Model](docs/architecture/MACHINE_READABLE_SOURCE_MODEL.md)
 - [CDS Token Format Profile](docs/architecture/CDS_TOKEN_FORMAT_PROFILE.md)
 - [Token Reference, Resolution and Validation Model](docs/architecture/TOKEN_REFERENCE_RESOLUTION_AND_VALIDATION_MODEL.md)
 - [Token Metadata, Provenance and Identity Model](docs/architecture/TOKEN_METADATA_PROVENANCE_AND_IDENTITY_MODEL.md)
+- [Machine-Readable Validation Contract](docs/architecture/MACHINE_READABLE_VALIDATION_CONTRACT.md)
+- [Deterministic Serialization and Digest Model](docs/architecture/DETERMINISTIC_SERIALIZATION_AND_DIGEST_MODEL.md)
 - [Token Format Evaluation](docs/research/TOKEN_FORMAT_EVALUATION.md) ·
   [Source Register](docs/research/TOKEN_FORMAT_SOURCE_REGISTER.md)
 - [Implementation Plan](docs/roadmap/MACHINE_READABLE_SOURCE_IMPLEMENTATION_PLAN.md)
@@ -359,7 +375,8 @@ exists.**
 - **Completed:** CDS-WP-009 — Operating Enablement and Pre-Candidate Readiness
 - **Completed:** CDS-WP-010 — Accessibility Support Baseline and Evidence Strategy
 - **Completed:** CDS-WP-011 — Machine-Readable Source and Token Format Decision
-- **Next:** **CDS-WP-012 — Machine-Readable Source Bootstrap and Validation Contract**
+- **Completed:** CDS-WP-012 — Machine-Readable Source Bootstrap and Validation Contract
+- **Next:** **CDS-WP-013 — Offline Token Profile Validator and Fixture Harness**
   (authorized; not yet executed)
 
 The full controlled roadmap is in
@@ -401,9 +418,9 @@ phase.
   12 logical architecture decisions, 16 governance, lifecycle and publication
   decisions, 12 accessibility and inclusive design decisions, 4 operating
   enablement and pre-candidate decisions, 8 accessibility support baseline and
-  evidence decisions, 10 machine-readable source and token format decisions ·
-  ADRs: 1 (ADR-0001)
-- Risks: RISK-001 … RISK-063 (63) — 61 Monitored, RISK-040 and RISK-044 Mitigating;
+  evidence decisions, 10 machine-readable source and token format decisions,
+  10 machine-readable bootstrap and validation decisions · ADRs: 2 (ADR-0001, ADR-0002)
+- Risks: RISK-001 … RISK-072 (72) — 70 Monitored, RISK-040 and RISK-044 Mitigating;
   owner model finalized; no risk accepted or closed
 
 ## Governance documents

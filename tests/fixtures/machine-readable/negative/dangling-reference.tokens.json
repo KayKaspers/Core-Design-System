@@ -1,0 +1,20 @@
+{
+  "$description": "NEGATIVE FIXTURE. Intentionally invalid for CDS: a token reference targets a non-existent token. Primary failure: unresolved token reference (V2). Structurally well-formed; the failure is at reference resolution.",
+  "$extensions": {
+    "io.github.kaykaspers.cds": {
+      "profileVersion": "1",
+      "sourceSetId": "fixture/negative-dangling",
+      "layer": "semantic",
+      "dtcgReportVersion": "2025.10",
+      "sourceRevision": "fixture-rev-0001-synthetic",
+      "testOnly": true,
+      "nonNormative": true
+    }
+  },
+  "test-role": {
+    "primary": {
+      "$type": "number",
+      "$value": "{test-role.does-not-exist}"
+    }
+  }
+}

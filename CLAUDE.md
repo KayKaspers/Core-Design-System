@@ -26,19 +26,21 @@ library, or a design project scoped exclusively to CoreOps.
 - First reference consumer: CoreOps (not the sole design target)
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
-  CDS-WP-011
+  CDS-WP-011, CDS-WP-012
 - Accessibility support baseline: **A11Y-BL-001 defined** (CDS-WP-010, pending
   commit) — a **test contract, not evidence**; **no test has been run and every
   artifact is AE-0**.
-- Machine-readable source format: **decided** (CDS-WP-011,
-  [ADR-0001](docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md), pending
-  commit) — a **DTCG 2025.10-based CDS profile** in **strict JSON `.tokens.json`**;
-  **no token value, schema, or validator is implemented**.
-- Next work package: **CDS-WP-012 — Machine-Readable Source Bootstrap and Validation
-  Contract** (authorized as next; **not yet executed**). It builds value-neutral
-  schema/fixtures/validation-contract machinery only; it creates no real design
-  values, Candidate, pilot, component, licence, or publication. Execution begins only
-  on an explicit Nova prompt and Human-Maintainer authorization.
+- Machine-readable source format: **decided** (CDS-WP-011, ADR-0001) — a **DTCG
+  2025.10-based CDS profile** in **strict JSON `.tokens.json`**; its **value-neutral
+  bootstrap is implemented** (CDS-WP-012, ADR-0002): 4 CDS-owned JSON Schema 2020-12
+  contracts, 15 synthetic fixtures, a V1–V4 validation contract, and the RFC 8785 +
+  SHA-256 serialization decision — **Experimental, no productive validator, no real
+  token value**.
+- Next work package: **CDS-WP-013 — Offline Token Profile Validator and Fixture
+  Harness** (authorized as next; **not yet executed**). It implements the offline
+  validator, executes the validation cases, and computes canonicalization/digests; it
+  creates no real design values, Candidate, pilot, component, licence, or publication.
+  Execution begins only on an explicit Nova prompt and Human-Maintainer authorization.
 
 ## Execution environment
 
@@ -347,10 +349,36 @@ commit) and **not implemented**.
   reference; DTCG `$ref` / RFC 6901 JSON Pointer is the required form for
   document/property/resolver/source-set and controlled cross-file references.
 - **No token value without an explicit prompt.** Claude creates no token, colour,
-  typography, spacing, size, name, schema, resolver, or validator. The next work
-  package (CDS-WP-012) builds value-neutral machinery only. See the
+  typography, spacing, size, name, or design value. See the
   [Machine-Readable Source Model](docs/architecture/MACHINE_READABLE_SOURCE_MODEL.md)
   and the [Implementation Plan](docs/roadmap/MACHINE_READABLE_SOURCE_IMPLEMENTATION_PLAN.md).
+
+### Machine-readable bootstrap (CDS-WP-012)
+
+The value-neutral bootstrap is **implemented** (Experimental, pending commit): four
+CDS-owned JSON Schema 2020-12 contracts in `schemas/`, synthetic fixtures and a
+validation-case matrix in `tests/fixtures/machine-readable/`, the
+[Validation Contract](docs/architecture/MACHINE_READABLE_VALIDATION_CONTRACT.md) (V1–V4),
+and the [Serialization/Digest Model](docs/architecture/DETERMINISTIC_SERIALIZATION_AND_DIGEST_MODEL.md)
+(ADR-0002).
+
+- **Schemas and fixtures are a structural boundary, not correctness.** A JSON Schema
+  pass proves no V2 (DTCG), V3 (profile), or V4 (semantic/governance) pass (DEC-S-083,
+  DEC-S-089); **no schema pass may be claimed without an actual validator run** — none
+  has run (execution is CDS-WP-013).
+- **Fixtures are synthetic, test-only, non-normative** (DEC-S-087). Their values are
+  neutral placeholders and are **never real CDS design tokens or Product Profiles**;
+  never publish, consume, or describe a fixture value as a design decision.
+- **No real design values.** Claude creates no colour, typography, spacing, size, or
+  real token — in schemas, fixtures, or anywhere — without an explicit design prompt.
+- **Duplicate JSON member names fail closed at V1** and are never repaired via
+  first/last-key-wins (DEC-S-088).
+- **RFC 8785 (JCS) + SHA-256 digests are integrity aids, not authenticity** (DEC-S-090,
+  RISK-072): a digest is not a signature and proves no authorship, approval, or release;
+  no canonicalizer is implemented and digests are `Not computed`.
+- Compact orientation stays in the
+  [Foundation Context Pack](project-system/CONTEXT_PACK_FOUNDATION.md) — a summary, never
+  a normative source.
 
 ## Claim and release boundaries
 

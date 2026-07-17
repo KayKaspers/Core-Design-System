@@ -6,8 +6,8 @@
 > it never defines. Where it disagrees with a normative source, the normative
 > source wins and this pack is wrong and must be corrected.
 
-- **Maintained by:** CDS-WP-011
-- **Date:** 2026-07-16
+- **Maintained by:** CDS-WP-012
+- **Date:** 2026-07-17
 
 ## Project identity
 
@@ -27,9 +27,11 @@ established; the Foundation is closed with mandatory notes; the committed govern
 is operationalized; the accessibility support baseline **A11Y-BL-001** is defined
 (CDS-WP-010, pending commit, **no evidence executed — every artifact AE-0**); and the
 **machine-readable source format is decided** (CDS-WP-011: DTCG 2025.10-based CDS
-profile, strict JSON, ADR-0001, pending commit, **not implemented**). Concrete visual
-design values remain unauthorized (DEC-S-003). The next work package is **CDS-WP-012 —
-Machine-Readable Source Bootstrap and Validation Contract**.
+profile, strict JSON, ADR-0001); and the **machine-readable bootstrap is implemented**
+(CDS-WP-012: 4 schemas, 15 fixtures, V1–V4 validation contract, RFC 8785/SHA-256, ADR-0002)
+— **Experimental, pending commit, no validator executed, no design value**. Concrete
+visual design values remain unauthorized (DEC-S-003). The next work package is
+**CDS-WP-013 — Offline Token Profile Validator and Fixture Harness**.
 
 ## Completed work packages
 
@@ -46,7 +48,8 @@ Machine-Readable Source Bootstrap and Validation Contract**.
 | CDS-WP-008 | Foundation Milestone Review | Reviewed the Foundation across 12 dimensions (55 criteria), 3 governance dry runs, 4-axis Candidate readiness, 8-criterion pilot entry matrix, all 48 risks. **0 Foundation blockers**; recommended outcome **GO WITH NOTES**; 12 findings (FM-F-001…012). **No normative source changed; no Decision/Risk/ADR/WP-ID created; no artifact promoted; publication state unchanged.** Non-normative review evidence in `docs/reviews/`. |
 | CDS-WP-009 | Operating Enablement and Pre-Candidate Readiness | Recorded **Foundation closure with notes** (accepted by the Human Maintainer); operationalized governance without any design/token/component/tool. Created the Closure Record (normative on closure/authority/phase), Operating Playbook, Standard + Elevated dossier templates, Critical Risk Action Register (12 risks actionable), Reference Integrity Review (PASS), and Pre-Candidate Operating Plan. DEC-S-061…064 added; RISK-040 `Monitored → Mitigating` (only status change; no acceptance/closure). **No artifact promoted; publication state `Private Development`.** |
 | CDS-WP-010 | Accessibility Support Baseline and Evidence Strategy | Defined **A11Y-BL-001** (pending commit) via authorized official research — 3 tiers, 14-entry environment matrix (Required 6 · Conditional 4 · Deferred 4), evidence strategy (AE-0…AE-4), maintenance policy (freshness + triggers + 6-month max gap), defect/regression model, evidence record template, source register + selection rationale. DEC-S-065…072 added; RISK-049…054 added; RISK-044 `Monitored → Mitigating`. **A test contract, not evidence — no test run, every artifact AE-0, no environment claimed supported, pilot inactive, publication `Private Development`.** |
-| CDS-WP-011 | Machine-Readable Source and Token Format Decision | Decided the normative machine-readable source format via authorized official research (13 URLs; stable vs preview separated): **DTCG 2025.10** (Format/Color/Resolver; a **Final CG Report, not a W3C Standard**) as external basis, **strict JSON `.tokens.json`**, **JSON Schema 2020-12** profile-schema foundation, an `io.github.kaykaspers.cds` `$extensions` namespace, four source-set layers, fail-closed references (curly-brace token-to-token vs `$ref`/JSON-Pointer for document/resolver/cross-file), machine-validatable naming, versioned provenance, and 4 validation layers. Created **ADR-0001** + 4 architecture docs + evaluation/register + implementation plan. DEC-S-073…082 added; RISK-055…063 added. **No token/schema/validator/design value; no Candidate/Stable; pilot inactive; publication `Private Development`. CDS-WP-012 registered Next.** |
+| CDS-WP-011 | Machine-Readable Source and Token Format Decision | Decided the normative machine-readable source format via authorized official research (13 URLs; stable vs preview separated): **DTCG 2025.10** (Format/Color/Resolver; a **Final CG Report, not a W3C Standard**) as external basis, **strict JSON `.tokens.json`**, **JSON Schema 2020-12** profile-schema foundation, an `io.github.kaykaspers.cds` `$extensions` namespace, four source-set layers, fail-closed references (curly-brace token-to-token vs `$ref`/JSON-Pointer for document/resolver/cross-file), machine-validatable naming, versioned provenance, and 4 validation layers. Created **ADR-0001** + 4 architecture docs + evaluation/register + implementation plan. DEC-S-073…082 added; RISK-055…063 added. **No token/schema/validator/design value; no Candidate/Stable; pilot inactive; publication `Private Development`.** |
+| CDS-WP-012 | Machine-Readable Source Bootstrap and Validation Contract | Implemented the value-neutral bootstrap (pending commit): **4 CDS-owned JSON Schema 2020-12 contracts** (token document, source-set manifest, resolver, validation case; stable `tag:` `$id`s, local `$ref`, offline), the `io.github.kaykaspers.cds` payload contract, **6 positive + 9 negative synthetic fixtures**, a **15-case validation-case matrix** (expected V1–V4 per fixture), an explicit **V1–V4 Validation Contract** (duplicate-key fails V1; no aggregate score), and the **RFC 8785 (JCS) + SHA-256** serialization decision (**ADR-0002**). DEC-S-083…092 added; RISK-064…072 added. **No real token/design value, productive validator, or canonicalizer; formal schema execution `Not assessed`; Experimental, not Candidate; publication `Private Development`. CDS-WP-013 registered Next.** |
 
 ## Normative source map
 
@@ -83,7 +86,12 @@ Read the source, not this summary, when the detail matters.
 | CDS token format profile | [docs/architecture/CDS_TOKEN_FORMAT_PROFILE.md](../docs/architecture/CDS_TOKEN_FORMAT_PROFILE.md) |
 | Token reference/resolution/validation | [docs/architecture/TOKEN_REFERENCE_RESOLUTION_AND_VALIDATION_MODEL.md](../docs/architecture/TOKEN_REFERENCE_RESOLUTION_AND_VALIDATION_MODEL.md) |
 | Token metadata/provenance/identity | [docs/architecture/TOKEN_METADATA_PROVENANCE_AND_IDENTITY_MODEL.md](../docs/architecture/TOKEN_METADATA_PROVENANCE_AND_IDENTITY_MODEL.md) |
-| Format decision (ADR) | [docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md](../docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md) |
+| Machine-readable validation contract (V1–V4) | [docs/architecture/MACHINE_READABLE_VALIDATION_CONTRACT.md](../docs/architecture/MACHINE_READABLE_VALIDATION_CONTRACT.md) |
+| Deterministic serialization / digest | [docs/architecture/DETERMINISTIC_SERIALIZATION_AND_DIGEST_MODEL.md](../docs/architecture/DETERMINISTIC_SERIALIZATION_AND_DIGEST_MODEL.md) |
+| Format decision (ADR-0001) | [docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md](../docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md) |
+| Serialization decision (ADR-0002) | [docs/decisions/ADR-0002-DETERMINISTIC_JSON_SERIALIZATION.md](../docs/decisions/ADR-0002-DETERMINISTIC_JSON_SERIALIZATION.md) |
+| CDS schemas (structural, non-normative-executed) | [schemas/](../schemas/) |
+| Synthetic validation fixtures + case matrix | [tests/fixtures/machine-readable/](../tests/fixtures/machine-readable/) |
 | **Logical architecture** | [docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md](../docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md) |
 | Artifact classes and authority | [docs/architecture/SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md](../docs/architecture/SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md) |
 | Token flow and theming | [docs/architecture/TOKEN_AND_THEME_ARCHITECTURE.md](../docs/architecture/TOKEN_AND_THEME_ARCHITECTURE.md) |
@@ -119,7 +127,7 @@ and reference the normative policies; they do not replace them (DEC-S-063):
 
 ## Active decisions
 
-- Range: DEC-S-001 … DEC-S-082 · Count: 82 · All Accepted · ADRs: 1 (ADR-0001)
+- Range: DEC-S-001 … DEC-S-092 · Count: 92 · All Accepted · ADRs: 2 (ADR-0001, ADR-0002)
 - DEC-S-001…006: strategic foundation decisions (CDS-WP-001)
 - DEC-S-007…012: strategic scope decisions (CDS-WP-002)
 - DEC-S-013…020: consumer and pilot scope decisions (CDS-WP-004)
@@ -134,7 +142,10 @@ and reference the normative policies; they do not replace them (DEC-S-063):
   — DEC-S-001…064 unchanged
 - DEC-S-073…082: machine-readable source and token format decisions (CDS-WP-011) —
   DEC-S-001…072 unchanged
-- ADR-0001 (Machine-Readable Token Source Format) exists — the first ADR.
+- DEC-S-083…092: machine-readable bootstrap and validation decisions (CDS-WP-012) —
+  DEC-S-001…082 unchanged
+- ADR-0001 (Machine-Readable Token Source Format) and ADR-0002 (Deterministic JSON
+  Serialization) exist — 2 ADRs.
 
 | ID | Summary |
 | --- | --- |
@@ -220,10 +231,20 @@ and reference the normative policies; they do not replace them (DEC-S-063):
 | DEC-S-080 | Sources/outputs carry versioned identity (profile+DTCG version, immutable revision, deps, transformation, maturity, approval, provenance); no `latest`. |
 | DEC-S-081 | A restrictive, machine-validatable naming profile; technical IDs separate from display labels. |
 | DEC-S-082 | Format/profile/binding/reference/extension/validation upgrades are governed; no automatic upgrade. |
+| DEC-S-083 | Bootstrap = CDS-owned JSON Schemas + synthetic fixtures; presence is not conformance. |
+| DEC-S-084 | CDS metadata under `io.github.kaykaspers.cds`, requires `profileVersion`; foreign extensions preserved, not normative. |
+| DEC-S-085 | Source-Set manifests explicitly declare identity/layer/path/graph; no implicit or network-discovered sets. |
+| DEC-S-086 | Resolver documents: strict JSON, `$ref`/JSON Pointer, explicit local ordered composition; no network resolution. |
+| DEC-S-087 | Validation fixtures are synthetic, test-only, non-normative; never real tokens/profiles. |
+| DEC-S-088 | Duplicate JSON member names prohibited; fail V1; no first/last-key-wins repair. |
+| DEC-S-089 | Validation cases bind every fixture to expected V1–V4; layers stay visible; no aggregate score. |
+| DEC-S-090 | RFC 8785 (JCS) + SHA-256 for canonical content digests; supplements, not replaces, revision/approval/provenance. |
+| DEC-S-091 | Cross-file references valid only via the declared local graph; undeclared/network/missing/cyclic fail closed. |
+| DEC-S-092 | Bootstrap stays Experimental until a validator executes, results are reviewed, and the Human Maintainer approves. |
 
 ## Active risks
 
-- Range: RISK-001 … RISK-063 · Count: 63 · **61 Monitored, RISK-040 + RISK-044 Mitigating**
+- Range: RISK-001 … RISK-072 · Count: 72 · **70 Monitored, RISK-040 + RISK-044 Mitigating**
 - **Owner model finalized** (DEC-S-045): Accountable Risk Owner — Human
   Maintainer · Risk Controller — Nova · Mitigation Executor — named per
   mitigation · Evidence Reviewer — Nova or authorized reviewer (never the executor).
@@ -233,8 +254,9 @@ and reference the normative policies; they do not replace them (DEC-S-063):
   [Critical Risk Action Register](../docs/operations/CRITICAL_RISK_ACTION_REGISTER.md)
   (12 Critical Risks made actionable; DEC-S-064). **CDS-WP-010 added RISK-049…054**
   and moved **RISK-044 `Monitored → Mitigating`** (A11Y-BL-001 defined).
-  **CDS-WP-011 added RISK-055…063** (all Monitored; token-format/spec-drift/
-  reference/provenance risks). No risk accepted or closed.
+  **CDS-WP-011 added RISK-055…063** (token-format/spec-drift/reference/provenance risks).
+  **CDS-WP-012 added RISK-064…072** (all Monitored; schema/fixture/duplicate-key/
+  canonicalization/validation-coverage risks). No risk accepted or closed.
 
 | ID | Summary |
 | --- | --- |
@@ -301,6 +323,15 @@ and reference the normative policies; they do not replace them (DEC-S-063):
 | RISK-061 | Token identifier collision. |
 | RISK-062 | Token provenance incompleteness. |
 | RISK-063 | Transformation-tool lock-in. |
+| RISK-064 | CDS schema contract incompleteness. |
+| RISK-065 | Synthetic fixtures mistaken for design tokens. |
+| RISK-066 | Schema and validator divergence. |
+| RISK-067 | Canonicalization and digest mismatch. |
+| RISK-068 | Duplicate-key ambiguity. |
+| RISK-069 | Manifest and resolver graph inconsistency. |
+| RISK-070 | Validation fixture coverage gap. |
+| RISK-071 | Validation expectation drift. |
+| RISK-072 | Digest mistaken for authenticity. |
 
 ## Approved strategic principles
 
@@ -640,8 +671,9 @@ Foundation closure and the next phase were subsequently **decided**: the Human
 Maintainer accepted `GO WITH NOTES` (commit of CDS-WP-008 + initiation of
 CDS-WP-009). **Foundation: Closed with Notes.** Operating enablement is in place
 (CDS-WP-009), the accessibility support baseline A11Y-BL-001 is defined (CDS-WP-010,
-pending commit, no evidence executed), and the machine-readable source format is
-decided (CDS-WP-011, ADR-0001, pending commit, not implemented); the next authorized
-work package is **CDS-WP-012 — Machine-Readable Source Bootstrap and Validation
-Contract**. See the
+pending commit, no evidence executed), the machine-readable source format is
+decided (CDS-WP-011, ADR-0001), and the machine-readable bootstrap is implemented
+(CDS-WP-012, Experimental, ADR-0002, pending commit, no validator executed); the next
+authorized work package is **CDS-WP-013 — Offline Token Profile Validator and Fixture
+Harness**. See the
 [Foundation Closure Record](../docs/governance/FOUNDATION_CLOSURE_RECORD.md).

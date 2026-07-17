@@ -6,9 +6,9 @@ Controlled work-package roadmap for the Core Design System (CDS).
   Closed with Notes**
 - **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
-  CDS-WP-011
-- **Next work package:** **CDS-WP-012 — Machine-Readable Source Bootstrap and
-  Validation Contract** (authorized as the next work package; not yet executed)
+  CDS-WP-011, CDS-WP-012
+- **Next work package:** **CDS-WP-013 — Offline Token Profile Validator and Fixture
+  Harness** (authorized as the next work package; not yet executed)
 
 ## Status values
 
@@ -34,14 +34,16 @@ Controlled work-package roadmap for the Core Design System (CDS).
 | CDS-WP-009 | Operating Enablement and Pre-Candidate Readiness | Completed | CDS-WP-008 |
 | CDS-WP-010 | Accessibility Support Baseline and Evidence Strategy | Completed | CDS-WP-009 |
 | CDS-WP-011 | Machine-Readable Source and Token Format Decision | Completed | CDS-WP-010 |
-| CDS-WP-012 | Machine-Readable Source Bootstrap and Validation Contract | Next | CDS-WP-011 |
+| CDS-WP-012 | Machine-Readable Source Bootstrap and Validation Contract | Completed | CDS-WP-011 |
+| CDS-WP-013 | Offline Token Profile Validator and Fixture Harness | Next | CDS-WP-012 |
 
-**CDS-WP-012 is authorized as the next Work Package.** The Foundation is closed with
-notes; the Pre-Candidate Operating Enablement phase is active; the accessibility
-support baseline (A11Y-BL-001) is defined; and the machine-readable source format is
-decided (DTCG 2025.10-based CDS profile, ADR-0001, pending commit; not implemented).
-CDS-WP-012 is registered as `Next` and is not yet executed. No further work-package ID
-is created.
+**CDS-WP-013 is authorized as the next Work Package.** The Foundation is closed with
+notes; the Pre-Candidate Operating Enablement phase is active; the accessibility support
+baseline (A11Y-BL-001) is defined; the machine-readable source format is decided (ADR-0001);
+and the value-neutral bootstrap (4 schemas, 15 fixtures, V1–V4 validation contract, RFC
+8785/SHA-256 serialization decision, ADR-0002) is implemented but Experimental and not
+executed by a validator. CDS-WP-013 is registered as `Next` and is not yet executed. No
+further work-package ID is created.
 
 ## Descriptions
 
@@ -222,15 +224,33 @@ state `Private Development`.**
 
 ### CDS-WP-012 — Machine-Readable Source Bootstrap and Validation Contract
 
+**Status:** Completed
+
+Implemented the value-neutral machine-readable bootstrap (pending commit): four CDS-owned
+JSON Schema Draft 2020-12 contracts ([token document](../schemas/cds-token-document.schema.json),
+[source-set manifest](../schemas/cds-source-set-manifest.schema.json),
+[resolver](../schemas/cds-resolver-document.schema.json),
+[validation case](../schemas/cds-validation-case.schema.json)); the
+`io.github.kaykaspers.cds` extension payload contract; six synthetic positive fixtures and
+nine synthetic negative fixtures under `tests/fixtures/machine-readable/`; a 15-case
+[validation-case matrix](../tests/fixtures/machine-readable/VALIDATION_CASES.json); an
+explicit [V1–V4 Validation Contract](../docs/architecture/MACHINE_READABLE_VALIDATION_CONTRACT.md)
+with a duplicate-key prohibition; and the
+[deterministic-serialization decision](../docs/architecture/DETERMINISTIC_SERIALIZATION_AND_DIGEST_MODEL.md)
+(RFC 8785 + SHA-256, ADR-0002). Added DEC-S-083…092 and RISK-064…072; created ADR-0002.
+**No real token/design value, productive validator, canonicalizer, transformer, or build;
+formal schema execution `Not assessed`; Experimental, not Candidate; publication state
+`Private Development`.**
+
+### CDS-WP-013 — Offline Token Profile Validator and Fixture Harness
+
 **Status:** Next
 
-Will build value-neutral machinery for the decided format: a CDS profile JSON Schema,
-a source-set manifest schema, positive/negative validation fixtures, resolver and
-reference/cycle fixtures, the layer-dependency validation contract, an
-offline-validation boundary, a deterministic-serialization decision, and provenance
-evidence. It creates **no real design values, no Candidate, no component work, and no
-pilot start**. Not yet executed; begins only on an explicit Nova prompt and
-Human-Maintainer authorization.
+Will implement an offline validator (with duplicate-key detection), a fixture harness that
+executes the validation cases, RFC 8785 canonicalization + SHA-256 digest generation,
+machine-readable validation results, and an independent evidence-review boundary. It creates
+**no real design values, no Candidate, no component work, and no pilot start**. Not yet
+executed; begins only on an explicit Nova prompt and Human-Maintainer authorization.
 
 ## Roadmap evolution
 

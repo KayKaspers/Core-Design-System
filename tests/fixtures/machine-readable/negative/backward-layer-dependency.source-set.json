@@ -1,0 +1,48 @@
+{
+  "manifestVersion": "1",
+  "profileVersion": "1",
+  "dtcgReportVersion": "2025.10",
+  "manifestId": "fixture/negative-backward-layer",
+  "sourceRevision": "fixture-rev-0001-synthetic",
+  "maturityState": "Experimental",
+  "approvalState": "Unapproved",
+  "ownerRole": "Claude (scoped executor)",
+  "testOnly": true,
+  "nonNormative": true,
+  "sourceSets": [
+    {
+      "sourceSetId": "fixture/back-reference",
+      "path": "back-reference-set.tokens.json",
+      "layer": "reference",
+      "dependencies": ["fixture/back-semantic"],
+      "sourceRevision": "fixture-rev-0001-synthetic",
+      "expectedProfileVersion": "1",
+      "expectedDtcgVersion": "2025.10",
+      "maturityState": "Experimental",
+      "approvalState": "Unapproved"
+    },
+    {
+      "sourceSetId": "fixture/back-semantic",
+      "path": "back-semantic-set.tokens.json",
+      "layer": "semantic",
+      "dependencies": [],
+      "sourceRevision": "fixture-rev-0001-synthetic",
+      "expectedProfileVersion": "1",
+      "expectedDtcgVersion": "2025.10",
+      "maturityState": "Experimental",
+      "approvalState": "Unapproved"
+    }
+  ],
+  "dependencyGraph": {
+    "fixture/back-reference": ["fixture/back-semantic"],
+    "fixture/back-semantic": []
+  },
+  "resolverDocuments": [],
+  "productProfileBoundary": {
+    "approvedExtensionPoints": []
+  },
+  "provenanceState": "Bound",
+  "digestState": {
+    "status": "Not computed – validator implementation pending"
+  }
+}

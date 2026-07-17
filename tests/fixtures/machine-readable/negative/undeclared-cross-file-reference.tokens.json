@@ -1,0 +1,21 @@
+{
+  "$description": "NEGATIVE FIXTURE. Intentionally invalid for CDS: references a token in a source set that is not declared in the Source-Set Manifest / Resolver graph. Primary failure: reference outside the declared graph (V3). Structurally well-formed.",
+  "$extensions": {
+    "io.github.kaykaspers.cds": {
+      "profileVersion": "1",
+      "sourceSetId": "fixture/negative-undeclared-cross-file",
+      "layer": "semantic",
+      "dtcgReportVersion": "2025.10",
+      "sourceRevision": "fixture-rev-0001-synthetic",
+      "testOnly": true,
+      "nonNormative": true,
+      "manifestRef": "source-set-manifest.source-set.json"
+    }
+  },
+  "test-role": {
+    "primary": {
+      "$type": "number",
+      "$value": "{undeclared-external-set.some-token}"
+    }
+  }
+}

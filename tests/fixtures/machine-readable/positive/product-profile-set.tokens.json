@@ -1,0 +1,31 @@
+{
+  "$description": "Synthetic product-profile-layer source set. TEST ONLY, NON-NORMATIVE. Overrides only an explicitly test-marked extension point; grants no real Product-Profile acceptance.",
+  "$extensions": {
+    "io.github.kaykaspers.cds": {
+      "profileVersion": "1",
+      "sourceSetId": "fixture/product-profile",
+      "layer": "product-profile",
+      "dtcgReportVersion": "2025.10",
+      "sourceRevision": "fixture-rev-0001-synthetic",
+      "manifestRef": "source-set-manifest.source-set.json",
+      "testOnly": true,
+      "nonNormative": true,
+      "maturityState": "Experimental",
+      "approvalState": "Unapproved",
+      "approvedExtensionPoint": "fixture/test-extension-point"
+    }
+  },
+  "test-component": {
+    "$description": "Synthetic override at the approved test extension point only.",
+    "slot": {
+      "$type": "number",
+      "$value": "{test-role.secondary}",
+      "$extensions": {
+        "io.github.kaykaspers.cds": {
+          "profileVersion": "1",
+          "approvedExtensionPoint": "fixture/test-extension-point"
+        }
+      }
+    }
+  }
+}

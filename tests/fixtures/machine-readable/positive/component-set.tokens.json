@@ -1,0 +1,30 @@
+{
+  "$description": "Synthetic component-layer source set. TEST ONLY, NON-NORMATIVE. Binds semantic tokens only; never references the reference layer directly.",
+  "$extensions": {
+    "io.github.kaykaspers.cds": {
+      "profileVersion": "1",
+      "sourceSetId": "fixture/component",
+      "layer": "component",
+      "dtcgReportVersion": "2025.10",
+      "sourceRevision": "fixture-rev-0001-synthetic",
+      "manifestRef": "source-set-manifest.source-set.json",
+      "testOnly": true,
+      "nonNormative": true,
+      "maturityState": "Experimental",
+      "approvalState": "Unapproved"
+    }
+  },
+  "test-component": {
+    "$description": "Synthetic component group; binds a semantic role.",
+    "slot": {
+      "$type": "number",
+      "$value": "{test-role.primary}",
+      "$extensions": {
+        "io.github.kaykaspers.cds": {
+          "profileVersion": "1",
+          "approvedExtensionPoint": "fixture/test-extension-point"
+        }
+      }
+    }
+  }
+}

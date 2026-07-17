@@ -1,0 +1,43 @@
+{
+  "resolverVersion": "1",
+  "resolverId": "fixture/resolver-default",
+  "profileVersion": "1",
+  "dtcgReportVersion": "2025.10",
+  "sourceRevision": "fixture-rev-0001-synthetic",
+  "localOnly": true,
+  "testOnly": true,
+  "nonNormative": true,
+  "orderedSourceSets": [
+    {
+      "order": 1,
+      "sourceSetId": "fixture/reference",
+      "$ref": "reference-set.tokens.json",
+      "pointer": ""
+    },
+    {
+      "order": 2,
+      "sourceSetId": "fixture/semantic",
+      "$ref": "semantic-set.tokens.json",
+      "pointer": ""
+    },
+    {
+      "order": 3,
+      "sourceSetId": "fixture/component",
+      "$ref": "component-set.tokens.json",
+      "pointer": ""
+    },
+    {
+      "order": 4,
+      "sourceSetId": "fixture/product-profile",
+      "$ref": "product-profile-set.tokens.json",
+      "pointer": "/test-component/slot"
+    }
+  ],
+  "outputIdentity": {
+    "outputId": "fixture/resolved-output-default",
+    "generated": true,
+    "digestState": {
+      "status": "Not computed – validator implementation pending"
+    }
+  }
+}
