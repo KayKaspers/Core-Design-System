@@ -1,0 +1,104 @@
+{
+  "reviewer": {
+    "artifactPurpose": "CDS-WP-016 independent Evidence Review - re-execution evidence",
+    "evidenceReviewer": "Claude Opus 4.8 (claude-opus-4-8), fresh session, not the CDS-WP-013/WP-015 executor",
+    "authorization": "Human Maintainer (Kay) authorized this fresh session as separate Evidence Reviewer (DEC-S-045, DEC-S-103, DEC-S-121)",
+    "reviewRevision": "6d94d65eebb31373622459a21619ee5700e1b625",
+    "worktreeStateAtReview": "clean committed HEAD; the reviewer wrote nothing into the repository during execution",
+    "runtime": {
+      "pythonVersion": "3.12.10",
+      "os": "win32 (Windows 11)",
+      "venv": "fresh, outside repository",
+      "installSource": "requirements-validator.lock exact pins",
+      "offlineAfterInstall": true,
+      "directDependencies": {
+        "jsonschema": "4.26.0",
+        "rfc8785": "0.1.4"
+      },
+      "transitiveDependencies": {
+        "attrs": "26.1.0",
+        "jsonschema-specifications": "2025.9.1",
+        "referencing": "0.37.0",
+        "rpds-py": "2026.6.3",
+        "typing_extensions": "4.16.0"
+      }
+    },
+    "note": "The embedded cliReport is the verbatim output of the offline validator (python -m tools.cds_validator validate-cases / validate-file). Its executionIdentity string is CLI-hardcoded and does NOT identify the reviewer; the validator was not modified. Independent execution was performed by the Evidence Reviewer named above.",
+    "generatedOn": "2026-07-18"
+  },
+  "input": "tokens/semantic/status/semantic-status.tokens.json",
+  "results": {
+    "V1": "Pass",
+    "V2": "Pass",
+    "V3": "Pass",
+    "V4": "Not assessed"
+  },
+  "blockingLayer": "none",
+  "diagnosticCodes": [
+    "CDS-V4-NOT-ASSESSED",
+    "CDS-V4-NOT-ASSESSED",
+    "CDS-V4-NOT-ASSESSED"
+  ],
+  "objectiveStatusChecks": "executed; 0 status-error diagnostics -> objective semantic-status V4 subset passed",
+  "overallCharacterization": "V1 Pass, V2 Pass, V3 Pass, V4 Not assessed (informational not-assessed residue only); not Fail, not Blocked (the Pass-with-limitations sense of the Candidate Plan)",
+  "comparisonToCommittedWp015": {
+    "committedResults": {
+      "V1": "Pass",
+      "V2": "Pass",
+      "V3": "Pass",
+      "V4": "Not assessed"
+    },
+    "committedBlockingLayer": "none",
+    "resultsIdentical": true,
+    "diagnosticsIdentical": true
+  },
+  "cliReport": {
+    "input": "tokens/semantic/status/semantic-status.tokens.json",
+    "results": {
+      "V1": "Pass",
+      "V2": "Pass",
+      "V3": "Pass",
+      "V4": "Not assessed"
+    },
+    "rationales": {},
+    "blockingLayer": "none",
+    "diagnostics": [
+      {
+        "code": "CDS-V4-NOT-ASSESSED",
+        "layer": "V4",
+        "severity": "info",
+        "category": "not-assessed",
+        "message": "Non-objective V4 aspects (status truth beyond the fixed vocabulary, semantics, accessibility relevance, compatibility) require human/governance review and remain Not assessed (DEC-S-097)",
+        "sourcePath": "tokens\\semantic\\status\\semantic-status.tokens.json",
+        "decisionReferences": [
+          "DEC-S-097"
+        ],
+        "riskReferences": []
+      },
+      {
+        "code": "CDS-V4-NOT-ASSESSED",
+        "layer": "V4",
+        "severity": "info",
+        "category": "not-assessed",
+        "message": "Non-objective V4 aspects (status truth beyond the fixed vocabulary, semantics, accessibility relevance, compatibility) require human/governance review and remain Not assessed (DEC-S-097)",
+        "sourcePath": "tokens\\semantic\\status\\semantic-status.source-set.json",
+        "decisionReferences": [
+          "DEC-S-097"
+        ],
+        "riskReferences": []
+      },
+      {
+        "code": "CDS-V4-NOT-ASSESSED",
+        "layer": "V4",
+        "severity": "info",
+        "category": "not-assessed",
+        "message": "Non-objective V4 aspects (status truth beyond the fixed vocabulary, semantics, accessibility relevance, compatibility) require human/governance review and remain Not assessed (DEC-S-097)",
+        "sourcePath": "tokens\\semantic\\status\\semantic-status.resolver.json",
+        "decisionReferences": [
+          "DEC-S-097"
+        ],
+        "riskReferences": []
+      }
+    ]
+  }
+}

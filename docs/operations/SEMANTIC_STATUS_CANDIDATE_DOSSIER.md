@@ -139,3 +139,73 @@ Candidate approval.
 
 **Not Candidate.** The decision field stays empty until every open gate
 closes; unclear readiness resolves as NO-GO (DEC-S-048).
+
+## CDS-WP-016 Independent Evidence Review (additive)
+
+*(Added by CDS-WP-016. This section is additive; the dossier status remains
+**Draft – Candidate gate incomplete** and **Candidate = No**. The reviewer
+awards nothing.)*
+
+### Evidence Reviewer identity
+
+Claude Opus 4.8 (`claude-opus-4-8`), a fresh session with no inherited executor
+context, authorized by the Human Maintainer as a **separate** Evidence Reviewer
+(reviewer ≠ executor; DEC-S-045, DEC-S-103, DEC-S-121).
+
+### Review scope and revision
+
+Independent review of the committed WP-013 validator evidence and WP-015
+semantic-status evidence: clean-tree re-execution, digest comparison,
+source/contract traceability, terminology parity, and accessibility/content
+contract review. **Review revision:** the committed HEAD containing CDS-WP-015,
+reviewed on a **clean** working tree.
+
+### Independent re-execution
+
+Fresh venv outside the repository, exact `requirements-validator.lock` pins
+(7/7), Python 3.12.10, offline after install:
+
+- **103/103** unit tests; **24/24** cases with **24/24** expected/actual
+  matches; **0** mismatches, **0** execution errors; result-schema validation
+  passed.
+- Source set: V1–V3 Pass, V4 Not assessed (objective status checks passed, 0
+  status errors), block `none` — not Fail, not Blocked.
+- **23** fixture content digests + **1** undigestible, and **3** source content
+  digests — **all identical** to the committed WP-015 evidence.
+- Schema `$id` unchanged; case-schema change additive; CLI unchanged;
+  `VAL-CASE-001…015` byte-identical; `VAL-CASE-016…024` schema-valid; no gate
+  evasion.
+
+Evidence: [wp016-independent-fixture-results.json](../../artifacts/validation/wp016-independent-fixture-results.json) ·
+[wp016-independent-fixture-digests.json](../../artifacts/validation/wp016-independent-fixture-digests.json) ·
+[wp016-independent-source-results.json](../../artifacts/validation/wp016-independent-source-results.json) ·
+[wp016-independent-source-digests.json](../../artifacts/validation/wp016-independent-source-digests.json).
+Reviews: [Re-Execution](../reviews/WP016_INDEPENDENT_REEXECUTION_REVIEW.md) ·
+[Traceability](../reviews/WP016_SOURCE_CONTRACT_TRACEABILITY_REVIEW.md) ·
+[Terminology/Accessibility/Content](../reviews/WP016_TERMINOLOGY_ACCESSIBILITY_CONTENT_REVIEW.md).
+
+### Findings
+
+**0 Blocking · 0 High · 0 Medium · 0 Low · 3 Observations** — provenance stamp
+of the source-set evidence is pre-commit (WP016-OBS-001), source-set V4 label
+is "Not assessed" vs the "Pass with limitations" prose (WP016-OBS-002), and the
+resolver `outputIdentity` wording is imprecise (WP016-OBS-003). None weakens the
+Candidate scope or threatens truth, accessibility, or evidence identity. Detail:
+[Candidate Gate Recommendation](../reviews/WP016_CANDIDATE_GATE_RECOMMENDATION.md).
+
+### Independent review outcome and Candidate recommendation
+
+Independent review **PASS**; **Candidate Recommendation: GO** in the strict
+review sense — the independent review is clean and Nova may open its
+Candidate-gate review. GO is **not** a Candidate award and asserts no
+Candidate, Stable, approved, promoted, or conformant status.
+
+### Still-open gates
+
+- **Evidence Reviewer:** authorized and complete for this run (supersedes the
+  "Open" note above for the WP-016 review only).
+- **Nova review:** **open** — Candidate-gate review and promotion recommendation.
+- **Human-Maintainer approval:** **open** — final maturity authority (DEC-S-036).
+
+**Candidate Status = Not Candidate.** The decision field stays empty until the
+Nova and Human-Maintainer gates close.

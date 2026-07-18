@@ -1,0 +1,57 @@
+{
+  "reviewer": {
+    "artifactPurpose": "CDS-WP-016 independent Evidence Review - re-execution evidence",
+    "evidenceReviewer": "Claude Opus 4.8 (claude-opus-4-8), fresh session, not the CDS-WP-013/WP-015 executor",
+    "authorization": "Human Maintainer (Kay) authorized this fresh session as separate Evidence Reviewer (DEC-S-045, DEC-S-103, DEC-S-121)",
+    "reviewRevision": "6d94d65eebb31373622459a21619ee5700e1b625",
+    "worktreeStateAtReview": "clean committed HEAD; the reviewer wrote nothing into the repository during execution",
+    "runtime": {
+      "pythonVersion": "3.12.10",
+      "os": "win32 (Windows 11)",
+      "venv": "fresh, outside repository",
+      "installSource": "requirements-validator.lock exact pins",
+      "offlineAfterInstall": true,
+      "directDependencies": {
+        "jsonschema": "4.26.0",
+        "rfc8785": "0.1.4"
+      },
+      "transitiveDependencies": {
+        "attrs": "26.1.0",
+        "jsonschema-specifications": "2025.9.1",
+        "referencing": "0.37.0",
+        "rpds-py": "2026.6.3",
+        "typing_extensions": "4.16.0"
+      }
+    },
+    "note": "The embedded cliReport is the verbatim output of the offline validator (python -m tools.cds_validator validate-cases / validate-file). Its executionIdentity string is CLI-hardcoded and does NOT identify the reviewer; the validator was not modified. Independent execution was performed by the Evidence Reviewer named above.",
+    "generatedOn": "2026-07-18"
+  },
+  "canonicalizationMethod": "RFC 8785 (JSON Canonicalization Scheme)",
+  "digestAlgorithm": "SHA-256",
+  "digestCount": 3,
+  "note": "Content digests recomputed independently via python -m tools.cds_validator digest <path> at clean HEAD.",
+  "comparisonToCommittedWp015": {
+    "committedRepositoryRevision": "943229dcda15bcc2b4963a55222f6d2c3a4a75eb",
+    "committedWorktreeState": "modified worktree",
+    "reviewerRepositoryRevision": "6d94d65eebb31373622459a21619ee5700e1b625",
+    "reviewerWorktreeState": "clean",
+    "allDigestsIdentical": true,
+    "digests": [
+      {
+        "source": "tokens/semantic/status/semantic-status.tokens.json",
+        "digest": "sha256:8d127cf67ad5a15f1822d135c3a7107c9869a9eaf9b96ea0814d2a5c2ef69c81",
+        "identicalToCommittedWp015": true
+      },
+      {
+        "source": "tokens/semantic/status/semantic-status.source-set.json",
+        "digest": "sha256:879933098194081bb6e6076d6cdd47a6e3d06a59bd26775614b9def3ccd94399",
+        "identicalToCommittedWp015": true
+      },
+      {
+        "source": "tokens/semantic/status/semantic-status.resolver.json",
+        "digest": "sha256:61e64f58879cc8ec25d25134ec0432da05053e72f70076d0bb835990dd8c8af9",
+        "identicalToCommittedWp015": true
+      }
+    ]
+  }
+}

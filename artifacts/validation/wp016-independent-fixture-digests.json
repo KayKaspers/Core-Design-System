@@ -1,0 +1,191 @@
+{
+  "reviewer": {
+    "artifactPurpose": "CDS-WP-016 independent Evidence Review - re-execution evidence",
+    "evidenceReviewer": "Claude Opus 4.8 (claude-opus-4-8), fresh session, not the CDS-WP-013/WP-015 executor",
+    "authorization": "Human Maintainer (Kay) authorized this fresh session as separate Evidence Reviewer (DEC-S-045, DEC-S-103, DEC-S-121)",
+    "reviewRevision": "6d94d65eebb31373622459a21619ee5700e1b625",
+    "worktreeStateAtReview": "clean committed HEAD; the reviewer wrote nothing into the repository during execution",
+    "runtime": {
+      "pythonVersion": "3.12.10",
+      "os": "win32 (Windows 11)",
+      "venv": "fresh, outside repository",
+      "installSource": "requirements-validator.lock exact pins",
+      "offlineAfterInstall": true,
+      "directDependencies": {
+        "jsonschema": "4.26.0",
+        "rfc8785": "0.1.4"
+      },
+      "transitiveDependencies": {
+        "attrs": "26.1.0",
+        "jsonschema-specifications": "2025.9.1",
+        "referencing": "0.37.0",
+        "rpds-py": "2026.6.3",
+        "typing_extensions": "4.16.0"
+      }
+    },
+    "note": "The embedded cliReport is the verbatim output of the offline validator (python -m tools.cds_validator validate-cases / validate-file). Its executionIdentity string is CLI-hardcoded and does NOT identify the reviewer; the validator was not modified. Independent execution was performed by the Evidence Reviewer named above.",
+    "generatedOn": "2026-07-18"
+  },
+  "digestCount": 23,
+  "undigestible": {
+    "tests/fixtures/machine-readable/negative/duplicate-key.tokens.json": "no digest: V1 parse failed (duplicate-key or invalid JSON, DEC-S-100)"
+  },
+  "canonicalizationMethod": "RFC 8785 (JSON Canonicalization Scheme)",
+  "digestAlgorithm": "SHA-256",
+  "comparisonToCommittedWp015": {
+    "committedDigestCount": 23,
+    "allDigestsIdentical": true,
+    "undigestibleIdentical": true,
+    "digests": [
+      {
+        "fixture": "tests/fixtures/machine-readable/negative/backward-layer-dependency.source-set.json",
+        "digest": "sha256:8645f76e8d23766649c540440b1ec235d0bf34213b8711e036c49e88a4582d18",
+        "identicalToCommittedWp015": true
+      },
+      {
+        "fixture": "tests/fixtures/machine-readable/negative/circular-reference-a.tokens.json",
+        "digest": "sha256:8f3b62582efe3f8649fff3160de46f4109d6fe9b1ccdf7673b9456be0c6c875e",
+        "identicalToCommittedWp015": true
+      },
+      {
+        "fixture": "tests/fixtures/machine-readable/negative/circular-reference-b.tokens.json",
+        "digest": "sha256:591ced1a0b080424186e50bb7ad96f36951349c4836dc99e6d08aedb02c82b8a",
+        "identicalToCommittedWp015": true
+      },
+      {
+        "fixture": "tests/fixtures/machine-readable/negative/dangling-reference.tokens.json",
+        "digest": "sha256:ee04fefa259c74a78165e729c89894d41eee3cf9f2d01a77b0db803c22c41a8c",
+        "identicalToCommittedWp015": true
+      },
+      {
+        "fixture": "tests/fixtures/machine-readable/negative/invalid-extension.tokens.json",
+        "digest": "sha256:a09a896baa75e0aaa002e0fb9577dc1aa079d1b13bba2c9df461e4fe44268a2d",
+        "identicalToCommittedWp015": true
+      },
+      {
+        "fixture": "tests/fixtures/machine-readable/negative/preview-feature.tokens.json",
+        "digest": "sha256:94ecd2eb3c545a4444c7b01f60b2cbcdf605e4d1c5b668013389a5d99d445e63",
+        "identicalToCommittedWp015": true
+      },
+      {
+        "fixture": "tests/fixtures/machine-readable/negative/type-mismatch.tokens.json",
+        "digest": "sha256:5dc5aceb8dca7b42701365cb719c830f3335bea3e4325c18577d005813b207f6",
+        "identicalToCommittedWp015": true
+      },
+      {
+        "fixture": "tests/fixtures/machine-readable/negative/undeclared-cross-file-reference.tokens.json",
+        "digest": "sha256:bd41111da79bea827ac7a64bfa21f5623f5b64752ac50bd4d8d0d1cd4fc27c05",
+        "identicalToCommittedWp015": true
+      },
+      {
+        "fixture": "tests/fixtures/machine-readable/positive/component-set.tokens.json",
+        "digest": "sha256:7080d8547ba3e5c9d77b413d0ff13c5540093ba51da3018b0c9db8935e837bad",
+        "identicalToCommittedWp015": true
+      },
+      {
+        "fixture": "tests/fixtures/machine-readable/positive/product-profile-set.tokens.json",
+        "digest": "sha256:2e98d58c107b6514a055f7da40213acec316b45c0ef81fca2ae67c7c5d8a222b",
+        "identicalToCommittedWp015": true
+      },
+      {
+        "fixture": "tests/fixtures/machine-readable/positive/reference-set.tokens.json",
+        "digest": "sha256:10b6f5417a0a0fe51aeeb96c620250daf092c099002337d801b3083978da2b82",
+        "identicalToCommittedWp015": true
+      },
+      {
+        "fixture": "tests/fixtures/machine-readable/positive/resolver.resolver.json",
+        "digest": "sha256:10354d499844eee7f2b8884b3079cf9c334c554ddcd44f4ba5d9e77371a7eafb",
+        "identicalToCommittedWp015": true
+      },
+      {
+        "fixture": "tests/fixtures/machine-readable/positive/semantic-set.tokens.json",
+        "digest": "sha256:591ee007c334517f4bb1e0d14c0dc7f9466f08f24d7e80957b90e0053d2cf886",
+        "identicalToCommittedWp015": true
+      },
+      {
+        "fixture": "tests/fixtures/machine-readable/positive/source-set-manifest.source-set.json",
+        "digest": "sha256:d8d6a819727639dc948d96747a3dc536d1969fed1e9dbfb654d0cd03b24b7e0f",
+        "identicalToCommittedWp015": true
+      },
+      {
+        "fixture": "tests/fixtures/semantic-status/negative/aggregate-status.tokens.json",
+        "digest": "sha256:79e485492d9695be0d786c44947114302a5cf477d881609851bd24c80c6f5f1e",
+        "identicalToCommittedWp015": true
+      },
+      {
+        "fixture": "tests/fixtures/semantic-status/negative/case-collision.tokens.json",
+        "digest": "sha256:19233ef6cbdef39b9d8db66048e8e4446536ea8628de231c1b030d9ed03d0fac",
+        "identicalToCommittedWp015": true
+      },
+      {
+        "fixture": "tests/fixtures/semantic-status/negative/extra-axis.tokens.json",
+        "digest": "sha256:4913b3ab8a1e8fb6b021928ee78d930ef2c5c9810753369dba81765f08be4ac2",
+        "identicalToCommittedWp015": true
+      },
+      {
+        "fixture": "tests/fixtures/semantic-status/negative/extra-value.tokens.json",
+        "digest": "sha256:517245fe208e8c74a70e6c706a631d6bb59c9d470dd3867bd16c7a3d5c26af6d",
+        "identicalToCommittedWp015": true
+      },
+      {
+        "fixture": "tests/fixtures/semantic-status/negative/missing-axis.tokens.json",
+        "digest": "sha256:113b1d1fc4822c7b95de77317a0d88010d6917e8deecf12230d01ea4d33cfcfe",
+        "identicalToCommittedWp015": true
+      },
+      {
+        "fixture": "tests/fixtures/semantic-status/negative/missing-unknown.tokens.json",
+        "digest": "sha256:0a695a2a68cdc3854a8dac38674daf31a9f4375cb553594a092f01982a2a04ba",
+        "identicalToCommittedWp015": true
+      },
+      {
+        "fixture": "tests/fixtures/semantic-status/negative/path-value-mismatch.tokens.json",
+        "digest": "sha256:da027dfbf503d3493356926161df80452810ac79b580b1870c8a9c3fb6bcb19f",
+        "identicalToCommittedWp015": true
+      },
+      {
+        "fixture": "tests/fixtures/semantic-status/negative/visual-role-leakage.tokens.json",
+        "digest": "sha256:522e965341263c5d91127c752321f46f8351f990754bbeb1a41f49542f770b5d",
+        "identicalToCommittedWp015": true
+      },
+      {
+        "fixture": "tests/fixtures/semantic-status/positive/semantic-status-valid.tokens.json",
+        "digest": "sha256:c804867b0e8efff85571a45f5293d231667d286c70a799e1cb4600346447299c",
+        "identicalToCommittedWp015": true
+      }
+    ]
+  },
+  "cliDigests": {
+    "reportVersion": "1",
+    "canonicalizationMethod": "RFC 8785 (JSON Canonicalization Scheme)",
+    "digestAlgorithm": "SHA-256",
+    "digestNote": "Content digests are integrity aids over parsed content; they are not signatures and prove no authorship, approval, or release (DEC-S-100).",
+    "digests": {
+      "tests/fixtures/machine-readable/positive/reference-set.tokens.json": "sha256:10b6f5417a0a0fe51aeeb96c620250daf092c099002337d801b3083978da2b82",
+      "tests/fixtures/machine-readable/positive/semantic-set.tokens.json": "sha256:591ee007c334517f4bb1e0d14c0dc7f9466f08f24d7e80957b90e0053d2cf886",
+      "tests/fixtures/machine-readable/positive/component-set.tokens.json": "sha256:7080d8547ba3e5c9d77b413d0ff13c5540093ba51da3018b0c9db8935e837bad",
+      "tests/fixtures/machine-readable/positive/product-profile-set.tokens.json": "sha256:2e98d58c107b6514a055f7da40213acec316b45c0ef81fca2ae67c7c5d8a222b",
+      "tests/fixtures/machine-readable/positive/source-set-manifest.source-set.json": "sha256:d8d6a819727639dc948d96747a3dc536d1969fed1e9dbfb654d0cd03b24b7e0f",
+      "tests/fixtures/machine-readable/positive/resolver.resolver.json": "sha256:10354d499844eee7f2b8884b3079cf9c334c554ddcd44f4ba5d9e77371a7eafb",
+      "tests/fixtures/machine-readable/negative/dangling-reference.tokens.json": "sha256:ee04fefa259c74a78165e729c89894d41eee3cf9f2d01a77b0db803c22c41a8c",
+      "tests/fixtures/machine-readable/negative/circular-reference-a.tokens.json": "sha256:8f3b62582efe3f8649fff3160de46f4109d6fe9b1ccdf7673b9456be0c6c875e",
+      "tests/fixtures/machine-readable/negative/circular-reference-b.tokens.json": "sha256:591ced1a0b080424186e50bb7ad96f36951349c4836dc99e6d08aedb02c82b8a",
+      "tests/fixtures/machine-readable/negative/backward-layer-dependency.source-set.json": "sha256:8645f76e8d23766649c540440b1ec235d0bf34213b8711e036c49e88a4582d18",
+      "tests/fixtures/machine-readable/negative/type-mismatch.tokens.json": "sha256:5dc5aceb8dca7b42701365cb719c830f3335bea3e4325c18577d005813b207f6",
+      "tests/fixtures/machine-readable/negative/undeclared-cross-file-reference.tokens.json": "sha256:bd41111da79bea827ac7a64bfa21f5623f5b64752ac50bd4d8d0d1cd4fc27c05",
+      "tests/fixtures/machine-readable/negative/invalid-extension.tokens.json": "sha256:a09a896baa75e0aaa002e0fb9577dc1aa079d1b13bba2c9df461e4fe44268a2d",
+      "tests/fixtures/machine-readable/negative/preview-feature.tokens.json": "sha256:94ecd2eb3c545a4444c7b01f60b2cbcdf605e4d1c5b668013389a5d99d445e63",
+      "tests/fixtures/semantic-status/positive/semantic-status-valid.tokens.json": "sha256:c804867b0e8efff85571a45f5293d231667d286c70a799e1cb4600346447299c",
+      "tests/fixtures/semantic-status/negative/missing-axis.tokens.json": "sha256:113b1d1fc4822c7b95de77317a0d88010d6917e8deecf12230d01ea4d33cfcfe",
+      "tests/fixtures/semantic-status/negative/missing-unknown.tokens.json": "sha256:0a695a2a68cdc3854a8dac38674daf31a9f4375cb553594a092f01982a2a04ba",
+      "tests/fixtures/semantic-status/negative/extra-axis.tokens.json": "sha256:4913b3ab8a1e8fb6b021928ee78d930ef2c5c9810753369dba81765f08be4ac2",
+      "tests/fixtures/semantic-status/negative/extra-value.tokens.json": "sha256:517245fe208e8c74a70e6c706a631d6bb59c9d470dd3867bd16c7a3d5c26af6d",
+      "tests/fixtures/semantic-status/negative/path-value-mismatch.tokens.json": "sha256:da027dfbf503d3493356926161df80452810ac79b580b1870c8a9c3fb6bcb19f",
+      "tests/fixtures/semantic-status/negative/aggregate-status.tokens.json": "sha256:79e485492d9695be0d786c44947114302a5cf477d881609851bd24c80c6f5f1e",
+      "tests/fixtures/semantic-status/negative/visual-role-leakage.tokens.json": "sha256:522e965341263c5d91127c752321f46f8351f990754bbeb1a41f49542f770b5d",
+      "tests/fixtures/semantic-status/negative/case-collision.tokens.json": "sha256:19233ef6cbdef39b9d8db66048e8e4446536ea8628de231c1b030d9ed03d0fac"
+    },
+    "undigestible": {
+      "tests/fixtures/machine-readable/negative/duplicate-key.tokens.json": "no digest: V1 parse failed (duplicate-key or invalid JSON, DEC-S-100)"
+    }
+  }
+}
