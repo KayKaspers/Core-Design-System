@@ -6,9 +6,10 @@ Controlled work-package roadmap for the Core Design System (CDS).
   Closed with Notes**
 - **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
-  CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014
-- **Next work package:** **CDS-WP-015 — Semantic Status Foundation Source Set and
-  Candidate Evidence** (authorized as the next work package; not yet executed)
+  CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015
+- **Next work package:** **CDS-WP-016 — Semantic Status Foundation Independent
+  Evidence Review and Candidate Gate** (authorized as the next work package; not yet
+  executed)
 
 ## Status values
 
@@ -37,15 +38,16 @@ Controlled work-package roadmap for the Core Design System (CDS).
 | CDS-WP-012 | Machine-Readable Source Bootstrap and Validation Contract | Completed | CDS-WP-011 |
 | CDS-WP-013 | Offline Token Profile Validator and Fixture Harness | Completed | CDS-WP-012 |
 | CDS-WP-014 | Semantic Status Foundation Contract and First Candidate Plan | Completed | CDS-WP-013 |
-| CDS-WP-015 | Semantic Status Foundation Source Set and Candidate Evidence | Next | CDS-WP-014 |
+| CDS-WP-015 | Semantic Status Foundation Source Set and Candidate Evidence | Completed | CDS-WP-014 |
+| CDS-WP-016 | Semantic Status Foundation Independent Evidence Review and Candidate Gate | Next | CDS-WP-015 |
 
-**CDS-WP-015 is authorized as the next Work Package.** The Foundation is closed with
-notes; the Pre-Candidate Operating Enablement phase is active; the machine-readable
-machinery (ADR-0001…0003) is implemented and executed; and the **Semantic Status
-Foundation Contract is defined** (CDS-WP-014: five axes, 25 values, ten invariants,
-combination/communication/token contracts, first Candidate plan) — **Experimental, no
-Candidate status, no visual value**. CDS-WP-015 is registered as `Next` and is not yet
-executed. No further work-package ID is created.
+**CDS-WP-016 is authorized as the next Work Package.** The Foundation is closed with
+notes; the Pre-Candidate Operating Enablement phase is active; the Semantic Status
+Foundation is **Contract defined (CDS-WP-014) and machine-readable implemented
+(CDS-WP-015: `semantic/status`, 25 non-visual tokens, 24/24 harness matches,
+executor-produced evidence)** — **Experimental, independently unreviewed, no
+Candidate status, no visual value**. CDS-WP-016 is registered as `Next` and is not
+yet executed. No further work-package ID is created.
 
 ## Descriptions
 
@@ -283,14 +285,35 @@ independently unreviewed; publication `Private Development`.**
 
 ### CDS-WP-015 — Semantic Status Foundation Source Set and Candidate Evidence
 
+**Status:** Completed
+
+Implemented the first real, still-Experimental machine-readable source set (pending
+commit; resume run after a correctly BLOCKED first run): **[`semantic/status`](../tokens/semantic/status/semantic-status.tokens.json)**
+(5 axis groups, **25 non-visual status tokens** `status.<axis>.<value>`, manifest,
+resolver, revision `semantic-status-rev-0001`), the **Nova-authorized additive
+validation-case-schema correction** (fixture-path families + 9 `semantic-status-*`
+categories; `$id` unchanged; CLI untouched and fail closed), the **semantic-status V4
+validator extension** (9 `CDS-V4-STATUS-*` diagnostics; fixture flags never disable
+the objective checks), **1 positive + 8 negative status fixtures**, **VAL-CASE-016…024**
+(24-case matrix; WP-013 baseline byte-identical, DEC-S-120), a **25/25 DE/EN
+terminology mapping**, a **revision-clean WP-013 re-execution** (71/71 tests, 15/15
+matches, worktree clean), **103/103 unit tests**, a **24/24 fixture harness**,
+source-set validation (V1–V3 Pass, exit 0) with RFC 8785 + SHA-256 digests, four
+executor-produced evidence reviews, and the **Draft Candidate Dossier** (gate
+incomplete). Added DEC-S-115…124 and RISK-090…097. **Executor-produced, independently
+unreviewed; no visual value, no Candidate, no claim; publication `Private
+Development`.**
+
+### CDS-WP-016 — Semantic Status Foundation Independent Evidence Review and Candidate Gate
+
 **Status:** Next
 
-Will implement the machine-readable Semantic Status source set (value-neutral roles
-and identifiers under the CDS Token Format Profile), positive and negative status
-validation fixtures, validator execution with committed expected outcomes,
-accessibility/content evidence preparation, and Candidate-dossier preparation. It
-creates **no visual values and awards no Candidate**. Not yet executed; begins only on
-an explicit Nova prompt and Human-Maintainer authorization.
+Will independently review the WP-013 and WP-015 evidence (re-execution or artifact
+assessment by a separately authorized reviewer), review source/contract/terminology
+traceability, accessibility and content evidence, and the Candidate dossier, and
+prepare the Candidate-gate recommendation for the Human-Maintainer decision — **no
+automatic Candidate promotion**. Not yet executed; begins only on an explicit Nova
+prompt and Human-Maintainer authorization.
 
 ## Roadmap evolution
 

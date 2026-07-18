@@ -1,0 +1,36 @@
+{
+  "manifestVersion": "1",
+  "profileVersion": "1",
+  "dtcgReportVersion": "2025.10",
+  "manifestId": "semantic/status/manifest",
+  "sourceRevision": "semantic-status-rev-0001",
+  "maturityState": "Experimental",
+  "approvalState": "Unapproved",
+  "ownerRole": "CDS Human Maintainer (normative approval pending)",
+  "sourceSets": [
+    {
+      "sourceSetId": "semantic/status",
+      "path": "semantic-status.tokens.json",
+      "layer": "semantic",
+      "dependencies": [],
+      "sourceRevision": "semantic-status-rev-0001",
+      "expectedProfileVersion": "1",
+      "expectedDtcgVersion": "2025.10",
+      "maturityState": "Experimental",
+      "approvalState": "Unapproved"
+    }
+  ],
+  "dependencyGraph": {
+    "semantic/status": []
+  },
+  "resolverDocuments": ["semantic-status.resolver.json"],
+  "productProfileBoundary": {
+    "approvedExtensionPoints": []
+  },
+  "provenanceState": "Bound",
+  "digestState": {
+    "status": "Computed",
+    "canonicalizationMethod": "RFC 8785 (JSON Canonicalization Scheme)",
+    "digestAlgorithm": "SHA-256"
+  }
+}

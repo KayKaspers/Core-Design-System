@@ -5,8 +5,8 @@ must be controlled from the start of the project.
 
 ## Register scope
 
-- Risk range: RISK-001 … RISK-089
-- Number of risks: 89
+- Risk range: RISK-001 … RISK-097
+- Number of risks: 97
 - Phase: Pre-Candidate Operating Enablement (Foundation / Pre-Design closed with notes)
 
 Risks RISK-001 … RISK-005 were registered by CDS-WP-001. Risks
@@ -25,7 +25,8 @@ RISK-064 … RISK-072 were registered by CDS-WP-012 alongside the machine-readab
 bootstrap and validation contract. Risks RISK-073 … RISK-081 were registered by
 CDS-WP-013 alongside the offline token profile validator and fixture harness.
 Risks RISK-082 … RISK-089 were registered by CDS-WP-014 alongside the semantic
-status foundation contract.
+status foundation contract. Risks RISK-090 … RISK-097 were registered by
+CDS-WP-015 alongside the semantic status source set and candidate evidence.
 
 ### Finalized risk role model
 
@@ -58,7 +59,7 @@ Full model: [Risk Governance Model](../governance/RISK_GOVERNANCE_MODEL.md).
 | **Accepted** | Consciously accepted with residual effect; requires a review trigger. |
 | **Closed** | No longer relevant, or fully mitigated with evidence. |
 
-**82 of the 89 risks are currently `Monitored`; RISK-040, RISK-044, RISK-066,
+**90 of the 97 risks are currently `Monitored`; RISK-040, RISK-044, RISK-066,
 RISK-067, RISK-068, RISK-069, and RISK-071 are `Mitigating`.** CDS-WP-006 finalized
 the role model; it treated no risk and changed no assessment, because no evidence
 justified a change. CDS-WP-007 added RISK-041 … RISK-048 and likewise treated none.
@@ -74,7 +75,8 @@ RISK-067, RISK-068, RISK-069, and RISK-071 `Monitored → Mitigating`** on the s
 of the executed offline validator and fixture harness — an executor-produced,
 independently unreviewed evidence basis (DEC-S-103). CDS-WP-014 added
 **RISK-082 … RISK-089** (all `Monitored`, semantic-status truthfulness risks) and
-changed no existing status. No description, likelihood, or
+changed no existing status. CDS-WP-015 added **RISK-090 … RISK-097** (all
+`Monitored`, status source/evidence risks) and changed no existing status. No description, likelihood, or
 severity was changed for any existing risk, and **no risk was accepted or closed** —
 only the Human Maintainer may do either.
 
@@ -2763,3 +2765,216 @@ Fixed Candidate scope and exclusions with expansion as a NO-GO trigger
 (DEC-S-113, [Candidate Plan](../roadmap/FIRST_SEMANTIC_STATUS_CANDIDATE_PLAN.md));
 ten cumulative prerequisites (DEC-S-114); visual values enter only through a
 later explicitly authorized design work package.
+
+---
+
+## RISK-090 — Status source and contract drift
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** High
+
+### Description
+
+The machine-readable Semantic Status Source Set may diverge from the human-readable
+contract, vocabulary, or invariants.
+
+### Impact
+
+A drifted source silently redefines the meaning foundation: tokens and contract
+then disagree about the same identifier, and every consumer inherits whichever
+side it happens to read — the exact dual-source conflict DEC-S-034 fails closed.
+
+### Mitigation direction
+
+Keep the vocabulary/source 1:1 mapping machine-verified (DEC-S-117, unit-tested);
+run the status V4 checks on every change; treat any disagreement as an invalidating
+conflict (DEC-S-034), never resolved by recency.
+
+---
+
+## RISK-091 — Semantic status tokens mistaken for visual tokens
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** Medium
+
+### Description
+
+Consumers may treat non-visual status identity tokens as direct color, icon,
+component, or presentation values.
+
+### Impact
+
+A consumer binding `status.condition.nominal` to a colour turns a meaning
+identifier into an appearance value, bypassing the still-missing visual layer and
+recreating colour-as-sole-carrier failures (CR-006) under a CDS name.
+
+### Mitigation direction
+
+Non-visual `string` identity values only (DEC-S-116); visual-leakage validation
+(CDS-V4-STATUS-VISUAL-LEAKAGE); the token contract's role boundary; future visual
+bindings arrive only through an authorized design work package.
+
+---
+
+## RISK-092 — Status token path migration instability
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Low
+- **Initial severity:** High
+
+### Description
+
+Changes to status token paths, axis IDs, or value IDs may break references,
+localization mappings, validation evidence, or consumer integrations.
+
+### Impact
+
+The 25 IDs are the anchor for the terminology mapping, the fixtures, the case
+matrix, and future consumer bindings; an unmanaged rename desynchronizes all of
+them at once and silently invalidates recorded evidence.
+
+### Mitigation direction
+
+Stable IDs with renames as governed migration events (DEC-S-082, DEC-S-117);
+path/value and collision validation; evidence binds revisions and digests so drift
+is detectable (DEC-S-123).
+
+---
+
+## RISK-093 — Semantic validator blind spot
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** Medium
+
+### Description
+
+The status-specific validator may enforce the fixed vocabulary while missing
+meaning loss, misleading summaries, localization drift, or channel-level
+truthfulness failures.
+
+### Impact
+
+A green status validation covers the vocabulary shape only; a UI can still render
+`unknown` as a friendly green dot without any validator objection — shape-valid,
+truth-broken.
+
+### Mitigation direction
+
+State the coverage boundary explicitly in every review (DEC-S-121); keep
+communication/channel truthfulness in the human review scope of the Candidate
+gates (prerequisites 6–8); never present a validator pass as truthfulness
+evidence.
+
+---
+
+## RISK-094 — Semantic fixture overfitting
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** Medium
+
+### Description
+
+The validator may match the committed status fixtures while failing to detect
+unrepresented invalid states or future profile variations.
+
+### Impact
+
+Nine negative fixtures exercise nine failure classes; invalid states outside them
+(combined defects, structural oddities, future profile changes) may pass unnoticed
+while the 24/24 result reads as complete coverage (RISK-070 pattern at the status
+layer).
+
+### Mitigation direction
+
+Treat the fixture set as a floor, not a proof (DEC-S-102); extend fixtures under
+governed change when new failure classes are identified; keep the independent
+review focused on unrepresented states.
+
+---
+
+## RISK-095 — Status localization parity false assurance
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** Medium
+
+### Description
+
+A complete DE/EN mapping may be mistaken for validated comprehension, usability, or
+cultural suitability.
+
+### Impact
+
+25/25 parity rows prove structural completeness and executor-assessed meaning
+parity — not that any German or English speaker understands the labels correctly.
+Acting on the mapping as usability evidence repeats the documentation-as-user-
+research failure (RISK-017).
+
+### Mitigation direction
+
+Label the parity review as executor-produced structural evidence (DEC-S-121);
+keep comprehension validation an explicit open Candidate concern; no claim of
+validated understandability.
+
+---
+
+## RISK-096 — Candidate dossier completeness illusion
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** High
+
+### Description
+
+A populated Candidate Dossier may be treated as Candidate approval despite open
+independent-review and Human-Maintainer gates.
+
+### Impact
+
+The dossier now contains real evidence links and looks finished; reading
+completeness as approval would skip exactly the review and approval steps that
+distinguish evidence from a decision (RISK-081 pattern at dossier level).
+
+### Mitigation direction
+
+Explicit `Draft – Candidate gate incomplete` status with a gate-state table
+(DEC-S-122); the decision field stays empty; unclear readiness is NO-GO
+(DEC-S-048).
+
+---
+
+## RISK-097 — Experimental status source consumed prematurely
+
+- **Status:** Monitored
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** Medium
+- **Initial severity:** High
+
+### Description
+
+Consumers may integrate or distribute the Experimental Semantic Status Source Set
+before Candidate approval.
+
+### Impact
+
+Early consumption freezes unreviewed identifiers into products, creates de-facto
+compatibility pressure against a source that may still change, and turns the
+Experimental state into an implicit claim (DEC-S-044 violation by usage).
+
+### Mitigation direction
+
+Prohibit representing the source as approved before the gate (DEC-S-124); keep the
+approval-statement check active at the source; publication state stays
+`Private Development`; consumer integration remains unauthorized until the gate
+succeeds.

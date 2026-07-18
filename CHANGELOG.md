@@ -9,6 +9,44 @@ released and no release is announced.
 
 ### Added
 
+- Semantic Status Source Set implemented (CDS-WP-015): the Experimental
+  `semantic/status` source set (5 axis groups, 25 non-visual status tokens
+  `status.<axis>.<value>` with technical-identifier values, manifest, resolver,
+  revision `semantic-status-rev-0001`); no visual value, no Candidate.
+  (CDS-WP-015)
+- Validation-case schema additively corrected (Nova-authorized after a correctly
+  BLOCKED first run): fixture-path pattern widened to admit
+  `tests/fixtures/semantic-status/` token fixtures alongside the existing
+  machine-readable families, and nine `semantic-status-*` diagnostic categories
+  added; schema `$id`, draft, and all existing constraints unchanged; the CLI
+  schema gate untouched and fail closed; regression-tested. (CDS-WP-015)
+- Semantic-status V4 validator extension added (`tools/cds_validator/
+  semantic_status.py`; nine stable `CDS-V4-STATUS-*` diagnostics): authorized
+  axis/value sets, explicit `unknown`, 25-token count, path/value agreement,
+  case-only collision rejection, aggregate- and appearance-role prohibition,
+  approval-statement and manifest-identity checks; objective checks execute even
+  for testOnly/nonNormative fixtures. (CDS-WP-015)
+- Nine semantic-status fixtures (1 positive, 8 negative) and VAL-CASE-016…024
+  added; the 24-case harness executed with **24/24 expected/actual matches**
+  (VAL-CASE-001…015 byte-identical, immutable baseline); 103/103 unit tests;
+  revision-clean WP-013 re-execution recorded (71/71 tests, 15/15 matches on the
+  committed CDS-WP-014 revision, worktree clean). (CDS-WP-015)
+- Semantic Status source-set validation executed (V1–V3 Pass, exit 0) with
+  RFC 8785 + SHA-256 digests for the token document, manifest, and resolver;
+  DE/EN terminology mapping created (25/25 entries, 0 missing); four
+  executor-produced evidence reviews and the Draft Semantic Status Candidate
+  Dossier created (Candidate gate incomplete — Not Candidate). (CDS-WP-015)
+- DEC-S-115 … DEC-S-124 added (source-set identity, 25-token contract, path/value
+  traceability, fail-closed status validation, terminology separation, immutable
+  baseline cases, executor-produced evidence class, Draft-dossier rule,
+  identity/digest alignment, no-premature-consumption). (CDS-WP-015)
+- RISK-090 … RISK-097 added (source/contract drift, visual misuse, path migration,
+  validator blind spot, fixture overfitting, localization false assurance, dossier
+  completeness illusion, premature consumption); no existing risk status changed.
+  (CDS-WP-015)
+- CDS-WP-016 — Semantic Status Foundation Independent Evidence Review and
+  Candidate Gate activated as the next work package. (CDS-WP-015)
+
 - Semantic Status Foundation Contract defined (CDS-WP-014): five independent status
   axes (`condition`, `severity`, `confidence`, `freshness`, `evidence`) with a fixed
   25-value vocabulary and explicit `unknown` on every axis; ten invariants including

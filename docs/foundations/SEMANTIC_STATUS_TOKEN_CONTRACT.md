@@ -100,6 +100,13 @@ fail-closed reference rules (DEC-S-073…082, DEC-S-091).
 
 ## No current token
 
+**Update (CDS-WP-015):** the planned source set is now implemented as
+[`semantic/status`](../../tokens/semantic/status/semantic-status.tokens.json)
+(Experimental, Unapproved; 5 axis groups, 25 non-visual tokens, manifest and
+resolver; DEC-S-115…116). Everything below documents the CDS-WP-014 state it
+constrained and remains the binding contract for that source set; **the tokens
+carry identity values only — still no visual value, and no Candidate status.**
+
 **As of CDS-WP-014 no semantic status token exists.** No `.tokens.json` source,
 no token name, no token value, no manifest entry, and no resolver step for
 status semantics has been created. This contract constrains what the future

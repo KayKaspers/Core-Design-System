@@ -26,7 +26,7 @@ library, or a design project scoped exclusively to CoreOps.
 - First reference consumer: CoreOps (not the sole design target)
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
-  CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014
+  CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015
 - Accessibility support baseline: **A11Y-BL-001 defined** (CDS-WP-010, pending
   commit) — a **test contract, not evidence**; **no test has been run and every
   artifact is AE-0**.
@@ -50,12 +50,22 @@ library, or a design project scoped exclusively to CoreOps.
   planned and fully gated** — see the
   [Candidate Plan](docs/roadmap/FIRST_SEMANTIC_STATUS_CANDIDATE_PLAN.md) and the
   [Foundation Contract](docs/foundations/SEMANTIC_STATUS_FOUNDATION_CONTRACT.md).
-- Next work package: **CDS-WP-015 — Semantic Status Foundation Source Set and
-  Candidate Evidence** (authorized as next; **not yet executed**). It implements the
-  machine-readable Semantic Status source set (value-neutral roles), status
-  validation fixtures, validator execution, and accessibility/content evidence
-  preparation; it creates no visual values and awards no Candidate. Execution begins
-  only on an explicit Nova prompt and Human-Maintainer authorization.
+- Semantic Status Source Set: **implemented** (CDS-WP-015, pending commit) — the
+  Experimental **`semantic/status`** source set (25 non-visual tokens
+  `status.<axis>.<value>`, manifest, resolver), the semantic-status V4 validator
+  extension (objective checks run despite fixture flags, DEC-S-118), the
+  Nova-authorized additive validation-case-schema correction (`$id` unchanged; CLI
+  untouched), a 24-case matrix (WP-013 baseline immutable, DEC-S-120), 25/25 DE/EN
+  terminology, and a Draft Candidate Dossier. **Executor-produced evidence
+  (24/24 matches), independently unreviewed (DEC-S-121); Not Candidate; never
+  represent the source set as approved (DEC-S-124).**
+- Next work package: **CDS-WP-016 — Semantic Status Foundation Independent Evidence
+  Review and Candidate Gate** (authorized as next; **not yet executed**). It reviews
+  the WP-013/WP-015 evidence independently (reviewer ≠ executor), reviews
+  traceability/accessibility/content and the dossier, and prepares the
+  Candidate-gate recommendation for the Human-Maintainer decision — no automatic
+  promotion. Execution begins only on an explicit Nova prompt and Human-Maintainer
+  authorization.
 
 ## Execution environment
 

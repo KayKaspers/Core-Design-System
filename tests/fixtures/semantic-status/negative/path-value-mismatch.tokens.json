@@ -1,0 +1,151 @@
+{
+  "$description": "NEGATIVE FIXTURE. Intentionally invalid: token status.condition.nominal carries the value 'degraded'. Primary failure: token path and technical value identifier disagree (V4).",
+  "$extensions": {
+    "io.github.kaykaspers.cds": {
+      "profileVersion": "1",
+      "sourceSetId": "fixture/semantic-status-path-value-mismatch",
+      "layer": "semantic",
+      "dtcgReportVersion": "2025.10",
+      "sourceRevision": "fixture-rev-0001-synthetic",
+      "testOnly": true,
+      "nonNormative": true
+    }
+  },
+  "status": {
+    "condition": {
+      "nominal": {
+        "$type": "string",
+        "$value": "degraded",
+        "$description": "Synthetic status meaning token; test only, non-normative."
+      },
+      "degraded": {
+        "$type": "string",
+        "$value": "degraded",
+        "$description": "Synthetic status meaning token; test only, non-normative."
+      },
+      "disrupted": {
+        "$type": "string",
+        "$value": "disrupted",
+        "$description": "Synthetic status meaning token; test only, non-normative."
+      },
+      "unavailable": {
+        "$type": "string",
+        "$value": "unavailable",
+        "$description": "Synthetic status meaning token; test only, non-normative."
+      },
+      "unknown": {
+        "$type": "string",
+        "$value": "unknown",
+        "$description": "Synthetic status meaning token; test only, non-normative."
+      }
+    },
+    "severity": {
+      "none": {
+        "$type": "string",
+        "$value": "none",
+        "$description": "Synthetic status meaning token; test only, non-normative."
+      },
+      "minor": {
+        "$type": "string",
+        "$value": "minor",
+        "$description": "Synthetic status meaning token; test only, non-normative."
+      },
+      "major": {
+        "$type": "string",
+        "$value": "major",
+        "$description": "Synthetic status meaning token; test only, non-normative."
+      },
+      "critical": {
+        "$type": "string",
+        "$value": "critical",
+        "$description": "Synthetic status meaning token; test only, non-normative."
+      },
+      "unknown": {
+        "$type": "string",
+        "$value": "unknown",
+        "$description": "Synthetic status meaning token; test only, non-normative."
+      }
+    },
+    "confidence": {
+      "verified": {
+        "$type": "string",
+        "$value": "verified",
+        "$description": "Synthetic status meaning token; test only, non-normative."
+      },
+      "supported": {
+        "$type": "string",
+        "$value": "supported",
+        "$description": "Synthetic status meaning token; test only, non-normative."
+      },
+      "uncertain": {
+        "$type": "string",
+        "$value": "uncertain",
+        "$description": "Synthetic status meaning token; test only, non-normative."
+      },
+      "unverified": {
+        "$type": "string",
+        "$value": "unverified",
+        "$description": "Synthetic status meaning token; test only, non-normative."
+      },
+      "unknown": {
+        "$type": "string",
+        "$value": "unknown",
+        "$description": "Synthetic status meaning token; test only, non-normative."
+      }
+    },
+    "freshness": {
+      "current": {
+        "$type": "string",
+        "$value": "current",
+        "$description": "Synthetic status meaning token; test only, non-normative."
+      },
+      "aging": {
+        "$type": "string",
+        "$value": "aging",
+        "$description": "Synthetic status meaning token; test only, non-normative."
+      },
+      "stale": {
+        "$type": "string",
+        "$value": "stale",
+        "$description": "Synthetic status meaning token; test only, non-normative."
+      },
+      "expired": {
+        "$type": "string",
+        "$value": "expired",
+        "$description": "Synthetic status meaning token; test only, non-normative."
+      },
+      "unknown": {
+        "$type": "string",
+        "$value": "unknown",
+        "$description": "Synthetic status meaning token; test only, non-normative."
+      }
+    },
+    "evidence": {
+      "available": {
+        "$type": "string",
+        "$value": "available",
+        "$description": "Synthetic status meaning token; test only, non-normative."
+      },
+      "partial": {
+        "$type": "string",
+        "$value": "partial",
+        "$description": "Synthetic status meaning token; test only, non-normative."
+      },
+      "unavailable": {
+        "$type": "string",
+        "$value": "unavailable",
+        "$description": "Synthetic status meaning token; test only, non-normative."
+      },
+      "not-applicable": {
+        "$type": "string",
+        "$value": "not-applicable",
+        "$description": "Synthetic status meaning token; test only, non-normative."
+      },
+      "unknown": {
+        "$type": "string",
+        "$value": "unknown",
+        "$description": "Synthetic status meaning token; test only, non-normative."
+      }
+    }
+  }
+}

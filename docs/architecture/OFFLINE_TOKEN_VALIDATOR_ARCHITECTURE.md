@@ -32,6 +32,7 @@ class-3 generated content — input to review, never approval (DEC-S-053).
 | `canonicalization.py` | RFC 8785 + SHA-256 `sha256:` digests from parsed content only (DEC-S-100, ADR-0002). |
 | `reporting.py` | Machine-readable reports per the CDS result schema; runtime/dependency/revision binding; `independentReviewState: pending` (DEC-S-101, DEC-S-103). |
 | `version.py` | Validator/profile/DTCG/schema/dependency identities. |
+| `semantic_status.py` | **(CDS-WP-015)** Objective V4 semantic-status rules for `status`-vocabulary documents: axis/value sets, explicit `unknown`, 25-token count, path/value agreement, case-collision, aggregate/appearance-role prohibition, approval-statement and manifest-identity checks (`CDS-V4-STATUS-*`). Runs **before** the fixture N/A shortcut — testOnly/nonNormative never disables it. |
 
 ## Layered execution
 

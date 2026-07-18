@@ -1,0 +1,49 @@
+{
+  "input": "tokens/semantic/status/semantic-status.tokens.json",
+  "results": {
+    "V1": "Pass",
+    "V2": "Pass",
+    "V3": "Pass",
+    "V4": "Not assessed"
+  },
+  "rationales": {},
+  "blockingLayer": "none",
+  "diagnostics": [
+    {
+      "code": "CDS-V4-NOT-ASSESSED",
+      "layer": "V4",
+      "severity": "info",
+      "category": "not-assessed",
+      "message": "Non-objective V4 aspects (status truth beyond the fixed vocabulary, semantics, accessibility relevance, compatibility) require human/governance review and remain Not assessed (DEC-S-097)",
+      "sourcePath": "tokens\\semantic\\status\\semantic-status.tokens.json",
+      "decisionReferences": [
+        "DEC-S-097"
+      ],
+      "riskReferences": []
+    },
+    {
+      "code": "CDS-V4-NOT-ASSESSED",
+      "layer": "V4",
+      "severity": "info",
+      "category": "not-assessed",
+      "message": "Non-objective V4 aspects (status truth beyond the fixed vocabulary, semantics, accessibility relevance, compatibility) require human/governance review and remain Not assessed (DEC-S-097)",
+      "sourcePath": "tokens\\semantic\\status\\semantic-status.source-set.json",
+      "decisionReferences": [
+        "DEC-S-097"
+      ],
+      "riskReferences": []
+    },
+    {
+      "code": "CDS-V4-NOT-ASSESSED",
+      "layer": "V4",
+      "severity": "info",
+      "category": "not-assessed",
+      "message": "Non-objective V4 aspects (status truth beyond the fixed vocabulary, semantics, accessibility relevance, compatibility) require human/governance review and remain Not assessed (DEC-S-097)",
+      "sourcePath": "tokens\\semantic\\status\\semantic-status.resolver.json",
+      "decisionReferences": [
+        "DEC-S-097"
+      ],
+      "riskReferences": []
+    }
+  ]
+}

@@ -23,13 +23,13 @@ Pre-Candidate Operating Enablement — **Foundation / Pre-Design: Closed with No
 
 ## Work package status
 
-- Current work package after CDS-WP-014: **CDS-WP-015 — Semantic Status Foundation
-  Source Set and Candidate Evidence** (Next; not yet executed)
-- Previous work package: CDS-WP-014 — Semantic Status Foundation Contract and First
-  Candidate Plan (Completed)
+- Current work package after CDS-WP-015: **CDS-WP-016 — Semantic Status Foundation
+  Independent Evidence Review and Candidate Gate** (Next; not yet executed)
+- Previous work package: CDS-WP-015 — Semantic Status Foundation Source Set and
+  Candidate Evidence (Completed)
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
-  CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014
+  CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015
 
 ## Operating enablement status
 
@@ -186,6 +186,31 @@ Documents:
 [Token Contract](../docs/foundations/SEMANTIC_STATUS_TOKEN_CONTRACT.md) ·
 [Candidate Plan](../docs/roadmap/FIRST_SEMANTIC_STATUS_CANDIDATE_PLAN.md) ·
 [Readiness Review](../docs/reviews/SEMANTIC_STATUS_FOUNDATION_READINESS_REVIEW.md)
+
+## Semantic Status Source Set status (CDS-WP-015)
+
+- Semantic Status Source Set: **Implemented, Experimental** (CDS-WP-015,
+  2026-07-18; pending Human-Maintainer commit) — **independently unreviewed**
+  (DEC-S-121); **Candidate: No** (DEC-S-115, DEC-S-122)
+- Source-Set ID: **`semantic/status`** · Layer: semantic · Revision:
+  `semantic-status-rev-0001` · Axis count: **5** · Status token count: **25**
+  (non-visual `string` identity values; `status.<axis>.<value>`)
+- Manifest/Resolver: present, local-only, identity-aligned; no Product-Profile
+  extension points
+- Terminology entries: **25 DE / 25 EN** (0 missing;
+  [mapping](../docs/foundations/SEMANTIC_STATUS_TERMINOLOGY_DE_EN.md))
+- Validation cases: **24** (VAL-CASE-001…024; WP-013 baseline immutable) —
+  **expected/actual matches: 24/24** · WP-013 clean re-execution: **15/15**
+  (committed WP-014 revision, worktree clean) · Unit tests: **103/103**
+- Validation-case schema: additively corrected (Nova-authorized; fixture-path
+  families + 9 `semantic-status-*` categories; `$id` unchanged; CLI untouched)
+- Evidence: **executor-produced** — [results](../artifacts/validation/wp015-fixture-results.json) ·
+  [source-set run](../artifacts/validation/wp015-semantic-status-source-results.json) ·
+  [re-execution](../artifacts/validation/wp015-wp013-clean-reexecution-results.json);
+  independent review: **Pending**
+- Candidate dossier: **Draft – gate incomplete**
+  ([dossier](../docs/operations/SEMANTIC_STATUS_CANDIDATE_DOSSIER.md))
+- **Publication state `Private Development`; current claims: None.**
 
 Documents:
 [Machine-Readable Validation Contract](../docs/architecture/MACHINE_READABLE_VALIDATION_CONTRACT.md) ·
@@ -456,13 +481,14 @@ pilot contract is defined in CDS-WP-004.
   token format decisions (CDS-WP-011, DEC-S-073 … DEC-S-082), 10 machine-readable
   bootstrap and validation decisions (CDS-WP-012, DEC-S-083 … DEC-S-092), and
   12 offline validator implementation decisions (CDS-WP-013, DEC-S-093 …
-  DEC-S-104), and **10 semantic status foundation decisions (CDS-WP-014, DEC-S-105 …
-  DEC-S-114)**. DEC-S-001 … DEC-S-104 unchanged by CDS-WP-014. **ADRs: 3 (ADR-0001,
-  ADR-0002, ADR-0003).**
-- Risks: RISK-001 … RISK-089 (89) — **82 `Monitored`; RISK-040, RISK-044, RISK-066,
+  DEC-S-104), 10 semantic status foundation decisions (CDS-WP-014, DEC-S-105 …
+  DEC-S-114), and **10 semantic status source and evidence decisions (CDS-WP-015,
+  DEC-S-115 … DEC-S-124)**. DEC-S-001 … DEC-S-114 unchanged by CDS-WP-015.
+  **ADRs: 3 (ADR-0001, ADR-0002, ADR-0003).**
+- Risks: RISK-001 … RISK-097 (97) — **90 `Monitored`; RISK-040, RISK-044, RISK-066,
   RISK-067, RISK-068, RISK-069, and RISK-071 `Mitigating`**; **risk owner model
-  finalized** by CDS-WP-006; RISK-073 … RISK-081 added by CDS-WP-013;
-  **RISK-082 … RISK-089 added by CDS-WP-014** (all `Monitored`; no existing status
+  finalized** by CDS-WP-006; RISK-082 … RISK-089 added by CDS-WP-014;
+  **RISK-090 … RISK-097 added by CDS-WP-015** (all `Monitored`; no existing status
   changed). No risk accepted or closed.
 
 ## Intentionally open decision areas

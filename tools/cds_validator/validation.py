@@ -25,6 +25,7 @@ from typing import Any
 
 from tools.cds_validator import diagnostics as diag
 from tools.cds_validator import json_loader
+from tools.cds_validator import semantic_status
 from tools.cds_validator.graph import ManifestGraph, check_resolver_order
 from tools.cds_validator.models import (
     CDS_EXTENSION_ROOT,
@@ -631,24 +632,46 @@ class ValidationEngine:
     # ------------------------------------------------------------------ V4
 
     def run_v4(self, documents: list[ScopeDocument]) -> dict[int, ResultState]:
+        """V4 with the CDS-WP-015 ordering rule for status vocabularies:
+
+        1. Objective semantic-status checks run first for every document
+           recognized as a Semantic Status vocabulary — the testOnly/
+           nonNormative fixture boundary never disables them (DEC-S-118).
+        2. Non-objective generic V4 aspects then stay honestly visible as
+           Not assessed / Not applicable with rationale.
+        """
         states: dict[int, ResultState] = {}
+        scope_manifest = next(
+            (d.content for d in documents
+             if d.kind is DocumentKind.SOURCE_SET_MANIFEST
+             and isinstance(d.content, dict)), None)
         for position, doc in enumerate(documents):
-            if doc.is_fixture:
+            before = len(doc.diagnostics)
+            status_doc = (doc.kind is DocumentKind.TOKEN_DOCUMENT
+                          and semantic_status.is_status_vocabulary(doc.content))
+            if status_doc:
+                semantic_status.check_status_document(doc, scope_manifest)
+            if doc.is_fixture and not status_doc:
                 states[position] = ResultState.NOT_APPLICABLE
                 continue
-            before = len(doc.diagnostics)
-            self._v4_objective(doc)
+            if not doc.is_fixture:
+                self._v4_objective(doc)
             failed = any(
                 d.layer == "V4" and d.severity == "error"
                 for d in doc.diagnostics[before:])
-            states[position] = (
-                ResultState.FAIL if failed else ResultState.NOT_ASSESSED)
+            if status_doc:
+                states[position] = (
+                    ResultState.FAIL if failed else ResultState.PASS)
+            else:
+                states[position] = (
+                    ResultState.FAIL if failed else ResultState.NOT_ASSESSED)
             if not failed:
                 doc.diagnostics.append(diag.make(
                     "CDS-V4-NOT-ASSESSED",
-                    "Non-objective V4 aspects (status truth, semantics, "
-                    "accessibility relevance, compatibility) require human/"
-                    "governance review and remain Not assessed (DEC-S-097)",
+                    "Non-objective V4 aspects (status truth beyond the fixed "
+                    "vocabulary, semantics, accessibility relevance, "
+                    "compatibility) require human/governance review and remain "
+                    "Not assessed (DEC-S-097)",
                     str(doc.path)))
         return states
 

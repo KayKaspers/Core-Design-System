@@ -8,6 +8,12 @@
   commit**. Maturity: **Experimental** — this contract holds **no Candidate or
   Stable status** (DEC-S-114) and makes no conformance, accessibility, or adoption
   claim.
+- **Update (CDS-WP-015):** the machine-readable Semantic Status Source Set
+  **`semantic/status`** is implemented (Experimental; 25 non-visual tokens with
+  manifest and resolver under `tokens/semantic/status/`; DEC-S-115…117) and
+  validated by the executed 24-case harness — **executor-produced evidence,
+  independently unreviewed; the Candidate gate remains open** (DEC-S-121,
+  DEC-S-122).
 
 ## Purpose and authority
 
@@ -162,6 +168,10 @@ not an authoring convenience.
 - [Status Communication and Accessibility Contract](STATUS_COMMUNICATION_AND_ACCESSIBILITY_CONTRACT.md)
 - [Semantic Status Token Contract](SEMANTIC_STATUS_TOKEN_CONTRACT.md)
 - [First Semantic Status Candidate Plan](../roadmap/FIRST_SEMANTIC_STATUS_CANDIDATE_PLAN.md)
+- [Semantic Status Source Set](../../tokens/semantic/status/semantic-status.tokens.json) ·
+  [Manifest](../../tokens/semantic/status/semantic-status.source-set.json) ·
+  [Resolver](../../tokens/semantic/status/semantic-status.resolver.json)
+- [Semantic Status Terminology DE/EN](SEMANTIC_STATUS_TERMINOLOGY_DE_EN.md)
 - [Evidence, Traceability and Status Semantics](../architecture/EVIDENCE_TRACEABILITY_AND_STATUS_SEMANTICS.md)
 - [Accessibility Requirements Baseline](../governance/ACCESSIBILITY_REQUIREMENTS_BASELINE.md)
 - [Token and Theme Architecture](../architecture/TOKEN_AND_THEME_ARCHITECTURE.md)

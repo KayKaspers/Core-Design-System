@@ -6,7 +6,7 @@
 > it never defines. Where it disagrees with a normative source, the normative
 > source wins and this pack is wrong and must be corrected.
 
-- **Maintained by:** CDS-WP-014
+- **Maintained by:** CDS-WP-015
 - **Date:** 2026-07-17
 
 ## Project identity
@@ -34,10 +34,14 @@ and the **offline validator and fixture harness are implemented and executed**
 **15/15 expected/actual case matches**, 14 digests — executor-produced, independently
 unreviewed); and the **Semantic Status Foundation Contract is defined** (CDS-WP-014:
 five independent axes, 25 values with explicit `unknown`, ten invariants,
-combination/communication/token contracts, gated first Candidate plan) —
-**Experimental, pending commit, no Candidate status, no visual value**. Concrete
-visual design values remain unauthorized (DEC-S-003). The next work package is
-**CDS-WP-015 — Semantic Status Foundation Source Set and Candidate Evidence**.
+combination/communication/token contracts, gated first Candidate plan); and the
+**Semantic Status Source Set is implemented** (CDS-WP-015: `semantic/status`, 25
+non-visual tokens with manifest/resolver, semantic-status V4 validation, 24/24
+harness matches, 25/25 DE/EN terminology, Draft Candidate Dossier) —
+**Experimental, pending commit, executor-produced, independently unreviewed, no
+Candidate status, no visual value**. Concrete visual design values remain
+unauthorized (DEC-S-003). The next work package is **CDS-WP-016 — Semantic Status
+Foundation Independent Evidence Review and Candidate Gate**.
 
 ## Completed work packages
 
@@ -58,6 +62,7 @@ visual design values remain unauthorized (DEC-S-003). The next work package is
 | CDS-WP-012 | Machine-Readable Source Bootstrap and Validation Contract | Implemented the value-neutral bootstrap (pending commit): **4 CDS-owned JSON Schema 2020-12 contracts** (token document, source-set manifest, resolver, validation case; stable `tag:` `$id`s, local `$ref`, offline), the `io.github.kaykaspers.cds` payload contract, **6 positive + 9 negative synthetic fixtures**, a **15-case validation-case matrix** (expected V1–V4 per fixture), an explicit **V1–V4 Validation Contract** (duplicate-key fails V1; no aggregate score), and the **RFC 8785 (JCS) + SHA-256** serialization decision (**ADR-0002**). DEC-S-083…092 added; RISK-064…072 added. **No real token/design value, productive validator, or canonicalizer; formal schema execution `Not assessed`; Experimental, not Candidate; publication `Private Development`. CDS-WP-013 registered Next.** |
 | CDS-WP-013 | Offline Token Profile Validator and Fixture Harness | Implemented and executed the offline validator (pending commit): `python -m tools.cds_validator` (Python 3.12.10; pinned `jsonschema==4.26.0` + `rfc8785==0.1.4`, ADR-0003), a single duplicate-key-rejecting loader, a local five-schema registry (incl. the new **validation-result schema**), the layered V1–V4 engine, manifest/resolver graph validation, and RFC 8785 + SHA-256 digests. **71/71 unit tests; 15/15 cases with 15/15 expected/actual matches; 14 fixtures digested** (duplicate-key: none). Evidence in `artifacts/validation/` + Execution Review — **executor-produced, `independentReviewState: pending`**. DEC-S-093…104 added; RISK-073…081 added; RISK-066/067/068/069/071 → `Mitigating`. **Bounded DTCG V2 (no full-DTCG statement); no design value; no Candidate; publication `Private Development`. CDS-WP-014 registered Next.** |
 | CDS-WP-014 | Semantic Status Foundation Contract and First Candidate Plan | Defined the first concrete design foundation (pending commit): the **Semantic Status Foundation Contract** — 5 independent axes (`condition`/`severity`/`confidence`/`freshness`/`evidence`), a fixed **25-value vocabulary** with explicit `unknown` everywhere, **10 invariants**, the 11-field status object, **6 review-required combinations + 8 fail-closed states**, disclosure priority without any aggregate score, the text-first **communication/accessibility/localization contract** (DE/EN semantic parity), the value-neutral **Semantic Status Token Contract**, and the **First Semantic Status Candidate Plan** (8-element package, 10 unmet prerequisites) + executor-produced readiness review. DEC-S-105…114 added; RISK-082…089 added. **No visual value, no token file, no component, no Candidate/Stable, no claim; WP-013 evidence stays independently unreviewed; publication `Private Development`. CDS-WP-015 registered Next.** |
+| CDS-WP-015 | Semantic Status Foundation Source Set and Candidate Evidence | Implemented the first real, still-Experimental source set (pending commit; resume run after a correctly BLOCKED first run): **`semantic/status`** (5 axes, **25 non-visual tokens** `status.<axis>.<value>`, manifest + resolver), the **Nova-authorized additive validation-case-schema correction** (semantic-status fixture paths + 9 categories; `$id` unchanged; CLI untouched/fail closed), the **semantic-status V4 extension** (9 `CDS-V4-STATUS-*` codes; fixture flags never disable the objective checks), 1+8 status fixtures, **VAL-CASE-016…024** (24-case matrix; WP-013 baseline byte-identical), **25/25 DE/EN terminology**, revision-clean WP-013 re-execution (**15/15, worktree clean**), **103/103 unit tests**, **24/24 harness matches**, source-set validation (V1–V3 Pass, exit 0) + RFC 8785/SHA-256 digests, 4 executor-produced reviews, **Draft Candidate Dossier** (gate incomplete). DEC-S-115…124 added; RISK-090…097 added. **Executor-produced, independently unreviewed; no visual value; Not Candidate; publication `Private Development`. CDS-WP-016 registered Next.** |
 
 ## Normative source map
 
@@ -110,6 +115,10 @@ Read the source, not this summary, when the detail matters.
 | Status communication/accessibility contract | [docs/foundations/STATUS_COMMUNICATION_AND_ACCESSIBILITY_CONTRACT.md](../docs/foundations/STATUS_COMMUNICATION_AND_ACCESSIBILITY_CONTRACT.md) |
 | Semantic status token contract (no values) | [docs/foundations/SEMANTIC_STATUS_TOKEN_CONTRACT.md](../docs/foundations/SEMANTIC_STATUS_TOKEN_CONTRACT.md) |
 | First Candidate plan (no promotion) | [docs/roadmap/FIRST_SEMANTIC_STATUS_CANDIDATE_PLAN.md](../docs/roadmap/FIRST_SEMANTIC_STATUS_CANDIDATE_PLAN.md) |
+| **Semantic Status Source Set (`semantic/status`, Experimental)** | [tokens/semantic/status/](../tokens/semantic/status/) |
+| Status terminology DE/EN (25/25) | [docs/foundations/SEMANTIC_STATUS_TERMINOLOGY_DE_EN.md](../docs/foundations/SEMANTIC_STATUS_TERMINOLOGY_DE_EN.md) |
+| Candidate dossier (Draft, gate incomplete) | [docs/operations/SEMANTIC_STATUS_CANDIDATE_DOSSIER.md](../docs/operations/SEMANTIC_STATUS_CANDIDATE_DOSSIER.md) |
+| WP-015 evidence (executor-produced) | [artifacts/validation/](../artifacts/validation/) · [Source-Set Review](../docs/reviews/SEMANTIC_STATUS_SOURCE_SET_EXECUTION_REVIEW.md) · [Re-Execution Review](../docs/reviews/WP013_VALIDATOR_EVIDENCE_REEXECUTION_REVIEW.md) |
 | **Logical architecture** | [docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md](../docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md) |
 | Artifact classes and authority | [docs/architecture/SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md](../docs/architecture/SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md) |
 | Token flow and theming | [docs/architecture/TOKEN_AND_THEME_ARCHITECTURE.md](../docs/architecture/TOKEN_AND_THEME_ARCHITECTURE.md) |
@@ -145,7 +154,7 @@ and reference the normative policies; they do not replace them (DEC-S-063):
 
 ## Active decisions
 
-- Range: DEC-S-001 … DEC-S-114 · Count: 114 · All Accepted · ADRs: 3 (ADR-0001,
+- Range: DEC-S-001 … DEC-S-124 · Count: 124 · All Accepted · ADRs: 3 (ADR-0001,
   ADR-0002, ADR-0003)
 - DEC-S-001…006: strategic foundation decisions (CDS-WP-001)
 - DEC-S-007…012: strategic scope decisions (CDS-WP-002)
@@ -167,6 +176,8 @@ and reference the normative policies; they do not replace them (DEC-S-063):
   DEC-S-001…092 unchanged
 - DEC-S-105…114: semantic status foundation decisions (CDS-WP-014) —
   DEC-S-001…104 unchanged
+- DEC-S-115…124: semantic status source and evidence decisions (CDS-WP-015) —
+  DEC-S-001…114 unchanged
 - ADR-0001 (Machine-Readable Token Source Format), ADR-0002 (Deterministic JSON
   Serialization), and ADR-0003 (Offline Token Validator Implementation Stack)
   exist — 3 ADRs.
@@ -287,10 +298,20 @@ and reference the normative policies; they do not replace them (DEC-S-063):
 | DEC-S-112 | Channels, components, profiles, and extensions preserve axis distinction and truthfulness. |
 | DEC-S-113 | First planned Candidate: the Semantic Status Foundation (contract + future source set); visuals excluded. |
 | DEC-S-114 | No Candidate until source set, validation/accessibility/content evidence, independent review, Nova review, and Human-Maintainer approval are complete. |
+| DEC-S-115 | The Semantic Status Source Set is `semantic/status` and stays Experimental; implementation grants no status. |
+| DEC-S-116 | One non-visual token per authorized axis value: 5 axis groups, 25 status tokens. |
+| DEC-S-117 | Token paths `status.<axis>.<value>`; values = stable technical IDs; 1:1 vocabulary traceability. |
+| DEC-S-118 | Status validation fails closed on missing axis/value/unknown, path-value disagreement, case collision, aggregate or appearance roles. |
+| DEC-S-119 | DE/EN terminology is separate from technical IDs and must preserve normative meaning. |
+| DEC-S-120 | WP-013 cases are immutable baseline expectations; WP-015 adds VAL-CASE-016…024 append-only. |
+| DEC-S-121 | WP-015 execution and review evidence is executor-produced and independently unreviewed until separately assessed. |
+| DEC-S-122 | The Candidate Dossier stays Draft while review/approval gates are open; a full-looking dossier grants nothing. |
+| DEC-S-123 | Source set, manifest, resolver, and outputs stay identity- and digest-aligned; disagreement fails closed. |
+| DEC-S-124 | No downstream artifact may present the Experimental status source as an approved Candidate before the gate succeeds. |
 
 ## Active risks
 
-- Range: RISK-001 … RISK-089 · Count: 89 · **82 Monitored; RISK-040, RISK-044,
+- Range: RISK-001 … RISK-097 · Count: 97 · **90 Monitored; RISK-040, RISK-044,
   RISK-066, RISK-067, RISK-068, RISK-069, RISK-071 Mitigating**
 - **Owner model finalized** (DEC-S-045): Accountable Risk Owner — Human
   Maintainer · Risk Controller — Nova · Mitigation Executor — named per
@@ -307,7 +328,8 @@ and reference the normative policies; they do not replace them (DEC-S-063):
   (validator supply-chain/coverage/reproducibility/evidence risks, all Monitored) and
   moved **RISK-066/067/068/069/071 `Monitored → Mitigating`** on executed,
   executor-produced harness evidence (independently unreviewed). **CDS-WP-014 added
-  RISK-082…089** (semantic-status truthfulness risks, all Monitored; no existing
+  RISK-082…089** (semantic-status truthfulness risks, all Monitored). **CDS-WP-015
+  added RISK-090…097** (status source/evidence risks, all Monitored; no existing
   status changed). No risk accepted or closed.
 
 | ID | Summary |
@@ -401,6 +423,14 @@ and reference the normative policies; they do not replace them (DEC-S-063):
 | RISK-087 | Visual-only status encoding. |
 | RISK-088 | Consumer status remapping divergence. |
 | RISK-089 | First-candidate scope expansion. |
+| RISK-090 | Status source and contract drift. |
+| RISK-091 | Semantic status tokens mistaken for visual tokens. |
+| RISK-092 | Status token path migration instability. |
+| RISK-093 | Semantic validator blind spot. |
+| RISK-094 | Semantic fixture overfitting. |
+| RISK-095 | Status localization parity false assurance. |
+| RISK-096 | Candidate dossier completeness illusion. |
+| RISK-097 | Experimental status source consumed prematurely. |
 
 ## Approved strategic principles
 
@@ -745,7 +775,9 @@ decided (CDS-WP-011, ADR-0001), the machine-readable bootstrap is implemented
 (CDS-WP-012, Experimental, ADR-0002), and the offline validator and fixture harness
 are implemented and executed (CDS-WP-013, Experimental, ADR-0003, 15/15
 expected/actual matches, executor-produced and independently unreviewed), and the
-Semantic Status Foundation Contract is defined (CDS-WP-014, Experimental, pending
-commit, no Candidate status, no visual value); the next authorized work package is
-**CDS-WP-015 — Semantic Status Foundation Source Set and Candidate Evidence**. See
-the [Foundation Closure Record](../docs/governance/FOUNDATION_CLOSURE_RECORD.md).
+Semantic Status Foundation Contract is defined (CDS-WP-014) and its machine-readable
+source set is implemented (CDS-WP-015, `semantic/status`, Experimental, pending
+commit, executor-produced 24/24 evidence, independently unreviewed, Not Candidate);
+the next authorized work package is **CDS-WP-016 — Semantic Status Foundation
+Independent Evidence Review and Candidate Gate**. See the
+[Foundation Closure Record](../docs/governance/FOUNDATION_CLOSURE_RECORD.md).

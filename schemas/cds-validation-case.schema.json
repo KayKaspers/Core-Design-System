@@ -44,7 +44,16 @@
         "missing-metadata",
         "preview-feature",
         "unknown-source-revision",
-        "conflicting-source-set-identity"
+        "conflicting-source-set-identity",
+        "semantic-status-axis",
+        "semantic-status-value",
+        "semantic-status-unknown",
+        "semantic-status-count",
+        "semantic-status-path-value",
+        "semantic-status-collision",
+        "semantic-status-aggregate",
+        "semantic-status-visual-leakage",
+        "semantic-status-identity"
       ]
     },
     "case": {
@@ -104,7 +113,8 @@
     },
     "fixturePath": {
       "type": "string",
-      "pattern": "^tests/fixtures/machine-readable/(positive|negative)/[a-z0-9-]+\\.(tokens|source-set|resolver)\\.json$"
+      "description": "Authorized local fixture paths only. Additively widened by CDS-WP-015 (Nova-authorized correction): machine-readable fixtures keep the three document types; semantic-status fixtures permit token documents only. No other roots, subfolders, network paths, backslashes, path escapes, or extensions.",
+      "pattern": "^tests/fixtures/(?:(?:machine-readable)/(?:positive|negative)/[a-z0-9-]+\\.(?:tokens|source-set|resolver)\\.json|(?:semantic-status)/(?:positive|negative)/[a-z0-9-]+\\.tokens\\.json)$"
     }
   }
 }

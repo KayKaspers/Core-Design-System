@@ -7,6 +7,12 @@
 - **Status:** **Normative** vocabulary of the
   [Semantic Status Foundation Contract](SEMANTIC_STATUS_FOUNDATION_CONTRACT.md),
   pending Human-Maintainer commit. Experimental; no Candidate status.
+- **Update (CDS-WP-015):** every one of the 25 values now has exactly one
+  non-visual token in the Experimental
+  [`semantic/status` source set](../../tokens/semantic/status/semantic-status.tokens.json)
+  (`status.<axis>.<value>`, 1:1 machine-verified traceability, DEC-S-117) and a
+  DE/EN entry in the [terminology mapping](SEMANTIC_STATUS_TERMINOLOGY_DE_EN.md).
+  The Candidate gate remains open.
 
 ## Reading this vocabulary
 

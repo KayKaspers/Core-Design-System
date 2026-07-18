@@ -54,25 +54,26 @@ areas today.
 Governance foundation established. No final design or technology decisions are
 approved.
 
-- Decisions: DEC-S-001 … DEC-S-114 (114) — 6 foundation + 6 scope + 8 consumer
+- Decisions: DEC-S-001 … DEC-S-124 (124) — 6 foundation + 6 scope + 8 consumer
   and pilot scope + 12 logical architecture + 16 governance + 12 accessibility +
   4 operating enablement and pre-candidate + 8 accessibility support baseline and
   evidence + 10 machine-readable source and token format + 10 machine-readable
   bootstrap and validation + 12 offline validator implementation + 10 semantic
-  status foundation decisions · **ADRs: 3 (ADR-0001, ADR-0002, ADR-0003)**
-- Risks: RISK-001 … RISK-089 (89) — **82 Monitored; RISK-040, RISK-044, RISK-066,
+  status foundation + 10 semantic status source and evidence decisions ·
+  **ADRs: 3 (ADR-0001, ADR-0002, ADR-0003)**
+- Risks: RISK-001 … RISK-097 (97) — **90 Monitored; RISK-040, RISK-044, RISK-066,
   RISK-067, RISK-068, RISK-069, RISK-071 Mitigating**; **owner model finalized**;
   no risk accepted or closed
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
-  CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014
-- Next work package: **CDS-WP-015 — Semantic Status Foundation Source Set and
-  Candidate Evidence** (authorized as next; not yet executed). Foundation **Closed
-  with Notes**; machine-readable format decided (CDS-WP-011, ADR-0001);
-  machine-readable bootstrap implemented (CDS-WP-012, ADR-0002); offline validator
-  implemented and executed (CDS-WP-013, ADR-0003, 15/15 matches, executor-produced
-  and independently unreviewed); **Semantic Status Foundation Contract defined**
-  (CDS-WP-014, Experimental, pending commit, no Candidate status, no visual value)
+  CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015
+- Next work package: **CDS-WP-016 — Semantic Status Foundation Independent Evidence
+  Review and Candidate Gate** (authorized as next; not yet executed). Foundation
+  **Closed with Notes**; machine-readable machinery implemented and executed
+  (ADR-0001…0003); Semantic Status Foundation **Contract defined (CDS-WP-014)** and
+  **machine-readable implemented (CDS-WP-015: `semantic/status`, 25 non-visual
+  tokens, 24/24 harness matches, 25/25 DE/EN, Draft dossier — executor-produced,
+  independently unreviewed, Not Candidate)**
 
 ## Registered scope
 
@@ -750,14 +751,40 @@ appearance, no visual value, no Candidate**:
 - Added DEC-S-105…114 and RISK-082…089 (all Monitored; no existing status
   changed).
 
+## Semantic Status Source Set and Candidate Evidence (CDS-WP-015)
+
+Implemented the first real machine-readable source set (pending commit; resume run
+after a correctly BLOCKED first run whose conflict Nova resolved by authorizing a
+minimal additive validation-case-schema correction):
+
+- **`semantic/status`** (Experimental/Unapproved): 5 axis groups, **25 non-visual
+  tokens** `status.<axis>.<value>` with values = technical IDs, manifest +
+  resolver, revision `semantic-status-rev-0001` (DEC-S-115…117).
+- **Schema correction (Nova-authorized):** fixture-path families widened to
+  `semantic-status/` token fixtures + 9 `semantic-status-*` categories; `$id` and
+  all existing constraints unchanged; CLI untouched, gate fail closed;
+  regression-tested.
+- **Semantic-status V4 extension** (`semantic_status.py`, 9 `CDS-V4-STATUS-*`
+  codes): objective checks run despite testOnly/nonNormative flags (DEC-S-118);
+  1 positive + 8 negative fixtures; **VAL-CASE-016…024** (24-case matrix, WP-013
+  baseline byte-identical — DEC-S-120).
+- **Executed:** revision-clean WP-013 re-execution (71/71, **15/15 on the
+  committed WP-014 revision, worktree clean**); **103/103 unit tests**; **24/24
+  harness matches**; source-set validation V1–V3 Pass (exit 0); digests for 23
+  fixtures + 3 source files; **25/25 DE/EN terminology**; 4 executor-produced
+  reviews; **Draft Candidate Dossier** (gate incomplete — DEC-S-122).
+- Added DEC-S-115…124, RISK-090…097; no existing risk status changed.
+  **Executor-produced, independently unreviewed (DEC-S-121); Not Candidate
+  (DEC-S-124).**
+
 ## Next step
 
-**CDS-WP-015 — Semantic Status Foundation Source Set and Candidate Evidence**
-(authorized as next; not yet executed): the machine-readable Semantic Status
-source set (value-neutral roles/identifiers), positive and negative status
-fixtures, validator execution with committed expected outcomes, accessibility/
-content evidence preparation, and Candidate-dossier preparation. **Still no visual
-values, no Candidate award, no component work, no pilot.** Execution begins only on
+**CDS-WP-016 — Semantic Status Foundation Independent Evidence Review and
+Candidate Gate** (authorized as next; not yet executed): independent review of the
+WP-013/WP-015 evidence by a separately authorized reviewer (re-execution or
+artifact assessment), traceability/accessibility/content/dossier review, the
+Candidate-gate recommendation, and the Human-Maintainer decision — **no automatic
+Candidate promotion, still no visual values, no pilot.** Execution begins only on
 an explicit Nova prompt and Human-Maintainer authorization.
 
 ## Related documents
@@ -784,6 +811,7 @@ an explicit Nova prompt and Human-Maintainer authorization.
 - [CDS-WP-012 Machine-Readable Bootstrap and Validation Notes](CDS_WP_012_MACHINE_READABLE_BOOTSTRAP_AND_VALIDATION_NOTES.md)
 - [CDS-WP-013 Offline Validator and Fixture Harness Notes](CDS_WP_013_OFFLINE_VALIDATOR_AND_FIXTURE_HARNESS_NOTES.md)
 - [CDS-WP-014 Semantic Status Foundation Notes](CDS_WP_014_SEMANTIC_STATUS_FOUNDATION_NOTES.md)
+- [CDS-WP-015 Semantic Status Source and Evidence Notes](CDS_WP_015_SEMANTIC_STATUS_SOURCE_AND_EVIDENCE_NOTES.md)
 - [Foundation Milestone Review](../docs/reviews/FOUNDATION_MILESTONE_REVIEW.md)
 - [Foundation Closure Record](../docs/governance/FOUNDATION_CLOSURE_RECORD.md)
 - [Accessibility Support Baseline](../docs/governance/ACCESSIBILITY_SUPPORT_BASELINE.md)

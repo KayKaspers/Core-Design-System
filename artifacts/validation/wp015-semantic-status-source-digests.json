@@ -1,0 +1,15 @@
+{
+  "reportVersion": "1",
+  "canonicalizationMethod": "RFC 8785 (JSON Canonicalization Scheme)",
+  "digestAlgorithm": "SHA-256",
+  "digestNote": "Content digests of the semantic/status source set (token document, manifest, resolver) after successful V1 parse. Integrity aid only; not a signature, approval, or authenticity statement (DEC-S-100, DEC-S-123).",
+  "sourceRevision": "semantic-status-rev-0001",
+  "repositoryRevision": "943229dcda15bcc2b4963a55222f6d2c3a4a75eb",
+  "worktreeState": "modified worktree",
+  "independentReviewState": "pending",
+  "digests": {
+    "tokens/semantic/status/semantic-status.tokens.json": "sha256:8d127cf67ad5a15f1822d135c3a7107c9869a9eaf9b96ea0814d2a5c2ef69c81",
+    "tokens/semantic/status/semantic-status.source-set.json": "sha256:879933098194081bb6e6076d6cdd47a6e3d06a59bd26775614b9def3ccd94399",
+    "tokens/semantic/status/semantic-status.resolver.json": "sha256:61e64f58879cc8ec25d25134ec0432da05053e72f70076d0bb835990dd8c8af9"
+  }
+}

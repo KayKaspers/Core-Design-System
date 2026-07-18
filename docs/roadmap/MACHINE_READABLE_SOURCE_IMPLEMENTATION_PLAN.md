@@ -130,16 +130,31 @@ the offline-validation boundary holds; and the results are **independently revie
 and Human-Maintainer approved — all with **still no design values**. CDS-WP-012 defined
 the schemas, fixtures, contract, and serialization decision; **CDS-WP-013 executes them**.
 
+## CDS-WP-015 outcome (first real source set)
+
+**CDS-WP-015 implemented the first real, still-Experimental source set**
+(pending commit): [`semantic/status`](../../tokens/semantic/status/semantic-status.tokens.json)
+(5 axes, 25 non-visual tokens, manifest + resolver), the semantic-status V4
+validator extension, 9 status fixtures, VAL-CASE-016…024 (24-case matrix; the
+WP-013 baseline immutable), the Nova-authorized additive validation-case-schema
+correction, a 25/25 DE/EN terminology mapping, a revision-clean WP-013
+re-execution (15/15 on the committed WP-014 revision, worktree clean), 103/103
+unit tests, a **24/24 harness**, source-set validation (V1–V3 Pass, exit 0),
+and the Draft Candidate Dossier. **Executor-produced, independently unreviewed;
+no visual value; no Candidate** (DEC-S-115…124).
+
 ## Next work package
 
-**CDS-WP-014 — Semantic Status Foundation Contract and First Candidate Plan**
-(registered as `Next`; not executed here): the semantic status foundation (five
-status axes, Unknown/Stale/confidence semantics), a first bounded Candidate scope
-plan, token/component contract boundaries, and an evidence plan — **still no design
-values, no broad component work, no Candidate award, no pilot**. It requires an
-explicit Nova prompt and Human-Maintainer authorization. Registration is not
-execution. The exit criteria above additionally require **independent review** of the
-CDS-WP-013 execution results before any maturity transition (DEC-S-104).
+**CDS-WP-016 — Semantic Status Foundation Independent Evidence Review and
+Candidate Gate** (registered as `Next`; not executed here): independent review of
+the WP-013 and WP-015 evidence by a separately authorized reviewer (re-execution
+or artifact assessment), source/contract/terminology traceability review,
+accessibility- and content-evidence review, Candidate-dossier review, a
+Candidate-gate recommendation, and the Human-Maintainer decision — **no automatic
+Candidate promotion**. It requires an explicit Nova prompt and Human-Maintainer
+authorization. Registration is not execution. (CDS-WP-014 defined the contract
+family; CDS-WP-015 delivered the source set and executor-produced evidence — see
+the outcome sections above.)
 
 ## Related documents
 

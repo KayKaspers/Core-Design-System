@@ -50,13 +50,13 @@ registered risk (RISK-089) and a NO-GO trigger, not a stretch goal.
 | # | Element | State in CDS-WP-014 |
 | --- | --- | --- |
 | 1 | Normative human-readable Status Contract (the four foundations documents) | Drafted (Experimental) |
-| 2 | Machine-readable Semantic Source Set (`.tokens.json`, CDS profile v1, DTCG 2025.10) | Not created (CDS-WP-015) |
-| 3 | Localization and terminology mapping DE/EN | Not created (planned) |
-| 4 | Positive and negative validation fixtures for status semantics | Not created (CDS-WP-015) |
-| 5 | Validation execution evidence (offline validator, machine-readable results, digests) | Not created (CDS-WP-015) |
-| 6 | Accessibility and content review evidence (non-visual meaning, DE/EN parity, understandability) | Not created (planned) |
-| 7 | Known limitations register for the Candidate | Not created (planned) |
-| 8 | Candidate dossier (Elevated change dossier binding 1–7) | Not created (planned) |
+| 2 | Machine-readable Semantic Source Set (`.tokens.json`, CDS profile v1, DTCG 2025.10) | **Implemented (CDS-WP-015)** — [`semantic/status`](../../tokens/semantic/status/semantic-status.tokens.json), Experimental |
+| 3 | Localization and terminology mapping DE/EN | **Created (CDS-WP-015)** — [25/25 mapping](../foundations/SEMANTIC_STATUS_TERMINOLOGY_DE_EN.md), executor-drafted |
+| 4 | Positive and negative validation fixtures for status semantics | **Created (CDS-WP-015)** — 1 positive + 8 negative under `tests/fixtures/semantic-status/` |
+| 5 | Validation execution evidence (offline validator, machine-readable results, digests) | **Produced (CDS-WP-015)** — 24/24 harness + source-set run, executor-produced, independently unreviewed |
+| 6 | Accessibility and content review evidence (non-visual meaning, DE/EN parity, understandability) | **Drafted (CDS-WP-015)** — executor-produced contract reviews; no user research, AE-0 |
+| 7 | Known limitations register for the Candidate | **Recorded (CDS-WP-015)** — inside the [dossier](../operations/SEMANTIC_STATUS_CANDIDATE_DOSSIER.md) |
+| 8 | Candidate dossier (Elevated change dossier binding 1–7) | **Draft (CDS-WP-015)** — gate incomplete (DEC-S-122) |
 
 ## Candidate prerequisites
 
@@ -102,6 +102,13 @@ registered risk (RISK-089) and a NO-GO trigger, not a stretch goal.
   revision-bound, DEC-S-013), without activating the pilot before its entry
   criteria (RISK-018). Consumer evidence informs the Candidate review; it is
   not a pilot start.
+
+## Gate state after CDS-WP-015
+
+Prerequisite 1 (WP-014 committed) is met; 4 and parts of 5 are implemented but
+their evidence is executor-produced and **independently unreviewed**;
+prerequisites 2–3 and 6–10 remain open. **Candidate Status: Not Candidate.**
+Detail: [Candidate Dossier](../operations/SEMANTIC_STATUS_CANDIDATE_DOSSIER.md).
 
 ## Known blockers
 

@@ -1,0 +1,23 @@
+{
+  "resolverVersion": "1",
+  "resolverId": "semantic/status/resolver",
+  "profileVersion": "1",
+  "dtcgReportVersion": "2025.10",
+  "sourceRevision": "semantic-status-rev-0001",
+  "localOnly": true,
+  "orderedSourceSets": [
+    {
+      "order": 1,
+      "sourceSetId": "semantic/status",
+      "$ref": "semantic-status.tokens.json",
+      "pointer": ""
+    }
+  ],
+  "outputIdentity": {
+    "outputId": "semantic/status/resolved-output",
+    "generated": true,
+    "digestState": {
+      "status": "Not computed – validator implementation pending"
+    }
+  }
+}

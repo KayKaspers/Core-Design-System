@@ -68,6 +68,23 @@ approval; compatibility; and approved-overrides-only. V4 is **Not applicable wit
 rationale** for synthetic non-normative fixtures (they carry no real semantics or
 governance).
 
+## Semantic-status V4 extension (CDS-WP-015)
+
+For documents recognized as a **Semantic Status vocabulary** (a root group
+`status`), V4 additionally executes the objective status rules of DEC-S-118:
+authorized axis/value sets, explicit `unknown`, the 25-token count,
+`status.<axis>.<value>` path/value agreement, case-only collision rejection,
+aggregate- and appearance-role prohibition, no Candidate/approval statement,
+and source/manifest identity agreement — with the stable `CDS-V4-STATUS-*`
+diagnostics. **The testOnly/nonNormative fixture boundary never disables these
+objective checks**; non-objective V4 aspects stay `Not assessed` /
+`Not applicable with rationale`. The case matrix now binds **24 cases**
+(VAL-CASE-001…024); the WP-013 baseline expectations VAL-CASE-001…015 are
+immutable (DEC-S-120). The validation-case schema was additively corrected
+(Nova-authorized, CDS-WP-015) to admit `tests/fixtures/semantic-status/`
+token-fixture paths and the nine `semantic-status-*` diagnostic categories;
+its `$id` and all existing constraints are unchanged.
+
 ## Result vocabulary
 
 `Pass` · `Pass with limitations` · `Fail` · `Blocked` · `Not assessed` ·

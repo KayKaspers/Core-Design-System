@@ -11,8 +11,8 @@ authorized work packages.
 
 ## Register scope
 
-- Decision range: DEC-S-001 … DEC-S-114
-- Number of decisions: 114
+- Decision range: DEC-S-001 … DEC-S-124
+- Number of decisions: 124
 - Decision record format: index entries, plus ADR files where a decision warrants an
   Architecture Decision Record. **ADR range: ADR-0001 … ADR-0003 (3 ADRs).**
 - [ADR-0001 — Machine-Readable Token Source Format](ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)
@@ -38,6 +38,7 @@ authorized work packages.
 | Machine-readable bootstrap and validation decision | DEC-S-083 … DEC-S-092 | CDS-WP-012 | CDS-owned schema + fixture bootstrap, `io.github.kaykaspers.cds` payload, strict-JSON manifests and resolvers, synthetic non-normative fixtures, duplicate-key prohibition, bound V1–V4 validation cases, RFC 8785 + SHA-256 digests (ADR-0002), fail-closed local references, and Experimental-not-Candidate status. |
 | Offline validator implementation decision | DEC-S-093 … DEC-S-104 | CDS-WP-013 | Pinned Python/jsonschema/rfc8785 stack, the `python -m tools.cds_validator` CLI contract, the single duplicate-key loader, the local-only schema registry, separated V1–V4 states, bounded DTCG coverage, declared-graph enforcement, digest boundaries, the CDS-owned result schema, expected/actual harness semantics, executor-produced evidence, and the Candidate gate (ADR-0003). |
 | Semantic status foundation decision | DEC-S-105 … DEC-S-114 | CDS-WP-014 | Five independent status axes with a fixed 25-value vocabulary and explicit `unknown`, no degraded-knowledge-as-success, no aggregate health score, explicit combination/conflict rules, language-neutral IDs with meaning-preserving localization, text-first accessible meaning, truth-preserving downstream mappings, and the gated first Candidate plan (no promotion). |
+| Semantic status source and evidence decision | DEC-S-115 … DEC-S-124 | CDS-WP-015 | The `semantic/status` Experimental source set (5 axes, 25 non-visual tokens, `status.<axis>.<value>` with 1:1 vocabulary traceability), fail-closed status validation, separate meaning-preserving DE/EN terminology, immutable WP-013 baseline cases, executor-produced evidence class, the Draft-only dossier rule, identity/digest alignment, and the no-premature-consumption boundary. |
 
 None of these types is an implementation decision. Logical architecture decisions
 define structure, responsibility, and flow — they select no technology, format,
@@ -3659,3 +3660,222 @@ Evidence Review, Nova review, and Human-Maintainer approval are complete.
 - Ten cumulative prerequisites, none met or waived by CDS-WP-014; the WP-013
   harness result is executor-produced observation, never Candidate evidence
   (DEC-S-104 applied to the first design foundation).
+
+---
+
+## DEC-S-115 — The Semantic Status Source Set is `semantic/status` and stays Experimental
+
+- **Status:** Accepted
+- **Date:** 2026-07-18
+- **Type:** Semantic status source and evidence decision
+- **Work package:** CDS-WP-015
+
+### Decision
+
+The initial machine-readable Semantic Status Source Set has the stable source-set
+identity `semantic/status` and remains Experimental.
+
+Its implementation does not grant Candidate, Stable, consumer, or claim status.
+
+### Consequences
+
+- The source set lives at `tokens/semantic/status/` with manifest and resolver;
+  maturity Experimental, approval Unapproved (RISK-097 controlled by DEC-S-124).
+
+---
+
+## DEC-S-116 — One non-visual token per authorized axis value
+
+- **Status:** Accepted
+- **Date:** 2026-07-18
+- **Type:** Semantic status source and evidence decision
+- **Work package:** CDS-WP-015
+
+### Decision
+
+The Semantic Status Source Set contains exactly one non-visual semantic token for
+each authorized axis value.
+
+The initial source contains five axis groups and twenty-five status tokens.
+
+### Consequences
+
+- The 25-token count is machine-enforced (CDS-V4-STATUS-COUNT); no visual role
+  exists in the source (DEC-S-111 applied machine-side).
+
+---
+
+## DEC-S-117 — Token paths are `status.<axis>.<value>` and stay 1:1 traceable
+
+- **Status:** Accepted
+- **Date:** 2026-07-18
+- **Type:** Semantic status source and evidence decision
+- **Work package:** CDS-WP-015
+
+### Decision
+
+Semantic Status token paths use the form `status.<axis>.<value>`.
+
+Each token value preserves the corresponding stable technical value identifier and
+must remain one-to-one traceable to the human-readable Status Axis Vocabulary.
+
+### Consequences
+
+- Path/value agreement is machine-enforced (CDS-V4-STATUS-PATH-VALUE); the
+  vocabulary/source 1:1 mapping is unit-verified; renames are migration events
+  (DEC-S-082, RISK-092).
+
+---
+
+## DEC-S-118 — Semantic Status validation fails closed on vocabulary violations
+
+- **Status:** Accepted
+- **Date:** 2026-07-18
+- **Type:** Semantic status source and evidence decision
+- **Work package:** CDS-WP-015
+
+### Decision
+
+Semantic Status machine-readable validation fails closed when an authorized axis or
+value is missing, `unknown` is absent, an unauthorized value exists, a path and
+value disagree, identifiers collide by case, or aggregate or appearance-oriented
+status roles are introduced.
+
+### Consequences
+
+- Implemented as the status-specific V4 extension with nine stable
+  `CDS-V4-STATUS-*` diagnostics; the testOnly/nonNormative fixture boundary never
+  disables these objective checks (resume-run V4 ordering rule).
+
+---
+
+## DEC-S-119 — DE/EN terminology is separate and meaning-preserving
+
+- **Status:** Accepted
+- **Date:** 2026-07-18
+- **Type:** Semantic status source and evidence decision
+- **Work package:** CDS-WP-015
+
+### Decision
+
+German and English Semantic Status terminology is maintained separately from stable
+technical identifiers.
+
+Localization must preserve normative meaning and may not strengthen, weaken, merge,
+or replace a technical status value.
+
+### Consequences
+
+- The 25-entry [DE/EN mapping](../foundations/SEMANTIC_STATUS_TERMINOLOGY_DE_EN.md)
+  records per-value prohibited shortenings (`supported` never upgrades to
+  „verifiziert"/„geprüft"; `unknown` never reads as neutral success) (RISK-086,
+  RISK-095).
+
+---
+
+## DEC-S-120 — The committed WP-013 cases are immutable baseline expectations
+
+- **Status:** Accepted
+- **Date:** 2026-07-18
+- **Type:** Semantic status source and evidence decision
+- **Work package:** CDS-WP-015
+
+### Decision
+
+The committed WP-013 cases remain immutable baseline expectations.
+
+CDS-WP-015 adds VAL-CASE-016…VAL-CASE-024 without changing
+VAL-CASE-001…VAL-CASE-015.
+
+### Consequences
+
+- The case matrix grew append-only to 24 cases; byte-identity of the first 15 is
+  verified against the committed state (RISK-071 discipline continued).
+
+---
+
+## DEC-S-121 — WP-015 evidence is executor-produced and independently unreviewed
+
+- **Status:** Accepted
+- **Date:** 2026-07-18
+- **Type:** Semantic status source and evidence decision
+- **Work package:** CDS-WP-015
+
+### Decision
+
+Semantic Status Source Set execution, terminology review, accessibility review,
+content review, and localization review produced in CDS-WP-015 are
+executor-produced evidence.
+
+They remain independently unreviewed until an authorized Evidence Reviewer records
+a separate assessment.
+
+### Consequences
+
+- Every WP-015 report and review carries the executor-produced class and
+  `independentReviewState: pending` (DEC-S-045, RISK-078).
+
+---
+
+## DEC-S-122 — The Candidate Dossier stays Draft until every gate closes
+
+- **Status:** Accepted
+- **Date:** 2026-07-18
+- **Type:** Semantic status source and evidence decision
+- **Work package:** CDS-WP-015
+
+### Decision
+
+The Semantic Status Candidate Dossier remains Draft while independent evidence
+review, Nova Candidate review, and Human-Maintainer approval are open.
+
+A complete-looking dossier does not grant Candidate status.
+
+### Consequences
+
+- The [dossier](../operations/SEMANTIC_STATUS_CANDIDATE_DOSSIER.md) carries an
+  explicit gate-state table; unclear readiness resolves as NO-GO (DEC-S-048,
+  RISK-096).
+
+---
+
+## DEC-S-123 — Source set, manifest, resolver, and outputs stay identity-aligned
+
+- **Status:** Accepted
+- **Date:** 2026-07-18
+- **Type:** Semantic status source and evidence decision
+- **Work package:** CDS-WP-015
+
+### Decision
+
+Semantic Status Source Set, Manifest, Resolver, and generated validation outputs
+must remain aligned by source-set identity, profile version, DTCG version,
+revision, provenance, and content digest.
+
+Identity disagreement fails closed.
+
+### Consequences
+
+- Enforced at V3 (manifest binding) and V4 (CDS-V4-STATUS-IDENTITY); evidence
+  artifacts bind revision, worktree state, and `sha256:` digests (RISK-090).
+
+---
+
+## DEC-S-124 — No downstream artifact may present the Experimental source as Candidate
+
+- **Status:** Accepted
+- **Date:** 2026-07-18
+- **Type:** Semantic status source and evidence decision
+- **Work package:** CDS-WP-015
+
+### Decision
+
+No Consumer, Product Profile, component, UI, or channel implementation may
+represent the Experimental Semantic Status Source Set as an approved CDS Candidate
+before the explicit Candidate gate succeeds.
+
+### Consequences
+
+- Premature consumption is a registered risk (RISK-097); the approval-statement
+  check (CDS-V4-STATUS-IDENTITY) rejects embedded Candidate/Approved claims at the
+  source.

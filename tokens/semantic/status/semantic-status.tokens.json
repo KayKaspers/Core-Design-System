@@ -1,0 +1,159 @@
+{
+  "$description": "CDS Semantic Status Source Set (semantic/status). EXPERIMENTAL, not Candidate, not Stable. Non-visual status meaning roles for the five independent axes of the Semantic Status Foundation Contract. Each token value is the stable technical value identifier; no color, icon, shape, position, motion, aggregate health, consumer, or Product-Profile semantics exist here.",
+  "$extensions": {
+    "io.github.kaykaspers.cds": {
+      "profileVersion": "1",
+      "sourceSetId": "semantic/status",
+      "layer": "semantic",
+      "dtcgReportVersion": "2025.10",
+      "sourceRevision": "semantic-status-rev-0001",
+      "manifestRef": "semantic-status.source-set.json",
+      "maturityState": "Experimental",
+      "approvalState": "Unapproved",
+      "originatingDecision": "DEC-S-115"
+    }
+  },
+  "status": {
+    "$description": "Root group of the CDS semantic status vocabulary: five independent axes, five values each (status.<axis>.<value>).",
+    "condition": {
+      "$description": "Operational Condition: what state is the subject in, within the declared scope.",
+      "nominal": {
+        "$type": "string",
+        "$value": "nominal",
+        "$description": "Operates within declared normal parameters in the declared scope; implies no verification, currency, or evidence."
+      },
+      "degraded": {
+        "$type": "string",
+        "$value": "degraded",
+        "$description": "Operates outside declared normal parameters with reduced capability, performance, or quality."
+      },
+      "disrupted": {
+        "$type": "string",
+        "$value": "disrupted",
+        "$description": "One or more declared functions do not operate; the subject is not fully out of service."
+      },
+      "unavailable": {
+        "$type": "string",
+        "$value": "unavailable",
+        "$description": "The declared function is not provided in the declared scope, regardless of cause."
+      },
+      "unknown": {
+        "$type": "string",
+        "$value": "unknown",
+        "$description": "The operational condition cannot currently be stated; never a shorthand for nominal."
+      }
+    },
+    "severity": {
+      "$description": "Severity and Impact: how much the current state matters in the declared scope.",
+      "none": {
+        "$type": "string",
+        "$value": "none",
+        "$description": "No known impact in the declared scope; not automatically a nominal condition."
+      },
+      "minor": {
+        "$type": "string",
+        "$value": "minor",
+        "$description": "Impact exists but does not materially impair the declared purpose."
+      },
+      "major": {
+        "$type": "string",
+        "$value": "major",
+        "$description": "Impact materially impairs the declared purpose."
+      },
+      "critical": {
+        "$type": "string",
+        "$value": "critical",
+        "$description": "Impact endangers the declared purpose as a whole or creates an unacceptable risk."
+      },
+      "unknown": {
+        "$type": "string",
+        "$value": "unknown",
+        "$description": "The impact cannot currently be assessed; never treated as none."
+      }
+    },
+    "confidence": {
+      "$description": "Knowledge Confidence: how sure we are of the status statement itself.",
+      "verified": {
+        "$type": "string",
+        "$value": "verified",
+        "$description": "Backed by identified, current verification evidence appropriate to the declared scope."
+      },
+      "supported": {
+        "$type": "string",
+        "$value": "supported",
+        "$description": "Rests on relevant but not fully verifying evidence or observation; never rounded up to verified."
+      },
+      "uncertain": {
+        "$type": "string",
+        "$value": "uncertain",
+        "$description": "Relevant indications exist but are incomplete or partially conflicting."
+      },
+      "unverified": {
+        "$type": "string",
+        "$value": "unverified",
+        "$description": "Not verified; no verification took place or its result is unusable; never displayed as verified."
+      },
+      "unknown": {
+        "$type": "string",
+        "$value": "unknown",
+        "$description": "The confidence of the statement itself cannot be stated."
+      }
+    },
+    "freshness": {
+      "$description": "Freshness: how current the observation or assessment is.",
+      "current": {
+        "$type": "string",
+        "$value": "current",
+        "$description": "Recent enough for the declared scope, with a documented observation or assessment time."
+      },
+      "aging": {
+        "$type": "string",
+        "$value": "aging",
+        "$description": "Beyond the ideal currency but not yet stale for the declared scope."
+      },
+      "stale": {
+        "$type": "string",
+        "$value": "stale",
+        "$description": "Too old to support current decisions in the declared scope; never communicated as current."
+      },
+      "expired": {
+        "$type": "string",
+        "$value": "expired",
+        "$description": "Past a declared hard validity limit; must not ground current statements."
+      },
+      "unknown": {
+        "$type": "string",
+        "$value": "unknown",
+        "$description": "The observation time, and therefore currency, cannot be stated."
+      }
+    },
+    "evidence": {
+      "$description": "Evidence Availability: whether the statement is backed by accessible evidence.",
+      "available": {
+        "$type": "string",
+        "$value": "available",
+        "$description": "Evidence exists and is accessible via a resolvable evidence identity; availability is not correctness."
+      },
+      "partial": {
+        "$type": "string",
+        "$value": "partial",
+        "$description": "Some, but not all, relevant evidence is accessible; the gap stays visible."
+      },
+      "unavailable": {
+        "$type": "string",
+        "$value": "unavailable",
+        "$description": "No evidence for the statement is currently accessible."
+      },
+      "not-applicable": {
+        "$type": "string",
+        "$value": "not-applicable",
+        "$description": "Evidence is not meaningfully applicable in the declared scope; requires an explicit recorded rationale."
+      },
+      "unknown": {
+        "$type": "string",
+        "$value": "unknown",
+        "$description": "Whether evidence exists or is accessible cannot currently be stated."
+      }
+    }
+  }
+}

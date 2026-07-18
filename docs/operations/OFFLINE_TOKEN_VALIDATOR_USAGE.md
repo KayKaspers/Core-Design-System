@@ -49,8 +49,12 @@ resolver in scope). Exit codes: **0** Pass / Pass with limitations · **1** Fail
 python -m tools.cds_validator validate-cases tests/fixtures/machine-readable/VALIDATION_CASES.json --report artifacts/validation/wp013-fixture-results.json --digests artifacts/validation/wp013-fixture-digests.json
 ```
 
-Schema-validates the case matrix, executes all cases, compares actual against the
-committed expected outcomes, and writes schema-validated machine-readable reports.
+Schema-validates the case matrix, executes all cases (**24** since CDS-WP-015:
+15 machine-readable + 9 semantic-status), compares actual against the committed
+expected outcomes, and writes schema-validated machine-readable reports.
+Documents with a root `status` group additionally receive the objective
+semantic-status V4 checks (`CDS-V4-STATUS-*`), which fixture flags never
+disable.
 Exit codes: **0** all actual results match expected · **1** at least one mismatch ·
 **2** blocked (contract/input/dependency problem) · **3** internal error.
 An expected failure of a negative fixture that is recognized correctly is a

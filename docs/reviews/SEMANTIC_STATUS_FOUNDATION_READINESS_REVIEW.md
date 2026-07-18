@@ -9,6 +9,16 @@
   review**. It informs the Nova review; it approves nothing. **No numeric
   score exists.**
 
+## Update (CDS-WP-015)
+
+The gaps behind criteria 5 and 6 are now closed at artifact level: the DE/EN
+terminology mapping (25/25) and the machine-readable source set
+`semantic/status` exist, with executed 24/24 harness evidence — all
+**executor-produced and independently unreviewed**. Criterion 8 (Candidate
+readiness) remains **Not met**: the independent-review, Nova-review, and
+Human-Maintainer gates are open (DEC-S-121, DEC-S-122). The assessments below
+document the CDS-WP-014 state unchanged.
+
 ## Result vocabulary
 
 `Met` · `Met with notes` · `Partially met` · `Not met` · `Not applicable`.

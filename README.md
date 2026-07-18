@@ -44,8 +44,14 @@ remains `Private Development`.** The **first concrete design foundation is defin
 axes with a fixed 25-value vocabulary and explicit `unknown`, ten invariants,
 combination/communication/token contracts, and a gated
 [First Semantic Status Candidate Plan](docs/roadmap/FIRST_SEMANTIC_STATUS_CANDIDATE_PLAN.md)
-— **Experimental, no Candidate status, no visual value**. The next work package is
-**CDS-WP-015 — Semantic Status Foundation Source Set and Candidate Evidence**.
+— **Experimental, no Candidate status, no visual value** — and its
+**machine-readable source set is implemented** (CDS-WP-015): the Experimental
+[`semantic/status` source set](tokens/semantic/status/semantic-status.tokens.json)
+with 25 non-visual tokens, a 24/24 validation harness, 25/25 DE/EN terminology,
+and a [Draft Candidate Dossier](docs/operations/SEMANTIC_STATUS_CANDIDATE_DOSSIER.md)
+— **executor-produced evidence, independently unreviewed, Not Candidate**. The next
+work package is **CDS-WP-016 — Semantic Status Foundation Independent Evidence
+Review and Candidate Gate**.
 
 The project does not yet produce visual design.
 
@@ -397,8 +403,16 @@ invariants** (no aggregate health score; unknown/stale/unverified never represen
 as success), explicit **combination and conflict rules**, a text-first
 **communication/accessibility/localization contract** (DE/EN semantic parity, no
 colour-/icon-only meaning), and a value-neutral **Semantic Status Token Contract**.
-**No visual value, no token source file, no component exists; nothing is Candidate;
-the first Candidate is planned and fully gated.**
+**No visual value and no component exists; nothing is Candidate; the first
+Candidate is planned and fully gated.** Since CDS-WP-015 the **Experimental
+machine-readable source set [`semantic/status`](tokens/semantic/status/semantic-status.tokens.json)**
+exists (25 non-visual identity tokens, manifest, resolver) with executed
+**24/24 validation-case evidence**, a
+[25/25 DE/EN terminology mapping](docs/foundations/SEMANTIC_STATUS_TERMINOLOGY_DE_EN.md),
+four executor-produced reviews, and a
+[Draft Candidate Dossier](docs/operations/SEMANTIC_STATUS_CANDIDATE_DOSSIER.md) —
+**independently unreviewed; the Candidate gate is open; consuming or representing
+the source set as approved is prohibited (DEC-S-124).**
 
 - [Semantic Status Foundation Contract](docs/foundations/SEMANTIC_STATUS_FOUNDATION_CONTRACT.md)
 - [Status Axis Vocabulary](docs/foundations/STATUS_AXIS_VOCABULARY.md)
@@ -425,8 +439,9 @@ the first Candidate is planned and fully gated.**
 - **Completed:** CDS-WP-012 — Machine-Readable Source Bootstrap and Validation Contract
 - **Completed:** CDS-WP-013 — Offline Token Profile Validator and Fixture Harness
 - **Completed:** CDS-WP-014 — Semantic Status Foundation Contract and First Candidate Plan
-- **Next:** **CDS-WP-015 — Semantic Status Foundation Source Set and Candidate Evidence**
-  (authorized; not yet executed)
+- **Completed:** CDS-WP-015 — Semantic Status Foundation Source Set and Candidate Evidence
+- **Next:** **CDS-WP-016 — Semantic Status Foundation Independent Evidence Review and
+  Candidate Gate** (authorized; not yet executed)
 
 The full controlled roadmap is in
 [project-system/WORK_PACKAGES.md](project-system/WORK_PACKAGES.md).
