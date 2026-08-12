@@ -4,8 +4,16 @@ Objective, machine-checkable V4 rules for documents that carry the CDS
 Semantic Status vocabulary (a root group named ``status``): exactly the five
 authorized axes with exactly the authorized five values each, ``unknown`` on
 every axis, 25 tokens, path/value agreement, no case-only identifier
-collisions, no aggregate or appearance-oriented status roles, no
-Candidate/approval statements, and source/manifest identity agreement.
+collisions, no aggregate or appearance-oriented status roles,
+maturity/approval metadata coherence, and source/manifest identity agreement.
+
+Maturity/approval coherence (CDS-WP-016): ``Experimental`` is coherent only
+with ``Unapproved``; ``Candidate`` only together with ``Approved``, a Candidate
+source revision, and a non-fixture source; ``Stable`` stays rejected. A pass
+proves metadata coherence only — it never grants Candidate governance
+authority, which rests solely with the Candidate Approval Record, the Nova
+finalization review, and the Human-Maintainer commit (DEC-S-115, DEC-S-122,
+DEC-S-124).
 
 These checks run even for ``testOnly``/``nonNormative`` fixtures: the fixture
 boundary never disables the objective status rules (resume-run V4 ordering
@@ -209,7 +217,7 @@ def check_status_document(doc, manifest_content=None) -> list:
                  f"approvalState {approval!r}: a Candidate source must declare "
                  "approvalState 'Approved' and be internally coherent (DEC-S-122)")
         elif not (isinstance(revision, str)
-                  and CANDIDATE_REVISION_PATTERN.match(revision)):
+                  and CANDIDATE_REVISION_PATTERN.fullmatch(revision)):
             emit("CDS-V4-STATUS-IDENTITY",
                  f"Status source declares Candidate maturity with sourceRevision "
                  f"{revision!r}: a Candidate revision must match "

@@ -328,6 +328,13 @@ class SemanticStatusMaturityApprovalTests(unittest.TestCase):
             maturity="Candidate", approval="Approved",
             revision="semantic-status-rev-0001"))
 
+    def test_candidate_revision_trailing_newline_fails(self):
+        # CDS-WP-016 R1 (F-004): the Candidate revision is matched with
+        # fullmatch, so a trailing newline is not an allowed Candidate revision.
+        self.assert_identity_error(self.doc(
+            maturity="Candidate", approval="Approved",
+            revision="semantic-status-rev-0002-candidate\n"))
+
     def test_experimental_approved_fails(self):
         self.assert_identity_error(
             self.doc(maturity="Experimental", approval="Approved"))
