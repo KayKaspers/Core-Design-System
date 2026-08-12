@@ -770,8 +770,8 @@ Review docs: [Milestone Review](../docs/reviews/FOUNDATION_MILESTONE_REVIEW.md) 
 Foundation closure and the next phase were subsequently **decided**: the Human
 Maintainer accepted `GO WITH NOTES` (commit of CDS-WP-008 + initiation of
 CDS-WP-009). **Foundation: Closed with Notes.** Operating enablement is in place
-(CDS-WP-009), the accessibility support baseline A11Y-BL-001 is defined (CDS-WP-010,
-pending commit, no evidence executed), the machine-readable source format is
+(CDS-WP-009), the accessibility support baseline A11Y-BL-001 is declared and
+committed (CDS-WP-010, no evidence executed), the machine-readable source format is
 decided (CDS-WP-011, ADR-0001), the machine-readable bootstrap is implemented
 (CDS-WP-012, Experimental, ADR-0002), and the offline validator and fixture harness
 are implemented and executed (CDS-WP-013, Experimental, ADR-0003, 15/15

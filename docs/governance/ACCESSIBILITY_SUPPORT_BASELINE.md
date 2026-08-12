@@ -149,8 +149,9 @@ product accessible.
 
 ## Current approval state
 
-- **Pending Nova review and Human-Maintainer commit.** Until then A11Y-BL-001 is a
-  proposal.
+- **Approved and in effect.** Nova review and the Human-Maintainer commit of
+  CDS-WP-010 are complete; A11Y-BL-001 is a committed baseline and a **test
+  contract**, no longer a proposal.
 - **No evidence** has been produced against it. **No environment is claimed as
   supported.** **No WCAG conformance is asserted.** Publication state remains
   `Private Development`.

@@ -24,8 +24,8 @@ committed governance is now operationalized for daily use. A lightweight
 [Elevated](docs/operations/ELEVATED_CHANGE_DOSSIER_TEMPLATE.md) change-dossier
 templates exist, and the twelve Critical Risks are made actionable in a
 [Critical Risk Action Register](docs/operations/CRITICAL_RISK_ACTION_REGISTER.md).
-The first **accessibility support baseline** (A11Y-BL-001) is **defined** (CDS-WP-010,
-pending commit) — a **test contract, not evidence**. The **machine-readable source
+The first **accessibility support baseline** (A11Y-BL-001) is **declared and
+committed** (CDS-WP-010) — a **test contract, not evidence**. The **machine-readable source
 format is decided** (CDS-WP-011): a **DTCG 2025.10-based CDS profile** in **strict
 JSON** ([ADR-0001](docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)), and
 its **value-neutral bootstrap is implemented** (CDS-WP-012): four CDS-owned JSON Schema

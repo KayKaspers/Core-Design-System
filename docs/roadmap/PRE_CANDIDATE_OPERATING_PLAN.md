@@ -48,7 +48,7 @@ pilot activation.
    (FM-F-003; RISK-040.)
 3. **Declare an accessibility support baseline** — **delivered (policy-side) by
    CDS-WP-010**: A11Y-BL-001, three tiers, environment matrix, evidence strategy,
-   maintenance policy, and defect/regression model, pending Human-Maintainer commit.
+   maintenance policy, and defect/regression model, declared and committed.
    **No evidence executed** (every artifact AE-0). (FM-F-001; RISK-044 → Mitigating.)
 4. **Staff the Evidence Reviewer role** (and, for a profile, a Consumer
    Maintainer) — **not yet done**; the reviewer may never be the author.

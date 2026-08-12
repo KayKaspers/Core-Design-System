@@ -195,7 +195,7 @@ authorized official standards/vendor research — without running any test or
 selecting any tool:
 
 - **A11Y-BL-001** ([Accessibility Support Baseline](../docs/governance/ACCESSIBILITY_SUPPORT_BASELINE.md)),
-  pending Human-Maintainer commit — a **test contract, not evidence**.
+  declared and committed — a **test contract, not evidence**.
 - **Three tiers** (Required / Complementary / Scope-triggered) and a 14-entry
   [Environment and Scope Matrix](../docs/governance/ACCESSIBILITY_ENVIRONMENT_AND_SCOPE_MATRIX.md)
   (Required 6 · Conditional 4 · Deferred 4).

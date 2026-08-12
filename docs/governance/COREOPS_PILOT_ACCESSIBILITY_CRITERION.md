@@ -118,9 +118,9 @@ Group B and Group D exist to prevent.
 
 *(Additive — the pilot has not started and this changes nothing about that)*
 
-The future support baseline is now **A11Y-BL-001**
-([Accessibility Support Baseline](ACCESSIBILITY_SUPPORT_BASELINE.md)), pending
-Human-Maintainer commit.
+The support baseline is **A11Y-BL-001**
+([Accessibility Support Baseline](ACCESSIBILITY_SUPPORT_BASELINE.md)), declared and
+committed by CDS-WP-010.
 
 - **Applicable tier:** the **Required Tier-1 (Required Core) baseline** applies to
   the declared **web** pilot scope — keyboard-only, Windows 11, Chromium and Firefox
@@ -130,9 +130,9 @@ Human-Maintainer commit.
   any additional Tier-2/Tier-3 environments its product scope needs and produce the
   consumer (AE-4) evidence; CDS Tier-1 does not cover the consumer's environments
   (DEC-S-051, DEC-S-069).
-- **`Accessibility support baseline` may be treated as policy-side present** upon
-  Human-Maintainer commit of CDS-WP-010 — satisfying Pilot Group E requirement 10 at
-  the *policy* level only.
+- **`Accessibility support baseline` is policy-side present** — CDS-WP-010 is
+  committed — satisfying Pilot Group E requirement 10 at the *policy* level only.
+  Policy-side presence satisfies **no** evidence requirement.
 - **Evidence remains fully outstanding:** the baseline is a test contract, not
   evidence (DEC-S-065). No AE-1/AE-2/AE-3/AE-4 exists; every artifact is AE-0.
 - **The pilot stays inactive** and cannot start (entry criteria unmet; DEC-S-015).
@@ -162,8 +162,8 @@ Claude does not declare it met. The Human Maintainer's commit does.
 | **Accessibility target decided** | **Satisfiable on commit** |
 
 **The pilot cannot start.** Two criteria remain structurally unmet: no artifact
-can reach Candidate (no evidence, no baseline), and the architecture awaits
-approval.
+can reach Candidate (**no evidence exists** — every artifact is AE-0; the support
+baseline itself is declared), and the architecture awaits approval.
 
 ## Available evidence
 
@@ -172,17 +172,18 @@ approval.
 | Evidence | State |
 | --- | --- |
 | CDS artifact accessibility evidence | **AE-0** |
-| Support baseline | **Does not exist** |
+| Support baseline | **Declared and committed — A11Y-BL-001; a test contract, never evidence** |
 | CoreOps pilot evidence | **None — pilot inactive** |
 | User research | **None, and none planned** (RISK-017) |
 | Automated checks | **None run** |
 
 ## Missing evidence
 
-Before Pilot Group E can be evidenced: a declared support baseline · CDS
-components and patterns at Candidate with AE-1/AE-2 · AE-3 against the baseline ·
-CoreOps pilot implementation · AE-4 for the declared scope · consumer feedback ·
-documented limitations · Human Maintainer review.
+The declared support baseline is in place (A11Y-BL-001); everything below remains
+outstanding. Before Pilot Group E can be evidenced: CDS components and patterns at
+Candidate with AE-1/AE-2 · AE-3 against the baseline · CoreOps pilot
+implementation · AE-4 for the declared scope · consumer feedback · documented
+limitations · Human Maintainer review.
 
 That is the full distance between a defined target and a pilot that can be
 assessed.

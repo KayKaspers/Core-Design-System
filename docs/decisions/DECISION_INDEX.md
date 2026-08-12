@@ -2314,7 +2314,7 @@ accessibility from a planning document.
 
 - [Accessibility Support Baseline](../governance/ACCESSIBILITY_SUPPORT_BASELINE.md)
   (A11Y-BL-001) is normative for Required/Complementary/Scope-triggered environments,
-  pending Human-Maintainer commit.
+  as the declared and committed baseline under CDS-WP-010.
 - Listing an environment is never a statement that CDS works in or supports it.
 - Every CDS artifact remains AE-0; no support or conformance claim is valid.
 

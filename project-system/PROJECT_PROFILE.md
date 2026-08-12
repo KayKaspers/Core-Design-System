@@ -56,8 +56,8 @@ Pre-Candidate Operating Enablement — **Foundation / Pre-Design: Closed with No
 ## Accessibility support baseline status
 
 - Accessibility Baseline ID: **A11Y-BL-001**
-- Accessibility Baseline Status: **Defined, no evidence executed** (CDS-WP-010,
-  2026-07-16) — pending Human-Maintainer commit; a test contract, not evidence
+- Accessibility Baseline Status: **Declared and committed, no evidence executed**
+  (CDS-WP-010, 2026-07-16) — a test contract, not evidence
 - Baseline tier count: **3** (Required Core · Complementary · Scope-triggered)
 - Environment entry count: **14** (A11Y-ENV-001…014) — Required 6 · Conditional 4 ·
   Deferred 4; Required browser/screen-reader pairings **2**

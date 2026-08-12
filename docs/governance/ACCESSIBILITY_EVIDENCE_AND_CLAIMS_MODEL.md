@@ -124,9 +124,9 @@ review trigger.
 
 *(Additive — the five evidence-level meanings above are unchanged)*
 
-The concrete initial baseline is now **A11Y-BL-001**
-([Accessibility Support Baseline](ACCESSIBILITY_SUPPORT_BASELINE.md)), pending
-Human-Maintainer commit. It supplies the nine baseline elements above through three
+The concrete initial baseline is **A11Y-BL-001**
+([Accessibility Support Baseline](ACCESSIBILITY_SUPPORT_BASELINE.md)), declared and
+committed by CDS-WP-010. It supplies the nine baseline elements above through three
 tiers (Required / Complementary / Scope-triggered) and an
 [Environment and Scope Matrix](ACCESSIBILITY_ENVIRONMENT_AND_SCOPE_MATRIX.md).
 Applying it to this model:
