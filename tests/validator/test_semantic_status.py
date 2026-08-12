@@ -268,5 +268,85 @@ class SemanticStatusCheckerDirectTests(unittest.TestCase):
                 self.assertEqual(status[axis][name]["$type"], "string")
 
 
+class SemanticStatusMaturityApprovalTests(unittest.TestCase):
+    """CDS-WP-016 maturity/approval metadata state machine on status documents.
+
+    A validator pass on a coherent Candidate+Approved source proves metadata
+    coherence only, never governance authority (Approval Record / Nova review /
+    Human-Maintainer commit). Only the existing CDS-V4-STATUS-IDENTITY code is
+    used; no real source file, fixture, or case is touched by these tests.
+    """
+
+    def doc(self, *, maturity=None, approval=None,
+            revision="semantic-status-rev-0001",
+            test_only=False, non_normative=False):
+        payload = {"profileVersion": "1", "sourceSetId": "fixture/direct",
+                   "layer": "semantic", "dtcgReportVersion": "2025.10",
+                   "sourceRevision": revision}
+        if maturity is not None:
+            payload["maturityState"] = maturity
+        if approval is not None:
+            payload["approvalState"] = approval
+        if test_only:
+            payload["testOnly"] = True
+        if non_normative:
+            payload["nonNormative"] = True
+        status = {axis: {v: {"$type": "string", "$value": v} for v in values}
+                  for axis, values in semantic_status.AUTHORIZED_AXES.items()}
+        content = {"$extensions": {"io.github.kaykaspers.cds": payload},
+                   "status": status}
+        return ScopeDocument(path=Path("synthetic.tokens.json"),
+                             kind=DocumentKind.TOKEN_DOCUMENT,
+                             v1=ResultState.PASS, content=content)
+
+    def identity_codes(self, doc):
+        return [d.code for d in semantic_status.check_status_document(doc)
+                if d.code == "CDS-V4-STATUS-IDENTITY"]
+
+    def assert_identity_error(self, doc):
+        self.assertEqual(self.identity_codes(doc), ["CDS-V4-STATUS-IDENTITY"])
+
+    def assert_no_identity_error(self, doc):
+        self.assertEqual(self.identity_codes(doc), [])
+
+    def test_experimental_unapproved_passes(self):
+        self.assert_no_identity_error(
+            self.doc(maturity="Experimental", approval="Unapproved"))
+
+    def test_candidate_approved_valid_revision_passes(self):
+        self.assert_no_identity_error(self.doc(
+            maturity="Candidate", approval="Approved",
+            revision="semantic-status-rev-0002-candidate"))
+
+    def test_candidate_unapproved_fails(self):
+        self.assert_identity_error(self.doc(
+            maturity="Candidate", approval="Unapproved",
+            revision="semantic-status-rev-0002-candidate"))
+
+    def test_candidate_approved_invalid_revision_fails(self):
+        self.assert_identity_error(self.doc(
+            maturity="Candidate", approval="Approved",
+            revision="semantic-status-rev-0001"))
+
+    def test_experimental_approved_fails(self):
+        self.assert_identity_error(
+            self.doc(maturity="Experimental", approval="Approved"))
+
+    def test_candidate_approved_testonly_fails(self):
+        self.assert_identity_error(self.doc(
+            maturity="Candidate", approval="Approved",
+            revision="semantic-status-rev-0002-candidate", test_only=True))
+
+    def test_candidate_approved_nonnormative_fails(self):
+        self.assert_identity_error(self.doc(
+            maturity="Candidate", approval="Approved",
+            revision="semantic-status-rev-0002-candidate", non_normative=True))
+
+    def test_stable_stays_blocked(self):
+        self.assert_identity_error(self.doc(
+            maturity="Stable", approval="Approved",
+            revision="semantic-status-rev-0002-candidate"))
+
+
 if __name__ == "__main__":
     unittest.main()

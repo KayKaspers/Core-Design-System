@@ -83,6 +83,31 @@ a worktree run is never presented as a committed revision. All output is
 executor-produced, independently unreviewed evidence (DEC-S-103) and confers no
 Candidate, Stable, conformance, or claim status (DEC-S-104, DEC-S-044).
 
+## Semantic Status maturity/approval state machine (CDS-WP-016)
+
+On a Semantic Status document (root `status` group) the objective V4 checker
+evaluates a maturity/approval state machine over the CDS extension payload:
+
+- **Experimental source:** `maturityState: Experimental` with
+  `approvalState: Unapproved` (or absent metadata) — coherent, the committed
+  default.
+- **Candidate source:** `maturityState: Candidate` **and** `approvalState:
+  Approved`, **and** a `sourceRevision` matching the Candidate-revision pattern
+  `^semantic-status-rev-[0-9]{4}-candidate$`, **and** not a fixture
+  (`testOnly`/`nonNormative` not true). Only this exact combination is coherent.
+- **Fixture boundary:** Candidate/Approved metadata may never be embedded in a
+  `testOnly`/`nonNormative` fixture — it fails closed.
+- **Stable boundary:** `maturityState: Stable` remains blocked; a later explicit
+  gate and a separate validator-contract change are required.
+- Any incoherent or contradictory combination emits `CDS-V4-STATUS-IDENTITY`
+  (Error). No new diagnostic code is introduced.
+
+**Authority boundary:** a coherent Candidate/Approved pass proves metadata
+consistency and an allowed revision form only. It is **not** governance
+authorization — Candidate authority comes solely from the Candidate Approval
+Record, the Nova finalization review, and the Human-Maintainer commit (DEC-S-115,
+DEC-S-122, DEC-S-124).
+
 ## Known boundaries
 
 - V2 is a bounded subset: color-module value semantics, resolver modifier semantics,
@@ -91,3 +116,4 @@ Candidate, Stable, conformance, or claim status (DEC-S-104, DEC-S-044).
   edge.
 - The validator validates CDS documents — it transforms nothing, builds nothing, and
   emits no design values.
+- A maturity/approval coherence pass is not a maturity grant (CDS-WP-016).

@@ -90,7 +90,12 @@
       "properties": {
         "status": {
           "type": "string",
-          "enum": ["Not computed – validator implementation pending", "Computed"]
+          "description": "Digest state of the generated (non-normative) resolver output. 'Not computed – validator implementation pending' is retained only for backward compatibility with historical / not-yet-migrated Experimental artifacts; 'Not computed – no resolution or generated-output step executed' is the precise value where no resolution or output-generation step exists; 'Computed' may be used only when an actual output digest was computed (CDS-WP-016, OBS-003).",
+          "enum": [
+            "Not computed – validator implementation pending",
+            "Not computed – no resolution or generated-output step executed",
+            "Computed"
+          ]
         },
         "canonicalizationMethod": { "type": "string" },
         "digestAlgorithm": { "type": "string" },

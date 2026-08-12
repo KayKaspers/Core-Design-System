@@ -14,8 +14,14 @@ rule). Non-objective V4 aspects remain Not assessed / Not applicable.
 
 from __future__ import annotations
 
+import re
+
 from tools.cds_validator import diagnostics as diag
 from tools.cds_validator.models import CDS_EXTENSION_ROOT
+
+#: A Candidate source revision must be an explicit, migration-visible identity
+#: (DEC-S-117, DEC-S-122): the base status revision plus a ``-candidate`` marker.
+CANDIDATE_REVISION_PATTERN = re.compile(r"^semantic-status-rev-[0-9]{4}-candidate$")
 
 #: The authorized vocabulary (DEC-S-105, DEC-S-106) — 5 axes x 5 values.
 AUTHORIZED_AXES: dict[str, tuple[str, ...]] = {
@@ -164,19 +170,60 @@ def check_status_document(doc, manifest_content=None) -> list:
              f"{EXPECTED_TOKEN_COUNT} (5 axes x 5 values, DEC-S-116)",
              "/status")
 
-    # ---- candidate / approval statement boundary ----
+    # ---- maturity / approval metadata state machine (CDS-WP-016) ----
+    # Experimental/Unapproved (or absent) is the committed default. A *coherent*
+    # Candidate+Approved combination becomes validator-conformant only when it
+    # also carries a Candidate source revision and is not a testOnly/nonNormative
+    # fixture. Stable stays out of contract (a later explicit gate and a separate
+    # validator-contract change are required).
+    #
+    # AUTHORITY BOUNDARY: a validator pass on Candidate+Approved proves ONLY
+    # internal metadata coherence (allowed revision form, no fixture marker). It
+    # does NOT prove that the governance gate was authorized, nor Human-Maintainer
+    # approval, Candidate promotion, Stable, conformance, or publication. Real
+    # Candidate authority is established solely by the Candidate Approval Record,
+    # the Nova finalization review, and the Human-Maintainer commit (DEC-S-115,
+    # DEC-S-122, DEC-S-124). The diagnostic code CDS-V4-STATUS-IDENTITY and its
+    # meaning are unchanged; no new diagnostic code is introduced.
     payload = _payload(doc.content)
     maturity = payload.get("maturityState")
     approval = payload.get("approvalState")
-    if maturity in ("Candidate", "Stable"):
+    revision = payload.get("sourceRevision")
+    is_fixture = (payload.get("testOnly") is True
+                  or payload.get("nonNormative") is True)
+
+    if maturity == "Stable":
         emit("CDS-V4-STATUS-IDENTITY",
-             f"Status source declares maturityState {maturity!r}: the Semantic "
-             "Status vocabulary may not claim Candidate/Stable maturity "
-             "(DEC-S-115, DEC-S-124)")
-    if approval == "Approved":
+             "Status source declares maturityState 'Stable': Stable maturity is "
+             "out of contract and requires a separate explicit gate and a "
+             "validator-contract change (DEC-S-115, DEC-S-124)")
+    elif maturity == "Candidate":
+        if is_fixture:
+            emit("CDS-V4-STATUS-IDENTITY",
+                 "Status source declares Candidate maturity on a testOnly/"
+                 "nonNormative fixture: Candidate/Approved metadata may not be "
+                 "embedded in a fixture (DEC-S-115, DEC-S-124)")
+        elif approval != "Approved":
+            emit("CDS-V4-STATUS-IDENTITY",
+                 f"Status source declares maturityState 'Candidate' with "
+                 f"approvalState {approval!r}: a Candidate source must declare "
+                 "approvalState 'Approved' and be internally coherent (DEC-S-122)")
+        elif not (isinstance(revision, str)
+                  and CANDIDATE_REVISION_PATTERN.match(revision)):
+            emit("CDS-V4-STATUS-IDENTITY",
+                 f"Status source declares Candidate maturity with sourceRevision "
+                 f"{revision!r}: a Candidate revision must match "
+                 "'semantic-status-rev-NNNN-candidate' (DEC-S-117, DEC-S-122)")
+        # else: coherent Candidate metadata — no diagnostic; authority stays
+        # external (Approval Record, Nova review, Human-Maintainer commit).
+    elif approval == "Approved":
+        # 'Approved' outside a coherent Candidate source (e.g. Experimental+
+        # Approved, an approval with no Candidate maturity, or on a fixture) is
+        # contradictory and fails closed.
         emit("CDS-V4-STATUS-IDENTITY",
-             "Status source declares approvalState 'Approved': no approval "
-             "statement may be embedded before the Candidate gate (DEC-S-122)")
+             f"Status source declares approvalState 'Approved' with maturityState "
+             f"{maturity!r}: 'Approved' is coherent only with a Candidate source "
+             "after the governance gate (DEC-S-122)")
 
     # ---- source-set / manifest identity agreement ----
     if isinstance(manifest_content, dict):

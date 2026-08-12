@@ -87,6 +87,28 @@ python -m unittest discover -s tests/validator
 - A `modified worktree` report binds to uncommitted content and must not be quoted as
   the committed revision's result.
 
+## Candidate metadata on Semantic Status documents (CDS-WP-016)
+
+Since CDS-WP-016 the semantic-status V4 checks apply a maturity/approval state
+machine instead of an unconditional block:
+
+- **Experimental/Unapproved** (or absent) is the current committed state and
+  passes.
+- **Candidate/Approved** is validator-conformant **only** when it is internally
+  coherent: `maturityState: Candidate` **with** `approvalState: Approved`, a
+  Candidate source revision (`semantic-status-rev-NNNN-candidate`), and **not** a
+  `testOnly`/`nonNormative` fixture. Incoherent combinations (Candidate without
+  Approved, Approved without Candidate, a wrong revision form, Candidate/Approved
+  on a fixture) fail closed with `CDS-V4-STATUS-IDENTITY`.
+- **Stable** stays blocked; it needs a later explicit gate and a separate
+  validator-contract change.
+
+**A validator pass is not a maturity grant.** The CLI never awards a maturity
+level: a Candidate/Approved pass proves only metadata coherence. It does **not**
+prove the governance gate was authorized and does **not** replace the Candidate
+Approval Record, the Nova finalization review, or the Human-Maintainer commit —
+the only sources of real Candidate authority (DEC-S-115, DEC-S-122, DEC-S-124).
+
 ## Boundaries for operators
 
 Never edit expected outcomes to make a run succeed (DEC-S-102); never add a

@@ -134,6 +134,27 @@ committed fixtures (DEC-S-098); V4 automates only the objective edge. The result
 (`independentReviewState: pending`, DEC-S-103) and confer **no Candidate, Stable,
 conformance, or claim status** (DEC-S-092, DEC-S-104).
 
+## Candidate metadata coherence (CDS-WP-016)
+
+On Semantic Status documents the objective V4 edge checks the coherence of the
+`maturityState`/`approvalState` metadata as a small state machine:
+
+- **Experimental/Unapproved** (or absent) is coherent (the committed default).
+- **Candidate/Approved** is coherent **only** together — with a Candidate source
+  revision (`semantic-status-rev-NNNN-candidate`) and no `testOnly`/`nonNormative`
+  fixture marker. Incoherent combinations (Candidate without Approved, Approved
+  without Candidate, wrong revision form, Candidate/Approved on a fixture) fail
+  closed with `CDS-V4-STATUS-IDENTITY`.
+- **Stable stays outside this contract**; it requires a later explicit gate and a
+  separate validator-contract change.
+
+**A validator pass is not governance authorization.** A coherent Candidate/Approved
+pass proves internal metadata consistency only — never that the governance gate was
+authorized, nor Human-Maintainer approval, promotion, Stable, conformance, or
+publication. Real Candidate authority is established by the Candidate Approval
+Record, the Nova finalization review, and the Human-Maintainer commit (DEC-S-115,
+DEC-S-122, DEC-S-124). The diagnostic code is unchanged; no new code is introduced.
+
 ## Change control
 
 This contract is Elevated; changes require compatibility, migration, evidence, Nova

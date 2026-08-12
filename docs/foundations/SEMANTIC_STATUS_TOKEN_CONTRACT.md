@@ -135,6 +135,28 @@ maturity step (DEC-S-114):
 - independent Evidence Review of the results (executor ≠ reviewer,
   DEC-S-103).
 
+## Maturity, approval, and Candidate authority (CDS-WP-016)
+
+The source set's governance metadata is contract-bounded:
+
+- **Experimental/Unapproved is the current committed state** of
+  [`semantic/status`](../../tokens/semantic/status/semantic-status.tokens.json)
+  (`maturityState: Experimental`, `approvalState: Unapproved`, revision
+  `semantic-status-rev-0001`).
+- **Candidate/Approved is admissible only after the governance gate** and only as
+  a coherent whole: `Candidate` **with** `Approved`, a Candidate source revision
+  (`semantic-status-rev-NNNN-candidate`), and no fixture marker. The offline
+  validator enforces this coherence (`CDS-V4-STATUS-IDENTITY`) but **grants no
+  maturity**.
+- **Stable remains excluded** from this contract; it requires a later explicit
+  gate and a separate validator-contract change.
+- **Candidate authority lives outside the token document and the validator.** No
+  maturity, approval, promotion, or claim is created by embedding metadata or by a
+  validator pass; real Candidate authority is established solely by the Candidate
+  Approval Record, the Nova finalization review, and the Human-Maintainer commit
+  (DEC-S-115, DEC-S-122, DEC-S-124). This section changes no axis, value, or status
+  meaning.
+
 ## Related documents
 
 - [Semantic Status Foundation Contract](SEMANTIC_STATUS_FOUNDATION_CONTRACT.md)
