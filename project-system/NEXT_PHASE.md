@@ -110,8 +110,8 @@ Defined the normative CDS accessibility and inclusive-design policy:
 - **Responsibility** — shared by contract; **49 of 55 applicable criteria require
   both CDS and the consumer** (DEC-S-051, DEC-S-052).
 - **Evidence** — five levels AE-0 … AE-4 (Evidence and Claims Model); automated-
-  only is never sufficient (DEC-S-053). Every artifact is **AE-0**; no support
-  baseline exists.
+  only is never sufficient (DEC-S-053). Every artifact is **AE-0**; the support
+  baseline A11Y-BL-001 is committed but is not evidence.
 - **Channels** — six profiles; only two have a target; **none is Candidate- or
   Stable-eligible** (DEC-S-058).
 - **Limits** — accessibility cannot be waived by an ordinary exception

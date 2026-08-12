@@ -78,7 +78,7 @@ policy that does not exist must name the work package that will supply it.
 | CR-021 | Shared CDS Candidate | 3 Foundations and Tokens | Policy now mandates keyboard operability, visible focus, and no keyboard trap as a contract area (DEC-S-055); WCAG 2.1.1, 2.1.2, 2.4.3, 2.4.7, 2.4.11 mapped with responsibility. | [A11y Policy](../governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md) | Component and pattern keyboard contracts; implementation evidence (AE-2, AE-3). Policy defines the duty; nothing is evidenced. | CDS-WP-008 | Partially addressed - later design decision required |
 | CR-022 | Shared CDS Candidate | 3 Foundations and Tokens | Policy mandates reduced-motion support and forbids motion as sole meaning carrier; Layer 3 motion foundation confirmed. | [A11y Policy](../governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md) | Motion thresholds and the concrete mechanism; implementation evidence. | CDS-WP-008 | Partially addressed - later design decision required |
 | CR-023 | Shared CDS Candidate | 3 Foundations and Tokens | Layer 3 foundations plus Layer 6 channel parity; layouts must tolerate variable text length. | [Channels](ARTIFACT_DISTRIBUTION_AND_CHANNEL_MODEL.md) | Localization model; DE/EN parity mechanism. | CDS-WP-006 | Partially addressed - later design decision required |
-| CR-024 | Deferred Requirement | 1 Strategy and Governance | **Resolved at policy level: WCAG 2.2 Level AA for the applicable web scope** (DEC-S-049, DEC-S-060). Target, scope, responsibilities, evidence model (AE-0…AE-4), and gates are defined. | [A11y Policy](../governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md) | None at policy level. **The target is not conformance** — evidence remains absent (all artifacts AE-0) and no baseline exists. | — | Addressed by architecture |
+| CR-024 | Deferred Requirement | 1 Strategy and Governance | **Resolved at policy level: WCAG 2.2 Level AA for the applicable web scope** (DEC-S-049, DEC-S-060). Target, scope, responsibilities, evidence model (AE-0…AE-4), and gates are defined. | [A11y Policy](../governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md) | None at policy level. **The target is not conformance** — evidence remains absent (all artifacts AE-0); the support baseline A11Y-BL-001 is committed but is not evidence. | — | Addressed by architecture |
 | CR-025 | Shared CDS Candidate | 3 Foundations and Tokens | Layer 3 theme mechanism; theming flows through semantic tokens, never raw values. | [Tokens](TOKEN_AND_THEME_ARCHITECTURE.md) | Whether theme is a profile or a semantic concern; the token layering it implies. | CDS-WP-006 | Partially addressed - later design decision required |
 | CR-026 | Deferred Requirement | 6 Channels and Communication | Registered as a channel class at Layer 6. | [Channels](ARTIFACT_DISTRIBUTION_AND_CHANNEL_MODEL.md) | Whether demand justifies the scope. | CDS-WP-006 | Partially addressed - later design decision required |
 | CR-027 | Deferred Requirement | 6 Channels and Communication | Layer 6 documentation channel with DE/EN parity and staleness control as channel constraints. | [Channels](ARTIFACT_DISTRIBUTION_AND_CHANNEL_MODEL.md) | Standards themselves; parity mechanism. Strong evidence but outside the pilot. | CDS-WP-006 | Partially addressed - later design decision required |
@@ -175,9 +175,10 @@ Requirements whose architectural answer is weakest, and why:
 1. **CR-024 accessibility evidence** - *(reframed by CDS-WP-007)* the target is
    now decided: **WCAG 2.2 Level AA** for the applicable web scope (DEC-S-049,
    DEC-S-060). The gap is no longer the level — it is that **no artifact has been
-   evaluated against it**. Every artifact is **AE-0**, and no support baseline
-   exists (RISK-044, RISK-048). This still blocks the Stable gate, Product Profile
-   approval, and the CoreOps pilot; only the *reason* changed.
+   evaluated against it**. Every artifact is **AE-0**; the support baseline
+   **A11Y-BL-001 is declared and committed** (CDS-WP-010) and is a test contract,
+   not evidence (RISK-044, RISK-048). This still blocks the Stable gate, Product
+   Profile approval, and the CoreOps pilot; only the *reason* changed.
 2. **CR-030 presentations** - registered as a channel class with **no consumer
    evidence at all**. Structure without demand.
 3. **CR-028, CR-029 PDF and diagrams** - weak consumer evidence; registered but

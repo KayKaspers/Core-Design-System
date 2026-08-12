@@ -85,8 +85,10 @@ been performed rigorously enough to be believed.
 no artifact can reach Stable. *(Reconciled by CDS-WP-007: the accessibility
 target is now defined — **WCAG 2.2 Level AA** for the applicable web scope,
 CR-024, DEC-S-049. The Stable gate remains unreachable because the required
-**AE-2 and AE-3 evidence does not exist** and **no support baseline is
-declared** — RISK-028, RISK-044, RISK-048.)*
+**AE-2 and AE-3 evidence does not exist**. The support baseline itself is no
+longer missing — **A11Y-BL-001 is declared and committed** (CDS-WP-010) — but a
+baseline is what evidence is produced against, never a substitute for it —
+RISK-028, RISK-044, RISK-048.)*
 
 **An accessibility claim is a claim** and is governed by the
 [Accessibility Evidence and Claims Model](ACCESSIBILITY_EVIDENCE_AND_CLAIMS_MODEL.md).

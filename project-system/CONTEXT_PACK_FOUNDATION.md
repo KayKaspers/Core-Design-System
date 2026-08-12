@@ -24,8 +24,8 @@ Notes** (CDS-WP-009; DEC-S-061, DEC-S-062).
 
 Governance, scope, architecture, requirements, and accessibility policy are
 established; the Foundation is closed with mandatory notes; the committed governance
-is operationalized; the accessibility support baseline **A11Y-BL-001** is defined
-(CDS-WP-010, pending commit, **no evidence executed — every artifact AE-0**); and the
+is operationalized; the accessibility support baseline **A11Y-BL-001** is declared
+and committed (CDS-WP-010, **no evidence executed — every artifact AE-0**); and the
 **machine-readable source format is decided** (CDS-WP-011: DTCG 2025.10-based CDS
 profile, strict JSON, ADR-0001); and the **machine-readable bootstrap is implemented**
 (CDS-WP-012: 4 schemas, 15 fixtures, V1–V4 validation contract, RFC 8785/SHA-256, ADR-0002);
@@ -736,8 +736,9 @@ green build is not consent.
 publication-state change is possible · no CDS release is possible.** The
 accessibility target now exists (CR-024 resolved, DEC-S-049), so the blocker
 moved from *"against what?"* to *"show it"*: the remaining obstacles are the
-**absent accessibility evidence** (every artifact is AE-0; no support baseline —
-RISK-041, RISK-044) and the **absent licensing decisions** (DEC-S-047,
+**absent accessibility evidence** (every artifact is AE-0; the support baseline
+A11Y-BL-001 is committed but is not evidence — RISK-041, RISK-044) and the
+**absent licensing decisions** (DEC-S-047,
 RISK-038). No gate opened.
 
 ## Foundation Milestone Review (CDS-WP-008)

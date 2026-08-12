@@ -4,9 +4,9 @@
 - **Registered by:** CDS-WP-010 — Accessibility Support Baseline and Evidence Strategy
 - **Date:** 2026-07-16
 - **Baseline ID:** **A11Y-BL-001**
-- **Status:** **Normative** for the accessibility support baseline, **pending
-  Human-Maintainer commit**. It becomes effective only after Nova review and
-  Human-Maintainer commit of CDS-WP-010. It is a **future test contract** — **not**
+- **Status:** **Normative and in effect** for the accessibility support baseline.
+  It became effective with the Human-Maintainer commit of CDS-WP-010
+  (`abe84b6b7267b8b9c5f96609e7c9d1ad1e68bc0a`). It is a **test contract** — **not**
   evidence, **not** a support guarantee, and **not** a conformance claim.
 
 ## Purpose and authority
@@ -28,7 +28,7 @@ no design value, no token, no component, and no test tool.
 | State | Meaning | Current CDS state |
 | --- | --- | --- |
 | **Target** | The standard CDS aims at | WCAG 2.2 Level AA for the applicable web scope (DEC-S-049) |
-| **Support baseline** | The environments future evidence will be produced against | **A11Y-BL-001 (this document), pending commit** |
+| **Support baseline** | The environments future evidence will be produced against | **A11Y-BL-001 (this document), declared and committed (CDS-WP-010)** |
 | **Evidence** | Results of actually testing an artifact in an environment | **None — every artifact is AE-0** |
 | **Support / conformance claim** | A stated, evidence-backed assertion about real environments | **None valid, for anyone** (DEC-S-044) |
 

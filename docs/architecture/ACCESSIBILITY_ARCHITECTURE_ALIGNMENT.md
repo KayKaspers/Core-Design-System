@@ -146,7 +146,7 @@ not say what it was tested against.
 | Gate | Accessibility requirement | Satisfiable today? |
 | --- | --- | --- |
 | **Candidate** | Mapping, responsibility, AE-1, AE-2 or plan, limitations, baseline plan, regression plan | **No** — no evidence exists |
-| **Stable** | AE-2 complete + **AE-3** against baseline + consumer evidence + no critical deviations | **No** — no baseline, no evidence |
+| **Stable** | AE-2 complete + **AE-3** against baseline + consumer evidence + no critical deviations | **No** — the baseline exists (A11Y-BL-001, committed), but no evidence exists |
 | **Product Profile** | Scope-appropriate accessibility evidence | **No** |
 | **Publication** | Accessibility statement per this policy | **Now definable** — the statement is *what the policy says*, and it says nothing is tested |
 | **Release** | Depends on Stable artifacts | **No** |

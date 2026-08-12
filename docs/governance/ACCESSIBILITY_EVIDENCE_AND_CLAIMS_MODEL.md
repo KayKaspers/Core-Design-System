@@ -180,8 +180,10 @@ Applying it to this model:
 
 ### Current state
 
-**No artifact can pass either gate today.** All artifacts are AE-0; no support
-baseline exists; no evidence exists.
+**No artifact can pass either gate today.** All artifacts are AE-0 and no evidence
+exists. A support baseline does exist — **A11Y-BL-001, declared and committed**
+(CDS-WP-010) — but a baseline is what evidence will be produced against, never
+evidence itself.
 
 This policy **promotes nothing** and **invents no retroactive evidence**.
 Non-interactive artifacts require a channel profile first. **`Not tested` may

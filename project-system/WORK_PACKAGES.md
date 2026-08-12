@@ -189,7 +189,7 @@ or release created; publication state remains `Private Development`.**
 
 **Status:** Completed
 
-Defined the first accessibility support baseline (**A11Y-BL-001**, pending commit)
+Defined the first accessibility support baseline (**A11Y-BL-001**, since committed)
 and its supporting policies, using authorized official standards/vendor research —
 three tiers (Required/Complementary/Scope-triggered), a 14-entry
 [Environment and Scope Matrix](../docs/governance/ACCESSIBILITY_ENVIRONMENT_AND_SCOPE_MATRIX.md),

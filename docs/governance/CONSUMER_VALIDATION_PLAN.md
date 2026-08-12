@@ -52,7 +52,7 @@ Level 1 evidence supports "documented as needed" — it does not support "works"
 | Evidence level reached | **Level 1 only** |
 | Human validation performed | **None** |
 | Implementation evidence | **None** |
-| Accessibility verification | **None — AE-0 for every artifact**; no support baseline declared |
+| Accessibility verification | **None — AE-0 for every artifact**; the support baseline A11Y-BL-001 is declared and committed, but nothing has been verified against it |
 | User research | **None, and none planned** |
 
 Every requirement is therefore **provisional**. CDS-WP-004 produced a
@@ -111,7 +111,7 @@ What is missing is the **evidence**.
 | **AE-0** | **No evidence.** Nothing has been examined. | **Every CDS artifact** |
 | **AE-1** | Declared intent and mapping — requirements identified, responsibilities assigned. | None |
 | **AE-2** | Structured self-assessment against the target, in a declared scope. | None |
-| **AE-3** | Verification against a **declared accessibility support baseline** (browser / platform / assistive-technology matrix). | None — **no baseline is declared** |
+| **AE-3** | Verification against a **declared accessibility support baseline** (browser / platform / assistive-technology matrix). | None — the baseline **A11Y-BL-001 is declared**, but no verification has been performed against it |
 | **AE-4** | Consumer-level evidence for complete processes in a declared product scope. | None — pilot inactive |
 
 **AE-0 is not a passing state; it is the absence of a question having been

@@ -142,10 +142,11 @@ before.
 | **Evidence method** | Did not exist | **AE-0 … AE-4** (Evidence and Claims Model) |
 | **Blocker** | *"Against what?"* | *"Show it."* |
 
-The target and the evidence method now exist. **The evidence does not.** Every
-CDS artifact is **AE-0**, and **no accessibility support baseline has been
-declared** — which alone makes AE-3, and therefore Stable, unreachable
-(RISK-044, RISK-048).
+The target and the evidence method now exist, and so does the support baseline:
+**A11Y-BL-001 is declared and committed** (CDS-WP-010). **The evidence does not
+exist.** Every CDS artifact is **AE-0** — and a declared baseline is a test
+contract, never evidence, support, or conformance — so AE-3, and therefore
+Stable, remain unreachable (RISK-044, RISK-048).
 
 Therefore, unchanged in effect: **no artifact with an accessibility obligation
 can reach Stable today**, and the Candidate accessibility gate is equally unmet.

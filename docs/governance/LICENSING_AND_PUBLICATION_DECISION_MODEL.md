@@ -157,8 +157,9 @@ policy says*.
 
 What it would have to say is unflattering, and that is the point:
 
-> **Nothing has been tested. Every CDS artifact is AE-0. No support baseline is
-> declared. No accessibility claim of any level is valid.**
+> **Nothing has been tested. Every CDS artifact is AE-0. A support baseline is
+> declared (A11Y-BL-001), but nothing has been evaluated against it. No
+> accessibility claim of any level is valid.**
 
 An accessibility statement is **a disclosure obligation, not a quality claim**
 (DEC-S-050). Requirement 11 becoming satisfiable **does not move CDS toward

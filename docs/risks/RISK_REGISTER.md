@@ -1442,15 +1442,15 @@ six-month review gap is set, version and freshness are bound in the evidence mod
 (DEC-S-068, DEC-S-070, DEC-S-071), and the next expected evidence artifact (AE-1 +
 AE-2 for the first Candidate slice against the Required Tier-1 pairings) is defined.
 Neither likelihood nor severity changed; the risk was neither accepted nor closed.
-The baseline itself remains pending Human-Maintainer commit and produces no
-evidence.
+The baseline itself is committed (CDS-WP-010) and produces no evidence.
 
 ### Description
 
 Browser, platform, input, rendering, and assistive-technology combinations may
 change **without evidence being reassessed** against the new baseline. The prior,
-sharper form of this today is that **no accessibility support baseline has been
-declared at all**, and none is scheduled.
+sharper form of this risk — that **no accessibility support baseline had been
+declared at all** — no longer applies: A11Y-BL-001 is declared and committed
+(CDS-WP-010). The drift form of the risk remains fully in force.
 
 ### Impact
 

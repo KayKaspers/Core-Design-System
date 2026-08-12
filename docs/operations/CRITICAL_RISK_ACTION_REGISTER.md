@@ -301,7 +301,7 @@ Titles are quoted from the committed [Risk Register](../risks/RISK_REGISTER.md).
   (baseline defined, triggers set, six-month max gap, version/freshness bound, next
   evidence artifact defined). Acceptance/closure by Human Maintainer only.
 - **Notes:** the baseline is a test contract, not evidence — every artifact remains
-  AE-0; A11Y-BL-001 is pending Human-Maintainer commit.
+  AE-0; A11Y-BL-001 is committed (CDS-WP-010) and confers no support or conformance.
 
 ---
 

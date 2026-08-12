@@ -66,7 +66,7 @@ pilot activation.
 | Critical Risk Action Register | **Present** — 12/12 risks actionable |
 | Reference-integrity review | **Complete** — PASS, 0 CDS-authored broken links |
 | Foundation closure record | **Present** — normative on closure/authority/phase |
-| Accessibility support baseline (A11Y-BL-001) | **Defined (CDS-WP-010), pending commit — no evidence executed** |
+| Accessibility support baseline (A11Y-BL-001) | **Declared and committed (CDS-WP-010) — no evidence executed** |
 | Accessibility evidence strategy + maintenance + defect model | **Present** (CDS-WP-010) |
 
 ## Role readiness
@@ -93,7 +93,7 @@ The accessibility support baseline gates AE-3 and therefore Stable for any artif
 with an accessibility obligation (RISK-044). **CDS-WP-010 defined it** — A11Y-BL-001,
 three tiers (Required/Complementary/Scope-triggered), the Environment and Scope
 Matrix, the Evidence Strategy, the Baseline Maintenance Policy, and the Defect and
-Regression Model — **pending Human-Maintainer commit**. The baseline is a **test
+Regression Model — **committed with CDS-WP-010**. The baseline is a **test
 contract, not evidence**: **no test was run, every artifact is AE-0**, and no
 environment is claimed as supported. RISK-044 moved `Monitored → Mitigating` on the
 strength of the definition. The **next substantive topic** is the machine-readable
@@ -104,9 +104,10 @@ source and token-format decision (CDS-WP-011).
 Before the **first** design Candidate may be attempted (each condition owned by the
 named role; none satisfied by CDS-WP-009 alone):
 
-1. An accessibility support baseline is **declared** — **done (A11Y-BL-001,
-   CDS-WP-010), pending commit**; first AE-1/AE-2 evidence still to be produced —
-   RISK-044.
+1. An accessibility support baseline is **declared** — **satisfied: A11Y-BL-001
+   is declared and committed (CDS-WP-010)**. The condition itself is met; the
+   first AE-1/AE-2 evidence is still to be produced, and this condition confers
+   no evidence, support, or conformance — RISK-044.
 2. The **Evidence Reviewer** role is staffed (never the author) — FM-F-006,
    DEC-S-045.
 3. The machine-readable-source / token-format decision is made (CDS-WP-011) —
@@ -143,7 +144,7 @@ automatic transition.
 ## Mandatory sequencing and next work package
 
 CDS-WP-010 (Accessibility Support Baseline and Evidence Strategy) is **complete**:
-the baseline and its supporting policies are defined (pending commit), no evidence
+the baseline and its supporting policies are defined and committed, no evidence
 was executed, and RISK-044 moved to `Mitigating`. The next authorized work package
 is:
 

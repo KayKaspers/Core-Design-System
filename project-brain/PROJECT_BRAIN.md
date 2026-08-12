@@ -563,7 +563,8 @@ artifacts do not compose into an accessible product by themselves.**
 **Evidence:** five levels AE-0 … AE-4 (Evidence and Claims Model); AE-3 needs a
 declared support baseline; automated-only never suffices (DEC-S-053). **Every CDS
 artifact is
-AE-0; no support baseline exists** (RISK-041, RISK-044).
+AE-0; the support baseline A11Y-BL-001 is committed but is not evidence**
+(RISK-041, RISK-044).
 
 **Channels:** six profiles; only two (Web UI, Web Docs) have a target; **none is
 Candidate- or Stable-eligible** (DEC-S-058).
@@ -634,8 +635,8 @@ Candidate/Stable artifact; pilot inactive.
 
 ## Accessibility support baseline (CDS-WP-010)
 
-Defined the first accessibility support baseline **A11Y-BL-001** (pending
-Human-Maintainer commit) using authorized official standards/vendor research
+Defined the first accessibility support baseline **A11Y-BL-001** (since
+committed) using authorized official standards/vendor research
 (13 URLs opened, 9 usable) — **no test run, no tool selected, every artifact AE-0,
 no environment claimed supported**:
 

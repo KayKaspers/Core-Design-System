@@ -42,10 +42,10 @@ structure, not as commitments.
 | **Target** | **WCAG 2.2 Level AA** |
 | **Owner** | CDS for artifacts and contracts; **Consumer for composition, content, process, runtime** |
 | **Minimum future evidence** | AE-1 + AE-2 + **AE-3** against a declared baseline; **AE-4** for a product claim |
-| **Current gap** | **Everything.** No artifact exists; no evidence exists; no baseline exists. AE-0. |
+| **Current gap** | **Nearly everything.** No artifact exists; no evidence exists. AE-0. The support baseline **A11Y-BL-001 is declared and committed** (CDS-WP-010) — a test contract, not evidence. |
 | **Candidate boundary** | Candidate accessibility gate |
 | **Stable boundary** | Stable gate incl. AE-3 — **currently unreachable** |
-| **Deferred** | Support baseline; test tooling; status taxonomy; concrete values |
+| **Deferred** | Test tooling; status taxonomy; concrete values (the support baseline is no longer deferred — A11Y-BL-001 is committed) |
 
 The primary channel. The pilot's declared web scope sits here.
 

@@ -4,9 +4,10 @@
 - **Registered by:** CDS-WP-010 — Accessibility Support Baseline and Evidence Strategy
 - **Baseline:** A11Y-BL-001
 - **Date:** 2026-07-16
-- **Status:** **Normative** for classifying accessibility defects and regressions,
-  **pending Human-Maintainer commit**. **No defect is registered today** — nothing
-  has been tested (AE-0).
+- **Status:** **Normative and in effect** for classifying accessibility defects and
+  regressions, committed with CDS-WP-010
+  (`abe84b6b7267b8b9c5f96609e7c9d1ad1e68bc0a`). **No defect is registered today** —
+  nothing has been tested (AE-0).
 
 ## Purpose
 

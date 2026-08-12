@@ -4,9 +4,10 @@
 - **Registered by:** CDS-WP-010 — Accessibility Support Baseline and Evidence Strategy
 - **Baseline:** A11Y-BL-001
 - **Date:** 2026-07-16
-- **Status:** **Normative** for how accessibility evidence is planned and recorded,
-  **pending Human-Maintainer commit**. It **produces no evidence** and asserts no
-  conformance. The evidence-level *meanings* remain owned by the
+- **Status:** **Normative and in effect** for how accessibility evidence is planned
+  and recorded, committed with CDS-WP-010
+  (`abe84b6b7267b8b9c5f96609e7c9d1ad1e68bc0a`). It **produces no evidence** and
+  asserts no conformance. The evidence-level *meanings* remain owned by the
   [Accessibility Evidence and Claims Model](ACCESSIBILITY_EVIDENCE_AND_CLAIMS_MODEL.md);
   this document operationalizes them.
 

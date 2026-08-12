@@ -4,9 +4,10 @@
 - **Registered by:** CDS-WP-010 — Accessibility Support Baseline and Evidence Strategy
 - **Baseline:** A11Y-BL-001
 - **Date:** 2026-07-16
-- **Status:** **Normative** for the environment entries of A11Y-BL-001, **pending
-  Human-Maintainer commit**. Lists the environments future evidence targets. It is
-  **not** evidence and asserts **no** support.
+- **Status:** **Normative and in effect** for the environment entries of
+  A11Y-BL-001, committed with CDS-WP-010
+  (`abe84b6b7267b8b9c5f96609e7c9d1ad1e68bc0a`). Lists the environments future
+  evidence targets. It is **not** evidence and asserts **no** support.
 
 ## How to read this matrix
 

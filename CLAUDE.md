@@ -27,8 +27,8 @@ library, or a design project scoped exclusively to CoreOps.
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015
-- Accessibility support baseline: **A11Y-BL-001 defined** (CDS-WP-010, pending
-  commit) — a **test contract, not evidence**; **no test has been run and every
+- Accessibility support baseline: **A11Y-BL-001 declared and committed**
+  (CDS-WP-010) — a **test contract, not evidence**; **no test has been run and every
   artifact is AE-0**.
 - Machine-readable source format: **decided** (CDS-WP-011, ADR-0001) — a **DTCG
   2025.10-based CDS profile** in **strict JSON `.tokens.json`**; its **value-neutral
@@ -486,7 +486,8 @@ and
   triggers and at least every six months.
 - **No test execution without an explicit prompt.** Claude runs no accessibility
   test, installs no browser/screen reader/tool, selects no tool, and asserts no
-  evidence. A11Y-BL-001 is pending Human-Maintainer commit.
+  evidence. A11Y-BL-001 is committed (CDS-WP-010) and remains a baseline, never
+  evidence, support, or conformance.
 
 ## Risk roles
 

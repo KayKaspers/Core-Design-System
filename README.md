@@ -315,7 +315,7 @@ themselves.
 
 **Five evidence levels** — AE-0 (not assessed) through AE-4 (consumer complete
 process). Automated checking alone is never sufficient; AE-3 requires a declared
-support baseline — now **defined** as **A11Y-BL-001** (CDS-WP-010, pending commit):
+support baseline — now **declared and committed** as **A11Y-BL-001** (CDS-WP-010):
 three tiers, a 14-entry environment matrix, an evidence strategy, a maintenance
 policy, and a defect/regression model. The baseline is a **test contract, not
 evidence** — **no test has been run and every artifact remains AE-0**.

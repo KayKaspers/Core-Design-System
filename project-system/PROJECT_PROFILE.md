@@ -265,7 +265,7 @@ Documents:
 - CR-024 policy status: **Resolved at policy level** (DEC-S-060); entry criterion
   `Accessibility target defined` satisfiable on Human Maintainer commit
 - **Current accessibility evidence: none — every artifact is AE-0**; a support
-  baseline is now **defined** (A11Y-BL-001, CDS-WP-010, pending commit) but **no
+  baseline is **declared and committed** (A11Y-BL-001, CDS-WP-010) but **no
   evidence has been executed**; no accessibility claim of any level is valid
 
 Documents:
