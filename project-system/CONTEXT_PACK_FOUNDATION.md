@@ -31,17 +31,22 @@ profile, strict JSON, ADR-0001); and the **machine-readable bootstrap is impleme
 (CDS-WP-012: 4 schemas, 15 fixtures, V1–V4 validation contract, RFC 8785/SHA-256, ADR-0002);
 and the **offline validator and fixture harness are implemented and executed**
 (CDS-WP-013: pinned Python/jsonschema/rfc8785 stack, ADR-0003, 71/71 unit tests,
-**15/15 expected/actual case matches**, 14 digests — executor-produced, independently
-unreviewed); and the **Semantic Status Foundation Contract is defined** (CDS-WP-014:
+**15/15 expected/actual case matches**, 14 digests — executor-produced); and the
+**Semantic Status Foundation Contract is defined** (CDS-WP-014:
 five independent axes, 25 values with explicit `unknown`, ten invariants,
 combination/communication/token contracts, gated first Candidate plan); and the
 **Semantic Status Source Set is implemented** (CDS-WP-015: `semantic/status`, 25
 non-visual tokens with manifest/resolver, semantic-status V4 validation, 24/24
 harness matches, 25/25 DE/EN terminology, Draft Candidate Dossier) —
-**Experimental, pending commit, executor-produced, independently unreviewed, no
-Candidate status, no visual value**. Concrete visual design values remain
-unauthorized (DEC-S-003). The next work package is **CDS-WP-016 — Semantic Status
-Foundation Independent Evidence Review and Candidate Gate**.
+**Experimental, committed, executor-produced, no Candidate status, no visual
+value**. That WP-013 and WP-015 evidence has since been **independently reviewed by
+CDS-WP-016**: **Independent Review PASS**, **Candidate Recommendation GO** — and
+**GO is not a Candidate award**, so Semantic Status remains **Experimental**,
+**Candidate No**, every artifact **AE-0**, with the **Nova and Human-Maintainer
+Candidate authority gates still open**. Concrete visual design values remain
+unauthorized (DEC-S-003). The current authorized work package is **CDS-WP-016 —
+Semantic Status Foundation Independent Evidence Review and Candidate Gate**; its
+review work is executed and its Candidate authority closure is open.
 
 ## Completed work packages
 
@@ -776,10 +781,16 @@ committed (CDS-WP-010, no evidence executed), the machine-readable source format
 decided (CDS-WP-011, ADR-0001), the machine-readable bootstrap is implemented
 (CDS-WP-012, Experimental, ADR-0002), and the offline validator and fixture harness
 are implemented and executed (CDS-WP-013, Experimental, ADR-0003, 15/15
-expected/actual matches, executor-produced and independently unreviewed), and the
+expected/actual matches, executor-produced), and the
 Semantic Status Foundation Contract is defined (CDS-WP-014) and its machine-readable
-source set is implemented (CDS-WP-015, `semantic/status`, Experimental, pending
-commit, executor-produced 24/24 evidence, independently unreviewed, Not Candidate);
-the next authorized work package is **CDS-WP-016 — Semantic Status Foundation
-Independent Evidence Review and Candidate Gate**. See the
+source set is implemented (CDS-WP-015, `semantic/status`, Experimental, committed,
+executor-produced 24/24 evidence, Not Candidate). That WP-013 and WP-015 evidence
+has since been **independently reviewed by CDS-WP-016** — **Independent Review
+PASS**, **Candidate Recommendation GO** — and **GO is not a Candidate award**:
+Candidate remains **No**, maturity **Experimental**, approval **Unapproved**, every
+artifact **AE-0**. The current authorized work package is **CDS-WP-016 — Semantic
+Status Foundation Independent Evidence Review and Candidate Gate**; its review work
+is executed, while the Candidate authority closure stays open — **Nova Candidate
+gate open**, **Human-Maintainer Candidate gate open**. No follow-up work package is
+authorized and CDS-WP-017 is not activated. See the
 [Foundation Closure Record](../docs/governance/FOUNDATION_CLOSURE_RECORD.md).

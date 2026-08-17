@@ -5,12 +5,15 @@
 - **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015
-- **Next work package:** **CDS-WP-016 — Semantic Status Foundation Independent
-  Evidence Review and Candidate Gate** (authorized as next; not yet executed). The
-  Semantic Status Foundation is Contract defined (CDS-WP-014) and machine-readable
-  implemented (CDS-WP-015: `semantic/status`, 25 tokens, 24/24 matches, 25/25 DE/EN,
-  Draft dossier) — **Implemented, Experimental, independently unreviewed; Not
-  Candidate.**
+- **Next work package** *(roadmap position — the current authorized work package)***:**
+  **CDS-WP-016 — Semantic Status Foundation Independent Evidence Review and Candidate
+  Gate** (authorized; its review work is **executed**). The Semantic Status Foundation
+  is Contract defined (CDS-WP-014) and machine-readable implemented (CDS-WP-015:
+  `semantic/status`, 25 tokens, 24/24 matches, 25/25 DE/EN, Draft dossier) —
+  **Implemented, Experimental; independently reviewed by CDS-WP-016: Independent
+  Review PASS, Candidate Recommendation GO. GO is not a Candidate award — Not
+  Candidate; the Nova and Human-Maintainer Candidate gates are open; no follow-up
+  work package is authorized.**
 
 ## Status of completed work packages
 
@@ -387,13 +390,22 @@ Documents:
 [Terminology DE/EN](../docs/foundations/SEMANTIC_STATUS_TERMINOLOGY_DE_EN.md) ·
 [Candidate Dossier](../docs/operations/SEMANTIC_STATUS_CANDIDATE_DOSSIER.md)
 
-## Next work package — CDS-WP-016 (authorized)
+## Next work package — CDS-WP-016 (authorized; review work executed)
 
 The Semantic Status Foundation is implemented with executor-produced evidence. The
-next authorized work package is:
+current authorized work package is:
 
 **CDS-WP-016 — Semantic Status Foundation Independent Evidence Review and
 Candidate Gate.**
+
+Its review work has been carried out: the independent evidence review, the
+traceability, accessibility, content and dossier reviews, and the Candidate-gate
+recommendation exist — **Independent Review PASS**, **Candidate Recommendation GO**
+([Candidate Gate Recommendation](../docs/reviews/WP016_CANDIDATE_GATE_RECOMMENDATION.md)).
+**GO is not a Candidate award.** What remains open is the Candidate authority
+closure: **Nova Candidate gate open**, **Human-Maintainer Candidate gate open**,
+Candidate **No**, maturity **Experimental**, approval **Unapproved**, every artifact
+**AE-0**. No follow-up work package is authorized; CDS-WP-017 is not activated.
 
 ### Objective of CDS-WP-016
 
@@ -426,8 +438,12 @@ Candidate Gate.**
 
 ### Authorization note
 
-CDS-WP-016 is registered as `Next`; its execution requires an explicit work-package
-prompt from Nova and Human-Maintainer authorization. Registration is not execution.
+CDS-WP-016 is registered as `Next` — the roadmap label for the current authorized
+work package, not a statement that execution has not started. Its review work has been
+executed under explicit Nova prompts and Human-Maintainer authorization. **Execution
+is not promotion:** the Candidate decision remains with Nova's gate review and the
+Human Maintainer's maturity approval, both open. Any further work-package step
+requires a new explicit Nova prompt and Human-Maintainer authorization.
 
 ## Related documents
 

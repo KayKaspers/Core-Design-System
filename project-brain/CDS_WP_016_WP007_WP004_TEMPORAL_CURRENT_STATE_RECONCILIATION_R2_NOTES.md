@@ -178,7 +178,7 @@ verbatim**.
 ## Decision and Risk authority
 
 - **DEC-S-060** — future-commit wording repaired. Decision ID, status, date, work
-  package, rationale and all six consequences unchanged, including
+  package, rationale and all five consequences unchanged, including
   "This closes a policy gap, not an evidence gap."
 - **DEC-S-036** — **PRESERVED UNCHANGED.** Its consequence still reads "the
   accessibility target does not exist". Classified as a historical CDS-WP-006
@@ -244,14 +244,15 @@ Both methods were re-run against the mutated tree.
 - **WP-004 governance/control tranche drift: 0**
 - Same-file contradictions in modified files: **0**
 
-Ten live occurrences remain repository-wide, every one deliberately out of
+Seven live occurrences remain repository-wide, every one deliberately out of
 tranche: `CHANGELOG.md` (2, historical release record) ·
 `docs/architecture/CONSUMER_CONTRACT_AND_RECONCILIATION_MODEL.md` (1, Category H) ·
 `DECISION_INDEX.md` DEC-S-036 and DEC-S-046 (2, preserved by instruction) ·
 `LICENSING_AND_PUBLICATION_DECISION_MODEL.md` (1, already current and true) ·
-`RISK_REGISTER.md` RISK-028 (2 — **subsequently reassessed in the Nova rework
-below; no longer present**) · `project-system/NEXT_PHASE.md` (1,
-historical "CDS-WP-007 — Completed" summary). Twenty-one further occurrences sit
+`project-system/NEXT_PHASE.md` (1, historical "CDS-WP-007 — Completed" summary).
+The two `RISK_REGISTER.md` RISK-028 occurrences that this section originally counted
+were **reassessed in the Nova rework below and are no longer present**; the figure
+above is the post-rework count. Twenty-one further occurrences sit
 in R2/R3 and AE-1 reconciliation evidence files, which are historical records.
 
 **This run does not claim whole-repository WP-007 temporal zero-drift.** It claims
@@ -432,3 +433,203 @@ throughout.
    retained maturity-model assertion in `CONTEXT_PACK_FOUNDATION.md`.
 4. Unchanged and still open: the WP-011 … WP-015 / ADR class, and the Decision-
    record supersession question for DEC-S-036, DEC-S-043 and DEC-S-046.
+
+Steps 1 and 2 have since been completed: the fresh independent review returned
+**PASS WITH NOTES** and the Human Maintainer committed and pushed the R2 candidate as
+`1183371c7293d0b36a26dd850f7d681611d9f43c`. Steps 3 and 4 remain open.
+
+## WP-016 Top-Level Current-State Closure
+
+- **Date:** 2026-08-17
+- **Status:** **Operational evidence — NON-normative.** This section records a
+  follow-on current-state reconciliation run. It decides nothing, approves nothing,
+  promotes nothing, and is not a policy source.
+
+### Baseline
+
+| Item | Value |
+| --- | --- |
+| Starting HEAD | `1183371c7293d0b36a26dd850f7d681611d9f43c` |
+| Branch | `main`; HEAD == `origin/main`; ahead/behind `0 / 0` |
+| Working tree / index before | CLEAN / CLEAN, 0 untracked |
+| R2 candidate | committed and pushed by the Human Maintainer |
+| Preceding independent review | **PASS WITH NOTES** |
+
+### Prior run and Nova scope decision
+
+A first attempt at this closure ended **`BLOCKED_SCOPE_EXPANSION_REQUIRED`** with
+**zero mutations**. Fresh discovery proved the authorized five-file scope incomplete:
+the WP-016 execution state was asserted as current in files outside it, so correcting
+only the four authorized top-level mirrors would have *created* a same-fact
+contradiction that did not exist while all mirrors were uniformly stale.
+
+Nova reviewed and decided **REWORK AUTHORIZED — SCOPE EXPANSION APPROVED**, additively
+widening the Allowed Files from **five to eight**:
+
+| Added file | Why it was current-state relevant |
+| --- | --- |
+| `CLAUDE.md` | Binding local working instruction, not a chronicle. Its "Next work package … not yet executed" would have mis-instructed the very next session — including the fresh independent reviewer this run requires. |
+| `project-brain/PROJECT_BRAIN.md` | Top-level current-state orientation; asserted "not yet executed" twice in present tense (status block and "Next step"). |
+| `project-system/CONTEXT_PACK_FOUNDATION.md` | Its lead current-status sentence carried a mixed claim ("pending commit … independently unreviewed") that would have remained half-true under a partial fix. |
+
+### Corrected current-state mirrors
+
+| File | Corrected from | Corrected to |
+| --- | --- | --- |
+| `README.md` | evidence "independently unreviewed"; WP-016 "not yet executed" | executor-produced evidence **since independently reviewed**; WP-016 authorized and its review work executed; PASS / GO; Candidate No; gates open |
+| `project-system/NEXT_PHASE.md` | "not yet executed"; "independently unreviewed"; "Registration is not execution" | `Next` as roadmap position; review work executed; PASS / GO; GO ≠ Candidate; both gates open |
+| `project-system/WORK_PACKAGES.md` | "registered as `Next` and is not yet executed"; "Will independently review …" | enum unchanged; `Next` defined as roadmap authorization only; WP-016 description restated as executed with PASS / GO and open authority closure |
+| `project-system/PROJECT_PROFILE.md` | "Next; not yet executed"; validator/source-set "independently unreviewed" | current authorized WP with executed review; DEC-S-121 unreviewed state recorded as superseded; Candidate No |
+| `CLAUDE.md` | "Next work package … not yet executed" | current work package; DEC-S-103/DEC-S-121 evidence recorded as since independently reviewed; PASS / GO; both gates open; no follow-up WP |
+| `project-brain/PROJECT_BRAIN.md` | "not yet executed" (status block and "Next step") | current work package with executed review; next step is Candidate **authority closure**, not the first start of WP-016 |
+| `project-system/CONTEXT_PACK_FOUNDATION.md` | "pending commit, executor-produced, independently unreviewed" | committed, executor-produced, since independently reviewed; PASS / GO; Experimental; Candidate No; gates open |
+
+### Roadmap label versus execution state
+
+`Next` is retained everywhere it appears as a **roadmap authorization label** and is
+now explicitly defined as such in `WORK_PACKAGES.md`. It states which work package is
+the current authorized one — never whether execution has started. **No roadmap status
+value was added, renamed, or removed**; the enum remains `Completed · Next · Planned`.
+CDS-WP-016 was **not** set to `Completed`, because its Candidate authority closure is
+open.
+
+### Notes accuracy corrections
+
+- **Post-mutation discovery count:** "Ten" → **"Seven"**, independently recounted at
+  this HEAD. The seven retain their original classifications; the two RISK-028
+  occurrences that the original figure included were removed by the Nova rework.
+- **DEC-S-060 consequences:** "all six" → **"all five"**, independently recounted.
+  DEC-S-060 itself is untouched; the substantive claim — *unchanged* — is unaffected.
+
+### Governance state after this closure run
+
+Candidate **No** · Maturity **Experimental** · Approval **Unapproved** · Semantic
+Status **AE-0**, every artifact AE-0 · AE-1/2/3/4 **NONE** · Claims **none** ·
+Decisions **124** · Risks **97** (90 / 7 / 0 / 0) · ADRs **3** · AE-1 mirror **33** ·
+Ambiguous **1** · Nova Candidate gate **open** · Human-Maintainer Candidate gate
+**open** · no follow-up work package authorized · CDS-WP-017 **not activated** ·
+Pilot **inactive** · Publication **Private Development**.
+
+**Nothing here promotes anything.** No Candidate was awarded, no gate was closed, no
+approval was recorded, no claim was created, and no accessibility evidence was
+produced.
+
+### Deliberately preserved separate residuals
+
+- **Architecture Temporal Dependency Residual** — untouched.
+- **Risk review-trigger governance issue** — untouched.
+- **RISK-028 heading wording** — untouched.
+- **Decision-record supersession question** (DEC-S-036 / DEC-S-043 / DEC-S-046) —
+  untouched; the decision index was not modified by this run.
+- **WP-011 … WP-015 / ADR pending-commit class**, including the unresolved 52 · 54
+  occurrence-count disagreement — **the class as a whole remains unresolved and is
+  not closed by this run.** A precise distinction applies, and the earlier blanket
+  wording "untouched" was too strong: the specifically identified **current-state**
+  statements of the **CDS-WP-015 commit fact** were deliberately brought to the
+  actually committed state inside the authorized closure scope, because a current
+  mirror may not assert `pending commit` for an artifact the repository history shows
+  as committed. Every **other** instance of the class — historical records, other
+  work packages, the ADR pending-commit statements — is left verbatim, and **no
+  general 52 · 54 normalization was performed**. Reconciling specific current-state
+  instances is **not** closure of the class.
+- **Historical per-work-package descriptions** in `WORK_PACKAGES.md`,
+  `CONTEXT_PACK_FOUNDATION.md` and the `CLAUDE.md` per-WP bullets — left verbatim as
+  records of what each work package itself delivered. The single exception is the
+  CDS-WP-015 commit-status word in the `CLAUDE.md` bullet, corrected under the R2
+  rework recorded below.
+- **PB001 / external benchmark material** — entirely outside this repository run; not
+  integrated, not referenced, not used as evidence.
+
+**This run claims no repository-wide zero drift.** It claims that the WP-016
+top-level current-state class carries no unresolved drift inside the active
+current-state orientation surfaces. Historical records, review evidence, decision
+records, and the separate residuals above deliberately still contain earlier
+formulations.
+
+### Git state
+
+No Git write action of any kind. HEAD and index unchanged; all edits are uncommitted
+working-tree changes awaiting Human-Maintainer review. Commit authority rests solely
+with the Human Maintainer. These notes are **executor-produced evidence** and require
+a fresh independent review by a reviewer who is not their executor.
+
+### Fresh Independent Review R2 Rework
+
+A fresh independent review of the R1 closure candidate was carried out in a separate
+session.
+
+| Item | Value |
+| --- | --- |
+| Fresh review verdict | **REWORK REQUIRED** |
+| Commit authorization | **NOT AUTHORIZED** |
+| Counts | 1 Blocking · 0 High · 5 Medium · 3 Observations |
+| Nova decision | targeted R2 rework inside the existing eight-file scope |
+| Mandatory fixes | **F-R1** (blocking), **F-R2**, **F-R3** (narrow) |
+
+**F-R1 — the blocking finding, reproduced and accepted.**
+`project-system/CONTEXT_PACK_FOUNDATION.md` carries **two** rolling current-state
+surfaces, not one. R1 reconciled the upper block (the "Current phase" paragraph) and
+classified the second block at lines 776–790 as historical narrative. **That
+classification was wrong.** A read-only `git log -L 776,790` shows the region
+rewritten by **every** work package from CDS-WP-002 through CDS-WP-015 — most
+recently by `6d94d65 feat(cds): implement semantic status source set`. It is a
+rolling current-state block, and R1 therefore left the same file asserting, in one
+place, that the WP-013/WP-015 evidence is committed and independently reviewed and,
+in another, that it is pending commit and independently unreviewed. R1 did not merely
+miss drift; it **created a same-file, same-fact contradiction** by fixing one of two
+mirrors.
+
+**F-R1 corrected.** The second block now states the same present state as the first:
+WP-013 and WP-015 evidence exists and is committed and executor-produced; that
+evidence has since been independently reviewed by CDS-WP-016 with **Independent
+Review PASS** and **Candidate Recommendation GO**; **GO is not a Candidate award**;
+Candidate **No**, maturity **Experimental**, approval **Unapproved**, every artifact
+**AE-0**; CDS-WP-016 is the current authorized work package with executed review
+work; the Candidate authority closure stays open with **both gates open**; no
+follow-up work package is authorized and CDS-WP-017 is not activated. Nothing claims
+WP-016 Completed, a Candidate award, Stable, accessibility evidence, an active pilot,
+or an authorized Product Profile.
+
+**F-R2 corrected.** The R1 claim that the WP-011 … WP-015 / ADR pending-commit class
+was "untouched" was too strong: R1 had already turned one current-state instance from
+`pending commit` to `committed` inside the Context Pack. The preserved-residuals entry
+now distinguishes explicitly between the **class**, which remains unresolved and is
+not closed, and the specific **current-state instances** of the CDS-WP-015 commit fact,
+which were deliberately reconciled inside the authorized scope. No whole-class closure
+is claimed and no general 52 · 54 normalization was performed.
+
+**F-R3 corrected, narrowly.** Only the current-state CDS-WP-015 commit fact was
+brought to the committed state, in exactly two further places: the `CLAUDE.md`
+CDS-WP-015 bullet (`pending commit` → `committed`) and the
+`PROJECT_PROFILE.md` Semantic Status Source Set status line (`pending
+Human-Maintainer commit` → `committed by the Human Maintainer`). No other
+pending-commit statement was touched — the CDS-WP-013 / ADR-0003 and CDS-WP-014
+clauses in `CLAUDE.md` and `PROJECT_PROFILE.md` are left verbatim, and the broader
+WP-011 … WP-015 / ADR class, including the 52 · 54 divergence, **remains separate and
+open**.
+
+**Deliberately not fixed in this run**, per the Nova decision:
+
+| Finding | File | Disposition |
+| --- | --- | --- |
+| **F-C** | `CLAUDE.md` ≈ line 401 | open — separate narrow follow-up; the existing supersession mechanism is left as-is |
+| **F-A** | `docs/foundations/SEMANTIC_STATUS_FOUNDATION_CONTRACT.md` | open — non-blocking artefact status residual; read-only |
+| **F-B** | `docs/foundations/SEMANTIC_STATUS_TERMINOLOGY_DE_EN.md` | open — non-blocking artefact status residual; read-only |
+| **F-R4** | `WORK_PACKAGES.md` status qualifier | observation |
+| **F-R5** | PB001 exclusion reference | observation |
+| **F-R6** | `docs/roadmap/FIRST_SEMANTIC_STATUS_CANDIDATE_PLAN.md` | observation / separate residual |
+
+Also untouched, as before: F-03 GOM narrowing · F-04 risk review-trigger governance
+issue · F-05 RISK-028 heading · F-06 Architecture Temporal Dependency Residual ·
+F-07 Decision-record supersession · PB001 and all external benchmark material.
+
+**Governance state after R2 — unchanged by this rework:** Candidate **No** · Maturity
+**Experimental** · Approval **Unapproved** · **AE-0** · Claims **none** · Nova
+Candidate gate **open** · Human-Maintainer Candidate gate **open** · CDS-WP-017 **not
+activated** · no follow-up work package authorized · Pilot **inactive** · Publication
+**Private Development** · Decisions **124** · Risks **97** (90 / 7 / 0 / 0) · ADRs
+**3** · AE-1 mirror **33** · Ambiguous **1**.
+
+**No promotion of any kind was performed, and no repository-wide zero-drift claim is
+made.** This R2 candidate is executor-produced and requires a fresh independent review
+in a third, separate session.

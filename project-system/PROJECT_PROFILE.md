@@ -24,7 +24,12 @@ Pre-Candidate Operating Enablement — **Foundation / Pre-Design: Closed with No
 ## Work package status
 
 - Current work package after CDS-WP-015: **CDS-WP-016 — Semantic Status Foundation
-  Independent Evidence Review and Candidate Gate** (Next; not yet executed)
+  Independent Evidence Review and Candidate Gate** (roadmap status `Next` — the
+  current authorized work package; its review work is **executed**: Independent
+  Review **PASS**, Candidate Recommendation **GO**). **GO is not a Candidate award**
+  — the Candidate authority closure remains open: **Nova Candidate gate open**,
+  **Human-Maintainer Candidate gate open**, Candidate **No**. No follow-up work
+  package is authorized; CDS-WP-017 is not activated.
 - Previous work package: CDS-WP-015 — Semantic Status Foundation Source Set and
   Candidate Evidence (Completed)
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
@@ -94,8 +99,8 @@ Documents:
 - ADR count: **3** (ADR-0001, ADR-0002, ADR-0003)
 - **No token value implemented. The schema and resolver contracts created by
   CDS-WP-012 are Experimental and carry no Candidate/Stable status; the offline
-  validator exists since CDS-WP-013 (Experimental, independently unreviewed);
-  publication state `Private Development`.**
+  validator exists since CDS-WP-013 (Experimental; its evidence independently
+  reviewed by CDS-WP-016 — PASS); publication state `Private Development`.**
 
 Documents:
 [ADR-0001](../docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md) ·
@@ -115,8 +120,9 @@ Documents:
   Resolver Schema: **Present** · Validation Case Schema: **Present** (4 CDS-owned JSON
   Schema Draft 2020-12 contracts; stable `tag:` `$id`s; local `$ref`; offline)
 - Schema execution: **Executed by the CDS-WP-013 offline validator** (all five
-  schemas pass `check_schema`; 15/15 harness matches — executor-produced,
-  independently unreviewed; the WP-012-era `Not assessed` state is superseded)
+  schemas pass `check_schema`; 15/15 harness matches — executor-produced, since
+  independently reviewed by CDS-WP-016 (PASS); the WP-012-era `Not assessed` state is
+  superseded)
 - Positive fixture count: **6** · Negative fixture file count: **9** · Validation case
   count: **15** (VAL-CASE-001…015); every fixture covered
 - Deterministic serialization: **RFC 8785 (JCS)** · Digest: **SHA-256** (`sha256:`
@@ -129,8 +135,9 @@ Documents:
 
 ## Offline validator status (CDS-WP-013)
 
-- Validator status: **Implemented, Experimental, independently unreviewed**
-  (CDS-WP-013, 2026-07-17; ADR-0003 pending Human-Maintainer commit)
+- Validator status: **Implemented, Experimental; its evidence independently reviewed
+  by CDS-WP-016 (Independent Review PASS)** (CDS-WP-013, 2026-07-17; ADR-0003 pending
+  Human-Maintainer commit)
 - Validator runtime: **Python 3.12.10** (CPython, win32; requirement ≥ 3.11) ·
   Validator version: **0.1.0** · Entry point: `python -m tools.cds_validator`
 - Dependency versions (exact; [lock](../requirements-validator.lock)):
@@ -190,8 +197,10 @@ Documents:
 ## Semantic Status Source Set status (CDS-WP-015)
 
 - Semantic Status Source Set: **Implemented, Experimental** (CDS-WP-015,
-  2026-07-18; pending Human-Maintainer commit) — **independently unreviewed**
-  (DEC-S-121); **Candidate: No** (DEC-S-115, DEC-S-122)
+  2026-07-18; **committed** by the Human Maintainer) — the DEC-S-121 **independently
+  unreviewed** state is **superseded**: independently reviewed by CDS-WP-016
+  (**Independent Review PASS**, **Candidate Recommendation GO**); **GO is not a
+  Candidate award** — **Candidate: No** (DEC-S-115, DEC-S-122)
 - Source-Set ID: **`semantic/status`** · Layer: semantic · Revision:
   `semantic-status-rev-0001` · Axis count: **5** · Status token count: **25**
   (non-visual `string` identity values; `status.<axis>.<value>`)

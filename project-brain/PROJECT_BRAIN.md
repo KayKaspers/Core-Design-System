@@ -67,13 +67,15 @@ approved.
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015
-- Next work package: **CDS-WP-016 — Semantic Status Foundation Independent Evidence
-  Review and Candidate Gate** (authorized as next; not yet executed). Foundation
-  **Closed with Notes**; machine-readable machinery implemented and executed
-  (ADR-0001…0003); Semantic Status Foundation **Contract defined (CDS-WP-014)** and
-  **machine-readable implemented (CDS-WP-015: `semantic/status`, 25 non-visual
-  tokens, 24/24 harness matches, 25/25 DE/EN, Draft dossier — executor-produced,
-  independently unreviewed, Not Candidate)**
+- Current work package: **CDS-WP-016 — Semantic Status Foundation Independent Evidence
+  Review and Candidate Gate** (the authorized work package; its review work is
+  **executed** — **Independent Review PASS**, **Candidate Recommendation GO**;
+  **GO is not a Candidate award**, and the **Nova and Human-Maintainer Candidate gates
+  are both open**). Foundation **Closed with Notes**; machine-readable machinery
+  implemented and executed (ADR-0001…0003); Semantic Status Foundation **Contract
+  defined (CDS-WP-014)** and **machine-readable implemented (CDS-WP-015:
+  `semantic/status`, 25 non-visual tokens, 24/24 harness matches, 25/25 DE/EN, Draft
+  dossier — executor-produced, since independently reviewed, Not Candidate)**
 
 ## Registered scope
 
@@ -782,12 +784,20 @@ minimal additive validation-case-schema correction):
 ## Next step
 
 **CDS-WP-016 — Semantic Status Foundation Independent Evidence Review and
-Candidate Gate** (authorized as next; not yet executed): independent review of the
-WP-013/WP-015 evidence by a separately authorized reviewer (re-execution or
-artifact assessment), traceability/accessibility/content/dossier review, the
-Candidate-gate recommendation, and the Human-Maintainer decision — **no automatic
-Candidate promotion, still no visual values, no pilot.** Execution begins only on
-an explicit Nova prompt and Human-Maintainer authorization.
+Candidate Gate** is the authorized work package and its review work is **executed**:
+the WP-013/WP-015 evidence was independently reviewed by a separately authorized
+reviewer (re-execution and artifact assessment), together with
+traceability/accessibility/content/dossier review, producing the Candidate-gate
+recommendation — **Independent Review PASS**, **Candidate Recommendation GO**
+([Candidate Gate Recommendation](../docs/reviews/WP016_CANDIDATE_GATE_RECOMMENDATION.md)).
+
+**GO is not a Candidate award.** The next step is therefore **not** the first start of
+CDS-WP-016 but the **Candidate authority closure**: Nova's Candidate-gate review and
+the Human-Maintainer maturity decision — **both open**. Until they close, Candidate is
+**No**, maturity **Experimental**, approval **Unapproved**, every artifact **AE-0** —
+**no automatic Candidate promotion, still no visual values, no pilot**. No follow-up
+work package is authorized and CDS-WP-017 is not activated; any further step begins
+only on an explicit Nova prompt and Human-Maintainer authorization.
 
 ## Related documents
 

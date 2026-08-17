@@ -36,7 +36,8 @@ are implemented and executed** (CDS-WP-013): the `python -m tools.cds_validator`
 on a pinned Python/`jsonschema`/`rfc8785` stack
 ([ADR-0003](docs/decisions/ADR-0003-OFFLINE_TOKEN_VALIDATOR_IMPLEMENTATION_STACK.md)),
 71/71 unit tests, and **15/15 validation cases matching their committed expected
-outcomes** — **executor-produced, independently unreviewed evidence**. **No
+outcomes** — **executor-produced evidence, since independently reviewed by CDS-WP-016
+(Independent Review PASS)**. **No
 accessibility test has been run, every artifact is AE-0, no Candidate or Stable
 artifact exists, no claim is valid, no licence is selected, and the publication state
 remains `Private Development`.** The **first concrete design foundation is defined**
@@ -49,9 +50,12 @@ combination/communication/token contracts, and a gated
 [`semantic/status` source set](tokens/semantic/status/semantic-status.tokens.json)
 with 25 non-visual tokens, a 24/24 validation harness, 25/25 DE/EN terminology,
 and a [Draft Candidate Dossier](docs/operations/SEMANTIC_STATUS_CANDIDATE_DOSSIER.md)
-— **executor-produced evidence, independently unreviewed, Not Candidate**. The next
-work package is **CDS-WP-016 — Semantic Status Foundation Independent Evidence
-Review and Candidate Gate**.
+— **executor-produced evidence, since independently reviewed, Not Candidate**. The
+current authorized work package is **CDS-WP-016 — Semantic Status Foundation
+Independent Evidence Review and Candidate Gate**; its review work is **executed**:
+**Independent Review PASS**, **Candidate Recommendation GO**. **GO is not a Candidate
+award** — Candidate remains **No**, and the **Nova and Human-Maintainer Candidate
+gates are both open**. No follow-up work package is authorized.
 
 The project does not yet produce visual design.
 
@@ -373,8 +377,9 @@ V1–V4 execution, and RFC 8785 + SHA-256 digests. The fixture harness executed
 in [artifacts/validation/](artifacts/validation/) and the
 [Execution Review](docs/reviews/OFFLINE_TOKEN_VALIDATOR_EXECUTION_REVIEW.md).
 **V2 covers a bounded DTCG subset — this is not a full-DTCG conformance statement.
-The evidence is executor-produced and independently unreviewed; the validator and
-bootstrap remain Experimental, not Candidate.**
+The evidence is executor-produced and was independently reviewed by CDS-WP-016
+(Independent Review PASS); the validator and bootstrap remain Experimental, not
+Candidate.**
 
 - [ADR-0001 — Machine-Readable Token Source Format](docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)
 - [ADR-0002 — Deterministic JSON Serialization](docs/decisions/ADR-0002-DETERMINISTIC_JSON_SERIALIZATION.md)
@@ -411,7 +416,8 @@ exists (25 non-visual identity tokens, manifest, resolver) with executed
 [25/25 DE/EN terminology mapping](docs/foundations/SEMANTIC_STATUS_TERMINOLOGY_DE_EN.md),
 four executor-produced reviews, and a
 [Draft Candidate Dossier](docs/operations/SEMANTIC_STATUS_CANDIDATE_DOSSIER.md) —
-**independently unreviewed; the Candidate gate is open; consuming or representing
+**independently reviewed by CDS-WP-016 (PASS, Candidate Recommendation GO); the
+Candidate gate is open; consuming or representing
 the source set as approved is prohibited (DEC-S-124).**
 
 - [Semantic Status Foundation Contract](docs/foundations/SEMANTIC_STATUS_FOUNDATION_CONTRACT.md)
@@ -441,7 +447,9 @@ the source set as approved is prohibited (DEC-S-124).**
 - **Completed:** CDS-WP-014 — Semantic Status Foundation Contract and First Candidate Plan
 - **Completed:** CDS-WP-015 — Semantic Status Foundation Source Set and Candidate Evidence
 - **Next:** **CDS-WP-016 — Semantic Status Foundation Independent Evidence Review and
-  Candidate Gate** (authorized; not yet executed)
+  Candidate Gate** — the current authorized roadmap position; its review work is
+  **executed** (Independent Review PASS, Candidate Recommendation GO). Candidate
+  remains **No**; the Nova and Human-Maintainer Candidate gates are open.
 
 The full controlled roadmap is in
 [project-system/WORK_PACKAGES.md](project-system/WORK_PACKAGES.md).

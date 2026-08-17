@@ -50,7 +50,7 @@ library, or a design project scoped exclusively to CoreOps.
   planned and fully gated** — see the
   [Candidate Plan](docs/roadmap/FIRST_SEMANTIC_STATUS_CANDIDATE_PLAN.md) and the
   [Foundation Contract](docs/foundations/SEMANTIC_STATUS_FOUNDATION_CONTRACT.md).
-- Semantic Status Source Set: **implemented** (CDS-WP-015, pending commit) — the
+- Semantic Status Source Set: **implemented** (CDS-WP-015, committed) — the
   Experimental **`semantic/status`** source set (25 non-visual tokens
   `status.<axis>.<value>`, manifest, resolver), the semantic-status V4 validator
   extension (objective checks run despite fixture flags, DEC-S-118), the
@@ -59,13 +59,19 @@ library, or a design project scoped exclusively to CoreOps.
   terminology, and a Draft Candidate Dossier. **Executor-produced evidence
   (24/24 matches), independently unreviewed (DEC-S-121); Not Candidate; never
   represent the source set as approved (DEC-S-124).**
-- Next work package: **CDS-WP-016 — Semantic Status Foundation Independent Evidence
-  Review and Candidate Gate** (authorized as next; **not yet executed**). It reviews
-  the WP-013/WP-015 evidence independently (reviewer ≠ executor), reviews
-  traceability/accessibility/content and the dossier, and prepares the
-  Candidate-gate recommendation for the Human-Maintainer decision — no automatic
-  promotion. Execution begins only on an explicit Nova prompt and Human-Maintainer
-  authorization.
+- Current work package: **CDS-WP-016 — Semantic Status Foundation Independent Evidence
+  Review and Candidate Gate** (the authorized work package; its review work is
+  **executed**). Wherever this file records the WP-013/WP-015 evidence as
+  independently unreviewed under DEC-S-103 or DEC-S-121, that state is **superseded**:
+  the evidence **has since been reviewed independently**
+  (reviewer ≠ executor), together with traceability, accessibility, content, and the
+  dossier: **Independent Review PASS**; **Candidate Recommendation GO** — see the
+  [Candidate Gate Recommendation](docs/reviews/WP016_CANDIDATE_GATE_RECOMMENDATION.md).
+  **GO is not a Candidate award**: Candidate remains **No**, maturity **Experimental**,
+  approval **Unapproved**, every artifact **AE-0**, and the **Nova Candidate gate and
+  the Human-Maintainer Candidate gate are both open**. No follow-up work package is
+  authorized and CDS-WP-017 is not activated. Further work begins only on an explicit
+  Nova prompt and Human-Maintainer authorization.
 
 ## Execution environment
 

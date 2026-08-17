@@ -8,8 +8,9 @@ Controlled work-package roadmap for the Core Design System (CDS).
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015
 - **Next work package:** **CDS-WP-016 — Semantic Status Foundation Independent
-  Evidence Review and Candidate Gate** (authorized as the next work package; not yet
-  executed)
+  Evidence Review and Candidate Gate** (authorized as the next work package; its
+  review work is **executed** — Independent Review PASS, Candidate Recommendation GO;
+  the Candidate authority closure remains open)
 
 ## Status values
 
@@ -18,6 +19,10 @@ Controlled work-package roadmap for the Core Design System (CDS).
 | Completed | Work package finished and reported for review. |
 | Next | Authorized as the immediate next work package. |
 | Planned | Part of the roadmap; not yet authorized to start. |
+
+`Next` records **roadmap authorization only**. It states which work package is the
+current authorized one — never that its execution has or has not started. Execution,
+review, and authority state are recorded per work package below.
 
 ## Roadmap
 
@@ -45,9 +50,13 @@ Controlled work-package roadmap for the Core Design System (CDS).
 notes; the Pre-Candidate Operating Enablement phase is active; the Semantic Status
 Foundation is **Contract defined (CDS-WP-014) and machine-readable implemented
 (CDS-WP-015: `semantic/status`, 25 non-visual tokens, 24/24 harness matches,
-executor-produced evidence)** — **Experimental, independently unreviewed, no
-Candidate status, no visual value**. CDS-WP-016 is registered as `Next` and is not
-yet executed. No further work-package ID is created.
+executor-produced evidence)** — **Experimental, no Candidate status, no visual
+value**. That evidence has since been **independently reviewed by CDS-WP-016**:
+**Independent Review PASS**, **Candidate Recommendation GO** — and **GO is not a
+Candidate award**. CDS-WP-016 is registered as `Next` (the current authorized roadmap
+position) and its review work is executed; what remains open is the Candidate
+authority closure — **Nova Candidate gate open, Human-Maintainer Candidate gate
+open, Candidate No**. No further work-package ID is created.
 
 ## Descriptions
 
@@ -306,14 +315,20 @@ Development`.**
 
 ### CDS-WP-016 — Semantic Status Foundation Independent Evidence Review and Candidate Gate
 
-**Status:** Next
+**Status:** Next *(roadmap authorization; review work executed)*
 
-Will independently review the WP-013 and WP-015 evidence (re-execution or artifact
-assessment by a separately authorized reviewer), review source/contract/terminology
-traceability, accessibility and content evidence, and the Candidate dossier, and
-prepare the Candidate-gate recommendation for the Human-Maintainer decision — **no
-automatic Candidate promotion**. Not yet executed; begins only on an explicit Nova
-prompt and Human-Maintainer authorization.
+Independently reviewed the WP-013 and WP-015 evidence (re-execution and artifact
+assessment by a separately authorized reviewer — never the executor), reviewed
+source/contract/terminology traceability, accessibility and content evidence, and the
+Candidate dossier, and produced the Candidate-gate recommendation for the
+Human-Maintainer decision — **no automatic Candidate promotion**. Result:
+**Independent Review PASS**, **Candidate Recommendation GO** (0 Blocking, 0 High,
+3 Observations) — see the
+[Candidate Gate Recommendation](../docs/reviews/WP016_CANDIDATE_GATE_RECOMMENDATION.md).
+**GO is not a Candidate award.** Still open and required before any promotion:
+**Nova's Candidate-gate review** and the **Human Maintainer's maturity approval**;
+Candidate remains **No**, maturity **Experimental**, every artifact **AE-0**. Further
+steps begin only on an explicit Nova prompt and Human-Maintainer authorization.
 
 ## Roadmap evolution
 
