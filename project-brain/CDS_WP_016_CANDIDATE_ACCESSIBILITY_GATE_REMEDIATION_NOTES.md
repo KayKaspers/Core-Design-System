@@ -572,3 +572,129 @@ changed no sentinel** — it only made an orientation document agree with regist
 that already held these values.
 
 **No Git write of any kind was performed in R1.2. The index remained CLEAN.**
+
+## Post-Commit Clean-HEAD Revision-Bound Evidence Reexecution
+
+**Run:** R2 — scoped **Evidence Executor** run, separate session. **Not** a new
+work package, **not** a new remediation run, **not** a review, **not** an
+approval. No code, fixture, test, rule, or semantic source was authored or
+touched in this run.
+
+### Human-Maintainer integration state
+
+| Property | Value |
+| --- | --- |
+| Implementation commit | `e6cb6fae63b1548ce4dabb7f5548116e4c61d622` |
+| `origin/main` | `e6cb6fae63b1548ce4dabb7f5548116e4c61d622` (identical) |
+| Parent | `7ac8a9e7be021a05e517adda64751920a5eff247` |
+| Subject | `feat(cds): remediate WP-016 candidate accessibility gate` |
+| Ahead / behind | 0 / 0 |
+| Implementation gate | **PASS** |
+| Fresh Independent Implementation Review | **PASS WITH NOTES** |
+| Repository before evidence execution | Index CLEAN · working tree CLEAN · 0 untracked · no merge/rebase/cherry-pick/revert |
+
+Baseline gate for this run: **PASS.**
+
+### Evidence identities
+
+| Property | Historical (pre-commit) | New (clean HEAD) |
+| --- | --- | --- |
+| Evidence ID | `AE1-CDS-WP016-SEMSTATUS-001` | **`AE1-CDS-WP016-SEMSTATUS-002`** |
+| Bound CDS revision | `7ac8a9e7be021a05e517adda64751920a5eff247` **+ uncommitted CDS-WP-016 working-tree changes** | **`e6cb6fae63b1548ce4dabb7f5548116e4c61d622`** |
+| Worktree state at execution | `modified worktree` | **`clean`** |
+| Source revision | `semantic-status-rev-0001` | `semantic-status-rev-0001` (unchanged) |
+| Status | **Preserved immutable — byte-identical before and after this run** | Provisional; fresh evidence review **PENDING** |
+
+The three historical artifacts —
+`artifacts/validation/wp016-candidate-accessibility-remediation-results.json`,
+`artifacts/validation/wp016-candidate-accessibility-remediation-digests.json`, and
+`docs/operations/SEMANTIC_STATUS_CANDIDATE_AE1_EVIDENCE_RECORD.md` — were **not
+edited, not rewritten, and not superseded**. Evidence is immutable once produced;
+change forces new evidence.
+
+### Execution
+
+Isolated virtual environment **outside** the repository, Python **3.13.15**, the
+seven exact pins from `requirements-validator.lock` and nothing else, offline
+after installation, `python -B` with `PYTHONDONTWRITEBYTECODE=1` and
+`PYTHONNOUSERSITE=1`. Both runner executions wrote to temporary paths **outside**
+the repository, before any repository mutation.
+
+| Run | Exit | SHA-256 | Bytes |
+| --- | --- | --- | --- |
+| Clean-HEAD run 1 | **0** | `2efbf8d0052add97d3acd4794ecf0d0d3817fb2876c8f0504e053582a0f06731` | 27 971 |
+| Clean-HEAD run 2 | **0** | `2efbf8d0052add97d3acd4794ecf0d0d3817fb2876c8f0504e053582a0f06731` | 27 971 |
+
+**Byte-identical and hash-identical — determinism gate PASS.**
+
+Runner result: **`Pass with limitations`**, `caseTotal` **32**, failures **0**,
+blocked **0**, execution errors **0**, `scoreProduced` **false**.
+
+### Coverage
+
+| Sentinel | Value |
+| --- | --- |
+| Per-value requirement coverage (GAP-H-02) | **25 / 25** · 0 unmapped · 0 duplicate · 0 unauthorized |
+| Review-required combinations | **6 / 6** (RR-1 … RR-6) |
+| Fail-closed conditions | **8 / 8** (FC-1 … FC-8) |
+| Source `$description` coverage | **25 / 25** · 0 missing |
+| DE/EN structural coverage | **25 / 25** rows · 25 EN · 25 DE · 0 duplicate · 0 unauthorized · 0 missing |
+
+### Regression (identical before and after evidence persistence)
+
+| Suite | Result |
+| --- | --- |
+| `tests.validator.test_semantic_status` | **47 / 47** · 0 failures · 0 skips · 0 errors |
+| `tests.validator.test_semantic_status_candidate_evidence` | **40 / 40** · 0 failures · 0 skips · 0 errors |
+| Full `tests/validator` discovery | **160 / 160** · 0 failures · 0 skips · 0 errors |
+| Immutable WP-013/WP-015 24-case harness | **24 total · 24 matches · 0 mismatches · 0 execution errors**, exit 0 |
+
+No test count was normalized. The immutable 24-case matrix was not modified
+(DEC-S-120).
+
+### Result delta versus the historical pre-commit run
+
+Field-by-field comparison of the two result payloads: **exactly 2 semantic
+deltas**, both intended — `cdsRevision` and `worktreeState`. **Unexpected deltas:
+0.** All other generated fields, including all 32 case results and all 25
+value-requirement rows, are identical.
+
+### New digest artifact
+
+`artifacts/validation/wp016-candidate-accessibility-clean-reexecution-digests.json`
+— **18 / 18** entries independently recomputed, **0 mismatches**: 6 RFC 8785
+canonical-content digests, 10 raw file digests, 1 results canonical-content
+digest, 1 results raw file digest. The **16** unchanged source, contract, fixture,
+validator, and test digests are **identical** to the predecessor digest artifact —
+**no input digest drift**.
+
+### Limitations — unchanged
+
+**16 total · 0 Critical · 11 Significant · 5 Minor.** The three
+`COVERED_WITH_LIMITATION` rows remain `confidence.supported`,
+`confidence.uncertain`, and `evidence.partial`. Nothing was closed, downgraded,
+averaged, or upgraded to `COVERED`. No representation behaviour is claimed.
+
+### Disposition
+
+| Item | State |
+| --- | --- |
+| F-003 revision-binding requirement | **SATISFIED_BY_CLEAN_HEAD_REEXECUTION** |
+| F-003 governance closure | **NOT closed** — the fresh independent evidence review of this new package has not happened |
+| Fresh independent evidence review | **PENDING** |
+| F-002 (executor self-confirmation) | Independently assessed in the implementation review; **not reopened**. Method independence review completed ≠ evidence admission completed. |
+| Admitted accessibility evidence level | **AE-0** |
+| Candidate | **No** |
+| Maturity | **Experimental** |
+| Approval | **Unapproved** |
+| Claims | **None** |
+| Pilot | **inactive** |
+| CDS-WP-017 | **not activated** |
+
+The new evidence files did **not** exist in `e6cb6fa`; they are evidence **about**
+that revision. The repository is clean *at execution* and modified *after
+persistence* by exactly the four authorized candidate files — these are two
+different states and are not conflated.
+
+**No Git write of any kind was performed in R2. The index remained CLEAN. No
+staging occurred. Historical R1 / R1.1 / R1.2 sections above are unchanged.**

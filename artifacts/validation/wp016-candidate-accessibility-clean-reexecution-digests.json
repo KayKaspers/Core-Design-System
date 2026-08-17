@@ -1,0 +1,40 @@
+{
+  "reportVersion": "1",
+  "workPackage": "CDS-WP-016",
+  "canonicalizationMethod": "RFC 8785 (JSON Canonicalization Scheme)",
+  "digestAlgorithm": "SHA-256",
+  "digestNote": "Integrity aid only. A digest is not a signature and proves no authorship, approval, review, release, accessibility, or conformance (DEC-S-090, DEC-S-100, RISK-072). `contentDigests` are RFC 8785 (JCS) canonical-content digests of strict-JSON documents after a successful V1 parse; `fileDigests` are raw SHA-256 digests of the file bytes for non-JSON inputs, where no canonical content form is defined.",
+  "cdsRevision": "e6cb6fae63b1548ce4dabb7f5548116e4c61d622",
+  "sourceRevision": "semantic-status-rev-0001",
+  "worktreeState": "clean",
+  "evidenceLevel": "Provisional AE-1 candidate — pending fresh independent review",
+  "admittedAccessibilityEvidenceLevel": "AE-0",
+  "independentReviewState": "pending",
+  "candidateStatus": "Not Candidate",
+  "contentDigests": {
+    "tokens/semantic/status/semantic-status.tokens.json": "sha256:8d127cf67ad5a15f1822d135c3a7107c9869a9eaf9b96ea0814d2a5c2ef69c81",
+    "tokens/semantic/status/semantic-status.source-set.json": "sha256:879933098194081bb6e6076d6cdd47a6e3d06a59bd26775614b9def3ccd94399",
+    "tokens/semantic/status/semantic-status.resolver.json": "sha256:61e64f58879cc8ec25d25134ec0432da05053e72f70076d0bb835990dd8c8af9",
+    "tests/fixtures/semantic-status-statements/CANDIDATE_EVIDENCE_CASES.json": "sha256:6ab8ae5f0b15017d18d5efa18b23db1439d6d153015bcc860930cb97eab6ee55",
+    "tests/fixtures/semantic-status/positive/semantic-status-valid.tokens.json": "sha256:c804867b0e8efff85571a45f5293d231667d286c70a799e1cb4600346447299c",
+    "tests/fixtures/semantic-status/negative/missing-description.tokens.json": "sha256:b6da65561e7cfd27be16367376eddc39b2ed5abc11775029c242e2c8abf22832"
+  },
+  "fileDigests": {
+    "docs/foundations/SEMANTIC_STATUS_FOUNDATION_CONTRACT.md": "sha256:6430566eb74c5c51f4fb5b064db4a2a578d7b65c20b58d6ed85370148b217f88",
+    "docs/foundations/STATUS_AXIS_VOCABULARY.md": "sha256:3fdf2f8d359fb5f7e09c56458e692466eb5f09c93d904151e231d2b0ce4dec21",
+    "docs/foundations/STATUS_COMPOSITION_AND_CONFLICT_RULES.md": "sha256:66ec38c68a2980691241d894245ecc6a909bd66dc305951b25313df8772c2aa9",
+    "docs/foundations/STATUS_COMMUNICATION_AND_ACCESSIBILITY_CONTRACT.md": "sha256:2714eab651b9ce9df57f0e8f91bca5e74ec3598bdba731c4e64591c11ba1ec94",
+    "docs/foundations/SEMANTIC_STATUS_TERMINOLOGY_DE_EN.md": "sha256:c705d345dfaf73f62d942abeafbaf20d557bd217bc7f70742fc1e397165ebf32",
+    "tools/cds_validator/semantic_status.py": "sha256:1ec690c4444aa5e5730786ac97b45e6dc5760549223fa1c0d5cb0f055560df61",
+    "tools/cds_validator/diagnostics.py": "sha256:11316e2cd947383c374e0a109d5f4a37518b74e3036e0dbdee033849392c97a4",
+    "tests/validator/semantic_status_candidate_evidence_runner.py": "sha256:c87823ffeb88c319a568d3b73e1a6622b61b0f2999ddcfe398f16963bd800c98",
+    "tests/validator/test_semantic_status_candidate_evidence.py": "sha256:58d44e8e6c81e10ae0586b4c0f2e88382c1d1fb23412431b3bc5017e7383a630",
+    "tests/validator/test_semantic_status.py": "sha256:2c900f46ec32284f33a19060ed6215eb7e12d3dfc813781cd0b77fa0c0a37b94"
+  },
+  "resultsArtifact": {
+    "artifacts/validation/wp016-candidate-accessibility-clean-reexecution-results.json": "sha256:013386ae9eddec5043cfced894a6dfe504695d7d8acf35caf0276a8a480af022"
+  },
+  "resultsArtifactFileDigest": {
+    "artifacts/validation/wp016-candidate-accessibility-clean-reexecution-results.json": "sha256:2efbf8d0052add97d3acd4794ecf0d0d3817fb2876c8f0504e053582a0f06731"
+  }
+}
