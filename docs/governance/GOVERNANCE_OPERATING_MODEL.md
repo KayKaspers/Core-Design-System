@@ -245,22 +245,24 @@ Consequences that must stay true:
 
 ## Open accessibility dependency
 
-*(Deferred — CDS-WP-007)*
+*(Policy decided — CDS-WP-007 committed; evidence outstanding)*
 
 Several gates reference accessibility evidence. **The accessibility target and
-its evidence method do not yet exist** (CR-024).
+its evidence method exist** — **WCAG 2.2 Level AA** (DEC-S-049, DEC-S-060) and
+the AE-0 … AE-4 evidence model, committed with CDS-WP-007 (CR-024). **No
+accessibility evidence has been produced: every CDS artifact is AE-0.**
 
-Until CDS-WP-007 defines them:
+While no evidence exists:
 
 - no accessibility claim may be made at any level,
 - the Stable gate cannot be fully satisfied for artifacts with accessibility
   obligations,
-- exceptions may not weaken accessibility — including a requirement whose value
-  is unknown, which is a real constraint that is currently unmeasurable
+- exceptions may not weaken accessibility — including a requirement whose
+  conformance is unverified, which is a real constraint that remains unmeasured
   (RISK-028),
-- a CoreOps pilot entry criterion remains unmet.
+- Group E of the CoreOps pilot cannot be evidenced.
 
-This is recorded rather than worked around. Nova may wish to advance CDS-WP-007.
+This is recorded rather than worked around.
 
 ## Change control
 

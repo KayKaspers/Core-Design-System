@@ -2126,8 +2126,8 @@ lower maturity, never a weaker standard.
 web-based CoreOps pilot scope.**
 
 The pilot entry criterion **"the accessibility target and its evidence method are
-decided"** becomes **`Accessibility target defined` — satisfiable upon Human
-Maintainer commit of CDS-WP-007**.
+decided"** becomes **`Accessibility target defined` — met by the Human-Maintainer
+commit of CDS-WP-007**.
 
 ### Rationale
 

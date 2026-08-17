@@ -128,9 +128,9 @@ A release is ready only when **all** hold:
 9. **Human Maintainer approval**.
 
 **Currently unreachable:** requirement 7 cannot be satisfied (no licensing
-decisions), and no artifact can reach Stable while the accessibility target is
-undefined (CR-024). **No CDS release is possible today.** Recorded, not worked
-around.
+decisions), and no artifact can reach Stable while no accessibility evidence
+exists — every CDS artifact is AE-0 (CR-024). **No CDS release is possible
+today.** Recorded, not worked around.
 
 ## Change control for this policy set
 

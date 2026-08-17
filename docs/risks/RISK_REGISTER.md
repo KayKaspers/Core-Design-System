@@ -612,8 +612,8 @@ Apply DEC-S-015: the pilot is a bounded slice and constitutes neither adoption
 nor conformance. Apply DEC-S-012: any future claim requires a specific version
 reference and an evidence model, neither of which exists. Forbid informal
 "CDS compliant" statements in every pilot output. Keep the contract status
-explicit — normative only upon Human Maintainer commit following Nova approval,
-and currently not active with entry criteria unmet.
+explicit — committed and normative (CDS-WP-004), and currently not active with
+entry criteria unmet.
 
 ---
 
@@ -918,29 +918,36 @@ alignment. Profile governance and limits are deferred to CDS-WP-006.
 
 ### Description
 
-Architecture decisions made before CDS-WP-007 may inadvertently constrain future
-accessibility requirements or make them costly to adopt.
+Architecture decisions taken before CDS-WP-007 may have constrained the
+now-defined accessibility requirements, or made them costly to adopt.
 
 ### Impact
 
-The architecture is being decided while the accessibility target is undefined
-(CR-024). If a structural decision turns out to preclude a later target, the cost
-lands after the structure is load-bearing and consumers depend on it. The
-evidence base makes this sharper: accessibility is weak in **both** the benchmark
-and the consumer layers — CoreOps names a baseline with no level and CastCore
-documentation contains none at all — so there is little to steer by. A CoreOps
-pilot entry criterion is also blocked until the target exists.
+Much of the architecture was decided before the accessibility target existed
+(CR-024). The target is now defined — **WCAG 2.2 Level AA** (DEC-S-049,
+DEC-S-060), committed with CDS-WP-007 — but **no accessibility evidence has been
+produced, and every CDS artifact is AE-0**. Whether the existing structure is
+compatible with the committed policy is therefore neither demonstrated nor
+refuted; the missing evidence is what keeps this risk open, not a missing target.
+If a structural decision turns out to preclude the target, the cost lands after
+the structure is load-bearing and consumers depend on it. The evidence base makes
+this sharper: accessibility is weak in **both** the benchmark and the consumer
+layers — CoreOps names a baseline with no level and CastCore documentation
+contains none at all — so there is little to steer by. Pilot Group E still cannot
+be evidenced.
 
 ### Mitigation direction
 
 Keep accessibility in the architecture as a **structural constraint rather than a
-threshold**: constraints survive a later policy, whereas specific thresholds would
-pre-empt it. Hold the constraints that are safe regardless of level — colour never
-the sole meaning carrier, component contracts carry accessibility behavior,
+threshold**: constraints survive policy revision, whereas specific thresholds
+would pre-empt it. Hold the constraints that are safe regardless of level — colour
+never the sole meaning carrier, component contracts carry accessibility behavior,
 profiles may not weaken guarantees (invariant 10), status perceivable
-non-visually. Make **no conformance claim of any kind** meanwhile. Consider
-advancing CDS-WP-007 or deciding the target earlier than the roadmap implies,
-since the architecture cannot fully validate Pilot Group E without it.
+non-visually. Make **no conformance claim of any kind** meanwhile: the committed
+policy is not evidence, and documentation is not mitigation. Validate the existing
+architecture against the committed policy once an authorized scope exists for
+that work; the architecture's own stale dependency state belongs to the separate
+architecture temporal-dependency reconciliation, not here.
 
 ---
 

@@ -388,8 +388,9 @@ selected**; unknown rights block publication.
 publication; **Claude never releases**; a green build is not consent.
 
 **Currently blocked:** no artifact can reach Stable · no profile can be approved ·
-no publication change · **no release is possible** — all tracing to the undefined
-accessibility target (CR-024) and absent licensing decisions.
+no publication change · **no release is possible** — all tracing to the absent
+accessibility evidence (CR-024; every artifact is AE-0) and absent licensing
+decisions.
 
 Details: [Governance Operating Model](../docs/governance/GOVERNANCE_OPERATING_MODEL.md) ·
 [Risk Governance](../docs/governance/RISK_GOVERNANCE_MODEL.md) ·
@@ -487,8 +488,8 @@ data, backend, security architecture, and operations stay consumer-owned
 **CoreOps pilot** — a bounded slice, **not** a redesign (DEC-S-015). Groups
 A Application Foundation · B Operations Overview · C Inventory and Dense Data ·
 D State and Safety Patterns · E Help, Accessibility, Localization. 9 scenarios.
-The contract is normative only upon Human Maintainer commit following Nova
-approval; **entry criteria are unmet and no pilot has started**.
+The contract is committed and normative (CDS-WP-004); **entry criteria are unmet
+and no pilot has started**.
 
 **Hypothesis consumer layer:** HYP-002 offline, HYP-003 operations patterns, and
 HYP-005 governed family flexibility are *Confirmed consumer need*; HYP-007
@@ -574,8 +575,8 @@ no legal or certification statement (policy boundary, standard-status doc); nati
 semantics first, APG
 examples informative only (DEC-S-054).
 
-**CR-024 / pilot:** resolved at policy level; entry criterion satisfiable on
-Human Maintainer commit. **The CoreOps pilot has not started and cannot start; no
+**CR-024 / pilot:** resolved at policy level; entry criterion met with the
+CDS-WP-007 commit. **The CoreOps pilot has not started and cannot start; no
 WCAG 2.2 Level AA conformance has been demonstrated, reviewed, or approved for
 CoreOps** (not assessed, not failed).
 

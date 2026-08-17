@@ -30,7 +30,7 @@ Frame: [Accessibility and Inclusive Design Policy](ACCESSIBILITY_AND_INCLUSIVE_D
 | A target level exists |
 | Responsibilities are assigned |
 | Evidence requirements are defined |
-| The policy can serve as a normative basis after Human Maintainer commit |
+| The policy is committed and serves as a normative basis |
 
 ### What this does not resolve
 
@@ -144,9 +144,9 @@ committed by CDS-WP-010.
 The pilot contract's entry criterion **"the accessibility target and its evidence
 method are decided"** may be treated as:
 
-> ### `Accessibility target defined` — **satisfiable upon Human Maintainer commit of CDS-WP-007**
+> ### `Accessibility target defined` — **met by the Human-Maintainer commit of CDS-WP-007**
 
-Claude does not declare it met. The Human Maintainer's commit does.
+Claude did not declare it met. The Human Maintainer's commit did.
 
 ### Still unmet
 
@@ -159,7 +159,7 @@ Claude does not declare it met. The Human Maintainer's commit does.
 | **Foundations at Candidate maturity** | **Unmet — no artifact is Candidate** |
 | CoreOps pilot area named | Pending |
 | No CoreOps governance conflict | Pending |
-| **Accessibility target decided** | **Satisfiable on commit** |
+| **Accessibility target decided** | **Met — committed with CDS-WP-007** |
 
 **The pilot cannot start.** Two criteria remain structurally unmet: no artifact
 can reach Candidate (**no evidence exists** — every artifact is AE-0; the support

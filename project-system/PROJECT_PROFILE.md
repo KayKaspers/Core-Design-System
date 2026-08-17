@@ -263,7 +263,7 @@ Documents:
   Claims Model; the responsibility split they record is DEC-S-051)
 - Accessibility channel profiles: **6** — 2 with a target, 0 Candidate-eligible
 - CR-024 policy status: **Resolved at policy level** (DEC-S-060); entry criterion
-  `Accessibility target defined` satisfiable on Human Maintainer commit
+  `Accessibility target defined` met with the CDS-WP-007 commit
 - **Current accessibility evidence: none — every artifact is AE-0**; a support
   baseline is **declared and committed** (A11Y-BL-001, CDS-WP-010) but **no
   evidence has been executed**; no accessibility claim of any level is valid
@@ -353,7 +353,7 @@ Documents:
   hypotheses**
 - **Evidence level: documentation only.** No user research, interviews, or
   usability testing took place (RISK-017). No requirement is an accepted CDS
-  standard (DEC-S-014). The pilot contract is a proposal, not active.
+  standard (DEC-S-014). The pilot contract is committed, not active.
 
 Documents:
 [Consumer Requirements Model](../docs/governance/CONSUMER_REQUIREMENTS_MODEL.md) ·

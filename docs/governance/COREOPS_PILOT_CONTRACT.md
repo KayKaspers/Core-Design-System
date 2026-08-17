@@ -6,11 +6,11 @@
 
 ## Contract status
 
-**Normative upon Human Maintainer commit following Nova approval.**
+**Normative — committed by the Human Maintainer with CDS-WP-004.**
 
-This contract is a **proposal** until then. Claude cannot activate it and does
-not claim it is active. Entry criteria are unmet at the time of writing, so no
-pilot has started.
+The contract is committed repository governance; it is **not** an active pilot.
+Claude cannot activate it and does not claim it is active. Entry criteria remain
+unmet, so no pilot has started.
 
 ## Purpose
 
@@ -65,7 +65,7 @@ The pilot may begin only when **all** hold:
 
 | # | Criterion | State |
 | --- | --- | --- |
-| 8 | Accessibility target and evidence method decided | **`Accessibility target defined` — satisfiable upon Human Maintainer commit of CDS-WP-007.** The target (**WCAG 2.2 Level AA**, DEC-S-049, DEC-S-060) and the evidence method (**AE-0 … AE-4**, Evidence and Claims Model) now exist. Claude does not declare this met; **the commit does.** |
+| 8 | Accessibility target and evidence method decided | **`Accessibility target defined` — met by the Human-Maintainer commit of CDS-WP-007.** The target (**WCAG 2.2 Level AA**, DEC-S-049, DEC-S-060) and the evidence method (**AE-0 … AE-4**, Evidence and Claims Model) exist. Claude did not declare this met; **the commit did.** |
 | 4 | CDS-WP-005 architecture approved | **Pending** |
 | 5 | Foundations at Candidate maturity | **Unmet — structurally.** No artifact is Candidate; the Candidate accessibility gate cannot be passed (AE-0 — no accessibility evidence exists; the support baseline A11Y-BL-001 is committed, but a baseline is not evidence). |
 

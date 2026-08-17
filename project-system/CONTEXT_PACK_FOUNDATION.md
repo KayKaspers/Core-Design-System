@@ -611,10 +611,11 @@ and token sets** (CR-002, CR-037) — CDS arrives after them.
 | D | State and Safety Patterns — full state set, dangerous action, confirmation |
 | E | Help, Accessibility, Localization — setup check, help, keyboard, DE/EN |
 
-**Pilot contract:** normative only upon Human Maintainer commit following Nova
-approval. **Not active; entry criteria unmet** — CDS-WP-005 architecture, a
-maturity model, and the accessibility target (CR-024) are all missing. Neither
-existence nor completion implies adoption or conformance (RISK-018).
+**Pilot contract:** committed and normative (CDS-WP-004). **Not active; entry
+criteria unmet** — CDS-WP-005 architecture and a maturity model are missing; the
+accessibility target (CR-024) is decided (WCAG 2.2 Level AA, CDS-WP-007), but
+**no accessibility evidence exists**. Neither existence nor completion implies
+adoption or conformance (RISK-018).
 
 **Hypothesis consumer layer:** HYP-002, HYP-003, HYP-005 are *Confirmed consumer
 need*; HYP-007 needs *Human validation*; the rest are partially supported.

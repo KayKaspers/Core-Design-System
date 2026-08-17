@@ -195,7 +195,7 @@ The eight research hypotheses were assessed against consumer evidence.
 
 **Boundaries:** evidence is committed documentation only — no user research,
 interviews, or usability testing took place. No requirement is an accepted CDS
-standard. The pilot contract is a proposal and is not active. **Nothing here
+standard. The pilot contract is committed and is not active. **Nothing here
 constitutes CDS adoption, conformance, certification, or endorsement.**
 
 - [Consumer Requirements Model](docs/governance/CONSUMER_REQUIREMENTS_MODEL.md)
