@@ -1,0 +1,970 @@
+{
+  "$comment": "CDS-WP-016 Candidate Accessibility Gate remediation. TEST-ONLY, NON-NORMATIVE statement evidence fixture for the Semantic Status Foundation. Every value here is synthetic and value-neutral; nothing in this file is a design decision, a real observation, a real subject, or a real evidence identity.",
+  "fixtureSetVersion": "1",
+  "testOnly": true,
+  "nonNormative": true,
+  "authority": "evidence fixture only",
+  "boundary": {
+    "isCdsApi": false,
+    "isSourceSet": false,
+    "isSchema": false,
+    "isConsumerContract": false,
+    "isProductProfile": false,
+    "isChannelFormat": false,
+    "approvedForRuntimeUse": false,
+    "statement": "This object shape exists solely to exercise the already-normative Semantic Status rules in an offline test. It defines no CDS semantics, creates no runtime or consumer contract, and may not be consumed, distributed, or implemented. The normative sources remain the Foundation Contract, the Status Axis Vocabulary, the Status Composition and Conflict Rules, and the Status Communication and Accessibility Contract."
+  },
+  "normativeSources": {
+    "vocabulary": "docs/foundations/STATUS_AXIS_VOCABULARY.md",
+    "compositionRules": "docs/foundations/STATUS_COMPOSITION_AND_CONFLICT_RULES.md",
+    "communicationContract": "docs/foundations/STATUS_COMMUNICATION_AND_ACCESSIBILITY_CONTRACT.md",
+    "foundationContract": "docs/foundations/SEMANTIC_STATUS_FOUNDATION_CONTRACT.md",
+    "terminology": "docs/foundations/SEMANTIC_STATUS_TERMINOLOGY_DE_EN.md",
+    "tokenSource": "tokens/semantic/status/semantic-status.tokens.json"
+  },
+  "reviewRequiredCombinations": [
+    { "id": "RR-1", "sourceRow": 1, "name": "condition nominal with severity major or critical" },
+    { "id": "RR-2", "sourceRow": 2, "name": "confidence verified with evidence unavailable or unknown" },
+    { "id": "RR-3", "sourceRow": 3, "name": "freshness current without a resolvable observed-or-assessed time" },
+    { "id": "RR-4", "sourceRow": 4, "name": "evidence not-applicable without a rationale" },
+    { "id": "RR-5", "sourceRow": 5, "name": "condition unavailable with severity none" },
+    { "id": "RR-6", "sourceRow": 6, "name": "unknown on any axis with an unqualified positive summary" }
+  ],
+  "failClosedConditions": [
+    { "id": "FC-1", "sourceRow": 1, "name": "a mandatory axis is missing from the status object" },
+    { "id": "FC-2", "sourceRow": 2, "name": "an unknown axis or value identifier is used" },
+    { "id": "FC-3", "sourceRow": 3, "name": "unknown is applied as a positive default" },
+    { "id": "FC-4", "sourceRow": 4, "name": "stale or expired is represented as current" },
+    { "id": "FC-5", "sourceRow": 5, "name": "unverified is represented as verified" },
+    { "id": "FC-6", "sourceRow": 6, "name": "not-applicable is asserted without a rationale" },
+    { "id": "FC-7", "sourceRow": 7, "name": "the source or evidence identity is unresolvable where the values require it" },
+    { "id": "FC-8", "sourceRow": 8, "name": "a Product-Profile or consumer remapping loses, merges, renames, or reweights axis meaning" }
+  ],
+  "rr4Fc6Note": "The Composition Rules list `evidence: not-applicable` without a rationale in BOTH the review-required table (row 4) and the fail-closed table (row 6), and the review-required row itself states that it fails closed. Case SSC-EV-028 therefore carries RR-4 and FC-6 together; the overall classification is fail-closed. No review-required state is silently reinterpreted as fail-closed, and no seventh review-required combination is invented.",
+  "valueRequirements": [
+    {
+      "id": "condition.nominal",
+      "axis": "condition",
+      "value": "nominal",
+      "requirement": "Covered by positive and negative fixtures and executed validation, including at least one case where `nominal` coexists with a non-positive value on another axis.",
+      "evidenceType": "MACHINE",
+      "caseIds": ["SSC-EV-001", "SSC-EV-002"],
+      "coverageState": "COVERED",
+      "limitation": null
+    },
+    {
+      "id": "condition.degraded",
+      "axis": "condition",
+      "value": "degraded",
+      "requirement": "Fixture coverage distinguishing `degraded` from `disrupted` and `unavailable`.",
+      "evidenceType": "MACHINE",
+      "caseIds": ["SSC-EV-003", "SSC-EV-004", "SSC-EV-005"],
+      "coverageState": "COVERED",
+      "limitation": null
+    },
+    {
+      "id": "condition.disrupted",
+      "axis": "condition",
+      "value": "disrupted",
+      "requirement": "Fixture coverage distinguishing `disrupted` from `degraded` (partial quality loss) and `unavailable` (no service); the affected declared functions must be nameable.",
+      "evidenceType": "MACHINE",
+      "caseIds": ["SSC-EV-004", "SSC-EV-003", "SSC-EV-005"],
+      "coverageState": "COVERED",
+      "limitation": null
+    },
+    {
+      "id": "condition.unavailable",
+      "axis": "condition",
+      "value": "unavailable",
+      "requirement": "Fixture coverage including the `unavailable`-with-low-severity review case.",
+      "evidenceType": "MACHINE",
+      "caseIds": ["SSC-EV-005"],
+      "coverageState": "COVERED",
+      "limitation": null
+    },
+    {
+      "id": "condition.unknown",
+      "axis": "condition",
+      "value": "unknown",
+      "requirement": "Negative fixtures proving that an omitted or unknown condition never validates as a positive one.",
+      "evidenceType": "MACHINE",
+      "caseIds": ["SSC-EV-006", "SSC-EV-007"],
+      "coverageState": "COVERED",
+      "limitation": null
+    },
+    {
+      "id": "severity.none",
+      "axis": "severity",
+      "value": "none",
+      "requirement": "Fixture coverage of `none` combined with non-nominal conditions.",
+      "evidenceType": "MACHINE",
+      "caseIds": ["SSC-EV-005"],
+      "coverageState": "COVERED",
+      "limitation": null
+    },
+    {
+      "id": "severity.minor",
+      "axis": "severity",
+      "value": "minor",
+      "requirement": "Boundary fixtures between `minor` and `major`.",
+      "evidenceType": "MACHINE",
+      "caseIds": ["SSC-EV-008", "SSC-EV-009"],
+      "coverageState": "COVERED",
+      "limitation": null
+    },
+    {
+      "id": "severity.major",
+      "axis": "severity",
+      "value": "major",
+      "requirement": "Review-combination fixture `nominal + major`, valid only with an explicit rationale.",
+      "evidenceType": "MACHINE",
+      "caseIds": ["SSC-EV-009"],
+      "coverageState": "COVERED",
+      "limitation": null
+    },
+    {
+      "id": "severity.critical",
+      "axis": "severity",
+      "value": "critical",
+      "requirement": "Fixtures for `critical` with each non-unknown condition value, including the review-required pairs.",
+      "evidenceType": "MACHINE",
+      "caseIds": ["SSC-EV-010", "SSC-EV-011", "SSC-EV-012", "SSC-EV-013"],
+      "coverageState": "COVERED",
+      "limitation": null
+    },
+    {
+      "id": "severity.unknown",
+      "axis": "severity",
+      "value": "unknown",
+      "requirement": "Negative fixtures proving `severity: unknown` never validates as `none`.",
+      "evidenceType": "MACHINE",
+      "caseIds": ["SSC-EV-014"],
+      "coverageState": "COVERED",
+      "limitation": null
+    },
+    {
+      "id": "confidence.verified",
+      "axis": "confidence",
+      "value": "verified",
+      "requirement": "Negative fixtures where `verified` with `evidence: unavailable`/`unknown` fails review; positive fixtures with a resolvable evidence identity.",
+      "evidenceType": "MACHINE",
+      "caseIds": ["SSC-EV-015", "SSC-EV-016", "SSC-EV-017"],
+      "coverageState": "COVERED",
+      "limitation": null
+    },
+    {
+      "id": "confidence.supported",
+      "axis": "confidence",
+      "value": "supported",
+      "requirement": "DE/EN parity checks that no localized label upgrades `supported` toward verified.",
+      "evidenceType": "MIXED",
+      "caseIds": ["SSC-EV-018"],
+      "coverageState": "COVERED_WITH_LIMITATION",
+      "limitation": "The machine part is structural only: the DE/EN mapping is verified to carry exactly 25 rows with a distinct DE and EN label per authorized technical ID, and the case asserts `supported` without an upgrading representation. Whether a German label semantically upgrades toward `verifiziert` is a meaning judgement that no machine check in this remediation performs; it rests on the existing human localization-parity and terminology reviews."
+    },
+    {
+      "id": "confidence.uncertain",
+      "axis": "confidence",
+      "value": "uncertain",
+      "requirement": "Content-review evidence that uncertain language stays understandable (Content and Cognitive Accessibility, area 5).",
+      "evidenceType": "HUMAN_REVIEW",
+      "caseIds": ["SSC-EV-032"],
+      "coverageState": "COVERED_WITH_LIMITATION",
+      "limitation": "Understandability is a human content judgement. The machine case only proves that `uncertain` is representable and that its uncertainty qualifier is carried into the summary. The understandability judgement rests on the existing executor-produced accessibility/content review and the independent WP-016 terminology/accessibility/content review; no user research exists and none is claimed."
+    },
+    {
+      "id": "confidence.unverified",
+      "axis": "confidence",
+      "value": "unverified",
+      "requirement": "Negative fixtures proving `unverified -> verified` renaming or remapping fails closed.",
+      "evidenceType": "MACHINE",
+      "caseIds": ["SSC-EV-019", "SSC-EV-020"],
+      "coverageState": "COVERED",
+      "limitation": null
+    },
+    {
+      "id": "confidence.unknown",
+      "axis": "confidence",
+      "value": "unknown",
+      "requirement": "Fixtures where `confidence: unknown` blocks unqualified positive summaries.",
+      "evidenceType": "MACHINE",
+      "caseIds": ["SSC-EV-002"],
+      "coverageState": "COVERED",
+      "limitation": null
+    },
+    {
+      "id": "freshness.current",
+      "axis": "freshness",
+      "value": "current",
+      "requirement": "Negative fixture: `current` without a documented time fails review.",
+      "evidenceType": "MACHINE",
+      "caseIds": ["SSC-EV-021"],
+      "coverageState": "COVERED",
+      "limitation": null
+    },
+    {
+      "id": "freshness.aging",
+      "axis": "freshness",
+      "value": "aging",
+      "requirement": "Band-boundary fixtures (current/aging/stale) with declared windows.",
+      "evidenceType": "MACHINE",
+      "caseIds": ["SSC-EV-022", "SSC-EV-017", "SSC-EV-001"],
+      "coverageState": "COVERED",
+      "limitation": null
+    },
+    {
+      "id": "freshness.stale",
+      "axis": "freshness",
+      "value": "stale",
+      "requirement": "Negative fixtures proving stale-as-current representations fail closed.",
+      "evidenceType": "MACHINE",
+      "caseIds": ["SSC-EV-023"],
+      "coverageState": "COVERED",
+      "limitation": null
+    },
+    {
+      "id": "freshness.expired",
+      "axis": "freshness",
+      "value": "expired",
+      "requirement": "Fixtures distinguishing `stale` from `expired` semantics.",
+      "evidenceType": "MACHINE",
+      "caseIds": ["SSC-EV-024", "SSC-EV-023"],
+      "coverageState": "COVERED",
+      "limitation": null
+    },
+    {
+      "id": "freshness.unknown",
+      "axis": "freshness",
+      "value": "unknown",
+      "requirement": "Fixtures with missing or uncertain time metadata validating only as `unknown`.",
+      "evidenceType": "MACHINE",
+      "caseIds": ["SSC-EV-025", "SSC-EV-021"],
+      "coverageState": "COVERED",
+      "limitation": null
+    },
+    {
+      "id": "evidence.available",
+      "axis": "evidence",
+      "value": "available",
+      "requirement": "Fixtures with resolvable versus unresolvable evidence identities.",
+      "evidenceType": "MACHINE",
+      "caseIds": ["SSC-EV-017", "SSC-EV-026"],
+      "coverageState": "COVERED",
+      "limitation": null
+    },
+    {
+      "id": "evidence.partial",
+      "axis": "evidence",
+      "value": "partial",
+      "requirement": "Fixtures where hiding partiality fails review.",
+      "evidenceType": "MACHINE",
+      "caseIds": ["SSC-EV-027"],
+      "coverageState": "COVERED_WITH_LIMITATION",
+      "limitation": "Hiding partiality is invariant 6, which the six normative review-required combinations do not enumerate on its own. SSC-EV-027 exercises it inside the normative rule set: partial evidence together with an unknown axis and an unqualified positive summary is caught by RR-6. A summary that hides partiality while no axis carries `unknown` is a truthfulness defect the current machine rules do not detect; it remains a human review obligation and is recorded as a limitation rather than modelled as an invented seventh combination."
+    },
+    {
+      "id": "evidence.unavailable",
+      "axis": "evidence",
+      "value": "unavailable",
+      "requirement": "The `verified + unavailable` review-combination fixture.",
+      "evidenceType": "MACHINE",
+      "caseIds": ["SSC-EV-015"],
+      "coverageState": "COVERED",
+      "limitation": null
+    },
+    {
+      "id": "evidence.not-applicable",
+      "axis": "evidence",
+      "value": "not-applicable",
+      "requirement": "Negative fixture: `not-applicable` without a rationale fails.",
+      "evidenceType": "MACHINE",
+      "caseIds": ["SSC-EV-028", "SSC-EV-029"],
+      "coverageState": "COVERED",
+      "limitation": null
+    },
+    {
+      "id": "evidence.unknown",
+      "axis": "evidence",
+      "value": "unknown",
+      "requirement": "Fixtures proving `unknown` evidence blocks evidence-backed phrasing.",
+      "evidenceType": "MACHINE",
+      "caseIds": ["SSC-EV-030"],
+      "coverageState": "COVERED",
+      "limitation": null
+    }
+  ],
+  "cases": [
+    {
+      "caseId": "SSC-EV-001",
+      "title": "Nominal condition coexisting with material negative qualifiers, all carried",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-a",
+        "declaredScope": "synthetic declared scope A",
+        "axes": { "condition": "nominal", "severity": "none", "confidence": "unverified", "freshness": "stale", "evidence": "unavailable" },
+        "observedOrAssessedTime": "T-SYN-0001",
+        "sourceOrEvidenceIdentity": "EV-SYN-0001",
+        "sourceOrEvidenceResolvable": true,
+        "rationale": null,
+        "context": { "declaredStalenessThreshold": "synthetic threshold W-SYN-0002", "originOfStatement": "synthetic unverified observation" },
+        "summary": { "positive": true, "qualifiersCarried": ["confidence", "freshness", "evidence"] },
+        "representation": {},
+        "remapping": null
+      },
+      "expectedClassification": "representable",
+      "expectedReviewRequired": [],
+      "expectedFailClosed": [],
+      "notes": "The classic honest middle state. Representable because every material qualifier travels with the summary; a nominal condition never absorbs stale, unverified, or unavailable-evidence qualifiers."
+    },
+    {
+      "caseId": "SSC-EV-002",
+      "title": "Unknown confidence behind an unqualified positive summary",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-a",
+        "declaredScope": "synthetic declared scope A",
+        "axes": { "condition": "nominal", "severity": "none", "confidence": "unknown", "freshness": "current", "evidence": "available" },
+        "observedOrAssessedTime": "T-SYN-0002",
+        "sourceOrEvidenceIdentity": "EV-SYN-0002",
+        "sourceOrEvidenceResolvable": true,
+        "rationale": null,
+        "context": { "whyConfidenceUnassessable": "synthetic unclear provenance" },
+        "summary": { "positive": true, "qualifiersCarried": [] },
+        "representation": {},
+        "remapping": null
+      },
+      "expectedClassification": "review-required",
+      "expectedReviewRequired": ["RR-6"],
+      "expectedFailClosed": [],
+      "notes": "No healthy/good collapse: an unqualified positive summary over an unknown axis is review-required, not freely representable."
+    },
+    {
+      "caseId": "SSC-EV-003",
+      "title": "Degraded: reduced capability against a named declared normal",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-b",
+        "declaredScope": "synthetic declared scope B",
+        "axes": { "condition": "degraded", "severity": "minor", "confidence": "supported", "freshness": "current", "evidence": "partial" },
+        "observedOrAssessedTime": "T-SYN-0003",
+        "sourceOrEvidenceIdentity": "EV-SYN-0003",
+        "sourceOrEvidenceResolvable": true,
+        "rationale": null,
+        "context": { "reducedAspect": "synthetic reduced throughput aspect", "declaredNormal": "synthetic declared normal N-SYN-0001", "partialityDetail": "synthetic: one of two evidence parts accessible" },
+        "summary": { "positive": false, "qualifiersCarried": ["condition", "severity", "evidence"] },
+        "representation": {},
+        "remapping": null
+      },
+      "expectedClassification": "representable",
+      "expectedReviewRequired": [],
+      "expectedFailClosed": [],
+      "notes": "Distinction partner for `disrupted` (SSC-EV-004) and `unavailable` (SSC-EV-005): operation continues with an identified reduction."
+    },
+    {
+      "caseId": "SSC-EV-004",
+      "title": "Disrupted: named declared functions do not operate",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-b",
+        "declaredScope": "synthetic declared scope B",
+        "axes": { "condition": "disrupted", "severity": "major", "confidence": "supported", "freshness": "current", "evidence": "available" },
+        "observedOrAssessedTime": "T-SYN-0004",
+        "sourceOrEvidenceIdentity": "EV-SYN-0004",
+        "sourceOrEvidenceResolvable": true,
+        "rationale": null,
+        "context": { "affectedFunctions": "synthetic function F-SYN-0001", "impairedPurpose": "synthetic declared purpose P-SYN-0001" },
+        "summary": { "positive": false, "qualifiersCarried": ["condition", "severity"] },
+        "representation": {},
+        "remapping": null
+      },
+      "expectedClassification": "representable",
+      "expectedReviewRequired": [],
+      "expectedFailClosed": [],
+      "notes": "The affected declared function is nameable; the subject is not fully out of service. Distinct from `degraded` and from `unavailable`."
+    },
+    {
+      "caseId": "SSC-EV-005",
+      "title": "Unavailable with no known impact — review-required",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-c",
+        "declaredScope": "synthetic declared scope C",
+        "axes": { "condition": "unavailable", "severity": "none", "confidence": "supported", "freshness": "current", "evidence": "partial" },
+        "observedOrAssessedTime": "T-SYN-0005",
+        "sourceOrEvidenceIdentity": "EV-SYN-0005",
+        "sourceOrEvidenceResolvable": true,
+        "rationale": "Synthetic rationale: an idle redundant instance in the declared scope serves no dependent function, so no impact is known.",
+        "context": { "absenceScope": "synthetic declared scope C", "impactAssessmentScope": "synthetic declared scope C" },
+        "summary": { "positive": false, "qualifiersCarried": ["condition", "evidence"] },
+        "representation": {},
+        "remapping": null
+      },
+      "expectedClassification": "review-required",
+      "expectedReviewRequired": ["RR-5"],
+      "expectedFailClosed": [],
+      "notes": "Carries the `unavailable` low-severity review case and the `severity: none` with a non-nominal condition requirement. Legitimate only with the recorded rationale."
+    },
+    {
+      "caseId": "SSC-EV-006",
+      "title": "Condition axis omitted — omission is never an implicit positive value",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-d",
+        "declaredScope": "synthetic declared scope D",
+        "axes": { "severity": "none", "confidence": "supported", "freshness": "current", "evidence": "available" },
+        "observedOrAssessedTime": "T-SYN-0006",
+        "sourceOrEvidenceIdentity": "EV-SYN-0006",
+        "sourceOrEvidenceResolvable": true,
+        "rationale": null,
+        "context": {},
+        "summary": { "positive": false, "qualifiersCarried": [] },
+        "representation": {},
+        "remapping": null
+      },
+      "expectedClassification": "fail-closed",
+      "expectedReviewRequired": [],
+      "expectedFailClosed": ["FC-1"],
+      "notes": "An omitted mandatory axis fails closed and never resolves to `nominal`. No automatic repair."
+    },
+    {
+      "caseId": "SSC-EV-007",
+      "title": "Unknown condition represented as nominal",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-d",
+        "declaredScope": "synthetic declared scope D",
+        "axes": { "condition": "unknown", "severity": "unknown", "confidence": "unknown", "freshness": "unknown", "evidence": "unknown" },
+        "observedOrAssessedTime": null,
+        "sourceOrEvidenceIdentity": null,
+        "sourceOrEvidenceResolvable": false,
+        "rationale": null,
+        "context": { "whyUnknown": "synthetic: the subject has not been observed" },
+        "summary": { "positive": false, "qualifiersCarried": ["condition", "severity", "confidence", "freshness", "evidence"] },
+        "representation": { "condition": "nominal" },
+        "remapping": null
+      },
+      "expectedClassification": "fail-closed",
+      "expectedReviewRequired": [],
+      "expectedFailClosed": ["FC-3"],
+      "notes": "The honest default of an unobserved subject is `unknown` on every axis. Rendering `unknown` as `nominal` is a positive-default mapping and fails closed."
+    },
+    {
+      "caseId": "SSC-EV-008",
+      "title": "Minor severity: bounded impact below the major threshold",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-e",
+        "declaredScope": "synthetic declared scope E",
+        "axes": { "condition": "degraded", "severity": "minor", "confidence": "supported", "freshness": "current", "evidence": "available" },
+        "observedOrAssessedTime": "T-SYN-0008",
+        "sourceOrEvidenceIdentity": "EV-SYN-0008",
+        "sourceOrEvidenceResolvable": true,
+        "rationale": null,
+        "context": { "impactedAspect": "synthetic aspect A-SYN-0001", "boundedBecause": "synthetic: below the declared major threshold of scope E" },
+        "summary": { "positive": false, "qualifiersCarried": ["condition", "severity"] },
+        "representation": {},
+        "remapping": null
+      },
+      "expectedClassification": "representable",
+      "expectedReviewRequired": [],
+      "expectedFailClosed": [],
+      "notes": "Lower half of the minor/major boundary pair with SSC-EV-009."
+    },
+    {
+      "caseId": "SSC-EV-009",
+      "title": "Nominal condition with major impact — review-required with rationale",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-e",
+        "declaredScope": "synthetic declared scope E",
+        "axes": { "condition": "nominal", "severity": "major", "confidence": "supported", "freshness": "current", "evidence": "available" },
+        "observedOrAssessedTime": "T-SYN-0009",
+        "sourceOrEvidenceIdentity": "EV-SYN-0009",
+        "sourceOrEvidenceResolvable": true,
+        "rationale": "Synthetic rationale: an identified material risk exposure materially impairs the declared purpose while operation continues within declared normal parameters.",
+        "context": { "impairedPurpose": "synthetic declared purpose P-SYN-0002", "affectedScope": "synthetic declared scope E" },
+        "summary": { "positive": false, "qualifiersCarried": ["severity"] },
+        "representation": {},
+        "remapping": null
+      },
+      "expectedClassification": "review-required",
+      "expectedReviewRequired": ["RR-1"],
+      "expectedFailClosed": [],
+      "notes": "Upper half of the minor/major boundary pair, and the `nominal + major` review combination itself."
+    },
+    {
+      "caseId": "SSC-EV-010",
+      "title": "Critical severity with nominal condition — review-required",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-f",
+        "declaredScope": "synthetic declared scope F",
+        "axes": { "condition": "nominal", "severity": "critical", "confidence": "supported", "freshness": "current", "evidence": "available" },
+        "observedOrAssessedTime": "T-SYN-0010",
+        "sourceOrEvidenceIdentity": "EV-SYN-0010",
+        "sourceOrEvidenceResolvable": true,
+        "rationale": "Synthetic rationale: a critical risk exposure endangers the declared purpose as a whole while the subject still operates within declared normal parameters.",
+        "context": { "endangeredPurpose": "synthetic declared purpose P-SYN-0003", "assessmentBasis": "synthetic assessment basis B-SYN-0001" },
+        "summary": { "positive": false, "qualifiersCarried": ["severity"] },
+        "representation": {},
+        "remapping": null
+      },
+      "expectedClassification": "review-required",
+      "expectedReviewRequired": ["RR-1"],
+      "expectedFailClosed": [],
+      "notes": "Critical paired with condition `nominal`; a critical severity never implies that the subject is unavailable."
+    },
+    {
+      "caseId": "SSC-EV-011",
+      "title": "Critical severity with degraded condition",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-f",
+        "declaredScope": "synthetic declared scope F",
+        "axes": { "condition": "degraded", "severity": "critical", "confidence": "supported", "freshness": "current", "evidence": "available" },
+        "observedOrAssessedTime": "T-SYN-0011",
+        "sourceOrEvidenceIdentity": "EV-SYN-0011",
+        "sourceOrEvidenceResolvable": true,
+        "rationale": null,
+        "context": { "endangeredPurpose": "synthetic declared purpose P-SYN-0003", "reducedAspect": "synthetic reduced aspect A-SYN-0002" },
+        "summary": { "positive": false, "qualifiersCarried": ["condition", "severity"] },
+        "representation": {},
+        "remapping": null
+      },
+      "expectedClassification": "representable",
+      "expectedReviewRequired": [],
+      "expectedFailClosed": [],
+      "notes": "Critical paired with condition `degraded`."
+    },
+    {
+      "caseId": "SSC-EV-012",
+      "title": "Critical severity with disrupted condition",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-f",
+        "declaredScope": "synthetic declared scope F",
+        "axes": { "condition": "disrupted", "severity": "critical", "confidence": "supported", "freshness": "current", "evidence": "available" },
+        "observedOrAssessedTime": "T-SYN-0012",
+        "sourceOrEvidenceIdentity": "EV-SYN-0012",
+        "sourceOrEvidenceResolvable": true,
+        "rationale": null,
+        "context": { "affectedFunctions": "synthetic function F-SYN-0002", "endangeredPurpose": "synthetic declared purpose P-SYN-0003" },
+        "summary": { "positive": false, "qualifiersCarried": ["condition", "severity"] },
+        "representation": {},
+        "remapping": null
+      },
+      "expectedClassification": "representable",
+      "expectedReviewRequired": [],
+      "expectedFailClosed": [],
+      "notes": "Critical paired with condition `disrupted`."
+    },
+    {
+      "caseId": "SSC-EV-013",
+      "title": "Critical severity with unavailable condition",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-f",
+        "declaredScope": "synthetic declared scope F",
+        "axes": { "condition": "unavailable", "severity": "critical", "confidence": "supported", "freshness": "current", "evidence": "available" },
+        "observedOrAssessedTime": "T-SYN-0013",
+        "sourceOrEvidenceIdentity": "EV-SYN-0013",
+        "sourceOrEvidenceResolvable": true,
+        "rationale": null,
+        "context": { "absenceScope": "synthetic declared scope F", "endangeredPurpose": "synthetic declared purpose P-SYN-0003" },
+        "summary": { "positive": false, "qualifiersCarried": ["condition", "severity"] },
+        "representation": {},
+        "remapping": null
+      },
+      "expectedClassification": "representable",
+      "expectedReviewRequired": [],
+      "expectedFailClosed": [],
+      "notes": "Critical paired with condition `unavailable`; completes critical against all four non-unknown condition values."
+    },
+    {
+      "caseId": "SSC-EV-014",
+      "title": "Unknown severity represented as none",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-g",
+        "declaredScope": "synthetic declared scope G",
+        "axes": { "condition": "degraded", "severity": "unknown", "confidence": "supported", "freshness": "current", "evidence": "available" },
+        "observedOrAssessedTime": "T-SYN-0014",
+        "sourceOrEvidenceIdentity": "EV-SYN-0014",
+        "sourceOrEvidenceResolvable": true,
+        "rationale": null,
+        "context": { "whyUnassessable": "synthetic: impact assessment not possible in scope G" },
+        "summary": { "positive": false, "qualifiersCarried": ["condition", "severity"] },
+        "representation": { "severity": "none" },
+        "remapping": null
+      },
+      "expectedClassification": "fail-closed",
+      "expectedReviewRequired": [],
+      "expectedFailClosed": ["FC-3"],
+      "notes": "An unassessed impact is not an absent impact; `unknown` severity is never rendered as `none`."
+    },
+    {
+      "caseId": "SSC-EV-015",
+      "title": "Verified confidence with unavailable evidence — review-required",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-h",
+        "declaredScope": "synthetic declared scope H",
+        "axes": { "condition": "nominal", "severity": "none", "confidence": "verified", "freshness": "current", "evidence": "unavailable" },
+        "observedOrAssessedTime": "T-SYN-0015",
+        "sourceOrEvidenceIdentity": "EV-SYN-0015",
+        "sourceOrEvidenceResolvable": true,
+        "rationale": "Synthetic rationale: the verification evidence exists under a declared access restriction, which is itself recorded as a known limitation.",
+        "context": { "verificationTime": "T-SYN-0015", "evidenceSituation": "synthetic: exists but not currently accessible" },
+        "summary": { "positive": false, "qualifiersCarried": ["evidence"] },
+        "representation": {},
+        "remapping": null
+      },
+      "expectedClassification": "review-required",
+      "expectedReviewRequired": ["RR-2"],
+      "expectedFailClosed": [],
+      "notes": "Carries both the `verified + unavailable` review combination and the `evidence: unavailable` requirement. The evidence identity stays resolvable, so no fail-closed state applies."
+    },
+    {
+      "caseId": "SSC-EV-016",
+      "title": "Verified confidence with unknown evidence — review-required",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-h",
+        "declaredScope": "synthetic declared scope H",
+        "axes": { "condition": "nominal", "severity": "none", "confidence": "verified", "freshness": "current", "evidence": "unknown" },
+        "observedOrAssessedTime": "T-SYN-0016",
+        "sourceOrEvidenceIdentity": "EV-SYN-0016",
+        "sourceOrEvidenceResolvable": true,
+        "rationale": "Synthetic rationale: verification took place, but whether supporting evidence remains accessible has not been assessed.",
+        "context": { "verificationTime": "T-SYN-0016", "whyEvidenceUnassessed": "synthetic: evidence situation not reviewed" },
+        "summary": { "positive": false, "qualifiersCarried": ["evidence"] },
+        "representation": {},
+        "remapping": null
+      },
+      "expectedClassification": "review-required",
+      "expectedReviewRequired": ["RR-2"],
+      "expectedFailClosed": [],
+      "notes": "The summary carries the unknown-evidence qualifier and makes no positive claim, so RR-6 does not additionally apply."
+    },
+    {
+      "caseId": "SSC-EV-017",
+      "title": "Verified confidence with a resolvable evidence identity",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-h",
+        "declaredScope": "synthetic declared scope H",
+        "axes": { "condition": "nominal", "severity": "none", "confidence": "verified", "freshness": "current", "evidence": "available" },
+        "observedOrAssessedTime": "T-SYN-0017",
+        "sourceOrEvidenceIdentity": "EV-SYN-0017",
+        "sourceOrEvidenceResolvable": true,
+        "rationale": null,
+        "context": { "verificationTime": "T-SYN-0017", "declaredCurrencyWindow": "synthetic window W-SYN-0001" },
+        "summary": { "positive": true, "qualifiersCarried": [] },
+        "representation": {},
+        "remapping": null
+      },
+      "expectedClassification": "representable",
+      "expectedReviewRequired": [],
+      "expectedFailClosed": [],
+      "notes": "The only state in which an unqualified positive summary is legitimate. Also the `current` end of the current/aging/stale band set and the resolvable half of the evidence-identity pair."
+    },
+    {
+      "caseId": "SSC-EV-018",
+      "title": "Supported confidence is not verified confidence",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-i",
+        "declaredScope": "synthetic declared scope I",
+        "axes": { "condition": "nominal", "severity": "none", "confidence": "supported", "freshness": "current", "evidence": "available" },
+        "observedOrAssessedTime": "T-SYN-0018",
+        "sourceOrEvidenceIdentity": "EV-SYN-0018",
+        "sourceOrEvidenceResolvable": true,
+        "rationale": null,
+        "context": { "whatSupports": "synthetic relevant but non-verifying observation O-SYN-0001" },
+        "summary": { "positive": false, "qualifiersCarried": ["confidence"] },
+        "representation": {},
+        "remapping": null
+      },
+      "expectedClassification": "representable",
+      "expectedReviewRequired": [],
+      "expectedFailClosed": [],
+      "notes": "The machine part of the `supported` requirement: the value is asserted without any representation that upgrades it toward `verified`. The DE/EN meaning judgement stays human."
+    },
+    {
+      "caseId": "SSC-EV-019",
+      "title": "Unverified confidence represented as verified",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-i",
+        "declaredScope": "synthetic declared scope I",
+        "axes": { "condition": "nominal", "severity": "none", "confidence": "unverified", "freshness": "current", "evidence": "available" },
+        "observedOrAssessedTime": "T-SYN-0019",
+        "sourceOrEvidenceIdentity": "EV-SYN-0019",
+        "sourceOrEvidenceResolvable": true,
+        "rationale": null,
+        "context": { "originOfStatement": "synthetic documentation-derived statement" },
+        "summary": { "positive": false, "qualifiersCarried": ["confidence"] },
+        "representation": { "confidence": "verified" },
+        "remapping": null
+      },
+      "expectedClassification": "fail-closed",
+      "expectedReviewRequired": [],
+      "expectedFailClosed": ["FC-5"],
+      "notes": "Renaming `unverified` to `verified` in a representation fails closed; absence of a failure is not evidence of success."
+    },
+    {
+      "caseId": "SSC-EV-020",
+      "title": "Consumer remapping that renames unverified toward verified",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-i",
+        "declaredScope": "synthetic declared scope I",
+        "axes": { "condition": "nominal", "severity": "none", "confidence": "unverified", "freshness": "current", "evidence": "available" },
+        "observedOrAssessedTime": "T-SYN-0020",
+        "sourceOrEvidenceIdentity": "EV-SYN-0020",
+        "sourceOrEvidenceResolvable": true,
+        "rationale": null,
+        "context": { "originOfStatement": "synthetic documentation-derived statement" },
+        "summary": { "positive": false, "qualifiersCarried": ["confidence"] },
+        "representation": {},
+        "remapping": { "kind": "consumer-extension", "preservesAxisMeaning": false, "detail": "Synthetic: a product-local state renames the CDS `unverified` value to a verified-equivalent local label, losing the axis meaning." }
+      },
+      "expectedClassification": "fail-closed",
+      "expectedReviewRequired": [],
+      "expectedFailClosed": ["FC-8"],
+      "notes": "The remapping route to the same defect. No representation mapping is present, so this case isolates FC-8 from FC-5."
+    },
+    {
+      "caseId": "SSC-EV-021",
+      "title": "Current freshness without a documented observation time",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-j",
+        "declaredScope": "synthetic declared scope J",
+        "axes": { "condition": "nominal", "severity": "none", "confidence": "supported", "freshness": "current", "evidence": "available" },
+        "observedOrAssessedTime": null,
+        "sourceOrEvidenceIdentity": "EV-SYN-0021",
+        "sourceOrEvidenceResolvable": true,
+        "rationale": null,
+        "context": { "declaredCurrencyWindow": "synthetic window W-SYN-0001" },
+        "summary": { "positive": false, "qualifiersCarried": ["freshness"] },
+        "representation": {},
+        "remapping": null
+      },
+      "expectedClassification": "review-required",
+      "expectedReviewRequired": ["RR-3"],
+      "expectedFailClosed": [],
+      "notes": "`Current` is a claim about time; without a resolvable time it is unsupported. Undated information is not fresh by default."
+    },
+    {
+      "caseId": "SSC-EV-022",
+      "title": "Aging: past ideal currency, not yet stale, with declared bands",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-j",
+        "declaredScope": "synthetic declared scope J",
+        "axes": { "condition": "nominal", "severity": "none", "confidence": "supported", "freshness": "aging", "evidence": "available" },
+        "observedOrAssessedTime": "T-SYN-0022",
+        "sourceOrEvidenceIdentity": "EV-SYN-0022",
+        "sourceOrEvidenceResolvable": true,
+        "rationale": null,
+        "context": { "declaredCurrencyWindow": "synthetic window W-SYN-0001", "declaredStalenessThreshold": "synthetic threshold W-SYN-0002" },
+        "summary": { "positive": false, "qualifiersCarried": ["freshness"] },
+        "representation": {},
+        "remapping": null
+      },
+      "expectedClassification": "representable",
+      "expectedReviewRequired": [],
+      "expectedFailClosed": [],
+      "notes": "The declared early-warning band between current and stale, with both band boundaries named."
+    },
+    {
+      "caseId": "SSC-EV-023",
+      "title": "Stale freshness represented as current",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-k",
+        "declaredScope": "synthetic declared scope K",
+        "axes": { "condition": "nominal", "severity": "none", "confidence": "supported", "freshness": "stale", "evidence": "available" },
+        "observedOrAssessedTime": "T-SYN-0023",
+        "sourceOrEvidenceIdentity": "EV-SYN-0023",
+        "sourceOrEvidenceResolvable": true,
+        "rationale": null,
+        "context": { "declaredStalenessThreshold": "synthetic threshold W-SYN-0002" },
+        "summary": { "positive": false, "qualifiersCarried": ["freshness"] },
+        "representation": { "freshness": "current" },
+        "remapping": null
+      },
+      "expectedClassification": "fail-closed",
+      "expectedReviewRequired": [],
+      "expectedFailClosed": ["FC-4"],
+      "notes": "Invariant 4. Staleness does not invalidate the historical observation, but it may never be shown as current."
+    },
+    {
+      "caseId": "SSC-EV-024",
+      "title": "Expired: past a declared hard validity limit",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-k",
+        "declaredScope": "synthetic declared scope K",
+        "axes": { "condition": "nominal", "severity": "none", "confidence": "supported", "freshness": "expired", "evidence": "available" },
+        "observedOrAssessedTime": "T-SYN-0024",
+        "sourceOrEvidenceIdentity": "EV-SYN-0024",
+        "sourceOrEvidenceResolvable": true,
+        "rationale": null,
+        "context": { "expiryRule": "synthetic hard validity limit L-SYN-0001", "expiryPassedAt": "T-SYN-0024b" },
+        "summary": { "positive": false, "qualifiersCarried": ["freshness"] },
+        "representation": {},
+        "remapping": null
+      },
+      "expectedClassification": "representable",
+      "expectedReviewRequired": [],
+      "expectedFailClosed": [],
+      "notes": "Distinct from `stale`: a declared hard limit rather than advisory ageing. The expiry rule and the moment it was passed are both named."
+    },
+    {
+      "caseId": "SSC-EV-025",
+      "title": "Undated observation validates only as unknown freshness",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-l",
+        "declaredScope": "synthetic declared scope L",
+        "axes": { "condition": "nominal", "severity": "none", "confidence": "supported", "freshness": "unknown", "evidence": "available" },
+        "observedOrAssessedTime": null,
+        "sourceOrEvidenceIdentity": "EV-SYN-0025",
+        "sourceOrEvidenceResolvable": true,
+        "rationale": null,
+        "context": { "whyTimeUnknown": "synthetic: the observation clock itself is uncertain" },
+        "summary": { "positive": false, "qualifiersCarried": ["freshness"] },
+        "representation": {},
+        "remapping": null
+      },
+      "expectedClassification": "representable",
+      "expectedReviewRequired": [],
+      "expectedFailClosed": [],
+      "notes": "The honest counterpart of SSC-EV-021: missing time metadata validates as `unknown`, never as `current`."
+    },
+    {
+      "caseId": "SSC-EV-026",
+      "title": "Available evidence with an unresolvable evidence identity",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-m",
+        "declaredScope": "synthetic declared scope M",
+        "axes": { "condition": "nominal", "severity": "none", "confidence": "supported", "freshness": "current", "evidence": "available" },
+        "observedOrAssessedTime": "T-SYN-0026",
+        "sourceOrEvidenceIdentity": null,
+        "sourceOrEvidenceResolvable": false,
+        "rationale": null,
+        "context": { "evidenceSituation": "synthetic: no resolvable evidence identity exists" },
+        "summary": { "positive": false, "qualifiersCarried": ["evidence"] },
+        "representation": {},
+        "remapping": null
+      },
+      "expectedClassification": "fail-closed",
+      "expectedReviewRequired": [],
+      "expectedFailClosed": ["FC-7"],
+      "notes": "`available` requires a resolvable evidence identity; availability is still not correctness."
+    },
+    {
+      "caseId": "SSC-EV-027",
+      "title": "Partial evidence and unknown confidence hidden behind a positive summary",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-m",
+        "declaredScope": "synthetic declared scope M",
+        "axes": { "condition": "nominal", "severity": "none", "confidence": "unknown", "freshness": "current", "evidence": "partial" },
+        "observedOrAssessedTime": "T-SYN-0027",
+        "sourceOrEvidenceIdentity": "EV-SYN-0027",
+        "sourceOrEvidenceResolvable": true,
+        "rationale": null,
+        "context": { "partialityDetail": "synthetic: part one of two accessible, part two missing" },
+        "summary": { "positive": true, "qualifiersCarried": [] },
+        "representation": {},
+        "remapping": null
+      },
+      "expectedClassification": "review-required",
+      "expectedReviewRequired": ["RR-6"],
+      "expectedFailClosed": [],
+      "notes": "Hiding partiality is caught here through the normative RR-6 combination because an axis carries `unknown`. Partiality hidden with no unknown axis present is a human review obligation and a recorded limitation, not an invented seventh combination."
+    },
+    {
+      "caseId": "SSC-EV-028",
+      "title": "not-applicable evidence asserted without a rationale",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-n",
+        "declaredScope": "synthetic declared scope N",
+        "axes": { "condition": "nominal", "severity": "none", "confidence": "supported", "freshness": "current", "evidence": "not-applicable" },
+        "observedOrAssessedTime": "T-SYN-0028",
+        "sourceOrEvidenceIdentity": "EV-SYN-0028",
+        "sourceOrEvidenceResolvable": true,
+        "rationale": null,
+        "context": {},
+        "summary": { "positive": false, "qualifiersCarried": ["evidence"] },
+        "representation": {},
+        "remapping": null
+      },
+      "expectedClassification": "fail-closed",
+      "expectedReviewRequired": ["RR-4"],
+      "expectedFailClosed": ["FC-6"],
+      "notes": "The one state the Composition Rules list in both tables. The rationale is a mandatory part of the value; its absence fails closed rather than degrading to `unknown`."
+    },
+    {
+      "caseId": "SSC-EV-029",
+      "title": "not-applicable evidence with an explicit recorded rationale",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-n",
+        "declaredScope": "synthetic declared scope N",
+        "axes": { "condition": "nominal", "severity": "none", "confidence": "supported", "freshness": "current", "evidence": "not-applicable" },
+        "observedOrAssessedTime": "T-SYN-0029",
+        "sourceOrEvidenceIdentity": "EV-SYN-0029",
+        "sourceOrEvidenceResolvable": true,
+        "rationale": "Synthetic rationale: in declared scope N the subject exposes no observable behaviour for which evidence could meaningfully exist.",
+        "context": { "rationaleReachable": "synthetic: reachable from the representation" },
+        "summary": { "positive": false, "qualifiersCarried": ["evidence"] },
+        "representation": {},
+        "remapping": null
+      },
+      "expectedClassification": "representable",
+      "expectedReviewRequired": [],
+      "expectedFailClosed": [],
+      "notes": "The permitted form. `not-applicable` is not an escape hatch from evidence obligations."
+    },
+    {
+      "caseId": "SSC-EV-030",
+      "title": "Unknown evidence phrased as evidence-backed",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-o",
+        "declaredScope": "synthetic declared scope O",
+        "axes": { "condition": "nominal", "severity": "none", "confidence": "supported", "freshness": "current", "evidence": "unknown" },
+        "observedOrAssessedTime": "T-SYN-0030",
+        "sourceOrEvidenceIdentity": "EV-SYN-0030",
+        "sourceOrEvidenceResolvable": true,
+        "rationale": null,
+        "context": { "whyEvidenceUnassessed": "synthetic: the evidence situation itself is unassessed" },
+        "summary": { "positive": false, "qualifiersCarried": ["evidence"] },
+        "representation": { "evidence": "available" },
+        "remapping": null
+      },
+      "expectedClassification": "fail-closed",
+      "expectedReviewRequired": [],
+      "expectedFailClosed": ["FC-3"],
+      "notes": "Evidence-backed phrasing represents the evidence axis as `available`. With the asserted value `unknown`, that is a positive-default mapping and fails closed."
+    },
+    {
+      "caseId": "SSC-EV-031",
+      "title": "Unauthorized severity value identifier",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-p",
+        "declaredScope": "synthetic declared scope P",
+        "axes": { "condition": "nominal", "severity": "fine", "confidence": "supported", "freshness": "current", "evidence": "available" },
+        "observedOrAssessedTime": "T-SYN-0031",
+        "sourceOrEvidenceIdentity": "EV-SYN-0031",
+        "sourceOrEvidenceResolvable": true,
+        "rationale": null,
+        "context": {},
+        "summary": { "positive": false, "qualifiersCarried": [] },
+        "representation": {},
+        "remapping": null
+      },
+      "expectedClassification": "fail-closed",
+      "expectedReviewRequired": [],
+      "expectedFailClosed": ["FC-2"],
+      "notes": "The authorized value set is fixed at 25. An identifier outside it fails closed with no repair and no nearest-match resolution."
+    },
+    {
+      "caseId": "SSC-EV-032",
+      "title": "Uncertain confidence with the nature of the uncertainty stated",
+      "statement": {
+        "subjectIdentity": "synthetic-subject-q",
+        "declaredScope": "synthetic declared scope Q",
+        "axes": { "condition": "degraded", "severity": "minor", "confidence": "uncertain", "freshness": "current", "evidence": "partial" },
+        "observedOrAssessedTime": "T-SYN-0032",
+        "sourceOrEvidenceIdentity": "EV-SYN-0032",
+        "sourceOrEvidenceResolvable": true,
+        "rationale": null,
+        "context": { "uncertaintyNature": "synthetic: indications are incomplete rather than conflicting", "partialityDetail": "synthetic: one evidence part inaccessible" },
+        "summary": { "positive": false, "qualifiersCarried": ["confidence", "evidence"] },
+        "representation": {},
+        "remapping": null
+      },
+      "expectedClassification": "representable",
+      "expectedReviewRequired": [],
+      "expectedFailClosed": [],
+      "notes": "The uncertainty is part of the message and is carried into the summary. Whether the resulting language is understandable is a human content judgement."
+    }
+  ]
+}

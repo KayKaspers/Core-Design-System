@@ -7,6 +7,13 @@ every axis, 25 tokens, path/value agreement, no case-only identifier
 collisions, no aggregate or appearance-oriented status roles,
 maturity/approval metadata coherence, and source/manifest identity agreement.
 
+Text-first source rule (CDS-WP-016 Candidate Accessibility Gate remediation):
+every authorized status token must carry a non-empty textual ``$description``
+(missing, non-string, and whitespace-only all fail closed). This operationalizes
+the *source-level structural* part of DEC-S-111 and proves only that a textual
+meaning exists in the source — never comprehension, UI accessibility, assistive-
+technology compatibility, channel accessibility, or WCAG conformance.
+
 Maturity/approval coherence (CDS-WP-016): ``Experimental`` is coherent only
 with ``Unapproved``; ``Candidate`` only together with ``Approved``, a Candidate
 source revision, and a non-fixture source; ``Stable`` stays rejected. A pass
@@ -133,6 +140,18 @@ def check_status_document(doc, manifest_content=None) -> list:
             folded_vals.setdefault(folded, name)
             if name in authorized:
                 token = values[name]
+                # Text-first source rule (CDS-WP-016, DEC-S-111): the textual
+                # meaning of an authorized status value must exist at the source.
+                # Missing, non-string, and whitespace-only all fail closed; no
+                # description is ever synthesized. This is a structural existence
+                # check only — it proves no comprehension and no accessibility.
+                description = token.get("$description")
+                if not isinstance(description, str) or not description.strip():
+                    emit("CDS-V4-STATUS-DESCRIPTION",
+                         f"Status token status.{axis}.{name} carries no non-empty "
+                         "textual $description: every authorized status value must "
+                         "carry its textual meaning at the source (DEC-S-111, "
+                         "DEC-S-118)", pointer)
                 actual = token.get("$value")
                 if actual != name:
                     if isinstance(actual, str) and actual.casefold() == name:

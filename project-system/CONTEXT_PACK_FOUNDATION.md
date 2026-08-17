@@ -159,7 +159,7 @@ and reference the normative policies; they do not replace them (DEC-S-063):
 
 ## Active decisions
 
-- Range: DEC-S-001 … DEC-S-124 · Count: 124 · All Accepted · ADRs: 3 (ADR-0001,
+- Range: DEC-S-001 … DEC-S-125 · Count: 125 · All Accepted · ADRs: 3 (ADR-0001,
   ADR-0002, ADR-0003)
 - DEC-S-001…006: strategic foundation decisions (CDS-WP-001)
 - DEC-S-007…012: strategic scope decisions (CDS-WP-002)
@@ -183,6 +183,8 @@ and reference the normative policies; they do not replace them (DEC-S-063):
   DEC-S-001…104 unchanged
 - DEC-S-115…124: semantic status source and evidence decisions (CDS-WP-015) —
   DEC-S-001…114 unchanged
+- DEC-S-125: accessibility / maturity / channel boundary decision (CDS-WP-016) —
+  DEC-S-001…124 unchanged
 - ADR-0001 (Machine-Readable Token Source Format), ADR-0002 (Deterministic JSON
   Serialization), and ADR-0003 (Offline Token Validator Implementation Stack)
   exist — 3 ADRs.
@@ -313,6 +315,7 @@ and reference the normative policies; they do not replace them (DEC-S-063):
 | DEC-S-122 | The Candidate Dossier stays Draft while review/approval gates are open; a full-looking dossier grants nothing. |
 | DEC-S-123 | Source set, manifest, resolver, and outputs stay identity- and digest-aligned; disagreement fails closed. |
 | DEC-S-124 | No downstream artifact may present the Experimental status source as an approved Candidate before the gate succeeds. |
+| DEC-S-125 | Channel accessibility profiles gate channel artifacts, not channel-independent Layer-3 semantic sources; evidence transfers in neither direction; no waiver, no Candidate award. |
 
 ## Active risks
 
@@ -790,7 +793,17 @@ PASS**, **Candidate Recommendation GO** — and **GO is not a Candidate award**:
 Candidate remains **No**, maturity **Experimental**, approval **Unapproved**, every
 artifact **AE-0**. The current authorized work package is **CDS-WP-016 — Semantic
 Status Foundation Independent Evidence Review and Candidate Gate**; its review work
-is executed, while the Candidate authority closure stays open — **Nova Candidate
-gate open**, **Human-Maintainer Candidate gate open**. No follow-up work package is
-authorized and CDS-WP-017 is not activated. See the
+is executed. The **Nova Candidate Maturity Review** then returned **NO-GO**
+(Candidate Accessibility Gate unmet), a read-only gap assessment **confirmed** it
+(**9/9** requirements), and the Human-Maintainer-authorized **Candidate
+Accessibility Gate Remediation** — **internal rework of CDS-WP-016, not a new work
+package** — is **executed** (DEC-S-125; Candidate-scope WCAG and responsibility
+mappings; **25/25** per-value evidence matrix; **provisional AE-1** package with
+6/6 review-required and 8/8 fail-closed coverage; AE-2 plan; support-baseline plan
+on A11Y-BL-001 freshness **`Current`**; 15-trigger regression plan; 16
+limitations). The Candidate authority closure stays open — a **fresh independent
+review of the remediation**, **Nova Candidate gate open**, **Human-Maintainer
+Candidate gate not yet reached** — and the **admitted accessibility evidence level
+remains AE-0**, the new AE-1 evidence being **provisional, not admitted**. No
+follow-up work package is authorized and CDS-WP-017 is not activated. See the
 [Foundation Closure Record](../docs/governance/FOUNDATION_CLOSURE_RECORD.md).

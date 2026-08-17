@@ -26,9 +26,15 @@ Pre-Candidate Operating Enablement — **Foundation / Pre-Design: Closed with No
 - Current work package after CDS-WP-015: **CDS-WP-016 — Semantic Status Foundation
   Independent Evidence Review and Candidate Gate** (roadmap status `Next` — the
   current authorized work package; its review work is **executed**: Independent
-  Review **PASS**, Candidate Recommendation **GO**). **GO is not a Candidate award**
-  — the Candidate authority closure remains open: **Nova Candidate gate open**,
-  **Human-Maintainer Candidate gate open**, Candidate **No**. No follow-up work
+  Review **PASS**, Candidate Recommendation **GO**). **GO is not a Candidate award.**
+  The **Nova Candidate Maturity Review** then returned **NO-GO** (Candidate
+  Accessibility Gate unmet), the gap assessment **confirmed** it (9/9), and the
+  Human-Maintainer-authorized **Candidate Accessibility Gate Remediation**
+  (internal rework of CDS-WP-016, **not** a new work package) is **executed**.
+  The Candidate authority closure remains open: a **fresh independent review of the
+  remediation**, **Nova Candidate gate open**, **Human-Maintainer Candidate gate not
+  yet reached**, Candidate **No**, admitted accessibility evidence **AE-0** (the new
+  AE-1 package is **provisional**). No follow-up work
   package is authorized; CDS-WP-017 is not activated.
 - Previous work package: CDS-WP-015 — Semantic Status Foundation Source Set and
   Candidate Evidence (Completed)
@@ -200,7 +206,10 @@ Documents:
   2026-07-18; **committed** by the Human Maintainer) — the DEC-S-121 **independently
   unreviewed** state is **superseded**: independently reviewed by CDS-WP-016
   (**Independent Review PASS**, **Candidate Recommendation GO**); **GO is not a
-  Candidate award** — **Candidate: No** (DEC-S-115, DEC-S-122)
+  Candidate award** — the **Nova Candidate Maturity Review** then returned
+  **NO-GO** on the Candidate Accessibility Gate, whose remediation is **executed**
+  and awaits a **fresh independent review**; **Candidate: No**, admitted
+  accessibility evidence **AE-0** (DEC-S-115, DEC-S-122, DEC-S-125)
 - Source-Set ID: **`semantic/status`** · Layer: semantic · Revision:
   `semantic-status-rev-0001` · Axis count: **5** · Status token count: **25**
   (non-visual `string` identity values; `status.<axis>.<value>`)
@@ -480,7 +489,7 @@ pilot contract is defined in CDS-WP-004.
 
 ## Register scope
 
-- Decisions: DEC-S-001 … DEC-S-104 (104) — 6 strategic foundation decisions
+- Decisions: DEC-S-001 … DEC-S-125 (125) — 6 strategic foundation decisions
   (CDS-WP-001), 6 strategic scope decisions (CDS-WP-002), 8 consumer and pilot
   scope decisions (CDS-WP-004), 12 logical architecture decisions (CDS-WP-005),
   16 governance, lifecycle and publication decisions (CDS-WP-006), 12
@@ -491,8 +500,10 @@ pilot contract is defined in CDS-WP-004.
   bootstrap and validation decisions (CDS-WP-012, DEC-S-083 … DEC-S-092), and
   12 offline validator implementation decisions (CDS-WP-013, DEC-S-093 …
   DEC-S-104), 10 semantic status foundation decisions (CDS-WP-014, DEC-S-105 …
-  DEC-S-114), and **10 semantic status source and evidence decisions (CDS-WP-015,
-  DEC-S-115 … DEC-S-124)**. DEC-S-001 … DEC-S-114 unchanged by CDS-WP-015.
+  DEC-S-114), 10 semantic status source and evidence decisions (CDS-WP-015,
+  DEC-S-115 … DEC-S-124), and **1 accessibility / maturity / channel boundary
+  decision (CDS-WP-016, DEC-S-125)**. DEC-S-001 … DEC-S-114 unchanged by
+  CDS-WP-015; DEC-S-001 … DEC-S-124 unchanged by CDS-WP-016.
   **ADRs: 3 (ADR-0001, ADR-0002, ADR-0003).**
 - Risks: RISK-001 … RISK-097 (97) — **90 `Monitored`; RISK-040, RISK-044, RISK-066,
   RISK-067, RISK-068, RISK-069, and RISK-071 `Mitigating`**; **risk owner model

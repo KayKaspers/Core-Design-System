@@ -94,6 +94,16 @@ _SPECS: dict[str, DiagnosticSpec] = {
         DiagnosticSpec("CDS-V4-STATUS-IDENTITY", "V4", Severity.ERROR,
                        "semantic-status-identity",
                        ("DEC-S-115", "DEC-S-122", "DEC-S-123"), ("RISK-090", "RISK-096")),
+        # V4 — semantic status text-first source rule (CDS-WP-016 Candidate
+        # Accessibility Gate remediation). Objective structural operationalization
+        # of the source-level part of DEC-S-111: every authorized status token
+        # carries a non-empty textual `$description`. A pass proves only that a
+        # textual description exists at the semantic source layer — never
+        # comprehension, UI accessibility, assistive-technology behaviour, channel
+        # accessibility, or conformance.
+        DiagnosticSpec("CDS-V4-STATUS-DESCRIPTION", "V4", Severity.ERROR,
+                       "semantic-status-description",
+                       ("DEC-S-111", "DEC-S-118"), ("RISK-087", "RISK-090")),
         # Internal
         DiagnosticSpec("CDS-INTERNAL", "internal", Severity.ERROR, "internal-error",
                        (), ()),

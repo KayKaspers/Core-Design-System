@@ -54,12 +54,13 @@ areas today.
 Governance foundation established. No final design or technology decisions are
 approved.
 
-- Decisions: DEC-S-001 … DEC-S-124 (124) — 6 foundation + 6 scope + 8 consumer
+- Decisions: DEC-S-001 … DEC-S-125 (125) — 6 foundation + 6 scope + 8 consumer
   and pilot scope + 12 logical architecture + 16 governance + 12 accessibility +
   4 operating enablement and pre-candidate + 8 accessibility support baseline and
   evidence + 10 machine-readable source and token format + 10 machine-readable
   bootstrap and validation + 12 offline validator implementation + 10 semantic
-  status foundation + 10 semantic status source and evidence decisions ·
+  status foundation + 10 semantic status source and evidence + 1 accessibility /
+  maturity / channel boundary decision ·
   **ADRs: 3 (ADR-0001, ADR-0002, ADR-0003)**
 - Risks: RISK-001 … RISK-097 (97) — **90 Monitored; RISK-040, RISK-044, RISK-066,
   RISK-067, RISK-068, RISK-069, RISK-071 Mitigating**; **owner model finalized**;
@@ -70,8 +71,14 @@ approved.
 - Current work package: **CDS-WP-016 — Semantic Status Foundation Independent Evidence
   Review and Candidate Gate** (the authorized work package; its review work is
   **executed** — **Independent Review PASS**, **Candidate Recommendation GO**;
-  **GO is not a Candidate award**, and the **Nova and Human-Maintainer Candidate gates
-  are both open**). Foundation **Closed with Notes**; machine-readable machinery
+  **GO is not a Candidate award**. The **Nova Candidate Maturity Review** then
+  returned **NO-GO** (Candidate Accessibility Gate unmet), the read-only gap
+  assessment **confirmed** it, and the Human-Maintainer-authorized **Candidate
+  Accessibility Gate Remediation** — internal rework of CDS-WP-016, **not** a new
+  work package — is **executed**; **Candidate No**, admitted accessibility evidence
+  **AE-0** with a **provisional AE-1 package pending fresh independent review**,
+  **Nova Candidate gate open**, **Human-Maintainer Candidate gate not yet
+  reached**, CDS-WP-017 not activated). Foundation **Closed with Notes**; machine-readable machinery
   implemented and executed (ADR-0001…0003); Semantic Status Foundation **Contract
   defined (CDS-WP-014)** and **machine-readable implemented (CDS-WP-015:
   `semantic/status`, 25 non-visual tokens, 24/24 harness matches, 25/25 DE/EN, Draft
@@ -791,10 +798,31 @@ traceability/accessibility/content/dossier review, producing the Candidate-gate
 recommendation — **Independent Review PASS**, **Candidate Recommendation GO**
 ([Candidate Gate Recommendation](../docs/reviews/WP016_CANDIDATE_GATE_RECOMMENDATION.md)).
 
-**GO is not a Candidate award.** The next step is therefore **not** the first start of
-CDS-WP-016 but the **Candidate authority closure**: Nova's Candidate-gate review and
-the Human-Maintainer maturity decision — **both open**. Until they close, Candidate is
-**No**, maturity **Experimental**, approval **Unapproved**, every artifact **AE-0** —
+**GO is not a Candidate award.**
+
+**Candidate Accessibility Gate Remediation.** The **Nova Candidate Maturity Review**
+was opened on that GO and returned **NO-GO**: the normative **Candidate
+Accessibility Gate was unmet**. A read-only gap assessment **confirmed** it —
+**9/9** requirements not demonstrated as satisfied, with 7 Blocking, 2 High, 4
+Medium and 1 Low finding — and the Human Maintainer **authorized the CDS-WP-016
+Candidate Accessibility Gate Remediation** as **internal rework of CDS-WP-016, not
+a new work package**. That remediation is **executed**: DEC-S-125, Candidate-scope
+WCAG and responsibility mappings, a **25/25** per-value evidence requirements
+matrix, an operational text-first source rule, a test-only statement evidence layer
+with **6/6** review-required and **8/8** fail-closed coverage, a **provisional
+AE-1** evidence record with results and digests, a reasoned AE-2 plan, a
+support-baseline plan on **A11Y-BL-001 freshness `Current`**, a **15-trigger**
+regression plan, **16** limitations (0 Critical), and a review addendum
+([Addendum](../docs/reviews/WP016_CANDIDATE_ACCESSIBILITY_GATE_ADDENDUM.md)).
+
+The next step is therefore **not** the first start of
+CDS-WP-016, and **not** a promotion, but a **fresh independent review of the
+remediation**, then the **Candidate authority closure**: Nova's Candidate-gate
+review (**open**) and the Human-Maintainer maturity decision (**not yet reached**).
+Until they close, Candidate is
+**No**, maturity **Experimental**, approval **Unapproved**, and the **admitted
+accessibility evidence level of every artifact remains AE-0** — the newly produced
+AE-1 evidence is **provisional and not admitted** —
 **no automatic Candidate promotion, still no visual values, no pilot**. No follow-up
 work package is authorized and CDS-WP-017 is not activated; any further step begins
 only on an explicit Nova prompt and Human-Maintainer authorization.

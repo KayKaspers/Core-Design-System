@@ -209,3 +209,85 @@ Candidate, Stable, approved, promoted, or conformant status.
 
 **Candidate Status = Not Candidate.** The decision field stays empty until the
 Nova and Human-Maintainer gates close.
+
+## Candidate Accessibility Gate Remediation (additive, CDS-WP-016, 2026-08-17)
+
+*(Added by the CDS-WP-016 Candidate Accessibility Gate Remediation — internal
+rework of CDS-WP-016, **not** a new work package. This section is additive; the
+dossier status remains **Draft – Candidate gate incomplete** and **Candidate =
+No**. The executor awards nothing.)*
+
+### What changed since the section above
+
+The independent evidence review recorded above returned **PASS / GO** in its
+declared narrow sense, and that finding **stands and is not revoked**. Nova then
+opened its **Candidate Maturity Review** and returned **NO-GO**: the normative
+**Candidate accessibility gate** was unmet. A read-only gap assessment confirmed
+it — **9 / 9 requirements not demonstrated as satisfied** — and the Human
+Maintainer authorized this remediation on 2026-08-17.
+
+Detail: [Candidate Accessibility Gate Addendum](../reviews/WP016_CANDIDATE_ACCESSIBILITY_GATE_ADDENDUM.md).
+
+### Gate table
+
+| # | Gate requirement | Pre-remediation state | Remediation artifact | Executor state | Independent-review state | Authority state | Satisfied for Candidate |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | **WCAG applicability mapping** | Absent (GAP-B-05) — only the global CDS matrix existed, unscoped to this artifact | [Candidate WCAG Applicability Mapping](../governance/SEMANTIC_STATUS_CANDIDATE_WCAG_APPLICABILITY_MAPPING.md) — 56 rows: 5 direct, 30 representation-triggered, 20 consumer-owned, 1 historical not-applicable | Complete | **Pending** | Executor-produced; no authority | **PENDING** |
+| 2 | **Responsibility mapping** | Absent (GAP-B-05) | [Candidate Accessibility Responsibility Mapping](../governance/SEMANTIC_STATUS_CANDIDATE_ACCESSIBILITY_RESPONSIBILITY_MAPPING.md) — 13 subjects: 5 CDS, 8 Shared, 0 Consumer-only | Complete | **Pending** | Executor-produced; no authority | **PENDING** |
+| 3 | **Known accessibility requirements** | Partially absent (GAP-H-02) — 25 per-value Candidate evidence requirements unmapped | [Candidate Evidence Requirements Matrix](SEMANTIC_STATUS_CANDIDATE_EVIDENCE_REQUIREMENTS_MATRIX.md) — **25/25 mapped, 0 UNMAPPED**, 22 `COVERED` + 3 `COVERED_WITH_LIMITATION` | Complete | **Pending** | Executor-produced; no authority. `COVERED_WITH_LIMITATION` is **not automatically Candidate-compatible** — the reviewer judges that. | **PENDING** |
+| 4 | **AE-1** | Absent (GAP-B-02) — no AE-1 and no instantiated evidence record | [Provisional AE-1 Evidence Record](SEMANTIC_STATUS_CANDIDATE_AE1_EVIDENCE_RECORD.md) · [results](../../artifacts/validation/wp016-candidate-accessibility-remediation-results.json) · [digests](../../artifacts/validation/wp016-candidate-accessibility-remediation-digests.json) | Complete — machine result `Pass with limitations`; 25/25 descriptions, 25/25 DE/EN, 25/25 value requirements, 6/6 review-required, 8/8 fail-closed, 0 execution errors | **PENDING INDEPENDENT REVIEW** | **Provisional AE-1 candidate only. NOT admitted AE-1. Admitted level remains AE-0.** | **PENDING INDEPENDENT REVIEW** |
+| 5 | **AE-2, or a reasoned evidence plan** | Absent (GAP-B-06) | [Candidate AE-2 Evidence Plan](../governance/SEMANTIC_STATUS_CANDIDATE_AE2_EVIDENCE_PLAN.md) — the gate's "reasoned plan" alternative; AE-2 execution is not meaningful against an artifact with no interactive surface and was **not** fabricated | Complete | **Pending** | Executor-produced; a plan is not evidence | **PENDING** |
+| 6 | **Known limitations** | Insufficient (GAP-M-04) — dossier limitations did not meet the limitation discipline | [Candidate Accessibility Limitations](../governance/SEMANTIC_STATUS_CANDIDATE_ACCESSIBILITY_LIMITATIONS.md) — 16 entries with the normative 15 fields: **0 Critical · 11 Significant · 5 Minor** | Complete | **Pending** | Executor-produced; **only the Human Maintainer may approve a limitation with normative effect** — none is approved | **PENDING** |
+| 7 | **Support baseline plan** | Absent (GAP-B-03) — no plan, Trigger-1 freshness review never run | [Candidate Support Baseline Plan](../governance/SEMANTIC_STATUS_CANDIDATE_SUPPORT_BASELINE_PLAN.md) + [A11Y Baseline Freshness Review](../reviews/WP016_A11Y_BASELINE_FRESHNESS_REVIEW.md) — freshness **`Current`** (2026-08-17, official primary sources); 1 Tier-1 entry applicable now, 12 representation-triggered, 0 not applicable | Complete | **Pending** | Executor-produced; **a baseline is not evidence** | **PENDING** |
+| 8 | **Regression plan** | Absent (GAP-B-04) | [Candidate Accessibility Regression Plan](../governance/SEMANTIC_STATUS_CANDIDATE_ACCESSIBILITY_REGRESSION_PLAN.md) — 15 triggers (13 assessed, 2 traceable splits, 0 losses) | Complete | **Pending** | Executor-produced; **documentation is not mitigation** | **PENDING** |
+| 9 | **Human-Maintainer approval after Nova review** | Open | — none possible — | **Not addressable by an executor** | Not applicable | **Nova review OPEN · Human-Maintainer approval OPEN** | **NO / OPEN** |
+
+### Gate arithmetic
+
+| Outcome | Count |
+| --- | --- |
+| Requirements with a remediation artifact | **8 of 9** |
+| Requirements **satisfied for Candidate** | **0 of 9** |
+| `PENDING` (artifact exists, independent review outstanding) | **8** |
+| **`NO / OPEN`** | **1** (requirement 9) |
+
+**The dossier therefore remains incomplete, by construction.** Eight requirements
+wait on a review that has not happened; the ninth waits on an authority the
+executor does not hold and cannot simulate.
+
+### Supporting decisions and boundaries
+
+- **DEC-S-125** clarifies that Channel Accessibility Profiles gate **channel
+  artifacts**, not channel-independent Layer-3 semantic sources (GAP-B-07,
+  resolved by Nova and accepted by the Human Maintainer). It **grants no
+  Candidate status and waives no accessibility requirement**; DEC-S-058 and
+  DEC-S-029 remain in force, and **evidence transfers in neither direction**.
+- **Text-first structural validation** is now operational at the source:
+  `CDS-V4-STATUS-DESCRIPTION` fails closed on a missing, whitespace-only, or
+  non-string `$description` (GAP-M-01, DEC-S-111). It proves a textual
+  description **exists** — never comprehension, UI accessibility,
+  assistive-technology behaviour, channel accessibility, or conformance.
+- **DE/EN structural coverage** is machine-verified at **25/25** (GAP-M-02).
+  **Machine-checkable structure is not machine-checkable meaning**; semantic
+  equivalence remains a human judgement (SSC-LIM-011).
+- The **WP-013/WP-015 24-case harness is unchanged** and still returns
+  **24/24/0/0, exit 0** — retained as an independent regression sentinel
+  (DEC-S-120). All **112** pre-existing validator test IDs and all **39**
+  pre-existing targeted test IDs still exist and pass.
+- The three WP-016 observations (**WP016-OBS-001, -002, -003**) are **preserved
+  and unresolved**, as is the low-severity channel-profiles wording
+  inconsistency (**GAP-L-01**), which is deliberately **not** repaired here.
+
+### Candidate decision after remediation
+
+> **Not Candidate.**
+>
+> Candidate = **No** · Maturity = **Experimental** · Approval = **Unapproved** ·
+> Admitted accessibility evidence level = **AE-0** · Claims = **none** · Pilot =
+> **inactive** · Publication = **Private Development** · CDS-WP-017 = **not
+> activated**.
+>
+> The remediation makes the package **reviewable**. It does not make it
+> **approved**. The decision field stays empty until the fresh independent
+> review, the Nova gate, and the Human-Maintainer gate all close, and unclear
+> readiness resolves as **NO-GO**, never "go with notes" (DEC-S-048).

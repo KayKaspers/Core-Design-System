@@ -186,8 +186,43 @@ exists. A support baseline does exist — **A11Y-BL-001, declared and committed*
 evidence itself.
 
 This policy **promotes nothing** and **invents no retroactive evidence**.
-Non-interactive artifacts require a channel profile first. **`Not tested` may
-never be read as `Passed`.**
+**`Not tested` may never be read as `Passed`.**
+
+### Channel-profile applicability
+
+*(Additive narrow reconciliation, CDS-WP-016, DEC-S-125. This **narrows the
+reach** of the earlier blanket wording "non-interactive artifacts require a
+channel profile first". It weakens no gate, no evidence level, and no claim
+boundary.)*
+
+A **Channel Accessibility Profile is required first** when the artifact
+**instantiates, transforms, renders, or communicates** CDS meaning through a
+named CDS channel — that is, when the artifact *is* a channel representation or
+output. Such an artifact cannot reach Candidate or Stable without its applicable
+profile (DEC-S-058), and non-web channels are never presented as
+WCAG-conformant.
+
+A **channel-independent source or contract artifact** — a Layer-3 semantic
+source or contract that ships no rendered, interactive, or channel-bound
+representation — is instead governed by its **own applicable source-level
+Candidate accessibility gate**. It is not assigned an artificial channel:
+declaring a channel the artifact does not have would make the scope of its
+evidence untrue, and scope truthfulness is the more fundamental obligation.
+
+Everything else is unchanged:
+
+| # | Unchanged by this reconciliation |
+| --- | --- |
+| 1 | The **Candidate accessibility gate** above, including its **AE-1** requirement and its Human-Maintainer approval after Nova review. |
+| 2 | The **Stable accessibility gate**, including AE-3 against a declared support baseline. |
+| 3 | **Evidence transfers in neither direction**: source-level evidence never becomes channel evidence, and channel evidence never becomes source evidence (evidence rule 3, DEC-S-052). |
+| 4 | Every later channel representation of a channel-independent source still needs its applicable Channel Profile, its own revision-bound evidence, and its own known limitations **before** Candidate or Stable. |
+| 5 | The **claim boundary**: no accessibility claim of any level is valid today, for anyone, including CDS. |
+
+DEC-S-125 grants **no Candidate status** and **waives no accessibility
+requirement**. The
+[Accessibility Channel Profiles](ACCESSIBILITY_CHANNEL_PROFILES.md) document is
+unchanged and remains normative for the six channels.
 
 ## Component evidence boundary
 

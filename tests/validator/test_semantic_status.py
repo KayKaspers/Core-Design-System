@@ -199,7 +199,11 @@ class SemanticStatusCheckerDirectTests(unittest.TestCase):
                 "status": status}
 
     def full_status(self):
-        return {axis: {v: {"$type": "string", "$value": v}
+        # Synthetic tokens carry a $description because the text-first source
+        # rule (CDS-WP-016, DEC-S-111) is part of a complete status document;
+        # the assertions below are unchanged in strictness.
+        return {axis: {v: {"$type": "string", "$value": v,
+                           "$description": "Synthetic; test only."}
                        for v in values}
                 for axis, values in semantic_status.AUTHORIZED_AXES.items()}
 
@@ -291,7 +295,9 @@ class SemanticStatusMaturityApprovalTests(unittest.TestCase):
             payload["testOnly"] = True
         if non_normative:
             payload["nonNormative"] = True
-        status = {axis: {v: {"$type": "string", "$value": v} for v in values}
+        status = {axis: {v: {"$type": "string", "$value": v,
+                             "$description": "Synthetic; test only."}
+                         for v in values}
                   for axis, values in semantic_status.AUTHORIZED_AXES.items()}
         content = {"$extensions": {"io.github.kaykaspers.cds": payload},
                    "status": status}
@@ -353,6 +359,102 @@ class SemanticStatusMaturityApprovalTests(unittest.TestCase):
         self.assert_identity_error(self.doc(
             maturity="Stable", approval="Approved",
             revision="semantic-status-rev-0002-candidate"))
+
+
+class SemanticStatusDescriptionRuleTests(unittest.TestCase):
+    """CDS-WP-016 text-first source rule: every authorized status token must
+    carry a non-empty textual ``$description`` (DEC-S-111, DEC-S-118).
+
+    Scope boundary: a pass proves only that a textual meaning exists in the
+    machine-readable source. It proves no comprehension, no UI accessibility,
+    no assistive-technology behaviour, no channel accessibility, and no WCAG
+    conformance. The rule is exercised here and by the Candidate evidence
+    suite — never by changing the immutable 24-case matrix (DEC-S-120).
+    """
+
+    @classmethod
+    def setUpClass(cls):
+        cls.registry = SchemaRegistry(REPO_ROOT)
+        cls.engine = ValidationEngine(REPO_ROOT, cls.registry)
+
+    def categories(self, result):
+        return {d.category for d in result.outcome.diagnostics
+                if d.severity == "error"}
+
+    def status_with(self, description, *, drop=False):
+        status = {axis: {v: {"$type": "string", "$value": v,
+                             "$description": "Synthetic; test only."}
+                         for v in values}
+                  for axis, values in semantic_status.AUTHORIZED_AXES.items()}
+        token = status["condition"]["nominal"]
+        if drop:
+            del token["$description"]
+        else:
+            token["$description"] = description
+        return ScopeDocument(
+            path=Path("synthetic.tokens.json"), kind=DocumentKind.TOKEN_DOCUMENT,
+            v1=ResultState.PASS,
+            content={"$extensions": {"io.github.kaykaspers.cds": {
+                "profileVersion": "1", "sourceSetId": "fixture/direct",
+                "layer": "semantic", "dtcgReportVersion": "2025.10",
+                "sourceRevision": "fixture-rev-0001-synthetic",
+                "testOnly": True, "nonNormative": True}},
+                "status": status})
+
+    def description_codes(self, doc):
+        return [d.code for d in semantic_status.check_status_document(doc)
+                if d.code == "CDS-V4-STATUS-DESCRIPTION"]
+
+    def test_missing_description_fixture_fails_v4(self):
+        result = self.engine.validate_scope(
+            [STATUS_FIX / "negative" / "missing-description.tokens.json"])
+        self.assertEqual(result.outcome.as_dict()["V4"], "Fail")
+        self.assertEqual(result.outcome.blocking_layer(), "V4")
+        self.assertIn("semantic-status-description", self.categories(result))
+
+    def test_valid_fixture_raises_no_description_error(self):
+        result = self.engine.validate_scope(
+            [STATUS_FIX / "positive" / "semantic-status-valid.tokens.json"])
+        self.assertNotIn("semantic-status-description", self.categories(result))
+
+    def test_missing_description_fails_directly(self):
+        self.assertEqual(self.description_codes(self.status_with(None, drop=True)),
+                         ["CDS-V4-STATUS-DESCRIPTION"])
+
+    def test_whitespace_only_description_fails(self):
+        for blank in ("", " ", "\t", "\n", "   \n\t "):
+            self.assertEqual(self.description_codes(self.status_with(blank)),
+                             ["CDS-V4-STATUS-DESCRIPTION"], repr(blank))
+
+    def test_non_string_description_fails(self):
+        for value in (None, 0, False, [], {}, ["text"]):
+            self.assertEqual(self.description_codes(self.status_with(value)),
+                             ["CDS-V4-STATUS-DESCRIPTION"], repr(value))
+
+    def test_non_empty_description_passes(self):
+        self.assertEqual(self.description_codes(self.status_with("Meaning.")), [])
+
+    def test_real_source_has_twenty_five_non_empty_descriptions(self):
+        content = json_loader.load_path(SOURCE_DIR / "semantic-status.tokens.json")
+        status = content["status"]
+        described = 0
+        for axis, values in semantic_status.AUTHORIZED_AXES.items():
+            for name in values:
+                description = status[axis][name].get("$description")
+                self.assertIsInstance(description, str, f"{axis}.{name}")
+                self.assertTrue(description.strip(), f"{axis}.{name}")
+                described += 1
+        self.assertEqual(described, semantic_status.EXPECTED_TOKEN_COUNT)
+
+    def test_description_category_absent_from_case_schema_enum(self):
+        # Deliberate scope boundary: the new category is NOT in the
+        # validation-case enum, so the immutable WP-013/WP-015 24-case matrix
+        # cannot absorb this rule without a governed schema change.
+        good = "tests/fixtures/semantic-status/negative/missing-axis.tokens.json"
+        self.assertFalse(
+            self.registry.iter_errors(
+                "validation-case",
+                case_probe(good, "semantic-status-description")) == [])
 
 
 if __name__ == "__main__":

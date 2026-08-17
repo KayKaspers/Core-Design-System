@@ -67,9 +67,36 @@ library, or a design project scoped exclusively to CoreOps.
   (reviewer ≠ executor), together with traceability, accessibility, content, and the
   dossier: **Independent Review PASS**; **Candidate Recommendation GO** — see the
   [Candidate Gate Recommendation](docs/reviews/WP016_CANDIDATE_GATE_RECOMMENDATION.md).
-  **GO is not a Candidate award**: Candidate remains **No**, maturity **Experimental**,
-  approval **Unapproved**, every artifact **AE-0**, and the **Nova Candidate gate and
-  the Human-Maintainer Candidate gate are both open**. No follow-up work package is
+  **GO is not a Candidate award.** The subsequent **Nova Candidate Maturity Review
+  returned NO-GO** — the normative **Candidate Accessibility Gate was unmet** — a
+  read-only gap assessment **confirmed** it (**9/9** requirements not demonstrated),
+  and the Human Maintainer **authorized the CDS-WP-016 Candidate Accessibility Gate
+  Remediation** as **internal rework of CDS-WP-016, not a new work package**. That
+  remediation is **executed**: **DEC-S-125** (channel accessibility profiles gate
+  channel artifacts, not channel-independent Layer-3 semantic sources — no waiver,
+  no Candidate award), Candidate-scope
+  [WCAG](docs/governance/SEMANTIC_STATUS_CANDIDATE_WCAG_APPLICABILITY_MAPPING.md) and
+  [responsibility](docs/governance/SEMANTIC_STATUS_CANDIDATE_ACCESSIBILITY_RESPONSIBILITY_MAPPING.md)
+  mappings, a **25/25** per-value
+  [evidence requirements matrix](docs/operations/SEMANTIC_STATUS_CANDIDATE_EVIDENCE_REQUIREMENTS_MATRIX.md),
+  an operational text-first source rule (`CDS-V4-STATUS-DESCRIPTION`), a test-only
+  statement evidence layer with **6/6** review-required and **8/8** fail-closed
+  coverage, a **provisional**
+  [AE-1 evidence record](docs/operations/SEMANTIC_STATUS_CANDIDATE_AE1_EVIDENCE_RECORD.md),
+  an [AE-2 plan](docs/governance/SEMANTIC_STATUS_CANDIDATE_AE2_EVIDENCE_PLAN.md), a
+  [support-baseline plan](docs/governance/SEMANTIC_STATUS_CANDIDATE_SUPPORT_BASELINE_PLAN.md)
+  on **A11Y-BL-001 freshness `Current`**, a 15-trigger
+  [regression plan](docs/governance/SEMANTIC_STATUS_CANDIDATE_ACCESSIBILITY_REGRESSION_PLAN.md),
+  and 16 recorded
+  [limitations](docs/governance/SEMANTIC_STATUS_CANDIDATE_ACCESSIBILITY_LIMITATIONS.md)
+  (0 Critical) — see the
+  [Candidate Accessibility Gate Addendum](docs/reviews/WP016_CANDIDATE_ACCESSIBILITY_GATE_ADDENDUM.md).
+  **Candidate remains No**, maturity **Experimental**,
+  approval **Unapproved**, and the **admitted accessibility evidence level of every
+  artifact remains AE-0** — the newly produced AE-1 evidence is **provisional and
+  pending a fresh independent review**, never admitted AE-1. The **Nova Candidate
+  gate is open** and the **Human-Maintainer Candidate gate is not yet reached**. No
+  follow-up work package is
   authorized and CDS-WP-017 is not activated. Further work begins only on an explicit
   Nova prompt and Human-Maintainer authorization.
 

@@ -54,8 +54,20 @@ and a [Draft Candidate Dossier](docs/operations/SEMANTIC_STATUS_CANDIDATE_DOSSIE
 current authorized work package is **CDS-WP-016 — Semantic Status Foundation
 Independent Evidence Review and Candidate Gate**; its review work is **executed**:
 **Independent Review PASS**, **Candidate Recommendation GO**. **GO is not a Candidate
-award** — Candidate remains **No**, and the **Nova and Human-Maintainer Candidate
-gates are both open**. No follow-up work package is authorized.
+award.** The subsequent **Nova Candidate Maturity Review returned NO-GO — the
+Candidate Accessibility Gate was unmet** — a read-only gap assessment **confirmed**
+it (9/9 requirements not demonstrated), and the Human Maintainer **authorized the
+CDS-WP-016 Candidate Accessibility Gate Remediation** as internal rework, not a new
+work package. That remediation is **executed**: DEC-S-125, a Candidate-scope WCAG
+and responsibility mapping, a 25/25 per-value evidence matrix, a provisional AE-1
+evidence package, an AE-2 plan, a support-baseline plan (A11Y-BL-001 freshness
+**`Current`**), a 15-trigger regression plan, and 16 recorded limitations.
+**Candidate remains No**, maturity **Experimental**, approval **Unapproved**, and
+the **admitted accessibility evidence level of every artifact remains AE-0** — the
+new AE-1 evidence is **provisional and pending a fresh independent review**. The
+**Nova Candidate gate is open** and the **Human-Maintainer Candidate gate is not yet
+reached**. No follow-up work package is authorized and **CDS-WP-017 is not
+activated**.
 
 The project does not yet produce visual design.
 
@@ -417,7 +429,9 @@ exists (25 non-visual identity tokens, manifest, resolver) with executed
 four executor-produced reviews, and a
 [Draft Candidate Dossier](docs/operations/SEMANTIC_STATUS_CANDIDATE_DOSSIER.md) —
 **independently reviewed by CDS-WP-016 (PASS, Candidate Recommendation GO); the
-Candidate gate is open; consuming or representing
+Nova Candidate Maturity Review then returned NO-GO on the Candidate Accessibility
+Gate, whose remediation is executed and awaits a fresh independent review; the
+Candidate gate remains open; consuming or representing
 the source set as approved is prohibited (DEC-S-124).**
 
 - [Semantic Status Foundation Contract](docs/foundations/SEMANTIC_STATUS_FOUNDATION_CONTRACT.md)
@@ -448,8 +462,14 @@ the source set as approved is prohibited (DEC-S-124).**
 - **Completed:** CDS-WP-015 — Semantic Status Foundation Source Set and Candidate Evidence
 - **Next:** **CDS-WP-016 — Semantic Status Foundation Independent Evidence Review and
   Candidate Gate** — the current authorized roadmap position; its review work is
-  **executed** (Independent Review PASS, Candidate Recommendation GO). Candidate
-  remains **No**; the Nova and Human-Maintainer Candidate gates are open.
+  **executed** (Independent Review PASS, Candidate Recommendation GO), the **Nova
+  Candidate Maturity Review returned NO-GO** (Candidate Accessibility Gate unmet),
+  and the Human-Maintainer-authorized **Candidate Accessibility Gate Remediation**
+  is executed as internal rework of the same work package. Candidate remains
+  **No**; admitted accessibility evidence remains **AE-0** (the new AE-1 package is
+  provisional, pending fresh independent review); the **Nova Candidate gate is
+  open** and the **Human-Maintainer Candidate gate is not yet reached**.
+  **CDS-WP-017 is not activated.**
 
 The full controlled roadmap is in
 [project-system/WORK_PACKAGES.md](project-system/WORK_PACKAGES.md).
@@ -485,15 +505,19 @@ phase.
 
 ## Registers
 
-- Decisions: DEC-S-001 … DEC-S-082 (82) — 6 strategic foundation decisions,
+- Decisions: DEC-S-001 … DEC-S-125 (125) — 6 strategic foundation decisions,
   6 strategic scope decisions, 8 consumer and pilot scope decisions,
   12 logical architecture decisions, 16 governance, lifecycle and publication
   decisions, 12 accessibility and inclusive design decisions, 4 operating
   enablement and pre-candidate decisions, 8 accessibility support baseline and
   evidence decisions, 10 machine-readable source and token format decisions,
-  10 machine-readable bootstrap and validation decisions · ADRs: 2 (ADR-0001, ADR-0002)
-- Risks: RISK-001 … RISK-072 (72) — 70 Monitored, RISK-040 and RISK-044 Mitigating;
-  owner model finalized; no risk accepted or closed
+  10 machine-readable bootstrap and validation decisions, 12 offline validator
+  implementation decisions, 10 semantic status foundation decisions, 10 semantic
+  status source and evidence decisions, 1 accessibility / maturity / channel
+  boundary decision · ADRs: 3 (ADR-0001, ADR-0002, ADR-0003)
+- Risks: RISK-001 … RISK-097 (97) — 90 Monitored; 7 Mitigating (RISK-040, RISK-044,
+  RISK-066, RISK-067, RISK-068, RISK-069, RISK-071); owner model finalized;
+  no risk accepted or closed
 
 ## Governance documents
 

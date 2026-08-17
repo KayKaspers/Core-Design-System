@@ -10,7 +10,10 @@ Controlled work-package roadmap for the Core Design System (CDS).
 - **Next work package:** **CDS-WP-016 — Semantic Status Foundation Independent
   Evidence Review and Candidate Gate** (authorized as the next work package; its
   review work is **executed** — Independent Review PASS, Candidate Recommendation GO;
-  the Candidate authority closure remains open)
+  the **Nova Candidate Maturity Review returned NO-GO** on the Candidate
+  Accessibility Gate, and the Human-Maintainer-authorized **Candidate Accessibility
+  Gate Remediation** is executed as internal rework of the same work package; the
+  Candidate authority closure remains open and CDS-WP-017 is not activated)
 
 ## Status values
 
@@ -53,10 +56,16 @@ Foundation is **Contract defined (CDS-WP-014) and machine-readable implemented
 executor-produced evidence)** — **Experimental, no Candidate status, no visual
 value**. That evidence has since been **independently reviewed by CDS-WP-016**:
 **Independent Review PASS**, **Candidate Recommendation GO** — and **GO is not a
-Candidate award**. CDS-WP-016 is registered as `Next` (the current authorized roadmap
-position) and its review work is executed; what remains open is the Candidate
-authority closure — **Nova Candidate gate open, Human-Maintainer Candidate gate
-open, Candidate No**. No further work-package ID is created.
+Candidate award**. The **Nova Candidate Maturity Review** then returned **NO-GO**
+(Candidate Accessibility Gate unmet), the gap assessment **confirmed** it, and the
+Human Maintainer **authorized the Candidate Accessibility Gate Remediation** as
+**internal rework of CDS-WP-016** — that remediation is now **executed**.
+CDS-WP-016 is registered as `Next` (the current authorized roadmap
+position); what remains open is the Candidate authority closure — a **fresh
+independent review of the remediation**, **Nova Candidate gate open**,
+**Human-Maintainer Candidate gate not yet reached**, **Candidate No**, admitted
+accessibility evidence **AE-0** (the new AE-1 package is provisional). No further
+work-package ID is created and **CDS-WP-017 is not activated**.
 
 ## Descriptions
 
@@ -325,10 +334,33 @@ Human-Maintainer decision — **no automatic Candidate promotion**. Result:
 **Independent Review PASS**, **Candidate Recommendation GO** (0 Blocking, 0 High,
 3 Observations) — see the
 [Candidate Gate Recommendation](../docs/reviews/WP016_CANDIDATE_GATE_RECOMMENDATION.md).
-**GO is not a Candidate award.** Still open and required before any promotion:
-**Nova's Candidate-gate review** and the **Human Maintainer's maturity approval**;
-Candidate remains **No**, maturity **Experimental**, every artifact **AE-0**. Further
-steps begin only on an explicit Nova prompt and Human-Maintainer authorization.
+**GO is not a Candidate award.**
+
+**Candidate Accessibility Gate Remediation (internal rework of CDS-WP-016; not a
+new work package).** The **Nova Candidate Maturity Review** returned **NO-GO** —
+the normative Candidate Accessibility Gate was unmet — and a read-only gap
+assessment **confirmed** it (**9/9** requirements not demonstrated). On
+Human-Maintainer authorization the remediation was executed: **DEC-S-125**
+(channel profiles gate channel artifacts, not channel-independent semantic
+sources; no waiver, no Candidate award), Candidate-scope **WCAG applicability** and
+**responsibility** mappings, a **25/25** per-value evidence requirements matrix
+(GAP-H-02 closed as a mapping), an operational **text-first** source rule
+(`CDS-V4-STATUS-DESCRIPTION`), a test-only statement evidence layer with **6/6**
+review-required and **8/8** fail-closed coverage, **25/25** source descriptions and
+**25/25** DE/EN structural coverage, a **provisional AE-1** evidence record with
+results and digests, a reasoned **AE-2 plan**, a **support-baseline plan** on
+A11Y-BL-001 freshness **`Current`**, a **15-trigger regression plan**, **16**
+recorded limitations (0 Critical), and a review addendum. The WP-013/WP-015
+**24-case harness is unchanged** (24/24/0/0) and all **112** pre-existing validator
+test IDs still pass.
+
+Still open and required before any promotion: a **fresh independent review of the
+remediation**, **Nova's Candidate-gate review**, and the **Human Maintainer's
+maturity approval**. Candidate remains **No**, maturity **Experimental**, approval
+**Unapproved**, and the **admitted accessibility evidence level of every artifact
+remains AE-0** — the new AE-1 evidence is **provisional, not admitted**. Further
+steps begin only on an explicit Nova prompt and Human-Maintainer authorization;
+**CDS-WP-017 is not activated**.
 
 ## Roadmap evolution
 

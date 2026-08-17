@@ -1,0 +1,1040 @@
+{
+  "schemaVersion": "cds-wp016-candidate-accessibility-evidence-result/1",
+  "testOnly": true,
+  "nonNormative": true,
+  "authority": "Executor-produced machine evidence. Not a CDS schema, not a validator contract, not a review, not an approval.",
+  "workPackage": "CDS-WP-016",
+  "evidenceScope": "Channel-independent Layer-3 Semantic Status source and contract family. Source-level structural and rule-level checks only.",
+  "cdsRevision": "7ac8a9e7be021a05e517adda64751920a5eff247",
+  "sourceRevision": "semantic-status-rev-0001",
+  "worktreeState": "modified worktree",
+  "inputs": {
+    "caseManifest": "tests/fixtures/semantic-status-statements/CANDIDATE_EVIDENCE_CASES.json",
+    "tokenSource": "tokens/semantic/status/semantic-status.tokens.json",
+    "terminology": "docs/foundations/SEMANTIC_STATUS_TERMINOLOGY_DE_EN.md"
+  },
+  "caseManifestDigest": "sha256:6ab8ae5f0b15017d18d5efa18b23db1439d6d153015bcc860930cb97eab6ee55",
+  "canonicalizationMethod": "RFC 8785 (JSON Canonicalization Scheme)",
+  "digestAlgorithm": "SHA-256",
+  "caseTotal": 32,
+  "caseResults": [
+    {
+      "caseId": "SSC-EV-001",
+      "expectedClassification": "representable",
+      "actualClassification": "representable",
+      "expectedReviewRequired": [],
+      "actualReviewRequired": [],
+      "expectedFailClosed": [],
+      "actualFailClosed": [],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": false,
+      "rationalePresent": false
+    },
+    {
+      "caseId": "SSC-EV-002",
+      "expectedClassification": "review-required",
+      "actualClassification": "review-required",
+      "expectedReviewRequired": [
+        "RR-6"
+      ],
+      "actualReviewRequired": [
+        "RR-6"
+      ],
+      "expectedFailClosed": [],
+      "actualFailClosed": [],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": true,
+      "rationalePresent": false
+    },
+    {
+      "caseId": "SSC-EV-003",
+      "expectedClassification": "representable",
+      "actualClassification": "representable",
+      "expectedReviewRequired": [],
+      "actualReviewRequired": [],
+      "expectedFailClosed": [],
+      "actualFailClosed": [],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": false,
+      "rationalePresent": false
+    },
+    {
+      "caseId": "SSC-EV-004",
+      "expectedClassification": "representable",
+      "actualClassification": "representable",
+      "expectedReviewRequired": [],
+      "actualReviewRequired": [],
+      "expectedFailClosed": [],
+      "actualFailClosed": [],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": false,
+      "rationalePresent": false
+    },
+    {
+      "caseId": "SSC-EV-005",
+      "expectedClassification": "review-required",
+      "actualClassification": "review-required",
+      "expectedReviewRequired": [
+        "RR-5"
+      ],
+      "actualReviewRequired": [
+        "RR-5"
+      ],
+      "expectedFailClosed": [],
+      "actualFailClosed": [],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": true,
+      "rationalePresent": true
+    },
+    {
+      "caseId": "SSC-EV-006",
+      "expectedClassification": "fail-closed",
+      "actualClassification": "fail-closed",
+      "expectedReviewRequired": [],
+      "actualReviewRequired": [],
+      "expectedFailClosed": [
+        "FC-1"
+      ],
+      "actualFailClosed": [
+        "FC-1"
+      ],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": false,
+      "rationalePresent": false
+    },
+    {
+      "caseId": "SSC-EV-007",
+      "expectedClassification": "fail-closed",
+      "actualClassification": "fail-closed",
+      "expectedReviewRequired": [],
+      "actualReviewRequired": [],
+      "expectedFailClosed": [
+        "FC-3"
+      ],
+      "actualFailClosed": [
+        "FC-3"
+      ],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": false,
+      "rationalePresent": false
+    },
+    {
+      "caseId": "SSC-EV-008",
+      "expectedClassification": "representable",
+      "actualClassification": "representable",
+      "expectedReviewRequired": [],
+      "actualReviewRequired": [],
+      "expectedFailClosed": [],
+      "actualFailClosed": [],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": false,
+      "rationalePresent": false
+    },
+    {
+      "caseId": "SSC-EV-009",
+      "expectedClassification": "review-required",
+      "actualClassification": "review-required",
+      "expectedReviewRequired": [
+        "RR-1"
+      ],
+      "actualReviewRequired": [
+        "RR-1"
+      ],
+      "expectedFailClosed": [],
+      "actualFailClosed": [],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": true,
+      "rationalePresent": true
+    },
+    {
+      "caseId": "SSC-EV-010",
+      "expectedClassification": "review-required",
+      "actualClassification": "review-required",
+      "expectedReviewRequired": [
+        "RR-1"
+      ],
+      "actualReviewRequired": [
+        "RR-1"
+      ],
+      "expectedFailClosed": [],
+      "actualFailClosed": [],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": true,
+      "rationalePresent": true
+    },
+    {
+      "caseId": "SSC-EV-011",
+      "expectedClassification": "representable",
+      "actualClassification": "representable",
+      "expectedReviewRequired": [],
+      "actualReviewRequired": [],
+      "expectedFailClosed": [],
+      "actualFailClosed": [],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": false,
+      "rationalePresent": false
+    },
+    {
+      "caseId": "SSC-EV-012",
+      "expectedClassification": "representable",
+      "actualClassification": "representable",
+      "expectedReviewRequired": [],
+      "actualReviewRequired": [],
+      "expectedFailClosed": [],
+      "actualFailClosed": [],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": false,
+      "rationalePresent": false
+    },
+    {
+      "caseId": "SSC-EV-013",
+      "expectedClassification": "representable",
+      "actualClassification": "representable",
+      "expectedReviewRequired": [],
+      "actualReviewRequired": [],
+      "expectedFailClosed": [],
+      "actualFailClosed": [],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": false,
+      "rationalePresent": false
+    },
+    {
+      "caseId": "SSC-EV-014",
+      "expectedClassification": "fail-closed",
+      "actualClassification": "fail-closed",
+      "expectedReviewRequired": [],
+      "actualReviewRequired": [],
+      "expectedFailClosed": [
+        "FC-3"
+      ],
+      "actualFailClosed": [
+        "FC-3"
+      ],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": false,
+      "rationalePresent": false
+    },
+    {
+      "caseId": "SSC-EV-015",
+      "expectedClassification": "review-required",
+      "actualClassification": "review-required",
+      "expectedReviewRequired": [
+        "RR-2"
+      ],
+      "actualReviewRequired": [
+        "RR-2"
+      ],
+      "expectedFailClosed": [],
+      "actualFailClosed": [],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": true,
+      "rationalePresent": true
+    },
+    {
+      "caseId": "SSC-EV-016",
+      "expectedClassification": "review-required",
+      "actualClassification": "review-required",
+      "expectedReviewRequired": [
+        "RR-2"
+      ],
+      "actualReviewRequired": [
+        "RR-2"
+      ],
+      "expectedFailClosed": [],
+      "actualFailClosed": [],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": true,
+      "rationalePresent": true
+    },
+    {
+      "caseId": "SSC-EV-017",
+      "expectedClassification": "representable",
+      "actualClassification": "representable",
+      "expectedReviewRequired": [],
+      "actualReviewRequired": [],
+      "expectedFailClosed": [],
+      "actualFailClosed": [],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": false,
+      "rationalePresent": false
+    },
+    {
+      "caseId": "SSC-EV-018",
+      "expectedClassification": "representable",
+      "actualClassification": "representable",
+      "expectedReviewRequired": [],
+      "actualReviewRequired": [],
+      "expectedFailClosed": [],
+      "actualFailClosed": [],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": false,
+      "rationalePresent": false
+    },
+    {
+      "caseId": "SSC-EV-019",
+      "expectedClassification": "fail-closed",
+      "actualClassification": "fail-closed",
+      "expectedReviewRequired": [],
+      "actualReviewRequired": [],
+      "expectedFailClosed": [
+        "FC-5"
+      ],
+      "actualFailClosed": [
+        "FC-5"
+      ],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": false,
+      "rationalePresent": false
+    },
+    {
+      "caseId": "SSC-EV-020",
+      "expectedClassification": "fail-closed",
+      "actualClassification": "fail-closed",
+      "expectedReviewRequired": [],
+      "actualReviewRequired": [],
+      "expectedFailClosed": [
+        "FC-8"
+      ],
+      "actualFailClosed": [
+        "FC-8"
+      ],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": false,
+      "rationalePresent": false
+    },
+    {
+      "caseId": "SSC-EV-021",
+      "expectedClassification": "review-required",
+      "actualClassification": "review-required",
+      "expectedReviewRequired": [
+        "RR-3"
+      ],
+      "actualReviewRequired": [
+        "RR-3"
+      ],
+      "expectedFailClosed": [],
+      "actualFailClosed": [],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": true,
+      "rationalePresent": false
+    },
+    {
+      "caseId": "SSC-EV-022",
+      "expectedClassification": "representable",
+      "actualClassification": "representable",
+      "expectedReviewRequired": [],
+      "actualReviewRequired": [],
+      "expectedFailClosed": [],
+      "actualFailClosed": [],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": false,
+      "rationalePresent": false
+    },
+    {
+      "caseId": "SSC-EV-023",
+      "expectedClassification": "fail-closed",
+      "actualClassification": "fail-closed",
+      "expectedReviewRequired": [],
+      "actualReviewRequired": [],
+      "expectedFailClosed": [
+        "FC-4"
+      ],
+      "actualFailClosed": [
+        "FC-4"
+      ],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": false,
+      "rationalePresent": false
+    },
+    {
+      "caseId": "SSC-EV-024",
+      "expectedClassification": "representable",
+      "actualClassification": "representable",
+      "expectedReviewRequired": [],
+      "actualReviewRequired": [],
+      "expectedFailClosed": [],
+      "actualFailClosed": [],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": false,
+      "rationalePresent": false
+    },
+    {
+      "caseId": "SSC-EV-025",
+      "expectedClassification": "representable",
+      "actualClassification": "representable",
+      "expectedReviewRequired": [],
+      "actualReviewRequired": [],
+      "expectedFailClosed": [],
+      "actualFailClosed": [],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": false,
+      "rationalePresent": false
+    },
+    {
+      "caseId": "SSC-EV-026",
+      "expectedClassification": "fail-closed",
+      "actualClassification": "fail-closed",
+      "expectedReviewRequired": [],
+      "actualReviewRequired": [],
+      "expectedFailClosed": [
+        "FC-7"
+      ],
+      "actualFailClosed": [
+        "FC-7"
+      ],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": false,
+      "rationalePresent": false
+    },
+    {
+      "caseId": "SSC-EV-027",
+      "expectedClassification": "review-required",
+      "actualClassification": "review-required",
+      "expectedReviewRequired": [
+        "RR-6"
+      ],
+      "actualReviewRequired": [
+        "RR-6"
+      ],
+      "expectedFailClosed": [],
+      "actualFailClosed": [],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": true,
+      "rationalePresent": false
+    },
+    {
+      "caseId": "SSC-EV-028",
+      "expectedClassification": "fail-closed",
+      "actualClassification": "fail-closed",
+      "expectedReviewRequired": [
+        "RR-4"
+      ],
+      "actualReviewRequired": [
+        "RR-4"
+      ],
+      "expectedFailClosed": [
+        "FC-6"
+      ],
+      "actualFailClosed": [
+        "FC-6"
+      ],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": true,
+      "rationalePresent": false
+    },
+    {
+      "caseId": "SSC-EV-029",
+      "expectedClassification": "representable",
+      "actualClassification": "representable",
+      "expectedReviewRequired": [],
+      "actualReviewRequired": [],
+      "expectedFailClosed": [],
+      "actualFailClosed": [],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": false,
+      "rationalePresent": true
+    },
+    {
+      "caseId": "SSC-EV-030",
+      "expectedClassification": "fail-closed",
+      "actualClassification": "fail-closed",
+      "expectedReviewRequired": [],
+      "actualReviewRequired": [],
+      "expectedFailClosed": [
+        "FC-3"
+      ],
+      "actualFailClosed": [
+        "FC-3"
+      ],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": false,
+      "rationalePresent": false
+    },
+    {
+      "caseId": "SSC-EV-031",
+      "expectedClassification": "fail-closed",
+      "actualClassification": "fail-closed",
+      "expectedReviewRequired": [],
+      "actualReviewRequired": [],
+      "expectedFailClosed": [
+        "FC-2"
+      ],
+      "actualFailClosed": [
+        "FC-2"
+      ],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": false,
+      "rationalePresent": false
+    },
+    {
+      "caseId": "SSC-EV-032",
+      "expectedClassification": "representable",
+      "actualClassification": "representable",
+      "expectedReviewRequired": [],
+      "actualReviewRequired": [],
+      "expectedFailClosed": [],
+      "actualFailClosed": [],
+      "expectedMatch": true,
+      "subjectIdentityPresent": true,
+      "declaredScopePresent": true,
+      "rationaleRequired": false,
+      "rationalePresent": false
+    }
+  ],
+  "valueRequirementCoverage": {
+    "expected": 25,
+    "covered": 25,
+    "unmapped": [],
+    "duplicateRequirementIds": [],
+    "unauthorizedRequirementIds": [],
+    "satisfied": true,
+    "rows": [
+      {
+        "id": "condition.nominal",
+        "axis": "condition",
+        "value": "nominal",
+        "evidenceType": "MACHINE",
+        "coverageState": "COVERED",
+        "caseIds": [
+          "SSC-EV-001",
+          "SSC-EV-002"
+        ],
+        "missingCaseIds": [],
+        "assertingCaseIds": [
+          "SSC-EV-001",
+          "SSC-EV-002"
+        ],
+        "satisfied": true
+      },
+      {
+        "id": "condition.degraded",
+        "axis": "condition",
+        "value": "degraded",
+        "evidenceType": "MACHINE",
+        "coverageState": "COVERED",
+        "caseIds": [
+          "SSC-EV-003",
+          "SSC-EV-004",
+          "SSC-EV-005"
+        ],
+        "missingCaseIds": [],
+        "assertingCaseIds": [
+          "SSC-EV-003"
+        ],
+        "satisfied": true
+      },
+      {
+        "id": "condition.disrupted",
+        "axis": "condition",
+        "value": "disrupted",
+        "evidenceType": "MACHINE",
+        "coverageState": "COVERED",
+        "caseIds": [
+          "SSC-EV-004",
+          "SSC-EV-003",
+          "SSC-EV-005"
+        ],
+        "missingCaseIds": [],
+        "assertingCaseIds": [
+          "SSC-EV-004"
+        ],
+        "satisfied": true
+      },
+      {
+        "id": "condition.unavailable",
+        "axis": "condition",
+        "value": "unavailable",
+        "evidenceType": "MACHINE",
+        "coverageState": "COVERED",
+        "caseIds": [
+          "SSC-EV-005"
+        ],
+        "missingCaseIds": [],
+        "assertingCaseIds": [
+          "SSC-EV-005"
+        ],
+        "satisfied": true
+      },
+      {
+        "id": "condition.unknown",
+        "axis": "condition",
+        "value": "unknown",
+        "evidenceType": "MACHINE",
+        "coverageState": "COVERED",
+        "caseIds": [
+          "SSC-EV-006",
+          "SSC-EV-007"
+        ],
+        "missingCaseIds": [],
+        "assertingCaseIds": [
+          "SSC-EV-007"
+        ],
+        "satisfied": true
+      },
+      {
+        "id": "severity.none",
+        "axis": "severity",
+        "value": "none",
+        "evidenceType": "MACHINE",
+        "coverageState": "COVERED",
+        "caseIds": [
+          "SSC-EV-005"
+        ],
+        "missingCaseIds": [],
+        "assertingCaseIds": [
+          "SSC-EV-005"
+        ],
+        "satisfied": true
+      },
+      {
+        "id": "severity.minor",
+        "axis": "severity",
+        "value": "minor",
+        "evidenceType": "MACHINE",
+        "coverageState": "COVERED",
+        "caseIds": [
+          "SSC-EV-008",
+          "SSC-EV-009"
+        ],
+        "missingCaseIds": [],
+        "assertingCaseIds": [
+          "SSC-EV-008"
+        ],
+        "satisfied": true
+      },
+      {
+        "id": "severity.major",
+        "axis": "severity",
+        "value": "major",
+        "evidenceType": "MACHINE",
+        "coverageState": "COVERED",
+        "caseIds": [
+          "SSC-EV-009"
+        ],
+        "missingCaseIds": [],
+        "assertingCaseIds": [
+          "SSC-EV-009"
+        ],
+        "satisfied": true
+      },
+      {
+        "id": "severity.critical",
+        "axis": "severity",
+        "value": "critical",
+        "evidenceType": "MACHINE",
+        "coverageState": "COVERED",
+        "caseIds": [
+          "SSC-EV-010",
+          "SSC-EV-011",
+          "SSC-EV-012",
+          "SSC-EV-013"
+        ],
+        "missingCaseIds": [],
+        "assertingCaseIds": [
+          "SSC-EV-010",
+          "SSC-EV-011",
+          "SSC-EV-012",
+          "SSC-EV-013"
+        ],
+        "satisfied": true
+      },
+      {
+        "id": "severity.unknown",
+        "axis": "severity",
+        "value": "unknown",
+        "evidenceType": "MACHINE",
+        "coverageState": "COVERED",
+        "caseIds": [
+          "SSC-EV-014"
+        ],
+        "missingCaseIds": [],
+        "assertingCaseIds": [
+          "SSC-EV-014"
+        ],
+        "satisfied": true
+      },
+      {
+        "id": "confidence.verified",
+        "axis": "confidence",
+        "value": "verified",
+        "evidenceType": "MACHINE",
+        "coverageState": "COVERED",
+        "caseIds": [
+          "SSC-EV-015",
+          "SSC-EV-016",
+          "SSC-EV-017"
+        ],
+        "missingCaseIds": [],
+        "assertingCaseIds": [
+          "SSC-EV-015",
+          "SSC-EV-016",
+          "SSC-EV-017"
+        ],
+        "satisfied": true
+      },
+      {
+        "id": "confidence.supported",
+        "axis": "confidence",
+        "value": "supported",
+        "evidenceType": "MIXED",
+        "coverageState": "COVERED_WITH_LIMITATION",
+        "caseIds": [
+          "SSC-EV-018"
+        ],
+        "missingCaseIds": [],
+        "assertingCaseIds": [
+          "SSC-EV-018"
+        ],
+        "satisfied": true
+      },
+      {
+        "id": "confidence.uncertain",
+        "axis": "confidence",
+        "value": "uncertain",
+        "evidenceType": "HUMAN_REVIEW",
+        "coverageState": "COVERED_WITH_LIMITATION",
+        "caseIds": [
+          "SSC-EV-032"
+        ],
+        "missingCaseIds": [],
+        "assertingCaseIds": [
+          "SSC-EV-032"
+        ],
+        "satisfied": true
+      },
+      {
+        "id": "confidence.unverified",
+        "axis": "confidence",
+        "value": "unverified",
+        "evidenceType": "MACHINE",
+        "coverageState": "COVERED",
+        "caseIds": [
+          "SSC-EV-019",
+          "SSC-EV-020"
+        ],
+        "missingCaseIds": [],
+        "assertingCaseIds": [
+          "SSC-EV-019",
+          "SSC-EV-020"
+        ],
+        "satisfied": true
+      },
+      {
+        "id": "confidence.unknown",
+        "axis": "confidence",
+        "value": "unknown",
+        "evidenceType": "MACHINE",
+        "coverageState": "COVERED",
+        "caseIds": [
+          "SSC-EV-002"
+        ],
+        "missingCaseIds": [],
+        "assertingCaseIds": [
+          "SSC-EV-002"
+        ],
+        "satisfied": true
+      },
+      {
+        "id": "freshness.current",
+        "axis": "freshness",
+        "value": "current",
+        "evidenceType": "MACHINE",
+        "coverageState": "COVERED",
+        "caseIds": [
+          "SSC-EV-021"
+        ],
+        "missingCaseIds": [],
+        "assertingCaseIds": [
+          "SSC-EV-021"
+        ],
+        "satisfied": true
+      },
+      {
+        "id": "freshness.aging",
+        "axis": "freshness",
+        "value": "aging",
+        "evidenceType": "MACHINE",
+        "coverageState": "COVERED",
+        "caseIds": [
+          "SSC-EV-022",
+          "SSC-EV-017",
+          "SSC-EV-001"
+        ],
+        "missingCaseIds": [],
+        "assertingCaseIds": [
+          "SSC-EV-022"
+        ],
+        "satisfied": true
+      },
+      {
+        "id": "freshness.stale",
+        "axis": "freshness",
+        "value": "stale",
+        "evidenceType": "MACHINE",
+        "coverageState": "COVERED",
+        "caseIds": [
+          "SSC-EV-023"
+        ],
+        "missingCaseIds": [],
+        "assertingCaseIds": [
+          "SSC-EV-023"
+        ],
+        "satisfied": true
+      },
+      {
+        "id": "freshness.expired",
+        "axis": "freshness",
+        "value": "expired",
+        "evidenceType": "MACHINE",
+        "coverageState": "COVERED",
+        "caseIds": [
+          "SSC-EV-024",
+          "SSC-EV-023"
+        ],
+        "missingCaseIds": [],
+        "assertingCaseIds": [
+          "SSC-EV-024"
+        ],
+        "satisfied": true
+      },
+      {
+        "id": "freshness.unknown",
+        "axis": "freshness",
+        "value": "unknown",
+        "evidenceType": "MACHINE",
+        "coverageState": "COVERED",
+        "caseIds": [
+          "SSC-EV-025",
+          "SSC-EV-021"
+        ],
+        "missingCaseIds": [],
+        "assertingCaseIds": [
+          "SSC-EV-025"
+        ],
+        "satisfied": true
+      },
+      {
+        "id": "evidence.available",
+        "axis": "evidence",
+        "value": "available",
+        "evidenceType": "MACHINE",
+        "coverageState": "COVERED",
+        "caseIds": [
+          "SSC-EV-017",
+          "SSC-EV-026"
+        ],
+        "missingCaseIds": [],
+        "assertingCaseIds": [
+          "SSC-EV-017",
+          "SSC-EV-026"
+        ],
+        "satisfied": true
+      },
+      {
+        "id": "evidence.partial",
+        "axis": "evidence",
+        "value": "partial",
+        "evidenceType": "MACHINE",
+        "coverageState": "COVERED_WITH_LIMITATION",
+        "caseIds": [
+          "SSC-EV-027"
+        ],
+        "missingCaseIds": [],
+        "assertingCaseIds": [
+          "SSC-EV-027"
+        ],
+        "satisfied": true
+      },
+      {
+        "id": "evidence.unavailable",
+        "axis": "evidence",
+        "value": "unavailable",
+        "evidenceType": "MACHINE",
+        "coverageState": "COVERED",
+        "caseIds": [
+          "SSC-EV-015"
+        ],
+        "missingCaseIds": [],
+        "assertingCaseIds": [
+          "SSC-EV-015"
+        ],
+        "satisfied": true
+      },
+      {
+        "id": "evidence.not-applicable",
+        "axis": "evidence",
+        "value": "not-applicable",
+        "evidenceType": "MACHINE",
+        "coverageState": "COVERED",
+        "caseIds": [
+          "SSC-EV-028",
+          "SSC-EV-029"
+        ],
+        "missingCaseIds": [],
+        "assertingCaseIds": [
+          "SSC-EV-028",
+          "SSC-EV-029"
+        ],
+        "satisfied": true
+      },
+      {
+        "id": "evidence.unknown",
+        "axis": "evidence",
+        "value": "unknown",
+        "evidenceType": "MACHINE",
+        "coverageState": "COVERED",
+        "caseIds": [
+          "SSC-EV-030"
+        ],
+        "missingCaseIds": [],
+        "assertingCaseIds": [
+          "SSC-EV-030"
+        ],
+        "satisfied": true
+      }
+    ]
+  },
+  "reviewRequiredCoverage": {
+    "expected": [
+      "RR-1",
+      "RR-2",
+      "RR-3",
+      "RR-4",
+      "RR-5",
+      "RR-6"
+    ],
+    "covered": [
+      "RR-1",
+      "RR-2",
+      "RR-3",
+      "RR-4",
+      "RR-5",
+      "RR-6"
+    ],
+    "satisfied": true
+  },
+  "failClosedCoverage": {
+    "expected": [
+      "FC-1",
+      "FC-2",
+      "FC-3",
+      "FC-4",
+      "FC-5",
+      "FC-6",
+      "FC-7",
+      "FC-8"
+    ],
+    "covered": [
+      "FC-1",
+      "FC-2",
+      "FC-3",
+      "FC-4",
+      "FC-5",
+      "FC-6",
+      "FC-7",
+      "FC-8"
+    ],
+    "satisfied": true
+  },
+  "sourceDescriptionCoverage": {
+    "expected": 25,
+    "described": 25,
+    "missing": [],
+    "satisfied": true,
+    "boundary": "Existence of a textual description at the semantic source layer only. Proves no comprehension, no accessibility, and no conformance."
+  },
+  "deEnStructuralCoverage": {
+    "expected": 25,
+    "rows": 25,
+    "englishLabels": 25,
+    "germanLabels": 25,
+    "duplicateIdentifiers": [],
+    "unauthorizedIdentifiers": [],
+    "missingIdentifiers": [],
+    "rowsWithoutEnglishLabel": [],
+    "rowsWithoutGermanLabel": [],
+    "satisfied": true,
+    "boundary": "Structural 1:1 coverage only. Semantic equivalence, comprehension, and cultural suitability of the labels are not machine-checked and are not asserted."
+  },
+  "failures": [],
+  "blocked": [],
+  "executionErrors": [],
+  "resultStatus": "Pass with limitations",
+  "coverageStatesWithLimitation": [
+    "COVERED_WITH_LIMITATION"
+  ],
+  "scoreProduced": false,
+  "boundaries": {
+    "maturityState": "Experimental",
+    "approvalState": "Unapproved",
+    "candidateStatus": "Not Candidate",
+    "admittedAccessibilityEvidenceLevel": "AE-0",
+    "evidenceLevelProduced": "Provisional AE-1 candidate — pending fresh independent review",
+    "claims": "none",
+    "conformanceStatement": "none",
+    "humanApproval": "none",
+    "note": "A passing run is machine evidence for the named inputs at the named revision. It is not accessibility, not a WCAG statement, not admitted AE-1, not a Candidate award, and not human approval. No numeric or percentage accessibility score exists."
+  }
+}

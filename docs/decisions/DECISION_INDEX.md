@@ -11,8 +11,8 @@ authorized work packages.
 
 ## Register scope
 
-- Decision range: DEC-S-001 … DEC-S-124
-- Number of decisions: 124
+- Decision range: DEC-S-001 … DEC-S-125
+- Number of decisions: 125
 - Decision record format: index entries, plus ADR files where a decision warrants an
   Architecture Decision Record. **ADR range: ADR-0001 … ADR-0003 (3 ADRs).**
 - [ADR-0001 — Machine-Readable Token Source Format](ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)
@@ -39,6 +39,7 @@ authorized work packages.
 | Offline validator implementation decision | DEC-S-093 … DEC-S-104 | CDS-WP-013 | Pinned Python/jsonschema/rfc8785 stack, the `python -m tools.cds_validator` CLI contract, the single duplicate-key loader, the local-only schema registry, separated V1–V4 states, bounded DTCG coverage, declared-graph enforcement, digest boundaries, the CDS-owned result schema, expected/actual harness semantics, executor-produced evidence, and the Candidate gate (ADR-0003). |
 | Semantic status foundation decision | DEC-S-105 … DEC-S-114 | CDS-WP-014 | Five independent status axes with a fixed 25-value vocabulary and explicit `unknown`, no degraded-knowledge-as-success, no aggregate health score, explicit combination/conflict rules, language-neutral IDs with meaning-preserving localization, text-first accessible meaning, truth-preserving downstream mappings, and the gated first Candidate plan (no promotion). |
 | Semantic status source and evidence decision | DEC-S-115 … DEC-S-124 | CDS-WP-015 | The `semantic/status` Experimental source set (5 axes, 25 non-visual tokens, `status.<axis>.<value>` with 1:1 vocabulary traceability), fail-closed status validation, separate meaning-preserving DE/EN terminology, immutable WP-013 baseline cases, executor-produced evidence class, the Draft-only dossier rule, identity/digest alignment, and the no-premature-consumption boundary. |
+| Accessibility / maturity / channel boundary decision | DEC-S-125 | CDS-WP-016 | Channel Accessibility Profiles gate channel artifacts, not channel-independent Layer-3 semantic sources and contracts; evidence transfers in neither direction; no waiver of any accessibility requirement and no Candidate award. |
 
 None of these types is an implementation decision. Logical architecture decisions
 define structure, responsibility, and flow — they select no technology, format,
@@ -3879,3 +3880,81 @@ before the explicit Candidate gate succeeds.
 - Premature consumption is a registered risk (RISK-097); the approval-statement
   check (CDS-V4-STATUS-IDENTITY) rejects embedded Candidate/Approved claims at the
   source.
+
+---
+
+## DEC-S-125 — Channel accessibility profiles gate channel artifacts, not channel-independent semantic sources
+
+- **Status:** Accepted
+- **Date:** 2026-08-17
+- **Type:** Accessibility / maturity / channel boundary decision
+- **Work package:** CDS-WP-016
+- **Human-Maintainer authorization:** 2026-08-17 (CDS-WP-016 Candidate
+  Accessibility Gate Remediation), accepting the Nova resolution of GAP-B-07.
+
+### Decision
+
+1. **Channel Accessibility Profiles govern channel artifacts.** A Channel
+   Accessibility Profile applies when an artifact **instantiates, transforms,
+   renders, or communicates** CDS meaning through a named CDS channel.
+2. **A channel-independent Layer-3 Semantic Source or Contract may pass its
+   applicable source-level Candidate accessibility gate without being assigned
+   an artificial channel.** Requiring a channel profile for an artifact that is
+   not a channel representation would force a false channel declaration and
+   produce an untruthful scope, which the accessibility policy forbids more
+   fundamentally than it requires a profile.
+3. **No source-level evidence transfers into a channel representation.**
+4. **No channel evidence transfers back to the source.**
+5. **Every later Channel artifact remains subject to its applicable Channel
+   Accessibility Profile before Candidate or Stable** — with its own target, its
+   own revision-bound evidence, and its own known limitations.
+6. **This decision grants no Candidate status and waives no accessibility
+   requirement.**
+
+### Rationale
+
+The Semantic Status Foundation is a channel-independent meaning contract: it
+defines what status values mean and what every representation must preserve, and
+it deliberately ships no colour, icon, component, layout, or rendered output. It
+therefore has no channel, and inventing one for it would misdescribe the artifact
+in a normative record. The accessibility obligations that genuinely apply to it —
+textual meaning at the source, `unknown` remaining explicit, DE/EN parity,
+truthful summaries, and the review-required and fail-closed rules — are all
+source-level and are assessable without a channel.
+
+The obligations that genuinely need a channel — contrast, focus visibility,
+keyboard operation, assistive-technology exposure, reflow, print/greyscale
+behaviour — are exactly the ones that only become assessable once a
+representation exists, and they are preserved unchanged for that moment.
+
+### Consequences
+
+- **GAP-B-07 is clarified.** Channel-profile applicability for the Semantic
+  Status Candidate is no longer ambiguous.
+- Wording in the
+  [Accessibility Evidence and Claims Model](../governance/ACCESSIBILITY_EVIDENCE_AND_CLAIMS_MODEL.md)
+  that over-generalized "non-interactive artifacts require a channel profile
+  first" is **narrowly reconciled** — narrowed in reach, not weakened in force.
+  The [Accessibility Channel Profiles](../governance/ACCESSIBILITY_CHANNEL_PROFILES.md)
+  document is unchanged.
+- **DEC-S-058 remains in force**: each channel still requires an explicit
+  accessibility profile before *its* artifacts may become Candidate or Stable,
+  and non-web channels are still never presented as WCAG-conformant.
+- **DEC-S-029 remains in force**: meaning stays constant across channels; a
+  channel that cannot preserve a distinction must declare the limitation rather
+  than drop it silently.
+- **DEC-S-052 remains in force**: evidence never transfers across artifact,
+  revision, environment, channel, scope, or consumer.
+- Candidate still requires the applicable **source-level** accessibility
+  evidence, including AE-1; the Candidate accessibility gate is unchanged in
+  substance.
+- This decision creates **no new channel**, authorizes **no UI**, **no
+  repository presentation**, **no PDF**, **no Product Profile**, and **no
+  consumer evidence**.
+
+### Boundary
+
+Accepted here means accepted as a governance decision record. It awards no
+maturity: Candidate remains **No**, maturity remains **Experimental**, approval
+remains **Unapproved**, the admitted accessibility evidence level of every CDS
+artifact remains **AE-0**, and no claim of any kind becomes valid.
