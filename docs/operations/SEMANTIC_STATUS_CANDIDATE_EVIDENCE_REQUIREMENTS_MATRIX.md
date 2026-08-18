@@ -138,9 +138,16 @@ Produced by `RUNNER` and recorded in `RESULTS`:
 
 - It **awards no Candidate status.** Candidate remains **No**; maturity remains
   **Experimental**; approval remains **Unapproved**.
-- It **admits no AE-1.** The evidence produced alongside it is a *provisional*
-  AE-1 package pending a fresh independent review; the admitted accessibility
-  evidence level of every CDS artifact remains **AE-0**.
+- It **admits no AE-1.** The admission was a separate Human-Maintainer decision:
+  Evidence 002 was independently reviewed **PASS**, integrated, and admitted at
+  **AE-1** as `AE1-CDS-WP016-SEMSTATUS-002` for the channel-independent
+  source/contract scope only. This matrix neither produced nor granted that, and
+  the admitted accessibility evidence level of every **other** CDS artifact
+  remains **AE-0**.
+- It **is evidence mapping and supporting material, never authority.** A row
+  marked `COVERED` records that a requirement is mapped to a check, not that a
+  criterion passed and not that a user need is met. The coverage below is
+  unchanged by the AE-1 admission.
 - It **creates no claim** of any kind.
 - It **replaces no normative source.** Where this matrix and the
   [Status Axis Vocabulary](../foundations/STATUS_AXIS_VOCABULARY.md) disagree,

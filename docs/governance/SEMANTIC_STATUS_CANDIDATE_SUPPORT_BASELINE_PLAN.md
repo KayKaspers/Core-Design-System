@@ -20,7 +20,12 @@
 > **A `Current` baseline is not an accessibility pass.**
 
 Declaring a baseline records *what future evidence will be produced against*. It
-establishes nothing about any artifact. **Every CDS artifact remains AE-0.**
+establishes nothing about any artifact. Every CDS artifact remains **AE-0**, with
+exactly one bounded exception — the channel-independent Semantic Status Layer-3
+source/contract family holds admitted **AE-1**
+(`AE1-CDS-WP016-SEMSTATUS-002`, source scope only), which was **not** produced in
+any baseline environment. **No baseline environment has been exercised**, and no
+environment is supported.
 
 ## What this plan does
 
@@ -65,7 +70,7 @@ waiver.)*
 | 9 | Forced colors / high contrast (Windows) | **Representation-triggered** | Requires colour. The Candidate defines **no colour value and no colour role**, which is what makes forced-colors survivable later. |
 | 10 | Reduced motion | **Representation-triggered** | Requires motion. The Candidate defines none; motion is contracted as a redundant modality only, so removing it can never remove meaning. |
 | 11 | Focus and keyboard behaviour (order, visibility, management, no trap) | **Representation-triggered** | Requires focus. |
-| 12 | Status, alert, and dynamic-content communication reaching assistive technology (the Unknown invariant, DEC-S-056) | **Representation-triggered** — with a **source-level precondition applicable now** | The AT-exposure half needs a live region and a rendering. The precondition half — that the distinctions exist at all, that `unknown` is explicit on every axis, and that `stale`/`unverified` cannot be collapsed — is exactly what the CDS-WP-016 provisional AE-1 evidence covers. **The precondition being met is not the criterion being met.** |
+| 12 | Status, alert, and dynamic-content communication reaching assistive technology (the Unknown invariant, DEC-S-056) | **Representation-triggered** — with a **source-level precondition applicable now** | The AT-exposure half needs a live region and a rendering. The precondition half — that the distinctions exist at all, that `unknown` is explicit on every axis, and that `stale`/`unverified` cannot be collapsed — is exactly what the CDS-WP-016 admitted AE-1 evidence covers. **The precondition being met is not the criterion being met.** |
 | 13 | **DE and EN** for the declared scope | **Applicable now** | The terminology mapping is DE/EN and structurally verified: 25/25 identifiers, 25 EN labels, 25 DE labels, no duplicate, no missing, no unauthorized. |
 
 ### Counts
@@ -164,9 +169,13 @@ the last three are specific to this Candidate.
   in any combination of them. It claims nothing.
 - It **does not promote** anything. Candidate remains **No**, maturity remains
   **Experimental**, approval remains **Unapproved**.
-- It **does not admit AE-1.** The evidence it references is a *provisional* AE-1
-  package pending a fresh independent review; the admitted accessibility evidence
-  level of every CDS artifact remains **AE-0**.
+- It **admits nothing.** The AE-1 admission it references was made elsewhere:
+  Evidence 002 was independently reviewed **PASS**, integrated, and admitted at
+  **AE-1** by the Human Maintainer for the channel-independent source/contract
+  scope only (`AE1-CDS-WP016-SEMSTATUS-002`). This plan neither produced nor
+  granted it. The admitted accessibility evidence level of every **other** CDS
+  artifact remains **AE-0**, and the admission establishes **no AE-2, no AE-3, and
+  no support claim** for any environment named below.
 - It **does not select** a test tool, install anything, or run any test.
 
 ## Related documents

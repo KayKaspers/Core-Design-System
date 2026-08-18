@@ -29,7 +29,7 @@ no design value, no token, no component, and no test tool.
 | --- | --- | --- |
 | **Target** | The standard CDS aims at | WCAG 2.2 Level AA for the applicable web scope (DEC-S-049) |
 | **Support baseline** | The environments future evidence will be produced against | **A11Y-BL-001 (this document), declared and committed (CDS-WP-010)** |
-| **Evidence** | Results of actually testing an artifact in an environment | **None — every artifact is AE-0** |
+| **Evidence** | Results of actually testing an artifact in an environment | **None produced in any baseline environment.** Every artifact is AE-0 except the channel-independent Semantic Status Layer-3 source/contract family, which holds admitted **AE-1** structural and automated evidence that references this baseline **without exercising any environment in it** |
 | **Support / conformance claim** | A stated, evidence-backed assertion about real environments | **None valid, for anyone** (DEC-S-044) |
 
 **A declared baseline proves nothing** (DEC-S-050). It says *what will be tested*,

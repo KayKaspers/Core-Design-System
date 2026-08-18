@@ -205,7 +205,8 @@ today, even though no artifact exists to evaluate.
 
 This is deliberate: `Not yet assessable` would describe the *evidence* state, and
 this matrix records *policy* state. The absence of implementation is captured by
-the evidence model (all artifacts are AE-0), not by weakening the mapping.
+the evidence model (all artifacts are AE-0 apart from one bounded admitted AE-1
+scope), not by weakening the mapping.
 
 ## Open applicability questions
 
@@ -225,11 +226,14 @@ the evidence model (all artifacts are AE-0), not by weakening the mapping.
 
 ## Limitations
 
-- **Policy mapping only.** No artifact has been evaluated; no pass/fail exists.
+- **Policy mapping only.** No artifact has been evaluated **against any criterion in
+  this matrix**; no pass/fail exists.
 - Responsibility assignments are CDS policy judgements, not standard text.
 - A shared criterion cannot be satisfied by CDS alone, however good the contract.
-- Evidence levels are future requirements; **all CDS artifacts are currently
-  AE-0**.
+- Evidence levels are future requirements; **all CDS artifacts are currently AE-0
+  except the channel-independent Semantic Status Layer-3 source/contract family**,
+  which holds admitted **AE-1** structural and automated evidence for its source
+  scope only. No criterion in this matrix is thereby demonstrated as met.
 - WCAG conformance would still not mean accessible - the Recommendation states
   that even AAA will not serve every disability.
 - Source status decays; re-verify before relying on it (RISK-012 source

@@ -67,7 +67,7 @@ The pilot may begin only when **all** hold:
 | --- | --- | --- |
 | 8 | Accessibility target and evidence method decided | **`Accessibility target defined` — met by the Human-Maintainer commit of CDS-WP-007.** The target (**WCAG 2.2 Level AA**, DEC-S-049, DEC-S-060) and the evidence method (**AE-0 … AE-4**, Evidence and Claims Model) exist. Claude did not declare this met; **the commit did.** |
 | 4 | CDS-WP-005 architecture approved | **Pending** |
-| 5 | Foundations at Candidate maturity | **Unmet — structurally.** No artifact is Candidate; the Candidate accessibility gate cannot be passed (AE-0 — no accessibility evidence exists; the support baseline A11Y-BL-001 is committed, but a baseline is not evidence). |
+| 5 | Foundations at Candidate maturity | **Unmet.** No artifact is Candidate. For the Semantic Status source/contract family the accessibility-gate evidence elements are supported (admitted source-level **AE-1**), but Nova Candidate review and Human-Maintainer approval remain open; every other artifact is AE-0. The support baseline A11Y-BL-001 is committed, but a baseline is not evidence. |
 
 **Accessibility evidence remains not satisfied.** Criterion 8 concerns a
 *decision*, not evidence — and Group E still cannot be evidenced. See the
@@ -116,7 +116,9 @@ Evidence must be produced for the pilot to be assessable. Required:
    [Accessibility Evidence and Claims Model](ACCESSIBILITY_EVIDENCE_AND_CLAIMS_MODEL.md):
    **AE-1 + AE-2 + AE-3** against a declared support baseline for CDS pilot
    artifacts, and **AE-4** for any CoreOps pilot claim.
-   **None of this evidence exists** — every artifact is AE-0 — so **no
+   **None of this evidence exists for any pilot artifact** — the only admitted
+   package is source-level AE-1 for the Semantic Status source/contract family,
+   which does not transfer to a pilot, a consumer, or a product — so **no
    accessibility claim may be made** (DEC-S-050).
 6. **Keyboard and focus verification** — CR-021.
 7. **State and status coverage** — every state in CR-015 demonstrably reachable

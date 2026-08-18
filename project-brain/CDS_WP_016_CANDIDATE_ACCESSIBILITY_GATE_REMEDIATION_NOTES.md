@@ -698,3 +698,235 @@ different states and are not conflated.
 
 **No Git write of any kind was performed in R2. The index remained CLEAN. No
 staging occurred. Historical R1 / R1.1 / R1.2 sections above are unchanged.**
+
+## AE-1 Admission and Governance Reconciliation R2
+
+*Additive section. Every section above is unchanged and remains the record of what
+was true when it was written — including its `Admitted accessibility evidence level
+= AE-0` line, which was correct at that time and is superseded for present-day
+reading by this section.*
+
+### R1 fail-closed discovery — accepted
+
+| Item | Value |
+| --- | --- |
+| R1 decision | `BLOCKED_ADMISSION_RECONCILIATION_SCOPE_EXPANSION_REQUIRED` |
+| R1 mutations | **0 modified · 0 added · 0 staged · 0 Git writes** |
+| R1 discovery | **19** stale `CURRENT_STATE_MIRROR` paths outside the original 14 Allowed Existing Files |
+| Nova adjudication | Accepted; scope expanded to **33 existing + 2 new = 35** |
+
+R1 additionally cleared two paths that the earlier planning inventory had listed:
+`ACCESSIBILITY_CHANNEL_PROFILES.md` (channel-scoped AE-0 remains true — source
+evidence is not channel evidence, DEC-S-125) and `ACCESSIBILITY_RESPONSIBILITY_MODEL.md`
+(normative RACI rule, not a state mirror). Both remain **byte-identical**.
+
+### Revision and evidence identity
+
+| Item | Value |
+| --- | --- |
+| Implementation commit | `e6cb6fae63b1548ce4dabb7f5548116e4c61d622` |
+| Evidence integration commit | `43a512892e148fc53a5f5bee522ef6c30d848f19` |
+| Evidence ID | `AE1-CDS-WP016-SEMSTATUS-002` |
+| Source revision | `semantic-status-rev-0001` |
+| Fresh independent **implementation** review | **PASS WITH NOTES** |
+| Fresh independent **evidence** review | **PASS** |
+| F-003 revision binding | **SATISFIED** |
+| F-003 independent evidence review | **SATISFIED** |
+| GAP-H-02 | **CLOSED BY EVIDENCE** |
+| Nova admission recommendation | **GO — admission recommended** |
+| **Human-Maintainer AE-1 admission** | **AUTHORIZED / APPROVED, 2026-08-17** |
+| Admitted level | **AE-1** |
+| Admitted scope | channel-independent Semantic Status Layer-3 source/contract family **only** |
+
+### Governance state after the admission
+
+| Item | Value |
+| --- | --- |
+| Candidate | **No** |
+| Maturity | **Experimental** |
+| Artifact approval | **Unapproved** |
+| Claims | **None** |
+| Publication | `Private Development` |
+| Pilot | inactive |
+| CDS-WP-017 | inactive |
+| Every other CDS artifact | **AE-0** |
+| AE-2 / AE-3 / AE-4 | **none, anywhere** |
+| **Candidate Maturity Re-Review** | **NOT YET PERFORMED** |
+| **Human-Maintainer Candidate approval** | **NOT GRANTED** |
+
+An AE-1 admission is **not** a Candidate award. Evidence is not authority, and a
+review is not authority.
+
+### R2 scope executed
+
+**33 modified existing files · 2 new files · 0 deleted · 0 staged.**
+
+The two new files are the
+[Review Provenance Record](../docs/reviews/WP016_ACCESSIBILITY_REMEDIATION_REVIEW_PROVENANCE.md)
+(post-hoc repository provenance, explicitly not an original review artifact) and the
+[AE-1 Admission Record](../docs/governance/SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md)
+(authoritative for the fact and scope of this admission only).
+
+Decision, Risk, and ADR **identities are unchanged**: 125 Decisions, 97 Risks
+(90 Monitored · 7 Mitigating · 0 Accepted · 0 Closed), 3 ADRs. No `DEC-S-126`, no
+`RISK-098`, no `ADR-0004`. `DECISION_INDEX.md` received **additive temporal
+annotations only**; DEC-S-125 remains **Accepted** with its normative text intact.
+
+**No Git write of any kind was performed in R2. The index remained CLEAN. Evidence
+001 and Evidence 002 remained byte-identical.**
+
+## AE-1 Admission Governance Reconciliation R2.1 — Final Mirror Addendum
+
+*Additive. R1 and R2 history above is unchanged.*
+
+### Why R2.1 exists
+
+| Item | Value |
+| --- | --- |
+| R2 result | `BLOCKED_R2_FURTHER_SCOPE_REQUIRED` |
+| R2 implementation candidate | **33 modified + 2 untracked = 35** — complete and integrity-verified |
+| R2 POST semantic audit | found **exactly two** further stale current-state mirrors outside the R2 scope |
+
+The two paths:
+
+- `docs/governance/GOVERNANCE_OPERATING_MODEL.md` — asserted
+  "No accessibility evidence has been produced: every CDS artifact is AE-0",
+  followed by "While no evidence exists:".
+- `docs/governance/RELEASE_AND_CHANGE_CONTROL_POLICY.md` — justified release
+  unreachability partly with "no accessibility evidence exists — every CDS artifact
+  is AE-0".
+
+R2 did **not** self-expand into them. Nova reviewed both findings, accepted them,
+and authorized **status-only** current-state reconciliation for exactly these two
+files.
+
+### R2.1 changes
+
+| File | Change |
+| --- | --- |
+| `GOVERNANCE_OPERATING_MODEL.md` | Section retitled to an **open, partially evidenced** dependency; names the one admitted source-level AE-1; states all other scopes remain AE-0; states the dependency stays **open** because no AE-2/AE-3/AE-4, channel, or consumer evidence follows. Governance architecture, authority model, gates, roles, tracks, exception and approval rules **unchanged**. |
+| `RELEASE_AND_CHANGE_CONTROL_POLICY.md` | Release unreachability restated with two independent reasons: licensing (requirement 7) and no Stable-eligible artifact. The Stable requirements named (Candidate gate, complete AE-2, AE-3 against the declared baseline) were **verified against the Accessibility Evidence and Claims Model**, not invented. Release levels, gate requirements, approval authority, change control, licensing and Stable requirements **unchanged**. |
+
+`AE-1 admitted != Stable-ready != Release-ready.` No release, claim, or publication
+change is enabled.
+
+### Historical inventory delta — recorded truthfully
+
+`project-brain/CDS_WP_016_AE1_FUTURE_MIRROR_INVENTORY_CORRECTION_R1_NOTES.md` is
+**unchanged** and remains historical operational planning evidence. Its locked
+inventory contained **33** paths.
+
+The actual AE-0 → AE-1 transition exposed **two live current-state mirrors that the
+inventory did not contain** (the two files above). The inventory is **not**
+retroactively rewritten and never claimed 35.
+
+| Item | Count |
+| --- | --- |
+| Historical planning inventory | **33** paths |
+| Of those, in the final reconciliation scope | 33 (12 in the original R1 scope, 21 adjudicated in R2 — of which 19 required change and 2 were verified as still true) |
+| Newly discovered live mirrors not in the inventory | **2** |
+| Final modified existing files | **35** |
+| New additive records | **2** |
+| **Final candidate total** | **37** |
+
+**A historical plan is not the final discovered transition scope.** The delta is a
+finding about the plan, not a defect in the reconciliation.
+
+### State after R2.1
+
+No Evidence change · no Decision ID · no Risk ID · no ADR ID · Candidate **No** ·
+Maturity **Experimental** · Artifact Approval **Unapproved** · Claims **None** ·
+Pilot inactive · WP-017 inactive.
+
+Tests: **deferred to the Human-Maintainer integration gate** — the validator
+dependency environment is unavailable and no installation is authorized. All
+`tools/**`, `tests/**`, `schemas/**`, `tokens/**`, and lock bytes are hash-verified
+unchanged.
+
+**No Git write of any kind was performed in R2.1. The index remained CLEAN.**
+
+## Fresh Independent R2.1 Review Rework — R2.2
+
+*(Rework of the uncommitted R2.1 candidate, not a new work package and not a
+re-implementation. The independent reviewer changed 0 files, staged 0 files, made
+0 commits, and moved 0 remote refs.)*
+
+### Independent review input
+
+| Item | Value |
+| --- | --- |
+| Verdict | **REWORK REQUIRED** |
+| Commit recommendation | **`RECONCILIATION_COMMIT_NOT_RECOMMENDED`** |
+| Post-integration readiness | **`NOT_READY_FOR_POST_INTEGRATION_NOVA_CANDIDATE_MATURITY_REVIEW`** |
+| Candidate promotion readiness | **`NOT_READY_FOR_CANDIDATE_PROMOTION`** |
+
+### Findings and Nova adjudication
+
+| ID | Severity | Adjudication | Scope | Action taken in R2.2 |
+| --- | --- | --- | --- | --- |
+| **F-R21-001** | High (commit-blocking) | **Accepted** | In scope | `CONSUMER_VALIDATION_PLAN.md`: the active AE table defined **AE-1** as *"declared intent and mapping"*, contradicting the authoritative **Structural and Automated Evidence**. Row realigned to the Evidence Model. |
+| **F-R21-002** | Medium (commit-blocking) | **Accepted** | In scope | `ACCESSIBILITY_EVIDENCE_AND_CLAIMS_MODEL.md`: the current-state sentence assigned Human-Maintainer approval to gate **element 8**. Element 8 is the **regression plan**; element 9 is the approval. Current-state sentence corrected to **element 9**; the normative gate table was not touched. |
+| **F-R21-003** | High (commit-blocking) | **Accepted** | **Scope expanded by seven existing Candidate-gate documents** | Seven files carried stale *provisional / pending fresh independent review / not admitted* current-state wording. Status-only reconciliation applied to each. |
+| **F-R21-004** | Low | **Accepted** | In scope | `FIRST_SEMANTIC_STATUS_CANDIDATE_PLAN.md`: **seven** gate rows described Review Event A as **PASS**. Corrected to **PASS WITH NOTES**. Review Event B remains **PASS**; no global replacement was performed. |
+| **F-R21-005** | Low | **Accepted** | In scope | `CONSUMER_VALIDATION_PLAN.md`: **AE-2** was defined as *"structured self-assessment against the target"*, contradicting **Manual Interaction Evidence**. Row realigned. |
+| **OBS-002** | Observation | **Closed — valid current statement** | No action | `ADOPTION_CONFORMANCE_AND_CLAIMS_POLICY.md` unchanged. Source AE-1 creates neither AE-2 nor AE-3. |
+| **OBS-003** | Observation | **Closed — contextually scoped and true** | No action | The WCAG matrix phrase *"Nothing has been tested."* is scoped to *no artifact evaluated against a criterion in that matrix* and was **not** modified. |
+
+### Seven newly authorized status-only files
+
+| # | Path | Preserved unchanged |
+| --- | --- | --- |
+| 1 | `docs/governance/SEMANTIC_STATUS_CANDIDATE_ACCESSIBILITY_RESPONSIBILITY_MAPPING.md` | Responsibility assignments, RACI meaning, owner boundaries, consumer and channel responsibility, counts (5 `CDS` / 8 `Shared` / 0 `Consumer` / 0 N-A / 13 total) |
+| 2 | `docs/governance/SEMANTIC_STATUS_CANDIDATE_AE2_EVIDENCE_PLAN.md` | AE-2 does **not** exist; no AE-2 execution occurred; the reasoned plan remains the element-5 basis |
+| 3 | `docs/governance/SEMANTIC_STATUS_CANDIDATE_SUPPORT_BASELINE_PLAN.md` | A11Y-BL-001 composition, baseline ≠ evidence, no environment exercised, no support claim |
+| 4 | `docs/governance/SEMANTIC_STATUS_CANDIDATE_ACCESSIBILITY_LIMITATIONS.md` | **16** records · **0** Critical · **11** Significant · **5** Minor; no record deleted, no severity changed |
+| 5 | `docs/operations/SEMANTIC_STATUS_CANDIDATE_EVIDENCE_REQUIREMENTS_MATRIX.md` | 25 rows · 22 `COVERED` · 3 `COVERED_WITH_LIMITATION` · 0 `UNMAPPED`; no table row altered |
+| 6 | `docs/governance/SEMANTIC_STATUS_CANDIDATE_WCAG_APPLICABILITY_MAPPING.md` | Applicability classifications and counts (5 / 30 / 20 / 1 historical / 56 displayed); no criterion pass or fail asserted |
+| 7 | `docs/governance/SEMANTIC_STATUS_CANDIDATE_ACCESSIBILITY_REGRESSION_PLAN.md` | All **15** triggers T-01 … T-15 and their semantics; no trigger row altered |
+
+### SSC-LIM-015 — explicit reassessment, not deletion
+
+Its creation-time expiry condition was *"on completion of the fresh independent
+review"*. **That trigger fired.** An additive **Post-review disposition**
+subsection was appended inside the record. It states that Review Event A returned
+**PASS WITH NOTES**, Review Event B returned **PASS**, Evidence 002 was
+independently reproduced, and the package was later admitted at **AE-1** — and
+that the creation-time phrase *"provisional and not admitted"* is **historical
+creation-state, not current state**.
+
+The record was **not** deleted, its severity remains **Significant**, and it
+remains one of the 16. The single-executor authorship fact remains documented.
+**Reassessment performed is not limitation deleted**, and **independence
+requirement satisfied is not executor authorship never existed.** No waiver, no
+silent closure, no severity downgrade.
+
+### Candidate scope change
+
+| Item | R2.1 | R2.2 |
+| --- | --- | --- |
+| Modified tracked | 35 | **42** |
+| Untracked additive records | 2 | **2** |
+| Deleted | 0 | **0** |
+| Staged | 0 | **0** |
+| **Total** | **37** | **44** |
+
+Of the original 37 R2.1 candidate files, exactly **four** changed in R2.2
+(`CONSUMER_VALIDATION_PLAN.md`, `ACCESSIBILITY_EVIDENCE_AND_CLAIMS_MODEL.md`,
+`FIRST_SEMANTIC_STATUS_CANDIDATE_PLAN.md`, and these notes); the other **33** are
+byte-identical PRE/POST, including both untracked additive records.
+
+### State after R2.2
+
+No Evidence mutation · no Decision ID · no Risk ID · no ADR ID · Candidate **No** ·
+Maturity **Experimental** · Artifact Approval **Unapproved** · Claims **None** ·
+Pilot inactive · WP-017 inactive.
+
+Evidence 001 (3 files) and Evidence 002 (3 files) are hash-verified **unchanged**,
+as are `tools/**`, `tests/**`, `schemas/**`, `tokens/**`, and
+`requirements-validator.lock`.
+
+Tests: **deferred to the Human-Maintainer integration gate** — the validator
+dependency environment (`jsonschema`, `rfc8785`) is unavailable and no
+installation is authorized.
+
+**No Git write of any kind was performed in R2.2. The index remained CLEAN.**

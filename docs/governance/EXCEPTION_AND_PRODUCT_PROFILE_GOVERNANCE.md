@@ -155,7 +155,10 @@ not scoped.
 
 Element 7 **still cannot be satisfied** — so **no Product Profile can be approved
 today**. *(Reconciled by CDS-WP-007: the obstacle is no longer a missing target
-but missing evidence. Every artifact is **AE-0**; the support baseline
+but missing evidence. Every artifact is **AE-0** except the channel-independent
+Semantic Status Layer-3 source/contract family, whose admitted **AE-1** source-level
+evidence is **not** scope-appropriate evidence for any Product Profile; the support
+baseline
 **A11Y-BL-001 is declared and committed** (CDS-WP-010), and a baseline is not
 evidence — DEC-S-050, RISK-048.)* This is recorded, not worked around.
 

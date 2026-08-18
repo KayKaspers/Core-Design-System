@@ -25,7 +25,8 @@ Notes** (CDS-WP-009; DEC-S-061, DEC-S-062).
 Governance, scope, architecture, requirements, and accessibility policy are
 established; the Foundation is closed with mandatory notes; the committed governance
 is operationalized; the accessibility support baseline **A11Y-BL-001** is declared
-and committed (CDS-WP-010, **no evidence executed — every artifact AE-0**); and the
+and committed (CDS-WP-010, **no evidence executed in any baseline environment**; every
+artifact AE-0 except the Semantic Status source/contract family at admitted **AE-1**); and the
 **machine-readable source format is decided** (CDS-WP-011: DTCG 2025.10-based CDS
 profile, strict JSON, ADR-0001); and the **machine-readable bootstrap is implemented**
 (CDS-WP-012: 4 schemas, 15 fixtures, V1–V4 validation contract, RFC 8785/SHA-256, ADR-0002);
@@ -42,8 +43,9 @@ harness matches, 25/25 DE/EN terminology, Draft Candidate Dossier) —
 value**. That WP-013 and WP-015 evidence has since been **independently reviewed by
 CDS-WP-016**: **Independent Review PASS**, **Candidate Recommendation GO** — and
 **GO is not a Candidate award**, so Semantic Status remains **Experimental**,
-**Candidate No**, every artifact **AE-0**, with the **Nova and Human-Maintainer
-Candidate authority gates still open**. Concrete visual design values remain
+**Candidate No**, with admitted evidence **AE-1 for the Semantic Status
+source/contract family only** (every other artifact **AE-0**) and the **Nova and
+Human-Maintainer Candidate authority gates still open**. Concrete visual design values remain
 unauthorized (DEC-S-003). The current authorized work package is **CDS-WP-016 —
 Semantic Status Foundation Independent Evidence Review and Candidate Gate**; its
 review work is executed and its Candidate authority closure is open.
@@ -622,8 +624,9 @@ and token sets** (CR-002, CR-037) — CDS arrives after them.
 **Pilot contract:** committed and normative (CDS-WP-004). **Not active; entry
 criteria unmet** — CDS-WP-005 architecture and a maturity model are missing; the
 accessibility target (CR-024) is decided (WCAG 2.2 Level AA, CDS-WP-007), but
-**no accessibility evidence exists**. Neither existence nor completion implies
-adoption or conformance (RISK-018).
+**no pilot-applicable accessibility evidence exists** (the one admitted package is
+source-level AE-1 and does not transfer to a consumer). Neither existence nor
+completion implies adoption or conformance (RISK-018).
 
 **Hypothesis consumer layer:** HYP-002, HYP-003, HYP-005 are *Confirmed consumer
 need*; HYP-007 needs *Human validation*; the rest are partially supported.
@@ -745,7 +748,8 @@ green build is not consent.
 publication-state change is possible · no CDS release is possible.** The
 accessibility target now exists (CR-024 resolved, DEC-S-049), so the blocker
 moved from *"against what?"* to *"show it"*: the remaining obstacles are the
-**absent accessibility evidence** (every artifact is AE-0; the support baseline
+**largely absent accessibility evidence** (every artifact is AE-0 apart from one
+admitted source-level AE-1 scope; no AE-2/AE-3/AE-4 exists; the support baseline
 A11Y-BL-001 is committed but is not evidence — RISK-041, RISK-044) and the
 **absent licensing decisions** (DEC-S-047,
 RISK-038). No gate opened.
@@ -790,20 +794,23 @@ source set is implemented (CDS-WP-015, `semantic/status`, Experimental, committe
 executor-produced 24/24 evidence, Not Candidate). That WP-013 and WP-015 evidence
 has since been **independently reviewed by CDS-WP-016** — **Independent Review
 PASS**, **Candidate Recommendation GO** — and **GO is not a Candidate award**:
-Candidate remains **No**, maturity **Experimental**, approval **Unapproved**, every
-artifact **AE-0**. The current authorized work package is **CDS-WP-016 — Semantic
+Candidate remains **No**, maturity **Experimental**, approval **Unapproved**. The
+current authorized work package is **CDS-WP-016 — Semantic
 Status Foundation Independent Evidence Review and Candidate Gate**; its review work
 is executed. The **Nova Candidate Maturity Review** then returned **NO-GO**
 (Candidate Accessibility Gate unmet), a read-only gap assessment **confirmed** it
 (**9/9** requirements), and the Human-Maintainer-authorized **Candidate
 Accessibility Gate Remediation** — **internal rework of CDS-WP-016, not a new work
 package** — is **executed** (DEC-S-125; Candidate-scope WCAG and responsibility
-mappings; **25/25** per-value evidence matrix; **provisional AE-1** package with
+mappings; **25/25** per-value evidence matrix; **AE-1** package with
 6/6 review-required and 8/8 fail-closed coverage; AE-2 plan; support-baseline plan
 on A11Y-BL-001 freshness **`Current`**; 15-trigger regression plan; 16
 limitations). The Candidate authority closure stays open — a **fresh independent
-review of the remediation**, **Nova Candidate gate open**, **Human-Maintainer
-Candidate gate not yet reached** — and the **admitted accessibility evidence level
-remains AE-0**, the new AE-1 evidence being **provisional, not admitted**. No
+review of the remediation and of its clean-HEAD evidence package (**PASS WITH NOTES**
+and **PASS**), the Human Maintainer **admitted `AE1-CDS-WP016-SEMSTATUS-002` at
+AE-1** on 2026-08-17 — for the channel-independent Semantic Status source/contract
+family **only**; every other artifact remains **AE-0**. What is still open is the
+**Nova post-admission Candidate Maturity Re-Review** and the separate
+**Human-Maintainer Candidate approval**, so Candidate remains **No**. No
 follow-up work package is authorized and CDS-WP-017 is not activated. See the
 [Foundation Closure Record](../docs/governance/FOUNDATION_CLOSURE_RECORD.md).

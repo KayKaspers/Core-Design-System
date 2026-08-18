@@ -33,7 +33,7 @@ Ordered weakest to strongest. **The current pilot rests entirely at Level 1.**
 | **1** | Committed consumer documentation | **Limited** | A need was *stated* or a behavior was *built*. Not that it works. |
 | **2** | Human Maintainer validation | **Moderate** | Informed judgement that a requirement is real and correctly classified. |
 | **3** | CoreOps implementation evidence | **Moderate to strong** | The pattern survives contact with real complexity. |
-| **4** | Accessibility verification — graded **AE-0 … AE-4** *(see [Accessibility evidence](#accessibility-evidence))* | **Strong, bounded** | Verified against a stated target, in a declared scope, against a declared baseline — never "accessible" unqualified. **Currently AE-0.** |
+| **4** | Accessibility verification — graded **AE-0 … AE-4** *(see [Accessibility evidence](#accessibility-evidence))* | **Strong, bounded** | Verified against a stated target, in a declared scope, against a declared baseline — never "accessible" unqualified. **Currently AE-0 for every consumer-relevant artifact**; the only admitted evidence is source-level AE-1 for the Semantic Status source/contract family, which is not consumer evidence. |
 | **5** | Consumer feedback from use | **Strong** | The pattern works for the people doing the work. |
 | **—** | User research, usability testing, observational study | **Not planned** | **Not part of this pilot.** Must never be implied. |
 
@@ -52,7 +52,7 @@ Level 1 evidence supports "documented as needed" — it does not support "works"
 | Evidence level reached | **Level 1 only** |
 | Human validation performed | **None** |
 | Implementation evidence | **None** |
-| Accessibility verification | **None — AE-0 for every artifact**; the support baseline A11Y-BL-001 is declared and committed, but nothing has been verified against it |
+| Accessibility verification | **None for any consumer scope.** Every artifact is AE-0 except the channel-independent Semantic Status Layer-3 source/contract family (admitted **AE-1**, source-level only, no consumer transfer); the support baseline A11Y-BL-001 is declared and committed, but nothing has been verified in any environment within it |
 | User research | **None, and none planned** |
 
 Every requirement is therefore **provisional**. CDS-WP-004 produced a
@@ -108,15 +108,22 @@ What is missing is the **evidence**.
 
 | Level | Meaning | Current state |
 | --- | --- | --- |
-| **AE-0** | **No evidence.** Nothing has been examined. | **Every CDS artifact** |
-| **AE-1** | Declared intent and mapping — requirements identified, responsibilities assigned. | None |
-| **AE-2** | Structured self-assessment against the target, in a declared scope. | None |
+| **AE-0** | **No evidence.** Nothing has been examined. | **Every CDS artifact except the Semantic Status source/contract family** |
+| **AE-1** | **Structural and Automated Evidence** — machine-checkable properties hold: structural checks, automatable rules, static analysis, machine-readable traceability. | **Admitted for the channel-independent Semantic Status Layer-3 source/contract family only** (`AE1-CDS-WP016-SEMSTATUS-002`); no consumer scope |
+| **AE-2** | **Manual Interaction Evidence** — a human exercised the artifact against, at minimum, keyboard, focus, states, errors, content, reflow and magnification, and motion and non-visual meaning, with documented results. | None |
 | **AE-3** | Verification against a **declared accessibility support baseline** (browser / platform / assistive-technology matrix). | None — the baseline **A11Y-BL-001 is declared**, but no verification has been performed against it |
 | **AE-4** | Consumer-level evidence for complete processes in a declared product scope. | None — pilot inactive |
 
+**A mapping is not evidence, and a plan is not evidence.** Identifying
+requirements, assigning responsibilities, or writing a reasoned evidence plan may
+satisfy a Candidate-gate element, but it establishes no evidence level; only
+executed and recorded checks do.
+
 **AE-0 is not a passing state; it is the absence of a question having been
-asked.** It is where CDS is today, and this plan may not present it as anything
-else.
+asked.** It is where CDS still is for every consumer-relevant scope, and this plan
+may not present it as anything else. The single admitted source-level AE-1 package
+changes nothing for consumer validation: evidence never transfers to a consumer,
+a product, or a channel.
 
 ### What remains blocked
 

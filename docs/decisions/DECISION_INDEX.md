@@ -1723,6 +1723,12 @@ it would be a claim CDS cannot support with an evidence capacity it does not hav
   removed** — this is the standard's own status, not a CDS opt-out.
 - The target takes normative effect **on the Human Maintainer's commit**.
 - **No CDS artifact has been evaluated against it.** Every artifact is AE-0.
+  *(Decision-time state. On 2026-08-17 the Human Maintainer admitted
+  `AE1-CDS-WP016-SEMSTATUS-002` as **AE-1** for the channel-independent Semantic
+  Status Layer-3 source/contract family only — see the
+  [Semantic Status AE-1 Admission Record](../governance/SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md).
+  No artifact has been evaluated against the WCAG target itself; Candidate remains
+  **No**; no claim exists; this Decision remains **Accepted** and unchanged.)*
 - **No legal, regulatory-compliance, or certification statement is made** — see the
   [Accessibility Standard Status and Limitations](../research/ACCESSIBILITY_STANDARD_STATUS_AND_LIMITATIONS.md).
 
@@ -1746,6 +1752,12 @@ conformance claim**, and **no WCAG 2.2 Level AA conformance has been demonstrate
 reviewed, or approved** for any consumer. Absence of evidence is **not** a pass
 and is **not** a demonstrated failure — every artifact is simply **AE-0, Not
 Assessed**.
+
+*(Decision-time state. Since 2026-08-17 one bounded exception exists: admitted
+source-level **AE-1** for the channel-independent Semantic Status Layer-3
+source/contract family. No consumer, product, or channel has been evaluated, no
+WCAG conformance has been demonstrated, and this Decision remains **Accepted** and
+unchanged.)*
 
 ### Rationale
 
@@ -2318,6 +2330,10 @@ accessibility from a planning document.
   as the declared and committed baseline under CDS-WP-010.
 - Listing an environment is never a statement that CDS works in or supports it.
 - Every CDS artifact remains AE-0; no support or conformance claim is valid.
+  *(Decision-time state. Since 2026-08-17 the Semantic Status source/contract family
+  holds admitted source-level **AE-1**, produced **without exercising any baseline
+  environment**. No environment is supported, no support or conformance claim is
+  valid, and this Decision remains **Accepted** and unchanged.)*
 
 ---
 
@@ -2549,6 +2565,10 @@ being normalized or averaged away (RISK-054).
 - Governed by the
   [Defect and Regression Model](../governance/ACCESSIBILITY_DEFECT_AND_REGRESSION_MODEL.md);
   no defect is registered today (AE-0).
+  *(Decision-time state. Still no defect is registered. Since 2026-08-17 the Semantic
+  Status source/contract family holds admitted source-level **AE-1**; recorded known
+  limitations for that scope are not defects. This Decision remains **Accepted** and
+  unchanged.)*
 
 ---
 
@@ -3958,3 +3978,16 @@ Accepted here means accepted as a governance decision record. It awards no
 maturity: Candidate remains **No**, maturity remains **Experimental**, approval
 remains **Unapproved**, the admitted accessibility evidence level of every CDS
 artifact remains **AE-0**, and no claim of any kind becomes valid.
+
+*Current-state note (2026-08-17, additive — the Decision above is unchanged and
+remains **Accepted**).* The `AE-0` sentence records the **effect of DEC-S-125
+itself**: accepting this decision awarded no evidence and no maturity. It does not
+bar evidence admitted later under the existing Evidence and Claims governance. On
+2026-08-17 the Human Maintainer separately admitted `AE1-CDS-WP016-SEMSTATUS-002`
+as **AE-1** for the channel-independent Semantic Status Layer-3 source/contract
+family only — see the
+[Semantic Status AE-1 Admission Record](../governance/SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md).
+That admission is **compatible with DEC-S-125**: channel profiles still gate channel
+artifacts, a channel-independent semantic source still needs no artificial channel,
+and **evidence still transfers in neither direction**. Candidate remains **No**,
+maturity **Experimental**, artifact approval **Unapproved**, and no claim exists.

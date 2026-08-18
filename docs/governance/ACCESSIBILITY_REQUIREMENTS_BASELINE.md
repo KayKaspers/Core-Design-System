@@ -236,7 +236,10 @@ sizes, breakpoints · the status taxonomy · Simple/Expert mechanism · reduced-
 thresholds · RTL support scope · PDF, document, and presentation standards ·
 target-size values · the support baseline · selectively adopted AAA criteria.
 
-**No requirement here is evidenced.** Every CDS artifact is AE-0.
+**No requirement here is evidenced by manual, keyboard, or assistive-technology
+testing.** Every CDS artifact is AE-0 except the channel-independent Semantic Status
+Layer-3 source/contract family, whose admitted **AE-1** evidence covers structural
+and automated properties of that source scope only.
 
 ## Related documents
 

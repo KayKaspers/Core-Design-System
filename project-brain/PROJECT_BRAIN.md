@@ -75,10 +75,13 @@ approved.
   returned **NO-GO** (Candidate Accessibility Gate unmet), the read-only gap
   assessment **confirmed** it, and the Human-Maintainer-authorized **Candidate
   Accessibility Gate Remediation** — internal rework of CDS-WP-016, **not** a new
-  work package — is **executed**; **Candidate No**, admitted accessibility evidence
-  **AE-0** with a **provisional AE-1 package pending fresh independent review**,
-  **Nova Candidate gate open**, **Human-Maintainer Candidate gate not yet
-  reached**, CDS-WP-017 not activated). Foundation **Closed with Notes**; machine-readable machinery
+  work package — is **executed**, **independently reviewed**, and admitted;
+  **Candidate No**, admitted accessibility evidence **AE-1 for the
+  channel-independent Semantic Status source/contract family only**
+  (`AE1-CDS-WP016-SEMSTATUS-002`, 2026-08-17; every other artifact **AE-0**),
+  **Nova post-admission Candidate Maturity Re-Review outstanding**,
+  **Human-Maintainer Candidate approval not granted**,
+  CDS-WP-017 not activated). Foundation **Closed with Notes**; machine-readable machinery
   implemented and executed (ADR-0001…0003); Semantic Status Foundation **Contract
   defined (CDS-WP-014)** and **machine-readable implemented (CDS-WP-015:
   `semantic/status`, 25 non-visual tokens, 24/24 harness matches, 25/25 DE/EN, Draft
@@ -397,8 +400,9 @@ selected**; unknown rights block publication.
 publication; **Claude never releases**; a green build is not consent.
 
 **Currently blocked:** no artifact can reach Stable · no profile can be approved ·
-no publication change · **no release is possible** — all tracing to the absent
-accessibility evidence (CR-024; every artifact is AE-0) and absent licensing
+no publication change · **no release is possible** — all tracing to the largely
+absent accessibility evidence (CR-024; every artifact is AE-0 apart from one
+admitted source-level AE-1 scope, and no AE-2/AE-3/AE-4 exists) and absent licensing
 decisions.
 
 Details: [Governance Operating Model](../docs/governance/GOVERNANCE_OPERATING_MODEL.md) ·
@@ -455,7 +459,8 @@ addressed, 0 deferred to a policy work package, 2 consumer-owned, 2 out of
 scope** (reconciled by CDS-WP-007). Only 9 of 40 fully addressed is the
 **expected** result: an architecture resolving most requirements would be doing
 unauthorized design work. CR-024 became `addressed` because the target and policy
-now exist — **not because anything was tested; every artifact is AE-0**.
+now exist — **not because the target was tested against**; every artifact is AE-0
+apart from one admitted source-level AE-1 scope.
 
 Details: [Architecture](../docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md) ·
 [Authority](../docs/architecture/SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md) ·
@@ -572,9 +577,9 @@ artifacts do not compose into an accessible product by themselves.**
 
 **Evidence:** five levels AE-0 … AE-4 (Evidence and Claims Model); AE-3 needs a
 declared support baseline; automated-only never suffices (DEC-S-053). **Every CDS
-artifact is
-AE-0; the support baseline A11Y-BL-001 is committed but is not evidence**
-(RISK-041, RISK-044).
+artifact is AE-0 except the channel-independent Semantic Status source/contract
+family at admitted AE-1; the support baseline A11Y-BL-001 is committed but is not
+evidence** (RISK-041, RISK-044).
 
 **Channels:** six profiles; only two (Web UI, Web Docs) have a target; **none is
 Candidate- or Stable-eligible** (DEC-S-058).
@@ -647,8 +652,8 @@ Candidate/Stable artifact; pilot inactive.
 
 Defined the first accessibility support baseline **A11Y-BL-001** (since
 committed) using authorized official standards/vendor research
-(13 URLs opened, 9 usable) — **no test run, no tool selected, every artifact AE-0,
-no environment claimed supported**:
+(13 URLs opened, 9 usable) — **no test run, no tool selected, and at that time every
+artifact AE-0; still no environment claimed supported**:
 
 - **Three tiers** — Required Core (small, free-software-runnable), Complementary
   (Conditional), Scope-triggered (Deferred) — with a 14-entry
@@ -809,20 +814,25 @@ Candidate Accessibility Gate Remediation** as **internal rework of CDS-WP-016, n
 a new work package**. That remediation is **executed**: DEC-S-125, Candidate-scope
 WCAG and responsibility mappings, a **25/25** per-value evidence requirements
 matrix, an operational text-first source rule, a test-only statement evidence layer
-with **6/6** review-required and **8/8** fail-closed coverage, a **provisional
-AE-1** evidence record with results and digests, a reasoned AE-2 plan, a
+with **6/6** review-required and **8/8** fail-closed coverage, an
+**AE-1** evidence record with results and digests, a reasoned AE-2 plan, a
 support-baseline plan on **A11Y-BL-001 freshness `Current`**, a **15-trigger**
 regression plan, **16** limitations (0 Critical), and a review addendum
 ([Addendum](../docs/reviews/WP016_CANDIDATE_ACCESSIBILITY_GATE_ADDENDUM.md)).
 
+The remediation and its clean-HEAD evidence package have since been **independently
+reviewed** (**PASS WITH NOTES** and **PASS**) and integrated, and on **2026-08-17 the
+Human Maintainer admitted `AE1-CDS-WP016-SEMSTATUS-002` at AE-1** for the
+channel-independent Semantic Status source/contract family **only**
+([Admission Record](../docs/governance/SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md)).
+
 The next step is therefore **not** the first start of
-CDS-WP-016, and **not** a promotion, but a **fresh independent review of the
-remediation**, then the **Candidate authority closure**: Nova's Candidate-gate
-review (**open**) and the Human-Maintainer maturity decision (**not yet reached**).
+CDS-WP-016, and **not** a promotion, but the **Candidate authority closure**: the
+**Nova post-admission Candidate Maturity Re-Review** (**not yet performed**) and then
+the separate Human-Maintainer maturity decision (**not granted**).
 Until they close, Candidate is
-**No**, maturity **Experimental**, approval **Unapproved**, and the **admitted
-accessibility evidence level of every artifact remains AE-0** — the newly produced
-AE-1 evidence is **provisional and not admitted** —
+**No**, maturity **Experimental**, approval **Unapproved**, claims **none**, and
+**every other CDS artifact remains AE-0** with no AE-2, AE-3, or AE-4 anywhere —
 **no automatic Candidate promotion, still no visual values, no pilot**. No follow-up
 work package is authorized and CDS-WP-017 is not activated; any further step begins
 only on an explicit Nova prompt and Human-Maintainer authorization.

@@ -28,8 +28,9 @@ library, or a design project scoped exclusively to CoreOps.
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015
 - Accessibility support baseline: **A11Y-BL-001 declared and committed**
-  (CDS-WP-010) — a **test contract, not evidence**; **no test has been run and every
-  artifact is AE-0**.
+  (CDS-WP-010) — a **test contract, not evidence**; **no test has been run in any
+  baseline environment**, and every artifact is AE-0 except the channel-independent
+  Semantic Status source/contract family at admitted **AE-1**.
 - Machine-readable source format: **decided** (CDS-WP-011, ADR-0001) — a **DTCG
   2025.10-based CDS profile** in **strict JSON `.tokens.json`**; its **value-neutral
   bootstrap is implemented** (CDS-WP-012, ADR-0002): 4 CDS-owned JSON Schema 2020-12
@@ -81,7 +82,7 @@ library, or a design project scoped exclusively to CoreOps.
   [evidence requirements matrix](docs/operations/SEMANTIC_STATUS_CANDIDATE_EVIDENCE_REQUIREMENTS_MATRIX.md),
   an operational text-first source rule (`CDS-V4-STATUS-DESCRIPTION`), a test-only
   statement evidence layer with **6/6** review-required and **8/8** fail-closed
-  coverage, a **provisional**
+  coverage, an
   [AE-1 evidence record](docs/operations/SEMANTIC_STATUS_CANDIDATE_AE1_EVIDENCE_RECORD.md),
   an [AE-2 plan](docs/governance/SEMANTIC_STATUS_CANDIDATE_AE2_EVIDENCE_PLAN.md), a
   [support-baseline plan](docs/governance/SEMANTIC_STATUS_CANDIDATE_SUPPORT_BASELINE_PLAN.md)
@@ -91,11 +92,20 @@ library, or a design project scoped exclusively to CoreOps.
   [limitations](docs/governance/SEMANTIC_STATUS_CANDIDATE_ACCESSIBILITY_LIMITATIONS.md)
   (0 Critical) — see the
   [Candidate Accessibility Gate Addendum](docs/reviews/WP016_CANDIDATE_ACCESSIBILITY_GATE_ADDENDUM.md).
+  The remediation implementation and the clean-HEAD evidence package have since been
+  **independently reviewed** (**PASS WITH NOTES** and **PASS**) and integrated, and on
+  **2026-08-17 the Human Maintainer admitted `AE1-CDS-WP016-SEMSTATUS-002` at AE-1**
+  — **only** for the channel-independent Semantic Status Layer-3 source/contract
+  family, source revision `semantic-status-rev-0001`, evidenced implementation
+  revision `e6cb6fae63b1548ce4dabb7f5548116e4c61d622`; see the
+  [AE-1 Admission Record](docs/governance/SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md)
+  and the [Review Provenance Record](docs/reviews/WP016_ACCESSIBILITY_REMEDIATION_REVIEW_PROVENANCE.md).
+  **An AE-1 admission is not a Candidate award.**
   **Candidate remains No**, maturity **Experimental**,
-  approval **Unapproved**, and the **admitted accessibility evidence level of every
-  artifact remains AE-0** — the newly produced AE-1 evidence is **provisional and
-  pending a fresh independent review**, never admitted AE-1. The **Nova Candidate
-  gate is open** and the **Human-Maintainer Candidate gate is not yet reached**. No
+  approval **Unapproved**, claims **None**, and **every other CDS artifact remains
+  AE-0**; there is no AE-2, AE-3, or AE-4, and no channel, consumer, or product
+  evidence anywhere. The **next authority step is the Nova post-admission Candidate
+  Maturity Re-Review**; the **Human-Maintainer Candidate approval is not granted**. No
   follow-up work package is
   authorized and CDS-WP-017 is not activated. Further work begins only on an explicit
   Nova prompt and Human-Maintainer authorization.
@@ -481,9 +491,12 @@ and
   consumer meets it. **No accessibility claim of any level is valid today.**
 - **Evidence is graded AE-0 … AE-4** (per the Accessibility Evidence and Claims
   Model) and is bound to a revision,
-  scope, channel, and a **declared support baseline**. **Every CDS artifact is
-  AE-0.** Claude never records evidence that does not exist and never invents a
-  test, a baseline, or user validation.
+  scope, channel, and a **declared support baseline**. **Every CDS artifact is AE-0
+  except the channel-independent Semantic Status source/contract family, which holds
+  admitted AE-1** (`AE1-CDS-WP016-SEMSTATUS-002`, source scope only). Claude never
+  records evidence that does not exist, never invents a test, a baseline, or user
+  validation, and never extends that admission to any other artifact, channel, or
+  consumer.
 - **An automated check is never sufficient** (DEC-S-053) and is never equated with
   accessibility evidence or a pass — the same rule as "a clean diff is not release
   approval".
@@ -507,8 +520,10 @@ and
   [Maintenance Policy](docs/governance/ACCESSIBILITY_BASELINE_MAINTENANCE_POLICY.md),
   and [Defect and Regression Model](docs/governance/ACCESSIBILITY_DEFECT_AND_REGRESSION_MODEL.md).
 - **A baseline is not evidence** (DEC-S-065). Declaring A11Y-BL-001 records what
-  future evidence will target; it establishes nothing. **Every artifact is AE-0.**
-  Listing an environment is never a statement that CDS supports it.
+  future evidence will target; it establishes nothing. **No baseline environment has
+  been exercised**, and every artifact is AE-0 apart from the one admitted
+  source-level AE-1 scope. Listing an environment is never a statement that CDS
+  supports it.
 - **Exact versions are required** (DEC-S-068, DEC-S-071): every evidence run binds
   exact OS/browser/renderer/assistive-technology/artifact/consumer/CDS/language/
   channel/date via the

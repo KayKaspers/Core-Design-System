@@ -15,7 +15,12 @@ offers that alternative precisely for artifacts where manual interaction evidenc
 would be meaningless. This is that case, and this is that plan.
 
 > **A plan is not evidence.** This document establishes nothing about any
-> artifact. **Every CDS artifact remains AE-0.**
+> artifact. Every CDS artifact remains **AE-0**, with exactly one bounded
+> exception: the channel-independent Semantic Status Layer-3 source/contract
+> family holds admitted **AE-1** (`AE1-CDS-WP016-SEMSTATUS-002`, source revision
+> `semantic-status-rev-0001`, source scope only). **An admitted AE-1 is not an
+> AE-2.** It satisfies a different gate requirement, covers no rendered or
+> interactive surface, and removes nothing from the plan below.
 
 ## 1 — Why AE-2 execution is not meaningful today
 
@@ -91,7 +96,7 @@ actual results per case.)*
 | 8 | **Truthfulness under representation** | `stale`/`expired` never read as `current`; `unverified`/`supported` never read as `verified`; `partial`/`unavailable`/`unknown` evidence is never hidden. |
 
 Category 8 is specific to this Foundation: it is the representation-level
-counterpart of the source-level rules the provisional AE-1 evidence covers, and
+counterpart of the source-level rules the admitted AE-1 evidence covers, and
 it is the reason AE-1 alone can never close this out.
 
 ## 5 — Applicable baseline environments
@@ -152,8 +157,11 @@ DE/EN are Tier-3 and are **not supported by omission** (DEC-S-069).
 | **Human Maintainer** | Approves the maturity transition and any limitation with normative effect. **Not delegable.** |
 
 **Evidence reviewed only by its own executor has not been reviewed** (evidence
-rule 10). This is the same separation the CDS-WP-016 provisional AE-1 package is
-currently waiting on.
+rule 10). This is the same separation the CDS-WP-016 AE-1 package has since
+satisfied: Evidence 002 was independently reviewed by a reviewer who was not its
+executor, verdict **PASS**, before the Human Maintainer admitted it. The
+separation must be established again, in advance, for any AE-2 run — a past
+independent review of a different package evidences nothing here.
 
 ## 9 — No evidence transfer
 
@@ -163,7 +171,7 @@ currently waiting on.
   representation, another channel, another revision, another language, or another
   consumer.
 - AE-2 evidence for a representation does **not** flow back to the
-  channel-independent source; the source's provisional AE-1 does **not** flow
+  channel-independent source; the source's admitted AE-1 does **not** flow
   forward into a representation.
 - **Component evidence is not product evidence.** A conforming status component
   does not make a page, a workflow, or a process accessible.
@@ -189,8 +197,10 @@ the answer is **NO-GO**, never "go with notes" (DEC-S-048).
 > AE-3, and **no** claim.
 >
 > It does **not** promote the Candidate. Candidate remains **No**; maturity
-> remains **Experimental**; approval remains **Unapproved**; the admitted
-> accessibility evidence level of every CDS artifact remains **AE-0**.
+> remains **Experimental**; approval remains **Unapproved**; and the admitted
+> accessibility evidence level of every CDS artifact remains **AE-0**, apart from
+> the source-scope **AE-1** admitted for this family — which is **not** AE-2 and
+> closes nothing planned here.
 >
 > It authorizes **no** representation, **no** component, **no** channel, **no**
 > Product Profile, and **no** consumer integration.

@@ -127,10 +127,20 @@ A release is ready only when **all** hold:
 8. Nova review complete,
 9. **Human Maintainer approval**.
 
-**Currently unreachable:** requirement 7 cannot be satisfied (no licensing
-decisions), and no artifact can reach Stable while no accessibility evidence
-exists — every CDS artifact is AE-0 (CR-024). **No CDS release is possible
-today.** Recorded, not worked around.
+**Currently unreachable**, for two independent reasons:
+
+1. **Requirement 7 cannot be satisfied** — no licensing decisions exist and the
+   publication state remains `Private Development`.
+2. **No artifact can reach Stable.** The Stable accessibility gate requires the
+   Candidate gate to be satisfied, **complete applicable AE-2 evidence**, and
+   **AE-3 against the declared support baseline**. The only admitted accessibility
+   evidence is `AE1-CDS-WP016-SEMSTATUS-002` at **AE-1**, for the
+   channel-independent Semantic Status source/contract family alone; **no AE-2 and
+   no AE-3 exist anywhere**, and every other scope remains **AE-0** (CR-024).
+
+**An admitted AE-1 is neither Stable-ready nor release-ready.** It enables no
+release, no claim, and no publication change. **No CDS release is possible today.**
+Recorded, not worked around.
 
 ## Change control for this policy set
 

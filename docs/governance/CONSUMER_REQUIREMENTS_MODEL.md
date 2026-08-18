@@ -269,7 +269,9 @@ where consumer documentation is dense with them.
    **→ Answered at policy level by CDS-WP-007: WCAG 2.2 Level AA for the
    applicable web scope, evidenced via AE-0 … AE-4 (DEC-S-049, DEC-S-050,
    DEC-S-060). The *evidence* question — actually demonstrating it — remains
-   open and moves to CDS-WP-008; every artifact is AE-0 today.**
+   open and moves to CDS-WP-008; every artifact is AE-0 today except the
+   channel-independent Semantic Status Layer-3 source/contract family, which holds
+   admitted AE-1 source-level evidence that transfers to no consumer.**
 2. **How much product individuality is permitted?** SpeakCore and CastCore
    already hold product-local design decisions. CR-001, CR-002, CR-037. →
    CDS-WP-005

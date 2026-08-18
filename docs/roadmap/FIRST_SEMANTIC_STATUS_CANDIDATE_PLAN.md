@@ -128,7 +128,7 @@ since been overtaken by events and are **not** the current blocker list; see
    (RISK-078) — prerequisite 2 is open.
 2. No machine-readable source set exists (prerequisites 4–5 open).
 3. No accessibility/content/parity review evidence exists (prerequisites 6–8
-   open; every artifact is AE-0).
+   open; every artifact was AE-0 **when these blockers were recorded**).
 4. Licensing/publication state unchanged (`Private Development`) — publication
    is out of scope for the Candidate and remains blocked separately.
 
@@ -189,15 +189,22 @@ record.
 
 | # | Candidate accessibility gate requirement | Artifact | State |
 | --- | --- | --- | --- |
-| 1 | WCAG applicability mapping | [Candidate WCAG Applicability Mapping](../governance/SEMANTIC_STATUS_CANDIDATE_WCAG_APPLICABILITY_MAPPING.md) | Produced — **pending independent review** |
-| 2 | Responsibility mapping | [Candidate Accessibility Responsibility Mapping](../governance/SEMANTIC_STATUS_CANDIDATE_ACCESSIBILITY_RESPONSIBILITY_MAPPING.md) | Produced — **pending independent review** |
-| 3 | Known accessibility requirements | [Candidate Evidence Requirements Matrix](../operations/SEMANTIC_STATUS_CANDIDATE_EVIDENCE_REQUIREMENTS_MATRIX.md) — 25/25 mapped, 0 unmapped | Produced — **pending independent review** |
-| 4 | **AE-1** | [Provisional AE-1 Evidence Record](../operations/SEMANTIC_STATUS_CANDIDATE_AE1_EVIDENCE_RECORD.md) | **Provisional only — NOT admitted AE-1** |
-| 5 | Relevant AE-2 evidence, **or a reasoned evidence plan** | [Candidate AE-2 Evidence Plan](../governance/SEMANTIC_STATUS_CANDIDATE_AE2_EVIDENCE_PLAN.md) | Produced — **pending independent review**. AE-2 execution is **not meaningful** against an artifact with no interactive surface, and fabricating it is prohibited. |
-| 6 | Known limitations | [Candidate Accessibility Limitations](../governance/SEMANTIC_STATUS_CANDIDATE_ACCESSIBILITY_LIMITATIONS.md) — 16 entries, 0 Critical | Produced — **pending independent review** |
-| 7 | Support baseline plan | [Candidate Support Baseline Plan](../governance/SEMANTIC_STATUS_CANDIDATE_SUPPORT_BASELINE_PLAN.md), on A11Y-BL-001 freshness **`Current`** ([review](../reviews/WP016_A11Y_BASELINE_FRESHNESS_REVIEW.md)) | Produced — **pending independent review** |
-| 8 | Regression plan | [Candidate Accessibility Regression Plan](../governance/SEMANTIC_STATUS_CANDIDATE_ACCESSIBILITY_REGRESSION_PLAN.md) — 15 triggers | Produced — **pending independent review** |
+| 1 | WCAG applicability mapping | [Candidate WCAG Applicability Mapping](../governance/SEMANTIC_STATUS_CANDIDATE_WCAG_APPLICABILITY_MAPPING.md) | Produced — **independently reviewed (PASS WITH NOTES)** |
+| 2 | Responsibility mapping | [Candidate Accessibility Responsibility Mapping](../governance/SEMANTIC_STATUS_CANDIDATE_ACCESSIBILITY_RESPONSIBILITY_MAPPING.md) | Produced — **independently reviewed (PASS WITH NOTES)** |
+| 3 | Known accessibility requirements | [Candidate Evidence Requirements Matrix](../operations/SEMANTIC_STATUS_CANDIDATE_EVIDENCE_REQUIREMENTS_MATRIX.md) — 25/25 mapped, 0 unmapped | Produced — **independently reviewed (PASS WITH NOTES)** |
+| 4 | **AE-1** | [Clean Re-execution Evidence Record](../operations/SEMANTIC_STATUS_CANDIDATE_AE1_CLEAN_REEXECUTION_EVIDENCE_RECORD.md) · [Admission Record](../governance/SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md) | **ADMITTED** — `AE1-CDS-WP016-SEMSTATUS-002`, source scope only |
+| 5 | Relevant AE-2 evidence, **or a reasoned evidence plan** | [Candidate AE-2 Evidence Plan](../governance/SEMANTIC_STATUS_CANDIDATE_AE2_EVIDENCE_PLAN.md) | Produced — **independently reviewed (PASS WITH NOTES)**. AE-2 execution is **not meaningful** against an artifact with no interactive surface, and fabricating it is prohibited. |
+| 6 | Known limitations | [Candidate Accessibility Limitations](../governance/SEMANTIC_STATUS_CANDIDATE_ACCESSIBILITY_LIMITATIONS.md) — 16 entries, 0 Critical | Produced — **independently reviewed (PASS WITH NOTES)** |
+| 7 | Support baseline plan | [Candidate Support Baseline Plan](../governance/SEMANTIC_STATUS_CANDIDATE_SUPPORT_BASELINE_PLAN.md), on A11Y-BL-001 freshness **`Current`** ([review](../reviews/WP016_A11Y_BASELINE_FRESHNESS_REVIEW.md)) | Produced — **independently reviewed (PASS WITH NOTES)** |
+| 8 | Regression plan | [Candidate Accessibility Regression Plan](../governance/SEMANTIC_STATUS_CANDIDATE_ACCESSIBILITY_REGRESSION_PLAN.md) — 15 triggers | Produced — **independently reviewed (PASS WITH NOTES)** |
 | 9 | **Human-Maintainer approval after Nova review** | — | **OPEN.** Not addressable by an executor and not satisfied by any artifact above. |
+
+**Two distinct review events are cited above and must not be conflated.** The
+verdict **PASS WITH NOTES** in requirements 1–3 and 5–8 is the *Fresh Independent
+Remediation Implementation Review* of those artifacts. The **PASS** behind
+requirement 4 is the separate *Fresh Independent Clean-HEAD Evidence Review* of
+Evidence 002. Neither review is an approval, and neither awards Candidate status
+([provenance](../reviews/WP016_ACCESSIBILITY_REMEDIATION_REVIEW_PROVENANCE.md)).
 
 ### Channel-profile applicability
 
@@ -215,9 +222,9 @@ place.)*
 
 | # | Current blocker |
 | --- | --- |
-| 1 | **No fresh independent review of the accessibility-gate remediation exists.** The remediation was produced by a single executor who also wrote its fixtures, expectations, and tests (SSC-LIM-015). |
-| 2 | **AE-1 is provisional, not admitted.** The admitted accessibility evidence level of every CDS artifact remains **AE-0**. |
-| 3 | **Nova Candidate-gate review is open** — the Nova Candidate Maturity Review returned **NO-GO** because this gate was unmet, and has not been re-opened on the remediated package. |
+| 1 | ~~No fresh independent review of the accessibility-gate remediation exists.~~ **CLOSED** — a fresh independent review returned **PASS WITH NOTES** on the remediation and **PASS** on the clean-HEAD evidence ([provenance](../reviews/WP016_ACCESSIBILITY_REMEDIATION_REVIEW_PROVENANCE.md)). |
+| 2 | ~~AE-1 is provisional, not admitted.~~ **CLOSED** — `AE1-CDS-WP016-SEMSTATUS-002` was **admitted at AE-1** by the Human Maintainer on 2026-08-17, for the channel-independent source/contract scope only ([admission record](../governance/SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md)). All other CDS artifacts remain AE-0. |
+| 3 | **Nova post-admission Candidate Maturity Re-Review is open** — the earlier Nova Candidate Maturity Review returned **NO-GO** because this gate was unmet, and has not yet been re-run on the remediated and now-admitted package. |
 | 4 | **Human-Maintainer Candidate approval is open** (gate requirement 9, DEC-S-036). |
 | 5 | **No AE-2, AE-3, or AE-4 exists**, and no execution environment is available for any Required baseline pairing (RISK-051). |
 | 6 | Licensing and publication state unchanged (**`Private Development`**) — out of scope for the Candidate and blocked separately. |
@@ -226,13 +233,19 @@ place.)*
 independently unreviewed) was closed by the CDS-WP-016 independent evidence
 review (**PASS**); blocker 2 (no machine-readable source set) was closed by
 CDS-WP-015; blocker 3 (no accessibility/content/parity review evidence) is
-partially closed — contract-level reviews exist, but **no user research, no AT
-execution, and no admitted AE-1** exist.
+partially closed — contract-level reviews exist and **AE-1 is now admitted for the
+source scope**, but **no user research and no AT execution** exist.
 
 ### Current status
 
 **Candidate: No. Maturity: Experimental. Approval: Unapproved. Admitted
-accessibility evidence level: AE-0. Claims: none. CDS-WP-017: not activated.**
+accessibility evidence level: AE-1 for the channel-independent Semantic Status
+source/contract family only (AE-0 for every other CDS artifact). Claims: none.
+CDS-WP-017: not activated.**
+
+**AE-3 and AE-4 are not Candidate prerequisites for this source-only Candidate** —
+the normative Candidate gate does not require them. They remain future **Stable**,
+channel, consumer, and claim requirements. No waiver is created by saying so.
 
 The independent evidence review's **GO stands** in its declared narrow sense and
 is **not revoked** — see the

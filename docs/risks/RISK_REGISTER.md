@@ -925,8 +925,10 @@ now-defined accessibility requirements, or made them costly to adopt.
 
 Much of the architecture was decided before the accessibility target existed
 (CR-024). The target is now defined — **WCAG 2.2 Level AA** (DEC-S-049,
-DEC-S-060), committed with CDS-WP-007 — but **no accessibility evidence has been
-produced, and every CDS artifact is AE-0**. Whether the existing structure is
+DEC-S-060), committed with CDS-WP-007 — but **almost no accessibility evidence has
+been produced**: every CDS artifact is AE-0 except the channel-independent Semantic
+Status Layer-3 source/contract family, which holds admitted source-level **AE-1**.
+That single bounded package does not close this risk. Whether the existing structure is
 compatible with the committed policy is therefore neither demonstrated nor
 refuted; the missing evidence is what keeps this risk open, not a missing target.
 If a structural decision turns out to preclude the target, the cost lands after
@@ -1352,14 +1354,20 @@ build on that assumption, and inherit barriers they never tested for — while
 believing the question was already answered.
 
 This is the same failure the project's core invariant names: **Unverified ≠
-Verified**. Every CDS artifact is **AE-0**.
+Verified**. Every CDS artifact is **AE-0** except the channel-independent Semantic
+Status Layer-3 source/contract family at admitted **AE-1** — a structural and
+automated level that is **not** conformance, **not** a claim, and **not** a
+demonstration that the WCAG target is met.
 
 ### Mitigation direction
 
 Carry the **target-versus-claim boundary** explicitly in every accessibility
-document (DEC-S-050). State **AE-0** wherever the target is stated. Permit no
+document (DEC-S-050). **State the actual, scope-bound evidence level truthfully
+wherever the target is stated, and never let a target imply a higher evidence or
+claim state.** Permit no
 claim without evidence. Treat any statement implying conformance as a defect.
-**The honest sentence is: nothing has been tested.**
+**The honest sentence is: nothing has been tested against the target — the only
+admitted evidence is structural and automated, for one bounded source scope.**
 
 ---
 
@@ -1692,7 +1700,9 @@ failure discredits the whole baseline.
 Carry the target-versus-support-versus-claim boundary in the baseline (DEC-S-065):
 listing an environment is never support. Permit no support or conformance claim
 without evidence, a declared scope, and approval (DEC-S-044). State plainly that
-every artifact is AE-0 and that undeclared environments are not supported (DEC-S-069).
+no baseline environment has been exercised, that every artifact is AE-0 apart from
+one bounded admitted source-level AE-1 scope, and that undeclared environments are
+not supported (DEC-S-069).
 
 ---
 

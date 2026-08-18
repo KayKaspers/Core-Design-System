@@ -143,10 +143,12 @@ before.
 | **Blocker** | *"Against what?"* | *"Show it."* |
 
 The target and the evidence method now exist, and so does the support baseline:
-**A11Y-BL-001 is declared and committed** (CDS-WP-010). **The evidence does not
-exist.** Every CDS artifact is **AE-0** — and a declared baseline is a test
-contract, never evidence, support, or conformance — so AE-3, and therefore
-Stable, remain unreachable (RISK-044, RISK-048).
+**A11Y-BL-001 is declared and committed** (CDS-WP-010). **Almost no evidence
+exists.** Every CDS artifact is **AE-0** except the channel-independent Semantic
+Status Layer-3 source/contract family, which holds admitted **AE-1** structural and
+automated evidence — and a declared baseline is a test contract, never evidence,
+support, or conformance — so **AE-2 and AE-3 do not exist anywhere**, and Stable
+remains unreachable (RISK-044, RISK-048).
 
 Therefore, unchanged in effect: **no artifact with an accessibility obligation
 can reach Stable today**, and the Candidate accessibility gate is equally unmet.

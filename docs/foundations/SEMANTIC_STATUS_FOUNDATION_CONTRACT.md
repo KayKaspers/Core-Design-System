@@ -117,9 +117,13 @@ claim** (DEC-S-050 applied to status semantics). Nothing here asserts that any
 implementation communicates status accessibly or truthfully; that requires
 artifact-bound evidence under the
 [Accessibility Evidence and Claims Model](../governance/ACCESSIBILITY_EVIDENCE_AND_CLAIMS_MODEL.md)
-(every artifact is AE-0 today) and the Candidate gates
-(DEC-S-114). No conformance, accessibility, certification, or adoption claim
-exists or is implied.
+and the Candidate gates (DEC-S-114). **This contract is not that evidence**, and the
+current admitted evidence state is governed externally: the channel-independent
+Semantic Status Layer-3 source/contract family holds admitted **AE-1** structural and
+automated evidence for its source scope only — see the
+[Semantic Status AE-1 Admission Record](../governance/SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md).
+That admission creates **no Candidate status and no claim**. No conformance,
+accessibility, certification, or adoption claim exists or is implied.
 
 ## Channel boundary
 

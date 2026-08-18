@@ -22,7 +22,9 @@ whom, and how freshness is kept. No test is run and no tool is selected.
 *(Meanings per the Evidence and Claims Model; this is the operating view)*
 
 ### AE-0 — Not Assessed
-No usable evidence. **Every CDS artifact is AE-0 today.** Not a passing state.
+No usable evidence. **Every CDS artifact is AE-0 today except the
+channel-independent Semantic Status Layer-3 source/contract family**, which holds
+admitted AE-1 evidence. Not a passing state.
 
 ### AE-1 — Structural and Automated
 - Structural checks, automatable rules, static analysis; machine-readable
@@ -111,6 +113,11 @@ work and never the artifact itself** (DEC-S-045). Evidence reviewed only by its 
 executor has not been reviewed. The Evidence Reviewer role is currently **unstaffed**
 (FM-F-006) and must be staffed before Stable/claim evidence is accepted.
 
+The one admitted AE-1 package was reviewed by a **separately authorized, one-off
+independent reviewer** who was not its executor. That satisfied review independence
+**for that single package only**; it does **not** staff the standing Evidence
+Reviewer role, and the role remains unstaffed.
+
 ## Evidence freshness
 
 Evidence carries a freshness state
@@ -131,11 +138,19 @@ is achievable without procurement (RISK-048). When demand exceeds capacity, the
 honest responses are **smaller declared scope** or **lower maturity** — never a
 weakened standard and never a conformant artifact with an asterisk (DEC-S-059).
 
-## No current evidence
+## Current evidence state
 
-**No accessibility evidence exists.** Every CDS artifact is **AE-0**. This strategy
-describes intent, not activity; it runs no test, selects no tool, and enables no
-claim. A target and a baseline are not conformance (DEC-S-050).
+When this strategy was written, **no accessibility evidence existed and every CDS
+artifact was AE-0**. That is no longer globally true. Exactly **one** bounded
+evidence package has since been produced, independently reviewed, and admitted:
+**AE-1** for the channel-independent Semantic Status Layer-3 source/contract family
+(`AE1-CDS-WP016-SEMSTATUS-002`, source revision `semantic-status-rev-0001`) — see
+the [Semantic Status AE-1 Admission Record](SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md).
+
+**All other CDS artifacts remain AE-0.** No AE-2, AE-3, or AE-4 exists anywhere; no
+environment has been exercised; no tool has been selected as a standing choice. Apart
+from that single admitted package, this strategy still describes intent, not activity,
+and enables no claim. A target and a baseline are not conformance (DEC-S-050).
 
 ## Claim boundary
 

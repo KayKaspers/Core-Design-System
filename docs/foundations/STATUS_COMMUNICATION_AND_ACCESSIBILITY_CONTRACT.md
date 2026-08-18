@@ -48,9 +48,12 @@ CDS-WP-014.)*
   vision; live updates must not interrupt uncontrollably (baseline 7.7).
 - Detail disclosure (drill-down from a summary to all five axes) must be
   operable by keyboard and exposed to assistive technology.
-- These are component-contract obligations to be evidenced later (AE-graded,
-  currently AE-0 everywhere); this contract creates the requirement, not the
-  evidence.
+- These are component-contract obligations to be evidenced later (AE-graded).
+  **No interactive, keyboard, focus, screen-reader, assistive-technology, or channel
+  evidence exists at any level.** The channel-independent Semantic Status
+  source/contract family holds admitted source-level **AE-1**, which satisfies **none**
+  of these obligations and does not transfer to any component or channel. This
+  contract creates the requirement, not the evidence.
 
 ## Understandable error and unknown communication
 

@@ -7,7 +7,9 @@
 - **Status:** **Normative and in effect** for classifying accessibility defects and
   regressions, committed with CDS-WP-010
   (`abe84b6b7267b8b9c5f96609e7c9d1ad1e68bc0a`). **No defect is registered today** —
-  nothing has been tested (AE-0).
+  no artifact has been exercised in a baseline environment. One bounded structural
+  and automated evidence package is admitted at **AE-1** (Semantic Status
+  source/contract family); every other artifact is AE-0.
 
 ## Purpose
 
@@ -137,8 +139,13 @@ or approve a claim. Nova reviews and recommends; Claude records and proposes.
 
 ## Currently registered defects
 
-**None.** No artifact has been tested; every artifact is **AE-0**. An empty defect
-list here means *nothing has been examined* — not *nothing is wrong*.
+**None.** No artifact has been exercised in a baseline environment; every artifact
+is **AE-0** except the channel-independent Semantic Status Layer-3 source/contract
+family, which holds admitted **AE-1** structural and automated evidence. An empty
+defect list here means *almost nothing has been examined, and nothing has been
+examined interactively* — not *nothing is wrong*. Known accessibility
+**limitations** recorded for the Semantic Status Candidate scope are tracked
+separately and are not defects.
 
 ## Related documents
 

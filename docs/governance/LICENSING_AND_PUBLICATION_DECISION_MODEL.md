@@ -157,8 +157,11 @@ policy says*.
 
 What it would have to say is unflattering, and that is the point:
 
-> **Nothing has been tested. Every CDS artifact is AE-0. A support baseline is
-> declared (A11Y-BL-001), but nothing has been evaluated against it. No
+> **Nothing has been manually, keyboard-, or assistive-technology-tested. Every CDS
+> artifact is AE-0 except the channel-independent Semantic Status Layer-3
+> source/contract family, which holds admitted AE-1 structural and automated
+> evidence for its source scope only. A support baseline is declared
+> (A11Y-BL-001), but nothing has been evaluated in any environment within it. No
 > accessibility claim of any level is valid.**
 
 An accessibility statement is **a disclosure obligation, not a quality claim**

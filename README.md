@@ -38,7 +38,9 @@ on a pinned Python/`jsonschema`/`rfc8785` stack
 71/71 unit tests, and **15/15 validation cases matching their committed expected
 outcomes** — **executor-produced evidence, since independently reviewed by CDS-WP-016
 (Independent Review PASS)**. **No
-accessibility test has been run, every artifact is AE-0, no Candidate or Stable
+manual, keyboard, or assistive-technology accessibility test has been run; every
+artifact is AE-0 except the channel-independent Semantic Status source/contract
+family at admitted **AE-1**; no Candidate or Stable
 artifact exists, no claim is valid, no licence is selected, and the publication state
 remains `Private Development`.** The **first concrete design foundation is defined**
 (CDS-WP-014): the **Semantic Status Foundation Contract** — five independent status
@@ -59,14 +61,19 @@ Candidate Accessibility Gate was unmet** — a read-only gap assessment **confir
 it (9/9 requirements not demonstrated), and the Human Maintainer **authorized the
 CDS-WP-016 Candidate Accessibility Gate Remediation** as internal rework, not a new
 work package. That remediation is **executed**: DEC-S-125, a Candidate-scope WCAG
-and responsibility mapping, a 25/25 per-value evidence matrix, a provisional AE-1
+and responsibility mapping, a 25/25 per-value evidence matrix, an AE-1
 evidence package, an AE-2 plan, a support-baseline plan (A11Y-BL-001 freshness
-**`Current`**), a 15-trigger regression plan, and 16 recorded limitations.
-**Candidate remains No**, maturity **Experimental**, approval **Unapproved**, and
-the **admitted accessibility evidence level of every artifact remains AE-0** — the
-new AE-1 evidence is **provisional and pending a fresh independent review**. The
-**Nova Candidate gate is open** and the **Human-Maintainer Candidate gate is not yet
-reached**. No follow-up work package is authorized and **CDS-WP-017 is not
+**`Current`**), a 15-trigger regression plan, and 16 recorded limitations. The
+remediation implementation and the clean-HEAD evidence package were then
+**independently reviewed** (PASS WITH NOTES and PASS) and integrated, and on
+2026-08-17 the Human Maintainer **admitted `AE1-CDS-WP016-SEMSTATUS-002` at AE-1**
+for the **channel-independent Semantic Status source/contract scope only** — see the
+[AE-1 Admission Record](docs/governance/SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md).
+**Candidate remains No**, maturity **Experimental**, approval **Unapproved**, claims
+**none**, and **every other CDS artifact remains AE-0**; no channel, consumer, or
+product evidence exists. The next authority step is the **Nova post-admission
+Candidate Maturity Re-Review**; the **Human-Maintainer Candidate approval is not
+granted**. No follow-up work package is authorized and **CDS-WP-017 is not
 activated**.
 
 The project does not yet produce visual design.
@@ -320,7 +327,8 @@ target and an evidence discipline — and **claims nothing**.
 
 **Target: WCAG 2.2 Level AA** for the applicable web-based scope, resolving CR-024
 at policy level. This is a **target, not current conformance** — no CDS artifact
-has been evaluated, every artifact is at evidence level **AE-0**, and **no
+has been evaluated against the target, every artifact is at evidence level **AE-0**
+except the Semantic Status source/contract family at admitted **AE-1**, and **no
 accessibility claim of any level is valid**, by anyone.
 
 **Applicability matrix** — all Level A and AA success criteria are mapped: 56
@@ -334,7 +342,8 @@ process). Automated checking alone is never sufficient; AE-3 requires a declared
 support baseline — now **declared and committed** as **A11Y-BL-001** (CDS-WP-010):
 three tiers, a 14-entry environment matrix, an evidence strategy, a maintenance
 policy, and a defect/regression model. The baseline is a **test contract, not
-evidence** — **no test has been run and every artifact remains AE-0**.
+evidence** — **no test has been run in any baseline environment**, and every artifact
+remains AE-0 apart from the one admitted source-level AE-1 scope.
 
 **Six channel profiles** — only web UI and web documentation carry a WCAG target;
 non-web channels each need their own profile and are never presented as WCAG
@@ -430,7 +439,8 @@ four executor-produced reviews, and a
 [Draft Candidate Dossier](docs/operations/SEMANTIC_STATUS_CANDIDATE_DOSSIER.md) —
 **independently reviewed by CDS-WP-016 (PASS, Candidate Recommendation GO); the
 Nova Candidate Maturity Review then returned NO-GO on the Candidate Accessibility
-Gate, whose remediation is executed and awaits a fresh independent review; the
+Gate, whose remediation is executed and has since been independently reviewed and
+admitted at AE-1 for the source scope; the
 Candidate gate remains open; consuming or representing
 the source set as approved is prohibited (DEC-S-124).**
 
@@ -466,10 +476,11 @@ the source set as approved is prohibited (DEC-S-124).**
   Candidate Maturity Review returned NO-GO** (Candidate Accessibility Gate unmet),
   and the Human-Maintainer-authorized **Candidate Accessibility Gate Remediation**
   is executed as internal rework of the same work package. Candidate remains
-  **No**; admitted accessibility evidence remains **AE-0** (the new AE-1 package is
-  provisional, pending fresh independent review); the **Nova Candidate gate is
-  open** and the **Human-Maintainer Candidate gate is not yet reached**.
-  **CDS-WP-017 is not activated.**
+  **No**; the remediation and its clean-HEAD evidence were **independently reviewed**
+  and `AE1-CDS-WP016-SEMSTATUS-002` is **admitted at AE-1 for the source scope only**
+  (every other artifact remains AE-0); the **Nova post-admission Candidate Maturity
+  Re-Review is the next authority step** and the **Human-Maintainer Candidate
+  approval is not granted**. **CDS-WP-017 is not activated.**
 
 The full controlled roadmap is in
 [project-system/WORK_PACKAGES.md](project-system/WORK_PACKAGES.md).

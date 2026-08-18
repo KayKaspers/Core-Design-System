@@ -52,7 +52,8 @@ Titles are quoted from the committed [Risk Register](../risks/RISK_REGISTER.md).
   for", is "usable by", or is "validated by" users; and at each consumer-validation
   step of a Candidate/pilot.
 - **Next expected evidence:** an explicit evidence-level statement per requirement
-  and artifact (Level 1 / AE-0 today); real user-validation evidence exists only
+  and artifact (Level 1 / AE-0 today for every artifact except the Semantic Status
+  source/contract family at admitted AE-1); real user-validation evidence exists only
   when a Human-Maintainer-authorized study produces it.
 - **Affected upcoming work:** first design-slice consumer validation; CoreOps
   pilot; any inclusive-design claim.
@@ -301,7 +302,9 @@ Titles are quoted from the committed [Risk Register](../risks/RISK_REGISTER.md).
   (baseline defined, triggers set, six-month max gap, version/freshness bound, next
   evidence artifact defined). Acceptance/closure by Human Maintainer only.
 - **Notes:** the baseline is a test contract, not evidence — every artifact remains
-  AE-0; A11Y-BL-001 is committed (CDS-WP-010) and confers no support or conformance.
+  AE-0 except the Semantic Status source/contract family, which holds admitted
+  source-level **AE-1** produced without exercising any baseline environment;
+  A11Y-BL-001 is committed (CDS-WP-010) and confers no support or conformance.
 
 ---
 

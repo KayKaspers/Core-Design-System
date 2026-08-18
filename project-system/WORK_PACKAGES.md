@@ -62,9 +62,13 @@ Human Maintainer **authorized the Candidate Accessibility Gate Remediation** as
 **internal rework of CDS-WP-016** — that remediation is now **executed**.
 CDS-WP-016 is registered as `Next` (the current authorized roadmap
 position); what remains open is the Candidate authority closure — a **fresh
-independent review of the remediation**, **Nova Candidate gate open**,
-**Human-Maintainer Candidate gate not yet reached**, **Candidate No**, admitted
-accessibility evidence **AE-0** (the new AE-1 package is provisional). No further
+independent review of the remediation and of its clean-HEAD evidence package
+(**PASS WITH NOTES** and **PASS**), the Human Maintainer **admitted
+`AE1-CDS-WP016-SEMSTATUS-002` at AE-1** on 2026-08-17 for the channel-independent
+Semantic Status source/contract family only. The **Nova post-admission Candidate
+Maturity Re-Review is the next authority step**, the **Human-Maintainer Candidate
+approval is not granted**, and **Candidate remains No**; every other artifact
+remains **AE-0**. No further
 work-package ID is created and **CDS-WP-017 is not activated**.
 
 ## Descriptions
@@ -347,7 +351,7 @@ sources; no waiver, no Candidate award), Candidate-scope **WCAG applicability** 
 (GAP-H-02 closed as a mapping), an operational **text-first** source rule
 (`CDS-V4-STATUS-DESCRIPTION`), a test-only statement evidence layer with **6/6**
 review-required and **8/8** fail-closed coverage, **25/25** source descriptions and
-**25/25** DE/EN structural coverage, a **provisional AE-1** evidence record with
+**25/25** DE/EN structural coverage, an **AE-1** evidence record with
 results and digests, a reasoned **AE-2 plan**, a **support-baseline plan** on
 A11Y-BL-001 freshness **`Current`**, a **15-trigger regression plan**, **16**
 recorded limitations (0 Critical), and a review addendum. The WP-013/WP-015
@@ -356,9 +360,13 @@ test IDs still pass.
 
 Still open and required before any promotion: a **fresh independent review of the
 remediation**, **Nova's Candidate-gate review**, and the **Human Maintainer's
-maturity approval**. Candidate remains **No**, maturity **Experimental**, approval
-**Unapproved**, and the **admitted accessibility evidence level of every artifact
-remains AE-0** — the new AE-1 evidence is **provisional, not admitted**. Further
+maturity approval**. The remediation and its clean-HEAD evidence have since been
+**independently reviewed** and `AE1-CDS-WP016-SEMSTATUS-002` was **admitted at AE-1**
+on 2026-08-17 for the channel-independent Semantic Status source/contract scope only.
+Candidate remains **No**, maturity **Experimental**, approval
+**Unapproved**, claims **none**, and **every other artifact remains AE-0**; the
+**Nova post-admission Candidate Maturity Re-Review** and the separate
+**Human-Maintainer Candidate approval** are both still outstanding. Further
 steps begin only on an explicit Nova prompt and Human-Maintainer authorization;
 **CDS-WP-017 is not activated**.
 

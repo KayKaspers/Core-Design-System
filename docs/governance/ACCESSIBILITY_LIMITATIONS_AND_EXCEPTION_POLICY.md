@@ -196,8 +196,14 @@ Stable-, or claim-eligible.
 
 **No limitation and no exception is created in this work package.**
 
-No artifact has been evaluated, so no barrier is known. **That is not the same as
-having none** — it means nothing has been looked at. Every artifact is AE-0.
+**No exception has been approved anywhere, and none is in force.**
+
+Known **limitations** have since been recorded for the Semantic Status Candidate
+scope, which holds admitted **AE-1** structural and automated evidence. Recording a
+limitation is a documentation obligation, **not** an approved exception and **not** a
+waiver. Every other CDS artifact is still AE-0 and has not been evaluated, so for
+those no barrier is known — **that is not the same as having none**; it means nothing
+has been looked at.
 
 ## Related documents
 

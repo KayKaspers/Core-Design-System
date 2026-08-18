@@ -243,16 +243,26 @@ Consequences that must stay true:
 - Bottleneck pressure is **never** a reason to bypass a gate. It is a reason to
   reduce ceremony or to widen authority through an explicit, governed decision.
 
-## Open accessibility dependency
+## Open accessibility evidence dependency
 
-*(Policy decided — CDS-WP-007 committed; evidence outstanding)*
+*(Policy decided — CDS-WP-007 committed; partially evidenced, not closed)*
 
 Several gates reference accessibility evidence. **The accessibility target and
 its evidence method exist** — **WCAG 2.2 Level AA** (DEC-S-049, DEC-S-060) and
-the AE-0 … AE-4 evidence model, committed with CDS-WP-007 (CR-024). **No
-accessibility evidence has been produced: every CDS artifact is AE-0.**
+the AE-0 … AE-4 evidence model, committed with CDS-WP-007 (CR-024).
 
-While no evidence exists:
+**One narrowly scoped evidence package has since been admitted:**
+`AE1-CDS-WP016-SEMSTATUS-002` at **AE-1**, for the **channel-independent Semantic
+Status Layer-3 source/contract family only** — see the
+[Semantic Status AE-1 Admission Record](SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md).
+**All other artifact scopes remain AE-0** unless separately admitted.
+
+**This dependency remains open.** A source-level AE-1 creates no **AE-2**, **AE-3**,
+**AE-4**, channel evidence, consumer evidence, accessibility claim, or conformance
+state, and it does not close the general accessibility evidence dependency for any
+other scope.
+
+Therefore, and unchanged:
 
 - no accessibility claim may be made at any level,
 - the Stable gate cannot be fully satisfied for artifacts with accessibility

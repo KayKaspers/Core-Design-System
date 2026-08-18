@@ -42,8 +42,8 @@ This target does **not** mean:
 
 | Not implied | Reality |
 | --- | --- |
-| CDS currently meets WCAG 2.2 AA | **Nothing has been tested.** |
-| Any CDS artifact has been evaluated | No artifact has accessibility evidence. |
+| CDS currently meets WCAG 2.2 AA | **No manual, keyboard, screen-reader, or assistive-technology testing has been performed anywhere.** |
+| Any CDS artifact has been evaluated | Only one has, and only structurally: the channel-independent Semantic Status Layer-3 source/contract family holds admitted **AE-1** evidence. Every other artifact has none. |
 | Any consumer product is conformant | No consumer has been evaluated. |
 | An accessible building block makes an application conformant | It does not (DEC-S-052). |
 | Non-web channels are WCAG-assessable | They are not, without a channel profile (DEC-S-058). |
@@ -57,7 +57,7 @@ Four governance states are separate and must stay separate (DEC-S-050):
 
 ```
 Target defined  →  Implementation evidence  →  Consumer evidence  →  Conformance claim
-   (here)              (does not exist)          (does not exist)       (not possible)
+   (defined)        (one bounded AE-1 only)      (does not exist)       (not possible)
 ```
 
 ### The standard's own limit

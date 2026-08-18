@@ -31,10 +31,13 @@ Pre-Candidate Operating Enablement — **Foundation / Pre-Design: Closed with No
   Accessibility Gate unmet), the gap assessment **confirmed** it (9/9), and the
   Human-Maintainer-authorized **Candidate Accessibility Gate Remediation**
   (internal rework of CDS-WP-016, **not** a new work package) is **executed**.
-  The Candidate authority closure remains open: a **fresh independent review of the
-  remediation**, **Nova Candidate gate open**, **Human-Maintainer Candidate gate not
-  yet reached**, Candidate **No**, admitted accessibility evidence **AE-0** (the new
-  AE-1 package is **provisional**). No follow-up work
+  The remediation and its clean-HEAD evidence package are **independently reviewed**
+  and **admitted**: admitted accessibility evidence **AE-1**
+  (`AE1-CDS-WP016-SEMSTATUS-002`, 2026-08-17) for the channel-independent Semantic
+  Status source/contract family **only**. The Candidate authority closure remains
+  open: the **Nova post-admission Candidate Maturity Re-Review** has not been
+  performed and the **Human-Maintainer Candidate approval is not granted**, so
+  Candidate is **No**. No follow-up work
   package is authorized; CDS-WP-017 is not activated.
 - Previous work package: CDS-WP-015 — Semantic Status Foundation Source Set and
   Candidate Evidence (Completed)
@@ -73,7 +76,11 @@ Pre-Candidate Operating Enablement — **Foundation / Pre-Design: Closed with No
 - Environment entry count: **14** (A11Y-ENV-001…014) — Required 6 · Conditional 4 ·
   Deferred 4; Required browser/screen-reader pairings **2**
 - Accessibility evidence levels: **5** (AE-0 … AE-4) — unchanged
-- Accessibility evidence records: **0** — every artifact remains AE-0
+- Accessibility evidence records for the Semantic Status Candidate scope: **2
+  produced** — Evidence 001 (remediation-time, **never admitted**) and Evidence 002
+  (clean-HEAD, independently reviewed, integrated). **Admitted evidence packages: 1**
+  — Evidence 002 only. Every artifact outside that scope remains **AE-0**, and no
+  baseline environment has been exercised
 - RISK-044: **Mitigating** (baseline defined; gate met, DEC-S-070)
 
 Documents:
@@ -207,9 +214,10 @@ Documents:
   unreviewed** state is **superseded**: independently reviewed by CDS-WP-016
   (**Independent Review PASS**, **Candidate Recommendation GO**); **GO is not a
   Candidate award** — the **Nova Candidate Maturity Review** then returned
-  **NO-GO** on the Candidate Accessibility Gate, whose remediation is **executed**
-  and awaits a **fresh independent review**; **Candidate: No**, admitted
-  accessibility evidence **AE-0** (DEC-S-115, DEC-S-122, DEC-S-125)
+  **NO-GO** on the Candidate Accessibility Gate, whose remediation is **executed**,
+  **independently reviewed**, and admitted at AE-1; **Candidate: No**, admitted
+  accessibility evidence **AE-1 for this source scope only**
+  (DEC-S-115, DEC-S-122, DEC-S-125)
 - Source-Set ID: **`semantic/status`** · Layer: semantic · Revision:
   `semantic-status-rev-0001` · Axis count: **5** · Status token count: **25**
   (non-visual `string` identity values; `status.<axis>.<value>`)
@@ -282,9 +290,12 @@ Documents:
 - Accessibility channel profiles: **6** — 2 with a target, 0 Candidate-eligible
 - CR-024 policy status: **Resolved at policy level** (DEC-S-060); entry criterion
   `Accessibility target defined` met with the CDS-WP-007 commit
-- **Current accessibility evidence: none — every artifact is AE-0**; a support
+- **Current accessibility evidence: one admitted package** —
+  `AE1-CDS-WP016-SEMSTATUS-002` at **AE-1** for the channel-independent Semantic
+  Status source/contract family; **every other artifact is AE-0**. A support
   baseline is **declared and committed** (A11Y-BL-001, CDS-WP-010) but **no
-  evidence has been executed**; no accessibility claim of any level is valid
+  evidence has been executed in any baseline environment**; no AE-2, AE-3, or AE-4
+  exists; no accessibility claim of any level is valid
 
 Documents:
 [Accessibility and Inclusive Design Policy](../docs/governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md) ·

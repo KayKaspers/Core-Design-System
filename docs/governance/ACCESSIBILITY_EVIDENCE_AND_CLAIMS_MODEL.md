@@ -28,7 +28,13 @@ Frame: [Accessibility and Inclusive Design Policy](ACCESSIBILITY_AND_INCLUSIVE_D
 
 No reliable accessibility evidence.
 
-**Every CDS artifact is currently AE-0.** Nothing has been tested.
+**Every CDS artifact is currently AE-0, with exactly one bounded exception:** the
+channel-independent Semantic Status Layer-3 source/contract family holds admitted
+**AE-1** evidence (`AE1-CDS-WP016-SEMSTATUS-002`, source revision
+`semantic-status-rev-0001`) — see the
+[Semantic Status AE-1 Admission Record](SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md).
+Nothing else has been assessed, and that admission establishes no AE-2, AE-3,
+AE-4, Candidate, Stable, support, or conformance state.
 
 ### AE-1 — Structural and Automated Evidence
 
@@ -141,8 +147,10 @@ Applying it to this model:
   `Stale` evidence is **not current** and satisfies no gate — see the
   [Baseline Maintenance Policy](ACCESSIBILITY_BASELINE_MAINTENANCE_POLICY.md).
 - **A baseline alone is not evidence** (DEC-S-065): declaring A11Y-BL-001 records
-  what future evidence will target; it establishes nothing. **Every artifact remains
-  AE-0.**
+  what future evidence will target; it establishes nothing. **No artifact reached a
+  higher evidence level by the declaration itself**; the one admitted AE-1 package
+  was produced and independently reviewed separately, and **no baseline environment
+  has been exercised**.
 - **Support-claim boundary**: a *support claim* (environments actually supported) is
   distinct from the baseline and requires evidence plus the eight claim elements;
   none is valid today (DEC-S-044).
@@ -180,8 +188,14 @@ Applying it to this model:
 
 ### Current state
 
-**No artifact can pass either gate today.** All artifacts are AE-0 and no evidence
-exists. A support baseline does exist — **A11Y-BL-001, declared and committed**
+**No artifact has passed either gate.** The channel-independent Semantic Status
+Layer-3 source/contract family is the **first and only** CDS scope with admitted
+evidence — **AE-1**, `AE1-CDS-WP016-SEMSTATUS-002` (see the
+[Semantic Status AE-1 Admission Record](SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md)) —
+and it satisfies Candidate element 4 only. **Element 9, Human-Maintainer approval
+after Nova review, remains open**, so Candidate is **No**. All other CDS artifacts
+remain **AE-0**. The Stable gate is unreachable: no AE-2, AE-3, or AE-4 exists
+anywhere. A support baseline does exist — **A11Y-BL-001, declared and committed**
 (CDS-WP-010) — but a baseline is what evidence will be produced against, never
 evidence itself.
 

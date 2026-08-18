@@ -133,8 +133,11 @@ committed by CDS-WP-010.
 - **`Accessibility support baseline` is policy-side present** — CDS-WP-010 is
   committed — satisfying Pilot Group E requirement 10 at the *policy* level only.
   Policy-side presence satisfies **no** evidence requirement.
-- **Evidence remains fully outstanding:** the baseline is a test contract, not
-  evidence (DEC-S-065). No AE-1/AE-2/AE-3/AE-4 exists; every artifact is AE-0.
+- **Pilot-relevant evidence remains fully outstanding:** the baseline is a test
+  contract, not evidence (DEC-S-065). **No pilot, consumer, product, or channel
+  evidence of any level exists**, and no AE-2/AE-3/AE-4 exists anywhere. The only
+  admitted package is source-level **AE-1** for the channel-independent Semantic
+  Status Layer-3 source/contract family, which **does not transfer to CoreOps**.
 - **The pilot stays inactive** and cannot start (entry criteria unmet; DEC-S-015).
 
 ## Entry criterion status
@@ -161,9 +164,11 @@ Claude did not declare it met. The Human Maintainer's commit did.
 | No CoreOps governance conflict | Pending |
 | **Accessibility target decided** | **Met — committed with CDS-WP-007** |
 
-**The pilot cannot start.** Two criteria remain structurally unmet: no artifact
-can reach Candidate (**no evidence exists** — every artifact is AE-0; the support
-baseline itself is declared), and the architecture awaits approval.
+**The pilot cannot start.** Two criteria remain structurally unmet: **no artifact is
+Candidate** — the Semantic Status source/contract family now holds admitted
+source-level **AE-1**, but its Candidate gate still awaits Nova review and
+Human-Maintainer approval, and every other artifact is AE-0 — and the architecture
+awaits approval.
 
 ## Available evidence
 
@@ -171,7 +176,7 @@ baseline itself is declared), and the architecture awaits approval.
 
 | Evidence | State |
 | --- | --- |
-| CDS artifact accessibility evidence | **AE-0** |
+| CDS artifact accessibility evidence | **AE-0**, except source-level **AE-1** admitted for the channel-independent Semantic Status Layer-3 source/contract family — **not pilot evidence, not transferable to CoreOps** |
 | Support baseline | **Declared and committed — A11Y-BL-001; a test contract, never evidence** |
 | CoreOps pilot evidence | **None — pilot inactive** |
 | User research | **None, and none planned** (RISK-017) |
@@ -200,8 +205,11 @@ assessed.
 > stated. No claim is made, permitted, or implied.
 
 > **No current CDS artifact has an approved WCAG 2.2 Level AA conformance claim.**
-> No CDS artifact has been evaluated — every artifact is **AE-0, Not Assessed**,
-> which is neither passed nor failed.
+> No CDS artifact has been evaluated against WCAG 2.2 Level AA. Every artifact is
+> **AE-0, Not Assessed** except the channel-independent Semantic Status Layer-3
+> source/contract family, whose admitted **AE-1** structural and automated evidence
+> is neither a WCAG assessment nor a conformance result — and AE-0 itself is
+> neither passed nor failed.
 
 > **No accessibility claim of any level is valid today** — for CDS, for CoreOps,
 > or for anyone.

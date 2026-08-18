@@ -15,10 +15,13 @@
   **Nova Candidate Maturity Review then returned NO-GO** (Candidate Accessibility
   Gate unmet), the gap assessment **confirmed** it, and the Human-Maintainer-
   authorized **Candidate Accessibility Gate Remediation** (internal rework of
-  CDS-WP-016, **not** a new work package) is **executed**. **Candidate No**,
-  maturity **Experimental**, approval **Unapproved**, **admitted AE-0** — the new
-  AE-1 package is **provisional, pending fresh independent review**. **Nova
-  Candidate gate open**; **Human-Maintainer Candidate gate not yet reached**; no
+  CDS-WP-016, **not** a new work package) is **executed**, **independently
+  reviewed**, and its clean-HEAD evidence package **admitted**. **Candidate No**,
+  maturity **Experimental**, approval **Unapproved**, **admitted AE-1 for the
+  channel-independent Semantic Status source/contract family only**
+  (`AE1-CDS-WP016-SEMSTATUS-002`, 2026-08-17); every other artifact remains AE-0.
+  **Nova post-admission Candidate Maturity Re-Review is the next authority step**;
+  **Human-Maintainer Candidate approval not granted**; no
   follow-up work package is authorized and CDS-WP-017 is not activated.
 
 ## Status of completed work packages
@@ -417,17 +420,23 @@ satisfied** — and the Human Maintainer **authorized the CDS-WP-016 Candidate
 Accessibility Gate Remediation** as **internal rework of CDS-WP-016, not a new work
 package**. That remediation is **executed**: DEC-S-125, Candidate-scope WCAG and
 responsibility mappings, a **25/25** per-value evidence requirements matrix
-(GAP-H-02), a **provisional AE-1** evidence package (6/6 review-required, 8/8
+(GAP-H-02), an **AE-1** evidence package (6/6 review-required, 8/8
 fail-closed, 25/25 descriptions, 25/25 DE/EN), a reasoned AE-2 plan, a
 support-baseline plan on **A11Y-BL-001 freshness `Current`**, a 15-trigger
 regression plan, and 16 recorded limitations — see the
 [Candidate Accessibility Gate Addendum](../docs/reviews/WP016_CANDIDATE_ACCESSIBILITY_GATE_ADDENDUM.md).
 
-What remains open is the Candidate authority closure: a **fresh independent review
-of the remediation**, **Nova Candidate gate open**, **Human-Maintainer Candidate
-gate not yet reached**, Candidate **No**, maturity **Experimental**, approval
-**Unapproved**, and the **admitted accessibility evidence level of every artifact
-still AE-0** — the new AE-1 evidence is **provisional and not admitted**. No
+The remediation and its clean-HEAD evidence package have since been **independently
+reviewed** (**PASS WITH NOTES** and **PASS**) and integrated, and on **2026-08-17 the
+Human Maintainer admitted `AE1-CDS-WP016-SEMSTATUS-002` at AE-1** for the
+channel-independent Semantic Status source/contract scope only — see the
+[AE-1 Admission Record](../docs/governance/SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md).
+
+What remains open is the **Candidate authority closure**: the **Nova post-admission
+Candidate Maturity Re-Review** has **not yet been performed**, and the
+**Human-Maintainer Candidate approval is not granted**. Candidate **No**, maturity
+**Experimental**, approval **Unapproved**, claims **none**; **every other artifact
+remains AE-0** and no AE-2, AE-3, or AE-4 exists. No
 follow-up work package is authorized; CDS-WP-017 is not activated.
 
 ### Objective of CDS-WP-016
@@ -449,8 +458,8 @@ follow-up work package is authorized; CDS-WP-017 is not activated.
 
 - concrete visual design; selecting colours, typography, icons, logos, or themes,
 - implementing components or product code,
-- executing accessibility tests or asserting accessibility evidence (every artifact
-  is AE-0),
+- executing accessibility tests or asserting accessibility evidence (apart from the
+  one separately admitted source-level AE-1 package, every artifact is AE-0),
 - selecting a licence or approving publication,
 - claiming conformance, accessibility, adoption, or certification,
 - promoting any artifact to Candidate or Stable,

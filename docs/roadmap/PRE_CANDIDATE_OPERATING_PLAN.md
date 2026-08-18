@@ -49,7 +49,9 @@ pilot activation.
 3. **Declare an accessibility support baseline** — **delivered (policy-side) by
    CDS-WP-010**: A11Y-BL-001, three tiers, environment matrix, evidence strategy,
    maintenance policy, and defect/regression model, declared and committed.
-   **No evidence executed** (every artifact AE-0). (FM-F-001; RISK-044 → Mitigating.)
+   **No evidence executed in any baseline environment**; every artifact is AE-0
+   except the Semantic Status source/contract family, which holds admitted
+   source-level **AE-1**. (FM-F-001; RISK-044 → Mitigating.)
 4. **Staff the Evidence Reviewer role** (and, for a profile, a Consumer
    Maintainer) — **not yet done**; the reviewer may never be the author.
    (FM-F-006; DEC-S-045.)
@@ -94,8 +96,10 @@ with an accessibility obligation (RISK-044). **CDS-WP-010 defined it** — A11Y-
 three tiers (Required/Complementary/Scope-triggered), the Environment and Scope
 Matrix, the Evidence Strategy, the Baseline Maintenance Policy, and the Defect and
 Regression Model — **committed with CDS-WP-010**. The baseline is a **test
-contract, not evidence**: **no test was run, every artifact is AE-0**, and no
-environment is claimed as supported. RISK-044 moved `Monitored → Mitigating` on the
+contract, not evidence**: **no test was run in any baseline environment and no
+environment is claimed as supported**. Every artifact is AE-0 except the Semantic
+Status source/contract family, whose admitted source-level **AE-1** exercised no
+baseline environment. RISK-044 moved `Monitored → Mitigating` on the
 strength of the definition. The **next substantive topic** is the machine-readable
 source and token-format decision (CDS-WP-011).
 
@@ -125,7 +129,9 @@ named role; none satisfied by CDS-WP-009 alone):
 - component or pattern design;
 - design, build, or test tool selection;
 - **executing accessibility tests or asserting any accessibility evidence** (the
-  baseline is defined, but no evidence has been produced — every artifact is AE-0);
+  baseline is defined; apart from one separately authorized and admitted
+  source-level AE-1 package, no evidence has been produced and every other artifact
+  is AE-0);
 - installing browsers, screen readers, or test tools;
 - Product Profiles;
 - promoting any artifact to Candidate or Stable;

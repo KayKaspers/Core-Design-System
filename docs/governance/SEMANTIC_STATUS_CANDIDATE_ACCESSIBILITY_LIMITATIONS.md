@@ -303,9 +303,12 @@ if documented) · **Minor** (narrow, documented, alternative exists).
   terminology/accessibility/content review cover meaning by human reading. Their
   cost: neither is user validation, and both are reviews of a contract rather
   than of a rendered label.
-- **Evidence:** provisional AE-1 structural coverage (25 identifiers, 25 EN
-  labels, 25 DE labels, 0 duplicates, 0 unauthorized, 0 missing); human reviews
-  as above
+- **Evidence:** `AE1-CDS-WP016-SEMSTATUS-002` — admitted **AE-1** structural and
+  automated coverage for the source-only scope (25 identifiers, 25 EN labels,
+  25 DE labels, 0 duplicates, 0 unauthorized, 0 missing); human reviews as above.
+  **Structural DE/EN parity is not semantic equivalence, not cultural
+  suitability, and not user validation**, and the admission establishes none of
+  them — this limitation stands unchanged.
 - **Review trigger:** regression triggers T-04, T-05, T-11
 - **Expiry / re-assessment:** at any terminology or localization change, and at
   the next Candidate-gate review
@@ -390,6 +393,11 @@ if documented) · **Minor** (narrow, documented, alternative exists).
 
 ## SSC-LIM-015 — Executor self-confirmation partially mitigated, not erased
 
+*The fields below are the **creation-time** record (2026-08-17), written before any
+independent review existed. Their stated reassessment trigger has since fired — see
+**Post-review disposition** at the end of this entry for the current state. The
+record is not withdrawn and its severity is unchanged.*
+
 - **Affected artifact:** the whole CDS-WP-016 remediation package
 - **Scope:** implementation, fixtures, expectations, and evidence
 - **Affected user needs:** everyone who would rely on evidence that was never
@@ -414,6 +422,52 @@ if documented) · **Minor** (narrow, documented, alternative exists).
 - **Expiry / re-assessment:** **on completion of the fresh independent review**
 - **Claim effect:** **the AE-1 evidence produced here is `provisional` and is not
   admitted AE-1.** Class: **Evidence gap** · Severity: **Significant**
+
+### Post-review disposition
+
+*(Additive, CDS-WP-016. The creation-time fields above are **not** rewritten. This
+subsection records the outcome of the reassessment trigger they defined.)*
+
+**The trigger fired.** The reassessment condition stated above — *"on completion of
+the fresh independent review"* — has occurred. What happened:
+
+| # | Event | Outcome |
+| --- | --- | --- |
+| 1 | Fresh Independent **Remediation Implementation** Review (Review Event A) | **PASS WITH NOTES** |
+| 2 | Fresh Independent **Clean-HEAD Evidence 002** Review (Review Event B) | **PASS** |
+| 3 | Independent reproduction of Evidence 002 by the reviewer | Byte reproduction of the Results file, a deterministic double run, and 18/18 digest verification against a clean committed snapshot of `e6cb6fa` |
+| 4 | Human-Maintainer **admission** of `AE1-CDS-WP016-SEMSTATUS-002` at **AE-1**, 2026-08-17 | Channel-independent Semantic Status Layer-3 source/contract family **only**, source revision `semantic-status-rev-0001` |
+
+Both reviewers were separate from the executor of the work being reviewed, which is
+what evidence rule 10 requires. See the
+[Review Provenance Record](../reviews/WP016_ACCESSIBILITY_REMEDIATION_REVIEW_PROVENANCE.md)
+and the
+[Semantic Status AE-1 Admission Record](SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md).
+
+**What this changes.** The **Claim effect** field above — *"the AE-1 evidence
+produced here is `provisional` and is not admitted AE-1"* — is **historical
+creation-state, not current state**. The evidence is no longer provisional and is
+no longer unadmitted.
+
+**What this does not change.**
+
+- **The single-executor authorship fact remains true and remains documented.** One
+  executor wrote the validator rule, the fixtures, the expected classifications,
+  the runner, and the tests that check them. Independent review **mitigates** the
+  independence risk; it does **not** erase the provenance, and it does not
+  retroactively turn self-agreement into independent construction.
+- **Severity remains `Significant`.** This is not a downgrade, not a waiver, and
+  not a closure. The record remains one of the **16** recorded limitations and
+  continues to count toward the Significant total.
+- **Reassessment performed is not limitation deleted**, and **independence
+  requirement satisfied is not executor authorship never existed**.
+- **Nothing is promoted.** No Candidate, no Stable, no approval, and no claim
+  follows from the admission. Candidate remains **No**, maturity remains
+  **Experimental**, artifact approval remains **Unapproved**, and claims remain
+  **None**.
+
+**Next reassessment:** at the next Candidate-gate review, and on any regression
+trigger that re-opens the evidence (T-01 … T-15).
 
 ## SSC-LIM-016 — Local execution availability not asserted for any baseline environment
 
@@ -479,7 +533,10 @@ following became true, and each is a recorded regression trigger:
   CDS-conformant scope **cannot** be waived through an ordinary exception
   (DEC-S-059).
 - It **promotes nothing.** Candidate remains **No**, maturity **Experimental**,
-  approval **Unapproved**, admitted evidence level **AE-0**.
+  approval **Unapproved**. The admitted evidence level is **AE-0** for every CDS
+  artifact except this channel-independent source/contract family, which holds
+  admitted **AE-1** (`AE1-CDS-WP016-SEMSTATUS-002`, source scope only) — and
+  **an admitted AE-1 promotes nothing either**.
 - It **approves nothing.** Only the Human Maintainer may approve a limitation
   with normative effect, and none of these sixteen is approved.
 - It **is not a passed test**, and no entry may be netted against a strength.

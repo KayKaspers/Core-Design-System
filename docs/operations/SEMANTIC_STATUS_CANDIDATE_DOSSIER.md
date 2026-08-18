@@ -64,7 +64,9 @@ no Product-Profile extension points.
 
 [Accessibility and Content Review](../reviews/SEMANTIC_STATUS_ACCESSIBILITY_AND_CONTENT_REVIEW.md)
 — executor-produced **contract** review; no user research, no AT execution,
-no WCAG claim; every artifact AE-0.
+no WCAG claim. *(At the time of that review every artifact was AE-0. The
+source/contract family has since reached admitted **AE-1** — see the additive
+section [AE-1 Admission and Post-Review Gate Reconciliation](#ae-1-admission-and-post-review-gate-reconciliation-additive-2026-08-17).)*
 
 ## Localization evidence
 
@@ -291,3 +293,74 @@ executor does not hold and cannot simulate.
 > **approved**. The decision field stays empty until the fresh independent
 > review, the Nova gate, and the Human-Maintainer gate all close, and unclear
 > readiness resolves as **NO-GO**, never "go with notes" (DEC-S-048).
+
+*The block above records the state **at the close of the remediation**, before the
+fresh independent reviews and before the AE-1 admission. For the current state, see
+the additive section below; it supersedes the `AE-0` line above for present-day
+reading. Candidate is unchanged at **No**.*
+
+## AE-1 Admission and Post-Review Gate Reconciliation (additive, 2026-08-17)
+
+*Additive current-state section. Every section above is preserved as written and
+remains the record of what was true when it was written.*
+
+### What closed since the remediation
+
+| Step | Result |
+| --- | --- |
+| Fresh independent **remediation implementation** review | **PASS WITH NOTES** |
+| Fresh independent **clean-HEAD Evidence 002** review | **PASS** |
+| Evidence 002 (`AE1-CDS-WP016-SEMSTATUS-002`) | **integrated** at `43a512892e148fc53a5f5bee522ef6c30d848f19` |
+| F-003 — revision binding and independent evidence review | **SATISFIED** |
+| GAP-H-02 | **CLOSED BY EVIDENCE** |
+| Nova AE-1 admission recommendation | **GO** |
+| **Human-Maintainer AE-1 admission** | **APPROVED / ADMITTED**, 2026-08-17 |
+
+Provenance for the two reviews:
+[Review Provenance Record](../reviews/WP016_ACCESSIBILITY_REMEDIATION_REVIEW_PROVENANCE.md).
+Admission authority and scope:
+[Semantic Status AE-1 Admission Record](../governance/SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md).
+
+### Current evidence state
+
+| Item | Value |
+| --- | --- |
+| Admitted evidence level | **AE-1** |
+| Admitted evidence ID | `AE1-CDS-WP016-SEMSTATUS-002` |
+| Evidence type | Structural and Automated Evidence |
+| Evidence scope | **channel-independent source/contract only** |
+| Source revision | `semantic-status-rev-0001` |
+| Evidenced implementation revision | `e6cb6fae63b1548ce4dabb7f5548116e4c61d622` |
+| Evidence result | Pass with limitations |
+| AE-2 / AE-3 / AE-4 | **none** |
+
+### Current Candidate accessibility gate state
+
+| # | Requirement | Current state |
+| --- | --- | --- |
+| 1 | WCAG applicability mapping | **SATISFIED for the declared source scope** |
+| 2 | Responsibility mapping | **SATISFIED** |
+| 3 | Known accessibility requirements | **SATISFIED** — 25/25 mapped; GAP-H-02 closed |
+| 4 | AE-1 | **SATISFIED** — `AE1-CDS-WP016-SEMSTATUS-002` **admitted** |
+| 5 | Relevant AE-2 evidence **or** a reasoned plan | **SATISFIED BY REASONED PLAN** — no AE-2 execution fabricated |
+| 6 | Known limitations | **SATISFIED as a documentation requirement** — 16 recorded: 0 Critical · 11 Significant · 5 Minor; none approved as an exception; no waiver |
+| 7 | Support baseline plan | **SATISFIED** — A11Y-BL-001, freshness `Current` at review |
+| 8 | Regression plan | **SATISFIED** — 15 triggers |
+| 9 | **Human-Maintainer Candidate approval after Nova review** | **OPEN** |
+
+**Arithmetic: 8 / 9 currently supported or satisfied · 1 / 9 authority gate open.**
+
+This dossier does **not** make the final Candidate judgement. The next authority step
+is the **Nova post-admission Candidate Maturity Re-Review**; only if that returns GO
+does a separate Human-Maintainer Candidate decision follow.
+
+### Candidate decision after admission
+
+> **Still not Candidate.**
+>
+> Candidate = **No** · Maturity = **Experimental** · Approval = **Unapproved** ·
+> Admitted accessibility evidence level = **AE-1, source scope only** · Claims =
+> **none** · Pilot = **inactive** · Publication = **Private Development** ·
+> CDS-WP-017 = **not activated**.
+>
+> An AE-1 admission is not a Candidate award. Evidence is not authority.

@@ -22,8 +22,13 @@ Every trigger below is a way that can happen.
 
 ## Evidence effects — defined once
 
-*(Referenced by the trigger table. `Applicable evidence` today means the
-provisional AE-1 package; once other levels exist they are included.)*
+*(Referenced by the trigger table. `Applicable evidence` today means the admitted
+AE-1 package `AE1-CDS-WP016-SEMSTATUS-002` — Evidence 002, independently reviewed
+**PASS**, integrated, and admitted by the Human Maintainer on 2026-08-17 for the
+channel-independent source/contract scope only. Once other levels exist they are
+included. **E-REREVIEW is unaffected by that admission:** a completed independent
+review of the current package satisfies no future trigger, and every trigger below
+requires a fresh one.)*
 
 | Effect | Meaning |
 | --- | --- |
@@ -128,7 +133,10 @@ obligations above are not optional.
 - It **is not mitigation.** Writing a regression plan prevents no regression.
 - It **produces no evidence** and **creates no claim**.
 - It **promotes nothing**: Candidate remains **No**, maturity **Experimental**,
-  approval **Unapproved**, admitted evidence level **AE-0**.
+  approval **Unapproved**. The admitted evidence level is **AE-0** for every CDS
+  artifact except this channel-independent source/contract family, which holds
+  admitted **AE-1** (`AE1-CDS-WP016-SEMSTATUS-002`, source scope only) — an
+  admission this plan neither produced nor extends.
 
 ## Related documents
 
