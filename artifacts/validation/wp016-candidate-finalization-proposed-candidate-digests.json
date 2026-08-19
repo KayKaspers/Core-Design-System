@@ -1,0 +1,106 @@
+{
+  "reportVersion": "2",
+  "workPackage": "CDS-WP-016",
+  "evidenceId": "AE1-CDS-WP016-SEMSTATUS-003",
+  "canonicalizationMethod": "RFC 8785 (JSON Canonicalization Scheme)",
+  "digestAlgorithm": "SHA-256",
+  "digestNote": "Integrity aid only. A digest is NOT a signature, NOT authorship, NOT a review, NOT an Evidence Admission, NOT a Candidate Approval, NOT maturity, NOT a Claim, and NOT conformance (DEC-S-090, DEC-S-100, DEC-S-126, RISK-072). It binds bytes to an identity so a later reviewer can prove the reviewed bytes are the evidenced bytes; it establishes nothing about their correctness, authorization, or status. `contentDigests` are RFC 8785 (JCS) canonical-content digests of strict-JSON documents after a successful V1 parse; `fileDigests` are raw SHA-256 digests of the file bytes for non-JSON inputs, where no canonical content form is defined. This report deliberately does not restate a global repository evidence level: governance state is held outside this artifact.",
+  "reportScopeNote": "This is a preparation-aware report for an uncommitted Proposed Candidate Revision. It separates the authoritative committed repository state from the source-declared TARGET metadata of the proposed bytes, and never presents the latter as the former. Historical reportVersion 1 artifacts described a different, AE-0/Experimental global state, remain immutable, and none of their fields are carried over implicitly.",
+  "authoritativeBaselineRevision": "8d1374fa4c61cc1eed214823681ee1209a2d91f7",
+  "authoritativeBaselineSourceRevision": "semantic-status-rev-0001",
+  "authoritativeRepositoryMaturity": "Experimental",
+  "authoritativeRepositoryApproval": "Unapproved",
+  "authoritativeCandidateStatus": "Not Candidate",
+  "authoritativeAdmittedEvidence": {
+    "evidenceId": "AE1-CDS-WP016-SEMSTATUS-002",
+    "evidenceLevel": "AE-1",
+    "boundSourceRevision": "semantic-status-rev-0001",
+    "boundary": "Bound exclusively to semantic-status-rev-0001. Evidence never transfers across a source revision (DEC-S-126); it does not apply to semantic-status-rev-0002-candidate."
+  },
+  "proposedSourceRevision": "semantic-status-rev-0002-candidate",
+  "sourceAuthorityContext": "proposed-candidate",
+  "proposedSourceDeclaredMaturity": "Candidate",
+  "proposedSourceDeclaredApproval": "Approved",
+  "proposedSourceAuthority": "NONE. `Candidate` and `Approved` above are TARGET metadata declared inside uncommitted, non-authoritative bytes. They do not change repository maturity, approval, or Candidate status.",
+  "worktreeStateAtEvidenceExecution": "modified worktree",
+  "evidenceClass": "AE-1 Evidence Candidate",
+  "evidenceLevelRepresented": "AE-1",
+  "independentReviewState": "pending",
+  "evidenceAdmissionState": "not admitted",
+  "candidateApprovalState": "not granted",
+  "candidatePromotionState": "not performed",
+  "claims": "none",
+  "conformance": "none",
+  "completeEvidencePackage": {
+    "rule": "NF-R11-001",
+    "statement": "The Runner Result alone is NOT a complete Evidence Package. The complete machine Evidence Package for AE1-CDS-WP016-SEMSTATUS-003 is the PAIR of the results artifact and this digest artifact. Neither artifact alone is sufficient for review.",
+    "members": [
+      "artifacts/validation/wp016-candidate-finalization-proposed-candidate-results.json",
+      "artifacts/validation/wp016-candidate-finalization-proposed-candidate-digests.json"
+    ]
+  },
+  "proposedCandidateSourceManifest": {
+    "note": "Exact-byte bridge identity of the three frozen Proposed Candidate source files. Canonical line format: <STATUS>\\t<SHA256>\\t<BYTES>\\t<GIT_RAW_OBJECT_ID>\\t<PATH>\\n, ordinal-sorted by path, UTF-8 without BOM, LF-only, final LF.",
+    "entries": [
+      {
+        "path": "tokens/semantic/status/semantic-status.resolver.json",
+        "rawSha256": "0d9ff65fb65c9eca3abe5f3bd6bf37492b043c8308191feda9c8319a43c45004",
+        "rawByteLength": 572,
+        "gitRawObjectId": "d6d75f981ff7d8ad556ce98387453402d458437e"
+      },
+      {
+        "path": "tokens/semantic/status/semantic-status.source-set.json",
+        "rawSha256": "8dda44d28ac654c33892e4c362c83260ba2bd1ab97526ef90dbddb6f72d52ef6",
+        "rawByteLength": 1041,
+        "gitRawObjectId": "fe7bbf1e7af49f753bd9cd75547ad69a5ae92ca9"
+      },
+      {
+        "path": "tokens/semantic/status/semantic-status.tokens.json",
+        "rawSha256": "53312e93810a6296c2b82b9365d17d14e7e74485cdeb5e13bba149634d4cb55e",
+        "rawByteLength": 6358,
+        "gitRawObjectId": "7d6b3499d1b291c04e1a3b6eca1b4ca54baf2df2"
+      }
+    ],
+    "sourceManifestEntryCount": 3,
+    "sourceManifestByteLength": 497,
+    "sourceManifestSha256": "3b80d1483ceba4de61c5f9b1f99e10ff00f6da17ac935a1ddfa643a413204ebf"
+  },
+  "contentDigests": {
+    "tokens/semantic/status/semantic-status.tokens.json": "sha256:317c464807c04b9b0f6cc05f46cab955f58f5739d7c39fe61d55702a20412c34",
+    "tokens/semantic/status/semantic-status.source-set.json": "sha256:db5626e648d1076200ca16ece8adf5ba4dcd6077210cff76092707de9d6fb12d",
+    "tokens/semantic/status/semantic-status.resolver.json": "sha256:c73a6fa34c40de3cc1ace2a69e9e3f7f82b07d6cb5927e673c96f1c0e242a8be",
+    "tests/fixtures/semantic-status-statements/CANDIDATE_EVIDENCE_CASES.json": "sha256:6ab8ae5f0b15017d18d5efa18b23db1439d6d153015bcc860930cb97eab6ee55"
+  },
+  "contentDigestRawSha256": {
+    "tokens/semantic/status/semantic-status.tokens.json": "sha256:53312e93810a6296c2b82b9365d17d14e7e74485cdeb5e13bba149634d4cb55e",
+    "tokens/semantic/status/semantic-status.source-set.json": "sha256:8dda44d28ac654c33892e4c362c83260ba2bd1ab97526ef90dbddb6f72d52ef6",
+    "tokens/semantic/status/semantic-status.resolver.json": "sha256:0d9ff65fb65c9eca3abe5f3bd6bf37492b043c8308191feda9c8319a43c45004",
+    "tests/fixtures/semantic-status-statements/CANDIDATE_EVIDENCE_CASES.json": "sha256:4e5b54fad4873f5f6ab8cc7ff805649737015c33d1ab138ed364f98230651116"
+  },
+  "fileDigests": {
+    "docs/foundations/SEMANTIC_STATUS_FOUNDATION_CONTRACT.md": "sha256:8869cad23377eaac20da558185b0ce17082e994507207eb6058b5e96c5f7442d",
+    "docs/foundations/STATUS_AXIS_VOCABULARY.md": "sha256:3fdf2f8d359fb5f7e09c56458e692466eb5f09c93d904151e231d2b0ce4dec21",
+    "docs/foundations/STATUS_COMPOSITION_AND_CONFLICT_RULES.md": "sha256:66ec38c68a2980691241d894245ecc6a909bd66dc305951b25313df8772c2aa9",
+    "docs/foundations/STATUS_COMMUNICATION_AND_ACCESSIBILITY_CONTRACT.md": "sha256:99ae531a99c60929b5536eb7ca6c11f9b8950b3d9134525323e768f45da154d0",
+    "docs/foundations/SEMANTIC_STATUS_TERMINOLOGY_DE_EN.md": "sha256:c705d345dfaf73f62d942abeafbaf20d557bd217bc7f70742fc1e397165ebf32",
+    "tools/cds_validator/semantic_status.py": "sha256:1ec690c4444aa5e5730786ac97b45e6dc5760549223fa1c0d5cb0f055560df61",
+    "tools/cds_validator/diagnostics.py": "sha256:11316e2cd947383c374e0a109d5f4a37518b74e3036e0dbdee033849392c97a4",
+    "tools/cds_validator/canonicalization.py": "sha256:f8e9b64522a61fcf8e46b192bf18f1f1277f356271486ae6ae08d559f7a56823",
+    "tools/cds_validator/json_loader.py": "sha256:de5c2dea9d7e2b53d6ee9f48905cfadf5d88dcfe27087c41f1f20551ac0f3653",
+    "tools/cds_validator/models.py": "sha256:5b9272a138c5d5146753338b223ac5a23cdac67a2ef87a4afb907d45e11eb541",
+    "tests/validator/semantic_status_candidate_evidence_runner.py": "sha256:946ccf484bf774424705b727e60a959ea62d06dd8ff604e8e05b30d50d9227e3",
+    "tests/validator/test_semantic_status_candidate_evidence.py": "sha256:4b636faacb9e16cdb082022b4aa90ae153b7f7111909a2346b9aec0bc6e187d3",
+    "tests/validator/test_semantic_status.py": "sha256:2c900f46ec32284f33a19060ed6215eb7e12d3dfc813781cd0b77fa0c0a37b94",
+    "requirements-validator.lock": "sha256:9179039c098bf3acaef88ba559759a53c69dcc70caa18648b99b93107adc9505"
+  },
+  "resultsArtifact": {
+    "artifacts/validation/wp016-candidate-finalization-proposed-candidate-results.json": "sha256:0b299fc99fe96f86075c94a01eb517efbfa37a876386e6d8f7a6acd7c924f96b"
+  },
+  "resultsArtifactFileDigest": {
+    "artifacts/validation/wp016-candidate-finalization-proposed-candidate-results.json": "sha256:cc918d562a8d7da17f462ce8a3040933d6c5fb850dbb8f85bd07464a2bbae1d0"
+  },
+  "resultsArtifactByteLength": {
+    "artifacts/validation/wp016-candidate-finalization-proposed-candidate-results.json": 30432
+  },
+  "selfDigestNote": "This artifact cannot recursively contain its own digest. Its raw SHA-256 is recorded in the Proposed Candidate Evidence Record and in the executor report after this file is frozen."
+}

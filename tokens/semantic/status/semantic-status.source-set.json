@@ -3,21 +3,21 @@
   "profileVersion": "1",
   "dtcgReportVersion": "2025.10",
   "manifestId": "semantic/status/manifest",
-  "sourceRevision": "semantic-status-rev-0001",
-  "maturityState": "Experimental",
-  "approvalState": "Unapproved",
-  "ownerRole": "CDS Human Maintainer (normative approval pending)",
+  "sourceRevision": "semantic-status-rev-0002-candidate",
+  "maturityState": "Candidate",
+  "approvalState": "Approved",
+  "ownerRole": "CDS Human Maintainer",
   "sourceSets": [
     {
       "sourceSetId": "semantic/status",
       "path": "semantic-status.tokens.json",
       "layer": "semantic",
       "dependencies": [],
-      "sourceRevision": "semantic-status-rev-0001",
+      "sourceRevision": "semantic-status-rev-0002-candidate",
       "expectedProfileVersion": "1",
       "expectedDtcgVersion": "2025.10",
-      "maturityState": "Experimental",
-      "approvalState": "Unapproved"
+      "maturityState": "Candidate",
+      "approvalState": "Approved"
     }
   ],
   "dependencyGraph": {

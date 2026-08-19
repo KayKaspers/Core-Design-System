@@ -10,11 +10,19 @@ Since the result-format v2 rework (DEC-S-126) they additionally prove that the
 runner holds **no governance state**: it reports what the evidenced bytes declare,
 records a caller-declared authority context, and grants nothing. The synthetic
 Proposed Candidate source used below is written to a temporary directory
-**outside the repository**; the real Semantic Status source is never mutated, and
-no `semantic-status-rev-0002-candidate` artifact is created in the repository.
+**outside the repository**, and the real Semantic Status source is never mutated.
+
+These tests are **lifecycle-safe**: every governance expectation is read from the
+bytes under evaluation instead of assumed. The same test bytes therefore hold
+both while the Semantic Status source declares the committed baseline revision
+(`semantic-status-rev-0001`, Experimental/Unapproved) and while it declares a
+Proposed Candidate Revision (`semantic-status-rev-0002-candidate`,
+Candidate/Approved). Reading a lifecycle state is never granting one: nothing
+here awards Candidate status, admits evidence, or approves anything.
 """
 
 import json
+import re
 import shutil
 import tempfile
 import unittest
@@ -50,13 +58,44 @@ ALLOWED_COVERAGE_STATES = frozenset({
     "COVERED", "COVERED_WITH_LIMITATION", "REPRESENTATION_TRIGGERED_WITH_PLAN",
 })
 
-#: The committed, authoritative source revision. Unchanged by this rework.
-CURRENT_SOURCE_REVISION = "semantic-status-rev-0001"
+#: The committed baseline revision identity of the Semantic Status source family
+#: and the lifecycle state such a revision must declare. Naming the identity is a
+#: statement about that revision, never an assumption about which bytes a given
+#: run evidences.
+BASELINE_SOURCE_REVISION = "semantic-status-rev-0001"
+BASELINE_MATURITY_STATE = "Experimental"
+BASELINE_APPROVAL_STATE = "Unapproved"
 
-#: The revision identity DEC-S-126 **reserves** for a future Proposed Candidate
-#: Revision. It is deliberately not created in the repository; it exists here
-#: only inside a temporary synthetic fixture written outside the repository.
-RESERVED_CANDIDATE_REVISION = "semantic-status-rev-0002-candidate"
+#: The revision identity DEC-S-126 authorizes for a Proposed Candidate Revision
+#: and the lifecycle state such a revision must declare. Whether the repository
+#: currently holds that revision is read from the evidenced bytes, never assumed.
+CANDIDATE_SOURCE_REVISION = "semantic-status-rev-0002-candidate"
+CANDIDATE_MATURITY_STATE = "Candidate"
+CANDIDATE_APPROVAL_STATE = "Approved"
+
+#: Revision-identity grammars. A baseline revision declares Experimental and
+#: Unapproved; a Candidate revision declares Candidate and Approved. Every other
+#: combination is incoherent and fails closed.
+BASELINE_REVISION_GRAMMAR = re.compile(r"^semantic-status-rev-[0-9]{4}$")
+CANDIDATE_REVISION_GRAMMAR = re.compile(
+    r"^semantic-status-rev-[0-9]{4}-candidate$")
+
+#: Any Candidate-form revision identity, wherever it appears in a token source.
+ANY_CANDIDATE_REVISION_PATTERN = re.compile(
+    r"semantic-status-rev-[0-9]{4}-candidate")
+
+#: The three files that make up the authorized Semantic Status Layer-3 source
+#: family. Only these may ever carry a Candidate revision declaration.
+SEMANTIC_STATUS_SOURCE_FAMILY = frozenset({
+    "tokens/semantic/status/semantic-status.tokens.json",
+    "tokens/semantic/status/semantic-status.source-set.json",
+    "tokens/semantic/status/semantic-status.resolver.json",
+})
+
+#: Syntactically valid revision identities that no CDS source declares in any
+#: lifecycle state. One of them is therefore always a guaranteed mismatch.
+NON_EXISTENT_TEST_REVISIONS = ("semantic-status-rev-9999",
+                               "semantic-status-rev-9998-candidate")
 
 #: Field names retired with result format v1. Their reappearance would mean the
 #: runner had resumed asserting global governance state it has no authority over.
@@ -79,9 +118,75 @@ def load_manifest():
     return json_loader.load_path(CASES)
 
 
-def execute(source_revision=CURRENT_SOURCE_REVISION,
-            source_authority_context="authoritative-current",
+#: Sentinel for "derive this governance input from the evidenced source bytes".
+#: `None` is deliberately **not** reused for it: `None` stays a rejected caller
+#: value that the runner must keep refusing.
+DERIVE_FROM_SOURCE = object()
+
+
+def source_declared_payload(token_source=TOKEN_SOURCE):
+    """The CDS governance payload as declared inside the evidenced bytes."""
+    return json_loader.load_path(token_source)["$extensions"][CDS_EXTENSION_ROOT]
+
+
+def declared_source_revision(token_source=TOKEN_SOURCE):
+    """The revision identity the evidenced source declares about itself."""
+    return source_declared_payload(token_source)["sourceRevision"]
+
+
+def declared_authority_context(token_source=TOKEN_SOURCE):
+    """The authority context coherent with what the evidenced bytes declare.
+
+    Bytes declaring the Candidate maturity state are a Proposed Candidate
+    Revision; anything else is evidenced as the integrated current source. The
+    runner never infers this -- the caller declares it -- so this helper makes the
+    suite's declaration follow the bytes instead of a frozen literal.
+    """
+    maturity = source_declared_payload(token_source).get("maturityState")
+    return ("proposed-candidate" if maturity == CANDIDATE_MATURITY_STATE
+            else "authoritative-current")
+
+
+def expected_lifecycle_state(source_revision):
+    """The ``(maturityState, approvalState)`` pair a revision identity must
+    declare, or ``None`` when the identity matches no authorized grammar."""
+    if CANDIDATE_REVISION_GRAMMAR.match(source_revision or ""):
+        return (CANDIDATE_MATURITY_STATE, CANDIDATE_APPROVAL_STATE)
+    if BASELINE_REVISION_GRAMMAR.match(source_revision or ""):
+        return (BASELINE_MATURITY_STATE, BASELINE_APPROVAL_STATE)
+    return None
+
+
+def mismatching_source_revision(token_source=TOKEN_SOURCE):
+    """A syntactically valid revision the evidenced source does **not** declare.
+
+    Derived, never fixed: a hard-coded mismatch value could silently become the
+    real revision after a lifecycle transition and quietly turn a fail-closed
+    test into a passing one.
+    """
+    declared = declared_source_revision(token_source)
+    for candidate in NON_EXISTENT_TEST_REVISIONS:
+        if candidate != declared:
+            return candidate
+    raise AssertionError(
+        f"no mismatching test revision available for {declared!r}")
+
+
+def execute(source_revision=DERIVE_FROM_SOURCE,
+            source_authority_context=DERIVE_FROM_SOURCE,
             token_source=TOKEN_SOURCE, worktree_state="unknown"):
+    """Run the evidence runner against ``token_source``.
+
+    Both governance inputs default to *derived from the evidenced bytes*, so the
+    same test bytes stay truthful across a source-revision lifecycle transition.
+    A test that deliberately exercises the fail-closed cross-check passes an
+    explicitly different revision instead (`mismatching_source_revision`); a test
+    that exercises context rejection passes the rejected value explicitly.
+    """
+    if source_revision is DERIVE_FROM_SOURCE:
+        source_revision = declared_source_revision(token_source)
+    if source_authority_context is DERIVE_FROM_SOURCE:
+        source_authority_context = declared_authority_context(token_source)
     return runner.run(CASES, token_source, TERMINOLOGY,
                       "test-revision", source_revision,
                       source_authority_context, worktree_state)
@@ -91,16 +196,16 @@ def write_proposed_candidate_source(directory: Path) -> Path:
     """Write a synthetic Proposed Candidate copy of the real token source.
 
     Test-only data, written **outside the repository** and deleted afterwards.
-    Only the governance metadata differs: `sourceRevision`, `maturityState`, and
-    `approvalState` carry the *target* values a future Candidate revision would
-    declare. The real source is never touched, and this creates no Candidate
-    revision in CDS.
+    Only the governance metadata is pinned: `sourceRevision`, `maturityState`,
+    and `approvalState` carry the Candidate *target* values whatever the real
+    source currently declares. The real source is never touched, and writing this
+    copy creates, promotes, and approves no revision in CDS.
     """
     content = json_loader.load_path(TOKEN_SOURCE)
     payload = content["$extensions"][CDS_EXTENSION_ROOT]
-    payload["sourceRevision"] = RESERVED_CANDIDATE_REVISION
-    payload["maturityState"] = "Candidate"
-    payload["approvalState"] = "Approved"
+    payload["sourceRevision"] = CANDIDATE_SOURCE_REVISION
+    payload["maturityState"] = CANDIDATE_MATURITY_STATE
+    payload["approvalState"] = CANDIDATE_APPROVAL_STATE
     target = directory / "proposed-candidate.tokens.json"
     target.write_text(json.dumps(content, ensure_ascii=False, indent=2) + "\n",
                       encoding="utf-8", newline="\n")
@@ -351,6 +456,10 @@ class ResultBoundaryTests(unittest.TestCase):
                       ("Pass", "Pass with limitations", "Fail", "Blocked"))
 
     def test_current_run_passes_with_declared_limitations(self):
+        # A run against the revision the evidenced bytes actually declare is
+        # a valid execution, not a blocked one, in either lifecycle state.
+        self.assertIs(self.result["sourceRevisionCrossCheck"]["match"], True)
+        self.assertEqual(self.result["executionErrors"], [])
         self.assertEqual(self.result["resultStatus"], "Pass with limitations")
         self.assertEqual(self.result["coverageStatesWithLimitation"],
                          ["COVERED_WITH_LIMITATION"])
@@ -371,18 +480,24 @@ class ResultFormatV2Tests(unittest.TestCase):
         self.assertTrue(self.result["schemaVersion"].endswith("/2"))
 
     def test_source_declared_metadata_is_read_from_the_evidenced_bytes(self):
-        # The values are whatever the source says — not literals in the runner.
+        # The values are whatever the source says — not literals in the
+        # runner, and not literals here either.
         declared = self.result["sourceDeclaredMetadata"]
-        payload = (json_loader.load_path(TOKEN_SOURCE)["$extensions"]
-                   [CDS_EXTENSION_ROOT])
+        payload = source_declared_payload()
         self.assertEqual(declared["sourceRevision"], payload["sourceRevision"])
         self.assertEqual(declared["maturityState"], payload["maturityState"])
         self.assertEqual(declared["approvalState"], payload["approvalState"])
-        # And for the current committed source those values are:
-        self.assertEqual(declared["sourceRevision"], CURRENT_SOURCE_REVISION)
-        self.assertEqual(declared["maturityState"], "Experimental")
-        self.assertEqual(declared["approvalState"], "Unapproved")
-        self.assertIs(declared["declaresCandidateTargetMetadata"], False)
+        # The Candidate-target flag is derived from the evidenced lifecycle
+        # state, never assumed: it is true exactly when the bytes declare the
+        # Candidate maturity state.
+        self.assertIs(declared["declaresCandidateTargetMetadata"],
+                      payload["maturityState"] == CANDIDATE_MATURITY_STATE)
+        # Whichever state the bytes declare, the declared triple must be
+        # internally coherent for its own revision identity.
+        expected = expected_lifecycle_state(payload["sourceRevision"])
+        self.assertIsNotNone(expected, payload["sourceRevision"])
+        self.assertEqual((payload["maturityState"], payload["approvalState"]),
+                         expected, payload["sourceRevision"])
 
     def test_result_claims_no_global_admitted_evidence_level(self):
         # The runner is not the authority on the project's evidence state and
@@ -426,8 +541,14 @@ class ResultFormatV2Tests(unittest.TestCase):
 
     def test_execution_context_is_caller_declared_and_bounded(self):
         context = self.result["executionContext"]
+        # The suite declares the context coherent with the evidenced bytes;
+        # the runner records exactly what the caller declared, inferring none
+        # of it. A frozen literal here would stop being true after a
+        # lifecycle transition.
         self.assertEqual(context["sourceAuthorityContext"],
-                         "authoritative-current")
+                         declared_authority_context())
+        self.assertIn(context["sourceAuthorityContext"],
+                      runner.SOURCE_AUTHORITY_CONTEXTS)
         self.assertEqual(context["allowedSourceAuthorityContexts"],
                          list(runner.SOURCE_AUTHORITY_CONTEXTS))
         self.assertEqual(runner.SOURCE_AUTHORITY_CONTEXTS,
@@ -442,20 +563,29 @@ class ResultFormatV2Tests(unittest.TestCase):
                 execute(source_authority_context=bad)
 
     def test_source_revision_mismatch_fails_closed(self):
-        payload = execute(source_revision="semantic-status-rev-9999")
+        # The mismatch input is derived so that it can never accidentally
+        # equal the revision the evidenced source declares, in either
+        # lifecycle state.
+        declared = declared_source_revision()
+        mismatch = mismatching_source_revision()
+        self.assertNotEqual(mismatch, declared)
+        payload = execute(source_revision=mismatch)
         cross_check = payload["sourceRevisionCrossCheck"]
         self.assertIs(cross_check["match"], False)
-        self.assertEqual(cross_check["declaredBySource"], CURRENT_SOURCE_REVISION)
-        self.assertEqual(cross_check["declaredByArgument"],
-                         "semantic-status-rev-9999")
+        self.assertEqual(cross_check["declaredBySource"], declared)
+        self.assertEqual(cross_check["declaredByArgument"], mismatch)
         self.assertEqual(payload["resultStatus"], "Blocked")
         self.assertTrue(payload["executionErrors"])
 
     def test_the_source_wins_over_the_cli_argument(self):
         # The mismatch is never repaired by trusting the argument.
-        payload = execute(source_revision="semantic-status-rev-9999")
+        declared = declared_source_revision()
+        mismatch = mismatching_source_revision()
+        payload = execute(source_revision=mismatch)
         self.assertEqual(payload["sourceDeclaredMetadata"]["sourceRevision"],
-                         CURRENT_SOURCE_REVISION)
+                         declared)
+        self.assertNotEqual(payload["sourceDeclaredMetadata"]["sourceRevision"],
+                            mismatch)
         boundary = payload["sourceRevisionCrossCheck"]["boundary"].lower()
         self.assertIn("source is authoritative over the argument", boundary)
         self.assertIn("fails closed", boundary)
@@ -468,16 +598,21 @@ class ResultFormatV2Tests(unittest.TestCase):
 class ProposedCandidateContextTests(unittest.TestCase):
     """A synthetic Proposed Candidate Revision grants nothing.
 
-    The fixture lives in a temporary directory outside the repository. The real
-    Semantic Status source is never mutated and no Candidate revision is created
-    in CDS: `semantic-status-rev-0002-candidate` stays a reserved identity.
+    The fixture lives in a temporary directory outside the repository and the
+    real Semantic Status source is never mutated. Whether the repository itself
+    currently declares a Candidate revision is a lifecycle question these tests
+    read from the evidenced bytes; either way the run grants no Candidate
+    status, no approval, and no evidence admission.
     """
 
     @classmethod
     def setUpClass(cls):
+        # Captured before the synthetic copy is written, so non-mutation of
+        # the real source is proven on bytes rather than by a revision proxy.
+        cls.real_source_bytes = TOKEN_SOURCE.read_bytes()
         cls.directory = Path(tempfile.mkdtemp(prefix="cds-proposed-candidate-"))
         cls.source = write_proposed_candidate_source(cls.directory)
-        cls.result = execute(source_revision=RESERVED_CANDIDATE_REVISION,
+        cls.result = execute(source_revision=CANDIDATE_SOURCE_REVISION,
                              source_authority_context="proposed-candidate",
                              token_source=cls.source)
 
@@ -490,7 +625,7 @@ class ProposedCandidateContextTests(unittest.TestCase):
 
     def test_target_metadata_is_read_from_the_proposed_bytes(self):
         declared = self.result["sourceDeclaredMetadata"]
-        self.assertEqual(declared["sourceRevision"], RESERVED_CANDIDATE_REVISION)
+        self.assertEqual(declared["sourceRevision"], CANDIDATE_SOURCE_REVISION)
         self.assertEqual(declared["maturityState"], "Candidate")
         self.assertEqual(declared["approvalState"], "Approved")
         self.assertIs(declared["declaresCandidateTargetMetadata"], True)
@@ -527,11 +662,11 @@ class ProposedCandidateContextTests(unittest.TestCase):
 
     def test_the_proposed_candidate_run_is_deterministic(self):
         first = json.dumps(
-            execute(source_revision=RESERVED_CANDIDATE_REVISION,
+            execute(source_revision=CANDIDATE_SOURCE_REVISION,
                     source_authority_context="proposed-candidate",
                     token_source=self.source), ensure_ascii=False, indent=2)
         second = json.dumps(
-            execute(source_revision=RESERVED_CANDIDATE_REVISION,
+            execute(source_revision=CANDIDATE_SOURCE_REVISION,
                     source_authority_context="proposed-candidate",
                     token_source=self.source), ensure_ascii=False, indent=2)
         self.assertEqual(first, second)
@@ -541,18 +676,49 @@ class ProposedCandidateContextTests(unittest.TestCase):
         for phrase in FORBIDDEN_CLAIM_PHRASES:
             self.assertNotIn(phrase, lowered, phrase)
 
-    def test_the_real_source_still_declares_the_experimental_revision(self):
-        # The synthetic copy must not have touched the committed source.
-        payload = (json_loader.load_path(TOKEN_SOURCE)["$extensions"]
-                   [CDS_EXTENSION_ROOT])
-        self.assertEqual(payload["sourceRevision"], CURRENT_SOURCE_REVISION)
-        self.assertEqual(payload["maturityState"], "Experimental")
-        self.assertEqual(payload["approvalState"], "Unapproved")
+    def test_the_real_source_declares_a_coherent_lifecycle_state(self):
+        # 1. Writing the synthetic copy must not have touched the real
+        #    source. Proven on the bytes: after a lifecycle transition the
+        #    copy and the real source may legitimately declare the same
+        #    revision identity, so revision inequality is no longer a usable
+        #    non-mutation proxy.
+        self.assertEqual(TOKEN_SOURCE.read_bytes(), self.real_source_bytes)
+        # 2. Whatever lifecycle state the real source declares must be
+        #    coherent for its own revision identity: a baseline revision
+        #    declares Experimental/Unapproved, a Candidate revision declares
+        #    Candidate/Approved, and every other combination fails closed.
+        payload = source_declared_payload()
+        revision = payload["sourceRevision"]
+        self.assertIn(revision, (BASELINE_SOURCE_REVISION,
+                                 CANDIDATE_SOURCE_REVISION), revision)
+        expected = expected_lifecycle_state(revision)
+        self.assertIsNotNone(expected, revision)
+        self.assertEqual((payload["maturityState"], payload["approvalState"]),
+                         expected, revision)
 
-    def test_no_candidate_revision_artifact_exists_in_the_repository(self):
+    def test_candidate_revision_declarations_stay_in_the_authorized_family(self):
+        # Absence is no longer a universal invariant, so the boundary is
+        # stated positively: a Candidate revision identity may appear only
+        # where the authorized Semantic Status Layer-3 source family declares
+        # the one revision currently under evaluation. A premature, foreign,
+        # or second Candidate revision identity under `tokens/` still fails.
+        declared = declared_source_revision()
+        source_is_candidate = bool(CANDIDATE_REVISION_GRAMMAR.match(declared))
+        carriers = {}
         for path in (REPO_ROOT / "tokens").rglob("*.json"):
-            self.assertNotIn(RESERVED_CANDIDATE_REVISION,
-                             path.read_text(encoding="utf-8"), str(path))
+            found = set(ANY_CANDIDATE_REVISION_PATTERN.findall(
+                path.read_text(encoding="utf-8")))
+            if found:
+                carriers[path.relative_to(REPO_ROOT).as_posix()] = found
+        if not source_is_candidate:
+            # No Candidate revision is current: none may be declared at all.
+            self.assertEqual(carriers, {})
+            return
+        # The evidenced source *is* the Candidate revision. Exactly the three
+        # authorized family members carry it, each carrying only that one
+        # identity — a partial or foreign transition fails closed.
+        self.assertEqual(set(carriers), set(SEMANTIC_STATUS_SOURCE_FAMILY))
+        self.assertEqual(set().union(*carriers.values()), {declared})
 
 
 class HistoricalEvidenceImmutabilityTests(unittest.TestCase):

@@ -1,15 +1,15 @@
 {
-  "$description": "CDS Semantic Status Source Set (semantic/status). EXPERIMENTAL, not Candidate, not Stable. Non-visual status meaning roles for the five independent axes of the Semantic Status Foundation Contract. Each token value is the stable technical value identifier; no color, icon, shape, position, motion, aggregate health, consumer, or Product-Profile semantics exist here.",
+  "$description": "CDS Semantic Status Source Set (semantic/status). CANDIDATE, not Stable. Non-visual status meaning roles for the five independent axes of the Semantic Status Foundation Contract. Each token value is the stable technical value identifier; no color, icon, shape, position, motion, aggregate health, consumer, or Product-Profile semantics exist here.",
   "$extensions": {
     "io.github.kaykaspers.cds": {
       "profileVersion": "1",
       "sourceSetId": "semantic/status",
       "layer": "semantic",
       "dtcgReportVersion": "2025.10",
-      "sourceRevision": "semantic-status-rev-0001",
+      "sourceRevision": "semantic-status-rev-0002-candidate",
       "manifestRef": "semantic-status.source-set.json",
-      "maturityState": "Experimental",
-      "approvalState": "Unapproved",
+      "maturityState": "Candidate",
+      "approvalState": "Approved",
       "originatingDecision": "DEC-S-115"
     }
   },

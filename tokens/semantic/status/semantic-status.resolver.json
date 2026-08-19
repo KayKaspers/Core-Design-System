@@ -3,7 +3,7 @@
   "resolverId": "semantic/status/resolver",
   "profileVersion": "1",
   "dtcgReportVersion": "2025.10",
-  "sourceRevision": "semantic-status-rev-0001",
+  "sourceRevision": "semantic-status-rev-0002-candidate",
   "localOnly": true,
   "orderedSourceSets": [
     {

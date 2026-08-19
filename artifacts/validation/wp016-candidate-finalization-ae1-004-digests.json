@@ -1,0 +1,242 @@
+{
+  "reportVersion": 2,
+  "workPackage": "CDS-WP-016",
+  "evidenceId": "AE1-CDS-WP016-SEMSTATUS-004",
+  "canonicalizationMethod": "RFC 8785 (JSON Canonicalization Scheme)",
+  "digestAlgorithm": "SHA-256",
+  "digestNote": "Integrity aid only. A digest is NOT a signature, NOT authorship, NOT a review, NOT an Evidence Admission, NOT a Candidate Approval, NOT maturity, NOT a Claim, and NOT conformance (DEC-S-090, DEC-S-100, DEC-S-126, RISK-072). It binds bytes to an identity so a later reviewer can prove the reviewed bytes are the evidenced bytes; it establishes nothing about their correctness, authorization, or status. `contentDigests` are RFC 8785 (JCS) canonical-content digests of strict-JSON documents after a successful V1 parse; `fileDigests` are raw SHA-256 digests of the file bytes for non-JSON inputs, where no canonical content form is defined. This report deliberately does not restate a global repository evidence level: governance state is held outside this artifact.",
+  "reportScopeNote": "This is a preparation-aware report for an uncommitted Proposed Candidate Revision. It separates the authoritative committed repository state from the source-declared TARGET metadata of the proposed bytes, and never presents the latter as the former. It supersedes AE1-CDS-WP016-SEMSTATUS-003 for admission purposes only, and only because a bound evidence input changed: the three evidenced Proposed Candidate source files are byte-identical across both evidence packages. Historical reportVersion 1 artifacts described a different, AE-0/Experimental global state, remain immutable, and none of their fields are carried over implicitly.",
+  "authoritativeBaselineRevision": "8d1374fa4c61cc1eed214823681ee1209a2d91f7",
+  "authoritativeBaselineSourceRevision": "semantic-status-rev-0001",
+  "authoritativeRepositoryMaturity": "Experimental",
+  "authoritativeRepositoryApproval": "Unapproved",
+  "authoritativeCandidateStatus": "Not Candidate",
+  "authoritativeAdmittedEvidence": {
+    "evidenceId": "AE1-CDS-WP016-SEMSTATUS-002",
+    "evidenceLevel": "AE-1",
+    "boundSourceRevision": "semantic-status-rev-0001",
+    "boundary": "Bound exclusively to semantic-status-rev-0001. Evidence never transfers across a source revision (DEC-S-126); it grants nothing to the Proposed Candidate Revision evidenced here."
+  },
+  "proposedSourceRevision": "semantic-status-rev-0002-candidate",
+  "sourceAuthorityContext": "proposed-candidate",
+  "proposedSourceDeclaredMaturity": "Candidate",
+  "proposedSourceDeclaredApproval": "Approved",
+  "proposedSourceAuthority": "NONE. `Candidate` and `Approved` above are TARGET metadata declared inside uncommitted, non-authoritative bytes. They do not change repository maturity, approval, or Candidate status.",
+  "worktreeStateAtEvidenceExecution": "modified worktree",
+  "evidenceClass": "AE-1 Evidence Candidate",
+  "evidenceLevelRepresented": "AE-1",
+  "independentReviewState": "pending",
+  "evidenceAdmissionState": "not admitted",
+  "candidateApprovalState": "not granted",
+  "candidatePromotionState": "not performed",
+  "claims": "none",
+  "conformance": "none",
+  "previousEvidence": {
+    "previousEvidenceId": "AE1-CDS-WP016-SEMSTATUS-003",
+    "previousIndependentReviewState": "fresh independent review completed, PASS WITH NOTES",
+    "previousAdmissionState": "not admitted",
+    "previousAdmissionDisposition": "SUPERSEDED_FOR_ADMISSION_BY_EVIDENCE_INPUT_CHANGE",
+    "supersessionReason": "evidence-relevant test input changed",
+    "changedBoundInput": "tests/validator/test_semantic_status_candidate_evidence.py",
+    "previousBoundTestFileRawSha256": "4b636faacb9e16cdb082022b4aa90ae153b7f7111909a2346b9aec0bc6e187d3",
+    "currentBoundTestFileRawSha256": "93091d4b6f353b19977af0d7aa1b93b9281972152716c8897eca1c2f9e460b70",
+    "sourceRevisionChanged": false,
+    "sourceBytesChanged": false,
+    "boundary": "The previous evidence was not invalidated by a source change. The three evidenced Proposed Candidate source files are byte-identical in both evidence packages and the source revision is unchanged. It is superseded for admission only because a bound evidence input, the Candidate-evidence test suite, changed after its evidence was generated. This evidence is therefore fresh evidence generated after a bound input changed, never an evidence transfer, and it inherits no independent review and no admission."
+  },
+  "boundTransitionSafeTestFile": {
+    "path": "tests/validator/test_semantic_status_candidate_evidence.py",
+    "rawSha256": "93091d4b6f353b19977af0d7aa1b93b9281972152716c8897eca1c2f9e460b70",
+    "rawByteLength": 43960,
+    "gitRawObjectId": "f275d73a3e9bfafc937dd6dfc967850f9cd11a9c",
+    "previousEvidenceBoundRawSha256": "4b636faacb9e16cdb082022b4aa90ae153b7f7111909a2346b9aec0bc6e187d3"
+  },
+  "transitionSafeTestLifecycleRework": {
+    "finding": "NF-PREP-001 / F-R1",
+    "confirmedSupersededPremiseCount": 7,
+    "candidateEvidenceTestCount": 64,
+    "fullValidatorTestCount": 184,
+    "deletedTests": 0,
+    "skippedTests": 0,
+    "expectedFailures": 0,
+    "assertionsWeakened": 0,
+    "staleLifecyclePremisesRemaining": 0,
+    "supersededPremiseTests": [
+      {
+        "oldTestId": "tests.validator.test_semantic_status_candidate_evidence.ResultFormatV2Tests.test_source_declared_metadata_is_read_from_the_evidenced_bytes",
+        "newTestId": "tests.validator.test_semantic_status_candidate_evidence.ResultFormatV2Tests.test_source_declared_metadata_is_read_from_the_evidenced_bytes",
+        "renamed": false,
+        "supersededPremise": "asserted the evidenced source declares semantic-status-rev-0001, Experimental, Unapproved and declaresCandidateTargetMetadata false",
+        "lifecycleSafeInvariant": "the result restates exactly what the evidenced bytes declare, the Candidate-target flag is derived from the declared maturity state, and the declared triple must be coherent for its own revision identity",
+        "assertionStrength": "STRENGTHENED"
+      },
+      {
+        "oldTestId": "tests.validator.test_semantic_status_candidate_evidence.ProposedCandidateContextTests.test_the_real_source_still_declares_the_experimental_revision",
+        "newTestId": "tests.validator.test_semantic_status_candidate_evidence.ProposedCandidateContextTests.test_the_real_source_declares_a_coherent_lifecycle_state",
+        "renamed": true,
+        "supersededPremise": "asserted the real source declares the Experimental baseline revision, using revision equality as the non-mutation proxy",
+        "lifecycleSafeInvariant": "non-mutation of the real source is proven on captured bytes, and the declared lifecycle state must be one of the two authorized revision identities and coherent for it",
+        "assertionStrength": "STRENGTHENED"
+      },
+      {
+        "oldTestId": "tests.validator.test_semantic_status_candidate_evidence.ProposedCandidateContextTests.test_no_candidate_revision_artifact_exists_in_the_repository",
+        "newTestId": "tests.validator.test_semantic_status_candidate_evidence.ProposedCandidateContextTests.test_candidate_revision_declarations_stay_in_the_authorized_family",
+        "renamed": true,
+        "supersededPremise": "asserted the universal absence of any Candidate revision declaration under tokens/",
+        "lifecycleSafeInvariant": "a Candidate revision identity may appear only where the authorized Semantic Status Layer-3 source family declares the one revision under evaluation; absence is required while no Candidate revision is current, and a partial, premature, foreign, or second Candidate revision identity still fails closed",
+        "assertionStrength": "STRENGTHENED"
+      },
+      {
+        "oldTestId": "tests.validator.test_semantic_status_candidate_evidence.ResultBoundaryTests.test_current_run_passes_with_declared_limitations",
+        "newTestId": "tests.validator.test_semantic_status_candidate_evidence.ResultBoundaryTests.test_current_run_passes_with_declared_limitations",
+        "renamed": false,
+        "supersededPremise": "the shared helper supplied the baseline revision as a fixed default, so a valid run against the evidenced bytes blocked on the cross-check",
+        "lifecycleSafeInvariant": "a run against the revision the evidenced bytes actually declare matches the cross-check, raises no execution error, and passes with the declared limitations",
+        "assertionStrength": "STRENGTHENED"
+      },
+      {
+        "oldTestId": "tests.validator.test_semantic_status_candidate_evidence.ResultFormatV2Tests.test_source_revision_mismatch_fails_closed",
+        "newTestId": "tests.validator.test_semantic_status_candidate_evidence.ResultFormatV2Tests.test_source_revision_mismatch_fails_closed",
+        "renamed": false,
+        "supersededPremise": "asserted declaredBySource equals the baseline revision literal and used a fixed mismatch value",
+        "lifecycleSafeInvariant": "the mismatch input is derived so it can never equal the evidenced revision in any lifecycle state; the cross-check still reports no match, the declared source revision, the argument, a Blocked result, and execution errors",
+        "assertionStrength": "STRENGTHENED"
+      },
+      {
+        "oldTestId": "tests.validator.test_semantic_status_candidate_evidence.ResultFormatV2Tests.test_the_source_wins_over_the_cli_argument",
+        "newTestId": "tests.validator.test_semantic_status_candidate_evidence.ResultFormatV2Tests.test_the_source_wins_over_the_cli_argument",
+        "renamed": false,
+        "supersededPremise": "asserted the surviving source revision equals the baseline revision literal",
+        "lifecycleSafeInvariant": "the surviving source revision equals the revision the evidenced bytes declare and never the argument; the boundary text and the controlled failure still state that the CLI never overrides the source",
+        "assertionStrength": "STRENGTHENED"
+      },
+      {
+        "oldTestId": "tests.validator.test_semantic_status_candidate_evidence.RuleCoverageTests.test_expected_and_actual_classifications_agree",
+        "newTestId": "tests.validator.test_semantic_status_candidate_evidence.RuleCoverageTests.test_expected_and_actual_classifications_agree",
+        "renamed": false,
+        "supersededPremise": "inherited the fixed baseline revision default, so the run blocked before the classifications could be compared",
+        "lifecycleSafeInvariant": "unchanged rule expectations, now evaluated against a valid run of the evidenced bytes",
+        "assertionStrength": "PRESERVED"
+      }
+    ],
+    "additionalCoherenceAdjustments": [
+      {
+        "testId": "tests.validator.test_semantic_status_candidate_evidence.ResultFormatV2Tests.test_execution_context_is_caller_declared_and_bounded",
+        "classification": "NOT A SUPERSEDED PREMISE",
+        "reason": "the assertion round-tripped whatever authority context the suite declared and never became false; it was adjusted only because the shared helper now derives that declaration from the evidenced bytes instead of stating a frozen literal",
+        "change": "expects the derived authority context and additionally requires it to be one of the two bounded values",
+        "assertionStrength": "STRENGTHENED"
+      }
+    ],
+    "realProposedCandidate": {
+      "sourceRevision": "semantic-status-rev-0002-candidate",
+      "sourceDeclaredMaturity": "Candidate",
+      "sourceDeclaredApproval": "Approved",
+      "candidateEvidence": "64/64",
+      "fullValidator": "184/184",
+      "semanticStatus": "47/47",
+      "harness": "24 total, 24 expected matches, 0 mismatches, 0 execution errors"
+    },
+    "externalCommittedBaselineSandbox": {
+      "baselineRevision": "8d1374fa4c61cc1eed214823681ee1209a2d91f7",
+      "sourceRevision": "semantic-status-rev-0001",
+      "sourceDeclaredMaturity": "Experimental",
+      "sourceDeclaredApproval": "Unapproved",
+      "creationMethod": "read-only git archive of the committed baseline revision, extracted outside the repository, with only the reworked test file overlaid; no checkout, worktree, branch, reset, or stash",
+      "candidateEvidence": "64/64",
+      "fullValidator": "184/184",
+      "sameTestBytes": true
+    },
+    "classification": "TRANSITION_SAFE_DUAL_STATE_TEST_GATE_PASS",
+    "boundary": "A passing dual-state test gate is structural and automated test evidence only. It is not an accessibility statement, not assistive-technology behaviour, not comprehension, not an independent review, not an Evidence Admission, and not a Candidate Approval."
+  },
+  "completeEvidencePackage": {
+    "rule": "NF-R11-001",
+    "statement": "The Runner Result alone is NOT a complete Evidence Package. The complete machine Evidence Package for AE1-CDS-WP016-SEMSTATUS-004 is the PAIR of the results artifact and this digest artifact. Neither artifact alone is sufficient for review. The results artifact may legitimately be byte-identical to that of AE1-CDS-WP016-SEMSTATUS-003, because the runner, its inputs, and the evidenced source bytes did not change; identical result bytes are therefore not the same Evidence Package identity once another bound input has changed.",
+    "members": [
+      "artifacts/validation/wp016-candidate-finalization-ae1-004-results.json",
+      "artifacts/validation/wp016-candidate-finalization-ae1-004-digests.json"
+    ]
+  },
+  "proposedCandidateSourceManifest": {
+    "note": "Exact-byte bridge identity of the three frozen Proposed Candidate source files. Canonical line format: <STATUS>\\t<SHA256>\\t<BYTES>\\t<GIT_RAW_OBJECT_ID>\\t<PATH>\\n, ordinal-sorted by path, UTF-8 without BOM, LF-only, final LF.",
+    "entries": [
+      {
+        "path": "tokens/semantic/status/semantic-status.resolver.json",
+        "rawSha256": "0d9ff65fb65c9eca3abe5f3bd6bf37492b043c8308191feda9c8319a43c45004",
+        "rawByteLength": 572,
+        "gitRawObjectId": "d6d75f981ff7d8ad556ce98387453402d458437e",
+        "rfc8785ContentDigest": "sha256:c73a6fa34c40de3cc1ace2a69e9e3f7f82b07d6cb5927e673c96f1c0e242a8be"
+      },
+      {
+        "path": "tokens/semantic/status/semantic-status.source-set.json",
+        "rawSha256": "8dda44d28ac654c33892e4c362c83260ba2bd1ab97526ef90dbddb6f72d52ef6",
+        "rawByteLength": 1041,
+        "gitRawObjectId": "fe7bbf1e7af49f753bd9cd75547ad69a5ae92ca9",
+        "rfc8785ContentDigest": "sha256:db5626e648d1076200ca16ece8adf5ba4dcd6077210cff76092707de9d6fb12d"
+      },
+      {
+        "path": "tokens/semantic/status/semantic-status.tokens.json",
+        "rawSha256": "53312e93810a6296c2b82b9365d17d14e7e74485cdeb5e13bba149634d4cb55e",
+        "rawByteLength": 6358,
+        "gitRawObjectId": "7d6b3499d1b291c04e1a3b6eca1b4ca54baf2df2",
+        "rfc8785ContentDigest": "sha256:317c464807c04b9b0f6cc05f46cab955f58f5739d7c39fe61d55702a20412c34"
+      }
+    ],
+    "sourceManifestEntryCount": 3,
+    "sourceManifestByteLength": 497,
+    "sourceManifestSha256": "3b80d1483ceba4de61c5f9b1f99e10ff00f6da17ac935a1ddfa643a413204ebf",
+    "continuityStatement": "Identical to the source manifest bound by AE1-CDS-WP016-SEMSTATUS-003: same source revision, same source bytes. The evidence is new because a bound test input changed, not because the source did."
+  },
+  "contentDigests": {
+    "tokens/semantic/status/semantic-status.tokens.json": "sha256:317c464807c04b9b0f6cc05f46cab955f58f5739d7c39fe61d55702a20412c34",
+    "tokens/semantic/status/semantic-status.source-set.json": "sha256:db5626e648d1076200ca16ece8adf5ba4dcd6077210cff76092707de9d6fb12d",
+    "tokens/semantic/status/semantic-status.resolver.json": "sha256:c73a6fa34c40de3cc1ace2a69e9e3f7f82b07d6cb5927e673c96f1c0e242a8be",
+    "tests/fixtures/semantic-status-statements/CANDIDATE_EVIDENCE_CASES.json": "sha256:6ab8ae5f0b15017d18d5efa18b23db1439d6d153015bcc860930cb97eab6ee55"
+  },
+  "contentDigestRawSha256": {
+    "tokens/semantic/status/semantic-status.tokens.json": "sha256:53312e93810a6296c2b82b9365d17d14e7e74485cdeb5e13bba149634d4cb55e",
+    "tokens/semantic/status/semantic-status.source-set.json": "sha256:8dda44d28ac654c33892e4c362c83260ba2bd1ab97526ef90dbddb6f72d52ef6",
+    "tokens/semantic/status/semantic-status.resolver.json": "sha256:0d9ff65fb65c9eca3abe5f3bd6bf37492b043c8308191feda9c8319a43c45004",
+    "tests/fixtures/semantic-status-statements/CANDIDATE_EVIDENCE_CASES.json": "sha256:4e5b54fad4873f5f6ab8cc7ff805649737015c33d1ab138ed364f98230651116"
+  },
+  "fileDigests": {
+    "docs/foundations/SEMANTIC_STATUS_FOUNDATION_CONTRACT.md": "sha256:8869cad23377eaac20da558185b0ce17082e994507207eb6058b5e96c5f7442d",
+    "docs/foundations/STATUS_AXIS_VOCABULARY.md": "sha256:3fdf2f8d359fb5f7e09c56458e692466eb5f09c93d904151e231d2b0ce4dec21",
+    "docs/foundations/STATUS_COMPOSITION_AND_CONFLICT_RULES.md": "sha256:66ec38c68a2980691241d894245ecc6a909bd66dc305951b25313df8772c2aa9",
+    "docs/foundations/STATUS_COMMUNICATION_AND_ACCESSIBILITY_CONTRACT.md": "sha256:99ae531a99c60929b5536eb7ca6c11f9b8950b3d9134525323e768f45da154d0",
+    "docs/foundations/SEMANTIC_STATUS_TERMINOLOGY_DE_EN.md": "sha256:c705d345dfaf73f62d942abeafbaf20d557bd217bc7f70742fc1e397165ebf32",
+    "tools/cds_validator/semantic_status.py": "sha256:1ec690c4444aa5e5730786ac97b45e6dc5760549223fa1c0d5cb0f055560df61",
+    "tools/cds_validator/diagnostics.py": "sha256:11316e2cd947383c374e0a109d5f4a37518b74e3036e0dbdee033849392c97a4",
+    "tools/cds_validator/canonicalization.py": "sha256:f8e9b64522a61fcf8e46b192bf18f1f1277f356271486ae6ae08d559f7a56823",
+    "tools/cds_validator/json_loader.py": "sha256:de5c2dea9d7e2b53d6ee9f48905cfadf5d88dcfe27087c41f1f20551ac0f3653",
+    "tools/cds_validator/models.py": "sha256:5b9272a138c5d5146753338b223ac5a23cdac67a2ef87a4afb907d45e11eb541",
+    "tools/cds_validator/__init__.py": "sha256:b3f7feca44ba8de6a8c2f9cb37ea4d9a1eea05c81ce6bb1c84d3ead4b0ca89d0",
+    "tools/cds_validator/version.py": "sha256:744facb700c5c0c0686af39a2524ff1fef30483b45d3546d8ff8f47a33eb47af",
+    "tests/validator/semantic_status_candidate_evidence_runner.py": "sha256:946ccf484bf774424705b727e60a959ea62d06dd8ff604e8e05b30d50d9227e3",
+    "tests/validator/test_semantic_status_candidate_evidence.py": "sha256:93091d4b6f353b19977af0d7aa1b93b9281972152716c8897eca1c2f9e460b70",
+    "tests/validator/test_semantic_status.py": "sha256:2c900f46ec32284f33a19060ed6215eb7e12d3dfc813781cd0b77fa0c0a37b94",
+    "requirements-validator.lock": "sha256:9179039c098bf3acaef88ba559759a53c69dcc70caa18648b99b93107adc9505"
+  },
+  "resultsArtifact": {
+    "artifacts/validation/wp016-candidate-finalization-ae1-004-results.json": "sha256:0b299fc99fe96f86075c94a01eb517efbfa37a876386e6d8f7a6acd7c924f96b"
+  },
+  "resultsArtifactFileDigest": {
+    "artifacts/validation/wp016-candidate-finalization-ae1-004-results.json": "sha256:cc918d562a8d7da17f462ce8a3040933d6c5fb850dbb8f85bd07464a2bbae1d0"
+  },
+  "resultsArtifactByteLength": {
+    "artifacts/validation/wp016-candidate-finalization-ae1-004-results.json": 30432
+  },
+  "authorityBoundaries": {
+    "digestIsSignature": false,
+    "digestIsAuthorship": false,
+    "digestIsIndependentReview": false,
+    "digestIsEvidenceAdmission": false,
+    "digestIsCandidateApproval": false,
+    "digestIsCandidateMaturity": false,
+    "digestIsClaim": false,
+    "digestIsConformance": false,
+    "statement": "Every flag above is permanently false. Independent review, Evidence Admission, Candidate Approval, and the exact-byte Promotion Commit are decisions recorded outside this artifact; the Human Maintainer holds them."
+  },
+  "selfDigestNote": "This artifact cannot recursively contain its own digest. Its raw SHA-256 is recorded in the AE1-CDS-WP016-SEMSTATUS-004 Evidence Record and in the executor report after this file is frozen."
+}
