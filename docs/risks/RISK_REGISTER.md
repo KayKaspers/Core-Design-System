@@ -5,8 +5,8 @@ must be controlled from the start of the project.
 
 ## Register scope
 
-- Risk range: RISK-001 … RISK-097
-- Number of risks: 97
+- Risk range: RISK-001 … RISK-098
+- Number of risks: 98
 - Phase: Pre-Candidate Operating Enablement (Foundation / Pre-Design closed with notes)
 
 Risks RISK-001 … RISK-005 were registered by CDS-WP-001. Risks
@@ -26,7 +26,9 @@ bootstrap and validation contract. Risks RISK-073 … RISK-081 were registered b
 CDS-WP-013 alongside the offline token profile validator and fixture harness.
 Risks RISK-082 … RISK-089 were registered by CDS-WP-014 alongside the semantic
 status foundation contract. Risks RISK-090 … RISK-097 were registered by
-CDS-WP-015 alongside the semantic status source set and candidate evidence.
+CDS-WP-015 alongside the semantic status source set and candidate evidence. RISK-098 was
+registered by the CDS-WP-016 Candidate Finalization Governance Rework alongside
+DEC-S-126.
 
 ### Finalized risk role model
 
@@ -59,8 +61,8 @@ Full model: [Risk Governance Model](../governance/RISK_GOVERNANCE_MODEL.md).
 | **Accepted** | Consciously accepted with residual effect; requires a review trigger. |
 | **Closed** | No longer relevant, or fully mitigated with evidence. |
 
-**90 of the 97 risks are currently `Monitored`; RISK-040, RISK-044, RISK-066,
-RISK-067, RISK-068, RISK-069, and RISK-071 are `Mitigating`.** CDS-WP-006 finalized
+**90 of the 98 risks are currently `Monitored`; RISK-040, RISK-044, RISK-066,
+RISK-067, RISK-068, RISK-069, RISK-071, and RISK-098 are `Mitigating`.** CDS-WP-006 finalized
 the role model; it treated no risk and changed no assessment, because no evidence
 justified a change. CDS-WP-007 added RISK-041 … RISK-048 and likewise treated none.
 CDS-WP-009 moved **RISK-040 `Monitored → Mitigating`** on the strength of the
@@ -76,7 +78,10 @@ of the executed offline validator and fixture harness — an executor-produced,
 independently unreviewed evidence basis (DEC-S-103). CDS-WP-014 added
 **RISK-082 … RISK-089** (all `Monitored`, semantic-status truthfulness risks) and
 changed no existing status. CDS-WP-015 added **RISK-090 … RISK-097** (all
-`Monitored`, status source/evidence risks) and changed no existing status. No description, likelihood, or
+`Monitored`, status source/evidence risks) and changed no existing status. The
+CDS-WP-016 Candidate Finalization Governance Rework added **RISK-098** directly as
+`Mitigating` — DEC-S-126, the Candidate Approval Record Template, and the v2
+evidence runner are its active mitigation — and changed no existing status. No description, likelihood, or
 severity was changed for any existing risk, and **no risk was accepted or closed** —
 only the Human Maintainer may do either.
 
@@ -2995,3 +3000,53 @@ Prohibit representing the source as approved before the gate (DEC-S-124); keep t
 approval-statement check active at the source; publication state stays
 `Private Development`; consumer integration remains unauthorized until the gate
 succeeds.
+
+---
+
+## RISK-098 — Candidate-promotion evidence bootstrap circularity and pre-approval metadata misrepresentation
+
+- **Status:** Mitigating *(registered directly as `Mitigating` by the CDS-WP-016 Candidate Finalization Governance Rework: the transition model of DEC-S-126, the Candidate Approval Record Template, and the v2 evidence runner are the active mitigation. Mitigation Executor: Claude (scoped, governance and test-tooling documentation).)*
+- **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
+- **Initial likelihood:** High
+- **Initial severity:** High
+
+### Description
+
+Candidate promotion of the Semantic Status source requires the source bytes to
+declare `maturityState: Candidate`, `approvalState: Approved`, and a new
+immutable Candidate source revision. Changing the source revision invalidates the
+revision-bound AE-1 admitted for the previous revision (DEC-S-052, trigger T-12),
+so fresh AE-1 evidence is required before Candidate approval — yet the
+Candidate-target metadata must already be present in the very bytes that have to
+be evidenced.
+
+Without an explicit Proposed-Candidate transition model, that shape produces a
+circular gate dependency, and the obvious ways out are all wrong: committing the
+Candidate metadata first as an unevidenced preparatory commit; treating
+Candidate/Approved metadata in draft bytes as if the repository were already
+Candidate; carrying the old revision's admitted AE-1 forward onto new bytes; or
+recording an approval whose scope nobody can bind to exact content.
+
+### Impact
+
+Maturity inflation; an invalid Candidate promotion; untrustworthy evidence bound
+to no identifiable bytes; a repository state that contradicts its own governance
+records; de-facto authority acquired through metadata rather than through a
+decision; and bypass of the Human-Maintainer AE-1 admission, Candidate approval,
+and commit gates. Any of these would make the first CDS Candidate exactly the
+kind of unverifiable claim the maturity, evidence, and claim boundaries exist to
+prevent (RISK-031, RISK-081, RISK-096).
+
+### Mitigation direction
+
+Apply **DEC-S-126**: a named, non-authoritative Proposed Candidate Revision whose
+target metadata grants nothing; pre-commit evidence permitted only under exact
+byte binding (identity, revisions, paths, raw SHA-256, canonical digests, tooling
+revision, determinism, limitations, review and admission state); a separate
+Human-Maintainer AE-1 admission that must precede a separate Human-Maintainer
+Candidate approval; integration only as an exact-byte Promotion Commit, which is
+the actual maturity transition point; byte drift in the evidenced scope
+invalidating the bridge and forcing fresh evidence, review, and admission; and
+mandatory post-commit regression and identity verification. Keep the evidence
+runner free of hard-coded governance state so a proposed-candidate run can never
+report itself as current authority, and keep T-12 unwaived.

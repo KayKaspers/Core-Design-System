@@ -54,17 +54,18 @@ areas today.
 Governance foundation established. No final design or technology decisions are
 approved.
 
-- Decisions: DEC-S-001 … DEC-S-125 (125) — 6 foundation + 6 scope + 8 consumer
+- Decisions: DEC-S-001 … DEC-S-126 (126) — 6 foundation + 6 scope + 8 consumer
   and pilot scope + 12 logical architecture + 16 governance + 12 accessibility +
   4 operating enablement and pre-candidate + 8 accessibility support baseline and
   evidence + 10 machine-readable source and token format + 10 machine-readable
   bootstrap and validation + 12 offline validator implementation + 10 semantic
   status foundation + 10 semantic status source and evidence + 1 accessibility /
-  maturity / channel boundary decision ·
+  maturity / channel boundary + 1 candidate finalization / maturity / evidence
+  transition decision ·
   **ADRs: 3 (ADR-0001, ADR-0002, ADR-0003)**
-- Risks: RISK-001 … RISK-097 (97) — **90 Monitored; RISK-040, RISK-044, RISK-066,
-  RISK-067, RISK-068, RISK-069, RISK-071 Mitigating**; **owner model finalized**;
-  no risk accepted or closed
+- Risks: RISK-001 … RISK-098 (98) — **90 Monitored; RISK-040, RISK-044, RISK-066,
+  RISK-067, RISK-068, RISK-069, RISK-071, RISK-098 Mitigating**; **owner model
+  finalized**; no risk accepted or closed
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015
@@ -825,6 +826,35 @@ reviewed** (**PASS WITH NOTES** and **PASS**) and integrated, and on **2026-08-1
 Human Maintainer admitted `AE1-CDS-WP016-SEMSTATUS-002` at AE-1** for the
 channel-independent Semantic Status source/contract family **only**
 ([Admission Record](../docs/governance/SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md)).
+
+**Candidate Finalization Governance Rework.** Preparing that closure surfaced a
+bootstrap problem, recorded by a read-only assessment on 2026-08-18: a Candidate
+revision must declare Candidate/Approved metadata and a **new** source revision,
+but the new revision invalidates the AE-1 admitted for `semantic-status-rev-0001`,
+so the gate appeared to require an unevidenced preparatory commit to enter. The
+Human Maintainer **authorized the CDS-WP-016 Candidate Finalization Governance
+Rework** as **internal rework of CDS-WP-016, not a new work package**, and it is
+**executed** — governance and tooling only:
+
+- **DEC-S-126** — a named, **non-authoritative Proposed Candidate Revision**;
+  target metadata that grants nothing; **evidence never transfers across a source
+  revision**; exact-byte pre-commit evidence binding with drift invalidation;
+  **AE-1 admission before Candidate approval**; the **Promotion Commit** as the
+  actual repository maturity transition point; mandatory post-commit verification.
+- **RISK-098** (`Mitigating`) — promotion-evidence circularity and pre-approval
+  metadata misrepresentation.
+- The [Candidate Approval Record Template](../docs/operations/CANDIDATE_APPROVAL_RECORD_TEMPLATE.md)
+  — a **template only**; no instance exists.
+- **Evidence runner result format v2** — the runner no longer hard-codes
+  governance state; it reports `sourceDeclaredMetadata`, a caller-declared
+  `sourceAuthorityContext`, an **AE-1 Evidence Candidate**, and seven permanently
+  false authority-effect flags, and fails closed on a source-revision mismatch.
+
+`semantic-status-rev-0002-candidate` is **reserved and authorized for the future
+Candidate revision — it has not been created**, and the authoritative source
+revision remains `semantic-status-rev-0001`. The rework produced **no Candidate
+evidence**, admitted **no evidence**, granted **no Candidate approval**, mutated
+**no productive source byte**, and touched **no existing evidence artifact**.
 
 The next step is therefore **not** the first start of
 CDS-WP-016, and **not** a promotion, but the **Candidate authority closure**: the

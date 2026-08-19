@@ -71,7 +71,25 @@ for the **channel-independent Semantic Status source/contract scope only** — s
 [AE-1 Admission Record](docs/governance/SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md).
 **Candidate remains No**, maturity **Experimental**, approval **Unapproved**, claims
 **none**, and **every other CDS artifact remains AE-0**; no channel, consumer, or
-product evidence exists. The next authority step is the **Nova post-admission
+product evidence exists.
+
+On 2026-08-18 the Human Maintainer authorized a further internal rework of
+CDS-WP-016 — the **Candidate Finalization Governance Rework** — after a read-only
+bootstrap assessment found a circular dependency between the Candidate metadata a
+Candidate revision must declare and the revision-bound evidence that same revision
+requires. It is **executed** and adds governance and tooling only: **DEC-S-126**
+(a named, non-authoritative **Proposed Candidate Revision**; target metadata that
+grants nothing; evidence that never transfers across a source revision; exact-byte
+pre-commit evidence binding; **AE-1 admission before Candidate approval**; the
+**Promotion Commit** as the actual maturity transition point), **RISK-098**, the
+[Candidate Approval Record Template](docs/operations/CANDIDATE_APPROVAL_RECORD_TEMPLATE.md),
+and a v2 evidence runner that holds no governance state of its own. The identity
+`semantic-status-rev-0002-candidate` is **reserved for a future Candidate revision
+and has not been created**; the authoritative source revision remains
+`semantic-status-rev-0001`. **No Candidate evidence was produced, no evidence was
+admitted, and no Candidate approval was granted.**
+
+The next authority step is the **Nova post-admission
 Candidate Maturity Re-Review**; the **Human-Maintainer Candidate approval is not
 granted**. No follow-up work package is authorized and **CDS-WP-017 is not
 activated**.
@@ -516,7 +534,7 @@ phase.
 
 ## Registers
 
-- Decisions: DEC-S-001 … DEC-S-125 (125) — 6 strategic foundation decisions,
+- Decisions: DEC-S-001 … DEC-S-126 (126) — 6 strategic foundation decisions,
   6 strategic scope decisions, 8 consumer and pilot scope decisions,
   12 logical architecture decisions, 16 governance, lifecycle and publication
   decisions, 12 accessibility and inclusive design decisions, 4 operating
@@ -525,10 +543,11 @@ phase.
   10 machine-readable bootstrap and validation decisions, 12 offline validator
   implementation decisions, 10 semantic status foundation decisions, 10 semantic
   status source and evidence decisions, 1 accessibility / maturity / channel
-  boundary decision · ADRs: 3 (ADR-0001, ADR-0002, ADR-0003)
-- Risks: RISK-001 … RISK-097 (97) — 90 Monitored; 7 Mitigating (RISK-040, RISK-044,
-  RISK-066, RISK-067, RISK-068, RISK-069, RISK-071); owner model finalized;
-  no risk accepted or closed
+  boundary decision, 1 candidate finalization / maturity / evidence transition
+  decision · ADRs: 3 (ADR-0001, ADR-0002, ADR-0003)
+- Risks: RISK-001 … RISK-098 (98) — 90 Monitored; 8 Mitigating (RISK-040, RISK-044,
+  RISK-066, RISK-067, RISK-068, RISK-069, RISK-071, RISK-098); owner model
+  finalized; no risk accepted or closed
 
 ## Governance documents
 

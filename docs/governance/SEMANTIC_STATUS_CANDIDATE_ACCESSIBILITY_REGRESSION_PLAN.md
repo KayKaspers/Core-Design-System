@@ -64,6 +64,28 @@ Contract's change control.)*
 | **T-14** | **A11Y-BL-001 revision or freshness change** | Evidence produced against a baseline that has moved, or whose freshness is `Review due`, `Stale`, or `Unknown`, is not current evidence and satisfies no gate. | E-REVIEW-DUE · E-REREVIEW · targeted revalidation of affected environments · E-GATE |
 | **T-15** | **Validator-contract changes affecting this evidence** (diagnostic code, category, layer, severity, or check semantics; schema `$id`; CLI contract) | The machine evidence *is* the validator's output. A changed check meaning changes what a past "Pass" meant, retroactively and invisibly (RISK-077). | E-INVALID · E-REEXEC · E-REREVIEW · E-GATE |
 
+### T-12 and the Candidate revision transition (CDS-WP-016, DEC-S-126)
+
+*(Additive clarification. The trigger count remains **15**, T-01 … T-15 are
+unchanged, and **T-12 is not waived, narrowed, or weakened**.)*
+
+The planned first Candidate will carry a **new** source revision — the reserved
+identity `semantic-status-rev-0002-candidate`, which **has not been created**.
+That revision change **is** a T-12 event and takes its full effects:
+**E-INVALID · E-REEXEC · E-REREVIEW · E-GATE**.
+
+| Question | Answer |
+| --- | --- |
+| Does DEC-S-126 waive T-12? | **No.** |
+| Does the admitted `AE1-CDS-WP016-SEMSTATUS-002` carry over to the Candidate revision? | **No.** It is bound to `semantic-status-rev-0001`. Old evidence never transfers. |
+| What does the Candidate revision require? | A **new** evidence execution, a **new** independent review, and a **new** Human-Maintainer admission — the full cycle, before Candidate approval. |
+| What does exact-byte continuity actually preserve? | Only the **new** Candidate-revision evidence, and only across the later persistence commit, when the reviewed, staged, and committed bytes are byte-identical. |
+| Does a bit-identical Promotion Commit re-trigger T-12? | **No** — persisting already-reviewed exact bytes changes no identity. **Any** byte difference does re-trigger it, with no "small fix" exemption. |
+
+Exact-byte continuity is an **identity preservation rule, not an evidence
+transfer rule**. It never moves evidence from one revision to another; it only
+records that the bytes reviewed and the bytes committed are the same bytes.
+
 ## Traceability to the gap assessment
 
 The read-only gap assessment proposed **13** re-evidence triggers. This plan

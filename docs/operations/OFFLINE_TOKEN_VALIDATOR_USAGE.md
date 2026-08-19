@@ -87,6 +87,30 @@ python -m unittest discover -s tests/validator
 - A `modified worktree` report binds to uncommitted content and must not be quoted as
   the committed revision's result.
 
+### The one narrow exception (CDS-WP-016, DEC-S-126)
+
+The rule above is **not** weakened generally. A generic `modified worktree` report
+still must never be quoted as the result of an unrelated committed revision.
+
+**Only** the DEC-S-126 Candidate transition flow receives narrow different
+treatment. A specifically declared **Proposed Candidate Revision** may produce
+revision-bound pre-commit evidence, provided **all** of the following are recorded
+with the run:
+
+| # | Required for the exception to apply |
+| --- | --- |
+| 1 | The exact **proposed source revision** is declared. |
+| 2 | The **authoritative base repository revision** is declared. |
+| 3 | The **exact evidenced input paths**, raw SHA-256 identities, and canonical digests are recorded. |
+| 4 | An **independent reviewer reproduces** those exact bytes and digests. |
+| 5 | **Exact-byte continuity** is proven through the staged blobs and the committed blobs at the Promotion Commit. |
+
+Anything less is an ordinary modified-worktree run and falls under the general
+rule. Any byte drift in the evidenced scope invalidates the binding and requires
+fresh evidence, a fresh independent review, and a fresh admission — there is no
+"small fix" exemption. The exception governs **when evidence may be executed**; it
+grants no maturity, no admission, and no Candidate.
+
 ## Candidate metadata on Semantic Status documents (CDS-WP-016)
 
 Since CDS-WP-016 the semantic-status V4 checks apply a maturity/approval state

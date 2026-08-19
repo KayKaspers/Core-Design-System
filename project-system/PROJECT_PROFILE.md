@@ -34,9 +34,15 @@ Pre-Candidate Operating Enablement — **Foundation / Pre-Design: Closed with No
   The remediation and its clean-HEAD evidence package are **independently reviewed**
   and **admitted**: admitted accessibility evidence **AE-1**
   (`AE1-CDS-WP016-SEMSTATUS-002`, 2026-08-17) for the channel-independent Semantic
-  Status source/contract family **only**. The Candidate authority closure remains
-  open: the **Nova post-admission Candidate Maturity Re-Review** has not been
-  performed and the **Human-Maintainer Candidate approval is not granted**, so
+  Status source/contract family **only**. A further Human-Maintainer-authorized
+  internal rework — the **Candidate Finalization Governance Rework** (2026-08-18,
+  again **not** a new work package) — is **executed**: DEC-S-126, RISK-098, the
+  Candidate Approval Record **Template**, and evidence-runner result format **v2**.
+  It prepared **governance and tooling only**; `semantic-status-rev-0002-candidate`
+  is **reserved and not created**, and **no Candidate evidence was produced, none
+  admitted, and no Candidate approval granted**. The Candidate authority closure
+  remains open: the **Nova post-admission Candidate Maturity Re-Review** has not
+  been performed and the **Human-Maintainer Candidate approval is not granted**, so
   Candidate is **No**. No follow-up work
   package is authorized; CDS-WP-017 is not activated.
 - Previous work package: CDS-WP-015 — Semantic Status Foundation Source Set and
@@ -295,7 +301,9 @@ Documents:
   Status source/contract family; **every other artifact is AE-0**. A support
   baseline is **declared and committed** (A11Y-BL-001, CDS-WP-010) but **no
   evidence has been executed in any baseline environment**; no AE-2, AE-3, or AE-4
-  exists; no accessibility claim of any level is valid
+  exists; no accessibility claim of any level is valid. That admission is bound to
+  source revision `semantic-status-rev-0001` and **does not transfer** to a later
+  Candidate source revision (DEC-S-126)
 
 Documents:
 [Accessibility and Inclusive Design Policy](../docs/governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md) ·
@@ -500,7 +508,7 @@ pilot contract is defined in CDS-WP-004.
 
 ## Register scope
 
-- Decisions: DEC-S-001 … DEC-S-125 (125) — 6 strategic foundation decisions
+- Decisions: DEC-S-001 … DEC-S-126 (126) — 6 strategic foundation decisions
   (CDS-WP-001), 6 strategic scope decisions (CDS-WP-002), 8 consumer and pilot
   scope decisions (CDS-WP-004), 12 logical architecture decisions (CDS-WP-005),
   16 governance, lifecycle and publication decisions (CDS-WP-006), 12
@@ -512,15 +520,19 @@ pilot contract is defined in CDS-WP-004.
   12 offline validator implementation decisions (CDS-WP-013, DEC-S-093 …
   DEC-S-104), 10 semantic status foundation decisions (CDS-WP-014, DEC-S-105 …
   DEC-S-114), 10 semantic status source and evidence decisions (CDS-WP-015,
-  DEC-S-115 … DEC-S-124), and **1 accessibility / maturity / channel boundary
-  decision (CDS-WP-016, DEC-S-125)**. DEC-S-001 … DEC-S-114 unchanged by
-  CDS-WP-015; DEC-S-001 … DEC-S-124 unchanged by CDS-WP-016.
+  DEC-S-115 … DEC-S-124), **1 accessibility / maturity / channel boundary
+  decision (CDS-WP-016, DEC-S-125)**, and **1 candidate finalization / maturity /
+  evidence transition decision (CDS-WP-016 Candidate Finalization Governance
+  Rework, DEC-S-126)**. DEC-S-001 … DEC-S-114 unchanged by
+  CDS-WP-015; DEC-S-001 … DEC-S-125 unchanged by the rework.
   **ADRs: 3 (ADR-0001, ADR-0002, ADR-0003).**
-- Risks: RISK-001 … RISK-097 (97) — **90 `Monitored`; RISK-040, RISK-044, RISK-066,
-  RISK-067, RISK-068, RISK-069, and RISK-071 `Mitigating`**; **risk owner model
-  finalized** by CDS-WP-006; RISK-082 … RISK-089 added by CDS-WP-014;
+- Risks: RISK-001 … RISK-098 (98) — **90 `Monitored`; RISK-040, RISK-044, RISK-066,
+  RISK-067, RISK-068, RISK-069, RISK-071, and RISK-098 `Mitigating`**; **risk owner
+  model finalized** by CDS-WP-006; RISK-082 … RISK-089 added by CDS-WP-014;
   **RISK-090 … RISK-097 added by CDS-WP-015** (all `Monitored`; no existing status
-  changed). No risk accepted or closed.
+  changed); **RISK-098 added by the CDS-WP-016 Candidate Finalization Governance
+  Rework** directly as `Mitigating` (no existing status changed). No risk accepted
+  or closed.
 
 ## Intentionally open decision areas
 

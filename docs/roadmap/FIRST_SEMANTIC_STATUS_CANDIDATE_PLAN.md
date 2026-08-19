@@ -253,9 +253,56 @@ is **not revoked** — see the
 **GO is not a Candidate award**, and unclear readiness at any gate resolves as
 **NO-GO**, never as "go with notes" (DEC-S-048).
 
+## Candidate finalization transition (CDS-WP-016, DEC-S-126, 2026-08-18)
+
+*(Additive. This section changes **no** Candidate prerequisite, **no** gate
+requirement, and **no** exclusion. It records how the remaining authority gate may
+later be reached.)*
+
+Blocker 4 above — the open Human-Maintainer Candidate approval — could not be
+reached without resolving a circularity: the Candidate must declare
+`Candidate`/`Approved` metadata and a **new** source revision, while the gate
+requires revision-bound evidence for exactly those bytes, and a new revision
+invalidates the AE-1 admitted for `semantic-status-rev-0001`. **DEC-S-126** names
+the intermediate state instead of committing an unevidenced Candidate.
+
+| Item | State today |
+| --- | --- |
+| Authoritative source revision | **`semantic-status-rev-0001`** · Experimental · Unapproved |
+| Reserved future Candidate revision | `semantic-status-rev-0002-candidate` — **authorized and reserved; NOT created, NOT current, NOT Candidate** |
+| Proposed Candidate Revision | **None exists.** |
+| Fresh Candidate-revision AE-1 evidence | **Not produced.** |
+| Candidate Approval Record | **None exists** — only the [template](../operations/CANDIDATE_APPROVAL_RECORD_TEMPLATE.md). |
+| Candidate approval | **Not granted.** |
+
+### Required order before Candidate
+
+| # | Step | State |
+| --- | --- | --- |
+| 1 | Proposed Candidate bytes prepared | not started |
+| 2 | Fresh revision-bound AE-1 evidence produced | not started |
+| 3 | Fresh independent evidence review | not started |
+| 4 | **Human-Maintainer AE-1 admission** for the Candidate revision | not started |
+| 5 | Nova Candidate finalization review | not started |
+| 6 | **Human-Maintainer Candidate approval** | **open** (gate requirement 9) |
+| 7 | **Human-Maintainer exact-byte Promotion Commit** | not started |
+| 8 | Post-commit regression and identity verification | not started |
+
+The admitted `AE1-CDS-WP016-SEMSTATUS-002` **does not transfer** to the Candidate
+revision (regression trigger **T-12 is not waived**). Pre-commit evidence is
+permitted only under exact-byte binding, and any byte drift in the evidenced scope
+invalidates it — there is no "small fix" exemption. **Candidate maturity becomes
+effective only at the Promotion Commit**, never at approval and never at a
+validator pass.
+
+**Nothing in this section grants Candidate.** Candidate: **No**. Maturity:
+**Experimental**. Approval: **Unapproved**. Claims: **none**. CDS-WP-017: **not
+activated**.
+
 ## Related documents
 
 - [Candidate Accessibility Gate Addendum](../reviews/WP016_CANDIDATE_ACCESSIBILITY_GATE_ADDENDUM.md)
+- [Candidate Approval Record Template](../operations/CANDIDATE_APPROVAL_RECORD_TEMPLATE.md)
 - [Semantic Status Foundation Contract](../foundations/SEMANTIC_STATUS_FOUNDATION_CONTRACT.md)
 - [Semantic Status Token Contract](../foundations/SEMANTIC_STATUS_TOKEN_CONTRACT.md)
 - [Readiness Review](../reviews/SEMANTIC_STATUS_FOUNDATION_READINESS_REVIEW.md)

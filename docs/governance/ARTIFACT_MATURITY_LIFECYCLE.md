@@ -115,6 +115,85 @@ except under emergency removal.
 Requirement 10 is a gate, not a footnote: a Candidate that claims no limitations
 has not been examined.
 
+## Reaching the Candidate gate — Proposed Candidate Revisions (CDS-WP-016)
+
+*(Additive, normative, DEC-S-126. This section defines **how** a proposed change
+reaches the Candidate gate. It **waives no gate**, removes **no** Candidate
+requirement, and changes **no** Stable requirement.)*
+
+A Candidate promotion often requires the artifact's own bytes to declare the
+Candidate state — a Candidate source revision and Candidate/Approved metadata —
+while the gate simultaneously requires revision-bound evidence for exactly those
+bytes. Without a named intermediate state, the only way in is an unevidenced,
+unapproved preparatory commit, which rule 1 above forbids. The intermediate state
+is named here instead.
+
+### Proposed Candidate Revision
+
+| Property | Rule |
+| --- | --- |
+| **What it is** | An explicitly identified revision of an artifact, prepared as uncommitted working-tree or equivalent review material, intended to become the Candidate. |
+| **What it is not** | Current maturity · current approval · a claim · a release · distributable current CDS Source · consumer-authoritative. |
+| **Metadata** | Its bytes **may** carry the intended future `Candidate`/`Approved` metadata, **only** where the surrounding context states explicitly that this is the **proposed future state** and not the current authoritative repository state. |
+| **Authority** | **None.** Proposed Candidate Bytes are not Candidate authority; target metadata is not current maturity. |
+| **Maturity while it exists** | The artifact's maturity is unchanged — typically **Experimental** — for as long as the proposal is not integrated. |
+
+Evidence may be produced against a Proposed Candidate Revision only under the
+exact-byte binding conditions of DEC-S-126: the evidence package must bind the
+exact proposed bytes by identity, revision, path, raw SHA-256, canonical digest
+where applicable, tooling revision, and deterministic execution. Such evidence is
+an **Evidence Candidate** until it is independently reviewed and admitted by the
+Human Maintainer. **Evidence never transfers across a source revision.**
+
+### Candidate approval pending exact-byte integration
+
+A Candidate approval may be reached **before** integration. It is recorded as
+**`AUTHORIZED_PENDING_EXACT_BYTE_INTEGRATION`** in an instance of the
+[Candidate Approval Record Template](../operations/CANDIDATE_APPROVAL_RECORD_TEMPLATE.md),
+and it means: *these exact bytes are approved for Candidate, conditional on their
+unmodified integration.*
+
+**While that state holds, the repository is not Candidate.** Maturity, approval,
+and consumer promise are unchanged.
+
+The order of authority steps is fixed (DEC-S-126): proposed bytes → fresh
+revision-bound evidence → fresh independent evidence review → **Human-Maintainer
+evidence admission** → Nova finalization review → **Human-Maintainer Candidate
+approval** → **exact-byte Promotion Commit** → post-commit verification. Evidence
+admission and Candidate approval are **separate** Human-Maintainer decisions, and
+admission **precedes** approval.
+
+### Effectivity — the Promotion Commit
+
+**The Promotion Commit is the actual repository maturity transition point.**
+
+`Experimental → Candidate` in the transition matrix above becomes effective when,
+and only when, the Human Maintainer integrates the exact approved bytes. Before
+that moment the artifact is Experimental regardless of what any record, any
+review, or any metadata inside the proposed bytes says. Rule 1 is unchanged: no
+artifact promotes itself, and no document promotes one either.
+
+### Exact-byte invalidation
+
+Any difference between the approved, reviewed, and evidenced Candidate bytes and
+the integrated source **invalidates** the pending approval. Fresh evidence, a
+fresh independent review, a fresh admission, and a fresh approval are then
+required. **There is no "small fix" exemption** — a whitespace change, a
+reordering, and a trailing-newline change all count.
+
+Where the committed bytes **are** identical, the mandatory post-commit
+verification confirms the same evidence binding and does not by itself require a
+second evidence, review, and admission cycle solely because Git persisted
+already-reviewed exact bytes.
+
+### What this section does not do
+
+It grants **no** Candidate, creates **no** Proposed Candidate Revision, and
+authorizes **no** promotion. The Semantic Status Foundation remains **Candidate:
+No · Experimental · Unapproved**, at authoritative source revision
+`semantic-status-rev-0001`; `semantic-status-rev-0002-candidate` is a **reserved
+future identity that has not been created**.
+
 ## Minimum Stable gate
 
 *(Normative — all required, in addition to the Candidate gate)*
@@ -199,3 +278,4 @@ Summarised here; governed by the
 - [Release and Change Control Policy](RELEASE_AND_CHANGE_CONTROL_POLICY.md)
 - [Adoption, Conformance and Claims Policy](ADOPTION_CONFORMANCE_AND_CLAIMS_POLICY.md)
 - [Design System Architecture](../architecture/DESIGN_SYSTEM_ARCHITECTURE.md)
+- [Candidate Approval Record Template](../operations/CANDIDATE_APPROVAL_RECORD_TEMPLATE.md)

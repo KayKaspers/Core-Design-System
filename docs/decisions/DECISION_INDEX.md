@@ -11,8 +11,8 @@ authorized work packages.
 
 ## Register scope
 
-- Decision range: DEC-S-001 … DEC-S-125
-- Number of decisions: 125
+- Decision range: DEC-S-001 … DEC-S-126
+- Number of decisions: 126
 - Decision record format: index entries, plus ADR files where a decision warrants an
   Architecture Decision Record. **ADR range: ADR-0001 … ADR-0003 (3 ADRs).**
 - [ADR-0001 — Machine-Readable Token Source Format](ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)
@@ -40,6 +40,7 @@ authorized work packages.
 | Semantic status foundation decision | DEC-S-105 … DEC-S-114 | CDS-WP-014 | Five independent status axes with a fixed 25-value vocabulary and explicit `unknown`, no degraded-knowledge-as-success, no aggregate health score, explicit combination/conflict rules, language-neutral IDs with meaning-preserving localization, text-first accessible meaning, truth-preserving downstream mappings, and the gated first Candidate plan (no promotion). |
 | Semantic status source and evidence decision | DEC-S-115 … DEC-S-124 | CDS-WP-015 | The `semantic/status` Experimental source set (5 axes, 25 non-visual tokens, `status.<axis>.<value>` with 1:1 vocabulary traceability), fail-closed status validation, separate meaning-preserving DE/EN terminology, immutable WP-013 baseline cases, executor-produced evidence class, the Draft-only dossier rule, identity/digest alignment, and the no-premature-consumption boundary. |
 | Accessibility / maturity / channel boundary decision | DEC-S-125 | CDS-WP-016 | Channel Accessibility Profiles gate channel artifacts, not channel-independent Layer-3 semantic sources and contracts; evidence transfers in neither direction; no waiver of any accessibility requirement and no Candidate award. |
+| Candidate finalization / maturity / evidence transition decision | DEC-S-126 | CDS-WP-016 | A named non-authoritative Proposed Candidate Revision, target metadata that grants nothing, revision-bound evidence that never transfers, exact-byte pre-commit evidence binding, the fixed admission-before-approval authority order, and the Promotion Commit as the actual maturity transition point. |
 
 None of these types is an implementation decision. Logical architecture decisions
 define structure, responsibility, and flow — they select no technology, format,
@@ -3991,3 +3992,168 @@ That admission is **compatible with DEC-S-125**: channel profiles still gate cha
 artifacts, a channel-independent semantic source still needs no artificial channel,
 and **evidence still transfers in neither direction**. Candidate remains **No**,
 maturity **Experimental**, artifact approval **Unapproved**, and no claim exists.
+
+---
+
+## DEC-S-126 — Proposed Candidate revisions may be evidenced before promotion through exact-byte binding
+
+- **Status:** Accepted
+- **Date:** 2026-08-18
+- **Type:** Candidate finalization / maturity / evidence transition decision
+- **Work package:** CDS-WP-016
+- **Human-Maintainer authorization:** 2026-08-18 (CDS-WP-016 Candidate
+  Finalization Governance Rework), accepting the Nova adjudication of the
+  read-only Candidate Finalization Bootstrap Assessment.
+
+### Decision
+
+1. **A Proposed Candidate Revision is a named, non-authoritative state.** An
+   explicitly identified Proposed Candidate Revision may exist as uncommitted
+   working-tree or equivalent review material. It is **not** current CDS
+   maturity, **not** current CDS approval, **not** a claim, **not** a release,
+   **not** distributable as current CDS Source, and **not**
+   consumer-authoritative.
+
+2. **Proposed Candidate Bytes may carry target metadata.** The proposed bytes
+   may contain the metadata intended for the future Candidate revision —
+   including `maturityState: Candidate` and `approvalState: Approved` — **only**
+   where their context makes explicit that those values are the **proposed
+   future state** and **not** the current authoritative repository state.
+
+   > **Proposed Candidate Bytes are not Candidate authority.**
+   > **Target metadata is not current maturity.**
+
+3. **The first Semantic Status Candidate source revision identity is
+   reserved.** The Human Maintainer authorizes
+   `semantic-status-rev-0002-candidate` as the intended identity of the future
+   Proposed Candidate Revision of the `semantic/status` source set. It is
+   **reserved and authorized, not created**. Until the Human-Maintainer
+   exact-byte Promotion Commit occurs, the authoritative source revision remains
+   **`semantic-status-rev-0001`**, and no artifact may present
+   `semantic-status-rev-0002-candidate` as current.
+
+4. **Evidence does not transfer across a source revision.** The future Candidate
+   source revision requires **fresh, revision-bound AE-1 evidence**. The admitted
+   `AE1-CDS-WP016-SEMSTATUS-002` is bound to `semantic-status-rev-0001` and
+   **does not transfer** to it. This restates, and does not relax, evidence
+   rule 2 and DEC-S-052.
+
+5. **Pre-commit evidence is permitted only under exact-byte binding.** Fresh
+   AE-1 evidence **may** be produced against an uncommitted Proposed Candidate
+   Revision **if and only if** the evidence package binds the exact proposed
+   bytes and identifies at minimum: source-set identity · proposed source
+   revision · authoritative base repository revision · worktree /
+   proposed-candidate state · exact evidenced input paths · raw-byte SHA-256
+   identity · canonical RFC 8785 content digests where applicable · runner and
+   tooling revision · deterministic execution identity · limitations · review
+   state · admission state.
+
+   Evidence produced in this state is an **Evidence Candidate**. It is **not
+   admitted evidence** and **not maturity authority**.
+
+6. **Exact-byte continuity may bridge pre-commit evidence across the Promotion
+   Commit.** A pre-commit evidence package remains valid across the later
+   Promotion Commit **only** where all of the following hold: the independently
+   reviewed proposed source bytes are exact · the staged bytes are exact · the
+   committed blobs are exact · the source revision is unchanged ·
+   evidence-relevant inputs are unchanged · raw SHA-256 identities match ·
+   canonical content digests match where applicable · the required Git blob and
+   object identity checks match.
+
+7. **Any byte drift in the evidenced source or input scope invalidates the
+   bridge** and requires fresh evidence, a fresh independent review, and a fresh
+   admission. **There is no "small fix" exemption.**
+
+8. **The authority order for a future Candidate revision is fixed:**
+
+   | # | Step |
+   | --- | --- |
+   | 1 | Proposed Candidate bytes prepared |
+   | 2 | Fresh AE-1 evidence produced |
+   | 3 | Fresh independent evidence review |
+   | 4 | **Human-Maintainer AE-1 admission** |
+   | 5 | Nova Candidate finalization review |
+   | 6 | **Human-Maintainer Candidate approval** |
+   | 7 | **Human-Maintainer exact-byte Promotion Commit** |
+   | 8 | Post-commit regression and identity verification |
+
+   AE-1 admission and Candidate approval are **separate Human-Maintainer
+   decisions**, and **AE-1 admission must precede Candidate approval**.
+
+9. **Effectivity is the Promotion Commit.** A Candidate approval reached before
+   integration is recorded as **`AUTHORIZED_PENDING_EXACT_BYTE_INTEGRATION`** (or
+   the repository-native equivalent). Before the Promotion Commit the current
+   authoritative repository state remains **Candidate: No**, **Maturity:
+   Experimental**, **Approval: Unapproved**. Only after a successful exact-byte
+   Promotion Commit, and only when every preceding gate is satisfied, may the
+   integrated source become Candidate and Approved. **The Promotion Commit is the
+   actual repository maturity transition point.**
+
+10. **Post-commit verification is mandatory.** A full post-commit regression and
+    exact-byte verification is required. Where the committed source is
+    byte-identical to the independently reviewed, evidence-bound Proposed
+    Candidate source, that verification is **confirmation of the same evidence
+    binding**: it does not by itself require another Evidence ID, another
+    independent evidence review, or another AE-1 admission **solely because Git
+    persisted already-reviewed exact bytes**. Where any byte differs, fresh
+    evidence is mandatory.
+
+### Rationale
+
+Candidate promotion of the Semantic Status source requires two things at once
+that, without this decision, require each other: the source bytes must declare
+`Candidate`/`Approved` and a Candidate source revision, and those exact bytes
+must carry fresh revision-bound AE-1 evidence — but a new source revision
+invalidates the evidence admitted for the old one (DEC-S-052, trigger T-12).
+Read naively, the gate can only be entered by first committing an unevidenced,
+unapproved Candidate state, which is precisely the preparatory commit the
+governance model forbids.
+
+The circularity is an artifact of conflating **bytes** with **authority**. Bytes
+can be prepared, digested, evidenced, and reviewed before anything is
+authoritative; only integration by the Human Maintainer changes what the
+repository asserts. Naming the Proposed Candidate state, binding evidence to
+exact bytes, and declaring the Promotion Commit as the transition point resolves
+the cycle without weakening a single gate: nothing is admitted earlier, nothing
+is approved earlier, and nothing is promoted earlier.
+
+Exact-byte continuity is deliberately narrow. It preserves an **identity**; it
+never transfers an evidence result. The bytes that were reviewed and the bytes
+that were committed are the same bytes, or the bridge does not exist. Requiring a
+second full evidence and review cycle for a bit-identical persistence would
+purchase no additional truth, and would create an incentive to skip the
+pre-commit review instead.
+
+### Consequences
+
+- The Candidate finalization flow is unblocked **as a governance sequence only**.
+  No step of it is executed by this decision.
+- `semantic-status-rev-0002-candidate` becomes a reserved identity. It is not
+  created, not current, and not Candidate.
+- Every current-state artifact continues to describe `semantic-status-rev-0001`
+  as the authoritative source revision.
+- The [Candidate Approval Record Template](../operations/CANDIDATE_APPROVAL_RECORD_TEMPLATE.md)
+  becomes the instrument for step 6; instantiating it is a future, separately
+  authorized act.
+- **RISK-098** is registered for the circularity and the metadata-
+  misrepresentation exposure this decision controls.
+- Trigger T-12 of the
+  [Candidate Accessibility Regression Plan](../governance/SEMANTIC_STATUS_CANDIDATE_ACCESSIBILITY_REGRESSION_PLAN.md)
+  is **not waived**: a source-revision change still invalidates prior evidence and
+  still requires a full fresh execution, review, and admission cycle.
+- DEC-S-125 is unchanged; the source-versus-channel rule remains binding.
+- No ADR is created. This is authority sequencing, not an architecture or
+  technology selection.
+
+### Boundary
+
+Accepted here means accepted as a governance decision record. It awards **no**
+Candidate today, **no** Stable, **no** claim, **no** conformance, **no** channel
+evidence, **no** consumer evidence, **no** Product Profile, **no** CoreOps pilot,
+**no** CDS-WP-017 activation, **no** visual foundation, and **no** release or
+publication authority. Candidate remains **No**, maturity **Experimental**,
+approval **Unapproved**, the authoritative source revision
+**`semantic-status-rev-0001`**, and the only admitted accessibility evidence
+remains `AE1-CDS-WP016-SEMSTATUS-002` at **AE-1** for the channel-independent
+Semantic Status source/contract family; every other CDS artifact remains
+**AE-0**.

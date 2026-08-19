@@ -157,6 +157,33 @@ The source set's governance metadata is contract-bounded:
   (DEC-S-115, DEC-S-122, DEC-S-124). This section changes no axis, value, or status
   meaning.
 
+### Proposed Candidate revision boundary (CDS-WP-016, DEC-S-126)
+
+*(Additive. This subsection changes **no** token semantics, **no** axis, **no**
+value, **no** validator rule, **no** Candidate revision regex, and **no**
+Candidate/Approved coherence rule.)*
+
+- **`semantic-status-rev-0002-candidate` is the authorized intended identity of
+  the first Candidate revision** of this source set. It is **reserved, not
+  created**: it is **not** the current authoritative source, **not** a current
+  revision of any file in this repository, and **not** Candidate.
+- **The current authoritative source remains `semantic-status-rev-0001`,
+  `maturityState: Experimental`, `approvalState: Unapproved`.** No artifact may
+  present the reserved future revision as current.
+- **Proposed Candidate metadata grants nothing.** A Proposed Candidate Revision
+  may carry `Candidate`/`Approved` and a Candidate source revision in its bytes as
+  **target metadata**, where its context says so explicitly. Those bytes are not
+  Candidate authority, and target metadata is not current maturity.
+- **The Candidate Approval Record is instantiated from the
+  [Candidate Approval Record Template](../operations/CANDIDATE_APPROVAL_RECORD_TEMPLATE.md)
+  only at the future Candidate finalization authority step** — after fresh
+  revision-bound AE-1 evidence, a fresh independent evidence review, a
+  Human-Maintainer AE-1 admission, and a Nova finalization review. No instance
+  exists.
+- **Candidate effectivity occurs at the Human-Maintainer exact-byte Promotion
+  Commit**, not at approval and not at validation. Any byte drift between the
+  approved bytes and the integrated source invalidates the pending approval.
+
 ## Related documents
 
 - [Semantic Status Foundation Contract](SEMANTIC_STATUS_FOUNDATION_CONTRACT.md)
@@ -165,3 +192,4 @@ The source set's governance metadata is contract-bounded:
 - [CDS Token Format Profile](../architecture/CDS_TOKEN_FORMAT_PROFILE.md)
 - [Machine-Readable Validation Contract](../architecture/MACHINE_READABLE_VALIDATION_CONTRACT.md)
 - [First Semantic Status Candidate Plan](../roadmap/FIRST_SEMANTIC_STATUS_CANDIDATE_PLAN.md)
+- [Candidate Approval Record Template](../operations/CANDIDATE_APPROVAL_RECORD_TEMPLATE.md)

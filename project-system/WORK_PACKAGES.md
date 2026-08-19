@@ -358,6 +358,41 @@ recorded limitations (0 Critical), and a review addendum. The WP-013/WP-015
 **24-case harness is unchanged** (24/24/0/0) and all **112** pre-existing validator
 test IDs still pass.
 
+**Candidate Finalization Governance Rework (internal rework of CDS-WP-016; not a
+new work package).** A read-only Candidate Finalization Bootstrap Assessment on
+2026-08-18 found a circular gate dependency: a Candidate revision must declare
+`Candidate`/`Approved` metadata and a **new** source revision, but that new
+revision invalidates the AE-1 admitted for `semantic-status-rev-0001`, so the
+gate appeared enterable only through an unevidenced preparatory commit. On
+Human-Maintainer authorization the rework was executed — **governance and tooling
+only**:
+
+- **DEC-S-126** — a named, **non-authoritative Proposed Candidate Revision**;
+  target metadata that grants nothing; **evidence never transfers across a source
+  revision**; exact-byte pre-commit evidence binding with byte-drift invalidation
+  and no "small fix" exemption; **AE-1 admission before Candidate approval**; the
+  **Promotion Commit** as the actual repository maturity transition point;
+  mandatory post-commit verification.
+- **RISK-098** (`Mitigating`) — Candidate-promotion evidence bootstrap
+  circularity and pre-approval metadata misrepresentation.
+- The **Candidate Approval Record Template** — a template only, with
+  `NOT_DECIDED` / `NOT_APPROVED` / `AUTHORIZED_PENDING_EXACT_BYTE_INTEGRATION` as
+  the only decision states. **No instance exists.**
+- **Evidence runner result format v2** — `sourceDeclaredMetadata` read from the
+  evidenced bytes instead of hard-coded governance literals, a caller-declared
+  `sourceAuthorityContext` enum, an **AE-1 Evidence Candidate** that is neither
+  reviewed nor admitted by the run, seven permanently false authority-effect
+  flags, and a fail-closed source-revision cross-check.
+
+The rework created **no** Candidate source, produced **no** Candidate evidence,
+admitted **no** evidence, granted **no** Candidate approval, and mutated **no**
+productive Semantic Status source byte or existing evidence artifact.
+`semantic-status-rev-0002-candidate` is **reserved and authorized for a future
+revision — not created**, and the authoritative source revision remains
+`semantic-status-rev-0001`. No ADR was added; the ADR range stays ADR-0001 …
+ADR-0003. Regression trigger **T-12 is not waived**: the future Candidate revision
+takes a full fresh evidence, review, and admission cycle.
+
 Still open and required before any promotion: a **fresh independent review of the
 remediation**, **Nova's Candidate-gate review**, and the **Human Maintainer's
 maturity approval**. The remediation and its clean-HEAD evidence have since been

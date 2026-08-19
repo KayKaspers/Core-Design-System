@@ -432,6 +432,23 @@ Human Maintainer admitted `AE1-CDS-WP016-SEMSTATUS-002` at AE-1** for the
 channel-independent Semantic Status source/contract scope only — see the
 [AE-1 Admission Record](../docs/governance/SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md).
 
+Preparing that closure surfaced a bootstrap problem, recorded by a read-only
+Candidate Finalization Bootstrap Assessment: a Candidate revision must declare
+Candidate/Approved metadata and a **new** source revision, but the new revision
+invalidates the AE-1 admitted for `semantic-status-rev-0001`. The Human Maintainer
+**authorized the CDS-WP-016 Candidate Finalization Governance Rework** on
+2026-08-18 — again **internal rework of CDS-WP-016, not a new work package** — and
+it is **executed**, adding **governance and tooling only**: **DEC-S-126** (a
+non-authoritative **Proposed Candidate Revision**; target metadata that grants
+nothing; evidence that never transfers across a source revision; exact-byte
+pre-commit evidence binding; **AE-1 admission before Candidate approval**; the
+**Promotion Commit** as the maturity transition point), **RISK-098**, the
+[Candidate Approval Record Template](../docs/operations/CANDIDATE_APPROVAL_RECORD_TEMPLATE.md),
+and evidence-runner result format **v2**. `semantic-status-rev-0002-candidate` is
+**reserved and not created**; the authoritative source revision stays
+`semantic-status-rev-0001`; **no Candidate evidence was produced, none admitted,
+and no Candidate approval granted**; no ADR was added.
+
 What remains open is the **Candidate authority closure**: the **Nova post-admission
 Candidate Maturity Re-Review** has **not yet been performed**, and the
 **Human-Maintainer Candidate approval is not granted**. Candidate **No**, maturity

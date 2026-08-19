@@ -192,12 +192,13 @@ Applying it to this model:
 Layer-3 source/contract family is the **first and only** CDS scope with admitted
 evidence — **AE-1**, `AE1-CDS-WP016-SEMSTATUS-002` (see the
 [Semantic Status AE-1 Admission Record](SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md)) —
-and it satisfies Candidate element 4 only. **Element 9, Human-Maintainer approval
-after Nova review, remains open**, so Candidate is **No**. All other CDS artifacts
-remain **AE-0**. The Stable gate is unreachable: no AE-2, AE-3, or AE-4 exists
-anywhere. A support baseline does exist — **A11Y-BL-001, declared and committed**
-(CDS-WP-010) — but a baseline is what evidence will be produced against, never
-evidence itself.
+and it satisfies **Candidate accessibility gate element 4 (AE-1)** only, and only
+for source revision `semantic-status-rev-0001`. **Element 9, Human-Maintainer
+approval after Nova review, remains open**, so Candidate is **No**. All other CDS
+artifacts remain **AE-0**. The Stable gate is unreachable: no AE-2, AE-3, or AE-4
+exists anywhere. A support baseline does exist — **A11Y-BL-001, declared and
+committed** (CDS-WP-010) — but a baseline is what evidence will be produced
+against, never evidence itself.
 
 This policy **promotes nothing** and **invents no retroactive evidence**.
 **`Not tested` may never be read as `Passed`.**
@@ -237,6 +238,47 @@ DEC-S-125 grants **no Candidate status** and **waives no accessibility
 requirement**. The
 [Accessibility Channel Profiles](ACCESSIBILITY_CHANNEL_PROFILES.md) document is
 unchanged and remains normative for the six channels.
+
+### Candidate source-revision transitions (CDS-WP-016, DEC-S-126)
+
+*(Additive clarification of an existing rule. The five evidence levels **AE-0 …
+AE-4** are unchanged in definition, scope, and sufficiency. The **Candidate
+accessibility gate** above is unchanged and is **not weakened**.)*
+
+When a Candidate source revision **differs** from the revision for which evidence
+is currently admitted, the following apply — all of them restatements of evidence
+rule 2 and DEC-S-052 for this specific transition:
+
+| # | Rule |
+| --- | --- |
+| 1 | **Prior AE-1 does not transfer.** Evidence admitted for the earlier revision evidences the earlier bytes and nothing else. |
+| 2 | **Fresh revision-bound AE-1 is required** for the new Candidate source revision. |
+| 3 | **A fresh independent review is required** — by a reviewer who is neither the executor of the change nor the executor of the evidence (evidence rule 10, DEC-S-045). |
+| 4 | **A fresh Human-Maintainer evidence admission is required.** |
+| 5 | **That evidence admission precedes Candidate approval.** They are separate Human-Maintainer decisions. |
+
+> **Evidence admission is not Candidate approval.**
+
+Concretely: the admitted `AE1-CDS-WP016-SEMSTATUS-002` is bound to
+`semantic-status-rev-0001`. It satisfies Candidate accessibility gate element 4
+for that revision only, and it would satisfy element 4 for **no** later Candidate
+source revision.
+
+**Exact-byte continuity may bind pre-commit evidence to the later Promotion
+Commit.** Under DEC-S-126, fresh AE-1 evidence produced against an explicitly
+declared Proposed Candidate Revision may remain valid across the Human-Maintainer
+Promotion Commit **only** where the reviewed, staged, and committed bytes are
+exact and every recorded identity — source revision, evidenced input paths, raw
+SHA-256, canonical digests where applicable — matches. Any byte drift in the
+evidenced scope invalidates the binding and requires fresh evidence, a fresh
+independent review, and a fresh admission. **There is no "small fix" exemption.**
+
+**DEC-S-126 is not a route around AE-1.** It changes **no** evidence level, waives
+**no** gate requirement, admits **no** evidence, and grants **no** Candidate. It
+defines only *when* evidence may be produced relative to integration, and *what*
+must be true for it to still evidence the same bytes afterwards. An artifact whose
+Candidate source revision has fresh AE-1 evidence that has **not** been
+independently reviewed and admitted has **not** satisfied element 4.
 
 ## Component evidence boundary
 
@@ -306,3 +348,4 @@ corresponding claims.
 - [Accessibility Limitations and Exception Policy](ACCESSIBILITY_LIMITATIONS_AND_EXCEPTION_POLICY.md)
 - [Adoption, Conformance and Claims Policy](ADOPTION_CONFORMANCE_AND_CLAIMS_POLICY.md)
 - [Artifact Maturity Lifecycle](ARTIFACT_MATURITY_LIFECYCLE.md)
+- [Candidate Approval Record Template](../operations/CANDIDATE_APPROVAL_RECORD_TEMPLATE.md)

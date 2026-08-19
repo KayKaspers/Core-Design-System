@@ -161,7 +161,7 @@ and reference the normative policies; they do not replace them (DEC-S-063):
 
 ## Active decisions
 
-- Range: DEC-S-001 … DEC-S-125 · Count: 125 · All Accepted · ADRs: 3 (ADR-0001,
+- Range: DEC-S-001 … DEC-S-126 · Count: 126 · All Accepted · ADRs: 3 (ADR-0001,
   ADR-0002, ADR-0003)
 - DEC-S-001…006: strategic foundation decisions (CDS-WP-001)
 - DEC-S-007…012: strategic scope decisions (CDS-WP-002)
@@ -187,6 +187,8 @@ and reference the normative policies; they do not replace them (DEC-S-063):
   DEC-S-001…114 unchanged
 - DEC-S-125: accessibility / maturity / channel boundary decision (CDS-WP-016) —
   DEC-S-001…124 unchanged
+- DEC-S-126: candidate finalization / maturity / evidence transition decision
+  (CDS-WP-016 Candidate Finalization Governance Rework) — DEC-S-001…125 unchanged
 - ADR-0001 (Machine-Readable Token Source Format), ADR-0002 (Deterministic JSON
   Serialization), and ADR-0003 (Offline Token Validator Implementation Stack)
   exist — 3 ADRs.
@@ -318,11 +320,12 @@ and reference the normative policies; they do not replace them (DEC-S-063):
 | DEC-S-123 | Source set, manifest, resolver, and outputs stay identity- and digest-aligned; disagreement fails closed. |
 | DEC-S-124 | No downstream artifact may present the Experimental status source as an approved Candidate before the gate succeeds. |
 | DEC-S-125 | Channel accessibility profiles gate channel artifacts, not channel-independent Layer-3 semantic sources; evidence transfers in neither direction; no waiver, no Candidate award. |
+| DEC-S-126 | A Proposed Candidate Revision is non-authoritative; target metadata grants nothing; evidence never transfers across a source revision; pre-commit evidence binds exact bytes; AE-1 admission precedes Candidate approval; the Promotion Commit is the maturity transition point. |
 
 ## Active risks
 
-- Range: RISK-001 … RISK-097 · Count: 97 · **90 Monitored; RISK-040, RISK-044,
-  RISK-066, RISK-067, RISK-068, RISK-069, RISK-071 Mitigating**
+- Range: RISK-001 … RISK-098 · Count: 98 · **90 Monitored; RISK-040, RISK-044,
+  RISK-066, RISK-067, RISK-068, RISK-069, RISK-071, RISK-098 Mitigating**
 - **Owner model finalized** (DEC-S-045): Accountable Risk Owner — Human
   Maintainer · Risk Controller — Nova · Mitigation Executor — named per
   mitigation · Evidence Reviewer — Nova or authorized reviewer (never the executor).
@@ -340,7 +343,11 @@ and reference the normative policies; they do not replace them (DEC-S-063):
   executor-produced harness evidence (independently unreviewed). **CDS-WP-014 added
   RISK-082…089** (semantic-status truthfulness risks, all Monitored). **CDS-WP-015
   added RISK-090…097** (status source/evidence risks, all Monitored; no existing
-  status changed). No risk accepted or closed.
+  status changed). The **CDS-WP-016 Candidate Finalization Governance Rework added
+  RISK-098** directly as `Mitigating` (Candidate-promotion evidence bootstrap
+  circularity and pre-approval metadata misrepresentation; mitigated by DEC-S-126,
+  the Candidate Approval Record Template, and the v2 evidence runner) and changed no
+  existing status. No risk accepted or closed.
 
 | ID | Summary |
 | --- | --- |
@@ -441,6 +448,7 @@ and reference the normative policies; they do not replace them (DEC-S-063):
 | RISK-095 | Status localization parity false assurance. |
 | RISK-096 | Candidate dossier completeness illusion. |
 | RISK-097 | Experimental status source consumed prematurely. |
+| RISK-098 | Candidate-promotion evidence bootstrap circularity and pre-approval metadata misrepresentation. |
 
 ## Approved strategic principles
 
@@ -809,7 +817,16 @@ limitations). The Candidate authority closure stays open — a **fresh independe
 review of the remediation and of its clean-HEAD evidence package (**PASS WITH NOTES**
 and **PASS**), the Human Maintainer **admitted `AE1-CDS-WP016-SEMSTATUS-002` at
 AE-1** on 2026-08-17 — for the channel-independent Semantic Status source/contract
-family **only**; every other artifact remains **AE-0**. What is still open is the
+family **only**; every other artifact remains **AE-0**. A further
+Human-Maintainer-authorized internal rework — the **CDS-WP-016 Candidate
+Finalization Governance Rework** (2026-08-18) — is **executed** and prepared the
+**governance and tooling** for a later Proposed-Candidate evidence flow only:
+**DEC-S-126**, **RISK-098**, the
+[Candidate Approval Record Template](../docs/operations/CANDIDATE_APPROVAL_RECORD_TEMPLATE.md),
+and evidence-runner result format **v2**. `semantic-status-rev-0002-candidate` is
+**reserved and not created**; the authoritative source revision stays
+`semantic-status-rev-0001`; **no Candidate evidence was produced, none admitted, and
+no Candidate approval granted**. What is still open is the
 **Nova post-admission Candidate Maturity Re-Review** and the separate
 **Human-Maintainer Candidate approval**, so Candidate remains **No**. No
 follow-up work package is authorized and CDS-WP-017 is not activated. See the

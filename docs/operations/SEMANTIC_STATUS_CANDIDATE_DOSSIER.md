@@ -364,3 +364,51 @@ does a separate Human-Maintainer Candidate decision follow.
 > CDS-WP-017 = **not activated**.
 >
 > An AE-1 admission is not a Candidate award. Evidence is not authority.
+
+## Candidate Finalization Governance Rework (additive, CDS-WP-016, 2026-08-18)
+
+*Additive current-state section. Every section above is preserved as written and
+remains the record of what was true when it was written.*
+
+A read-only Candidate Finalization Bootstrap Assessment found that the remaining
+gate — element 9 — could not be reached without resolving a circular dependency:
+a Candidate revision must declare `Candidate`/`Approved` metadata and a **new**
+source revision, but that new revision invalidates the AE-1 admitted for
+`semantic-status-rev-0001`. On Human-Maintainer authorization, **DEC-S-126** now
+defines the transition. **Nothing in this dossier is thereby satisfied, and no
+gate state above changes.**
+
+### What DEC-S-126 changes for this Candidate
+
+| Item | State |
+| --- | --- |
+| Proposed Candidate Revision | A named, **non-authoritative** state. Target metadata in its bytes grants nothing. |
+| Reserved Candidate source revision | `semantic-status-rev-0002-candidate` — **authorized and reserved, not created**. |
+| Current authoritative source revision | **`semantic-status-rev-0001`** — unchanged. |
+| Admitted `AE1-CDS-WP016-SEMSTATUS-002` | Bound to `semantic-status-rev-0001`. It **does not transfer** to the future Candidate revision. |
+| Evidence for the Candidate revision | A **fresh** execution, a **fresh** independent review, and a **fresh** Human-Maintainer AE-1 admission are required — regression trigger **T-12 is not waived**. |
+| Pre-commit evidence | Permitted only under **exact-byte binding**; any byte drift in the evidenced scope invalidates it, with no "small fix" exemption. |
+| Candidate approval instrument | An instance of the [Candidate Approval Record Template](CANDIDATE_APPROVAL_RECORD_TEMPLATE.md). **No instance exists.** |
+| Effectivity | The **Human-Maintainer exact-byte Promotion Commit**, not the approval and not a validator pass. |
+
+### Gate state after the rework
+
+**Unchanged: 8 / 9 currently supported or satisfied · 1 / 9 authority gate open.**
+
+Element 4 (AE-1) remains satisfied **for `semantic-status-rev-0001` only**.
+Element 9 remains **OPEN**. The rework produced no evidence, admitted no evidence,
+and granted no approval; it defined only the sequence by which the remaining gate
+may later be closed.
+
+### Candidate decision after the governance rework
+
+> **Still not Candidate.**
+>
+> Candidate = **No** · Maturity = **Experimental** · Approval = **Unapproved** ·
+> Source revision = **`semantic-status-rev-0001`** · Admitted accessibility
+> evidence level = **AE-1, source scope only** · Claims = **none** · Pilot =
+> **inactive** · Publication = **Private Development** · CDS-WP-017 = **not
+> activated**.
+>
+> A governance transition model is not a transition. Preparing the route to a
+> gate is not passing it.

@@ -101,6 +101,26 @@ library, or a design project scoped exclusively to CoreOps.
   [AE-1 Admission Record](docs/governance/SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md)
   and the [Review Provenance Record](docs/reviews/WP016_ACCESSIBILITY_REMEDIATION_REVIEW_PROVENANCE.md).
   **An AE-1 admission is not a Candidate award.**
+  A further Human-Maintainer-authorized internal rework — the **CDS-WP-016 Candidate
+  Finalization Governance Rework** (2026-08-18, again **not** a new work package) — is
+  **executed** and added **governance and tooling only**: **DEC-S-126** (a named,
+  non-authoritative **Proposed Candidate Revision**; target metadata that grants
+  nothing; evidence that **never transfers across a source revision**; exact-byte
+  pre-commit evidence binding with byte-drift invalidation; **AE-1 admission before
+  Candidate approval**; the **Promotion Commit** as the actual repository maturity
+  transition point; mandatory post-commit verification), **RISK-098**, the
+  [Candidate Approval Record Template](docs/operations/CANDIDATE_APPROVAL_RECORD_TEMPLATE.md)
+  (a template — **no instance exists**), and evidence-runner result format **v2**
+  (source-declared metadata instead of hard-coded governance literals, a
+  caller-declared authority-context enum, an unreviewed and unadmitted **AE-1
+  Evidence Candidate**, seven permanently false authority-effect flags, and a
+  fail-closed source-revision cross-check). **`semantic-status-rev-0002-candidate`
+  is reserved and authorized for a future Candidate revision and has NOT been
+  created**; the authoritative source revision remains `semantic-status-rev-0001`.
+  The rework produced **no Candidate evidence**, admitted **no evidence**, granted
+  **no Candidate approval**, mutated **no productive Semantic Status source byte**,
+  and changed **no existing evidence artifact**; no ADR was added; regression
+  trigger **T-12 is not waived**.
   **Candidate remains No**, maturity **Experimental**,
   approval **Unapproved**, claims **None**, and **every other CDS artifact remains
   AE-0**; there is no AE-2, AE-3, or AE-4, and no channel, consumer, or product
@@ -273,6 +293,10 @@ Before beginning a work package, inspect at minimum:
   — normative for the fact of Foundation closure, the authority state, and the
   phase boundary (no Candidate/Stable/claim/publication effect)
 - [docs/operations/FOUNDATION_OPERATING_PLAYBOOK.md](docs/operations/FOUNDATION_OPERATING_PLAYBOOK.md)
+- [docs/operations/CANDIDATE_APPROVAL_RECORD_TEMPLATE.md](docs/operations/CANDIDATE_APPROVAL_RECORD_TEMPLATE.md)
+  — the **template** for a future Candidate approval instrument (DEC-S-126); it is
+  not an approval, and Claude instantiates it only under an explicit future
+  authorization
   — **non-normative** operative entry aid for running a single change end to end;
   it references the normative policies and never overrides them
 - [docs/governance/ACCESSIBILITY_SUPPORT_BASELINE.md](docs/governance/ACCESSIBILITY_SUPPORT_BASELINE.md)
@@ -493,10 +517,13 @@ and
   Model) and is bound to a revision,
   scope, channel, and a **declared support baseline**. **Every CDS artifact is AE-0
   except the channel-independent Semantic Status source/contract family, which holds
-  admitted AE-1** (`AE1-CDS-WP016-SEMSTATUS-002`, source scope only). Claude never
+  admitted AE-1** (`AE1-CDS-WP016-SEMSTATUS-002`, source scope only, bound to source
+  revision `semantic-status-rev-0001`). Claude never
   records evidence that does not exist, never invents a test, a baseline, or user
-  validation, and never extends that admission to any other artifact, channel, or
-  consumer.
+  validation, and never extends that admission to any other artifact, channel,
+  consumer, **or source revision** — evidence does not transfer across a source
+  revision, and a later Candidate revision needs fresh evidence, a fresh
+  independent review, and a fresh admission (DEC-S-126).
 - **An automated check is never sufficient** (DEC-S-053) and is never equated with
   accessibility evidence or a pass — the same rule as "a clean diff is not release
   approval".

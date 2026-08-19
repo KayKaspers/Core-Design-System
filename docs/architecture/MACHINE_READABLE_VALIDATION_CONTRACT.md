@@ -163,6 +163,35 @@ publication. Real Candidate authority is established by the Candidate Approval
 Record, the Nova finalization review, and the Human-Maintainer commit (DEC-S-115,
 DEC-S-122, DEC-S-124). The diagnostic code is unchanged; no new code is introduced.
 
+### Proposed Candidate validation (CDS-WP-016, DEC-S-126)
+
+*(Additive clarification. **No validator semantics change.** `CDS-V4-STATUS-IDENTITY`
+and every other machine rule, diagnostic code, category, layer, and severity are
+unchanged, and no code is added.)*
+
+A **Proposed Candidate Revision** — bytes prepared for a future Candidate but not
+integrated — **may be validated**. Validating proposed bytes is validation of
+those bytes and nothing more.
+
+| Validating a Proposed Candidate Revision proves | It does not prove |
+| --- | --- |
+| The proposed bytes are internally coherent under V1–V4, including the Candidate/Approved metadata state machine above. | That the governance gate was authorized. |
+| The declared Candidate source revision has the required form. | That the artifact is Candidate. |
+| The digests recorded for those bytes are reproducible. | Human-Maintainer approval, evidence admission, promotion, Stable, conformance, or publication. |
+
+> **Metadata coherence is not maturity authority.**
+
+A coherent `Candidate`/`Approved` pass on proposed bytes is exactly what it says:
+the metadata is consistent. Real Candidate authority is established by an instance
+of the [Candidate Approval Record Template](../operations/CANDIDATE_APPROVAL_RECORD_TEMPLATE.md),
+the Nova finalization review, the Human-Maintainer Candidate approval, and the
+Human-Maintainer exact-byte Promotion Commit (DEC-S-126) — never by the validator.
+
+Where a validation run is quoted as part of a pre-commit evidence package, it must
+carry the proposed source revision, the authoritative base repository revision, the
+exact input paths, and the recorded digests, so that the run can be re-executed
+against identical bytes (DEC-S-126 §5).
+
 ## Change control
 
 This contract is Elevated; changes require compatibility, migration, evidence, Nova
@@ -176,3 +205,4 @@ after any profile, DTCG, schema, or governance change (RISK-071).
 - [Machine-Readable Source Model](MACHINE_READABLE_SOURCE_MODEL.md)
 - [Deterministic Serialization and Digest Model](DETERMINISTIC_SERIALIZATION_AND_DIGEST_MODEL.md)
 - [ADR-0002 — Deterministic JSON Serialization](../decisions/ADR-0002-DETERMINISTIC_JSON_SERIALIZATION.md)
+- [Candidate Approval Record Template](../operations/CANDIDATE_APPROVAL_RECORD_TEMPLATE.md)

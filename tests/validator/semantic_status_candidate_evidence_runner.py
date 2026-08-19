@@ -14,6 +14,32 @@ accessibility conformance, **no** WCAG statement, **no** assistive-technology
 behaviour, **no** comprehension, **no** Candidate status, and **no** admitted
 AE-1. Automated evidence is input to a review, never the review.
 
+Result format v2 (CDS-WP-016 Candidate Finalization Governance Rework, DEC-S-126)
+--------------------------------------------------------------------------------
+The runner is **not** the authority on the repository's governance state, and no
+longer hard-codes one. It reports instead:
+
+``sourceDeclaredMetadata``
+    the revision/maturity/approval values **declared inside the evidenced source
+    bytes**. Where those bytes are a Proposed Candidate Revision, these are
+    *target* values for a future revision, never current repository authority.
+``executionContext.sourceAuthorityContext``
+    a caller-declared, bounded enum -- ``authoritative-current`` or
+    ``proposed-candidate``. It is never derived from ambient Git state.
+``evidenceProduced``
+    what this run actually produced: an **AE-1 Evidence Candidate**, not
+    independently reviewed by this run and not admitted by this run.
+``authorityEffects``
+    seven booleans, all permanently ``false``. No run outcome sets any of them
+    true, and no caller may.
+
+The ``--source-revision`` argument is cross-checked against the revision the
+token source itself declares; a mismatch **fails closed** (``Blocked``, exit 2).
+The CLI argument never overrides the source.
+
+Historical result-format ``/1`` evidence artifacts remain immutable and are never
+rewritten by this module.
+
 Boundaries
 ----------
 Offline; no network. Deterministic for identical inputs: no ambient timestamp,
@@ -33,6 +59,7 @@ Usage (from the repository root, exactly as the validator CLI is invoked)::
         --token-source tokens/semantic/status/semantic-status.tokens.json \
         --terminology docs/foundations/SEMANTIC_STATUS_TERMINOLOGY_DE_EN.md \
         --cds-revision <sha> --source-revision <rev> \
+        --source-authority-context authoritative-current \
         --worktree-state "modified worktree" --output <out.json>
 """
 
@@ -50,6 +77,7 @@ from tools.cds_validator.canonicalization import (
     DIGEST_ALGORITHM,
     content_digest,
 )
+from tools.cds_validator.models import CDS_EXTENSION_ROOT
 from tools.cds_validator.semantic_status import (
     AUTHORIZED_AXES,
     EXPECTED_TOKEN_COUNT,
@@ -58,7 +86,18 @@ from tools.cds_validator.semantic_status import (
 #: Identity of *this evidence result format only*. It is not a CDS schema, is
 #: not registered under ``schemas/``, and carries no profile authority.
 RESULT_SCHEMA_VERSION = (
-    "cds-wp016-candidate-accessibility-evidence-result/1"
+    "cds-wp016-candidate-accessibility-evidence-result/2"
+)
+
+#: The only two authority contexts a caller may declare for a run (DEC-S-126).
+#: ``authoritative-current`` -- the evidenced bytes are the integrated, current
+#: source. ``proposed-candidate`` -- the evidenced bytes are an explicitly
+#: identified Proposed Candidate Revision that is not integrated and carries no
+#: authority. Free-text authority states are rejected, and the context is never
+#: inferred: this module performs no repository discovery.
+SOURCE_AUTHORITY_CONTEXTS: tuple[str, ...] = (
+    "authoritative-current",
+    "proposed-candidate",
 )
 
 AXIS_ORDER: tuple[str, ...] = tuple(AUTHORIZED_AXES)
@@ -172,6 +211,33 @@ def classify(fail_closed: list[str], review_required: list[str]) -> str:
     return "representable"
 
 
+def read_source_declared_metadata(token_source: Path) -> dict:
+    """Governance metadata **as declared inside the evidenced source bytes**.
+
+    These values are read from the source under evaluation; they are never a
+    statement about what the repository currently is. This module performs no
+    repository discovery and holds no governance state of its own. Where the
+    evidenced bytes are a Proposed Candidate Revision, ``maturityState`` and
+    ``approvalState`` found here are *target* metadata for a future revision and
+    grant nothing (DEC-S-126).
+    """
+    content = json_loader.load_path(token_source)
+    extensions = content.get("$extensions") if isinstance(content, dict) else None
+    payload = (extensions or {}).get(CDS_EXTENSION_ROOT)
+    payload = payload if isinstance(payload, dict) else {}
+    maturity = payload.get("maturityState")
+    return {
+        "sourceSetId": payload.get("sourceSetId"),
+        "sourceRevision": payload.get("sourceRevision"),
+        "maturityState": maturity,
+        "approvalState": payload.get("approvalState"),
+        "declaresCandidateTargetMetadata": maturity == "Candidate",
+        "boundary": ("Declarations read from the evidenced source bytes. Not a "
+                     "statement of current repository maturity, approval, or "
+                     "Candidate status, and not authority of any kind."),
+    }
+
+
 def check_source_descriptions(token_source: Path) -> dict:
     """Text-first source rule: every authorized token carries a non-empty
     textual ``$description``. Existence only — never comprehension."""
@@ -261,9 +327,36 @@ def check_de_en_structure(terminology: Path) -> dict:
 
 def run(cases_path: Path, token_source: Path, terminology: Path,
         cds_revision: str, source_revision: str,
+        source_authority_context: str,
         worktree_state: str = "unknown") -> dict:
+    """Evaluate the named inputs and return one v2 evidence-result payload.
+
+    ``source_authority_context`` is **explicit and required**: the caller states
+    whether the evidenced bytes are the integrated current source
+    (``authoritative-current``) or an unintegrated Proposed Candidate Revision
+    (``proposed-candidate``). It is never inferred from ambient Git state, and no
+    other value is accepted.
+
+    ``source_revision`` is cross-checked against the revision the token source
+    itself declares. The argument never overrides the source: a mismatch is a
+    controlled failure, not a repair.
+    """
+    if source_authority_context not in SOURCE_AUTHORITY_CONTEXTS:
+        raise ValueError(
+            f"source_authority_context must be one of "
+            f"{list(SOURCE_AUTHORITY_CONTEXTS)}, got {source_authority_context!r}")
+
     execution_errors: list[str] = []
     blocked: list[str] = []
+
+    source_declared = read_source_declared_metadata(token_source)
+    declared_revision = source_declared["sourceRevision"]
+    revision_matches = declared_revision == source_revision
+    if not revision_matches:
+        execution_errors.append(
+            f"source revision mismatch: --source-revision {source_revision!r} "
+            f"does not match the revision declared by the token source "
+            f"({declared_revision!r}); the argument never overrides the source")
 
     manifest = json_loader.load_path(cases_path)
     cases = manifest.get("cases") or []
@@ -372,7 +465,7 @@ def run(cases_path: Path, token_source: Path, terminology: Path,
     })
 
     all_satisfied = (
-        not failures and not blocked and not execution_errors
+        not failures and not blocked and not execution_errors and revision_matches
         and not duplicate_requirements and not unauthorized_requirements
         and len(covered) == len(authorized)
         and review_coverage == list(REVIEW_REQUIRED_IDS)
@@ -387,6 +480,25 @@ def run(cases_path: Path, token_source: Path, terminology: Path,
         result_status = "Pass with limitations"
     else:
         result_status = "Pass"
+
+    if source_authority_context == "proposed-candidate":
+        context_statement = (
+            "The evidenced bytes are an explicitly declared Proposed Candidate "
+            "Revision. They are NOT integrated and are NOT authoritative. Any "
+            "'Candidate'/'Approved' value in sourceDeclaredMetadata is TARGET "
+            "METADATA for a future revision and grants nothing. This run does "
+            "not change repository maturity, does not grant Human-Maintainer "
+            "Candidate approval, and does not grant evidence admission. Real "
+            "Candidate authority arises only from the Candidate Approval Record, "
+            "the Nova finalization review, the Human-Maintainer Candidate "
+            "approval, and the Human-Maintainer exact-byte Promotion Commit "
+            "(DEC-S-126).")
+    else:
+        context_statement = (
+            "The caller declares the evidenced bytes to be the integrated "
+            "current source. This module performs no repository discovery and "
+            "does not verify that claim; it neither confirms nor establishes "
+            "any maturity, approval, or Candidate state.")
 
     return {
         "schemaVersion": RESULT_SCHEMA_VERSION,
@@ -404,6 +516,25 @@ def run(cases_path: Path, token_source: Path, terminology: Path,
         # A 'modified worktree' execution binds to uncommitted content and must
         # never be presented as the committed revision's result.
         "worktreeState": worktree_state,
+        # Declared *inside the evidenced bytes* -- never a repository statement.
+        "sourceDeclaredMetadata": source_declared,
+        "sourceRevisionCrossCheck": {
+            "declaredBySource": declared_revision,
+            "declaredByArgument": source_revision,
+            "match": revision_matches,
+            "boundary": ("The source is authoritative over the argument. A "
+                         "mismatch fails closed and is never repaired by "
+                         "trusting the CLI value."),
+        },
+        "executionContext": {
+            "sourceAuthorityContext": source_authority_context,
+            "allowedSourceAuthorityContexts": list(SOURCE_AUTHORITY_CONTEXTS),
+            "cdsRevision": cds_revision,
+            "sourceRevision": source_revision,
+            "worktreeState": worktree_state,
+            "statement": context_statement,
+            "derivedFromAmbientGitState": False,
+        },
         "inputs": {
             "caseManifest": cases_path.as_posix(),
             "tokenSource": token_source.as_posix(),
@@ -441,13 +572,32 @@ def run(cases_path: Path, token_source: Path, terminology: Path,
         "resultStatus": result_status,
         "coverageStatesWithLimitation": limitation_states,
         "scoreProduced": False,
+        # What this run produced -- stated for the run itself only. This module
+        # is not the authority on the project's global evidence state and makes
+        # no statement about it.
+        "evidenceProduced": {
+            "evidenceType": "Structural and Automated Evidence",
+            "evidenceLevelRepresented": "AE-1",
+            "evidenceClass": "AE-1 Evidence Candidate",
+            "independentReviewState": "not independently reviewed by this run",
+            "admissionState": "not admitted by this run",
+            "boundary": ("An AE-1 Evidence Candidate is input to an independent "
+                         "review, never the review, and never an admission. "
+                         "Admission is a Human-Maintainer decision recorded "
+                         "outside this module."),
+        },
+        # Permanently false. No input, argument, or outcome sets any of these
+        # true; the runner grants no authority of any kind (DEC-S-126).
+        "authorityEffects": {
+            "maturityGrantedByRun": False,
+            "approvalGrantedByRun": False,
+            "candidateGrantedByRun": False,
+            "evidenceAdmissionGrantedByRun": False,
+            "claimGrantedByRun": False,
+            "conformanceGrantedByRun": False,
+            "humanApprovalGrantedByRun": False,
+        },
         "boundaries": {
-            "maturityState": "Experimental",
-            "approvalState": "Unapproved",
-            "candidateStatus": "Not Candidate",
-            "admittedAccessibilityEvidenceLevel": "AE-0",
-            "evidenceLevelProduced": (
-                "Provisional AE-1 candidate — pending fresh independent review"),
             "claims": "none",
             "conformanceStatement": "none",
             "humanApproval": "none",
@@ -455,7 +605,10 @@ def run(cases_path: Path, token_source: Path, terminology: Path,
                 "A passing run is machine evidence for the named inputs at the "
                 "named revision. It is not accessibility, not a WCAG statement, "
                 "not admitted AE-1, not a Candidate award, and not human "
-                "approval. No numeric or percentage accessibility score exists."),
+                "approval. No numeric or percentage accessibility score exists. "
+                "Current repository maturity, approval, Candidate status, and "
+                "admitted evidence level are governance state held outside this "
+                "module and are deliberately not asserted here."),
         },
     }
 
@@ -469,14 +622,22 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--token-source", required=True, type=Path)
     parser.add_argument("--terminology", required=True, type=Path)
     parser.add_argument("--cds-revision", required=True)
-    parser.add_argument("--source-revision", required=True)
+    parser.add_argument("--source-revision", required=True,
+                        help=("must match the revision declared by the token "
+                              "source; a mismatch fails closed"))
+    parser.add_argument("--source-authority-context", required=True,
+                        choices=SOURCE_AUTHORITY_CONTEXTS,
+                        help=("whether the evidenced bytes are the integrated "
+                              "current source or an unintegrated Proposed "
+                              "Candidate Revision; never inferred"))
     parser.add_argument("--worktree-state", required=True,
                         choices=("clean", "modified worktree", "unknown"))
     parser.add_argument("--output", required=True, type=Path)
     args = parser.parse_args(argv)
 
     payload = run(args.cases, args.token_source, args.terminology,
-                  args.cds_revision, args.source_revision, args.worktree_state)
+                  args.cds_revision, args.source_revision,
+                  args.source_authority_context, args.worktree_state)
     text = json.dumps(payload, ensure_ascii=False, indent=2) + "\n"
     with open(args.output, "w", encoding="utf-8", newline="\n") as handle:
         handle.write(text)
