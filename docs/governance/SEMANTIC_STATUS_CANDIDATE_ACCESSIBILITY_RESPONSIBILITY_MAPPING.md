@@ -46,14 +46,22 @@ has produced it — see the "Evidence state today" column for what actually
 exists.)*
 
 **`Evidence state today` reads against the admitted package.** Where a row below
-says **admitted AE-1**, it means `AE1-CDS-WP016-SEMSTATUS-002` — Evidence 002,
-independently reviewed **PASS**, admitted at **AE-1** by the Human Maintainer on
-2026-08-17 for the **channel-independent Semantic Status Layer-3 source/contract
-family only**, source revision `semantic-status-rev-0001` (see the
-[Semantic Status AE-1 Admission Record](SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md)).
-That admission covers **no** channel, consumer, or product scope, establishes
-**no** AE-2, AE-3, or AE-4, and awards **no** Candidate status — **Candidate
-remains `No`**. It changes no responsibility assignment in this document.
+says **admitted AE-1**, it means **`AE1-CDS-WP016-SEMSTATUS-004`** — Evidence 004,
+independently reviewed **PASS WITH NOTES**, admitted at **AE-1** by the Human
+Maintainer on 2026-08-19 for the **channel-independent Semantic Status Layer-3
+source/contract family only**, bound to source revision
+**`semantic-status-rev-0002-candidate`** (see the
+[AE1-004 Admission Record](SEMANTIC_STATUS_AE1_004_ADMISSION_RECORD.md)).
+`AE1-CDS-WP016-SEMSTATUS-002` is the **historical `semantic-status-rev-0001`
+admission** ([record](SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md)) and does not cover
+the current revision; **evidence never transfers across a source revision**.
+
+That admission covers **no** channel, consumer, or product scope, establishes **no**
+AE-2, AE-3, or AE-4, and awarded **no** Candidate status — the family is
+**`Candidate`** today because of a separate Human-Maintainer approval and exact-byte
+Promotion Commit, and **no artifact is Stable**. It changes **no** responsibility
+assignment in this document: all **13 subjects** and their ownership classifications
+— **5 CDS · 8 Shared · 0 Consumer-only** — are unchanged.
 
 ### 1 — The five axes
 

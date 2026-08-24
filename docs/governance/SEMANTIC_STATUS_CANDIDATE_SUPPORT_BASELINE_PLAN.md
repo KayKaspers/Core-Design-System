@@ -22,10 +22,15 @@
 Declaring a baseline records *what future evidence will be produced against*. It
 establishes nothing about any artifact. Every CDS artifact remains **AE-0**, with
 exactly one bounded exception — the channel-independent Semantic Status Layer-3
-source/contract family holds admitted **AE-1**
-(`AE1-CDS-WP016-SEMSTATUS-002`, source scope only), which was **not** produced in
-any baseline environment. **No baseline environment has been exercised**, and no
-environment is supported.
+source/contract family holds admitted **AE-1**, currently
+**`AE1-CDS-WP016-SEMSTATUS-004`** for source revision
+`semantic-status-rev-0002-candidate`, source scope only
+(`AE1-CDS-WP016-SEMSTATUS-002` is the historical `semantic-status-rev-0001`
+admission). That evidence was **not** produced in any baseline environment. **No
+baseline environment has been exercised**, and **no environment is supported**.
+
+**A11Y-BL-001 is a test contract, not evidence**, and that is unchanged by the
+Candidate promotion of the family above. **No support claim exists.**
 
 ## What this plan does
 
@@ -167,15 +172,19 @@ the last three are specific to this Candidate.
 
 - It **does not claim** that CDS works in Windows 11, Edge, Firefox, or NVDA, or
   in any combination of them. It claims nothing.
-- It **does not promote** anything. Candidate remains **No**, maturity remains
-  **Experimental**, approval remains **Unapproved**.
-- It **admits nothing.** The AE-1 admission it references was made elsewhere:
-  Evidence 002 was independently reviewed **PASS**, integrated, and admitted at
-  **AE-1** by the Human Maintainer for the channel-independent source/contract
-  scope only (`AE1-CDS-WP016-SEMSTATUS-002`). This plan neither produced nor
-  granted it. The admitted accessibility evidence level of every **other** CDS
-  artifact remains **AE-0**, and the admission establishes **no AE-2, no AE-3, and
-  no support claim** for any environment named below.
+- It **does not promote** anything. This plan never granted, and does not grant, any
+  maturity. The family's **`Candidate`** status came from a separate
+  Human-Maintainer approval and exact-byte Promotion Commit; **no artifact is
+  Stable**.
+- It **admits nothing.** The AE-1 admission it references was made elsewhere: the
+  current package `AE1-CDS-WP016-SEMSTATUS-004` was independently reviewed **PASS
+  WITH NOTES** and admitted at **AE-1** by the Human Maintainer on 2026-08-19 for
+  the channel-independent source/contract scope only (Evidence 002,
+  `AE1-CDS-WP016-SEMSTATUS-002`, is the historical `semantic-status-rev-0001`
+  admission). This plan neither produced nor granted either. The admitted
+  accessibility evidence level of every **other** CDS artifact remains **AE-0**, and
+  the admissions establish **no AE-2, no AE-3, and no support claim** for any
+  environment named below.
 - It **does not select** a test tool, install anything, or run any test.
 
 ## Related documents

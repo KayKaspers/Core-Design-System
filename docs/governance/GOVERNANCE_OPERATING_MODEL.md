@@ -251,11 +251,23 @@ Several gates reference accessibility evidence. **The accessibility target and
 its evidence method exist** — **WCAG 2.2 Level AA** (DEC-S-049, DEC-S-060) and
 the AE-0 … AE-4 evidence model, committed with CDS-WP-007 (CR-024).
 
-**One narrowly scoped evidence package has since been admitted:**
-`AE1-CDS-WP016-SEMSTATUS-002` at **AE-1**, for the **channel-independent Semantic
-Status Layer-3 source/contract family only** — see the
-[Semantic Status AE-1 Admission Record](SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md).
+**Narrowly scoped evidence has since been admitted, for one scope only:** the
+**channel-independent Semantic Status Layer-3 source/contract family**. Each
+admission is bound to one source revision, and **evidence never transfers across a
+source revision**. For the current revision
+`semantic-status-rev-0002-candidate` the admitted package is
+**`AE1-CDS-WP016-SEMSTATUS-004`** at **AE-1** — see the
+[AE1-004 Admission Record](SEMANTIC_STATUS_AE1_004_ADMISSION_RECORD.md).
+`AE1-CDS-WP016-SEMSTATUS-002` is a historical admission for
+`semantic-status-rev-0001` only
+([record](SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md)).
 **All other artifact scopes remain AE-0** unless separately admitted.
+
+That same family reached **Candidate** on 2026-08-19 — the only Candidate artifact
+in CDS — through the Candidate gate above: Human-Maintainer approval after Nova
+review, made effective by an exact-byte Promotion Commit. **No artifact is
+Stable.** The gate table and the approver column are unchanged, and the Human
+Maintainer remains the exclusive final authority for every gate listed there.
 
 **This dependency remains open.** A source-level AE-1 creates no **AE-2**, **AE-3**,
 **AE-4**, channel evidence, consumer evidence, accessibility claim, or conformance

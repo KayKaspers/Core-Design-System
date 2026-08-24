@@ -38,17 +38,38 @@ five independent axes, 25 values with explicit `unknown`, ten invariants,
 combination/communication/token contracts, gated first Candidate plan); and the
 **Semantic Status Source Set is implemented** (CDS-WP-015: `semantic/status`, 25
 non-visual tokens with manifest/resolver, semantic-status V4 validation, 24/24
-harness matches, 25/25 DE/EN terminology, Draft Candidate Dossier) —
-**Experimental, committed, executor-produced, no Candidate status, no visual
-value**. That WP-013 and WP-015 evidence has since been **independently reviewed by
-CDS-WP-016**: **Independent Review PASS**, **Candidate Recommendation GO** — and
-**GO is not a Candidate award**, so Semantic Status remains **Experimental**,
-**Candidate No**, with admitted evidence **AE-1 for the Semantic Status
-source/contract family only** (every other artifact **AE-0**) and the **Nova and
-Human-Maintainer Candidate authority gates still open**. Concrete visual design values remain
-unauthorized (DEC-S-003). The current authorized work package is **CDS-WP-016 —
-Semantic Status Foundation Independent Evidence Review and Candidate Gate**; its
-review work is executed and its Candidate authority closure is open.
+harness matches, 25/25 DE/EN terminology, Candidate Dossier) — **Experimental at
+implementation, committed, executor-produced, no Candidate status then, and still
+no visual value**. That WP-013 and WP-015 evidence was then **independently reviewed
+by CDS-WP-016**: **Independent Review PASS**, **Candidate Recommendation GO** — and
+**GO is not a Candidate award**.
+
+**The Candidate authority gates have since closed.** Fresh revision-bound evidence
+**`AE1-CDS-WP016-SEMSTATUS-004`** was produced, independently reviewed (**PASS WITH
+NOTES**), and **admitted at AE-1** by the Human Maintainer; the **Nova Candidate
+Finalization Review returned GO WITH NOTES**; the Human Maintainer **approved
+Candidate**; and the exact-byte **Promotion Commit
+`22fa0710e2b75df22e7b420c2f9d86bbe67b2777`** made it effective on 2026-08-19 —
+gate **PASS**, committed blob identity **15/15 exact**, regression
+**47/47 · 64/64 · 184/184 · 24/24/0/0**.
+
+**Current Semantic Status state:** source revision
+**`semantic-status-rev-0002-candidate`** · maturity **`Candidate`** · approval
+**`Approved`** · **Candidate YES** · admitted evidence in force
+**`AE1-CDS-WP016-SEMSTATUS-004`** at **AE-1**, channel-independent source/contract
+scope only. `AE1-CDS-WP016-SEMSTATUS-002` is a **historical
+`semantic-status-rev-0001` admission only**; `AE1-CDS-WP016-SEMSTATUS-003` is **not
+admitted**. **Stable No** · claims **none** · conformance **none** · every other
+artifact **AE-0** · no AE-2/AE-3/AE-4 · no channel or consumer evidence · pilot
+**inactive** · publication **`Private Development`**.
+
+Concrete visual design values remain unauthorized (DEC-S-003). The authorized work
+package is **CDS-WP-016 — Semantic Status Foundation Independent Evidence Review and
+Candidate Gate**, now in **post-promotion current-state reconciliation**: proposed
+closure bytes are prepared, and **closure becomes authoritative only after a Fresh
+Independent Governance Reconciliation Review, Nova adjudication, and a
+Human-Maintainer exact-byte integration commit**. **CDS-WP-017 is `INACTIVE`, `NOT
+AUTHORIZED`, and `NOT DEFINED`.**
 
 ## Completed work packages
 
@@ -324,8 +345,8 @@ and reference the normative policies; they do not replace them (DEC-S-063):
 
 ## Active risks
 
-- Range: RISK-001 … RISK-098 · Count: 98 · **90 Monitored; RISK-040, RISK-044,
-  RISK-066, RISK-067, RISK-068, RISK-069, RISK-071, RISK-098 Mitigating**
+- Range: RISK-001 … RISK-098 · Count: 98 · **89 Monitored; RISK-031, RISK-040,
+  RISK-044, RISK-066, RISK-067, RISK-068, RISK-069, RISK-071, RISK-098 Mitigating**
 - **Owner model finalized** (DEC-S-045): Accountable Risk Owner — Human
   Maintainer · Risk Controller — Nova · Mitigation Executor — named per
   mitigation · Evidence Reviewer — Nova or authorized reviewer (never the executor).
@@ -447,7 +468,7 @@ and reference the normative policies; they do not replace them (DEC-S-063):
 | RISK-094 | Semantic fixture overfitting. |
 | RISK-095 | Status localization parity false assurance. |
 | RISK-096 | Candidate dossier completeness illusion. |
-| RISK-097 | Experimental status source consumed prematurely. |
+| RISK-097 | Semantic Status source consumed prematurely — still live after the Candidate promotion: Candidate is not Stable, release, publication, adoption, consumer authority, or conformance. |
 | RISK-098 | Candidate-promotion evidence bootstrap circularity and pre-approval metadata misrepresentation. |
 
 ## Approved strategic principles
@@ -799,11 +820,11 @@ are implemented and executed (CDS-WP-013, Experimental, ADR-0003, 15/15
 expected/actual matches, executor-produced), and the
 Semantic Status Foundation Contract is defined (CDS-WP-014) and its machine-readable
 source set is implemented (CDS-WP-015, `semantic/status`, Experimental, committed,
-executor-produced 24/24 evidence, Not Candidate). That WP-013 and WP-015 evidence
-has since been **independently reviewed by CDS-WP-016** — **Independent Review
-PASS**, **Candidate Recommendation GO** — and **GO is not a Candidate award**:
-Candidate remains **No**, maturity **Experimental**, approval **Unapproved**. The
-current authorized work package is **CDS-WP-016 — Semantic
+executor-produced 24/24 evidence, not Candidate at that milestone). That WP-013 and
+WP-015 evidence was then **independently reviewed by CDS-WP-016** — **Independent
+Review PASS**, **Candidate Recommendation GO** — and **GO is not a Candidate
+award**: at that point Candidate was still **No**, maturity **Experimental**,
+approval **Unapproved**. The authorized work package is **CDS-WP-016 — Semantic
 Status Foundation Independent Evidence Review and Candidate Gate**; its review work
 is executed. The **Nova Candidate Maturity Review** then returned **NO-GO**
 (Candidate Accessibility Gate unmet), a read-only gap assessment **confirmed** it
@@ -813,21 +834,36 @@ package** — is **executed** (DEC-S-125; Candidate-scope WCAG and responsibilit
 mappings; **25/25** per-value evidence matrix; **AE-1** package with
 6/6 review-required and 8/8 fail-closed coverage; AE-2 plan; support-baseline plan
 on A11Y-BL-001 freshness **`Current`**; 15-trigger regression plan; 16
-limitations). The Candidate authority closure stays open — a **fresh independent
-review of the remediation and of its clean-HEAD evidence package (**PASS WITH NOTES**
-and **PASS**), the Human Maintainer **admitted `AE1-CDS-WP016-SEMSTATUS-002` at
-AE-1** on 2026-08-17 — for the channel-independent Semantic Status source/contract
-family **only**; every other artifact remains **AE-0**. A further
+limitations). After a **fresh independent review of the remediation and of its
+clean-HEAD evidence package** (**PASS WITH NOTES** and **PASS**), the Human
+Maintainer **admitted `AE1-CDS-WP016-SEMSTATUS-002` at AE-1** on 2026-08-17 — for
+the channel-independent Semantic Status source/contract family **only**, bound to
+`semantic-status-rev-0001`; every other artifact remains **AE-0**. A further
 Human-Maintainer-authorized internal rework — the **CDS-WP-016 Candidate
 Finalization Governance Rework** (2026-08-18) — is **executed** and prepared the
 **governance and tooling** for a later Proposed-Candidate evidence flow only:
 **DEC-S-126**, **RISK-098**, the
 [Candidate Approval Record Template](../docs/operations/CANDIDATE_APPROVAL_RECORD_TEMPLATE.md),
-and evidence-runner result format **v2**. `semantic-status-rev-0002-candidate` is
-**reserved and not created**; the authoritative source revision stays
-`semantic-status-rev-0001`; **no Candidate evidence was produced, none admitted, and
-no Candidate approval granted**. What is still open is the
-**Nova post-admission Candidate Maturity Re-Review** and the separate
-**Human-Maintainer Candidate approval**, so Candidate remains **No**. No
-follow-up work package is authorized and CDS-WP-017 is not activated. See the
-[Foundation Closure Record](../docs/governance/FOUNDATION_CLOSURE_RECORD.md).
+and evidence-runner result format **v2**. At that milestone
+`semantic-status-rev-0002-candidate` was **reserved and not created**, the
+authoritative source revision was still `semantic-status-rev-0001`, and **that
+rework produced no Candidate evidence, admitted none, and granted no Candidate
+approval**.
+
+**The remaining authority steps have since completed.** Fresh revision-bound
+evidence **`AE1-CDS-WP016-SEMSTATUS-004`** was produced and independently reviewed
+(**PASS WITH NOTES**), the Human Maintainer **admitted** it at AE-1, the **Nova
+Candidate Finalization Review returned GO WITH NOTES**, the Human Maintainer
+**approved Candidate**, and the exact-byte **Promotion Commit
+`22fa0710e2b75df22e7b420c2f9d86bbe67b2777`** made it effective on 2026-08-19.
+**Candidate is YES** at `semantic-status-rev-0002-candidate`, maturity
+**`Candidate`**, approval **`Approved`**; **no artifact is Stable**, claims remain
+**none**, and every other artifact remains **AE-0**.
+
+CDS-WP-016 is in **post-promotion current-state reconciliation**; its closure
+becomes authoritative only after a Fresh Independent Governance Reconciliation
+Review, Nova adjudication, and a Human-Maintainer exact-byte integration commit. No
+follow-up work package is authorized and **CDS-WP-017 is `INACTIVE`, `NOT
+AUTHORIZED`, and `NOT DEFINED`**. See the
+[Foundation Closure Record](../docs/governance/FOUNDATION_CLOSURE_RECORD.md) and the
+[Candidate Promotion Effectivity Record](../docs/governance/SEMANTIC_STATUS_CANDIDATE_PROMOTION_EFFECTIVITY_RECORD.md).

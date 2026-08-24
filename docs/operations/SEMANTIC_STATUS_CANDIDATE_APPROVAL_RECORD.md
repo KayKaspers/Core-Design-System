@@ -3,19 +3,32 @@
 - **Project:** Core Design System (CDS)
 - **Record ID:** `CAR-CDS-WP016-SEMSTATUS-001`
 - **Instance of:** [Candidate Approval Record Template](CANDIDATE_APPROVAL_RECORD_TEMPLATE.md)
-- **Status:** **Human-Maintainer Candidate decision recorded.**
-- **Decision state:** **`AUTHORIZED_PENDING_EXACT_BYTE_INTEGRATION`**
+- **Status:** **Human-Maintainer Candidate decision recorded — and its
+  exact-byte integration condition subsequently fulfilled.**
+- **Decision state:** **`AUTHORIZED_PENDING_EXACT_BYTE_INTEGRATION`** — the
+  historical decision, unchanged. Its integration condition was **fulfilled** by
+  the Promotion Commit recorded in section 9.
 - **Decision date:** 2026-08-19
 - **Repository materialization:** 2026-08-19, during the CDS-WP-016 Candidate
   Authority Record Materialization (Human-Maintainer authorized 2026-08-19;
   internal rework of CDS-WP-016, **not** a new work package)
+- **Post-promotion reconciliation:** 2026-08-19, during the CDS-WP-016
+  Post-Promotion Current-State Reconciliation (Human-Maintainer authorized
+  2026-08-19; internal reconciliation of CDS-WP-016, **not** a new work package)
 
-> **The repository is not Candidate while this state holds.**
+> **The repository is Candidate for this artifact family, made effective by the
+> Promotion Commit — not by this record.**
 >
-> Current committed authoritative state, unchanged by this record: Candidate
-> **No** · maturity **Experimental** · approval **Unapproved** · authoritative
-> Semantic Status source revision **`semantic-status-rev-0001`** · claims
-> **none** · publication **`Private Development`** · CDS-WP-017 **inactive**.
+> Current committed authoritative state: Candidate **YES** · maturity
+> **`Candidate`** · approval **`Approved`** · authoritative Semantic Status
+> source revision **`semantic-status-rev-0002-candidate`** · admitted evidence
+> **`AE1-CDS-WP016-SEMSTATUS-004`** at **AE-1** · Promotion Commit
+> **`22fa0710e2b75df22e7b420c2f9d86bbe67b2777`** · Stable **no** · claims
+> **none** · conformance **none** · publication **`Private Development`** ·
+> CDS-WP-017 **inactive**.
+>
+> See the
+> [Candidate Promotion Effectivity Record](../governance/SEMANTIC_STATUS_CANDIDATE_PROMOTION_EFFECTIVITY_RECORD.md).
 
 ## Temporal truth — what happened when
 
@@ -32,7 +45,8 @@ occurred, and must not be read in any other order:
 | 5 | Nova Candidate Finalization Review — **GO WITH NOTES** | **Before** the decision |
 | 6 | **Human-Maintainer Candidate decision — `AUTHORIZED_PENDING_EXACT_BYTE_INTEGRATION`** | The decision itself |
 | 7 | This repository file created under a separate Human-Maintainer materialization authorization | **After** the decision |
-| 8 | Human-Maintainer exact-byte Promotion Commit | **Has not happened** |
+| 8 | **Human-Maintainer exact-byte Promotion Commit `22fa0710e2b75df22e7b420c2f9d86bbe67b2777`** | **Happened — after step 7.** See section 9 |
+| 9 | Section 9 completed, and this record reconciled to the post-promotion state | **After** the Promotion Commit |
 
 **The prerequisite facts represented in sections 1 to 6 were established before
 the Human-Maintainer Candidate decision. The repository instance itself was
@@ -40,6 +54,11 @@ persisted afterwards.** This file did not exist at decision time, did not grant
 the decision, and does not claim otherwise. Nothing here is backdated, and no
 wall-clock time is reconstructed — only the calendar date 2026-08-19 is stated,
 because only the calendar date is supportable from the recorded project workflow.
+
+**The Promotion Commit came after this file, not before it.** The commit is the
+maturity transition point (DEC-S-126 §9); this record documents the decision that
+authorized it and, in section 9, the verified result of carrying it out. The
+recorded decision of section 7 is **not** rewritten by that outcome.
 
 ---
 
@@ -52,10 +71,17 @@ because only the calendar date is supportable from the recorded project workflow
 | Artifact | Semantic Status Foundation |
 | Artifact class | Channel-independent Layer-3 Semantic Source / Contract family |
 | Source set | `semantic/status` |
-| Proposed Candidate source revision | `semantic-status-rev-0002-candidate` — reserved identity; **not current until integrated** |
-| Authoritative pre-promotion baseline | `8d1374fa4c61cc1eed214823681ee1209a2d91f7` |
-| Authoritative pre-promotion source revision | `semantic-status-rev-0001` — what the repository still asserts today |
+| Proposed Candidate source revision | `semantic-status-rev-0002-candidate` — the identity approved here; **it became current only on integration**, in the Promotion Commit of section 9 |
+| Authoritative pre-promotion baseline | `8d1374fa4c61cc1eed214823681ee1209a2d91f7` — historical |
+| Authoritative pre-promotion source revision | `semantic-status-rev-0001` — historical; what the repository asserted **before** the Promotion Commit |
+| **Current authoritative baseline** | **`22fa0710e2b75df22e7b420c2f9d86bbe67b2777`** |
+| **Current authoritative source revision** | **`semantic-status-rev-0002-candidate`** |
 | Record date | 2026-08-19 |
+
+The first three rows are **historical**: they state the pre-promotion identity as
+it stood when the decision was made. The two current rows state what the
+repository asserts after integration. Both are true of their own moment, and
+neither replaces the other.
 
 ## 2. Candidate bytes identity
 
@@ -101,9 +127,14 @@ No different digest semantics are introduced here.
 
 The three approved source files declare `sourceRevision`
 `semantic-status-rev-0002-candidate`, `maturityState` `Candidate`, and
-`approvalState` `Approved`. Those are **TARGET metadata inside uncommitted,
-non-authoritative bytes** — the proposed future state, never the current
-authoritative repository state, and never authority of any kind.
+`approvalState` `Approved`. **At approval time those were TARGET metadata inside
+uncommitted, non-authoritative bytes** — the proposed future state, never the
+then-current authoritative repository state, and never authority of any kind.
+
+They became the current authoritative repository values **only** when the Human
+Maintainer integrated exactly these bytes in the Promotion Commit of section 9.
+Source-declared metadata still grants nothing by itself (DEC-S-126 §2); the
+commit, not the metadata, is what made the state effective.
 
 ## 3. Evidence
 
@@ -166,7 +197,7 @@ partial satisfaction is never averaged into a pass (evidence rules 6 and 7).
 | 1 | Problem and scope stated | Satisfied | [Candidate Dossier](SEMANTIC_STATUS_CANDIDATE_DOSSIER.md) — target artifact, scope (5 axes, 25 values, ten invariants, combination/conflict rules, communication contract, token role contract, DE/EN parity, source set), and explicit exclusions | Unchanged — satisfied |
 | 2 | Normative documentation exists | Satisfied | [Foundation Contract](../foundations/SEMANTIC_STATUS_FOUNDATION_CONTRACT.md), [Axis Vocabulary](../foundations/STATUS_AXIS_VOCABULARY.md), [Composition and Conflict Rules](../foundations/STATUS_COMPOSITION_AND_CONFLICT_RULES.md), [Communication and Accessibility Contract](../foundations/STATUS_COMMUNICATION_AND_ACCESSIBILITY_CONTRACT.md), [Token Contract](../foundations/SEMANTIC_STATUS_TOKEN_CONTRACT.md), [Terminology DE/EN](../foundations/SEMANTIC_STATUS_TERMINOLOGY_DE_EN.md) | Unchanged — satisfied |
 | 3 | Ownership assigned | Satisfied | CDS owns normative shared design rules and shared foundations ([Concept and Scope](../governance/CONCEPT_AND_SCOPE.md), DEC-S-008; [Scope Boundary Matrix](../governance/SCOPE_BOUNDARY_MATRIX.md)) | Unchanged — satisfied |
-| 4 | Source revision identified | Satisfied | Proposed Candidate source revision `semantic-status-rev-0002-candidate`, declared inside the approved bytes and cross-checked by the runner (`match true`); authoritative pre-promotion revision `semantic-status-rev-0001` | Unchanged — satisfied for the identified proposed revision; the authoritative revision is still `semantic-status-rev-0001` |
+| 4 | Source revision identified | Satisfied | Proposed Candidate source revision `semantic-status-rev-0002-candidate`, declared inside the approved bytes and cross-checked by the runner (`match true`); authoritative pre-promotion revision `semantic-status-rev-0001` | Unchanged — satisfied for the identified proposed revision. At decision time the authoritative revision was still `semantic-status-rev-0001`; after the Promotion Commit of section 9 the authoritative revision is `semantic-status-rev-0002-candidate` |
 | 5 | Known accessibility requirements stated, per the [Accessibility and Inclusive Design Policy](../governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md) — incl. the **Candidate accessibility gate** (mapping, responsibility, AE-1, AE-2 or plan, limitations, baseline plan, regression plan) | Elements 1–8 supported; element 9 **open** | See section 4.2, requirement by requirement | **Element 9 closed by the Human-Maintainer Candidate decision of 2026-08-19 for these exact bytes.** Elements 1–8 unchanged |
 | 6 | Known risks registered | Satisfied | RISK-089, RISK-092, RISK-093, RISK-094, RISK-097, RISK-098, and the executor-self-confirmation and single-environment risks RISK-075 / RISK-078, all in the [Risk Register](../risks/RISK_REGISTER.md) | Unchanged — satisfied. **Documentation is not mitigation**, and no risk is accepted or closed here |
 | 7 | Evidence plan | Satisfied | [Accessibility Evidence Strategy](../governance/ACCESSIBILITY_EVIDENCE_STRATEGY.md) and the [Candidate AE-2 Evidence Plan](../governance/SEMANTIC_STATUS_CANDIDATE_AE2_EVIDENCE_PLAN.md) | Unchanged — satisfied. A plan is not evidence |
@@ -196,12 +227,13 @@ partial satisfaction is never averaged into a pass (evidence rules 6 and 7).
 | Unresolved limitations | 16 recorded accessibility limitations + the 7 evidence limitations of section 3 — all recorded, none hidden, none waived |
 | Critical limitations | **0** — no Critical limitation exists, and none blocks this approval |
 | Candidate gate prerequisites + approval decision | **SATISFIED FOR THE EXACT APPROVED PROPOSED BYTES** |
-| **Repository Candidate maturity** | **NOT YET EFFECTIVE** |
-| Reason | **Promotion Commit: PENDING** |
+| **Repository Candidate maturity** | **EFFECTIVE** |
+| Reason | **Promotion Commit `22fa0710e2b75df22e7b420c2f9d86bbe67b2777` — completed 2026-08-19** |
 
-**The repository is not Candidate.** Gate satisfaction for a set of proposed
-bytes is not a maturity state; only the Human-Maintainer exact-byte Promotion
-Commit makes `Experimental → Candidate` effective (DEC-S-126 §9).
+Gate satisfaction for a set of proposed bytes is **not** a maturity state; only
+the Human-Maintainer exact-byte Promotion Commit makes `Experimental → Candidate`
+effective (DEC-S-126 §9). That commit has since been performed, on exactly the
+approved bytes, and it — not this record — is what made the repository Candidate.
 
 ## 5. Nova review
 
@@ -291,22 +323,51 @@ condition below holds:
 No other decision state exists, and **no state in this record makes the
 repository Candidate**.
 
+These definitions are unchanged. The recorded decision remains
+`AUTHORIZED_PENDING_EXACT_BYTE_INTEGRATION`, and its conditional clause — "the
+repository is not Candidate while this state holds" — describes the interval
+between the decision and integration. **That interval has ended**: the condition
+was fulfilled by the Promotion Commit in section 9, which is what made the
+repository Candidate. The decision was not converted into a different decision
+state, and no new decision was made.
+
 ## 8. Effectivity
 
 > **A Candidate Approval Record is not a Promotion Commit.**
 >
 > **Candidate maturity becomes effective in the repository only after the exact
 > approved bytes have been successfully integrated by the Human Maintainer.**
+>
+> That integration has been performed. This record still did not, and does not,
+> grant it.
 
 ### Current committed repository
 
 | Field | Value |
 | --- | --- |
-| Source revision | **`semantic-status-rev-0001`** |
-| Maturity | **`Experimental`** |
-| Approval | **`Unapproved`** |
-| Candidate | **No** |
-| Admitted evidence | `AE1-CDS-WP016-SEMSTATUS-002` (rev-0001 scope) and `AE1-CDS-WP016-SEMSTATUS-004` (rev-0002-candidate scope, uncommitted bytes) |
+| Baseline | **`22fa0710e2b75df22e7b420c2f9d86bbe67b2777`** |
+| Source revision | **`semantic-status-rev-0002-candidate`** |
+| Maturity | **`Candidate`** |
+| Approval | **`Approved`** |
+| Candidate | **YES** |
+| Admitted evidence in force | **`AE1-CDS-WP016-SEMSTATUS-004`** — AE-1, `semantic-status-rev-0002-candidate` scope, source/contract family only |
+| Historical admitted evidence | `AE1-CDS-WP016-SEMSTATUS-002` — AE-1, `semantic-status-rev-0001` scope only; it does **not** cover the current revision and does **not** transfer |
+| Stable | **No** |
+| Claims | **None** |
+| Conformance | **None** |
+
+### Pre-promotion committed repository — historical
+
+| Field | Value |
+| --- | --- |
+| Baseline | `8d1374fa4c61cc1eed214823681ee1209a2d91f7` |
+| Source revision | `semantic-status-rev-0001` |
+| Maturity | `Experimental` |
+| Approval | `Unapproved` |
+| Candidate | No |
+
+This block states what the repository asserted **before** the Promotion Commit.
+It is retained as a historical fact, not as a current-state statement.
 
 ### Approved Proposed Candidate
 
@@ -315,34 +376,45 @@ repository Candidate**.
 | Source revision | `semantic-status-rev-0002-candidate` |
 | Target maturity | `Candidate` |
 | Target approval | `Approved` |
-| **Effectivity** | **PENDING EXACT-BYTE PROMOTION COMMIT** |
+| **Effectivity** | **EFFECTIVE BY PROMOTION COMMIT `22fa0710e2b75df22e7b420c2f9d86bbe67b2777`** |
+| Effectivity date | 2026-08-19 |
 
-Before integration the authoritative repository state remains **Candidate: No ·
-Maturity: Experimental · Approval: Unapproved**, whatever this record says and
-whatever metadata the proposed bytes declare. The Promotion Commit is the actual
-maturity transition point (DEC-S-126 §9).
+Before integration the authoritative repository state remained **Candidate: No ·
+Maturity: Experimental · Approval: Unapproved**, whatever this record said and
+whatever metadata the proposed bytes declared. The Promotion Commit is the actual
+maturity transition point (DEC-S-126 §9), and it is what changed that state.
 
 ## 9. Integration
 
-*(Pending until the Human Maintainer performs the Promotion Commit. Completing
-this section must not require any mutation of the evidenced source bytes.)*
+*(Completed after the Human Maintainer performed the Promotion Commit. Completing
+this section required no mutation of the evidenced source bytes, and none
+occurred.)*
 
 | Field | Value |
 | --- | --- |
-| Promotion Commit | **PENDING** |
+| **Promotion Commit** | **`22fa0710e2b75df22e7b420c2f9d86bbe67b2777`** |
 | Parent revision | `8d1374fa4c61cc1eed214823681ee1209a2d91f7` |
-| Exact-byte result | **PENDING PROMOTION GATE** |
-| Staged blob result | **PENDING PROMOTION GATE** |
-| Committed blob result | **PENDING PROMOTION COMMIT** |
-| Source revision after integration | **PENDING** — expected `semantic-status-rev-0002-candidate` only after exact promotion |
-| Post-commit validation result | **PENDING** |
-| Post-commit regression verification result | **PENDING** |
-| Remote result | **PENDING** |
-| Integration date | **PENDING** |
+| Commit subject | `feat(cds): promote semantic status foundation to Candidate` |
+| **Exact-byte result** | **PASS / MATCH** |
+| **Staged blob result** | **PASS** |
+| **Committed blob result** | **PASS** — `15 / 15` committed blob identities exact |
+| **Source revision after integration** | **`semantic-status-rev-0002-candidate`** |
+| **Post-commit validation result** | **PASS** |
+| **Post-commit regression verification result** | **PASS** — `47/47 · 64/64 · 184/184 · 24/24/0/0` |
+| **Remote result** | `origin/main` == `22fa0710e2b75df22e7b420c2f9d86bbe67b2777` — **Remote Fast-Forward Gate PASS** |
+| **Integration date** | **2026-08-19** |
 
-**This section must be completed after a successful Promotion.** The future
-Promotion Commit SHA is deliberately **not predicted**, and no result above is
-invented.
+The regression figures are, in order: semantic-status tests, Candidate evidence
+tests, full validator suite, and the validation-case harness reported as
+`totalCases / expectedMatches / expectedMismatches / executionErrors`.
+
+**This section was completed after the successful Promotion.** No Promotion
+Commit SHA was predicted in advance, and no result above is invented — each is
+recomputable from the committed repository.
+
+The completed lifecycle effectivity event is recorded separately in the
+[Candidate Promotion Effectivity Record](../governance/SEMANTIC_STATUS_CANDIDATE_PROMOTION_EFFECTIVITY_RECORD.md).
+That record is not evidence and not a Promotion Commit either.
 
 Where the committed source is byte-identical to the independently reviewed,
 evidence-bound proposed source, the post-commit verification **confirms the same
@@ -402,6 +474,7 @@ Candidate is **bounded validation only, and is never normative**
 ## Related documents
 
 - [Candidate Approval Record Template](CANDIDATE_APPROVAL_RECORD_TEMPLATE.md) — the form this record instantiates
+- [Candidate Promotion Effectivity Record](../governance/SEMANTIC_STATUS_CANDIDATE_PROMOTION_EFFECTIVITY_RECORD.md) — the completed lifecycle effectivity event
 - [Semantic Status Candidate Dossier](SEMANTIC_STATUS_CANDIDATE_DOSSIER.md)
 - [AE1-004 Evidence Record](SEMANTIC_STATUS_CANDIDATE_AE1_004_EVIDENCE_RECORD.md) — the admitted evidence package's human-readable record
 - [Semantic Status AE1-004 AE-1 Admission Record](../governance/SEMANTIC_STATUS_AE1_004_ADMISSION_RECORD.md) — the separate evidence-admission instrument

@@ -7,6 +7,11 @@
 - **Repository materialization:** 2026-08-19, during the CDS-WP-016 Candidate
   Authority Record Materialization (Human-Maintainer authorized 2026-08-19;
   internal rework of CDS-WP-016, **not** a new work package)
+- **Post-promotion reconciliation:** 2026-08-19, during the CDS-WP-016
+  Post-Promotion Current-State Reconciliation (Human-Maintainer authorized
+  2026-08-19; internal reconciliation of CDS-WP-016, **not** a new work package).
+  Only current-state fields were reconciled; the admission decision, its date,
+  its scope, and its bound byte identities are **unchanged**.
 - **Authority produced by this file:** **NONE**
 
 ## Temporal truth — the decision came first, this file afterwards
@@ -43,9 +48,9 @@ identities were not recorded in the repository at decision time. They are
 | The admission decision | The decision was made by the Human Maintainer before this file existed. |
 | A new evidence level | AE-0 … AE-4 are unchanged in definition, scope, and sufficiency. |
 | A general policy | It governs one artifact family, one proposed source revision, one evidence package. |
-| Candidate maturity | Repository Candidate status remains **No**. |
-| Candidate approval | Evidence admission and Candidate approval are separate Human-Maintainer decisions (DEC-S-126). |
-| A Promotion Commit | Nothing has been staged, committed, or integrated. |
+| Candidate maturity | **This Admission did not grant Candidate maturity.** Candidate maturity was later made effective by the separate Human-Maintainer Candidate approval and exact-byte Promotion Commit. |
+| Candidate approval | Evidence admission and Candidate approval are separate Human-Maintainer decisions (DEC-S-126). This record is the first, never the second. |
+| A Promotion Commit | This record staged, committed, and integrated nothing. The Promotion Commit is `22fa0710e2b75df22e7b420c2f9d86bbe67b2777`, a separate Human-Maintainer act. |
 | Stable maturity | **Not granted.** No AE-2, AE-3, or AE-4 exists anywhere. |
 | An accessibility claim | No claim of any level is valid today, for anyone, including CDS. |
 | WCAG conformance | Nothing here demonstrates any WCAG success criterion. |
@@ -76,7 +81,16 @@ identities were not recorded in the repository at decision time. They are
 
 The evidence base repository revision is the committed baseline **from which** the
 Proposed Candidate was prepared. It does **not** state that the admitted bytes are
-contained in that commit. They are not.
+contained in that commit. They are not; `8d1374fa4c61cc1eed214823681ee1209a2d91f7`
+contains the pre-promotion `semantic-status-rev-0001` bytes.
+
+The admitted bytes were subsequently integrated **unchanged** by the exact-byte
+Promotion Commit `22fa0710e2b75df22e7b420c2f9d86bbe67b2777`, where they are now
+the committed authoritative source. That integration is recorded in the
+[Candidate Approval Record](../operations/SEMANTIC_STATUS_CANDIDATE_APPROVAL_RECORD.md)
+§9 and the
+[Candidate Promotion Effectivity Record](SEMANTIC_STATUS_CANDIDATE_PROMOTION_EFFECTIVITY_RECORD.md);
+it changed no admitted byte and required no new admission.
 
 ## Admitted byte identity
 
@@ -109,9 +123,13 @@ admitted digest package (ADR-0002):
 | `tokens/semantic/status/semantic-status.tokens.json` | `sha256:317c464807c04b9b0f6cc05f46cab955f58f5739d7c39fe61d55702a20412c34` |
 
 These three files declare `sourceRevision` `semantic-status-rev-0002-candidate`,
-`maturityState` `Candidate`, and `approvalState` `Approved`. Those values are
-**TARGET metadata inside uncommitted, non-authoritative bytes**. They are a
-target, never a current state, and they grant nothing.
+`maturityState` `Candidate`, and `approvalState` `Approved`. **At admission time
+those values were TARGET metadata inside uncommitted, non-authoritative bytes.**
+They were a target, never a current state, and they granted nothing.
+
+They are now the committed authoritative values — made so by the Promotion
+Commit, not by the metadata and not by this record. Source-declared metadata
+still grants nothing by itself (DEC-S-126 §2).
 
 ### Complete machine Evidence Package Manifest — NF-R11-001
 
@@ -167,9 +185,9 @@ It grants **none** of the following:
 
 | Not granted | State |
 | --- | --- |
-| Candidate maturity | **No** |
+| Candidate maturity | **Not granted by this admission.** Candidate maturity exists today only because of the separate Human-Maintainer Candidate approval and Promotion Commit |
 | Stable maturity | **No** |
-| Candidate Promotion | **Not performed** |
+| Candidate Promotion | **Not performed by this record.** The Promotion Commit is `22fa0710e2b75df22e7b420c2f9d86bbe67b2777`, a separate Human-Maintainer act |
 | Any claim of any level | **None** |
 | Conformance of any kind | **None** |
 | WCAG conformance | **None** |
@@ -230,15 +248,31 @@ The bytes of `AE1-CDS-WP016-SEMSTATUS-002`, `AE1-CDS-WP016-SEMSTATUS-003`, and
 
 | Item | Value |
 | --- | --- |
-| HEAD | `8d1374fa4c61cc1eed214823681ee1209a2d91f7` |
-| **Source revision** | **`semantic-status-rev-0001`** |
-| **Maturity** | **`Experimental`** |
-| **Approval** | **`Unapproved`** |
-| **Candidate** | **No** |
+| HEAD | **`22fa0710e2b75df22e7b420c2f9d86bbe67b2777`** |
+| **Source revision** | **`semantic-status-rev-0002-candidate`** |
+| **Maturity** | **`Candidate`** |
+| **Approval** | **`Approved`** |
+| **Candidate** | **YES** |
+| Admitted evidence in force | `AE1-CDS-WP016-SEMSTATUS-004` — this record's admission |
+| Stable | **No** |
 | Claims | **None** |
+| Conformance | **None** |
 | Publication | `Private Development` |
 | CoreOps pilot | inactive |
 | CDS-WP-017 | **inactive** |
+
+### Pre-promotion committed authoritative repository — historical
+
+| Item | Value |
+| --- | --- |
+| HEAD | `8d1374fa4c61cc1eed214823681ee1209a2d91f7` |
+| Source revision | `semantic-status-rev-0001` |
+| Maturity | `Experimental` |
+| Approval | `Unapproved` |
+| Candidate | No |
+
+This block states the repository as it stood **at admission time**. It is
+retained as a historical fact, not as a current-state statement.
 
 ### Admitted Proposed Candidate
 
@@ -247,8 +281,9 @@ The bytes of `AE1-CDS-WP016-SEMSTATUS-002`, `AE1-CDS-WP016-SEMSTATUS-003`, and
 | Source revision | `semantic-status-rev-0002-candidate` |
 | Source-declared TARGET maturity | `Candidate` |
 | Source-declared TARGET approval | `Approved` |
-| Authority context | `proposed-candidate` — caller-declared, never inferred from ambient Git state |
+| Authority context at evidence time | `proposed-candidate` — caller-declared, never inferred from ambient Git state |
 | **Authority before the Promotion Commit** | **NONE** |
+| Integration | **Integrated unchanged** by Promotion Commit `22fa0710e2b75df22e7b420c2f9d86bbe67b2777` on 2026-08-19 |
 
 **All other CDS artifacts remain AE-0** unless a separate authoritative admission
 record exists for them. Two do: this record, and the
@@ -269,13 +304,14 @@ Promotion Commit.** These are three separate acts, in a fixed order (DEC-S-126).
 | 4 | **Human-Maintainer evidence admission** | Human Maintainer | **APPROVED / ADMITTED — recorded here** |
 | 5 | Nova Candidate Finalization Review | Nova | Complete — **GO WITH NOTES** (recommendation only) |
 | 6 | **Human-Maintainer Candidate approval** | Human Maintainer | **`AUTHORIZED_PENDING_EXACT_BYTE_INTEGRATION`** — see the [Candidate Approval Record](../operations/SEMANTIC_STATUS_CANDIDATE_APPROVAL_RECORD.md) |
-| 7 | **Human-Maintainer exact-byte Promotion Commit** | Human Maintainer | **PENDING** |
-| 8 | Post-commit exact-byte Git-blob verification and full regression | Human Maintainer | **PENDING** |
+| 7 | **Human-Maintainer exact-byte Promotion Commit** | Human Maintainer | **COMPLETE** — `22fa0710e2b75df22e7b420c2f9d86bbe67b2777`, 2026-08-19 |
+| 8 | Post-commit exact-byte Git-blob verification and full regression | Human Maintainer | **COMPLETE / PASS** — committed blob identity `15 / 15` exact; regression `47/47 · 64/64 · 184/184 · 24/24/0/0` |
 
 This admission satisfies Candidate accessibility gate element **4 (AE-1)** for the
-Proposed Candidate source revision. It satisfies **no other element**, and it does
+Proposed Candidate source revision. It satisfies **no other element**, and it did
 not by itself make the repository Candidate. **The Promotion Commit is the actual
-repository maturity transition point.**
+repository maturity transition point**, and it is step 7 above — a separate act,
+by a separate authority decision, after this admission.
 
 ## Invalidation — fail-closed
 
@@ -306,6 +342,7 @@ trigger **T-12 is not waived**.
 
 - [Accessibility Evidence and Claims Model](ACCESSIBILITY_EVIDENCE_AND_CLAIMS_MODEL.md) — normative evidence levels and gates
 - [Artifact Maturity Lifecycle](ARTIFACT_MATURITY_LIFECYCLE.md) — normative Candidate gate, Proposed Candidate Revisions, Promotion Commit effectivity
+- [Candidate Promotion Effectivity Record](SEMANTIC_STATUS_CANDIDATE_PROMOTION_EFFECTIVITY_RECORD.md) — the completed lifecycle effectivity event
 - [Semantic Status AE-1 Admission Record](SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md) — the separate `AE1-CDS-WP016-SEMSTATUS-002` admission, `semantic-status-rev-0001` scope only
 - [Accessibility Support Baseline](ACCESSIBILITY_SUPPORT_BASELINE.md) — A11Y-BL-001
 - [Candidate accessibility limitations](SEMANTIC_STATUS_CANDIDATE_ACCESSIBILITY_LIMITATIONS.md) — 16 recorded, 0 Critical

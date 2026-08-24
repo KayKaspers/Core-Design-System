@@ -9,6 +9,43 @@ released and no release is announced.
 
 ### Added
 
+- **Semantic Status Foundation promoted to `Candidate`** (CDS-WP-016). The
+  Human-Maintainer exact-byte **Promotion Commit
+  `22fa0710e2b75df22e7b420c2f9d86bbe67b2777`** (parent
+  `8d1374fa4c61cc1eed214823681ee1209a2d91f7`, 2026-08-19) integrated the approved
+  Proposed Candidate bytes unchanged. The `semantic/status` source set now declares
+  source revision **`semantic-status-rev-0002-candidate`**, `maturityState`
+  **`Candidate`**, and `approvalState` **`Approved`**. The **exact-byte Promotion
+  Gate passed**: committed blob identity **15/15 exact**, post-commit regression
+  **47/47 · 64/64 · 184/184 · 24/24/0/0**, remote fast-forward **PASS**.
+  (CDS-WP-016)
+- **`AE1-CDS-WP016-SEMSTATUS-004` admitted at AE-1** by the Human Maintainer
+  (2026-08-19), bound to `semantic-status-rev-0002-candidate`, for the
+  channel-independent Semantic Status Layer-3 source/contract family **only** —
+  after a fresh independent evidence review (**PASS WITH NOTES**) by a reviewer who
+  was not its executor. `AE1-CDS-WP016-SEMSTATUS-002` remains a historical
+  `semantic-status-rev-0001` admission only; `AE1-CDS-WP016-SEMSTATUS-003` is **not
+  admitted** (`SUPERSEDED_FOR_ADMISSION_BY_EVIDENCE_INPUT_CHANGE`). **Evidence never
+  transfers across a source revision.** (CDS-WP-016)
+- **Human-Maintainer Candidate approval recorded** as
+  `AUTHORIZED_PENDING_EXACT_BYTE_INTEGRATION` in the Candidate Approval Record
+  `CAR-CDS-WP016-SEMSTATUS-001` — the first instance of the Candidate Approval
+  Record Template — following the Nova Candidate Finalization Review
+  (**GO WITH NOTES**, a recommendation only). (CDS-WP-016)
+- **Candidate Promotion Effectivity Record** added
+  (`docs/governance/SEMANTIC_STATUS_CANDIDATE_PROMOTION_EFFECTIVITY_RECORD.md`) — a
+  governance lifecycle effectivity record for the already completed promotion. It is
+  **not evidence**, **not a Promotion Commit**, **not a Decision**, and **not a
+  source-precedence policy**. (CDS-WP-016)
+
+**Boundaries, unchanged by all of the above:** **Stable is not reached** and no
+artifact is Stable. **No claim of any level** and **no conformance of any kind** is
+established; there is no WCAG conformance, no AE-2, AE-3, or AE-4, no channel
+evidence, and no consumer evidence. No Product Profile authority, no CoreOps pilot
+activation, **no release, no tag, and no publication transition** — publication
+remains `Private Development`. Candidate is bounded validation only and is never
+normative. CDS-WP-017 is **inactive, not authorized, and not defined**.
+
 - Semantic Status Source Set implemented (CDS-WP-015): the Experimental
   `semantic/status` source set (5 axis groups, 25 non-visual status tokens
   `status.<axis>.<value>` with technical-identifier values, manifest, resolver,
@@ -243,6 +280,18 @@ released and no release is announced.
 
 ### Changed
 
+- **Post-promotion lifecycle reconciliation** across the current-state, governance,
+  authority, roadmap, risk, and project mirrors (CDS-WP-016). The five
+  `AE1-CDS-WP016-SEMSTATUS-004`-bound normative Foundation documents, the promoted
+  Candidate source, all evidence packages, the review provenance, the bound test
+  input, the runner, the validator, the fixtures, the schemas, and
+  `requirements-validator.lock` were left **exact-byte unchanged**. No accepted
+  Decision text was altered, no ADR was added, and no evidence artifact was
+  modified. (CDS-WP-016)
+- **RISK-031 (maturity inflation): `Monitored` → `Mitigating`** by
+  Human-Maintainer decision (2026-08-19) — the first Candidate transition completed
+  under active, exact-byte, evidence-bound gate control. No other risk status
+  changed and no new risk identifier was created. (CDS-WP-016)
 - Decision index extended to DEC-S-001 … DEC-S-092 with a tenth decision type for
   machine-readable bootstrap and validation decisions (DEC-S-083 … DEC-S-092);
   DEC-S-001 … DEC-S-082 unchanged. **ADR range is now ADR-0001 … ADR-0002 (2 ADRs).**

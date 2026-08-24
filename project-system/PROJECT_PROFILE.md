@@ -38,13 +38,29 @@ Pre-Candidate Operating Enablement — **Foundation / Pre-Design: Closed with No
   internal rework — the **Candidate Finalization Governance Rework** (2026-08-18,
   again **not** a new work package) — is **executed**: DEC-S-126, RISK-098, the
   Candidate Approval Record **Template**, and evidence-runner result format **v2**.
-  It prepared **governance and tooling only**; `semantic-status-rev-0002-candidate`
-  is **reserved and not created**, and **no Candidate evidence was produced, none
-  admitted, and no Candidate approval granted**. The Candidate authority closure
-  remains open: the **Nova post-admission Candidate Maturity Re-Review** has not
-  been performed and the **Human-Maintainer Candidate approval is not granted**, so
-  Candidate is **No**. No follow-up work
-  package is authorized; CDS-WP-017 is not activated.
+  It prepared **governance and tooling only**; at that milestone
+  `semantic-status-rev-0002-candidate` was **reserved and not created**, and **that
+  rework produced no Candidate evidence, admitted none, and granted no Candidate
+  approval**.
+- **Candidate authority closure: COMPLETE (2026-08-19).** Fresh revision-bound
+  evidence **`AE1-CDS-WP016-SEMSTATUS-004`** was produced, independently reviewed
+  (**PASS WITH NOTES**), and **admitted at AE-1** by the Human Maintainer; the
+  **Nova Candidate Finalization Review returned GO WITH NOTES**; the Human
+  Maintainer **approved Candidate** (`AUTHORIZED_PENDING_EXACT_BYTE_INTEGRATION`);
+  and the exact-byte **Promotion Commit
+  `22fa0710e2b75df22e7b420c2f9d86bbe67b2777`** (parent
+  `8d1374fa4c61cc1eed214823681ee1209a2d91f7`) made it effective — gate **PASS**,
+  committed blob identity **15/15 exact**, regression
+  **47/47 · 64/64 · 184/184 · 24/24/0/0**, remote fast-forward **PASS**.
+  **Candidate is YES**, source revision **`semantic-status-rev-0002-candidate`**,
+  maturity **`Candidate`**, approval **`Approved`** — for the channel-independent
+  Semantic Status Layer-3 source/contract family only.
+- **CDS-WP-016 status:** **post-promotion current-state reconciliation**; proposed
+  closure prepared, **authoritative closure pending** a Fresh Independent Governance
+  Reconciliation Review, Nova adjudication, and a Human-Maintainer exact-byte
+  integration commit.
+- No follow-up work package is authorized; **CDS-WP-017 is `INACTIVE`, `NOT
+  AUTHORIZED`, and `NOT DEFINED`**.
 - Previous work package: CDS-WP-015 — Semantic Status Foundation Source Set and
   Candidate Evidence (Completed)
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
@@ -71,7 +87,9 @@ Pre-Candidate Operating Enablement — **Foundation / Pre-Design: Closed with No
 - Pre-Candidate operating plan:
   [Pre-Candidate Operating Plan](../docs/roadmap/PRE_CANDIDATE_OPERATING_PLAN.md)
 - **Current publication state: `Private Development`. Current claims: None.
-  Candidate/Stable artifacts: None. CoreOps pilot: inactive.**
+  Conformance: None. Candidate artifact families: 1 — Semantic Status Foundation /
+  `semantic/status` at `semantic-status-rev-0002-candidate`. Stable artifacts:
+  None. CoreOps pilot: inactive.**
 
 ## Accessibility support baseline status
 
@@ -82,11 +100,17 @@ Pre-Candidate Operating Enablement — **Foundation / Pre-Design: Closed with No
 - Environment entry count: **14** (A11Y-ENV-001…014) — Required 6 · Conditional 4 ·
   Deferred 4; Required browser/screen-reader pairings **2**
 - Accessibility evidence levels: **5** (AE-0 … AE-4) — unchanged
-- Accessibility evidence records for the Semantic Status Candidate scope: **2
-  produced** — Evidence 001 (remediation-time, **never admitted**) and Evidence 002
-  (clean-HEAD, independently reviewed, integrated). **Admitted evidence packages: 1**
-  — Evidence 002 only. Every artifact outside that scope remains **AE-0**, and no
-  baseline environment has been exercised
+- Accessibility evidence records for the Semantic Status Candidate scope: **4
+  produced** — Evidence 001 (remediation-time, **never admitted**), Evidence 002
+  (clean-HEAD, independently reviewed, **admitted** for `semantic-status-rev-0001`),
+  Evidence 003 (Proposed Candidate, independently reviewed, **NOT ADMITTED** ·
+  `SUPERSEDED_FOR_ADMISSION_BY_EVIDENCE_INPUT_CHANGE`), and Evidence 004
+  (Proposed Candidate after the test lifecycle rework, independently reviewed,
+  **admitted** for `semantic-status-rev-0002-candidate`). **Admitted evidence
+  packages: 2** — Evidence 002 and Evidence 004, each bound to its own source
+  revision; **evidence never transfers across a source revision**, so the package
+  in force for the current revision is **Evidence 004 only**. Every artifact outside
+  that scope remains **AE-0**, and **no baseline environment has been exercised**
 - RISK-044: **Mitigating** (baseline defined; gate met, DEC-S-070)
 
 Documents:
@@ -186,8 +210,9 @@ Documents:
 
 ## Semantic Status Foundation status (CDS-WP-014)
 
-- Semantic Status Foundation: **Contract defined** (CDS-WP-014, 2026-07-17; pending
-  Human-Maintainer commit) — **Experimental, not Candidate** (DEC-S-113, DEC-S-114)
+- Semantic Status Foundation: **Contract defined** (CDS-WP-014, 2026-07-17) —
+  **Experimental, not Candidate at that milestone** (DEC-S-113, DEC-S-114);
+  **now `Candidate` / `Approved`** (see the Candidate status row below)
 - Status axis count: **5** (`condition` · `severity` · `confidence` · `freshness` ·
   `evidence`) · Status value count: **25** (5 per axis; `unknown` explicit on every
   axis) · Status invariant count: **10**
@@ -198,9 +223,11 @@ Documents:
   semantic parity; technical IDs language-neutral
 - Token contract: value-neutral roles only — **no token source file, no token name,
   no value, no component**
-- Candidate status: **Not Candidate** — first Candidate planned per the
-  [Candidate Plan](../docs/roadmap/FIRST_SEMANTIC_STATUS_CANDIDATE_PLAN.md)
-  (10 prerequisites, none met)
+- Candidate status: **Candidate** — the first Candidate, reached through the
+  [Candidate Plan](../docs/roadmap/FIRST_SEMANTIC_STATUS_CANDIDATE_PLAN.md) gates and
+  made effective by Promotion Commit `22fa0710e2b75df22e7b420c2f9d86bbe67b2777` on
+  2026-08-19. At CDS-WP-014 it was **Not Candidate**, with 10 prerequisites and none
+  met
 - Validator independent review: **Pending** (WP-013 evidence executor-produced)
 - **Publication state `Private Development`; current claims: None.**
 
@@ -215,18 +242,25 @@ Documents:
 
 ## Semantic Status Source Set status (CDS-WP-015)
 
-- Semantic Status Source Set: **Implemented, Experimental** (CDS-WP-015,
-  2026-07-18; **committed** by the Human Maintainer) — the DEC-S-121 **independently
-  unreviewed** state is **superseded**: independently reviewed by CDS-WP-016
+- Semantic Status Source Set: **Implemented; now `Candidate` / `Approved`**
+  (implemented in CDS-WP-015, 2026-07-18, Experimental at the time; **committed** by
+  the Human Maintainer) — the DEC-S-121 **independently unreviewed** state is
+  **superseded**: independently reviewed by CDS-WP-016
   (**Independent Review PASS**, **Candidate Recommendation GO**); **GO is not a
   Candidate award** — the **Nova Candidate Maturity Review** then returned
   **NO-GO** on the Candidate Accessibility Gate, whose remediation is **executed**,
-  **independently reviewed**, and admitted at AE-1; **Candidate: No**, admitted
-  accessibility evidence **AE-1 for this source scope only**
+  **independently reviewed**, and admitted at AE-1
   (DEC-S-115, DEC-S-122, DEC-S-125)
-- Source-Set ID: **`semantic/status`** · Layer: semantic · Revision:
-  `semantic-status-rev-0001` · Axis count: **5** · Status token count: **25**
-  (non-visual `string` identity values; `status.<axis>.<value>`)
+- **Current source revision: `semantic-status-rev-0002-candidate`** · maturity
+  **`Candidate`** · approval **`Approved`** · admitted evidence in force
+  **`AE1-CDS-WP016-SEMSTATUS-004`** at **AE-1**, this source scope only ·
+  Promotion Commit `22fa0710e2b75df22e7b420c2f9d86bbe67b2777` (2026-08-19)
+- **Stable: No** · claims **None** · conformance **None** · AE-2/AE-3/AE-4 **None**
+  · channel evidence **None** · consumer evidence **None**
+- Source-Set ID: **`semantic/status`** · Layer: semantic · Revision at CDS-WP-015:
+  `semantic-status-rev-0001` (**current revision:
+  `semantic-status-rev-0002-candidate`**) · Axis count: **5** · Status token count:
+  **25** (non-visual `string` identity values; `status.<axis>.<value>`)
 - Manifest/Resolver: present, local-only, identity-aligned; no Product-Profile
   extension points
 - Terminology entries: **25 DE / 25 EN** (0 missing;
@@ -240,9 +274,16 @@ Documents:
   [source-set run](../artifacts/validation/wp015-semantic-status-source-results.json) ·
   [re-execution](../artifacts/validation/wp015-wp013-clean-reexecution-results.json);
   independent review: **Pending**
-- Candidate dossier: **Draft – gate incomplete**
+- Candidate dossier: **Candidate gate complete — Candidate promotion effective**
   ([dossier](../docs/operations/SEMANTIC_STATUS_CANDIDATE_DOSSIER.md))
-- **Publication state `Private Development`; current claims: None.**
+- Authority records:
+  [Candidate Approval Record](../docs/operations/SEMANTIC_STATUS_CANDIDATE_APPROVAL_RECORD.md)
+  (`CAR-CDS-WP016-SEMSTATUS-001`) ·
+  [AE1-004 Admission Record](../docs/governance/SEMANTIC_STATUS_AE1_004_ADMISSION_RECORD.md) ·
+  [Candidate Promotion Effectivity Record](../docs/governance/SEMANTIC_STATUS_CANDIDATE_PROMOTION_EFFECTIVITY_RECORD.md)
+  — **authority records, never evidence**
+- **Publication state `Private Development`; current claims: None; no Stable
+  artifact.**
 
 Documents:
 [Machine-Readable Validation Contract](../docs/architecture/MACHINE_READABLE_VALIDATION_CONTRACT.md) ·
@@ -296,14 +337,15 @@ Documents:
 - Accessibility channel profiles: **6** — 2 with a target, 0 Candidate-eligible
 - CR-024 policy status: **Resolved at policy level** (DEC-S-060); entry criterion
   `Accessibility target defined` met with the CDS-WP-007 commit
-- **Current accessibility evidence: one admitted package** —
-  `AE1-CDS-WP016-SEMSTATUS-002` at **AE-1** for the channel-independent Semantic
-  Status source/contract family; **every other artifact is AE-0**. A support
-  baseline is **declared and committed** (A11Y-BL-001, CDS-WP-010) but **no
-  evidence has been executed in any baseline environment**; no AE-2, AE-3, or AE-4
-  exists; no accessibility claim of any level is valid. That admission is bound to
-  source revision `semantic-status-rev-0001` and **does not transfer** to a later
-  Candidate source revision (DEC-S-126)
+- **Current accessibility evidence: `AE1-CDS-WP016-SEMSTATUS-004` at AE-1**, bound
+  to the current source revision `semantic-status-rev-0002-candidate`, for the
+  channel-independent Semantic Status source/contract family; **every other artifact
+  is AE-0**. `AE1-CDS-WP016-SEMSTATUS-002` is the **historical
+  `semantic-status-rev-0001` admission** and **does not transfer** to a later
+  Candidate source revision (DEC-S-126); `AE1-CDS-WP016-SEMSTATUS-003` is **not
+  admitted**. A support baseline is **declared and committed** (A11Y-BL-001,
+  CDS-WP-010) but **no evidence has been executed in any baseline environment**; no
+  AE-2, AE-3, or AE-4 exists; no accessibility claim of any level is valid
 
 Documents:
 [Accessibility and Inclusive Design Policy](../docs/governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md) ·
@@ -336,7 +378,9 @@ Documents:
   · Evidence Reviewer: Nova or authorized reviewer. No longer provisional.
 - **Current publication state: `Private Development`** — unchanged by CDS-WP-006
 - **No licence selected for any artifact class. No release is currently
-  possible.** No artifact is Candidate or Stable.
+  possible.** Exactly one artifact family is Candidate: the Semantic Status
+  Foundation / `semantic/status` at `semantic-status-rev-0002-candidate`, with
+  maturity `Candidate` and approval `Approved`. No artifact is Stable.
 
 Documents:
 [Governance Operating Model](../docs/governance/GOVERNANCE_OPERATING_MODEL.md) ·
@@ -526,9 +570,9 @@ pilot contract is defined in CDS-WP-004.
   Rework, DEC-S-126)**. DEC-S-001 … DEC-S-114 unchanged by
   CDS-WP-015; DEC-S-001 … DEC-S-125 unchanged by the rework.
   **ADRs: 3 (ADR-0001, ADR-0002, ADR-0003).**
-- Risks: RISK-001 … RISK-098 (98) — **90 `Monitored`; RISK-040, RISK-044, RISK-066,
-  RISK-067, RISK-068, RISK-069, RISK-071, and RISK-098 `Mitigating`**; **risk owner
-  model finalized** by CDS-WP-006; RISK-082 … RISK-089 added by CDS-WP-014;
+- Risks: RISK-001 … RISK-098 (98) — **89 `Monitored`; RISK-031, RISK-040, RISK-044,
+  RISK-066, RISK-067, RISK-068, RISK-069, RISK-071, and RISK-098 `Mitigating`**;
+  **risk owner model finalized** by CDS-WP-006; RISK-082 … RISK-089 added by CDS-WP-014;
   **RISK-090 … RISK-097 added by CDS-WP-015** (all `Monitored`; no existing status
   changed); **RISK-098 added by the CDS-WP-016 Candidate Finalization Governance
   Rework** directly as `Mitigating` (no existing status changed). No risk accepted

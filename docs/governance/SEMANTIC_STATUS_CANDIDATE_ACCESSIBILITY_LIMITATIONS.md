@@ -7,6 +7,16 @@
 - **Status:** **Limitation record — NOT normative, NOT evidence, NOT a waiver.**
   The normative source is the
   [Accessibility Limitations and Exception Policy](ACCESSIBILITY_LIMITATIONS_AND_EXCEPTION_POLICY.md).
+- **Current evidence pointer (2026-08-19):** the admitted AE-1 package for the
+  current source revision `semantic-status-rev-0002-candidate` is
+  **`AE1-CDS-WP016-SEMSTATUS-004`**
+  ([record](SEMANTIC_STATUS_AE1_004_ADMISSION_RECORD.md)).
+  `AE1-CDS-WP016-SEMSTATUS-002`, cited throughout the entries below, is the
+  **historical `semantic-status-rev-0001` admission**; those citations are retained
+  as written. **Candidate: YES · Stable: NO.** The **sixteen limitations and their
+  severities are unchanged — 0 Critical · 11 Significant · 5 Minor** — none was
+  added, removed, downgraded, approved, or waived, and there is still **no AE-2,
+  AE-3, or AE-4** and **no conformance of any kind**.
 
 ## The three sentences that govern this document
 
@@ -461,10 +471,10 @@ no longer unadmitted.
   continues to count toward the Significant total.
 - **Reassessment performed is not limitation deleted**, and **independence
   requirement satisfied is not executor authorship never existed**.
-- **Nothing is promoted.** No Candidate, no Stable, no approval, and no claim
-  follows from the admission. Candidate remains **No**, maturity remains
-  **Experimental**, artifact approval remains **Unapproved**, and claims remain
-  **None**.
+- **Nothing is promoted by the admission.** No Candidate, no Stable, no approval,
+  and no claim follows from an evidence admission. The family's **`Candidate`** /
+  **`Approved`** state came from a separate Human-Maintainer approval and exact-byte
+  Promotion Commit; **no artifact is Stable**, and claims remain **None**.
 
 **Next reassessment:** at the next Candidate-gate review, and on any regression
 trigger that re-opens the evidence (T-01 … T-15).
@@ -532,11 +542,15 @@ following became true, and each is a recorded regression trigger:
 - It **grants no waiver.** Accessibility requirements for Stable or
   CDS-conformant scope **cannot** be waived through an ordinary exception
   (DEC-S-059).
-- It **promotes nothing.** Candidate remains **No**, maturity **Experimental**,
-  approval **Unapproved**. The admitted evidence level is **AE-0** for every CDS
-  artifact except this channel-independent source/contract family, which holds
-  admitted **AE-1** (`AE1-CDS-WP016-SEMSTATUS-002`, source scope only) — and
-  **an admitted AE-1 promotes nothing either**.
+- It **promotes nothing.** This document never granted, and does not grant, any
+  maturity. The admitted evidence level is **AE-0** for every CDS artifact except
+  this channel-independent source/contract family, which holds admitted **AE-1** —
+  currently `AE1-CDS-WP016-SEMSTATUS-004`, bound to source revision
+  `semantic-status-rev-0002-candidate`, source scope only — and **an admitted AE-1
+  promotes nothing either**. That family is **`Candidate`** / **`Approved`** today
+  because of a separate Human-Maintainer approval and exact-byte Promotion Commit,
+  not because of anything recorded here. **No artifact is Stable**, and no claim or
+  conformance of any kind exists.
 - It **approves nothing.** Only the Human Maintainer may approve a limitation
   with normative effect, and none of these sixteen is approved.
 - It **is not a passed test**, and no entry may be netted against a strength.

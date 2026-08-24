@@ -147,7 +147,10 @@ conformance, or claim status** (DEC-S-092, DEC-S-104).
 On Semantic Status documents the objective V4 edge checks the coherence of the
 `maturityState`/`approvalState` metadata as a small state machine:
 
-- **Experimental/Unapproved** (or absent) is coherent (the committed default).
+- **Experimental/Unapproved** (or absent) is coherent — the default when no
+  lifecycle state is declared. This is a coherence rule, not a statement of
+  current state: the committed productive `semantic/status` source declares
+  `Candidate`/`Approved` at `semantic-status-rev-0002-candidate`.
 - **Candidate/Approved** is coherent **only** together — with a Candidate source
   revision (`semantic-status-rev-NNNN-candidate`) and no `testOnly`/`nonNormative`
   fixture marker. Incoherent combinations (Candidate without Approved, Approved

@@ -136,19 +136,25 @@ Produced by `RUNNER` and recorded in `RESULTS`:
 
 ## What this matrix does not do
 
-- It **awards no Candidate status.** Candidate remains **No**; maturity remains
-  **Experimental**; approval remains **Unapproved**.
+- It **awards no Candidate status.** This matrix never granted, and does not grant,
+  any maturity. The family is **`Candidate`** / **`Approved`** today at source
+  revision `semantic-status-rev-0002-candidate` because of a separate
+  Human-Maintainer approval and exact-byte Promotion Commit. **No artifact is
+  Stable.**
 - It **admits no AE-1.** The admission was a separate Human-Maintainer decision:
-  Evidence 002 was independently reviewed **PASS**, integrated, and admitted at
-  **AE-1** as `AE1-CDS-WP016-SEMSTATUS-002` for the channel-independent
-  source/contract scope only. This matrix neither produced nor granted that, and
-  the admitted accessibility evidence level of every **other** CDS artifact
-  remains **AE-0**.
+  the currently admitted package is **`AE1-CDS-WP016-SEMSTATUS-004`**,
+  independently reviewed **PASS WITH NOTES** and admitted at **AE-1** on 2026-08-19
+  for the channel-independent source/contract scope only. Evidence 002,
+  `AE1-CDS-WP016-SEMSTATUS-002`, is the historical `semantic-status-rev-0001`
+  admission. This matrix neither produced nor granted either, and the admitted
+  accessibility evidence level of every **other** CDS artifact remains **AE-0**.
 - It **is evidence mapping and supporting material, never authority.** A row
   marked `COVERED` records that a requirement is mapped to a check, not that a
   criterion passed and not that a user need is met. The coverage below is
-  unchanged by the AE-1 admission.
-- It **creates no claim** of any kind.
+  unchanged by the AE-1 admission and by the Candidate promotion: all **25 mapped
+  requirements** and their classifications — **22 `COVERED` · 3
+  `COVERED_WITH_LIMITATION` · 0 unmapped** — stand exactly as recorded.
+- It **creates no claim** of any kind, and no conformance of any kind.
 - It **replaces no normative source.** Where this matrix and the
   [Status Axis Vocabulary](../foundations/STATUS_AXIS_VOCABULARY.md) disagree,
   the Vocabulary wins and this document is corrected.

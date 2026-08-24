@@ -5,24 +5,39 @@
 - **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015
-- **Next work package** *(roadmap position — the current authorized work package)***:**
-  **CDS-WP-016 — Semantic Status Foundation Independent Evidence Review and Candidate
-  Gate** (authorized; its review work is **executed**). The Semantic Status Foundation
-  is Contract defined (CDS-WP-014) and machine-readable implemented (CDS-WP-015:
-  `semantic/status`, 25 tokens, 24/24 matches, 25/25 DE/EN, Draft dossier) —
-  **Implemented, Experimental; independently reviewed by CDS-WP-016: Independent
-  Review PASS, Candidate Recommendation GO. GO is not a Candidate award.** The
-  **Nova Candidate Maturity Review then returned NO-GO** (Candidate Accessibility
-  Gate unmet), the gap assessment **confirmed** it, and the Human-Maintainer-
-  authorized **Candidate Accessibility Gate Remediation** (internal rework of
-  CDS-WP-016, **not** a new work package) is **executed**, **independently
-  reviewed**, and its clean-HEAD evidence package **admitted**. **Candidate No**,
-  maturity **Experimental**, approval **Unapproved**, **admitted AE-1 for the
-  channel-independent Semantic Status source/contract family only**
-  (`AE1-CDS-WP016-SEMSTATUS-002`, 2026-08-17); every other artifact remains AE-0.
-  **Nova post-admission Candidate Maturity Re-Review is the next authority step**;
-  **Human-Maintainer Candidate approval not granted**; no
-  follow-up work package is authorized and CDS-WP-017 is not activated.
+- **Current work package:** **CDS-WP-016 — Semantic Status Foundation Independent
+  Evidence Review and Candidate Gate.**
+- **Candidate promotion: COMPLETE.** The Semantic Status Foundation passed the
+  Candidate gate and was promoted by the Human-Maintainer exact-byte **Promotion
+  Commit `22fa0710e2b75df22e7b420c2f9d86bbe67b2777`** on 2026-08-19 — gate **PASS**,
+  committed blob identity **15/15 exact**, regression
+  **47/47 · 64/64 · 184/184 · 24/24/0/0**, remote fast-forward **PASS**. Current
+  source revision **`semantic-status-rev-0002-candidate`**, maturity **`Candidate`**,
+  approval **`Approved`**, admitted evidence **`AE1-CDS-WP016-SEMSTATUS-004`** at
+  **AE-1** for the channel-independent Semantic Status source/contract family only.
+  `AE1-CDS-WP016-SEMSTATUS-002` is a historical `semantic-status-rev-0001` admission
+  only; every other artifact remains **AE-0**. **No artifact is Stable**, claims
+  **none**, conformance **none**, publication **`Private Development`**.
+- **CDS-WP-016 state:** **post-promotion current-state reconciliation prepared;
+  closure pending review and Human-Maintainer integration.**
+- **CDS-WP-017:** **not authorized** — `INACTIVE`, `NOT DEFINED`, work not started.
+
+## Next allowed authority sequence
+
+**No design work, no visual work, and no new work package is activated.** The only
+authorized next steps, in this order:
+
+| # | Step | Authority |
+| --- | --- | --- |
+| 1 | **Fresh Independent Governance Reconciliation Review** of the post-promotion reconciliation | Reviewer ≠ executor |
+| 2 | **Nova adjudication** of that review | Nova — recommendation only, never approval |
+| 3 | **Human-Maintainer exact-byte reconciliation integration commit** | Human Maintainer |
+| 4 | **CDS-WP-016 closure becomes committed and effective** | Effective at step 3 |
+| 5 | Future work-package planning — **only after closure**, and only on an explicit Nova prompt with Human-Maintainer authorization | Nova + Human Maintainer |
+
+**Step 4 is not reached before step 3.** Proposed closure bytes are not committed
+closure, and a review PASS is not a commit. **No visual-design work is activated at
+any step above.**
 
 ## Status of completed work packages
 
@@ -444,17 +459,28 @@ nothing; evidence that never transfers across a source revision; exact-byte
 pre-commit evidence binding; **AE-1 admission before Candidate approval**; the
 **Promotion Commit** as the maturity transition point), **RISK-098**, the
 [Candidate Approval Record Template](../docs/operations/CANDIDATE_APPROVAL_RECORD_TEMPLATE.md),
-and evidence-runner result format **v2**. `semantic-status-rev-0002-candidate` is
-**reserved and not created**; the authoritative source revision stays
-`semantic-status-rev-0001`; **no Candidate evidence was produced, none admitted,
-and no Candidate approval granted**; no ADR was added.
+and evidence-runner result format **v2**. At that milestone
+`semantic-status-rev-0002-candidate` was **reserved and not created**, the
+authoritative source revision was still `semantic-status-rev-0001`, **that rework
+produced no Candidate evidence, admitted none, and granted no Candidate approval**,
+and no ADR was added.
 
-What remains open is the **Candidate authority closure**: the **Nova post-admission
-Candidate Maturity Re-Review** has **not yet been performed**, and the
-**Human-Maintainer Candidate approval is not granted**. Candidate **No**, maturity
-**Experimental**, approval **Unapproved**, claims **none**; **every other artifact
-remains AE-0** and no AE-2, AE-3, or AE-4 exists. No
-follow-up work package is authorized; CDS-WP-017 is not activated.
+**The Candidate authority closure has since completed.** Fresh revision-bound
+evidence `AE1-CDS-WP016-SEMSTATUS-004` was produced and independently reviewed
+(**PASS WITH NOTES**), the Human Maintainer **admitted** it at AE-1, the **Nova
+Candidate Finalization Review returned GO WITH NOTES**, the Human Maintainer
+**approved Candidate** (`AUTHORIZED_PENDING_EXACT_BYTE_INTEGRATION`), and the
+exact-byte **Promotion Commit `22fa0710e2b75df22e7b420c2f9d86bbe67b2777`** made it
+effective on 2026-08-19.
+
+Candidate is now **YES** at `semantic-status-rev-0002-candidate`, maturity
+**`Candidate`**, approval **`Approved`**. **No artifact is Stable**, claims remain
+**none**, conformance remains **none**, **every other artifact remains AE-0**, and
+no AE-2, AE-3, or AE-4 exists. CDS-WP-016 is in **post-promotion current-state
+reconciliation**; its closure becomes authoritative only after a Fresh Independent
+Governance Reconciliation Review, Nova adjudication, and a Human-Maintainer
+exact-byte integration commit. No follow-up work package is authorized;
+**CDS-WP-017 is `INACTIVE`, `NOT AUTHORIZED`, and `NOT DEFINED`**.
 
 ### Objective of CDS-WP-016
 

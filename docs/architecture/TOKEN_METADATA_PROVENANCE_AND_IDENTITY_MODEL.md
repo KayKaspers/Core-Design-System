@@ -109,9 +109,18 @@ output whose origin cannot be established is treated as a defect, not a source
 
 Every normative source set carries a **maturity state** (per the
 [Artifact Maturity Lifecycle](../governance/ARTIFACT_MATURITY_LIFECYCLE.md)) and an
-**approval state**. **No source set is Candidate or Stable**, and none is approved,
-by this work package — none exists. Maturity, release version, and publication state
-remain separate axes (DEC-S-035).
+**approval state**. **This work package makes no source set Candidate or Stable and
+approves none** — an architecture model grants no maturity.
+
+Current state: the source set **`semantic/status`** is **`Candidate`** and
+**`Approved`**, at source revision `semantic-status-rev-0002-candidate`, made
+effective by the Human-Maintainer exact-byte Promotion Commit
+`22fa0710e2b75df22e7b420c2f9d86bbe67b2777` (2026-08-19). **No source set is
+Stable**, and **no other source set is Candidate**. Maturity is never inherited:
+no source set acquires Candidate status automatically from another, from this
+model, or from carrying metadata that says so.
+
+Maturity, release version, and publication state remain separate axes (DEC-S-035).
 
 ## Compatibility and migration references
 

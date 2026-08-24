@@ -88,7 +88,7 @@ policy that does not exist must name the work package that will supply it.
 | CR-031 | Shared CDS Candidate | 7 Distribution and Enablement | DEC-S-030 and invariant 12: no mandatory external runtime service; local assets; air-gap tolerance; distribution neutrality. | [Channels](ARTIFACT_DISTRIBUTION_AND_CHANNEL_MODEL.md) | Distribution technology (deliberately open). | CDS-WP-006 | Addressed by architecture |
 | CR-032 | Shared CDS Candidate | 8 Evidence and Quality | Offline, degraded, and restricted are distinct states across the five axes; degraded stays distinguishable from unavailable. | [Evidence & Status](EVIDENCE_TRACEABILITY_AND_STATUS_SEMANTICS.md) | Concrete state taxonomy. | CDS-WP-006 | Addressed by architecture |
 | CR-033 | Shared CDS Candidate | 1 Strategy and Governance | Layer 1 governance; the semantic-first principle makes shared vocabulary an architectural property of the token flow. | [Architecture](DESIGN_SYSTEM_ARCHITECTURE.md) | Glossary and terminology governance. | CDS-WP-006 | Partially addressed - later design decision required |
-| CR-034 | Shared CDS Candidate | 1 Strategy and Governance | Versioning governance now defined: MAJOR.MINOR.PATCH, immutable release identity, seven maturity states, eight compatibility axes (DEC-S-035…DEC-S-039). Layer 8 traceability supplies the mechanism (DEC-S-031). | [Maturity Lifecycle](../governance/ARTIFACT_MATURITY_LIFECYCLE.md) | Concrete foundations and implementation. Governance exists; **no artifact is versioned, Candidate, or Stable**. | CDS-WP-008 | Partially addressed - later design decision required |
+| CR-034 | Shared CDS Candidate | 1 Strategy and Governance | Versioning governance now defined: MAJOR.MINOR.PATCH, immutable release identity, seven maturity states, eight compatibility axes (DEC-S-035…DEC-S-039). Layer 8 traceability supplies the mechanism (DEC-S-031). | [Maturity Lifecycle](../governance/ARTIFACT_MATURITY_LIFECYCLE.md) | Concrete foundations and implementation. Governance exists and the maturity model has now been exercised once: the channel-independent Semantic Status source/contract family (`semantic/status`, source revision `semantic-status-rev-0002-candidate`) is **Candidate / Approved**. **No artifact is Stable**, and **no artifact carries a release version** — no release and no tag exist. | CDS-WP-008 | Partially addressed - later design decision required |
 | CR-035 | Out of CDS Scope | Not applicable | Permanent non-goal. Consumer-owned business logic and domain semantics. | - | None. The boundary is final. | - | Out of CDS scope |
 | CR-036 | Out of CDS Scope | Not applicable | Permanent non-goal. Consumer-owned backend, infrastructure, and security architecture. | - | None. The boundary is final. | - | Out of CDS scope |
 | CR-037 | Product-local Requirement | 2 Brand and Identity | Consumer-local Artifact (class 7). Not CDS, not an override, not a defect. Enters only via reconciliation. | [Profiles](PRODUCT_PROFILE_AND_EXTENSION_MODEL.md) | Whether any part becomes a Profile Candidate - later, per consumer. | CDS-WP-006 | Consumer-owned |
@@ -192,10 +192,16 @@ Requirements whose architectural answer is weakest, and why:
 5. **CR-005, CR-009** - operations patterns confirmed as a real consumer need,
    but modelled as a Domain Pattern Family precisely because generalizability is
    unproven (DEC-S-027, RISK-023).
-6. **CR-034 versioning** - *(reframed by CDS-WP-007)* the traceability mechanism
-   exists and CDS-WP-006 supplied the versioning and maturity model. What is
-   missing is a **versioned artifact to apply it to** — the model has never been
-   exercised, because nothing has reached Candidate.
+6. **CR-034 versioning** - *(reframed by CDS-WP-007; current state reconciled
+   after the 2026-08-19 Candidate promotion)* the traceability mechanism exists
+   and CDS-WP-006 supplied the versioning and maturity model. The **maturity**
+   half has now been exercised once, by the first controlled Candidate
+   transition — the channel-independent Semantic Status source/contract
+   family (`semantic-status-rev-0002-candidate`, **Candidate / Approved**).
+   What is still missing is a **release-versioned artifact** to apply the
+   MAJOR.MINOR.PATCH and immutable-release-identity rules to: no artifact is
+   Stable, no release and no tag exist, and the model is exercised for exactly
+   one artifact family.
 7. **CR-017 setup** - all three consumers built their own. Whether this is a CDS
    pattern at all is unresolved.
 

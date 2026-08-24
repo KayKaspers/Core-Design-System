@@ -4,10 +4,19 @@
 - **Registered by:** CDS-WP-014 — Semantic Status Foundation Contract and First
   Candidate Plan
 - **Date:** 2026-07-17
-- **Status:** **Normative** role contract for the future machine-readable
-  Semantic Status source set, pending Human-Maintainer commit. Experimental; no
-  Candidate status. **No token source file, no token name as a shipped
+- **Status:** **Normative** role contract for the machine-readable Semantic
+  Status source set. **No token source file, no token name as a shipped
   identifier, and no token value exists or is created here.**
+- **Current lifecycle state of the contracted source set `semantic/status`:**
+  source revision **`semantic-status-rev-0002-candidate`** · maturity
+  **`Candidate`** · approval **`Approved`** · admitted evidence
+  **`AE1-CDS-WP016-SEMSTATUS-004`** at **AE-1**, channel-independent
+  source/contract scope only · Promotion Commit
+  **`22fa0710e2b75df22e7b420c2f9d86bbe67b2777`** (2026-08-19) · Stable **no** ·
+  claims **none** · conformance **none**. See the
+  [Candidate Promotion Effectivity Record](../governance/SEMANTIC_STATUS_CANDIDATE_PROMOTION_EFFECTIVITY_RECORD.md).
+  The token semantics, role definitions, naming rules, layering, constraints, and
+  the non-visual boundary below are **unchanged** by that lifecycle transition.
 
 ## Semantic role boundary
 
@@ -52,7 +61,7 @@ colours, icons, or other appearance values:
 | DTCG binding | **2025.10** (pinned; Format/Color/Resolver per ADR-0001) |
 | CDS profile | **Version 1** (strict JSON `.tokens.json`, `io.github.kaykaspers.cds` payload) |
 | Maturity at creation | **Experimental** |
-| Candidate | **Not in CDS-WP-014** — per the [Candidate Plan](../roadmap/FIRST_SEMANTIC_STATUS_CANDIDATE_PLAN.md) gates |
+| Current maturity | **`Candidate`** — reached in CDS-WP-016 through the [Candidate Plan](../roadmap/FIRST_SEMANTIC_STATUS_CANDIDATE_PLAN.md) gates, effective at the Promotion Commit |
 
 Technical token identifiers will follow the CDS naming profile
 (`^[a-z][a-z0-9-]*$` segments, no case-only collisions, technical IDs separate
@@ -102,10 +111,12 @@ fail-closed reference rules (DEC-S-073…082, DEC-S-091).
 
 **Update (CDS-WP-015):** the planned source set is now implemented as
 [`semantic/status`](../../tokens/semantic/status/semantic-status.tokens.json)
-(Experimental, Unapproved; 5 axis groups, 25 non-visual tokens, manifest and
-resolver; DEC-S-115…116). Everything below documents the CDS-WP-014 state it
-constrained and remains the binding contract for that source set; **the tokens
-carry identity values only — still no visual value, and no Candidate status.**
+(5 axis groups, 25 non-visual tokens, manifest and resolver; DEC-S-115…116). At
+implementation it was `Experimental`, `Unapproved`; it is **now `Candidate`,
+`Approved`, at revision `semantic-status-rev-0002-candidate`**. Everything below
+documents the CDS-WP-014 state it constrained and remains the binding contract for
+that source set; **the tokens carry identity values only — still no visual
+value.**
 
 **As of CDS-WP-014 no semantic status token exists.** No `.tokens.json` source,
 no token name, no token value, no manifest entry, and no resolver step for
@@ -139,10 +150,13 @@ maturity step (DEC-S-114):
 
 The source set's governance metadata is contract-bounded:
 
-- **Experimental/Unapproved is the current committed state** of
+- **`Candidate`/`Approved` is the current committed state** of
   [`semantic/status`](../../tokens/semantic/status/semantic-status.tokens.json)
-  (`maturityState: Experimental`, `approvalState: Unapproved`, revision
-  `semantic-status-rev-0001`).
+  (`maturityState: Candidate`, `approvalState: Approved`, revision
+  `semantic-status-rev-0002-candidate`), effective at Promotion Commit
+  `22fa0710e2b75df22e7b420c2f9d86bbe67b2777`. It was
+  `Experimental`/`Unapproved` at revision `semantic-status-rev-0001` before that
+  commit.
 - **Candidate/Approved is admissible only after the governance gate** and only as
   a coherent whole: `Candidate` **with** `Approved`, a Candidate source revision
   (`semantic-status-rev-NNNN-candidate`), and no fixture marker. The offline
@@ -163,13 +177,15 @@ The source set's governance metadata is contract-bounded:
 value, **no** validator rule, **no** Candidate revision regex, and **no**
 Candidate/Approved coherence rule.)*
 
-- **`semantic-status-rev-0002-candidate` is the authorized intended identity of
-  the first Candidate revision** of this source set. It is **reserved, not
-  created**: it is **not** the current authoritative source, **not** a current
-  revision of any file in this repository, and **not** Candidate.
-- **The current authoritative source remains `semantic-status-rev-0001`,
-  `maturityState: Experimental`, `approvalState: Unapproved`.** No artifact may
-  present the reserved future revision as current.
+- **`semantic-status-rev-0002-candidate` was the authorized intended identity of
+  the first Candidate revision** of this source set. It has since been **created
+  and integrated**: it is **the current authoritative source revision**, and it
+  **is** Candidate. The reservation rule below is retained because it governs how
+  any *future* Candidate revision identity must be handled before it exists.
+- **The current authoritative source is `semantic-status-rev-0002-candidate`,
+  `maturityState: Candidate`, `approvalState: Approved`.** Before the Promotion
+  Commit it was `semantic-status-rev-0001`, `Experimental`, `Unapproved`. **No
+  artifact may present a reserved, not-yet-created future revision as current.**
 - **Proposed Candidate metadata grants nothing.** A Proposed Candidate Revision
   may carry `Candidate`/`Approved` and a Candidate source revision in its bytes as
   **target metadata**, where its context says so explicitly. Those bytes are not
@@ -178,11 +194,18 @@ Candidate/Approved coherence rule.)*
   [Candidate Approval Record Template](../operations/CANDIDATE_APPROVAL_RECORD_TEMPLATE.md)
   only at the future Candidate finalization authority step** — after fresh
   revision-bound AE-1 evidence, a fresh independent evidence review, a
-  Human-Maintainer AE-1 admission, and a Nova finalization review. No instance
-  exists.
+  Human-Maintainer AE-1 admission, and a Nova finalization review. **One instance
+  now exists** — `CAR-CDS-WP016-SEMSTATUS-001` — created at exactly that step; the
+  same requirements apply unchanged to any future instance.
 - **Candidate effectivity occurs at the Human-Maintainer exact-byte Promotion
   Commit**, not at approval and not at validation. Any byte drift between the
-  approved bytes and the integrated source invalidates the pending approval.
+  approved bytes and the integrated source invalidates the pending approval. For
+  this source set that commit is `22fa0710e2b75df22e7b420c2f9d86bbe67b2777`, and
+  the exact-byte gate passed with `15 / 15` committed blob identities exact.
+- **Stable is still not reached**, no claim of any level exists, and no
+  conformance of any kind is stated. A future Stable revision needs its own gate,
+  its own fresh evidence, its own independent review, and its own admission —
+  evidence never transfers across a source revision (DEC-S-126).
 
 ## Related documents
 
@@ -193,3 +216,5 @@ Candidate/Approved coherence rule.)*
 - [Machine-Readable Validation Contract](../architecture/MACHINE_READABLE_VALIDATION_CONTRACT.md)
 - [First Semantic Status Candidate Plan](../roadmap/FIRST_SEMANTIC_STATUS_CANDIDATE_PLAN.md)
 - [Candidate Approval Record Template](../operations/CANDIDATE_APPROVAL_RECORD_TEMPLATE.md)
+- [Semantic Status Candidate Approval Record](../operations/SEMANTIC_STATUS_CANDIDATE_APPROVAL_RECORD.md) — `CAR-CDS-WP016-SEMSTATUS-001`
+- [Candidate Promotion Effectivity Record](../governance/SEMANTIC_STATUS_CANDIDATE_PROMOTION_EFFECTIVITY_RECORD.md)

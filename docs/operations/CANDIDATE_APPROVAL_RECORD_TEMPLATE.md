@@ -13,18 +13,26 @@
 | This document is **not** | Why the distinction matters |
 | --- | --- |
 | A Candidate approval | No Human Maintainer has decided anything here. |
-| A concrete Semantic Status Candidate Approval Record | No instance of this template exists anywhere in the repository. |
+| A concrete Semantic Status Candidate Approval Record | One instance exists — [`SEMANTIC_STATUS_CANDIDATE_APPROVAL_RECORD.md`](SEMANTIC_STATUS_CANDIDATE_APPROVAL_RECORD.md), Record ID `CAR-CDS-WP016-SEMSTATUS-001`. This template is not that record and carries none of its decisions. |
 | Evidence | It is a decision instrument; evidence is produced, reviewed, and admitted elsewhere. |
 | A maturity change | Nothing in CDS changes maturity because this template exists. |
 | A promotion | Promotion happens only at a Human-Maintainer exact-byte Promotion Commit. |
 | A claim, conformance, or release statement | None of those is created here, or valid today for anyone. |
 
-**Current CDS state, unchanged by this template:** Candidate **No** · maturity
-**Experimental** · approval **Unapproved** · authoritative Semantic Status source
-revision **`semantic-status-rev-0001`** · claims **none** · publication
+**Current CDS state, unchanged by this template:** exactly **one** Candidate
+artifact family exists — the Semantic Status Foundation / `semantic/status`, at
+source revision **`semantic-status-rev-0002-candidate`**, maturity
+**`Candidate`**, approval **`Approved`**, made effective by Promotion Commit
+`22fa0710e2b75df22e7b420c2f9d86bbe67b2777` (2026-08-19). **No Stable artifact
+exists.** Claims **none** · conformance **none** · publication
 **`Private Development`** · CDS-WP-017 **not activated**.
 
-Instantiating this template is a **future, separately authorized act**. An
+That state was established by a Human-Maintainer decision and an exact-byte
+Promotion Commit recorded in the instance named above. **This template
+established none of it**, and remains a template: an empty form that records
+nothing, approves nothing, and is authority of no kind.
+
+Instantiating this template is a **separately authorized act each time**. An
 instance may be created only at the Candidate finalization authority step defined
 by DEC-S-126, after fresh revision-bound AE-1 evidence, a fresh independent
 evidence review, a Human-Maintainer AE-1 admission, and a Nova Candidate
@@ -240,7 +248,10 @@ Candidate is bounded validation only, and is never normative
 - [Accessibility Evidence and Claims Model](../governance/ACCESSIBILITY_EVIDENCE_AND_CLAIMS_MODEL.md) — normative
 - [Elevated Change Dossier Template](ELEVATED_CHANGE_DOSSIER_TEMPLATE.md)
 - [Accessibility Evidence Record Template](ACCESSIBILITY_EVIDENCE_RECORD_TEMPLATE.md)
-- [Semantic Status AE-1 Admission Record](../governance/SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md) — the existing, separate admission instrument
+- [Semantic Status Candidate Approval Record](SEMANTIC_STATUS_CANDIDATE_APPROVAL_RECORD.md) — `CAR-CDS-WP016-SEMSTATUS-001`, the one existing instance of this template
+- [Semantic Status AE-1 Admission Record](../governance/SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md) — separate admission instrument, `AE1-CDS-WP016-SEMSTATUS-002`, `semantic-status-rev-0001` scope only
+- [Semantic Status AE1-004 AE-1 Admission Record](../governance/SEMANTIC_STATUS_AE1_004_ADMISSION_RECORD.md) — separate admission instrument, `AE1-CDS-WP016-SEMSTATUS-004`
+- [Candidate Promotion Effectivity Record](../governance/SEMANTIC_STATUS_CANDIDATE_PROMOTION_EFFECTIVITY_RECORD.md)
 - [Semantic Status Candidate Dossier](SEMANTIC_STATUS_CANDIDATE_DOSSIER.md)
 - [Decision Index](../decisions/DECISION_INDEX.md) — DEC-S-126
 - [Risk Register](../risks/RISK_REGISTER.md) — RISK-098

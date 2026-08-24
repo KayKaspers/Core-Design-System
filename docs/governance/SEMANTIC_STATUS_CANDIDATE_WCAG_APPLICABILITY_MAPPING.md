@@ -90,9 +90,15 @@ are not, because there is nothing to operate and no product scope.
 **Evidence required now:** the source-level structural properties named per row,
 produced by the CDS-WP-016 evidence run and recorded in the
 [AE-1 Evidence Record](../operations/SEMANTIC_STATUS_CANDIDATE_AE1_EVIDENCE_RECORD.md)
-— independently reviewed **PASS** as clean-HEAD Evidence 002 and **admitted at
-AE-1** (`AE1-CDS-WP016-SEMSTATUS-002`, source scope only). **Admitted structural
-evidence is not a criterion pass**; see the claim boundary below.
+— independently reviewed **PASS** as clean-HEAD Evidence 002 and admitted at AE-1 as
+`AE1-CDS-WP016-SEMSTATUS-002` for source revision `semantic-status-rev-0001`.
+**The currently admitted package is `AE1-CDS-WP016-SEMSTATUS-004`**, bound to the
+current source revision `semantic-status-rev-0002-candidate`, source scope only
+([record](SEMANTIC_STATUS_AE1_004_ADMISSION_RECORD.md);
+[evidence record](../operations/SEMANTIC_STATUS_CANDIDATE_AE1_004_EVIDENCE_RECORD.md)).
+**Admitted structural evidence is not a criterion pass**; see the claim boundary
+below. **Current WCAG conformance: NONE.** All applicability classifications in this
+document are unchanged.
 **Evidence deferred until representation:** all perception, operation, and
 assistive-technology exposure aspects; these require AE-2 and AE-3 under the
 applicable Channel Accessibility Profile and are planned in the
@@ -230,7 +236,7 @@ row is **not a passed row** and supports no statement whatsoever.
 | `NOT_APPLICABLE_WITH_RATIONALE` | **1** (historical row only) |
 | Historical removed reference rows | **1** (4.1.1 Parsing) |
 | **Total displayed rows** | **56** |
-| Criteria for which any evidence exists today | **5** — Group A only, and only its source-level part, only at **admitted AE-1** (`AE1-CDS-WP016-SEMSTATUS-002`, source scope) |
+| Criteria for which any evidence exists today | **5** — Group A only, and only its source-level part, only at **admitted AE-1** (`AE1-CDS-WP016-SEMSTATUS-004`, source scope) |
 | Criteria for which CDS makes a conformance statement | **0** |
 
 **Independent re-count:** 5 + 30 + 20 = **55** current criteria, plus the single

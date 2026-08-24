@@ -22,13 +22,16 @@ Every trigger below is a way that can happen.
 
 ## Evidence effects — defined once
 
-*(Referenced by the trigger table. `Applicable evidence` today means the admitted
-AE-1 package `AE1-CDS-WP016-SEMSTATUS-002` — Evidence 002, independently reviewed
-**PASS**, integrated, and admitted by the Human Maintainer on 2026-08-17 for the
-channel-independent source/contract scope only. Once other levels exist they are
-included. **E-REREVIEW is unaffected by that admission:** a completed independent
-review of the current package satisfies no future trigger, and every trigger below
-requires a fresh one.)*
+*(Referenced by the trigger table. **`Applicable evidence` today means the admitted
+AE-1 package `AE1-CDS-WP016-SEMSTATUS-004`** — Evidence 004, independently reviewed
+**PASS WITH NOTES**, admitted by the Human Maintainer on 2026-08-19, and bound to
+source revision **`semantic-status-rev-0002-candidate`**, channel-independent
+source/contract scope only.
+`AE1-CDS-WP016-SEMSTATUS-002` — Evidence 002, admitted 2026-08-17 — is the
+**historical `semantic-status-rev-0001` admission** and is no longer the applicable
+package. Once other levels exist they are included. **E-REREVIEW is unaffected by
+either admission:** a completed independent review of the current package satisfies
+no future trigger, and every trigger below requires a fresh one.)*
 
 | Effect | Meaning |
 | --- | --- |
@@ -69,16 +72,23 @@ Contract's change control.)*
 *(Additive clarification. The trigger count remains **15**, T-01 … T-15 are
 unchanged, and **T-12 is not waived, narrowed, or weakened**.)*
 
-The planned first Candidate will carry a **new** source revision — the reserved
-identity `semantic-status-rev-0002-candidate`, which **has not been created**.
-That revision change **is** a T-12 event and takes its full effects:
-**E-INVALID · E-REEXEC · E-REREVIEW · E-GATE**.
+The first Candidate carried a **new** source revision —
+`semantic-status-rev-0002-candidate`, since **created and integrated**. That
+revision change **was** a T-12 event and took its full effects:
+**E-INVALID · E-REEXEC · E-REREVIEW · E-GATE**. It was handled exactly that way:
+`AE1-CDS-WP016-SEMSTATUS-002` was **not** carried over, and the new revision
+received a fresh evidence execution (`AE1-CDS-WP016-SEMSTATUS-004`), a fresh
+independent review, and a fresh Human-Maintainer admission before Candidate
+approval.
+
+**T-12 remains in force and is not waived.** Every future bound-input or
+source-revision change triggers it again, with the same full effects.
 
 | Question | Answer |
 | --- | --- |
 | Does DEC-S-126 waive T-12? | **No.** |
 | Does the admitted `AE1-CDS-WP016-SEMSTATUS-002` carry over to the Candidate revision? | **No.** It is bound to `semantic-status-rev-0001`. Old evidence never transfers. |
-| What does the Candidate revision require? | A **new** evidence execution, a **new** independent review, and a **new** Human-Maintainer admission — the full cycle, before Candidate approval. |
+| What did the Candidate revision require? | A **new** evidence execution, a **new** independent review, and a **new** Human-Maintainer admission — the full cycle, before Candidate approval. All three were performed, producing `AE1-CDS-WP016-SEMSTATUS-004`. |
 | What does exact-byte continuity actually preserve? | Only the **new** Candidate-revision evidence, and only across the later persistence commit, when the reviewed, staged, and committed bytes are byte-identical. |
 | Does a bit-identical Promotion Commit re-trigger T-12? | **No** — persisting already-reviewed exact bytes changes no identity. **Any** byte difference does re-trigger it, with no "small fix" exemption. |
 
@@ -154,11 +164,13 @@ obligations above are not optional.
 
 - It **is not mitigation.** Writing a regression plan prevents no regression.
 - It **produces no evidence** and **creates no claim**.
-- It **promotes nothing**: Candidate remains **No**, maturity **Experimental**,
-  approval **Unapproved**. The admitted evidence level is **AE-0** for every CDS
-  artifact except this channel-independent source/contract family, which holds
-  admitted **AE-1** (`AE1-CDS-WP016-SEMSTATUS-002`, source scope only) — an
-  admission this plan neither produced nor extends.
+- It **promotes nothing**: this plan never granted, and does not grant, any
+  maturity. The admitted evidence level is **AE-0** for every CDS artifact except
+  this channel-independent source/contract family, which holds admitted **AE-1** —
+  currently `AE1-CDS-WP016-SEMSTATUS-004`, source scope only — an admission this
+  plan neither produced nor extends. That family is **`Candidate`** today because of
+  a separate Human-Maintainer approval and exact-byte Promotion Commit; **no
+  artifact is Stable**, and no claim or conformance exists.
 
 ## Related documents
 

@@ -4,9 +4,12 @@
 - **Registered by:** CDS-WP-014 — Semantic Status Foundation Contract and First
   Candidate Plan
 - **Date:** 2026-07-17
-- **Status:** **A plan, not a promotion.** Pending Human-Maintainer commit.
-  **Nothing is Candidate today** (DEC-S-113, DEC-S-114); this document defines
-  what the first Candidate would be and what must be true first.
+- **Status:** **A plan, not a promotion.** This document defines what the first
+  Candidate would be and what had to be true first. **The plan is now complete**:
+  the artifact it describes reached Candidate on 2026-08-19 — see
+  [Candidate Plan Completion — 2026-08-19](#candidate-plan-completion--2026-08-19)
+  at the end of this document. A plan never granted the promotion, and this one did
+  not (DEC-S-113, DEC-S-114).
 - **Update (CDS-WP-015):** CDS-WP-014 is committed; the machine-readable source
   set, the DE/EN terminology mapping, and the status fixtures exist.
 - **Update (CDS-WP-016, 2026-08-17):** the ten-prerequisite list below is
@@ -14,7 +17,8 @@
   current, binding prerequisite view is the additive section
   [Candidate accessibility gate — additive correction](#candidate-accessibility-gate--additive-correction-cds-wp-016-2026-08-17)
   near the end of this document. Everything before it is retained as the
-  historical CDS-WP-014 / CDS-WP-015 record. **Candidate remains No.**
+  historical CDS-WP-014 / CDS-WP-015 record. **Candidate was still No at that
+  date.**
 
 ## Target artifact
 
@@ -115,7 +119,9 @@ registered risk (RISK-089) and a NO-GO trigger, not a stretch goal.
 
 Prerequisite 1 (WP-014 committed) is met; 4 and parts of 5 are implemented but
 their evidence is executor-produced and **independently unreviewed**;
-prerequisites 2–3 and 6–10 remain open. **Candidate Status: Not Candidate.**
+prerequisites 2–3 and 6–10 remain open. **Candidate Status after CDS-WP-015: Not
+Candidate.** *(Historical — the gate closed later; see
+[Candidate Plan Completion — 2026-08-19](#candidate-plan-completion--2026-08-19).)*
 Detail: [Candidate Dossier](../operations/SEMANTIC_STATUS_CANDIDATE_DOSSIER.md).
 
 ## Known blockers
@@ -236,12 +242,16 @@ CDS-WP-015; blocker 3 (no accessibility/content/parity review evidence) is
 partially closed — contract-level reviews exist and **AE-1 is now admitted for the
 source scope**, but **no user research and no AT execution** exist.
 
-### Current status
+### Status as of 2026-08-17
 
 **Candidate: No. Maturity: Experimental. Approval: Unapproved. Admitted
 accessibility evidence level: AE-1 for the channel-independent Semantic Status
 source/contract family only (AE-0 for every other CDS artifact). Claims: none.
 CDS-WP-017: not activated.**
+
+*(Superseded as a current-state statement by
+[Candidate Plan Completion — 2026-08-19](#candidate-plan-completion--2026-08-19);
+retained as the historical record of this date.)*
 
 **AE-3 and AE-4 are not Candidate prerequisites for this source-only Candidate** —
 the normative Candidate gate does not require them. They remain future **Stable**,
@@ -266,7 +276,7 @@ requires revision-bound evidence for exactly those bytes, and a new revision
 invalidates the AE-1 admitted for `semantic-status-rev-0001`. **DEC-S-126** names
 the intermediate state instead of committing an unevidenced Candidate.
 
-| Item | State today |
+| Item | State on 2026-08-18 *(historical)* |
 | --- | --- |
 | Authoritative source revision | **`semantic-status-rev-0001`** · Experimental · Unapproved |
 | Reserved future Candidate revision | `semantic-status-rev-0002-candidate` — **authorized and reserved; NOT created, NOT current, NOT Candidate** |
@@ -295,9 +305,53 @@ invalidates it — there is no "small fix" exemption. **Candidate maturity becom
 effective only at the Promotion Commit**, never at approval and never at a
 validator pass.
 
-**Nothing in this section grants Candidate.** Candidate: **No**. Maturity:
-**Experimental**. Approval: **Unapproved**. Claims: **none**. CDS-WP-017: **not
-activated**.
+**Nothing in this section grants Candidate.** At the date of this section
+(2026-08-18) Candidate was **No**, maturity **Experimental**, approval
+**Unapproved**, claims **none**, CDS-WP-017 **not activated**.
+
+## Candidate Plan Completion — 2026-08-19
+
+**This is the current section.** Every section above it is the historical plan and
+is **not rewritten**; each recorded what was required or true at its own date.
+
+### The plan's Candidate-finalization sequence completed
+
+| # | Step | Authority | Result |
+| --- | --- | --- | --- |
+| 1 | Proposed Candidate bytes prepared and enumerated by identity | Executor | Complete — 3 files, manifest `497` bytes, SHA-256 `3b80d148…` |
+| 2 | Fresh revision-bound AE-1 evidence `AE1-CDS-WP016-SEMSTATUS-004` | Executor | **Pass with limitations** |
+| 3 | Fresh independent evidence review (reviewer ≠ executor) | Reviewer | **PASS WITH NOTES** |
+| 4 | Human-Maintainer evidence admission | Human Maintainer | **APPROVED / ADMITTED** |
+| 5 | Nova Candidate Finalization Review | Nova | **GO WITH NOTES** — recommendation only |
+| 6 | Human-Maintainer Candidate approval | Human Maintainer | **`AUTHORIZED_PENDING_EXACT_BYTE_INTEGRATION`** |
+| 7 | **Exact-byte Promotion Commit** | Human Maintainer | **`22fa0710e2b75df22e7b420c2f9d86bbe67b2777`**, 2026-08-19 |
+| 8 | Post-commit blob verification and full regression | Human Maintainer | **PASS** — 15/15 blob identities exact; 47/47 · 64/64 · 184/184 · 24/24/0/0 |
+
+Both the ten CDS-WP-014 prerequisites and the nine Candidate accessibility gate
+requirements of the additive correction above are **satisfied for the promoted
+bytes**, and the Candidate accessibility gate elements are recorded requirement by
+requirement in the
+[Candidate Approval Record](../operations/SEMANTIC_STATUS_CANDIDATE_APPROVAL_RECORD.md).
+
+### Current state
+
+| Item | Value |
+| --- | --- |
+| **Candidate** | **YES** |
+| Source revision | **`semantic-status-rev-0002-candidate`** |
+| Maturity · approval | **`Candidate`** · **`Approved`** |
+| Admitted evidence in force | **`AE1-CDS-WP016-SEMSTATUS-004`** at **AE-1**, source/contract scope only |
+| **Stable** | **NO** |
+| Claims · conformance | **none** · **none** |
+| AE-2 / AE-3 / AE-4 · channel · consumer evidence | **none** everywhere |
+| Visual value · component | **none** · **none** |
+| **CDS-WP-017** | **inactive, not authorized, not defined** |
+
+The plan is complete for the first Candidate and grants nothing further. A **Stable**
+transition needs its own gate, its own fresh evidence, its own independent review,
+and its own admission; **evidence never transfers across a source revision**
+(DEC-S-126). See the
+[Candidate Promotion Effectivity Record](../governance/SEMANTIC_STATUS_CANDIDATE_PROMOTION_EFFECTIVITY_RECORD.md).
 
 ## Related documents
 

@@ -63,30 +63,59 @@ approved.
   maturity / channel boundary + 1 candidate finalization / maturity / evidence
   transition decision ·
   **ADRs: 3 (ADR-0001, ADR-0002, ADR-0003)**
-- Risks: RISK-001 … RISK-098 (98) — **90 Monitored; RISK-040, RISK-044, RISK-066,
-  RISK-067, RISK-068, RISK-069, RISK-071, RISK-098 Mitigating**; **owner model
-  finalized**; no risk accepted or closed
+- Risks: RISK-001 … RISK-098 (98) — **89 Monitored; RISK-031, RISK-040, RISK-044,
+  RISK-066, RISK-067, RISK-068, RISK-069, RISK-071, RISK-098 Mitigating**; **owner
+  model finalized**; no risk accepted or closed
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015
 - Current work package: **CDS-WP-016 — Semantic Status Foundation Independent Evidence
-  Review and Candidate Gate** (the authorized work package; its review work is
+  Review and Candidate Gate** (the authorized work package). Its review work is
   **executed** — **Independent Review PASS**, **Candidate Recommendation GO**;
   **GO is not a Candidate award**. The **Nova Candidate Maturity Review** then
   returned **NO-GO** (Candidate Accessibility Gate unmet), the read-only gap
   assessment **confirmed** it, and the Human-Maintainer-authorized **Candidate
   Accessibility Gate Remediation** — internal rework of CDS-WP-016, **not** a new
-  work package — is **executed**, **independently reviewed**, and admitted;
-  **Candidate No**, admitted accessibility evidence **AE-1 for the
-  channel-independent Semantic Status source/contract family only**
-  (`AE1-CDS-WP016-SEMSTATUS-002`, 2026-08-17; every other artifact **AE-0**),
-  **Nova post-admission Candidate Maturity Re-Review outstanding**,
-  **Human-Maintainer Candidate approval not granted**,
-  CDS-WP-017 not activated). Foundation **Closed with Notes**; machine-readable machinery
+  work package — is **executed**, **independently reviewed**, and admitted
+  (`AE1-CDS-WP016-SEMSTATUS-002`, 2026-08-17, bound to `semantic-status-rev-0001`).
+  A further internal rework — the **Candidate Finalization Governance Rework**
+  (2026-08-18, DEC-S-126) — defined the promotion sequence. **That sequence has since
+  completed.** Foundation **Closed with Notes**; machine-readable machinery
   implemented and executed (ADR-0001…0003); Semantic Status Foundation **Contract
   defined (CDS-WP-014)** and **machine-readable implemented (CDS-WP-015:
-  `semantic/status`, 25 non-visual tokens, 24/24 harness matches, 25/25 DE/EN, Draft
-  dossier — executor-produced, since independently reviewed, Not Candidate)**
+  `semantic/status`, 25 non-visual tokens, 24/24 harness matches, 25/25 DE/EN —
+  executor-produced, since independently reviewed; not Candidate at that
+  milestone)**
+
+### Current Semantic Status lifecycle state
+
+| Item | Value |
+| --- | --- |
+| **Promotion Commit** | **`22fa0710e2b75df22e7b420c2f9d86bbe67b2777`** (parent `8d1374fa4c61cc1eed214823681ee1209a2d91f7`), 2026-08-19 |
+| **Source revision** | **`semantic-status-rev-0002-candidate`** |
+| **Maturity** | **`Candidate`** |
+| **Approval** | **`Approved`** |
+| **`AE1-CDS-WP016-SEMSTATUS-004`** | **ADMITTED / AE-1** — the package in force, channel-independent source/contract scope only |
+| `AE1-CDS-WP016-SEMSTATUS-002` | Historical `semantic-status-rev-0001` admission only |
+| `AE1-CDS-WP016-SEMSTATUS-003` | **NOT ADMITTED** · `SUPERSEDED_FOR_ADMISSION_BY_EVIDENCE_INPUT_CHANGE` |
+| Promotion gate | **PASS** — committed blob identity 15/15 exact; regression 47/47 · 64/64 · 184/184 · 24/24/0/0; remote fast-forward PASS |
+| Stable · claims · conformance | **No** · **None** · **None** |
+| AE-2 / AE-3 / AE-4 · channel · consumer evidence | **None** everywhere |
+| **CDS-WP-016** | **Post-promotion closure reconciliation** — proposed closure bytes prepared; authoritative closure pending Fresh Independent Governance Reconciliation Review, Nova adjudication, and Human-Maintainer exact-byte integration |
+| **CDS-WP-017** | **INACTIVE / NOT AUTHORIZED / NOT DEFINED** |
+
+**F-001 lifecycle-metadata resolution (Human Maintainer, 2026-08-19).** The five
+`AE1-CDS-WP016-SEMSTATUS-004`-bound normative Foundation documents remain
+**exact-byte unchanged**. Their semantic content stays **normative**; their embedded
+pre-promotion lifecycle labels (`Experimental`, `Unapproved`, "no Candidate status")
+are treated as **historical for the current lifecycle state only**, superseded by the
+completed Promotion Commit. This creates **no** general source-precedence rule, does
+**not** say recency wins, waives **no** evidence requirement, transfers **no**
+evidence, and weakens **no** future re-evidence requirement. The completed lifecycle
+event is recorded in the
+[Candidate Promotion Effectivity Record](../docs/governance/SEMANTIC_STATUS_CANDIDATE_PROMOTION_EFFECTIVITY_RECORD.md)
+— a governance lifecycle effectivity record, **not evidence** and **not a Promotion
+Commit**.
 
 ## Registered scope
 
@@ -290,7 +319,7 @@ Details: [Decision Index](../docs/decisions/DECISION_INDEX.md) ·
 | RISK-028 | Deferred accessibility policy creates architecture debt. | Monitored |
 | RISK-029 | Governance bottleneck and maintainer overload. | Monitored |
 | RISK-030 | Governance role ambiguity. | Monitored |
-| RISK-031 | Maturity inflation. | Monitored |
+| RISK-031 | Maturity inflation. | **Mitigating** |
 | RISK-032 | Compatibility ambiguity. | Monitored |
 | RISK-033 | Deprecation without viable migration. | Monitored |
 | RISK-034 | Contribution gate bypass. | Monitored |
@@ -844,28 +873,44 @@ Rework** as **internal rework of CDS-WP-016, not a new work package**, and it is
 - **RISK-098** (`Mitigating`) — promotion-evidence circularity and pre-approval
   metadata misrepresentation.
 - The [Candidate Approval Record Template](../docs/operations/CANDIDATE_APPROVAL_RECORD_TEMPLATE.md)
-  — a **template only**; no instance exists.
+  — a **template only**; no instance existed at that milestone. **One instance now
+  exists**, `CAR-CDS-WP016-SEMSTATUS-001`.
 - **Evidence runner result format v2** — the runner no longer hard-codes
   governance state; it reports `sourceDeclaredMetadata`, a caller-declared
   `sourceAuthorityContext`, an **AE-1 Evidence Candidate**, and seven permanently
   false authority-effect flags, and fails closed on a source-revision mismatch.
 
-`semantic-status-rev-0002-candidate` is **reserved and authorized for the future
-Candidate revision — it has not been created**, and the authoritative source
-revision remains `semantic-status-rev-0001`. The rework produced **no Candidate
-evidence**, admitted **no evidence**, granted **no Candidate approval**, mutated
-**no productive source byte**, and touched **no existing evidence artifact**.
+At that milestone `semantic-status-rev-0002-candidate` was **reserved and
+authorized for the future Candidate revision but not yet created**, and the
+authoritative source revision was still `semantic-status-rev-0001`. The rework
+itself produced **no Candidate evidence**, admitted **no evidence**, granted **no
+Candidate approval**, mutated **no productive source byte**, and touched **no
+existing evidence artifact**.
 
-The next step is therefore **not** the first start of
-CDS-WP-016, and **not** a promotion, but the **Candidate authority closure**: the
-**Nova post-admission Candidate Maturity Re-Review** (**not yet performed**) and then
-the separate Human-Maintainer maturity decision (**not granted**).
-Until they close, Candidate is
-**No**, maturity **Experimental**, approval **Unapproved**, claims **none**, and
-**every other CDS artifact remains AE-0** with no AE-2, AE-3, or AE-4 anywhere —
-**no automatic Candidate promotion, still no visual values, no pilot**. No follow-up
-work package is authorized and CDS-WP-017 is not activated; any further step begins
-only on an explicit Nova prompt and Human-Maintainer authorization.
+**Candidate authority closure — completed 2026-08-19.** The steps that were then
+outstanding have all been performed, in order: fresh revision-bound evidence
+**`AE1-CDS-WP016-SEMSTATUS-004`** → **fresh independent evidence review PASS WITH
+NOTES** → **Human-Maintainer evidence admission APPROVED / ADMITTED** → **Nova
+Candidate Finalization Review GO WITH NOTES** → **Human-Maintainer Candidate
+approval `AUTHORIZED_PENDING_EXACT_BYTE_INTEGRATION`** → **exact-byte Promotion
+Commit `22fa0710e2b75df22e7b420c2f9d86bbe67b2777`**, which passed its gate with
+15/15 committed blob identities exact and regression
+47/47 · 64/64 · 184/184 · 24/24/0/0.
+
+Candidate is **YES** at `semantic-status-rev-0002-candidate`, maturity
+**`Candidate`**, approval **`Approved`** — for that one channel-independent
+source/contract family. **No artifact is Stable**, claims remain **none**,
+conformance remains **none**, **every other CDS artifact remains AE-0**, and there is
+no AE-2, AE-3, or AE-4 anywhere — **still no visual values, no component, no
+pilot**.
+
+**The next step is the CDS-WP-016 closure**, and it is not the executor's to make:
+a **Fresh Independent Governance Reconciliation Review** of the post-promotion
+reconciliation, then **Nova adjudication**, then a **Human-Maintainer exact-byte
+integration commit**. Proposed closure bytes are not committed closure, and a review
+PASS is not a commit. No follow-up work package is authorized and **CDS-WP-017 is
+`INACTIVE`, `NOT AUTHORIZED`, and `NOT DEFINED`**; any further step begins only on an
+explicit Nova prompt and Human-Maintainer authorization.
 
 ## Related documents
 

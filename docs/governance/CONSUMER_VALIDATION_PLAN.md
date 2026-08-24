@@ -109,7 +109,7 @@ What is missing is the **evidence**.
 | Level | Meaning | Current state |
 | --- | --- | --- |
 | **AE-0** | **No evidence.** Nothing has been examined. | **Every CDS artifact except the Semantic Status source/contract family** |
-| **AE-1** | **Structural and Automated Evidence** — machine-checkable properties hold: structural checks, automatable rules, static analysis, machine-readable traceability. | **Admitted for the channel-independent Semantic Status Layer-3 source/contract family only** (`AE1-CDS-WP016-SEMSTATUS-002`); no consumer scope |
+| **AE-1** | **Structural and Automated Evidence** — machine-checkable properties hold: structural checks, automatable rules, static analysis, machine-readable traceability. | **Admitted for the channel-independent Semantic Status Layer-3 source/contract family only** — currently `AE1-CDS-WP016-SEMSTATUS-004`, bound to source revision `semantic-status-rev-0002-candidate` (`AE1-CDS-WP016-SEMSTATUS-002` is a historical `semantic-status-rev-0001` admission only, and does not transfer). **No consumer scope**: no consumer has been evaluated, no consumer evidence exists, and no pilot has been executed |
 | **AE-2** | **Manual Interaction Evidence** — a human exercised the artifact against, at minimum, keyboard, focus, states, errors, content, reflow and magnification, and motion and non-visual meaning, with documented results. | None |
 | **AE-3** | Verification against a **declared accessibility support baseline** (browser / platform / assistive-technology matrix). | None — the baseline **A11Y-BL-001 is declared**, but no verification has been performed against it |
 | **AE-4** | Consumer-level evidence for complete processes in a declared product scope. | None — pilot inactive |

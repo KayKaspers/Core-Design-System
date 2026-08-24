@@ -4157,3 +4157,69 @@ approval **Unapproved**, the authoritative source revision
 remains `AE1-CDS-WP016-SEMSTATUS-002` at **AE-1** for the channel-independent
 Semantic Status source/contract family; every other CDS artifact remains
 **AE-0**.
+
+---
+
+## Post-Promotion Current-State Note — 2026-08-19
+
+**This is a current-state note, not a Decision.** It carries no `DEC-S-`
+identifier, decides nothing, and changes no accepted Decision above. Every
+accepted Decision text, status, date, rationale, and consequence in this index —
+DEC-S-001 through DEC-S-126 — is **unchanged**. The decision count remains
+**126** and the highest identifier remains **DEC-S-126**; **no decision beyond
+DEC-S-126 is created, here or anywhere else.**
+
+The note exists because accepted Decision texts are written at their own moment
+and are never rewritten. Where DEC-S-126 above states the state as it stood on
+2026-08-18 — Candidate **No**, maturity **Experimental**, approval
+**Unapproved**, authoritative source revision `semantic-status-rev-0001`,
+admitted evidence `AE1-CDS-WP016-SEMSTATUS-002` — that text is
+**correct as written for its date and is not edited**. What follows is what is
+true today.
+
+### What completed
+
+The DEC-S-126 promotion sequence completed successfully:
+
+| # | Step | Result |
+| --- | --- | --- |
+| 1 | Fresh revision-bound AE-1 evidence `AE1-CDS-WP016-SEMSTATUS-004` | Produced |
+| 2 | Fresh independent evidence review (reviewer ≠ executor) | **PASS WITH NOTES** |
+| 3 | Human-Maintainer evidence admission | **APPROVED / ADMITTED** |
+| 4 | Nova Candidate Finalization Review | **GO WITH NOTES** (recommendation only) |
+| 5 | Human-Maintainer Candidate approval | **`AUTHORIZED_PENDING_EXACT_BYTE_INTEGRATION`** |
+| 6 | **Exact-byte Promotion Commit** | **`22fa0710e2b75df22e7b420c2f9d86bbe67b2777`** |
+
+### Current state
+
+| Item | Value |
+| --- | --- |
+| Semantic Status source revision | **`semantic-status-rev-0002-candidate`** |
+| Maturity | **`Candidate`** |
+| Approval | **`Approved`** |
+| Admitted accessibility evidence in force | **`AE1-CDS-WP016-SEMSTATUS-004`** at **AE-1**, channel-independent source/contract scope only |
+| `AE1-CDS-WP016-SEMSTATUS-002` | Historical `semantic-status-rev-0001` admission only |
+| Stable | **No** — **Candidate is not Stable** |
+| Claims | **None** |
+| Conformance | **None** |
+| Every other CDS artifact | **AE-0** |
+
+### Bound Foundation documents
+
+The five `AE1-CDS-WP016-SEMSTATUS-004`-bound normative Foundation documents —
+the [Foundation Contract](../foundations/SEMANTIC_STATUS_FOUNDATION_CONTRACT.md),
+[Axis Vocabulary](../foundations/STATUS_AXIS_VOCABULARY.md),
+[Composition and Conflict Rules](../foundations/STATUS_COMPOSITION_AND_CONFLICT_RULES.md),
+[Communication and Accessibility Contract](../foundations/STATUS_COMMUNICATION_AND_ACCESSIBILITY_CONTRACT.md),
+and [Terminology DE/EN](../foundations/SEMANTIC_STATUS_TERMINOLOGY_DE_EN.md) —
+**remain byte-for-byte unmodified**.
+
+Their embedded pre-promotion lifecycle labels are **historical for the current
+maturity state** under the scoped Human-Maintainer resolution of 2026-08-19. Their
+semantic content remains **normative and unchanged**.
+
+**No general source-precedence rule is created.** This note does not say that
+recency wins, does not say that machine-readable sources override human-readable
+meaning, and does not alter DEC-S-022, DEC-S-023, or DEC-S-034. A conflict is
+still never resolved by recency or by convenience. See the
+[Candidate Promotion Effectivity Record](../governance/SEMANTIC_STATUS_CANDIDATE_PROMOTION_EFFECTIVITY_RECORD.md).

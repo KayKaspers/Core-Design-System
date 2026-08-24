@@ -30,11 +30,19 @@ No reliable accessibility evidence.
 
 **Every CDS artifact is currently AE-0, with exactly one bounded exception:** the
 channel-independent Semantic Status Layer-3 source/contract family holds admitted
-**AE-1** evidence (`AE1-CDS-WP016-SEMSTATUS-002`, source revision
-`semantic-status-rev-0001`) — see the
-[Semantic Status AE-1 Admission Record](SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md).
-Nothing else has been assessed, and that admission establishes no AE-2, AE-3,
-AE-4, Candidate, Stable, support, or conformance state.
+**AE-1** evidence. For the **current** source revision
+`semantic-status-rev-0002-candidate` the admitted package is
+**`AE1-CDS-WP016-SEMSTATUS-004`** — see the
+[AE1-004 Admission Record](SEMANTIC_STATUS_AE1_004_ADMISSION_RECORD.md).
+`AE1-CDS-WP016-SEMSTATUS-002` is a **historical admission for
+`semantic-status-rev-0001` only** ([record](SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md));
+it does not cover the current revision, and **evidence never transfers across a
+source revision**.
+
+Nothing else has been assessed. Those admissions establish no AE-2, AE-3, AE-4,
+Stable, support, or conformance state. They did **not** grant Candidate maturity
+either: Candidate for that family was made effective by a separate
+Human-Maintainer approval and exact-byte Promotion Commit.
 
 ### AE-1 — Structural and Automated Evidence
 
@@ -188,17 +196,30 @@ Applying it to this model:
 
 ### Current state
 
-**No artifact has passed either gate.** The channel-independent Semantic Status
-Layer-3 source/contract family is the **first and only** CDS scope with admitted
-evidence — **AE-1**, `AE1-CDS-WP016-SEMSTATUS-002` (see the
-[Semantic Status AE-1 Admission Record](SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md)) —
-and it satisfies **Candidate accessibility gate element 4 (AE-1)** only, and only
-for source revision `semantic-status-rev-0001`. **Element 9, Human-Maintainer
-approval after Nova review, remains open**, so Candidate is **No**. All other CDS
-artifacts remain **AE-0**. The Stable gate is unreachable: no AE-2, AE-3, or AE-4
-exists anywhere. A support baseline does exist — **A11Y-BL-001, declared and
-committed** (CDS-WP-010) — but a baseline is what evidence will be produced
-against, never evidence itself.
+**The Candidate accessibility gate has been passed exactly once. The Stable gate
+has never been passed by anything.**
+
+The channel-independent Semantic Status Layer-3 source/contract family is the
+**first and only** CDS scope with admitted evidence — **AE-1**,
+`AE1-CDS-WP016-SEMSTATUS-004` for the current source revision
+`semantic-status-rev-0002-candidate` (see the
+[AE1-004 Admission Record](SEMANTIC_STATUS_AE1_004_ADMISSION_RECORD.md)).
+
+| Candidate gate element | State |
+| --- | --- |
+| 4 — **AE-1** | **Satisfied** for `semantic-status-rev-0002-candidate` by `AE1-CDS-WP016-SEMSTATUS-004`, source/contract scope only |
+| 9 — Human-Maintainer approval after Nova review | **Closed** by the Human-Maintainer Candidate decision of 2026-08-19, made effective by Promotion Commit `22fa0710e2b75df22e7b420c2f9d86bbe67b2777` |
+
+Candidate for that family is therefore **YES**. `AE1-CDS-WP016-SEMSTATUS-002`
+remains bound to `semantic-status-rev-0001` and satisfies element 4 for that
+historical revision only.
+
+All other CDS artifacts remain **AE-0**, and no other artifact is Candidate. The
+Stable gate remains unreachable: **no AE-2, AE-3, or AE-4 exists anywhere**, no
+consumer evidence exists, and no claim of any level is valid. A support baseline
+does exist — **A11Y-BL-001, declared and committed** (CDS-WP-010) — but a baseline
+is what evidence will be produced against, never evidence itself, and **no
+baseline environment has been exercised**.
 
 This policy **promotes nothing** and **invents no retroactive evidence**.
 **`Not tested` may never be read as `Passed`.**
@@ -261,8 +282,13 @@ rule 2 and DEC-S-052 for this specific transition:
 
 Concretely: the admitted `AE1-CDS-WP016-SEMSTATUS-002` is bound to
 `semantic-status-rev-0001`. It satisfies Candidate accessibility gate element 4
-for that revision only, and it would satisfy element 4 for **no** later Candidate
-source revision.
+for that revision only, and it satisfies element 4 for **no** later Candidate
+source revision. That is exactly why the Candidate revision
+`semantic-status-rev-0002-candidate` required its own package,
+`AE1-CDS-WP016-SEMSTATUS-004`, with its own fresh independent review and its own
+Human-Maintainer admission — and got them. `AE1-CDS-WP016-SEMSTATUS-003` was
+reviewed but is **NOT ADMITTED**, disposition
+`SUPERSEDED_FOR_ADMISSION_BY_EVIDENCE_INPUT_CHANGE`.
 
 **Exact-byte continuity may bind pre-commit evidence to the later Promotion
 Commit.** Under DEC-S-126, fresh AE-1 evidence produced against an explicitly

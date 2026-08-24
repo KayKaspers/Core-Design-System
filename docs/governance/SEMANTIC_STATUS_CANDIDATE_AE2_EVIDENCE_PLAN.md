@@ -17,10 +17,20 @@ would be meaningless. This is that case, and this is that plan.
 > **A plan is not evidence.** This document establishes nothing about any
 > artifact. Every CDS artifact remains **AE-0**, with exactly one bounded
 > exception: the channel-independent Semantic Status Layer-3 source/contract
-> family holds admitted **AE-1** (`AE1-CDS-WP016-SEMSTATUS-002`, source revision
-> `semantic-status-rev-0001`, source scope only). **An admitted AE-1 is not an
-> AE-2.** It satisfies a different gate requirement, covers no rendered or
-> interactive surface, and removes nothing from the plan below.
+> family holds admitted **AE-1** — currently
+> **`AE1-CDS-WP016-SEMSTATUS-004`**, bound to source revision
+> **`semantic-status-rev-0002-candidate`**, source scope only
+> (`AE1-CDS-WP016-SEMSTATUS-002` is the historical `semantic-status-rev-0001`
+> admission). **An admitted AE-1 is not an AE-2.** It satisfies a different gate
+> requirement, covers no rendered or interactive surface, and removes nothing from
+> the plan below.
+>
+> **Current state:** that family is **`Candidate`** — **YES** — made effective by a
+> separate Human-Maintainer approval and exact-byte Promotion Commit, never by this
+> plan. **AE-2 remains NONE: plan only.** No AE-2 evidence exists, **no baseline
+> environment has been exercised**, and **no interaction surface has been
+> fabricated** in order to produce any. No artifact is Stable, and no claim or
+> conformance exists.
 
 ## 1 — Why AE-2 execution is not meaningful today
 
@@ -196,8 +206,9 @@ the answer is **NO-GO**, never "go with notes" (DEC-S-048).
 > Writing this plan produced **no** accessibility evidence, **no** AE-2, **no**
 > AE-3, and **no** claim.
 >
-> It does **not** promote the Candidate. Candidate remains **No**; maturity
-> remains **Experimental**; approval remains **Unapproved**; and the admitted
+> It **promoted nothing and promotes nothing.** The family's **`Candidate`** /
+> **`Approved`** state came from a separate Human-Maintainer approval and exact-byte
+> Promotion Commit, never from this plan; **no artifact is Stable**. The admitted
 > accessibility evidence level of every CDS artifact remains **AE-0**, apart from
 > the source-scope **AE-1** admitted for this family — which is **not** AE-2 and
 > closes nothing planned here.

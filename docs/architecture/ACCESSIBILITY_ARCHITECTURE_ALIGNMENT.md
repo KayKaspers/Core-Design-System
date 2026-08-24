@@ -145,7 +145,7 @@ not say what it was tested against.
 
 | Gate | Accessibility requirement | Satisfiable today? |
 | --- | --- | --- |
-| **Candidate** | Mapping, responsibility, AE-1, AE-2 or plan, limitations, baseline plan, regression plan | **No** — for the Semantic Status source/contract family the evidence elements are now supported (admitted **AE-1**), but Human-Maintainer approval after Nova review is still open; for every other artifact no evidence exists |
+| **Candidate** | Mapping, responsibility, AE-1, AE-2 or plan, limitations, baseline plan, regression plan | **Yes — for the channel-independent Semantic Status source/contract family only.** Its mapping, responsibility mapping, admitted **AE-1** (`AE1-CDS-WP016-SEMSTATUS-004`), AE-2 plan, limitations, baseline plan, and regression plan are in place; the Nova review and the **Human-Maintainer Candidate approval are complete**; and the exact-byte Promotion Commit `22fa0710e2b75df22e7b420c2f9d86bbe67b2777` made the `semantic/status` source set (source revision `semantic-status-rev-0002-candidate`) **Candidate / Approved**. This is a maturity state only — **no AE-2, AE-3, AE-4, channel, or consumer evidence exists, and it establishes no claim and no conformance**. For **every other artifact: No** — no evidence exists |
 | **Stable** | AE-2 complete + **AE-3** against baseline + consumer evidence + no critical deviations | **No** — the baseline exists (A11Y-BL-001, committed), but **no AE-2, AE-3, or consumer evidence exists anywhere** |
 | **Product Profile** | Scope-appropriate accessibility evidence | **No** |
 | **Publication** | Accessibility statement per this policy | **Now definable** — the statement is *what the policy says*, and it says nothing is tested |

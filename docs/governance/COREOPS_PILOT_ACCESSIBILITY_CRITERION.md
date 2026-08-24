@@ -159,16 +159,22 @@ Claude did not declare it met. The Human Maintainer's commit did.
 | Pilot scope approved | Pending |
 | Consumer requirements registered | Met |
 | **CDS-WP-005 architecture approved** | **Pending** |
-| **Foundations at Candidate maturity** | **Unmet — no artifact is Candidate** |
+| **Foundations at Candidate maturity** | **Met — satisfied by the Semantic Status Candidate** (2026-08-19) |
 | CoreOps pilot area named | Pending |
 | No CoreOps governance conflict | Pending |
 | **Accessibility target decided** | **Met — committed with CDS-WP-007** |
 
-**The pilot cannot start.** Two criteria remain structurally unmet: **no artifact is
-Candidate** — the Semantic Status source/contract family now holds admitted
-source-level **AE-1**, but its Candidate gate still awaits Nova review and
-Human-Maintainer approval, and every other artifact is AE-0 — and the architecture
-awaits approval.
+**The pilot still cannot start.** The Candidate-maturity prerequisite is now
+satisfied: the channel-independent Semantic Status source/contract family is
+**`Candidate`** / **`Approved`** at `semantic-status-rev-0002-candidate`, on admitted
+source-level **AE-1** evidence `AE1-CDS-WP016-SEMSTATUS-004`, effective at Promotion
+Commit `22fa0710e2b75df22e7b420c2f9d86bbe67b2777`. Every other artifact remains
+**AE-0** and no artifact is Stable.
+
+**That satisfies one criterion and nothing else.** The architecture approval and the
+remaining pending criteria are unchanged, **the pilot is not active and not
+authorized for execution**, no consumer validation has been performed, and **no
+channel evidence, consumer evidence, AE-2, AE-3, AE-4, or conformance exists**.
 
 ## Available evidence
 

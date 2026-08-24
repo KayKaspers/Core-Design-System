@@ -22,9 +22,27 @@ accessibility-support planning **precede** the first Candidate (DEC-S-062).
 - **Milestone outcome:** `GO WITH NOTES`, accepted by the Human Maintainer.
 - **Foundation blockers:** 0.
 - **Publication state:** `Private Development`. **Claims:** none valid.
-  **Maturity:** no artifact is Candidate or Stable. **Pilot:** inactive.
+  **Maturity at the time this plan was produced:** no artifact was Candidate or
+  Stable. **Pilot:** inactive.
 - **Registers:** DEC-S-001 … DEC-S-064 (64); RISK-001 … RISK-048 (48);
   CR-001 … CR-040 (40); FM-F-001 … FM-F-012 (12).
+
+> **Current-state note (2026-08-19).** The **first authorized Candidate transition
+> has since completed**, through CDS-WP-016 and its Human-Maintainer exact-byte
+> Promotion Commit `22fa0710e2b75df22e7b420c2f9d86bbe67b2777`: the Semantic Status
+> Foundation / `semantic/status` is **`Candidate`** and **`Approved`** at source
+> revision `semantic-status-rev-0002-candidate`.
+>
+> **This does not retroactively change the original pre-Candidate rules below.**
+> Candidate promotion was prohibited before gate authorization, and that is exactly
+> how this transition happened — through the gate, not around it. The prohibitions,
+> exclusions, entry conditions, and sequencing requirements in this document remain
+> as written and are not weakened.
+>
+> **No Stable transition has occurred**, no claim and no conformance exists, the
+> pilot remains inactive, publication remains `Private Development`, and
+> **CDS-WP-017 is not activated**. See the
+> [Candidate Promotion Effectivity Record](../governance/SEMANTIC_STATUS_CANDIDATE_PROMOTION_EFFECTIVITY_RECORD.md).
 
 ## Foundation closure notes carried into this phase
 

@@ -46,20 +46,23 @@ library, or a design project scoped exclusively to CoreOps.
   five independent axes (`condition`/`severity`/`confidence`/`freshness`/`evidence`),
   a fixed 25-value vocabulary with explicit `unknown`, ten invariants, combination/
   conflict rules, a text-first communication/accessibility contract, and a
-  value-neutral token contract. **Experimental, no Candidate status (DEC-S-113/114);
-  no visual value, no token source file, no component; the first Candidate is
-  planned and fully gated** — see the
+  value-neutral token contract. At CDS-WP-014 this was **Experimental, with no
+  Candidate status (DEC-S-113/114), no visual value, no token source file, and no
+  component; the first Candidate was planned and fully gated.** It has since passed
+  that gate — see *Candidate promotion* below. **There is still no visual value and
+  no component** — see the
   [Candidate Plan](docs/roadmap/FIRST_SEMANTIC_STATUS_CANDIDATE_PLAN.md) and the
   [Foundation Contract](docs/foundations/SEMANTIC_STATUS_FOUNDATION_CONTRACT.md).
 - Semantic Status Source Set: **implemented** (CDS-WP-015, committed) — the
-  Experimental **`semantic/status`** source set (25 non-visual tokens
+  **`semantic/status`** source set, Experimental at implementation (25 non-visual tokens
   `status.<axis>.<value>`, manifest, resolver), the semantic-status V4 validator
   extension (objective checks run despite fixture flags, DEC-S-118), the
   Nova-authorized additive validation-case-schema correction (`$id` unchanged; CLI
   untouched), a 24-case matrix (WP-013 baseline immutable, DEC-S-120), 25/25 DE/EN
-  terminology, and a Draft Candidate Dossier. **Executor-produced evidence
-  (24/24 matches), independently unreviewed (DEC-S-121); Not Candidate; never
-  represent the source set as approved (DEC-S-124).**
+  terminology, and a Candidate Dossier. **Executor-produced evidence
+  (24/24 matches), independently unreviewed at the time (DEC-S-121); not Candidate
+  at that milestone.** DEC-S-124 remains binding: **never represent any artifact as
+  carrying a maturity or approval it does not hold.**
 - Current work package: **CDS-WP-016 — Semantic Status Foundation Independent Evidence
   Review and Candidate Gate** (the authorized work package; its review work is
   **executed**). Wherever this file records the WP-013/WP-015 evidence as
@@ -110,25 +113,55 @@ library, or a design project scoped exclusively to CoreOps.
   Candidate approval**; the **Promotion Commit** as the actual repository maturity
   transition point; mandatory post-commit verification), **RISK-098**, the
   [Candidate Approval Record Template](docs/operations/CANDIDATE_APPROVAL_RECORD_TEMPLATE.md)
-  (a template — **no instance exists**), and evidence-runner result format **v2**
+  (a template — **one instance now exists**, `CAR-CDS-WP016-SEMSTATUS-001`), and
+  evidence-runner result format **v2**
   (source-declared metadata instead of hard-coded governance literals, a
   caller-declared authority-context enum, an unreviewed and unadmitted **AE-1
   Evidence Candidate**, seven permanently false authority-effect flags, and a
-  fail-closed source-revision cross-check). **`semantic-status-rev-0002-candidate`
-  is reserved and authorized for a future Candidate revision and has NOT been
-  created**; the authoritative source revision remains `semantic-status-rev-0001`.
-  The rework produced **no Candidate evidence**, admitted **no evidence**, granted
-  **no Candidate approval**, mutated **no productive Semantic Status source byte**,
-  and changed **no existing evidence artifact**; no ADR was added; regression
+  fail-closed source-revision cross-check). At that milestone
+  `semantic-status-rev-0002-candidate` was still reserved and not created, and the
+  authoritative source revision was still `semantic-status-rev-0001`.
+  The rework itself produced **no Candidate evidence**, admitted **no evidence**,
+  granted **no Candidate approval**, mutated **no productive Semantic Status source
+  byte**, and changed **no existing evidence artifact**; no ADR was added; regression
   trigger **T-12 is not waived**.
-  **Candidate remains No**, maturity **Experimental**,
-  approval **Unapproved**, claims **None**, and **every other CDS artifact remains
-  AE-0**; there is no AE-2, AE-3, or AE-4, and no channel, consumer, or product
-  evidence anywhere. The **next authority step is the Nova post-admission Candidate
-  Maturity Re-Review**; the **Human-Maintainer Candidate approval is not granted**. No
-  follow-up work package is
-  authorized and CDS-WP-017 is not activated. Further work begins only on an explicit
-  Nova prompt and Human-Maintainer authorization.
+- **Candidate promotion — COMPLETED 2026-08-19.** The DEC-S-126 sequence then ran
+  to completion: fresh revision-bound evidence **`AE1-CDS-WP016-SEMSTATUS-004`** →
+  **fresh independent evidence review PASS WITH NOTES** → **Human-Maintainer
+  evidence admission APPROVED / ADMITTED** (see the
+  [AE1-004 Admission Record](docs/governance/SEMANTIC_STATUS_AE1_004_ADMISSION_RECORD.md))
+  → **Nova Candidate Finalization Review GO WITH NOTES** → **Human-Maintainer
+  Candidate approval `AUTHORIZED_PENDING_EXACT_BYTE_INTEGRATION`** (see the
+  [Candidate Approval Record](docs/operations/SEMANTIC_STATUS_CANDIDATE_APPROVAL_RECORD.md))
+  → **Human-Maintainer exact-byte Promotion Commit
+  `22fa0710e2b75df22e7b420c2f9d86bbe67b2777`** (parent
+  `8d1374fa4c61cc1eed214823681ee1209a2d91f7`), exact-byte gate **PASS**, committed
+  blob identity **15/15 exact**, post-commit regression
+  **47/47 · 64/64 · 184/184 · 24/24/0/0**, remote fast-forward **PASS**. See the
+  [Candidate Promotion Effectivity Record](docs/governance/SEMANTIC_STATUS_CANDIDATE_PROMOTION_EFFECTIVITY_RECORD.md).
+- **Current authoritative baseline: HEAD `22fa0710e2b75df22e7b420c2f9d86bbe67b2777`.**
+  Semantic Status source revision **`semantic-status-rev-0002-candidate`**, maturity
+  **`Candidate`**, approval **`Approved`**, **Candidate YES** — for the
+  channel-independent Layer-3 Semantic Source / Contract family **only**. Admitted
+  evidence in force: **`AE1-CDS-WP016-SEMSTATUS-004`** at **AE-1**, source/contract
+  scope only. `AE1-CDS-WP016-SEMSTATUS-002` is a **historical
+  `semantic-status-rev-0001` admission only**; `AE1-CDS-WP016-SEMSTATUS-003` is
+  **NOT ADMITTED** (`SUPERSEDED_FOR_ADMISSION_BY_EVIDENCE_INPUT_CHANGE`).
+  **Evidence never transfers across a source revision.**
+  **Stable: No** · claims **None** · conformance **None** · **every other CDS
+  artifact remains AE-0**; there is no AE-2, AE-3, or AE-4, and no channel,
+  consumer, or product evidence anywhere. Publication remains
+  **`Private Development`**; no release and no tag exist. **A Candidate award is
+  not Stable, not a claim, not conformance, and not a release.**
+- **CDS-WP-016 state:** **Post-Promotion Current-State Reconciliation** (Human
+  Maintainer authorized 2026-08-19; internal reconciliation, **not** a new work
+  package). Proposed closure bytes are prepared; **authoritative closure is not yet
+  effective** and becomes so only after a **Fresh Independent Governance
+  Reconciliation Review**, Nova adjudication, and a Human-Maintainer exact-byte
+  integration commit.
+- **CDS-WP-017: INACTIVE / NOT AUTHORIZED / NOT DEFINED.** No follow-up work
+  package is authorized. Further work begins only on an explicit Nova prompt and
+  Human-Maintainer authorization.
 
 ## Execution environment
 
@@ -517,8 +550,10 @@ and
   Model) and is bound to a revision,
   scope, channel, and a **declared support baseline**. **Every CDS artifact is AE-0
   except the channel-independent Semantic Status source/contract family, which holds
-  admitted AE-1** (`AE1-CDS-WP016-SEMSTATUS-002`, source scope only, bound to source
-  revision `semantic-status-rev-0001`). Claude never
+  admitted AE-1** — currently `AE1-CDS-WP016-SEMSTATUS-004`, source scope only,
+  bound to source revision `semantic-status-rev-0002-candidate`
+  (`AE1-CDS-WP016-SEMSTATUS-002` is a historical `semantic-status-rev-0001`
+  admission only; `AE1-CDS-WP016-SEMSTATUS-003` is not admitted). Claude never
   records evidence that does not exist, never invents a test, a baseline, or user
   validation, and never extends that admission to any other artifact, channel,
   consumer, **or source revision** — evidence does not transfer across a source

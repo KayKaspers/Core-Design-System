@@ -148,8 +148,12 @@ compatibility, migration, evidence, Nova review, and Human-Maintainer approval
 
 **This profile defines no token, no group instance, no colour, no typography, no
 spacing, and no size.** No `.tokens.json` source exists. It is a format constraint,
-awaiting an authorized implementation work package (CDS-WP-012). No artifact is
-Candidate or Stable.
+awaiting an authorized implementation work package (CDS-WP-012). Exactly one
+artifact family is **Candidate**: the channel-independent Semantic Status
+source/contract family (`semantic/status`, source revision
+`semantic-status-rev-0002-candidate`, approval **Approved**). That maturity
+belongs to that family alone and does **not** make this format profile
+Candidate. **No artifact is Stable.**
 
 ## Related documents
 

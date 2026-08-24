@@ -133,14 +133,25 @@ A release is ready only when **all** hold:
    publication state remains `Private Development`.
 2. **No artifact can reach Stable.** The Stable accessibility gate requires the
    Candidate gate to be satisfied, **complete applicable AE-2 evidence**, and
-   **AE-3 against the declared support baseline**. The only admitted accessibility
-   evidence is `AE1-CDS-WP016-SEMSTATUS-002` at **AE-1**, for the
-   channel-independent Semantic Status source/contract family alone; **no AE-2 and
-   no AE-3 exist anywhere**, and every other scope remains **AE-0** (CR-024).
+   **AE-3 against the declared support baseline**. The Candidate gate is satisfied
+   for exactly one scope — the channel-independent Semantic Status source/contract
+   family, at source revision `semantic-status-rev-0002-candidate`, on admitted
+   evidence `AE1-CDS-WP016-SEMSTATUS-004` at **AE-1**
+   ([record](SEMANTIC_STATUS_AE1_004_ADMISSION_RECORD.md);
+   `AE1-CDS-WP016-SEMSTATUS-002` is a historical `semantic-status-rev-0001`
+   admission only). **No AE-2 and no AE-3 exist anywhere**, and every other scope
+   remains **AE-0** (CR-024). The Stable gate is therefore unsatisfiable for that
+   family too.
 
-**An admitted AE-1 is neither Stable-ready nor release-ready.** It enables no
-release, no claim, and no publication change. **No CDS release is possible today.**
-Recorded, not worked around.
+**Candidate promotion is not a release.** The Semantic Status Foundation reached
+**Candidate** on 2026-08-19 through an exact-byte Promotion Commit; that changed
+maturity and nothing else. **An admitted AE-1 is neither Stable-ready nor
+release-ready.** It enables no release, no claim, no conformance, and no
+publication change.
+
+**No CDS release is authorized today**, no licence decision sufficient for release
+exists, **no artifact is Stable**, and the publication state remains
+`Private Development`. Recorded, not worked around.
 
 ## Change control for this policy set
 

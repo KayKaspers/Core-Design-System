@@ -4,12 +4,29 @@
 - **Registered by:** CDS-WP-015 — Semantic Status Foundation Source Set and
   Candidate Evidence
 - **Date:** 2026-07-18
-- **Status: Draft – Candidate gate incomplete.** This dossier follows the
-  [Elevated Change Dossier](ELEVATED_CHANGE_DOSSIER_TEMPLATE.md) discipline
-  for the planned first Candidate. **A populated dossier is not an approval**
-  (DEC-S-122): the Candidate decision requires independent evidence review,
-  Nova review, and Human-Maintainer approval — all open.
-  **Candidate Status = Not Candidate.**
+- **Status: Candidate gate complete — Candidate promotion effective.** This
+  dossier follows the
+  [Elevated Change Dossier](ELEVATED_CHANGE_DOSSIER_TEMPLATE.md) discipline for
+  the first CDS Candidate. **A populated dossier is still not an approval**
+  (DEC-S-122): the Candidate decision required independent evidence review, Nova
+  review, and Human-Maintainer approval, and each of those completed as a
+  separate act recorded below.
+  **Candidate Status = Candidate.**
+- **Current state (authoritative for this document):** Candidate **YES** ·
+  maturity **`Candidate`** · approval **`Approved`** · source revision
+  **`semantic-status-rev-0002-candidate`** · admitted evidence
+  **`AE1-CDS-WP016-SEMSTATUS-004`** at **AE-1** (source/contract scope only) ·
+  Promotion Commit **`22fa0710e2b75df22e7b420c2f9d86bbe67b2777`** (2026-08-19) ·
+  Stable **no** · claims **none** · conformance **none** · AE-2/AE-3/AE-4
+  **none** · channel evidence **none** · consumer evidence **none** · pilot
+  **inactive** · publication **`Private Development`** · CDS-WP-017
+  **inactive**.
+- **Reading order:** every section below is **additive and dated**. Each records
+  the state at its own stage and is **not rewritten** when a later stage changes
+  that state. Where a section conflicts with the current state, the header above
+  and the final
+  [Post-Promotion Candidate Closure](#post-promotion-candidate-closure) section
+  are current; the earlier section is historical.
 
 ## Target artifact
 
@@ -42,11 +59,16 @@ conformance/adoption/accessibility claim. Scope expansion is a NO-GO trigger
 ## Machine-readable source set, manifest, and resolver
 
 [semantic-status.tokens.json](../../tokens/semantic/status/semantic-status.tokens.json)
-(25 tokens, 5 axes, Experimental, Unapproved) ·
+(25 tokens, 5 axes) ·
 [semantic-status.source-set.json](../../tokens/semantic/status/semantic-status.source-set.json) ·
 [semantic-status.resolver.json](../../tokens/semantic/status/semantic-status.resolver.json)
-— identity `semantic/status`, revision `semantic-status-rev-0001`, local-only,
-no Product-Profile extension points.
+— identity `semantic/status`, local-only, no Product-Profile extension points.
+
+At registration (CDS-WP-015) these files declared revision
+`semantic-status-rev-0001`, `Experimental`, `Unapproved`. **They currently
+declare revision `semantic-status-rev-0002-candidate`, `Candidate`, `Approved`**,
+integrated unchanged by Promotion Commit
+`22fa0710e2b75df22e7b420c2f9d86bbe67b2777`.
 
 ## Validation evidence
 
@@ -412,3 +434,58 @@ may later be closed.
 >
 > A governance transition model is not a transition. Preparing the route to a
 > gate is not passing it.
+
+## Post-Promotion Candidate Closure
+
+### CDS-WP-016 — 2026-08-19
+
+**This is the current section.** Every section above it remains **historical and
+is not rewritten**: each recorded the state at its own stage, and each was true
+of that stage. Where an earlier section says the artifact is not Candidate, that
+statement is historical and remains as written.
+
+### What completed
+
+| # | Step | Authority | Result |
+| --- | --- | --- | --- |
+| 1 | `AE1-CDS-WP016-SEMSTATUS-004` fresh independent evidence review | Reviewer ≠ executor | **PASS WITH NOTES** |
+| 2 | Human-Maintainer evidence admission | Human Maintainer | **APPROVED / ADMITTED** |
+| 3 | Nova Candidate Finalization Review | Nova | **GO WITH NOTES** (recommendation only) |
+| 4 | Human-Maintainer Candidate approval | Human Maintainer | **`AUTHORIZED_PENDING_EXACT_BYTE_INTEGRATION`** |
+| 5 | **Exact-byte Promotion Commit** | Human Maintainer | **`22fa0710e2b75df22e7b420c2f9d86bbe67b2777`** |
+
+### Promotion verification
+
+| Check | Result |
+| --- | --- |
+| Exact-byte Promotion Gate | **PASS** |
+| Committed blob identity | **15 / 15 exact** |
+| Post-commit regression | **47/47 · 64/64 · 184/184 · 24/24/0/0** |
+| Remote Fast-Forward Gate | **PASS** — `origin/main` == `22fa0710e2b75df22e7b420c2f9d86bbe67b2777` |
+
+### Current state
+
+| Item | Value |
+| --- | --- |
+| **Current source revision** | **`semantic-status-rev-0002-candidate`** |
+| **Maturity** | **`Candidate`** |
+| **Approval** | **`Approved`** |
+| **Candidate** | **YES** |
+| Admitted evidence in force | `AE1-CDS-WP016-SEMSTATUS-004` — AE-1, source/contract scope only |
+| **Stable** | **NO** |
+| Claims | **NONE** |
+| Conformance | **NONE** |
+| AE-2 / AE-3 / AE-4 | **NONE** |
+| Channel evidence | **NONE** |
+| Consumer evidence | **NONE** |
+| CDS-WP-017 | **INACTIVE** |
+
+`AE1-CDS-WP016-SEMSTATUS-002` remains a historical `semantic-status-rev-0001`
+admission only. `AE1-CDS-WP016-SEMSTATUS-003` remains **NOT ADMITTED** with the
+disposition `SUPERSEDED_FOR_ADMISSION_BY_EVIDENCE_INPUT_CHANGE`. **Evidence never
+transfers across a source revision** (DEC-S-126).
+
+Candidate is **bounded validation only, and is never normative**. Candidate is not
+Stable, not a claim, not conformance, not a release, and not a pilot
+authorization. See the
+[Candidate Promotion Effectivity Record](../governance/SEMANTIC_STATUS_CANDIDATE_PROMOTION_EFFECTIVITY_RECORD.md).

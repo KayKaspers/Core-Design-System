@@ -189,10 +189,32 @@ already-reviewed exact bytes.
 ### What this section does not do
 
 It grants **no** Candidate, creates **no** Proposed Candidate Revision, and
-authorizes **no** promotion. The Semantic Status Foundation remains **Candidate:
-No · Experimental · Unapproved**, at authoritative source revision
-`semantic-status-rev-0001`; `semantic-status-rev-0002-candidate` is a **reserved
-future identity that has not been created**.
+authorizes **no** promotion. The rules above are the route to a gate; they are
+never a pass through one.
+
+### Current maturity state — 2026-08-19
+
+*(Current-state reconciliation. The lifecycle rules, the transition matrix, and
+the Candidate and Stable gate definitions above are **unchanged**, and no new
+state is introduced.)*
+
+| Artifact family | Maturity | Source revision | Approval | Effective at |
+| --- | --- | --- | --- | --- |
+| **Semantic Status Foundation / `semantic/status`** | **`Candidate`** | **`semantic-status-rev-0002-candidate`** | **`Approved`** | Promotion Commit `22fa0710e2b75df22e7b420c2f9d86bbe67b2777`, 2026-08-19 |
+| Every other CDS artifact | Unchanged — **no other artifact is Candidate** | — | — | — |
+
+`semantic-status-rev-0002-candidate` was a reserved future identity; it has since
+been **created and integrated**, and it is the authoritative source revision. The
+previous authoritative revision `semantic-status-rev-0001` — `Experimental`,
+`Unapproved` — is historical.
+
+**No artifact is Stable.** `Experimental → Stable` remains impossible under the
+transition matrix, and `Candidate → Stable` requires the Minimum Stable gate
+below, which no artifact has passed. Admitted evidence in force for the Candidate
+family is `AE1-CDS-WP016-SEMSTATUS-004` at **AE-1**, source/contract scope only;
+there is no AE-2, AE-3, or AE-4 anywhere, no claim of any level, and no
+conformance of any kind. See the
+[Candidate Promotion Effectivity Record](SEMANTIC_STATUS_CANDIDATE_PROMOTION_EFFECTIVITY_RECORD.md).
 
 ## Minimum Stable gate
 
@@ -230,8 +252,14 @@ support, or conformance — so **AE-2 and AE-3 do not exist anywhere**, and Stab
 remains unreachable (RISK-044, RISK-048).
 
 Therefore, unchanged in effect: **no artifact with an accessibility obligation
-can reach Stable today**, and the Candidate accessibility gate is equally unmet.
-This is recorded, not worked around (RISK-028).
+can reach Stable today.** This is recorded, not worked around (RISK-028).
+
+The **Candidate** accessibility gate is a different, lower gate, and it **has**
+been met once: for the channel-independent Semantic Status source/contract family
+at `semantic-status-rev-0002-candidate`, on admitted AE-1 evidence
+`AE1-CDS-WP016-SEMSTATUS-004`. That changes nothing above — **AE-1 is not AE-2 and
+is not AE-3**, so requirement 3 of the Stable gate remains unsatisfiable, and
+Candidate remains bounded validation, never normative and never a claim.
 
 **CDS-WP-007 promoted no artifact.** A policy is an input to a gate, never a pass
 through one — and defining a target proves nothing (DEC-S-050).

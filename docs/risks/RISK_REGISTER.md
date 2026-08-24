@@ -61,8 +61,9 @@ Full model: [Risk Governance Model](../governance/RISK_GOVERNANCE_MODEL.md).
 | **Accepted** | Consciously accepted with residual effect; requires a review trigger. |
 | **Closed** | No longer relevant, or fully mitigated with evidence. |
 
-**90 of the 98 risks are currently `Monitored`; RISK-040, RISK-044, RISK-066,
-RISK-067, RISK-068, RISK-069, RISK-071, and RISK-098 are `Mitigating`.** CDS-WP-006 finalized
+**89 of the 98 risks are currently `Monitored`; RISK-031, RISK-040, RISK-044,
+RISK-066, RISK-067, RISK-068, RISK-069, RISK-071, and RISK-098 are `Mitigating`.**
+CDS-WP-006 finalized
 the role model; it treated no risk and changed no assessment, because no evidence
 justified a change. CDS-WP-007 added RISK-041 … RISK-048 and likewise treated none.
 CDS-WP-009 moved **RISK-040 `Monitored → Mitigating`** on the strength of the
@@ -81,7 +82,12 @@ changed no existing status. CDS-WP-015 added **RISK-090 … RISK-097** (all
 `Monitored`, status source/evidence risks) and changed no existing status. The
 CDS-WP-016 Candidate Finalization Governance Rework added **RISK-098** directly as
 `Mitigating` — DEC-S-126, the Candidate Approval Record Template, and the v2
-evidence runner are its active mitigation — and changed no existing status. No description, likelihood, or
+evidence runner are its active mitigation — and changed no existing status. The
+CDS-WP-016 Post-Promotion Current-State Reconciliation moved **RISK-031
+`Monitored → Mitigating`** on **Human-Maintainer authorization of 2026-08-19**,
+on the strength of the first Candidate transition having completed under active,
+exact-byte, evidence-bound gate control; it added no risk and changed **no other
+risk status**. No description, likelihood, or
 severity was changed for any existing risk, and **no risk was accepted or closed** —
 only the Human Maintainer may do either.
 
@@ -1021,7 +1027,7 @@ exactly there. Treat an automated check as input to a review, never the review.
 
 ## RISK-031 — Maturity inflation
 
-- **Status:** Monitored
+- **Status:** **Mitigating**
 - **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: named per mitigation · Evidence Reviewer: Nova or authorized reviewer
 - **Initial likelihood:** High
 - **Initial severity:** High
@@ -1043,8 +1049,35 @@ Keep maturity, release version, and publication state on **separate axes**
 (DEC-S-035): collapsing them is the mechanism by which "we released it" becomes
 "it is stable". Require the Candidate and Stable gates with evidence and explicit
 approval (DEC-S-036), and keep Candidate mandatory before Stable. Make demotion
-normal and cheap. Note that **no existing artifact is Candidate or Stable** —
-defining the lifecycle did not populate it.
+normal and cheap.
+
+### Mitigation state — 2026-08-19
+
+**Status transition `Monitored → Mitigating`, authorized by the Human Maintainer on
+2026-08-19.**
+
+Basis: the **first Candidate transition completed under active, exact-byte,
+evidence-bound gate control** — not by assertion and not by label. In order:
+
+| # | Control that actually ran | Result |
+| --- | --- | --- |
+| 1 | Fresh revision-bound AE-1 evidence `AE1-CDS-WP016-SEMSTATUS-004` | Produced against the exact approved bytes |
+| 2 | Fresh independent evidence review, reviewer ≠ executor | **PASS WITH NOTES** |
+| 3 | Human-Maintainer evidence admission | **APPROVED / ADMITTED** |
+| 4 | Nova Candidate Finalization Review | **GO WITH NOTES** — recommendation only |
+| 5 | Human-Maintainer Candidate approval | **`AUTHORIZED_PENDING_EXACT_BYTE_INTEGRATION`** |
+| 6 | Exact-byte Promotion Commit | **`22fa0710e2b75df22e7b420c2f9d86bbe67b2777`** |
+| 7 | PRE/POST regression and committed-blob verification | **PASS** — 15/15 blob identities exact; 47/47 · 64/64 · 184/184 · 24/24/0/0 |
+
+**Current state:** exactly **one** artifact family is Candidate — the
+channel-independent Semantic Status source/contract family at
+`semantic-status-rev-0002-candidate`. **No artifact is Stable.** Every other artifact
+remains AE-0, and no claim or conformance of any kind exists.
+
+`Mitigating` is not `Accepted` and not `Closed`. **Only the Human Maintainer may
+accept or close a risk**, and neither has happened here. Demotion remains normal and
+cheap, the Candidate and Stable gates remain fully required, and maturity, release
+version, and publication state remain on separate axes (DEC-S-035).
 
 ---
 
@@ -2976,7 +3009,7 @@ Explicit `Draft – Candidate gate incomplete` status with a gate-state table
 
 ---
 
-## RISK-097 — Experimental status source consumed prematurely
+## RISK-097 — Semantic Status source consumed prematurely
 
 - **Status:** Monitored
 - **Roles:** per the finalized model — Accountable Risk Owner: Human Maintainer · Risk Controller: Nova · Mitigation Executor: scope-dependent · Evidence Reviewer: Nova or separately authorized reviewer
@@ -2984,6 +3017,13 @@ Explicit `Draft – Candidate gate incomplete` status with a gate-state table
 - **Initial severity:** High
 
 ### Description
+
+*Registration-time framing (CDS-WP-015). The **Description**, **Impact**, and
+**Mitigation direction** in this entry were written while the Semantic Status
+source was `Experimental`/`Unapproved` at `semantic-status-rev-0001`. They are
+retained as written and are **not** the current-state statement — see the
+**Post-Promotion Current-State Note** at the end of this entry. The risk itself
+remains live and `Monitored`.*
 
 Consumers may integrate or distribute the Experimental Semantic Status Source Set
 before Candidate approval.
@@ -3000,6 +3040,44 @@ Prohibit representing the source as approved before the gate (DEC-S-124); keep t
 approval-statement check active at the source; publication state stays
 `Private Development`; consumer integration remains unauthorized until the gate
 succeeds.
+
+### Post-Promotion Current-State Note — 2026-08-19
+
+**A current-state note, not a status change.** RISK-097 remains **`Monitored`**.
+Its ID, roles, initial likelihood, and initial severity are unchanged, and it is
+**neither accepted nor closed** — only the Human Maintainer may do either
+(DEC-S-045).
+
+**What changed.** RISK-097 was registered by CDS-WP-015 under the original title
+*"Experimental status source consumed prematurely"*, while the Semantic Status
+source was `Experimental`/`Unapproved` at `semantic-status-rev-0001`. Promotion
+Commit `22fa0710e2b75df22e7b420c2f9d86bbe67b2777` (2026-08-19) made the current
+committed source **`semantic-status-rev-0002-candidate`**, maturity
+**`Candidate`**, approval **`Approved`** — for the channel-independent Layer-3
+Semantic Source / Contract family only. The registration-time phrases "the
+Experimental Semantic Status Source Set" and "before Candidate approval" are
+therefore historical, and the title no longer designates the source as
+`Experimental`.
+
+**Why the risk stays live.** Candidate is bounded validation only and is never
+normative. Candidate is **not** Stable, **not** a release, **not** publication,
+**not** unrestricted adoption, **not** normative consumer authority, **not**
+conformance, and **not** certification. The gate that succeeded was the Candidate
+**maturity** gate for this source/contract family; it authorized **no** consumer
+integration, **no** adoption, **no** pilot activation, and **no** distribution.
+The mitigation sentence above must therefore **not** be read as authorization now
+that the Candidate gate has succeeded.
+
+**The live hazard today.** Consumers may still integrate or distribute the
+Semantic Status source outside the applicable adoption, maturity, publication, and
+consumer-authority boundaries — freezing identifiers into products, creating
+de-facto compatibility pressure against a source that may still change, and
+turning a `Candidate` maturity state into an implicit claim (DEC-S-044 violation
+by usage). **No claim of any level is valid today**, for anyone, including CDS.
+
+**Boundaries unchanged.** Publication remains **`Private Development`**; release
+and tags **none**; the CoreOps pilot **inactive**; Stable **not reached**; every
+other artifact **AE-0**. Documentation is not mitigation.
 
 ---
 

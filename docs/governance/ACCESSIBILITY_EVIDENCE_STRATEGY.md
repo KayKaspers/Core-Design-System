@@ -113,10 +113,10 @@ work and never the artifact itself** (DEC-S-045). Evidence reviewed only by its 
 executor has not been reviewed. The Evidence Reviewer role is currently **unstaffed**
 (FM-F-006) and must be staffed before Stable/claim evidence is accepted.
 
-The one admitted AE-1 package was reviewed by a **separately authorized, one-off
+Each admitted AE-1 package was reviewed by a **separately authorized, one-off
 independent reviewer** who was not its executor. That satisfied review independence
-**for that single package only**; it does **not** staff the standing Evidence
-Reviewer role, and the role remains unstaffed.
+**for that package only**, package by package; it does **not** staff the standing
+Evidence Reviewer role, and the role remains unstaffed.
 
 ## Evidence freshness
 
@@ -141,16 +141,28 @@ weakened standard and never a conformant artifact with an asterisk (DEC-S-059).
 ## Current evidence state
 
 When this strategy was written, **no accessibility evidence existed and every CDS
-artifact was AE-0**. That is no longer globally true. Exactly **one** bounded
-evidence package has since been produced, independently reviewed, and admitted:
-**AE-1** for the channel-independent Semantic Status Layer-3 source/contract family
-(`AE1-CDS-WP016-SEMSTATUS-002`, source revision `semantic-status-rev-0001`) — see
-the [Semantic Status AE-1 Admission Record](SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md).
+artifact was AE-0**. That is no longer globally true. Bounded AE-1 evidence has
+since been produced, independently reviewed, and admitted for one scope only — the
+channel-independent Semantic Status Layer-3 source/contract family. **Each
+admission is bound to one source revision, and evidence never transfers across a
+source revision.**
+
+| Evidence ID | Bound source revision | Independent review | Admission state |
+| --- | --- | --- | --- |
+| `AE1-CDS-WP016-SEMSTATUS-002` | `semantic-status-rev-0001` | PASS | **Historical admission — that revision only** ([record](SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md)) |
+| `AE1-CDS-WP016-SEMSTATUS-003` | `semantic-status-rev-0002-candidate` | PASS WITH NOTES | **NOT ADMITTED** · `SUPERSEDED_FOR_ADMISSION_BY_EVIDENCE_INPUT_CHANGE` |
+| **`AE1-CDS-WP016-SEMSTATUS-004`** | **`semantic-status-rev-0002-candidate`** | PASS WITH NOTES | **ADMITTED — the current admission** ([record](SEMANTIC_STATUS_AE1_004_ADMISSION_RECORD.md)) |
+
+The current authoritative source revision is `semantic-status-rev-0002-candidate`,
+so `AE1-CDS-WP016-SEMSTATUS-004` is the package in force. The rev-0001 admission
+is retained as a historical fact and covers nothing current; it was **not**
+carried forward, extended, or reused.
 
 **All other CDS artifacts remain AE-0.** No AE-2, AE-3, or AE-4 exists anywhere; no
-environment has been exercised; no tool has been selected as a standing choice. Apart
-from that single admitted package, this strategy still describes intent, not activity,
-and enables no claim. A target and a baseline are not conformance (DEC-S-050).
+environment has been exercised; no tool has been selected as a standing choice.
+Apart from the admitted source-scope packages above, this strategy still describes
+intent, not activity, and enables no claim. A target and a baseline are not
+conformance (DEC-S-050).
 
 ## Claim boundary
 

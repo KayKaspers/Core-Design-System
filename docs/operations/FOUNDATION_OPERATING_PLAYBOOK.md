@@ -242,6 +242,30 @@ state:
   not approval.**
 - Current publication state: **`Private Development`**.
 
+### Post-Candidate current-state reconciliation — 2026-08-20
+
+The phase rule above governed the **pre-Candidate operating phase**. It
+prohibited an **ungated** Candidate promotion; it did **not** permanently
+prohibit a later, separately authorized Candidate transition. **The historical
+phase rule remains valid for its original scope.**
+
+The first Candidate transition has since completed through **CDS-WP-016**,
+through the required evidence, independent review, evidence admission,
+Human-Maintainer approval, and exact-byte promotion gates — Promotion Commit
+`22fa0710e2b75df22e7b420c2f9d86bbe67b2777`.
+
+Current state:
+
+- **Candidate:** the channel-independent Semantic Status source/contract family
+  (`semantic/status`), source revision `semantic-status-rev-0002-candidate`,
+  maturity **Candidate**, approval **Approved**.
+- **Stable:** none. **CoreOps pilot:** inactive. **Claim:** none.
+  **Conformance:** none. **Publication:** **`Private Development`**.
+
+**A successful gated transition does not weaken the gate.** Candidate
+availability does **not** activate a pilot, does **not** imply Stable, and does
+**not** imply any claim or any conformance.
+
 ## Emergency escalation
 
 An emergency compresses the **timeline**, never the standard (DEC-S-048).

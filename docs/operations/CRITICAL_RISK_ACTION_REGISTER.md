@@ -205,7 +205,7 @@ Titles are quoted from the committed [Risk Register](../risks/RISK_REGISTER.md).
 
 ### RISK-031 — Maturity inflation
 
-- **Current status:** Monitored
+- **Current status:** **Mitigating**
 - **Accountable owner:** Human Maintainer · **Risk Controller:** Nova
 - **Default Mitigation Executor role:** Nova (maturity-gate review)
 - **Evidence Reviewer:** separately authorized Evidence Reviewer (Nova precluded
@@ -213,13 +213,25 @@ Titles are quoted from the committed [Risk Register](../risks/RISK_REGISTER.md).
 - **Next review trigger:** at every Candidate and Stable transition request.
 - **Next expected evidence:** the full Candidate/Stable gate evidence per
   DEC-S-036; demotion recorded as a normal, cheap act.
-- **Affected upcoming work:** first Candidate; first Stable (currently unreachable).
+- **Affected upcoming work:** first Stable (currently unreachable).
 - **Blocking effect:** an artifact lacking gate evidence cannot be promoted —
   blocks Candidate and Stable.
 - **Permitted status transition:** Monitored → Mitigating when the first Candidate
   transition is under active gate control.
-- **Notes:** no existing artifact is Candidate or Stable; defining the lifecycle
-  did not populate it.
+- **Status transition performed:** **`Monitored → Mitigating`**, authorized by the
+  **Human Maintainer on 2026-08-19**.
+  - **Trigger condition:** the first Candidate transition under active gate control.
+  - **Outcome:** **satisfied** by the CDS-WP-016 Promotion Commit
+    `22fa0710e2b75df22e7b420c2f9d86bbe67b2777` — fresh revision-bound AE-1 evidence
+    `AE1-CDS-WP016-SEMSTATUS-004`, a fresh independent review (**PASS WITH NOTES**),
+    a Human-Maintainer evidence admission, a Nova finalization review
+    (**GO WITH NOTES**, recommendation only), a Human-Maintainer Candidate approval,
+    an exact-byte Promotion Gate (**15/15** committed blob identities exact), and
+    PRE/POST regression **47/47 · 64/64 · 184/184 · 24/24/0/0**.
+- **Notes:** **one artifact family is Candidate** — the channel-independent Semantic
+  Status source/contract family at `semantic-status-rev-0002-candidate`. **No Stable
+  artifact exists.** `Mitigating` is neither `Accepted` nor `Closed`; only the Human
+  Maintainer may accept or close a risk.
 
 ---
 
@@ -349,15 +361,16 @@ Titles are quoted from the committed [Risk Register](../risks/RISK_REGISTER.md).
 | RISK-026 | Nova | ✓ | ✓ | ✓ | Monitored |
 | RISK-028 | Claude (scoped) | ✓ | ✓ | ✓ | Monitored |
 | RISK-029 | Nova | ✓ | ✓ | ✓ | Monitored |
-| RISK-031 | Nova | ✓ | ✓ | ✓ | Monitored |
+| RISK-031 | Nova | ✓ | ✓ | ✓ | **Mitigating** |
 | RISK-038 | Human Maintainer | ✓ | ✓ | ✓ | Monitored |
 | RISK-040 | Nova | ✓ | ✓ | ✓ | **Mitigating** |
 | RISK-044 | Claude (scoped) | ✓ | ✓ | ✓ | **Mitigating** |
 | RISK-048 | Nova | ✓ | ✓ | ✓ | Monitored |
 
 **All twelve** carry a named executor role, a review trigger, expected evidence,
-and a blocking effect. **Two are now `Mitigating`** — RISK-040 (CDS-WP-009) and
-RISK-044 (CDS-WP-010); the other ten remain `Monitored`.
+and a blocking effect. **Three are now `Mitigating`** — RISK-040 (CDS-WP-009),
+RISK-044 (CDS-WP-010), and RISK-031 (CDS-WP-016, Human-Maintainer authorized
+2026-08-19); the other nine remain `Monitored`.
 
 ## New risks from CDS-WP-010 (not auto-added to the Critical group)
 

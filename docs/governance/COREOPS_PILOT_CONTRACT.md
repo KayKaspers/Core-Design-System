@@ -59,15 +59,20 @@ The pilot may begin only when **all** hold:
 8. The accessibility target and its evidence method are decided (CR-024) —
    otherwise Group E cannot be evidenced.
 
-### Current state — reconciled by CDS-WP-007
+### Current state — reconciled by CDS-WP-007, updated 2026-08-19
 
-**Not met. The pilot remains inactive.**
+**Not met. The pilot remains INACTIVE and NOT AUTHORIZED FOR EXECUTION.**
+
+Criterion 5 has since been satisfied by the Semantic Status Candidate foundation.
+That changes only criterion 5: the remaining criteria and the separate pilot
+authorization are unaffected, no consumer evidence exists, and **a Candidate
+foundation being available is not a pilot start**.
 
 | # | Criterion | State |
 | --- | --- | --- |
 | 8 | Accessibility target and evidence method decided | **`Accessibility target defined` — met by the Human-Maintainer commit of CDS-WP-007.** The target (**WCAG 2.2 Level AA**, DEC-S-049, DEC-S-060) and the evidence method (**AE-0 … AE-4**, Evidence and Claims Model) exist. Claude did not declare this met; **the commit did.** |
 | 4 | CDS-WP-005 architecture approved | **Pending** |
-| 5 | Foundations at Candidate maturity | **Unmet.** No artifact is Candidate. For the Semantic Status source/contract family the accessibility-gate evidence elements are supported (admitted source-level **AE-1**), but Nova Candidate review and Human-Maintainer approval remain open; every other artifact is AE-0. The support baseline A11Y-BL-001 is committed, but a baseline is not evidence. |
+| 5 | Foundations at Candidate maturity | **Satisfied for the Semantic Status Candidate foundation.** That channel-independent source/contract family is **`Candidate`** / **`Approved`** at source revision `semantic-status-rev-0002-candidate`, on admitted source-level **AE-1** evidence `AE1-CDS-WP016-SEMSTATUS-004`, made effective by Promotion Commit `22fa0710e2b75df22e7b420c2f9d86bbe67b2777` (2026-08-19). **No other artifact is Candidate**, every other artifact is **AE-0**, and no artifact is Stable. The support baseline A11Y-BL-001 is committed, but a baseline is not evidence. **Candidate foundation availability is not pilot activation** — this criterion alone does not start the pilot. |
 
 **Accessibility evidence remains not satisfied.** Criterion 8 concerns a
 *decision*, not evidence — and Group E still cannot be evidenced. See the

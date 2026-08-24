@@ -116,8 +116,12 @@ grants no maturity, no admission, and no Candidate.
 Since CDS-WP-016 the semantic-status V4 checks apply a maturity/approval state
 machine instead of an unconditional block:
 
-- **Experimental/Unapproved** (or absent) is the current committed state and
-  passes.
+- **Experimental/Unapproved** (or absent) passes. Absent metadata is the normal
+  case for the synthetic `testOnly`/`nonNormative` fixtures. This combination is
+  **not** the current committed state of the productive `semantic/status`
+  source: since Promotion Commit `22fa0710e2b75df22e7b420c2f9d86bbe67b2777` it
+  declares `Candidate`/`Approved` at revision
+  `semantic-status-rev-0002-candidate`.
 - **Candidate/Approved** is validator-conformant **only** when it is internally
   coherent: `maturityState: Candidate` **with** `approvalState: Approved`, a
   Candidate source revision (`semantic-status-rev-NNNN-candidate`), and **not** a
