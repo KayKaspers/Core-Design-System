@@ -9,6 +9,33 @@ released and no release is announced.
 
 ### Added
 
+- **Post-Candidate Development Roadmap** added
+  (`docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md`) — the **single active
+  forward roadmap**: twelve development arcs from Reconciliation through Stable
+  Evaluation, **CDS-WP-017 … CDS-WP-053** as a contiguous gap-free sequence,
+  milestones **M1 … M12**, a per-work-package mapping to the normative eight-layer
+  architecture, the standing gates (Product Profile · real consumer ·
+  generated-output authority · semantic validation priority · multimodal and AI
+  scope registration · Stable), and an eleven-way requirement classification model
+  in which **Consumer-local** and **Reject** are valid outcomes. It is a **planning
+  view — not normative, not an authorization, and not evidence**. (CDS-WP-017)
+- **Forward work-package sequence registered as `Planned`** in
+  `project-system/WORK_PACKAGES.md`: **CDS-WP-018 … CDS-WP-053**, none of them
+  active and none authorized for execution. **`Planned` is not `Active`**, and
+  recording the sequence activates nothing — each work package requires its own
+  explicit Nova prompt and Human-Maintainer authorization. (CDS-WP-017)
+- **PB001 disposition recorded.** PB001 is **not held in this repository** and
+  remains **Experimental Evidence at AE-0, non-normative**, with no conformance
+  evidence, no Product Profile authority, and no universal-core authority by
+  itself. Its finding topics are routed to destination work packages **by topic
+  only**; **no PB001 evidence is imported and none is upgraded**. (CDS-WP-017)
+- **Deferred finding routing recorded.** `R3R-003`, `NF-R3-OBS-001`,
+  `NF-R4-OBS-001`, `NF-R4-OBS-002`, `NF-R5R-OBS-001`, and `NF-R5R-OBS-003` are
+  routed to **CDS-WP-018**; `NF-R5R-OBS-002` stays **informational — a historical
+  evidence limitation requiring no repair**. None of these identifiers occurs in
+  this repository, so routing is by identifier only. **Routing is not repair**, and
+  CDS-WP-017 repaired none of them. (CDS-WP-017)
+
 - **Semantic Status Foundation promoted to `Candidate`** (CDS-WP-016). The
   Human-Maintainer exact-byte **Promotion Commit
   `22fa0710e2b75df22e7b420c2f9d86bbe67b2777`** (parent
@@ -279,6 +306,25 @@ normative. CDS-WP-017 is **inactive, not authorized, and not defined**.
 - Work-package evidence notes for CDS-WP-008. (CDS-WP-008)
 
 ### Changed
+
+- **CDS-WP-016 recorded as `Completed`** across the current-state surfaces
+  (`README.md`, `CLAUDE.md`, `project-system/WORK_PACKAGES.md`,
+  `project-system/NEXT_PHASE.md`, `project-system/PROJECT_PROFILE.md`,
+  `project-system/CONTEXT_PACK_FOUNDATION.md`, `project-brain/PROJECT_BRAIN.md`,
+  and the two affected roadmap plans). Closure became effective with the
+  Human-Maintainer commit `1fc53ae5afa40807e1950171ab700b0860ee581e`; the
+  superseded two-stage closure statement, which predated that commit, is retired.
+  **CDS-WP-017 is recorded as the active work package.** (CDS-WP-017)
+
+**Boundaries of the CDS-WP-017 entries above.** No maturity changed; the Semantic
+Status Foundation stays `Candidate` at `semantic-status-rev-0002-candidate` and
+**nothing is Stable**. **No evidence was produced and none was admitted**; every
+artifact other than the one admitted source-level AE-1 family remains **AE-0**. No
+risk was accepted or closed, no ADR and no Decision was added, and no Semantic
+Status source byte, schema, validator, fixture, or evidence artifact was touched.
+**No claim, no conformance, no Product Profile, no pilot, no consumer integration,
+no release, no tag, and no publication transition** — publication remains
+`Private Development`. **CDS-WP-018 … CDS-WP-053 are inactive.**
 
 - **Post-promotion lifecycle reconciliation** across the current-state, governance,
   authority, roadmap, risk, and project mirrors (CDS-WP-016). The five

@@ -23,10 +23,22 @@ Pre-Candidate Operating Enablement — **Foundation / Pre-Design: Closed with No
 
 ## Work package status
 
-- Current work package after CDS-WP-015: **CDS-WP-016 — Semantic Status Foundation
-  Independent Evidence Review and Candidate Gate** (roadmap status `Next` — the
-  current authorized work package; its review work is **executed**: Independent
-  Review **PASS**, Candidate Recommendation **GO**). **GO is not a Candidate award.**
+- **Current work package: CDS-WP-017 — Post-WP-016 Roadmap, Authority and Scope
+  Reconciliation** (roadmap status `Next` — the current authorized work package).
+  Governance, roadmap, context, and project-state reconciliation only: it records
+  CDS-WP-016 as closed, registers CDS-WP-018 … CDS-WP-053 as `Planned` and **not
+  active**, and produces the single active
+  [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
+  It creates **no** design, token, component, evidence, maturity, claim, Product
+  Profile, pilot, release, or publication effect, and **activates no later work
+  package**.
+- **Next planned work package: CDS-WP-018 — Deferred Governance and Repository
+  Hygiene Reconciliation** — **`Planned`, not active, not authorized, work not
+  started.**
+- Preceding work package: **CDS-WP-016 — Semantic Status Foundation
+  Independent Evidence Review and Candidate Gate.** Its review work was
+  **executed**: Independent Review **PASS**, Candidate Recommendation **GO**.
+  **GO is not a Candidate award.**
   The **Nova Candidate Maturity Review** then returned **NO-GO** (Candidate
   Accessibility Gate unmet), the gap assessment **confirmed** it (9/9), and the
   Human-Maintainer-authorized **Candidate Accessibility Gate Remediation**
@@ -55,17 +67,12 @@ Pre-Candidate Operating Enablement — **Foundation / Pre-Design: Closed with No
   **Candidate is YES**, source revision **`semantic-status-rev-0002-candidate`**,
   maturity **`Candidate`**, approval **`Approved`** — for the channel-independent
   Semantic Status Layer-3 source/contract family only.
-- **CDS-WP-016 status:** **post-promotion current-state reconciliation**; proposed
-  closure prepared, **authoritative closure pending** a Fresh Independent Governance
-  Reconciliation Review, Nova adjudication, and a Human-Maintainer exact-byte
-  integration commit.
-- No follow-up work package is authorized; **CDS-WP-017 is `INACTIVE`, `NOT
-  AUTHORIZED`, and `NOT DEFINED`**.
-- Previous work package: CDS-WP-015 — Semantic Status Foundation Source Set and
-  Candidate Evidence (Completed)
+- **CDS-WP-016 status:** **Completed.** Its post-promotion current-state
+  reconciliation was integrated by the Human-Maintainer commit
+  `1fc53ae5afa40807e1950171ab700b0860ee581e`, and closure became effective there.
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
-  CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015
+  CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**
 
 ## Operating enablement status
 

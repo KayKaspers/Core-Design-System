@@ -40,9 +40,23 @@ accessibility-support planning **precede** the first Candidate (DEC-S-062).
 > as written and are not weakened.
 >
 > **No Stable transition has occurred**, no claim and no conformance exists, the
-> pilot remains inactive, publication remains `Private Development`, and
-> **CDS-WP-017 is not activated**. See the
+> pilot remains inactive, and publication remains `Private Development`. See the
 > [Candidate Promotion Effectivity Record](../governance/SEMANTIC_STATUS_CANDIDATE_PROMOTION_EFFECTIVITY_RECORD.md).
+
+> **Forward-view note (CDS-WP-017, 2026-08-25).** CDS-WP-016 is **closed**
+> (Human-Maintainer commit `1fc53ae5afa40807e1950171ab700b0860ee581e`), and the
+> active work package is **CDS-WP-017**. **This document's forward view is
+> historical.** The single active forward roadmap is the
+> [Post-Candidate Development Roadmap](POST_CANDIDATE_DEVELOPMENT_ROADMAP.md);
+> where the sequencing section below still names CDS-WP-011 as the next work
+> package, it records what was true when CDS-WP-009 produced it.
+>
+> **Nothing below is weakened.** The prohibitions, exclusions, entry conditions,
+> and role-readiness gaps stated in this document remain in force. In particular,
+> concrete visual design, component work, Product Profiles, the CoreOps pilot, and
+> publication are **still not authorized**, and the visual arc recorded in the
+> forward roadmap (CDS-WP-019 onwards) is **`Planned` only** — it authorizes no
+> design work and lifts no prohibition here.
 
 ## Foundation closure notes carried into this phase
 

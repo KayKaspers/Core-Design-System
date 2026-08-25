@@ -153,15 +153,34 @@ library, or a design project scoped exclusively to CoreOps.
   consumer, or product evidence anywhere. Publication remains
   **`Private Development`**; no release and no tag exist. **A Candidate award is
   not Stable, not a claim, not conformance, and not a release.**
-- **CDS-WP-016 state:** **Post-Promotion Current-State Reconciliation** (Human
-  Maintainer authorized 2026-08-19; internal reconciliation, **not** a new work
-  package). Proposed closure bytes are prepared; **authoritative closure is not yet
-  effective** and becomes so only after a **Fresh Independent Governance
-  Reconciliation Review**, Nova adjudication, and a Human-Maintainer exact-byte
-  integration commit.
-- **CDS-WP-017: INACTIVE / NOT AUTHORIZED / NOT DEFINED.** No follow-up work
-  package is authorized. Further work begins only on an explicit Nova prompt and
-  Human-Maintainer authorization.
+- **CDS-WP-016 state: CLOSED.** Its Post-Promotion Current-State Reconciliation
+  (Human Maintainer authorized 2026-08-19; internal reconciliation, **not** a new
+  work package) was integrated by the Human-Maintainer commit
+  **`1fc53ae5afa40807e1950171ab700b0860ee581e`**, and closure became effective
+  there.
+- **Current work package: CDS-WP-017 — Post-WP-016 Roadmap, Authority and Scope
+  Reconciliation.** Governance, roadmap, context, and project-state reconciliation
+  only. It records CDS-WP-016 as closed, registers **CDS-WP-018 … CDS-WP-053 as
+  `Planned`, not active, and not authorized**, and produces the single active
+  [Post-Candidate Development Roadmap](docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md)
+  (twelve arcs, milestones M1 … M12, architecture-layer mapping, standing gates,
+  requirement classification model, PB001 disposition, deferred-finding routing).
+  It creates **no** design, token, component, or visual value; produces and admits
+  **no** evidence; changes **no** maturity; accepts or closes **no** risk; adds
+  **no** ADR or Decision; makes **no** claim; and activates **no** Product Profile,
+  pilot, consumer integration, release, tag, or publication.
+- **CDS-WP-018 … CDS-WP-053: PLANNED / NOT ACTIVE / NOT AUTHORIZED.** They are
+  recorded as a planning sequence so no competing roadmap can arise; **recording
+  them activates nothing** and work on them has not started. The immediate next
+  planned work package is **CDS-WP-018 — Deferred Governance and Repository Hygiene
+  Reconciliation**, which stays inactive until separately authorized. Each work
+  package begins only on an explicit Nova prompt and Human-Maintainer
+  authorization, one at a time.
+- **Scope-registration gate.** Audio and sonic design, haptics, multimodal
+  feedback, and AI/agent interaction design are registered in **none** of the six
+  capability domains and in **no** channel model today. Planning CDS-WP-040,
+  CDS-WP-041, CDS-WP-042, and CDS-WP-044 does **not** register them: the scope must
+  first be extended through an Elevated change with Human-Maintainer approval.
 
 ## Execution environment
 
@@ -358,6 +377,9 @@ Before beginning a work package, inspect at minimum:
 - [project-system/PROJECT_PROFILE.md](project-system/PROJECT_PROFILE.md)
 - [project-system/WORK_PACKAGES.md](project-system/WORK_PACKAGES.md)
 - [project-system/NEXT_PHASE.md](project-system/NEXT_PHASE.md)
+- [docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md](docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md)
+  — the single active forward roadmap (CDS-WP-017 … CDS-WP-053); a **planning
+  view, never normative** and never an authorization
 - [project-brain/PROJECT_BRAIN.md](project-brain/PROJECT_BRAIN.md)
 - the local Skills relevant to the assignment, selected per the Skills-first
   operating mode above ([inventory](project-system/NDF_SKILLS_INVENTORY.md))

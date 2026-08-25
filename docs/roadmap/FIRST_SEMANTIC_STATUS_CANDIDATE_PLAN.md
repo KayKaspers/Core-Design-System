@@ -335,6 +335,10 @@ requirement in the
 
 ### Current state
 
+*(As of 2026-08-19. Every Semantic Status value below still holds; only the
+**CDS-WP-017** row is superseded — see
+[Work-package current state — 2026-08-25](#work-package-current-state--2026-08-25-cds-wp-017).)*
+
 | Item | Value |
 | --- | --- |
 | **Candidate** | **YES** |
@@ -353,8 +357,31 @@ and its own admission; **evidence never transfers across a source revision**
 (DEC-S-126). See the
 [Candidate Promotion Effectivity Record](../governance/SEMANTIC_STATUS_CANDIDATE_PROMOTION_EFFECTIVITY_RECORD.md).
 
+## Work-package current state — 2026-08-25 (CDS-WP-017)
+
+*(Additive. This section changes **no** Candidate prerequisite, **no** gate
+requirement, and **no** exclusion, and rewrites none of the dated sections above.
+It updates only the work-package rows of the state tables above, which recorded
+`CDS-WP-017: not activated` as of their own dates.)*
+
+| Item | Value |
+| --- | --- |
+| **CDS-WP-016** | **Closed** — Human-Maintainer commit `1fc53ae5afa40807e1950171ab700b0860ee581e` |
+| **CDS-WP-017** | **Active** — Post-WP-016 Roadmap, Authority and Scope Reconciliation |
+| **CDS-WP-018 … CDS-WP-053** | **`Planned`, not active, not authorized, work not started** |
+
+**Every Semantic Status lifecycle value above is unchanged by this section.**
+Candidate remains **YES** at `semantic-status-rev-0002-candidate` for the
+channel-independent source/contract family only; **Stable remains No**; claims and
+conformance remain **none**; there is still **no visual value and no component**;
+and the admitted evidence in force is still `AE1-CDS-WP016-SEMSTATUS-004` at AE-1.
+The forward roadmap that follows this plan is the
+[Post-Candidate Development Roadmap](POST_CANDIDATE_DEVELOPMENT_ROADMAP.md) — a
+planning view that is **not normative** and authorizes nothing.
+
 ## Related documents
 
+- [Post-Candidate Development Roadmap](POST_CANDIDATE_DEVELOPMENT_ROADMAP.md)
 - [Candidate Accessibility Gate Addendum](../reviews/WP016_CANDIDATE_ACCESSIBILITY_GATE_ADDENDUM.md)
 - [Candidate Approval Record Template](../operations/CANDIDATE_APPROVAL_RECORD_TEMPLATE.md)
 - [Semantic Status Foundation Contract](../foundations/SEMANTIC_STATUS_FOUNDATION_CONTRACT.md)

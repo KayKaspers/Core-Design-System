@@ -101,8 +101,9 @@ approved.
 | Promotion gate | **PASS** — committed blob identity 15/15 exact; regression 47/47 · 64/64 · 184/184 · 24/24/0/0; remote fast-forward PASS |
 | Stable · claims · conformance | **No** · **None** · **None** |
 | AE-2 / AE-3 / AE-4 · channel · consumer evidence | **None** everywhere |
-| **CDS-WP-016** | **Post-promotion closure reconciliation** — proposed closure bytes prepared; authoritative closure pending Fresh Independent Governance Reconciliation Review, Nova adjudication, and Human-Maintainer exact-byte integration |
-| **CDS-WP-017** | **INACTIVE / NOT AUTHORIZED / NOT DEFINED** |
+| **CDS-WP-016** | **Closed** — post-promotion closure reconciliation integrated by the Human-Maintainer commit `1fc53ae5afa40807e1950171ab700b0860ee581e` |
+| **CDS-WP-017** | **Active** — Post-WP-016 Roadmap, Authority and Scope Reconciliation (governance/roadmap only; no design, evidence, maturity, claim, or publication effect) |
+| **CDS-WP-018 … CDS-WP-053** | **PLANNED / NOT ACTIVE / NOT AUTHORIZED** — work not started |
 
 **F-001 lifecycle-metadata resolution (Human Maintainer, 2026-08-19).** The five
 `AE1-CDS-WP016-SEMSTATUS-004`-bound normative Foundation documents remain
@@ -904,13 +905,31 @@ conformance remains **none**, **every other CDS artifact remains AE-0**, and the
 no AE-2, AE-3, or AE-4 anywhere — **still no visual values, no component, no
 pilot**.
 
-**The next step is the CDS-WP-016 closure**, and it is not the executor's to make:
-a **Fresh Independent Governance Reconciliation Review** of the post-promotion
-reconciliation, then **Nova adjudication**, then a **Human-Maintainer exact-byte
-integration commit**. Proposed closure bytes are not committed closure, and a review
-PASS is not a commit. No follow-up work package is authorized and **CDS-WP-017 is
-`INACTIVE`, `NOT AUTHORIZED`, and `NOT DEFINED`**; any further step begins only on an
-explicit Nova prompt and Human-Maintainer authorization.
+**CDS-WP-016 is closed.** The Human-Maintainer commit
+`1fc53ae5afa40807e1950171ab700b0860ee581e` integrated the post-promotion
+current-state reconciliation, and closure became effective there.
+
+**The active work package is CDS-WP-017 — Post-WP-016 Roadmap, Authority and Scope
+Reconciliation.** It reconciles the state actually reached with the accepted forward
+planning basis so that exactly one active future work-package sequence exists:
+CDS-WP-016 recorded as closed, CDS-WP-017 recorded as active, and **CDS-WP-018 …
+CDS-WP-053 recorded as `Planned`, not active, not authorized, work not started** —
+a contiguous, gap-free, duplicate-free sequence held in the
+[Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md)
+together with its arcs, milestones **M1 … M12**, architecture-layer mapping, standing
+gates, and requirement classification model.
+
+CDS-WP-017 produces and admits **no evidence**, changes **no maturity**, makes
+**no claim**, activates **no Product Profile, pilot, consumer integration, release,
+tag, or publication**, and **activates no later work package**. Its own closure is
+not the executor's to make: a fresh independent review, Nova adjudication, and a
+Human-Maintainer integration commit. Uncommitted executor output changes no
+authoritative work-package status, and a review PASS is not a commit.
+
+**The next planned work package is CDS-WP-018 — Deferred Governance and Repository
+Hygiene Reconciliation**, and it **remains inactive until separately authorized by
+the Human Maintainer**. Any further step begins only on an explicit Nova prompt and
+Human-Maintainer authorization.
 
 ## Related documents
 
@@ -918,6 +937,7 @@ explicit Nova prompt and Human-Maintainer authorization.
 - [Consumer and Stakeholder Model](../docs/governance/CONSUMER_AND_STAKEHOLDER_MODEL.md)
 - [Scope Boundary Matrix](../docs/governance/SCOPE_BOUNDARY_MATRIX.md)
 - [Foundation Context Pack](../project-system/CONTEXT_PACK_FOUNDATION.md)
+- [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md)
 - [Project Charter](../docs/governance/PROJECT_CHARTER.md)
 - [Project Profile](../project-system/PROJECT_PROFILE.md)
 - [Work Packages](../project-system/WORK_PACKAGES.md)
@@ -937,6 +957,7 @@ explicit Nova prompt and Human-Maintainer authorization.
 - [CDS-WP-013 Offline Validator and Fixture Harness Notes](CDS_WP_013_OFFLINE_VALIDATOR_AND_FIXTURE_HARNESS_NOTES.md)
 - [CDS-WP-014 Semantic Status Foundation Notes](CDS_WP_014_SEMANTIC_STATUS_FOUNDATION_NOTES.md)
 - [CDS-WP-015 Semantic Status Source and Evidence Notes](CDS_WP_015_SEMANTIC_STATUS_SOURCE_AND_EVIDENCE_NOTES.md)
+- [CDS-WP-017 Post-WP-016 Roadmap Reconciliation Notes](CDS_WP_017_POST_WP016_ROADMAP_RECONCILIATION_NOTES.md)
 - [Foundation Milestone Review](../docs/reviews/FOUNDATION_MILESTONE_REVIEW.md)
 - [Foundation Closure Record](../docs/governance/FOUNDATION_CLOSURE_RECORD.md)
 - [Accessibility Support Baseline](../docs/governance/ACCESSIBILITY_SUPPORT_BASELINE.md)

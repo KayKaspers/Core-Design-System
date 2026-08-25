@@ -131,11 +131,14 @@ and the [AE1-004 Admission Record](docs/governance/SEMANTIC_STATUS_AE1_004_ADMIS
 **Candidate is bounded validation only and is never normative** — it is not
 Stable, not a claim, not conformance, and not a release.
 
-**CDS-WP-016** is in **post-promotion current-state reconciliation**; its proposed
-closure becomes authoritative only after a Fresh Independent Governance
-Reconciliation Review, Nova adjudication, and a Human-Maintainer exact-byte
-integration commit. No follow-up work package is authorized and **CDS-WP-017 is
-inactive, not authorized, and not defined**.
+**CDS-WP-016 is closed** — the Human-Maintainer commit
+`1fc53ae5afa40807e1950171ab700b0860ee581e` integrated its post-promotion
+current-state reconciliation. The active work package is **CDS-WP-017 — Post-WP-016
+Roadmap, Authority and Scope Reconciliation**, a governance and roadmap
+reconciliation with no design, evidence, maturity, claim, or publication effect.
+**CDS-WP-018 … CDS-WP-053 are planned only — not active, not authorized, work not
+started** — and are recorded in the
+[Post-Candidate Development Roadmap](docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
 
 The project does not yet produce visual design.
 
@@ -545,8 +548,9 @@ maturity or approval it does not hold.
 - **Completed:** CDS-WP-013 — Offline Token Profile Validator and Fixture Harness
 - **Completed:** CDS-WP-014 — Semantic Status Foundation Contract and First Candidate Plan
 - **Completed:** CDS-WP-015 — Semantic Status Foundation Source Set and Candidate Evidence
-- **Current:** **CDS-WP-016 — Semantic Status Foundation Independent Evidence Review
-  and Candidate Gate** — the authorized roadmap position. Its review work is
+- **Completed:** **CDS-WP-016 — Semantic Status Foundation Independent Evidence Review
+  and Candidate Gate** — closed by the Human-Maintainer commit
+  `1fc53ae5afa40807e1950171ab700b0860ee581e`. Its review work is
   **executed** (Independent Review PASS, Candidate Recommendation GO), the **Nova
   Candidate Maturity Review returned NO-GO** (Candidate Accessibility Gate unmet),
   and the Human-Maintainer-authorized **Candidate Accessibility Gate Remediation**
@@ -560,14 +564,23 @@ maturity or approval it does not hold.
   **Promotion Commit `22fa0710e2b75df22e7b420c2f9d86bbe67b2777`** performed on
   2026-08-19. **Candidate is now YES** for that one family at
   `semantic-status-rev-0002-candidate`; every other artifact remains AE-0 and no
-  artifact is Stable. The work package is in **post-promotion current-state
-  reconciliation**, and its closure becomes authoritative only after a **Fresh
-  Independent Governance Reconciliation Review**, Nova adjudication, and a
-  Human-Maintainer exact-byte integration commit.
-- **CDS-WP-017:** **inactive, not authorized, not defined.**
+  artifact is Stable.
+- **Current:** **CDS-WP-017 — Post-WP-016 Roadmap, Authority and Scope
+  Reconciliation** — the authorized roadmap position. It reconciles the state
+  reached after CDS-WP-016 with the accepted forward planning basis so that exactly
+  one active future sequence exists, and records the twelve development arcs,
+  milestones **M1 … M12**, standing gates, and requirement classification model.
+  It creates **no** design, token, component, evidence, maturity, claim, Product
+  Profile, pilot, release, or publication effect.
+- **Planned:** **CDS-WP-018 … CDS-WP-053** — **not active, not authorized, work not
+  started.** The immediate next planned work package is **CDS-WP-018 — Deferred
+  Governance and Repository Hygiene Reconciliation**, which remains inactive until
+  separately authorized by the Human Maintainer.
 
 The full controlled roadmap is in
-[project-system/WORK_PACKAGES.md](project-system/WORK_PACKAGES.md).
+[project-system/WORK_PACKAGES.md](project-system/WORK_PACKAGES.md); the forward
+arcs, milestones, and gates are in the
+[Post-Candidate Development Roadmap](docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
 
 ## Foundation Milestone Review
 

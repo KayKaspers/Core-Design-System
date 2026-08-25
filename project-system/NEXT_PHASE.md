@@ -4,9 +4,9 @@
   Closed with Notes**
 - **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
-  CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015
-- **Current work package:** **CDS-WP-016 — Semantic Status Foundation Independent
-  Evidence Review and Candidate Gate.**
+  CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**
+- **Current work package:** **CDS-WP-017 — Post-WP-016 Roadmap, Authority and Scope
+  Reconciliation.**
 - **Candidate promotion: COMPLETE.** The Semantic Status Foundation passed the
   Candidate gate and was promoted by the Human-Maintainer exact-byte **Promotion
   Commit `22fa0710e2b75df22e7b420c2f9d86bbe67b2777`** on 2026-08-19 — gate **PASS**,
@@ -18,26 +18,33 @@
   `AE1-CDS-WP016-SEMSTATUS-002` is a historical `semantic-status-rev-0001` admission
   only; every other artifact remains **AE-0**. **No artifact is Stable**, claims
   **none**, conformance **none**, publication **`Private Development`**.
-- **CDS-WP-016 state:** **post-promotion current-state reconciliation prepared;
-  closure pending review and Human-Maintainer integration.**
-- **CDS-WP-017:** **not authorized** — `INACTIVE`, `NOT DEFINED`, work not started.
+- **CDS-WP-016 state:** **Closed.** Closure became effective with the
+  Human-Maintainer commit `1fc53ae5afa40807e1950171ab700b0860ee581e`, which
+  integrated the post-promotion current-state reconciliation.
+- **CDS-WP-017:** **active** — Post-WP-016 Roadmap, Authority and Scope
+  Reconciliation. Governance, roadmap, context, and project-state documentation
+  only; no design, evidence, maturity, claim, or publication effect.
+- **CDS-WP-018 … CDS-WP-053:** **`Planned`, not active, not authorized, work not
+  started** — see the
+  [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
 
 ## Next allowed authority sequence
 
-**No design work, no visual work, and no new work package is activated.** The only
-authorized next steps, in this order:
+**No design work, no visual work, and no future work package is activated.** The
+only authorized next steps, in this order:
 
 | # | Step | Authority |
 | --- | --- | --- |
-| 1 | **Fresh Independent Governance Reconciliation Review** of the post-promotion reconciliation | Reviewer ≠ executor |
+| 1 | **Fresh independent review** of the CDS-WP-017 reconciliation | Reviewer ≠ executor |
 | 2 | **Nova adjudication** of that review | Nova — recommendation only, never approval |
-| 3 | **Human-Maintainer exact-byte reconciliation integration commit** | Human Maintainer |
-| 4 | **CDS-WP-016 closure becomes committed and effective** | Effective at step 3 |
-| 5 | Future work-package planning — **only after closure**, and only on an explicit Nova prompt with Human-Maintainer authorization | Nova + Human Maintainer |
+| 3 | **Human-Maintainer integration commit** of the reconciliation | Human Maintainer |
+| 4 | **CDS-WP-017 closure becomes committed and effective** | Effective at step 3 |
+| 5 | **CDS-WP-018 authorization** — a separate, explicit Human-Maintainer decision | Human Maintainer |
 
-**Step 4 is not reached before step 3.** Proposed closure bytes are not committed
-closure, and a review PASS is not a commit. **No visual-design work is activated at
-any step above.**
+**Step 4 is not reached before step 3**, and **step 5 is not implied by step 4**.
+Uncommitted executor output changes no authoritative work-package status, and a
+review PASS is not a commit. **CDS-WP-018 remains inactive until separately
+authorized**, and **no visual-design work is activated at any step above.**
 
 ## Status of completed work packages
 
@@ -414,15 +421,12 @@ Documents:
 [Terminology DE/EN](../docs/foundations/SEMANTIC_STATUS_TERMINOLOGY_DE_EN.md) ·
 [Candidate Dossier](../docs/operations/SEMANTIC_STATUS_CANDIDATE_DOSSIER.md)
 
-## Next work package — CDS-WP-016 (authorized; review work executed)
+### CDS-WP-016 — Semantic Status Foundation Independent Evidence Review and Candidate Gate — Completed
 
-The Semantic Status Foundation is implemented with executor-produced evidence. The
-current authorized work package is:
+The Semantic Status Foundation was implemented with executor-produced evidence,
+and CDS-WP-016 took it through the Candidate gate.
 
-**CDS-WP-016 — Semantic Status Foundation Independent Evidence Review and
-Candidate Gate.**
-
-Its review work has been carried out: the independent evidence review, the
+Its review work was carried out: the independent evidence review, the
 traceability, accessibility, content and dossier reviews, and the Candidate-gate
 recommendation exist — **Independent Review PASS**, **Candidate Recommendation GO**
 ([Candidate Gate Recommendation](../docs/reviews/WP016_CANDIDATE_GATE_RECOMMENDATION.md)).
@@ -476,11 +480,9 @@ effective on 2026-08-19.
 Candidate is now **YES** at `semantic-status-rev-0002-candidate`, maturity
 **`Candidate`**, approval **`Approved`**. **No artifact is Stable**, claims remain
 **none**, conformance remains **none**, **every other artifact remains AE-0**, and
-no AE-2, AE-3, or AE-4 exists. CDS-WP-016 is in **post-promotion current-state
-reconciliation**; its closure becomes authoritative only after a Fresh Independent
-Governance Reconciliation Review, Nova adjudication, and a Human-Maintainer
-exact-byte integration commit. No follow-up work package is authorized;
-**CDS-WP-017 is `INACTIVE`, `NOT AUTHORIZED`, and `NOT DEFINED`**.
+no AE-2, AE-3, or AE-4 exists. **CDS-WP-016 is closed**: its post-promotion
+current-state reconciliation was integrated by the Human-Maintainer commit
+`1fc53ae5afa40807e1950171ab700b0860ee581e`, and closure became effective there.
 
 ### Objective of CDS-WP-016
 
@@ -497,6 +499,35 @@ exact-byte integration commit. No follow-up work package is authorized;
 - no visual values; no components; no automatic Candidate or Stable award; no
   Product Profiles; no CoreOps pilot start; no licence; no publication.
 
+## Next work package — CDS-WP-017 (authorized; active)
+
+**CDS-WP-017 — Post-WP-016 Roadmap, Authority and Scope Reconciliation.**
+
+CDS-WP-016 is closed, and the repository state it left had to be reconciled with the
+accepted forward planning basis so that exactly **one** active future work-package
+sequence exists.
+
+### Objective of CDS-WP-017
+
+- record **CDS-WP-016 as `Completed`** against its closure commit and retire the
+  superseded closure statements that predated it;
+- register **CDS-WP-017 as active** and **CDS-WP-018 … CDS-WP-053 as `Planned`,
+  not active, not authorized** — contiguous, gap-free, duplicate-free;
+- produce the single active forward roadmap with its arcs, milestones **M1 … M12**,
+  architecture-layer mapping, and standing gates —
+  [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md);
+- record the **PB001 disposition** without upgrading any PB001 evidence, and route
+  the deferred findings to **CDS-WP-018** without repairing them;
+- preserve the requirement classification model in which **Consumer-local** and
+  **Reject** are valid outcomes.
+
+### CDS-WP-017 explicitly establishes none of the following
+
+- no visual values, tokens, or components; no evidence produced or admitted; no
+  maturity change; no Stable promotion; no claim or conformance; no Product Profile;
+  no CoreOps pilot start; no consumer integration; no licence; no publication,
+  release, or tag; **no activation of CDS-WP-018 or any later work package**.
+
 ### Still prohibited in the Pre-Candidate phase
 
 - concrete visual design; selecting colours, typography, icons, logos, or themes,
@@ -508,21 +539,22 @@ exact-byte integration commit. No follow-up work package is authorized;
 - promoting any artifact to Candidate or Stable,
 - starting the CoreOps pilot,
 - modifying Skill files or consumer repositories,
-- creating a new work-package ID beyond CDS-WP-016 without Human-Maintainer
-  approval.
+- creating a new work-package ID beyond the recorded CDS-WP-017 … CDS-WP-053
+  planning sequence without Human-Maintainer approval.
 
 ### Authorization note
 
-CDS-WP-016 is registered as `Next` — the roadmap label for the current authorized
-work package, not a statement that execution has not started. Its review work has been
-executed under explicit Nova prompts and Human-Maintainer authorization. **Execution
-is not promotion:** the Candidate decision remains with Nova's gate review and the
-Human Maintainer's maturity approval, both open. Any further work-package step
-requires a new explicit Nova prompt and Human-Maintainer authorization.
+CDS-WP-017 is registered as `Next` — the roadmap label for the current authorized
+work package. It is executed under an explicit Nova prompt and Human-Maintainer
+authorization. **Planning is not authorization:** recording CDS-WP-018 …
+CDS-WP-053 activates none of them, and each requires its own explicit Nova prompt
+and Human-Maintainer authorization. **Execution is not closure:** uncommitted
+executor output changes no authoritative work-package status.
 
 ## Related documents
 
 - [Work Packages](WORK_PACKAGES.md)
 - [Project Profile](PROJECT_PROFILE.md)
 - [Foundation Context Pack](CONTEXT_PACK_FOUNDATION.md)
+- [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md)
 - [Governance Operating Model](../docs/governance/GOVERNANCE_OPERATING_MODEL.md)

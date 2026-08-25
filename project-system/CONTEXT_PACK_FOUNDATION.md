@@ -6,8 +6,8 @@
 > it never defines. Where it disagrees with a normative source, the normative
 > source wins and this pack is wrong and must be corrected.
 
-- **Maintained by:** CDS-WP-015
-- **Date:** 2026-07-17
+- **Maintained by:** CDS-WP-017
+- **Date:** 2026-08-25
 
 ## Project identity
 
@@ -63,13 +63,15 @@ admitted**. **Stable No** · claims **none** · conformance **none** · every ot
 artifact **AE-0** · no AE-2/AE-3/AE-4 · no channel or consumer evidence · pilot
 **inactive** · publication **`Private Development`**.
 
-Concrete visual design values remain unauthorized (DEC-S-003). The authorized work
-package is **CDS-WP-016 — Semantic Status Foundation Independent Evidence Review and
-Candidate Gate**, now in **post-promotion current-state reconciliation**: proposed
-closure bytes are prepared, and **closure becomes authoritative only after a Fresh
-Independent Governance Reconciliation Review, Nova adjudication, and a
-Human-Maintainer exact-byte integration commit**. **CDS-WP-017 is `INACTIVE`, `NOT
-AUTHORIZED`, and `NOT DEFINED`.**
+Concrete visual design values remain unauthorized (DEC-S-003). **CDS-WP-016 is
+`Completed`**, closed by the Human-Maintainer commit
+`1fc53ae5afa40807e1950171ab700b0860ee581e`. The authorized work package is
+**CDS-WP-017 — Post-WP-016 Roadmap, Authority and Scope Reconciliation**:
+governance, roadmap, context, and project-state reconciliation only, with no
+design, evidence, maturity, claim, or publication effect. **CDS-WP-018 …
+CDS-WP-053 are `Planned`, not active, and not authorized**; the single active
+forward roadmap is the
+[Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
 
 ## Completed work packages
 
@@ -91,6 +93,7 @@ AUTHORIZED`, and `NOT DEFINED`.**
 | CDS-WP-013 | Offline Token Profile Validator and Fixture Harness | Implemented and executed the offline validator (pending commit): `python -m tools.cds_validator` (Python 3.12.10; pinned `jsonschema==4.26.0` + `rfc8785==0.1.4`, ADR-0003), a single duplicate-key-rejecting loader, a local five-schema registry (incl. the new **validation-result schema**), the layered V1–V4 engine, manifest/resolver graph validation, and RFC 8785 + SHA-256 digests. **71/71 unit tests; 15/15 cases with 15/15 expected/actual matches; 14 fixtures digested** (duplicate-key: none). Evidence in `artifacts/validation/` + Execution Review — **executor-produced, `independentReviewState: pending`**. DEC-S-093…104 added; RISK-073…081 added; RISK-066/067/068/069/071 → `Mitigating`. **Bounded DTCG V2 (no full-DTCG statement); no design value; no Candidate; publication `Private Development`. CDS-WP-014 registered Next.** |
 | CDS-WP-014 | Semantic Status Foundation Contract and First Candidate Plan | Defined the first concrete design foundation (pending commit): the **Semantic Status Foundation Contract** — 5 independent axes (`condition`/`severity`/`confidence`/`freshness`/`evidence`), a fixed **25-value vocabulary** with explicit `unknown` everywhere, **10 invariants**, the 11-field status object, **6 review-required combinations + 8 fail-closed states**, disclosure priority without any aggregate score, the text-first **communication/accessibility/localization contract** (DE/EN semantic parity), the value-neutral **Semantic Status Token Contract**, and the **First Semantic Status Candidate Plan** (8-element package, 10 unmet prerequisites) + executor-produced readiness review. DEC-S-105…114 added; RISK-082…089 added. **No visual value, no token file, no component, no Candidate/Stable, no claim; WP-013 evidence stays independently unreviewed; publication `Private Development`. CDS-WP-015 registered Next.** |
 | CDS-WP-015 | Semantic Status Foundation Source Set and Candidate Evidence | Implemented the first real, still-Experimental source set (pending commit; resume run after a correctly BLOCKED first run): **`semantic/status`** (5 axes, **25 non-visual tokens** `status.<axis>.<value>`, manifest + resolver), the **Nova-authorized additive validation-case-schema correction** (semantic-status fixture paths + 9 categories; `$id` unchanged; CLI untouched/fail closed), the **semantic-status V4 extension** (9 `CDS-V4-STATUS-*` codes; fixture flags never disable the objective checks), 1+8 status fixtures, **VAL-CASE-016…024** (24-case matrix; WP-013 baseline byte-identical), **25/25 DE/EN terminology**, revision-clean WP-013 re-execution (**15/15, worktree clean**), **103/103 unit tests**, **24/24 harness matches**, source-set validation (V1–V3 Pass, exit 0) + RFC 8785/SHA-256 digests, 4 executor-produced reviews, **Draft Candidate Dossier** (gate incomplete). DEC-S-115…124 added; RISK-090…097 added. **Executor-produced, independently unreviewed; no visual value; Not Candidate; publication `Private Development`. CDS-WP-016 registered Next.** |
+| CDS-WP-016 | Semantic Status Foundation Independent Evidence Review and Candidate Gate | Independently reviewed the WP-013/WP-015 evidence (reviewer ≠ executor) and ran the Candidate gate to completion. **Independent Review PASS**, Candidate Recommendation **GO**; Nova Candidate Maturity Review **NO-GO** (accessibility gate unmet) → Human-Maintainer-authorized **Candidate Accessibility Gate Remediation** (DEC-S-125; Candidate-scope WCAG and responsibility mappings; 25/25 evidence requirements matrix; `CDS-V4-STATUS-DESCRIPTION`; 6/6 review-required and 8/8 fail-closed coverage; AE-2 plan; support-baseline plan; 15-trigger regression plan; 16 limitations, 0 Critical) → **Candidate Finalization Governance Rework** (DEC-S-126, RISK-098, Candidate Approval Record Template, evidence-runner result format v2) → `AE1-CDS-WP016-SEMSTATUS-004` **admitted at AE-1** → Nova review **GO WITH NOTES** → Human-Maintainer Candidate approval → exact-byte **Promotion Commit `22fa0710…`** (15/15 blob identity, 47/47 · 64/64 · 184/184 · 24/24/0/0). Closed by commit `1fc53ae5…`. **Candidate for one channel-independent Layer-3 source/contract family only; no Stable, no claim, no conformance, no visual value, no component; every other artifact AE-0.** |
 
 ## Normative source map
 
@@ -860,10 +863,13 @@ Candidate Finalization Review returned GO WITH NOTES**, the Human Maintainer
 **`Candidate`**, approval **`Approved`**; **no artifact is Stable**, claims remain
 **none**, and every other artifact remains **AE-0**.
 
-CDS-WP-016 is in **post-promotion current-state reconciliation**; its closure
-becomes authoritative only after a Fresh Independent Governance Reconciliation
-Review, Nova adjudication, and a Human-Maintainer exact-byte integration commit. No
-follow-up work package is authorized and **CDS-WP-017 is `INACTIVE`, `NOT
-AUTHORIZED`, and `NOT DEFINED`**. See the
+**CDS-WP-016 is closed** — its post-promotion current-state reconciliation was
+integrated by the Human-Maintainer commit
+`1fc53ae5afa40807e1950171ab700b0860ee581e`. The active work package is
+**CDS-WP-017 — Post-WP-016 Roadmap, Authority and Scope Reconciliation**;
+**CDS-WP-018 … CDS-WP-053 are `Planned`, not active, and not authorized**, and
+work on them has not started. See the
+[Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md),
+the
 [Foundation Closure Record](../docs/governance/FOUNDATION_CLOSURE_RECORD.md) and the
 [Candidate Promotion Effectivity Record](../docs/governance/SEMANTIC_STATUS_CANDIDATE_PROMOTION_EFFECTIVITY_RECORD.md).
