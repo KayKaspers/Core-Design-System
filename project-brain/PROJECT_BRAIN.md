@@ -69,11 +69,14 @@ approved.
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**,
-  **CDS-WP-017**
-- Current work package: **CDS-WP-018 — Deferred Governance and Repository Hygiene
-  Reconciliation** (the authorized work package) — documentary current-state,
-  mirror, and repository-hygiene reconciliation only; it renames no phase,
-  registers no capability, and activates no later work package.
+  **CDS-WP-017**, **CDS-WP-018**
+- Current work package: **CDS-WP-019 — Core Visual Foundation Architecture** (the
+  authorized work package) — **architecture only**: it defines how the visual
+  foundation is structured, governed, represented, extended, validated, and
+  consumed. It creates **no visual value**, no token source file, no component, no
+  brand, and no Product Profile; produces and admits no evidence; changes no
+  maturity; adds no ADR, Decision, or risk; renames no phase; registers no
+  capability; and activates no later work package.
 - Closed work package: **CDS-WP-016 — Semantic Status Foundation Independent Evidence
   Review and Candidate Gate.** Its review work was
   **executed** — **Independent Review PASS**, **Candidate Recommendation GO**;
@@ -108,8 +111,9 @@ approved.
 | AE-2 / AE-3 / AE-4 · channel · consumer evidence | **None** everywhere |
 | **CDS-WP-016** | **Closed** — post-promotion closure reconciliation integrated by the Human-Maintainer commit `1fc53ae5afa40807e1950171ab700b0860ee581e` |
 | **CDS-WP-017** | **Closed** — Post-WP-016 Roadmap, Authority and Scope Reconciliation, integrated by the Human-Maintainer commit `df9b8f21ff3bde4607b1c9ff7fdcbe3144366040` (governance/roadmap only; no design, evidence, maturity, claim, or publication effect) |
-| **CDS-WP-018** | **Active** — Deferred Governance and Repository Hygiene Reconciliation (documentary current-state, mirror, and hygiene reconciliation only; no phase rename, no capability registration) |
-| **CDS-WP-019 … CDS-WP-053** | **PLANNED / NOT ACTIVE / NOT AUTHORIZED** — work not started |
+| **CDS-WP-018** | **Closed** — Deferred Governance and Repository Hygiene Reconciliation, integrated by the Human-Maintainer commit `e5d5d492619071655ba956713980d1ee261d9213` (documentary current-state, mirror, and hygiene reconciliation only; no phase rename, no capability registration) |
+| **CDS-WP-019** | **Active** — Core Visual Foundation Architecture (**architecture only; no visual value**; no token source, component, brand, profile, evidence, maturity change, Decision, ADR, risk, phase rename, or capability registration) |
+| **CDS-WP-020 … CDS-WP-053** | **PLANNED / NOT ACTIVE / NOT AUTHORIZED** — work not started |
 
 **F-001 lifecycle-metadata resolution (Human Maintainer, 2026-08-19).** The five
 `AE1-CDS-WP016-SEMSTATUS-004`-bound normative Foundation documents remain
@@ -936,9 +940,9 @@ together with its arcs, milestones **M1 … M12**, architecture-layer mapping, s
 gates, and requirement classification model. Closure became effective with the
 Human-Maintainer commit `df9b8f21ff3bde4607b1c9ff7fdcbe3144366040`.
 
-**The active work package is CDS-WP-018 — Deferred Governance and Repository
-Hygiene Reconciliation.** It takes up the findings CDS-WP-017 routed forward without
-repairing — routing is not repair — and reconciles them within a bounded documentary
+**CDS-WP-018 — Deferred Governance and Repository Hygiene Reconciliation is
+closed.** It took up the findings CDS-WP-017 routed forward without repairing —
+routing is not repair — and reconciled them within a bounded documentary
 scope: stale `pending commit` and mirror text against the normative sources
 (**NF-R4-OBS-001**, **NF-R3-OBS-001**, **NF-R5R-OBS-001**, **R3R-003**), the
 already-decided areas still listed as intentionally open (**F-017-01**,
@@ -947,19 +951,111 @@ already-decided areas still listed as intentionally open (**F-017-01**,
 Candidate-era records that still carry `CDS-WP-017: INACTIVE` (**R1-F-01**), and the
 imprecise occurrence and disclosure wording (**R2-N-01**, **R2-N-02**).
 
-CDS-WP-018 produces and admits **no evidence**, changes **no maturity**, makes
-**no claim**, **renames no phase** and creates no Decision superseding DEC-S-062,
-**registers no capability** for audio/sonic, haptic, multimodal, AI/agent, or safety
-subject matter, activates **no Product Profile, pilot, consumer integration,
-release, tag, or publication**, and **activates no later work package**. Its own
-closure is not the executor's to make: a fresh independent review, Nova
-adjudication, and a Human-Maintainer integration commit. Uncommitted executor output
-changes no authoritative work-package status, and a review PASS is not a commit.
+CDS-WP-018 produced and admitted **no evidence**, changed **no maturity**, made
+**no claim**, **renamed no phase** and created no Decision superseding DEC-S-062,
+**registered no capability** for audio/sonic, haptic, multimodal, AI/agent, or
+safety subject matter, and activated **no Product Profile, pilot, consumer
+integration, release, tag, or publication**. Closure became effective with the
+Human-Maintainer commit `e5d5d492619071655ba956713980d1ee261d9213`.
 
-**The next planned work package is CDS-WP-019 — Core Visual Foundation
-Architecture**, and it **remains inactive until separately authorized by the Human
+**The active work package is CDS-WP-019 — Core Visual Foundation Architecture**,
+authorized separately by the Human Maintainer on 2026-08-26. It opens **Phase V —
+Visual Foundation** with architecture rather than design: it defines **how** visual
+foundations are structured before any visual decision is made — see
+[Core Visual Foundation Architecture (CDS-WP-019)](#core-visual-foundation-architecture-cds-wp-019)
+below.
+
+**The next planned work package is CDS-WP-020 — Reference and Semantic Token
+Foundation**, and it **remains inactive until separately authorized by the Human
 Maintainer**. Any further step begins only on an explicit Nova prompt and
 Human-Maintainer authorization.
+
+## Core Visual Foundation Architecture (CDS-WP-019)
+
+**Architecture only. No visual value exists in CDS, and CDS-WP-019 created none.**
+Verified by search at the baseline: the repository contained **no colour value, no
+typographic value, and no dimensional value of any kind**.
+
+### What it established
+
+- The [Visual Foundation Architecture](../docs/architecture/VISUAL_FOUNDATION_ARCHITECTURE.md)
+  as the Layer-3 visual entry point.
+- **Nine visual foundation families:** VF-1 Colour · VF-2 Typography · VF-3 Space
+  and Size · VF-4 Layout and Grid · VF-5 Shape · VF-6 Surface and Elevation ·
+  VF-7 Iconography · VF-8 Motion (boundary only) · VF-9 Theme and Context
+  Mechanism. Each is a **separate artifact family**; **maturity is never
+  inherited**; all nine are **`Proposed`**.
+- **Fourteen visual foundation invariants** (VF-I-1 … VF-I-14).
+- Six specialised architectures — colour, typography, spatial, shape and surface,
+  iconography and imagery, theme — and four governance documents — accessibility
+  mapping, channel mapping, brand and Product Profile boundary, governance and
+  lifecycle.
+
+### The load-bearing statements
+
+| Statement | Why it matters |
+| --- | --- |
+| **The visual foundation introduces no layer** | It occupies positions in the existing eight-layer model and five-layer token flow. The conceptual *primitive → semantic → context → brand* reading maps onto them; **context is not a layer**, and the **Component layer must not be dropped** from that reading |
+| **COLOUR ≠ STATUS · ICON ≠ STATUS · MOTION ≠ STATUS** | Status meaning stays with the Semantic Status Foundation. Visual encoding is **redundant** to meaning, never a substitute. The binding itself is **CDS-WP-023's**, gated by CDS-WP-024 |
+| **An interaction state is not a semantic status** | A validation outcome is not a status `condition`; conflating them destroys both |
+| **A theme re-binds; it never redefines** | It may change which primitive a role resolves to; never what the role means, and never an accessibility guarantee |
+| **Roles are mandatory; values vary only at named extension points** | This is why a Core product inherits every Core *role* but not automatically every Core *value* |
+| **The named extension-point set is empty** | So **no visual override is currently possible**, and no Product Profile can be approved |
+| **Every semantic colour role declares its contrast obligation** | An unstated obligation cannot be validated, themed, or profiled safely |
+| **Focus visibility has no permitted mechanism of removal** | Not by a theme, a profile, an exception, or a consumer override |
+
+### Positioned, not registered
+
+Three subjects were **positioned** inside already-registered scope rather than
+registered as new scope — in each case the conservative reading:
+
+- **Opacity** — an *attribute* of VF-1 (alpha) and VF-6 (overlay, scrim), because
+  it is named in **no** registered scope statement.
+- **Illustration and imagery** — **Layer 2 Brand and Identity**, consumed through a
+  declared interface, because DEC-S-021 Layer 3 registers *iconography* and not
+  them.
+- **Focus indication** — a **cross-family role set**, so no single family's change
+  can weaken it unnoticed.
+
+### The accessibility finding
+
+Re-counting the WCAG 2.2 AA Applicability Matrix: **14** criteria map to Layer 3,
+and **all five** criteria the matrix classifies as `Normative CDS requirement` — the
+ones CDS owns **without** the consumer — are among them: **1.3.3, 1.4.1, 1.4.5,
+2.3.1, 2.4.7**.
+
+> **Every criterion CDS owns alone is a visual foundation criterion.**
+
+**Evidence state: AE-0 throughout.** No visual artifact exists, none has been
+evaluated, and **no accessibility claim of any level is valid**. The single admitted
+package `AE1-CDS-WP016-SEMSTATUS-004` covers the Semantic Status source scope only
+and **does not transfer**.
+
+### The honesty record
+
+**No registered consumer requirement asks for a colour palette, a typographic
+scale, a spacing scale, a radius scale, an elevation model, an icon library, or
+illustration.** Six consumer requirements anchor Layer 3 — **CR-002, CR-006,
+CR-021, CR-022, CR-023, CR-025** — and four families (**VF-3, VF-5, VF-6, VF-7**)
+carry **no consumer demand evidence at all**. Registering structure is not
+establishing demand.
+
+### What it deliberately left open
+
+The theme **mechanism** (CDS-WP-022) · the responsive **model** and the Layer 3 /
+Layer 5 split (CDS-WP-021) · the status-to-visual **binding** (CDS-WP-023) · the
+admitted DTCG `$type` set and the concrete vocabulary (CDS-WP-020) · the named
+extension-point set (CDS-WP-032) · every visual value.
+
+### What it did not do
+
+It created **no** visual value, token source file, schema, validator rule,
+diagnostic, component, channel adapter, brand, identity, or Product Profile;
+produced and admitted **no** evidence; changed **no** maturity; **registered no new
+Decision, ADR, or risk** — every binding statement applies a decision already in
+force; **renamed no phase**; registered **no** capability; made **no** claim; and
+activated **no** later work package. It touched **no** Semantic Status source,
+revision, maturity, or evidence package.
 
 ## Related documents
 
@@ -988,6 +1084,9 @@ Human-Maintainer authorization.
 - [CDS-WP-014 Semantic Status Foundation Notes](CDS_WP_014_SEMANTIC_STATUS_FOUNDATION_NOTES.md)
 - [CDS-WP-015 Semantic Status Source and Evidence Notes](CDS_WP_015_SEMANTIC_STATUS_SOURCE_AND_EVIDENCE_NOTES.md)
 - [CDS-WP-017 Post-WP-016 Roadmap Reconciliation Notes](CDS_WP_017_POST_WP016_ROADMAP_RECONCILIATION_NOTES.md)
+- [CDS-WP-018 Deferred Governance Hygiene Notes](CDS_WP_018_DEFERRED_GOVERNANCE_HYGIENE_NOTES.md)
+- [CDS-WP-019 Core Visual Foundation Architecture Notes](CDS_WP_019_CORE_VISUAL_FOUNDATION_ARCHITECTURE_NOTES.md)
+- [Visual Foundation Architecture](../docs/architecture/VISUAL_FOUNDATION_ARCHITECTURE.md) — CDS-WP-019 entry point
 - [Foundation Milestone Review](../docs/reviews/FOUNDATION_MILESTONE_REVIEW.md)
 - [Foundation Closure Record](../docs/governance/FOUNDATION_CLOSURE_RECORD.md)
 - [Accessibility Support Baseline](../docs/governance/ACCESSIBILITY_SUPPORT_BASELINE.md)

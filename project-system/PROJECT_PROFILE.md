@@ -23,24 +23,32 @@ Pre-Candidate Operating Enablement — **Foundation / Pre-Design: Closed with No
 
 ## Work package status
 
-- **Current work package: CDS-WP-018 — Deferred Governance and Repository Hygiene
-  Reconciliation** (roadmap status `Next` — the current authorized work package).
-  Documentary current-state, mirror, and repository-hygiene reconciliation only: it
-  reconciles stale `pending commit` and mirror text against the normative sources,
-  corrects the intentionally open decision areas that were already decided, repairs
-  the `.gitattributes` / `.gitignore` hygiene, and adds additive dated notes to the
-  two Candidate-era records that still carry `CDS-WP-017: INACTIVE`. It creates
-  **no** design, token, component, evidence, maturity, claim, Product Profile,
-  pilot, release, or publication effect; it **renames no phase**, **registers no
-  capability**, and **activates no later work package**.
-- **Preceding work package: CDS-WP-017 — Post-WP-016 Roadmap, Authority and Scope
+- **Current work package: CDS-WP-019 — Core Visual Foundation Architecture**
+  (roadmap status `Next` — the current authorized work package). **Architecture
+  only.** It defines how the CDS visual foundation is structured, governed,
+  represented, extended, validated, and consumed: a Layer-3 entry-point
+  architecture, a register of **nine visual foundation families** (VF-1 … VF-9),
+  **fourteen invariants**, a naming model, the machine-readable representation
+  boundary, a motion boundary, plus specialised colour, typography, spatial, shape
+  and surface, iconography and imagery, and theme architectures, and four
+  governance documents (accessibility mapping, channel mapping, brand and Product
+  Profile boundary, governance and lifecycle). It creates **no** visual value,
+  token source file, schema, validator rule, component, brand, or Product Profile;
+  produces and admits **no** evidence; changes **no** maturity; adds **no** ADR,
+  Decision, or risk entry; **renames no phase**; **registers no capability**; and
+  **activates no later work package**.
+- **Preceding work package: CDS-WP-018 — Deferred Governance and Repository Hygiene
+  Reconciliation.** **Completed**; closure became effective with the
+  Human-Maintainer commit `e5d5d492619071655ba956713980d1ee261d9213`. Documentary
+  current-state, mirror, and repository-hygiene reconciliation only.
+- **Earlier work package: CDS-WP-017 — Post-WP-016 Roadmap, Authority and Scope
   Reconciliation.** **Completed**; closure became effective with the
   Human-Maintainer commit `df9b8f21ff3bde4607b1c9ff7fdcbe3144366040`. It recorded
   CDS-WP-016 as closed, registered CDS-WP-018 … CDS-WP-053 as `Planned` and **not
   active**, and produced the single active
   [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
-- **Next planned work package: CDS-WP-019 — Core Visual Foundation Architecture** —
-  **`Planned`, not active, not authorized, work not started.**
+- **Next planned work package: CDS-WP-020 — Reference and Semantic Token
+  Foundation** — **`Planned`, not active, not authorized, work not started.**
 - Earlier work package: **CDS-WP-016 — Semantic Status Foundation
   Independent Evidence Review and Candidate Gate.** Its review work was
   **executed**: Independent Review **PASS**, Candidate Recommendation **GO**.
@@ -79,7 +87,7 @@ Pre-Candidate Operating Enablement — **Foundation / Pre-Design: Closed with No
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**,
-  **CDS-WP-017**
+  **CDS-WP-017**, **CDS-WP-018**
 
 ## Operating enablement status
 
@@ -418,11 +426,14 @@ Documents:
 
 ## Architecture status
 
-- Architecture status: Logical architecture defined (CDS-WP-005, 2026-07-16)
+- Architecture status: Logical architecture defined (CDS-WP-005, 2026-07-16);
+  **visual foundation architecture defined (CDS-WP-019, 2026-08-26)**
 - Architecture layers: **8**
-- Architecture documents: **8**
+- Architecture documents: **15** — 8 from CDS-WP-005, **7 visual foundation
+  documents from CDS-WP-019** (plus 4 CDS-WP-019 governance documents)
 - Artifact classes: 8 · Token flow levels: 5 · Status axes: 5 · Consumer
-  contracts: 5 · Architecture invariants: 16
+  contracts: 5 · Architecture invariants: 16 · **Visual foundation families: 9 ·
+  Visual foundation invariants: 14**
 - Architecture requirement coverage: **40 / 40** requirements mapped —
   **9 Addressed by architecture · 27 Partially addressed · 0 Deferred to
   CDS-WP-006 · 0 Deferred to CDS-WP-007 · 2 Consumer-owned · 2 Out of CDS scope**
@@ -431,6 +442,12 @@ Documents:
 - **The architecture selects no technology, format, tool, or visual design**
   (DEC-S-032). Governance (CDS-WP-006) and the accessibility target (CDS-WP-007)
   now exist; what remains is design, implementation, and evidence — not policy.
+- **The visual foundation architecture selects no visual value.** CDS-WP-019
+  defines structure only: no colour, typeface, size, spacing, radius, stroke,
+  shadow, opacity, icon, illustration, motion value, breakpoint, or theme instance.
+  It registers **no new Decision** — every binding statement applies a decision
+  already in force — and it grants **no maturity**: all nine visual foundation
+  families are **`Proposed`**, and **no visual value exists in CDS**.
 
 Documents:
 [Design System Architecture](../docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md) ·
@@ -441,6 +458,19 @@ Documents:
 [Consumer Contract and Reconciliation Model](../docs/architecture/CONSUMER_CONTRACT_AND_RECONCILIATION_MODEL.md) ·
 [Evidence, Traceability and Status Semantics](../docs/architecture/EVIDENCE_TRACEABILITY_AND_STATUS_SEMANTICS.md) ·
 [Architecture Requirements Traceability](../docs/architecture/ARCHITECTURE_REQUIREMENTS_TRACEABILITY.md)
+
+Visual foundation architecture (CDS-WP-019):
+[Visual Foundation Architecture](../docs/architecture/VISUAL_FOUNDATION_ARCHITECTURE.md) ·
+[Colour](../docs/architecture/VISUAL_FOUNDATION_COLOR_ARCHITECTURE.md) ·
+[Typography](../docs/architecture/VISUAL_FOUNDATION_TYPOGRAPHY_ARCHITECTURE.md) ·
+[Spatial](../docs/architecture/VISUAL_FOUNDATION_SPATIAL_ARCHITECTURE.md) ·
+[Shape and Surface](../docs/architecture/VISUAL_FOUNDATION_SHAPE_AND_SURFACE_ARCHITECTURE.md) ·
+[Iconography and Imagery](../docs/architecture/VISUAL_FOUNDATION_ICONOGRAPHY_AND_IMAGERY_ARCHITECTURE.md) ·
+[Theme](../docs/architecture/VISUAL_FOUNDATION_THEME_ARCHITECTURE.md) ·
+[Accessibility Mapping](../docs/governance/VISUAL_FOUNDATION_ACCESSIBILITY_MAPPING.md) ·
+[Channel Mapping](../docs/governance/VISUAL_FOUNDATION_CHANNEL_MAPPING.md) ·
+[Brand and Product Profile Boundary](../docs/governance/VISUAL_FOUNDATION_BRAND_AND_PROFILE_BOUNDARY.md) ·
+[Governance and Lifecycle](../docs/governance/VISUAL_FOUNDATION_GOVERNANCE_AND_LIFECYCLE.md)
 
 ## Consumer research status
 
@@ -627,6 +657,13 @@ No final decision exists for:
 
 These areas remain open until an explicitly authorized work package decides
 them (see DEC-S-003).
+
+**CDS-WP-019 closed none of them.** Defining the *architecture* of the visual
+foundation — what a colour role must declare, what a theme may not do, how a name
+is formed — decides **no colour, typeface, icon, logo, illustration, imagery, or
+theme**. Every visual area above is still open, and the visual foundation
+architecture is the frame those later decisions must fit, not a substitute for
+them.
 
 **Areas that are no longer open.** Four areas that this list previously carried
 have since been decided and are governed by committed normative sources. They are

@@ -5,9 +5,8 @@
 - **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**,
-  **CDS-WP-017**
-- **Current work package:** **CDS-WP-018 — Deferred Governance and Repository
-  Hygiene Reconciliation.**
+  **CDS-WP-017**, **CDS-WP-018**
+- **Current work package:** **CDS-WP-019 — Core Visual Foundation Architecture.**
 - **Candidate promotion: COMPLETE.** The Semantic Status Foundation passed the
   Candidate gate and was promoted by the Human-Maintainer exact-byte **Promotion
   Commit `22fa0710e2b75df22e7b420c2f9d86bbe67b2777`** on 2026-08-19 — gate **PASS**,
@@ -25,31 +24,50 @@
 - **CDS-WP-017 state:** **Closed.** Closure became effective with the
   Human-Maintainer commit `df9b8f21ff3bde4607b1c9ff7fdcbe3144366040`, which
   integrated the post-WP-016 roadmap, authority, and scope reconciliation.
-- **CDS-WP-018:** **active** — Deferred Governance and Repository Hygiene
-  Reconciliation. Documentary current-state, mirror, and repository-hygiene
-  reconciliation only; no design, evidence, maturity, claim, capability
-  registration, phase rename, or publication effect.
-- **CDS-WP-019 … CDS-WP-053:** **`Planned`, not active, not authorized, work not
+- **CDS-WP-018 state:** **Closed.** Closure became effective with the
+  Human-Maintainer commit `e5d5d492619071655ba956713980d1ee261d9213`, which
+  integrated the deferred-governance and repository-hygiene reconciliation.
+- **CDS-WP-019:** **active** — Core Visual Foundation Architecture. **Architecture
+  only.** It defines how the visual foundation is structured, governed,
+  represented, extended, validated, and consumed. **No visual value, no token
+  source file, no component, no brand, no Product Profile, no evidence, no maturity
+  change, no Decision, no risk entry, no capability registration, no phase rename,
+  and no publication effect.**
+- **CDS-WP-020 … CDS-WP-053:** **`Planned`, not active, not authorized, work not
   started** — see the
   [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
 
 ## Next allowed authority sequence
 
-**No design work, no visual work, and no future work package is activated.** The
-only authorized next steps, in this order:
+**No visual value is created and no future work package is activated.** The only
+authorized next steps, in this order:
 
 | # | Step | Authority |
 | --- | --- | --- |
-| 1 | **Fresh independent review** of the CDS-WP-018 reconciliation | Reviewer ≠ executor |
+| 1 | **Fresh independent review** of the CDS-WP-019 architecture | Reviewer ≠ executor |
 | 2 | **Nova adjudication** of that review | Nova — recommendation only, never approval |
-| 3 | **Human-Maintainer integration commit** of the reconciliation | Human Maintainer |
-| 4 | **CDS-WP-018 closure becomes committed and effective** | Effective at step 3 |
-| 5 | **CDS-WP-019 authorization** — a separate, explicit Human-Maintainer decision | Human Maintainer |
+| 3 | **Human-Maintainer integration commit** of the architecture | Human Maintainer |
+| 4 | **CDS-WP-019 closure becomes committed and effective** | Effective at step 3 |
+| 5 | **CDS-WP-020 authorization** — a separate, explicit Human-Maintainer decision | Human Maintainer |
 
 **Step 4 is not reached before step 3**, and **step 5 is not implied by step 4**.
 Uncommitted executor output changes no authoritative work-package status, and a
-review PASS is not a commit. **CDS-WP-019 remains inactive until separately
-authorized**, and **no visual-design work is activated at any step above.**
+review PASS is not a commit. **CDS-WP-020 remains inactive until separately
+authorized**, and **no concrete visual value is created at any step above.**
+
+### Phase-transition note (raised, not acted on)
+
+The phase label **`Pre-Candidate Operating Enablement`** (DEC-S-062) remains
+authoritative and **is not renamed**. It stays coherent for CDS-WP-019, which
+creates no visual value.
+
+It will be **materially strained by CDS-WP-020**, which is the first work package
+that would create real colour, typographic, and dimensional values. CDS-WP-019
+therefore **raises `PHASE_TRANSITION_RECOMMENDED` as a forward-looking
+recommendation**, to be resolved **before CDS-WP-020 is authorized**, together with
+the still-open governance item **F-017-04**. A relabel requires a **new Decision
+superseding DEC-S-062** and is a Human-Maintainer decision. **CDS-WP-019 renames
+nothing and creates no Decision.**
 
 ## Status of completed work packages
 
@@ -534,13 +552,11 @@ work-package sequence exists.
   no CoreOps pilot start; no consumer integration; no licence; no publication,
   release, or tag; **no activation of CDS-WP-018 or any later work package**.
 
-## Next work package — CDS-WP-018 (authorized; active)
+### CDS-WP-018 — Deferred Governance and Repository Hygiene Reconciliation — Completed
 
-**CDS-WP-018 — Deferred Governance and Repository Hygiene Reconciliation.**
-
-CDS-WP-017 is closed. The findings it classified and routed forward — without
-repairing any of them, because routing is not repair — are now taken up in a
-bounded documentary pass.
+Deferred current-state, mirror, and repository-hygiene reconciliation. Closure
+became effective with the Human-Maintainer commit
+`e5d5d492619071655ba956713980d1ee261d9213`.
 
 ### Objective of CDS-WP-018
 
@@ -572,7 +588,65 @@ bounded documentary pass.
   capability registration** for audio/sonic, haptic, multimodal, AI/agent, or safety
   subject matter; **no activation of CDS-WP-019 or any later work package**.
 
+## Next work package — CDS-WP-019 (authorized; active)
+
+**CDS-WP-019 — Core Visual Foundation Architecture.**
+
+CDS-WP-018 is closed. **Phase V — Visual Foundation** opens with an architecture
+work package: it defines **how** visual foundations are structured before any
+visual decision is made.
+
+### Objective of CDS-WP-019
+
+- Establish the
+  [Visual Foundation Architecture](../docs/architecture/VISUAL_FOUNDATION_ARCHITECTURE.md)
+  as the Layer-3 visual entry point — its position in the eight-layer model and the
+  five-layer token flow, a register of **nine visual foundation families**
+  (VF-1 … VF-9), **fourteen invariants**, the naming model, the machine-readable
+  representation boundary, and the motion boundary.
+- Establish six specialised architecture documents: **colour**, **typography**,
+  **spatial and layout**, **shape and surface**, **iconography and imagery**, and
+  **theme**.
+- Establish four governance documents: the **accessibility mapping**, the **channel
+  mapping**, the **brand and Product Profile boundary**, and the **governance and
+  lifecycle** model.
+- **Position rather than register** opacity (an attribute of colour and surface),
+  illustration and imagery (Layer 2), and focus indication (a cross-family role
+  set) — in each case the conservative reading that registers less scope, not more.
+- Record the boundaries that later work inherits: **COLOUR ≠ STATUS**, an
+  interaction state is not a semantic status, a theme re-binds and never redefines,
+  and the named extension-point set is **empty**.
+- Record **CDS-WP-018 as closed** and **CDS-WP-019 as active**, leaving
+  **CDS-WP-020 … CDS-WP-053** `Planned`, not active, not authorized.
+
+### CDS-WP-019 explicitly establishes none of the following
+
+- **no colour, palette, typeface, font stack, size, spacing value, radius, stroke,
+  shadow, opacity value, icon, illustration, motion value, breakpoint, or theme
+  instance**;
+- no token source file, schema, validator rule, diagnostic, component, channel
+  adapter, template, or asset;
+- no named extension point, no Product Profile, no brand, and no product identity;
+- no evidence produced or admitted; **no maturity change**; no Stable promotion; no
+  claim or conformance; no CoreOps pilot start; no consumer integration; no licence;
+  no publication, release, or tag;
+- **no ADR, no Decision, and no risk entry** — the architecture is defined under
+  existing authority, and its derivation is recorded in the architecture document's
+  *Authority basis* section;
+- **no phase rename and no Decision superseding DEC-S-062**;
+- **no capability registration** for audio/sonic, haptic, multimodal, AI/agent, or
+  safety subject matter;
+- **no activation of CDS-WP-020 or any later work package**;
+- no change to `tokens/**`, `schemas/**`, `tools/**`, `tests/**`,
+  `artifacts/**`, `docs/foundations/**`, `docs/decisions/**`, or `docs/risks/**`,
+  and **no change to any Semantic Status source, revision, maturity, or evidence
+  package**.
+
 ### Still prohibited in the Pre-Candidate phase
+
+*(Unchanged by CDS-WP-019. An **architecture** for the visual foundation is not
+concrete visual design, and defining how a colour role must behave is not selecting
+a colour.)*
 
 - concrete visual design; selecting colours, typography, icons, logos, or themes,
 - implementing components or product code,
@@ -588,9 +662,9 @@ bounded documentary pass.
 
 ### Authorization note
 
-CDS-WP-018 is registered as `Next` — the roadmap label for the current authorized
+CDS-WP-019 is registered as `Next` — the roadmap label for the current authorized
 work package. It is executed under an explicit Nova prompt and Human-Maintainer
-authorization. **Planning is not authorization:** recording CDS-WP-019 …
+authorization. **Planning is not authorization:** recording CDS-WP-020 …
 CDS-WP-053 activates none of them, and each requires its own explicit Nova prompt
 and Human-Maintainer authorization. **Execution is not closure:** uncommitted
 executor output changes no authoritative work-package status.
@@ -602,3 +676,4 @@ executor output changes no authoritative work-package status.
 - [Foundation Context Pack](CONTEXT_PACK_FOUNDATION.md)
 - [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md)
 - [Governance Operating Model](../docs/governance/GOVERNANCE_OPERATING_MODEL.md)
+- [Visual Foundation Architecture](../docs/architecture/VISUAL_FOUNDATION_ARCHITECTURE.md) — CDS-WP-019 entry point

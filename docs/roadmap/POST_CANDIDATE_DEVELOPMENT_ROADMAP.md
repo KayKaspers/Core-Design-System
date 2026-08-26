@@ -35,14 +35,14 @@ document supersedes it **as the forward view only** and rewrites none of it.
 | Renderer behaviour | Governance authority |
 | AI or executor output | Approval |
 
-**CDS-WP-019 through CDS-WP-053 are `Planned`, `Not active`, and `Not authorized
+**CDS-WP-020 through CDS-WP-053 are `Planned`, `Not active`, and `Not authorized
 for execution`. Work on them has not started.** Each becomes executable only on an
 explicit Nova prompt **and** Human-Maintainer authorization, one work package at a
 time. Nothing in this document activates the next one automatically.
 
-**CDS-WP-018 is the exception, and it proves the rule:** it left `Planned` only when
-the Human Maintainer authorized it separately on 2026-08-25 — **not** because this
-roadmap listed it next.
+**CDS-WP-018 and CDS-WP-019 are the exceptions, and they prove the rule:** each left
+`Planned` only when the Human Maintainer authorized it separately — CDS-WP-018 on
+2026-08-25, CDS-WP-019 on 2026-08-26 — **not** because this roadmap listed it next.
 
 ## Current state at the reconciled baseline
 
@@ -78,6 +78,23 @@ advanced: **CDS-WP-017 is `Closed`** — closure commit
 **CDS-WP-019 … CDS-WP-053** remain **`Planned` · not active · not authorized**. The
 controlled carrier for work-package status is
 [Work Packages](../../project-system/WORK_PACKAGES.md), never this planning view.
+
+**Work-package rows updated again by CDS-WP-019 (2026-08-26).** The maturity,
+evidence, claim, conformance, and publication rows above remain **unchanged** —
+Candidate families **1**, Stable **No**, claims **None**, conformance **None**,
+AE-2/AE-3/AE-4 **None**, visual value **None**, component **None**, pilot
+**Inactive**, publication **`Private Development`**, releases **None**, tags **0**.
+Only the work-package rows have advanced: **CDS-WP-018 is `Closed`** — closure
+commit `e5d5d492619071655ba956713980d1ee261d9213` — **CDS-WP-019 is `Active`**, and
+**CDS-WP-020 … CDS-WP-053** remain **`Planned` · not active · not authorized**.
+
+**CDS-WP-019 created no visual value.** It defined the *architecture* of the visual
+foundation — nine families, fourteen invariants, a naming model, and the
+accessibility, channel, brand, and governance boundaries — and selected **no
+colour, typeface, size, spacing, radius, stroke, shadow, opacity, icon,
+illustration, motion value, breakpoint, or theme**. The row *"Visual value ·
+component: **None** · **None**"* above is therefore still accurate. All nine visual
+foundation families are **`Proposed`**; **none is Candidate**.
 
 **Evidence never transfers across a source revision** (DEC-S-126). Every later
 revision needs fresh evidence, a fresh independent review, and a fresh admission.
@@ -115,13 +132,13 @@ normative source.
 | ID | Title | Layer | Status |
 | --- | --- | --- | --- |
 | CDS-WP-017 | Post-WP-016 Roadmap, Authority and Scope Reconciliation | 1 | **Closed** |
-| CDS-WP-018 | Deferred Governance and Repository Hygiene Reconciliation | 1 | **Active** |
+| CDS-WP-018 | Deferred Governance and Repository Hygiene Reconciliation | 1 | **Closed** |
 
 ### Phase V — Visual Foundation
 
 | ID | Title | Layer | Status |
 | --- | --- | --- | --- |
-| CDS-WP-019 | Core Visual Foundation Architecture | 3 | Planned · not active |
+| CDS-WP-019 | Core Visual Foundation Architecture | 3 | **Active** |
 | CDS-WP-020 | Reference and Semantic Token Foundation | 3 | Planned · not active |
 | CDS-WP-021 | Adaptive Layout and Responsive Foundation | 3 | Planned · not active |
 | CDS-WP-022 | Theme and Environmental Presentation Model | 3 | Planned · not active |
@@ -208,9 +225,9 @@ normative source.
 | CDS-WP-053 | Stable Gate and Distribution Readiness | 1 → 7 | Planned · not active |
 
 **Sequence integrity:** CDS-WP-017 … CDS-WP-053 is a contiguous range of **37**
-identifiers with no gap and no duplicate. **35** of them — CDS-WP-019 …
-CDS-WP-053 — are `Planned · not active`; exactly **one**, CDS-WP-018, is active;
-and **one**, CDS-WP-017, is closed.
+identifiers with no gap and no duplicate. **34** of them — CDS-WP-020 …
+CDS-WP-053 — are `Planned · not active`; exactly **one**, CDS-WP-019, is active;
+and **two**, CDS-WP-017 and CDS-WP-018, are closed.
 
 ## Milestones
 
@@ -397,6 +414,18 @@ its own terms.
 
 **No PB001 evidence is upgraded by this document.**
 
+**Status after CDS-WP-019 (2026-08-26).** The *Visual Foundation Gap* topic routed
+above reached its first destination. **CDS-WP-019 imported nothing from PB001**:
+PB001 is **not held in this repository**, its finding text remains **outside** it,
+and CDS-WP-019 obtained no PB001 material, cited none, and used none as an input.
+The visual foundation architecture was derived **entirely** from the committed
+normative CDS sources and the registered consumer requirements. **PB001 remains
+Experimental Evidence at AE-0, non-normative, with no conformance evidence, no
+Product Profile authority, and no universal-core authority** — unchanged — and the
+routing to **CDS-WP-020** stands. Should PB001 material ever be used, it must first
+be introduced through the requirement classification model above and evidenced on
+its own terms.
+
 ## Deferred finding disposition
 
 The following review findings are routed to **CDS-WP-018 — Deferred Governance
@@ -462,18 +491,44 @@ repairs nothing and authorizes nothing.**
 | **R1-F-01** | Two Candidate-era records — the [Candidate Promotion Effectivity Record](../governance/SEMANTIC_STATUS_CANDIDATE_PROMOTION_EFFECTIVITY_RECORD.md) and the [Candidate Dossier](../operations/SEMANTIC_STATUS_CANDIDATE_DOSSIER.md) — each still carry a row stating `CDS-WP-017: INACTIVE`. Both were true when written and are made stale by CDS-WP-017's own activation. | Deferred → **CDS-WP-018**. **Neither record was modified**: both are dated point-in-time records, and this work package rewrites no such record. Any later repair must be **additive** — a dated supersession note, or removal of work-package-status rows from maturity-boundary tables — never a rewrite of the dated tables. The controlled carrier for work-package status remains [Work Packages](../../project-system/WORK_PACKAGES.md). |
 | **R1-F-05** | **CDS-WP-043** is titled "Security and Safety Interaction Patterns", but *safety* is not independently registered scope. | Deferred → a **CDS-WP-043 scope check before authorization**; see the multimodal and AI scope-registration gate above. CDS-WP-043 is **not renamed** here. |
 
+### Findings observed by CDS-WP-019
+
+Recorded while defining the visual foundation architecture. Each is **recorded and
+not repaired** — CDS-WP-019 is an architecture work package, not a hygiene pass, and
+**routing is not repair**. None of them blocked CDS-WP-019.
+
+| ID | Observation | Disposition |
+| --- | --- | --- |
+| **F-019-01** | `docs/governance/CONCEPT_AND_SCOPE.md` — its *"Open questions and deferred decisions"* list still carries **token format**, **versioning and maturity model**, **conformance and adoption policy**, and **product profile and override governance** as undecided, although CDS-WP-006 and CDS-WP-011 decided them. This is the same drift **F-017-01 / F-017-02** repaired elsewhere; `CONCEPT_AND_SCOPE.md` was **not** in CDS-WP-018's file list. | Deferred → a **bounded, separately authorized governance reconciliation**. It is a **normative scope source**, and its change control requires an authorized work package naming it. **Not repaired by CDS-WP-019.** |
+| **F-019-02** | Capability-domain enumeration asymmetry: **DEC-S-021 Layer 3 registers *iconography*** but capability domain 3 of `CONCEPT_AND_SCOPE.md` does not name it, and neither domain names *illustration* or *imagery* although the deferred-decisions list does. CDS-WP-019 positioned icons at **Layer 3** (per DEC-S-021) and illustration and imagery at **Layer 2**, and registered no new scope. | Deferred → the same governance reconciliation as F-019-01, or **CDS-WP-037 / CDS-WP-045** at authorization. **Not repaired by CDS-WP-019.** |
+| **F-019-03** | **CR-004** (*viewport strategy and breakpoints*) is mapped to **Layer 5** in the normative [Architecture Requirements Traceability](../architecture/ARCHITECTURE_REQUIREMENTS_TRACEABILITY.md), while this roadmap plans **CDS-WP-021** at **Layer 3**. CDS-WP-019 states the reconciling reading — *Layer 3 owns the spatial vocabulary; Layer 5 owns the strategy that uses it* — and **does not edit the traceability matrix**. | Deferred → **CDS-WP-021 must confirm the split before defining any responsive foundation.** **Not repaired by CDS-WP-019.** |
+| **F-019-04** | `docs/architecture/TOKEN_AND_THEME_ARCHITECTURE.md` — its *"Unresolved format and tooling questions"* still present questions **1** (machine-readable format), **2** (naming convention), and **7** (validation layers and blocking) as open, although ADR-0001, DEC-S-081, and the V1–V4 validation contract decided them; its preamble still describes the token interoperability source as a non-implementable preview, which DTCG 2025.10 and ADR-0001 superseded. Question **3** (transformation tool) remains genuinely open. | Deferred → a **bounded, separately authorized reconciliation**, or **CDS-WP-020**. Same class as `NF-R4-OBS-001`. **Not repaired by CDS-WP-019.** |
+| **F-019-05** | `docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md` — its *"Deferred technical decisions"* list still carries **token format**, **token naming convention**, **maturity model**, **versioning scheme**, **accessibility conformance level**, and **concrete status taxonomy and naming** as deliberately open, although each has been decided. CDS-WP-019 edited that document **additively only** (one *Related documents* row) and did **not** touch the list. | Deferred → the same reconciliation as F-019-04. **Not repaired by CDS-WP-019.** |
+| **F-019-06** | **No registered consumer requirement asks for a colour palette, a typographic scale, a spacing scale, a radius scale, an elevation model, an icon library, or illustration.** Four of the nine visual foundation families — **VF-3, VF-5, VF-6, VF-7** — carry **no consumer demand evidence at all**. | **Recorded as honesty, not as a defect**, in the [Visual Foundation Architecture](../architecture/VISUAL_FOUNDATION_ARCHITECTURE.md). It is the same treatment CDS-WP-005 gave CR-030. Mapped to **RISK-026** and **RISK-003**; **no new risk is registered**. |
+| **F-019-07** | The visual foundation adds **nine artifact families**, each with its own maturity, evidence, and gate, to a governance model run by **one** Human Maintainer, with the **Consumer Maintainer role unstaffed** (FM-F-006). | **Recorded** in the [Visual Foundation Governance and Lifecycle](../governance/VISUAL_FOUNDATION_GOVERNANCE_AND_LIFECYCLE.md) as an open capacity question for **CDS-WP-020**. Mapped to **RISK-021**, **RISK-026**, **RISK-029**, **RISK-040**; **no new risk is registered**. |
+| **F-019-08** | The phase label set by **DEC-S-062** stays coherent for CDS-WP-019 but will be **materially strained by CDS-WP-020**, the first work package that would create real visual values. | **`PHASE_TRANSITION_RECOMMENDED`** raised as a forward-looking recommendation, tied to the still-open **F-017-04**, to be resolved **before CDS-WP-020 is authorized**. **CDS-WP-019 renames nothing and creates no Decision.** |
+| **F-019-09** | **`R1-F-01` recurs by construction.** The [Candidate Dossier](../operations/SEMANTIC_STATUS_CANDIDATE_DOSSIER.md) carries `CDS-WP-018 **active**` in its *"Current state (authoritative for this document)"* header — true when CDS-WP-018 wrote it, made stale by CDS-WP-019's activation. This is the **same recurrence R1-F-01 described**, and it will recur at every activation for as long as a maturity-boundary record carries a work-package-status row at all. | **Not repaired by CDS-WP-019**: `docs/operations/**` is outside this work package's file scope. Deferred → a **bounded, separately authorized repair**. Per the R1-F-01 disposition, any repair must be **additive** — a dated supersession note, or **removal of the work-package-status row from the maturity-boundary record** — never a rewrite of a dated table. **Removal is the structural fix**: the controlled carrier for work-package status is [Work Packages](../../project-system/WORK_PACKAGES.md), and the dossier header already says so. **Disclosure:** the dated CDS-WP-017 forward-view note in the [Pre-Candidate Operating Plan](PRE_CANDIDATE_OPERATING_PLAN.md) likewise still reads *"CDS-WP-019 onwards is `Planned` only"*; it is **historical by its own header**, its prohibitions remain in force, and it is **not rewritten**. |
+
 ## Immediate next step
 
-**CDS-WP-019 — Core Visual Foundation Architecture.**
+**CDS-WP-020 — Reference and Semantic Token Foundation.**
 
-CDS-WP-019 is **inactive** and **remains inactive until separately authorized by
+CDS-WP-020 is **inactive** and **remains inactive until separately authorized by
 the Human Maintainer**. Nothing here starts it, scopes it in detail, or performs any
 part of it in advance.
 
-**CDS-WP-018 was authorized separately by the Human Maintainer on 2026-08-25** and
-is the currently active work package; the dispositions above record what it took up.
-Its authorization came from that decision alone — **not** from its position in this
-roadmap.
+**CDS-WP-019 was authorized separately by the Human Maintainer on 2026-08-26** and
+is the currently active work package. Its authorization came from that decision
+alone — **not** from its position in this roadmap.
+
+**A phase-transition item is open before CDS-WP-020.** CDS-WP-020 would be the
+first work package to create real colour, typographic, and dimensional values, and
+the phase label set by **DEC-S-062** predates that possibility. CDS-WP-019 raised
+**`PHASE_TRANSITION_RECOMMENDED`** as a forward-looking recommendation, tied to the
+still-open **F-017-04**, and **renamed nothing**. A relabel requires a **new
+Decision superseding DEC-S-062** and is a Human-Maintainer decision. **Nothing here
+schedules it, and it does not by itself block CDS-WP-020's authorization** — it is
+recorded so the decision is taken deliberately rather than by drift.
 
 ## Related documents
 

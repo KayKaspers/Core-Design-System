@@ -9,6 +9,65 @@ released and no release is announced.
 
 ### Added
 
+- **Core Visual Foundation Architecture — the Layer-3 visual foundation now has a
+  structure, and still no values.** Eleven new normative documents establish **how**
+  visual foundations are structured, governed, represented, extended, validated, and
+  consumed. **No colour, typeface, size, spacing, radius, stroke, shadow, opacity
+  value, icon, illustration, motion value, breakpoint, or theme instance is
+  selected**, and no token source file, schema, validator rule, component, brand, or
+  Product Profile is created. (CDS-WP-019)
+  - [Visual Foundation Architecture](docs/architecture/VISUAL_FOUNDATION_ARCHITECTURE.md)
+    — the entry point: position in the eight-layer model and the five-layer token
+    flow, a register of **nine visual foundation families** (VF-1 … VF-9),
+    **fourteen invariants** (VF-I-1 … VF-I-14), the naming model, the
+    machine-readable representation boundary, the motion boundary, the Semantic
+    Status relationship, and the deferred decisions.
+  - Six specialised architectures:
+    [Colour](docs/architecture/VISUAL_FOUNDATION_COLOR_ARCHITECTURE.md),
+    [Typography](docs/architecture/VISUAL_FOUNDATION_TYPOGRAPHY_ARCHITECTURE.md),
+    [Spatial](docs/architecture/VISUAL_FOUNDATION_SPATIAL_ARCHITECTURE.md),
+    [Shape and Surface](docs/architecture/VISUAL_FOUNDATION_SHAPE_AND_SURFACE_ARCHITECTURE.md),
+    [Iconography and Imagery](docs/architecture/VISUAL_FOUNDATION_ICONOGRAPHY_AND_IMAGERY_ARCHITECTURE.md),
+    and [Theme](docs/architecture/VISUAL_FOUNDATION_THEME_ARCHITECTURE.md).
+  - Four governance documents:
+    [Accessibility Mapping](docs/governance/VISUAL_FOUNDATION_ACCESSIBILITY_MAPPING.md),
+    [Channel Mapping](docs/governance/VISUAL_FOUNDATION_CHANNEL_MAPPING.md),
+    [Brand and Product Profile Boundary](docs/governance/VISUAL_FOUNDATION_BRAND_AND_PROFILE_BOUNDARY.md),
+    and [Governance and Lifecycle](docs/governance/VISUAL_FOUNDATION_GOVERNANCE_AND_LIFECYCLE.md).
+- **The visual foundation introduces no layer.** Visual constructs occupy positions
+  in the existing eight-layer model (DEC-S-021) and the existing five-layer token
+  flow (DEC-S-024). A **theme is a resolution context, not a layer**; a Product
+  Profile enters at token-flow layer 4 only; and the **Component layer is never
+  dropped** from the flow. (CDS-WP-019)
+- **Three subjects positioned rather than registered as new scope** — the
+  conservative reading in each case: **opacity** is an attribute of Colour (alpha)
+  and Surface (overlay, scrim); **illustration and imagery** are **Layer 2 Brand and
+  Identity**, consumed through a declared interface; and **focus indication** is a
+  **cross-family role set**, so no single family's change can weaken it unnoticed.
+  (CDS-WP-019)
+- **The status boundary made explicit for visual work:** **COLOUR ≠ STATUS · ICON ≠
+  STATUS · MOTION ≠ STATUS · ELEVATION ≠ STATUS**, and **an interaction state is not
+  a semantic status**. Status meaning stays with the Semantic Status Foundation;
+  visual encoding is redundant to it, never a substitute. The binding itself is
+  **CDS-WP-023's**, gated by CDS-WP-024 and CDS-WP-025. **No status-to-visual mapping
+  is defined or proposed.** (CDS-WP-019)
+- **The accessibility finding, derived by re-counting the WCAG matrix:** **14**
+  WCAG 2.2 A/AA criteria map to Layer 3, and **all five** criteria the matrix
+  classifies as `Normative CDS requirement` — the ones CDS owns **without** the
+  consumer — are among them (**1.3.3, 1.4.1, 1.4.5, 2.3.1, 2.4.7**). **Every
+  criterion CDS owns alone is a visual foundation criterion.** Every visual artifact
+  is **AE-0**; nothing has been evaluated; **no accessibility claim of any level is
+  valid**; `AE1-CDS-WP016-SEMSTATUS-004` does **not** transfer. (CDS-WP-019)
+- **The consumer-evidence honesty record.** **No registered consumer requirement
+  asks for a colour palette, a typographic scale, a spacing scale, a radius scale, an
+  elevation model, an icon library, or illustration.** Six requirements anchor
+  Layer 3 (CR-002, CR-006, CR-021, CR-022, CR-023, CR-025), and four families
+  (**VF-3, VF-5, VF-6, VF-7**) carry **no consumer demand evidence at all** —
+  recorded, in the same way CDS-WP-005 recorded CR-030. (CDS-WP-019)
+- **Work-package notes for CDS-WP-019**
+  (`project-brain/CDS_WP_019_CORE_VISUAL_FOUNDATION_ARCHITECTURE_NOTES.md`) — the
+  discovery record, the decision-need assessment, the positioning rationale, the
+  findings **F-019-01 … F-019-09**, and what was explicitly not done. (CDS-WP-019)
 - **Python repository hygiene added to `.gitignore`** — `__pycache__/` and `*.pyc`,
   so an offline validator or `unittest` run cannot leave untracked bytecode in a
   working tree whose cleanliness the DEC-S-126 exact-byte evidence workflow depends
@@ -85,6 +144,70 @@ released and no release is announced.
   not modified.** (CDS-WP-018, finding `R2-N-02`)
 
 ### Changed
+
+- **CDS-WP-018 recorded as `Completed`** and **CDS-WP-019 recorded as the active
+  work package** across the current-state surfaces (`README.md`, `CLAUDE.md`,
+  `project-system/WORK_PACKAGES.md`, `project-system/NEXT_PHASE.md`,
+  `project-system/PROJECT_PROFILE.md`,
+  `project-system/CONTEXT_PACK_FOUNDATION.md`, `project-brain/PROJECT_BRAIN.md`,
+  and the forward roadmap). CDS-WP-018 closure became effective with the
+  Human-Maintainer commit `e5d5d492619071655ba956713980d1ee261d9213`.
+  **CDS-WP-020 … CDS-WP-053 remain `Planned`, not active, and not authorized**, and
+  CDS-WP-019's own authorization came from a separate explicit Human-Maintainer
+  decision, never from its roadmap position. (CDS-WP-019)
+- **One additive row added to
+  [Design System Architecture](docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md)** —
+  a *Related documents* pointer to the visual foundation architecture, so the new
+  family is reachable from the architecture entry point. **Nothing else in that
+  document was touched**, including its *Deferred technical decisions* list.
+  (CDS-WP-019)
+- **`PHASE_TRANSITION_RECOMMENDED` raised, and nothing renamed.** The phase label
+  set by **DEC-S-062** stays coherent for CDS-WP-019, which creates no visual value,
+  but will be materially strained by **CDS-WP-020**, the first work package that
+  would create real visual values. Recorded as a forward-looking recommendation to
+  be resolved **before CDS-WP-020 is authorized**, tied to the still-open
+  **F-017-04**. A relabel requires a **new Decision superseding DEC-S-062** and is a
+  Human-Maintainer decision. (CDS-WP-019)
+- **Nine findings recorded and explicitly not repaired** (`F-019-01` … `F-019-09`)
+  in the forward roadmap's deferred-finding section: the `CONCEPT_AND_SCOPE.md`
+  open-decision drift that CDS-WP-018's file list did not cover (`F-019-01`), the
+  capability-domain enumeration asymmetry for iconography, illustration, and imagery
+  (`F-019-02`), the CR-004 Layer 5 versus CDS-WP-021 Layer 3 mapping tension
+  (`F-019-03`), the stale *unresolved format and tooling questions* in
+  `TOKEN_AND_THEME_ARCHITECTURE.md` (`F-019-04`) and the stale *deferred technical
+  decisions* in `DESIGN_SYSTEM_ARCHITECTURE.md` (`F-019-05`), the absent consumer
+  demand evidence for four families (`F-019-06`), the nine-family governance
+  capacity question (`F-019-07`), the phase-transition item (`F-019-08`), and the
+  by-construction recurrence of `R1-F-01` in the Candidate Dossier's
+  work-package-status row (`F-019-09`, outside this work package's file scope).
+  **Routing is not repair**, and none of them blocked CDS-WP-019. (CDS-WP-019)
+- **PB001 disposition updated — nothing imported.** The *Visual Foundation Gap*
+  topic routed to CDS-WP-019 and CDS-WP-020 reached its first destination.
+  **CDS-WP-019 obtained no PB001 material, cited none, and used none as an input**;
+  PB001 is not held in this repository and its finding text remains outside it. The
+  visual foundation architecture was derived entirely from the committed normative
+  CDS sources and the registered consumer requirements. **PB001 remains Experimental
+  Evidence at AE-0, non-normative**, and the routing to CDS-WP-020 stands.
+  (CDS-WP-019)
+
+**Boundaries of the CDS-WP-019 entries above.** **No visual value was created** —
+no colour, typeface, size, spacing, radius, stroke, shadow, opacity value, icon,
+illustration, motion value, breakpoint, or theme instance — and **no visual value
+exists in CDS**, verified by search. All nine visual foundation families are
+**`Proposed`**; **none is Candidate**. No maturity changed: the Semantic Status
+Foundation stays `Candidate` / `Approved` at `semantic-status-rev-0002-candidate`
+with `AE1-CDS-WP016-SEMSTATUS-004` at **AE-1**, source/contract scope only, and
+**no Semantic Status source, revision, maturity, or evidence package was touched**.
+**No evidence was produced, admitted, altered, or transferred.** Everything under
+`tokens/`, `schemas/`, `tools/`, `tests/`, `artifacts/`, `docs/foundations/`, and
+`requirements-validator.lock` is **unchanged**, as are `DECISION_INDEX.md`, the
+ADRs, and `RISK_REGISTER.md`. **No Decision and no ADR was added** — the register
+stays at **DEC-S-126** and **ADR-0003**; **no risk was added, accepted, or closed**
+— the register stays at **RISK-098**. No extension point was named, no Product
+Profile or brand was created or activated, no pilot was started, no consumer
+repository was read or written, no claim was made, no artifact reached `Stable`,
+publication remains **`Private Development`**, there are **0 tags and no release**,
+and **no Git write was performed**.
 
 - **CDS-WP-017 recorded as `Completed`** and **CDS-WP-018 recorded as the active
   work package** across the current-state surfaces (`README.md`, `CLAUDE.md`,

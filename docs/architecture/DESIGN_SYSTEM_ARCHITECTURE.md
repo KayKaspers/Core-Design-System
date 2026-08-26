@@ -259,6 +259,7 @@ request, not by an implementation convenience, and not by a generated artifact.
 | --- | --- |
 | Artifact classes, authority, conflicts | [Source of Truth and Authority Model](SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md) |
 | Token layers and theming | [Token and Theme Architecture](TOKEN_AND_THEME_ARCHITECTURE.md) |
+| **Layer 3 visual foundation** *(CDS-WP-019 — structure only; **no visual value**, **no new layer**, **no new Decision**)* | [Visual Foundation Architecture](VISUAL_FOUNDATION_ARCHITECTURE.md) |
 | Profiles, extensions, domain families | [Product Profile and Extension Model](PRODUCT_PROFILE_AND_EXTENSION_MODEL.md) |
 | Artifact families, channels, distribution | [Artifact Distribution and Channel Model](ARTIFACT_DISTRIBUTION_AND_CHANNEL_MODEL.md) |
 | Consumer contracts and reconciliation | [Consumer Contract and Reconciliation Model](CONSUMER_CONTRACT_AND_RECONCILIATION_MODEL.md) |

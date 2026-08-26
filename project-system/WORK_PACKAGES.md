@@ -7,7 +7,7 @@ Controlled work-package roadmap for the Core Design System (CDS).
 - **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**,
-  **CDS-WP-017**
+  **CDS-WP-017**, **CDS-WP-018**
 - **CDS-WP-016 is `Completed`.** Its Candidate authority sequence completed
   (`AE1-CDS-WP016-SEMSTATUS-004` admitted at AE-1, Human-Maintainer Candidate
   approval granted, exact-byte **Promotion Commit
@@ -17,16 +17,25 @@ Controlled work-package roadmap for the Core Design System (CDS).
 - **CDS-WP-017 is `Completed`.** Its reconciliation was integrated by the
   Human-Maintainer commit **`df9b8f21ff3bde4607b1c9ff7fdcbe3144366040`**, and
   closure became effective there.
-- **Current work package:** **CDS-WP-018 — Deferred Governance and Repository
-  Hygiene Reconciliation.** Documentary current-state, mirror, and repository
-  hygiene reconciliation only; it creates no design, token, component, evidence,
-  claim, or maturity, renames no phase, and registers no capability.
-- **Next planned work package:** **CDS-WP-019 — Core Visual Foundation
-  Architecture.** **`Planned`, not active, and not authorized**; it starts only on
+- **CDS-WP-018 is `Completed`.** Its deferred-governance and repository-hygiene
+  reconciliation was integrated by the Human-Maintainer commit
+  **`e5d5d492619071655ba956713980d1ee261d9213`**, and closure became effective
+  there.
+- **Current work package:** **CDS-WP-019 — Core Visual Foundation Architecture.**
+  Authorized by the Human Maintainer as the single active work package. It defines
+  the **architecture** of the CDS visual foundation — structure, layer position,
+  naming, machine-readable boundary, accessibility, channels, brand and profile
+  boundary, governance. It creates **no** visual value, **no** token source file,
+  **no** component, **no** brand, and **no** Product Profile; produces and admits
+  **no** evidence; changes **no** maturity; adds **no** ADR, Decision, or risk;
+  **renames no phase**; registers **no** capability; makes **no** claim; and
+  activates **no** later work package.
+- **Next planned work package:** **CDS-WP-020 — Reference and Semantic Token
+  Foundation.** **`Planned`, not active, and not authorized**; it starts only on
   separate Human-Maintainer authorization.
 - **Forward roadmap:** CDS-WP-017 … CDS-WP-053 are recorded in the
   [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
-  **CDS-WP-019 … CDS-WP-053 are `Planned` only.**
+  **CDS-WP-020 … CDS-WP-053 are `Planned` only.**
 
 ## Status values
 
@@ -62,8 +71,8 @@ review, and authority state are recorded per work package below.
 | CDS-WP-015 | Semantic Status Foundation Source Set and Candidate Evidence | Completed | CDS-WP-014 |
 | CDS-WP-016 | Semantic Status Foundation Independent Evidence Review and Candidate Gate | Completed | CDS-WP-015 |
 | CDS-WP-017 | Post-WP-016 Roadmap, Authority and Scope Reconciliation | Completed | CDS-WP-016 |
-| **CDS-WP-018** | **Deferred Governance and Repository Hygiene Reconciliation** | **Next** | CDS-WP-017 |
-| CDS-WP-019 | Core Visual Foundation Architecture | Planned | CDS-WP-018 |
+| CDS-WP-018 | Deferred Governance and Repository Hygiene Reconciliation | Completed | CDS-WP-017 |
+| **CDS-WP-019** | **Core Visual Foundation Architecture** | **Next** | CDS-WP-018 |
 | CDS-WP-020 | Reference and Semantic Token Foundation | Planned | CDS-WP-019 |
 | CDS-WP-021 | Adaptive Layout and Responsive Foundation | Planned | CDS-WP-020 |
 | CDS-WP-022 | Theme and Environmental Presentation Model | Planned | CDS-WP-021 |
@@ -101,11 +110,15 @@ review, and authority state are recorded per work package below.
 
 ### How to read this table
 
-**`Planned` is not `Active` and not authorization.** CDS-WP-019 … CDS-WP-053 are
+**`Planned` is not `Active` and not authorization.** CDS-WP-020 … CDS-WP-053 are
 recorded so the direction is legible and so no competing roadmap can arise. Work on
 them has **not started**, and each is executable only on an explicit Nova prompt
 **and** Human-Maintainer authorization, one work package at a time. Listing
-CDS-WP-019 immediately after CDS-WP-018 activates nothing.
+CDS-WP-020 immediately after CDS-WP-019 activates nothing.
+
+**CDS-WP-019 proves the rule rather than breaking it:** it left `Planned` only when
+the Human Maintainer authorized it separately — **not** because the roadmap listed
+it next.
 
 The `Depends on` column records **sequence intent**, not permission. Four entries
 additionally require a **prior extension of the registered CDS scope** through an
@@ -538,7 +551,8 @@ integration, release, tag, or publication; and performs no Git write.**
 
 ### CDS-WP-018 — Deferred Governance and Repository Hygiene Reconciliation
 
-**Status:** Next *(the current authorized work package)*
+**Status:** Completed *(integrated by the Human-Maintainer commit
+`e5d5d492619071655ba956713980d1ee261d9213`)*
 
 A bounded, documentary current-state, mirror, and repository-hygiene reconciliation
 pass following the closure of CDS-WP-017. It takes up the findings CDS-WP-017 routed
@@ -574,6 +588,49 @@ Foundation documents, the ADRs, the Decision Index, and every evidence artifact 
 admits no evidence; changes no maturity; accepts or closes no risk; adds no ADR or
 Decision; makes no claim; activates no Product Profile, pilot, consumer integration,
 release, tag, or publication; and performs no Git write.**
+
+### CDS-WP-019 — Core Visual Foundation Architecture
+
+**Status:** Next *(the current authorized work package)*
+
+The first work package of **Phase V — Visual Foundation**. It defines **how** the
+CDS visual foundation is structured, governed, represented, extended, validated, and
+consumed — and it produces **no finished Core brand**.
+
+- Establishes the [Visual Foundation Architecture](../docs/architecture/VISUAL_FOUNDATION_ARCHITECTURE.md)
+  as the Layer-3 visual entry point: the position in the eight-layer model and the
+  five-layer token flow, a register of **nine visual foundation families**
+  (VF-1 … VF-9), **fourteen visual foundation invariants**, the naming model, the
+  machine-readable representation boundary, and the motion boundary.
+- Establishes six specialised architecture documents — **colour**, **typography**,
+  **spatial and layout**, **shape and surface**, **iconography and imagery**, and
+  **theme** — each stating structure, obligations, degradation, profile limits, and
+  future validation requirements.
+- Establishes four governance documents — the **accessibility mapping** (14 Layer-3
+  WCAG criteria; **all five CDS-alone criteria are visual foundation criteria**),
+  the **channel mapping** (nine families × nine channels), the **brand and Product
+  Profile boundary** (the named extension-point set is **empty**), and the
+  **governance and lifecycle** model.
+- **Positions rather than registers** three subjects: opacity is an *attribute* of
+  colour and surface, illustration and imagery are *Layer 2*, and focus indication
+  is a *cross-family role set* — each the conservative reading, registering less
+  scope rather than more.
+- **Registers no new Decision.** Every binding statement is an application of a
+  decision already in force; the derivation is recorded in the architecture
+  document's *Authority basis* section.
+
+**Explicitly outside CDS-WP-019.** No colour, palette, typeface, size, spacing,
+radius, stroke, shadow, opacity, icon, illustration, motion value, breakpoint, or
+theme instance is selected; no token source file, schema, validator rule, component,
+channel adapter, or asset is created; no extension point is named; and the theme
+**mechanism**, the responsive **model**, and the status-to-visual **binding** are
+left explicitly open for CDS-WP-022, CDS-WP-021, and CDS-WP-023.
+
+**CDS-WP-019 creates no visual value, brand, or Product Profile; produces and
+admits no evidence; changes no maturity; accepts or closes no risk; adds no ADR,
+Decision, or risk entry; makes no claim; renames no phase; registers no capability;
+activates no pilot, consumer integration, release, tag, or publication; activates no
+later work package; and performs no Git write.**
 
 ## Roadmap evolution
 

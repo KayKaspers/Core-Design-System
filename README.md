@@ -131,17 +131,24 @@ and the [AE1-004 Admission Record](docs/governance/SEMANTIC_STATUS_AE1_004_ADMIS
 **Candidate is bounded validation only and is never normative** — it is not
 Stable, not a claim, not conformance, and not a release.
 
-**CDS-WP-016 and CDS-WP-017 are closed** — the Human-Maintainer commits
-`1fc53ae5afa40807e1950171ab700b0860ee581e` and
-`df9b8f21ff3bde4607b1c9ff7fdcbe3144366040` integrated their reconciliations. The
-active work package is **CDS-WP-018 — Deferred Governance and Repository Hygiene
-Reconciliation**, a documentary current-state, mirror, and hygiene reconciliation
-with no design, evidence, maturity, claim, or publication effect.
-**CDS-WP-019 … CDS-WP-053 are planned only — not active, not authorized, work not
+**CDS-WP-016, CDS-WP-017 and CDS-WP-018 are closed** — the Human-Maintainer
+commits `1fc53ae5afa40807e1950171ab700b0860ee581e`,
+`df9b8f21ff3bde4607b1c9ff7fdcbe3144366040` and
+`e5d5d492619071655ba956713980d1ee261d9213` integrated their reconciliations. The
+active work package is **CDS-WP-019 — Core Visual Foundation Architecture**:
+**architecture only.** It defines *how* the visual foundation is structured,
+governed, represented, extended, validated, and consumed — nine visual foundation
+families, fourteen invariants, a naming model, and the accessibility, channel,
+brand, and governance boundaries. It selects **no colour, typeface, size, spacing,
+radius, stroke, shadow, opacity, icon, illustration, motion value, breakpoint, or
+theme**, and creates no token source, component, brand, or Product Profile.
+**CDS-WP-020 … CDS-WP-053 are planned only — not active, not authorized, work not
 started** — and are recorded in the
 [Post-Candidate Development Roadmap](docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
 
-The project does not yet produce visual design.
+**The project does not yet produce visual design.** Defining the architecture of
+the visual foundation is not designing it: **no visual value exists in CDS**, and
+all nine visual foundation families are `Proposed`.
 
 The concept and scope are registered. See
 [Concept and Scope](docs/governance/CONCEPT_AND_SCOPE.md) for the normative
@@ -164,7 +171,8 @@ No final decision exists for:
 - concrete product signatures.
 
 These areas remain open until an explicitly authorized work package decides
-them.
+them. **CDS-WP-019 closed none of them:** defining what a colour role must declare
+is not choosing a colour, and defining what a theme may not do is not creating one.
 
 The **versioning and maturity model** and the **conformance and adoption policy**
 were previously listed here and are **no longer open**: both were decided by
@@ -344,6 +352,40 @@ implementation, and evidence.
 - [Consumer Contract and Reconciliation Model](docs/architecture/CONSUMER_CONTRACT_AND_RECONCILIATION_MODEL.md)
 - [Evidence, Traceability and Status Semantics](docs/architecture/EVIDENCE_TRACEABILITY_AND_STATUS_SEMANTICS.md)
 - [Architecture Requirements Traceability](docs/architecture/ARCHITECTURE_REQUIREMENTS_TRACEABILITY.md)
+
+### Visual foundation architecture (CDS-WP-019)
+
+The Layer-3 visual foundation now has an architecture — **and still no values**.
+
+**Nine visual foundation families:** Colour · Typography · Space and Size · Layout
+and Grid · Shape · Surface and Elevation · Iconography · Motion (boundary only) ·
+Theme and Context Mechanism. Each is a separate artifact family; **maturity is never
+inherited**; all nine are `Proposed`.
+
+**It introduces no layer.** Visual constructs occupy positions in the existing
+eight-layer model and five-layer token flow. A theme is a **resolution context**,
+not a layer; a Product Profile enters at token-flow layer 4 only.
+
+**Boundaries that later work inherits:** **colour is never status**; an interaction
+state is never a semantic status; a theme **re-binds and never redefines**; roles
+are mandatory while values vary only at **named extension points** — and **that set
+is empty**; every semantic colour role declares its contrast obligation; and
+**focus visibility has no permitted mechanism of removal**.
+
+**Accessibility:** 14 WCAG 2.2 A/AA criteria map to Layer 3, and **all five
+criteria CDS owns without the consumer** are among them. Every visual artifact is
+**AE-0**; nothing has been evaluated; **no accessibility claim is valid**.
+
+**Honesty:** no registered consumer requirement asks for a palette, a type scale, a
+spacing scale, a radius scale, an elevation model, an icon library, or
+illustration. Four of the nine families carry **no consumer demand evidence at
+all**.
+
+- [Visual Foundation Architecture](docs/architecture/VISUAL_FOUNDATION_ARCHITECTURE.md) — entry point
+- [Colour](docs/architecture/VISUAL_FOUNDATION_COLOR_ARCHITECTURE.md) · [Typography](docs/architecture/VISUAL_FOUNDATION_TYPOGRAPHY_ARCHITECTURE.md) · [Spatial](docs/architecture/VISUAL_FOUNDATION_SPATIAL_ARCHITECTURE.md)
+- [Shape and Surface](docs/architecture/VISUAL_FOUNDATION_SHAPE_AND_SURFACE_ARCHITECTURE.md) · [Iconography and Imagery](docs/architecture/VISUAL_FOUNDATION_ICONOGRAPHY_AND_IMAGERY_ARCHITECTURE.md) · [Theme](docs/architecture/VISUAL_FOUNDATION_THEME_ARCHITECTURE.md)
+- [Accessibility Mapping](docs/governance/VISUAL_FOUNDATION_ACCESSIBILITY_MAPPING.md) · [Channel Mapping](docs/governance/VISUAL_FOUNDATION_CHANNEL_MAPPING.md)
+- [Brand and Product Profile Boundary](docs/governance/VISUAL_FOUNDATION_BRAND_AND_PROFILE_BOUNDARY.md) · [Governance and Lifecycle](docs/governance/VISUAL_FOUNDATION_GOVERNANCE_AND_LIFECYCLE.md)
 
 ## Governance
 
@@ -584,16 +626,21 @@ maturity or approval it does not hold.
   **M1 … M12**, standing gates, and requirement classification model. It created
   **no** design, token, component, evidence, maturity, claim, Product Profile,
   pilot, release, or publication effect.
-- **Current:** **CDS-WP-018 — Deferred Governance and Repository Hygiene
-  Reconciliation** — the authorized roadmap position. A bounded documentary pass:
-  it reconciles stale current-state and mirror text against the normative sources,
-  corrects already-decided areas still listed as open, and repairs repository
-  hygiene. It creates **no** design, token, component, evidence, maturity, claim,
-  Product Profile, pilot, release, or publication effect; it **renames no phase**
-  and **registers no capability**.
-- **Planned:** **CDS-WP-019 … CDS-WP-053** — **not active, not authorized, work not
-  started.** The immediate next planned work package is **CDS-WP-019 — Core Visual
-  Foundation Architecture**, which remains inactive until separately authorized by
+- **Completed:** **CDS-WP-018 — Deferred Governance and Repository Hygiene
+  Reconciliation** — a bounded documentary pass that reconciled stale current-state
+  and mirror text against the normative sources, corrected already-decided areas
+  still listed as open, and repaired repository hygiene. Closed by commit
+  `e5d5d492619071655ba956713980d1ee261d9213`.
+- **Current:** **CDS-WP-019 — Core Visual Foundation Architecture** — the authorized
+  roadmap position. **Architecture only:** nine visual foundation families, fourteen
+  invariants, a naming model, the machine-readable representation boundary, and the
+  accessibility, channel, brand, and governance boundaries. It creates **no** visual
+  value, token source, schema, validator rule, component, brand, or Product Profile;
+  produces and admits **no** evidence; changes **no** maturity; adds **no** ADR,
+  Decision, or risk; **renames no phase**; and **registers no capability**.
+- **Planned:** **CDS-WP-020 … CDS-WP-053** — **not active, not authorized, work not
+  started.** The immediate next planned work package is **CDS-WP-020 — Reference and
+  Semantic Token Foundation**, which remains inactive until separately authorized by
   the Human Maintainer.
 
 The full controlled roadmap is in

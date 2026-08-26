@@ -27,7 +27,7 @@ library, or a design project scoped exclusively to CoreOps.
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**,
-  **CDS-WP-017**
+  **CDS-WP-017**, **CDS-WP-018**
 - Accessibility support baseline: **A11Y-BL-001 declared and committed**
   (CDS-WP-010) — a **test contract, not evidence**; **no test has been run in any
   baseline environment**, and every artifact is AE-0 except the channel-independent
@@ -173,22 +173,40 @@ library, or a design project scoped exclusively to CoreOps.
   pilot, consumer integration, release, tag, or publication. Closure became
   effective with the Human-Maintainer commit
   **`df9b8f21ff3bde4607b1c9ff7fdcbe3144366040`**.
-- **Current work package: CDS-WP-018 — Deferred Governance and Repository Hygiene
-  Reconciliation.** Authorized by the Human Maintainer as the single active work
-  package. A bounded documentary pass only: it reconciles stale current-state and
-  mirror text against the normative sources, classifies the deferred findings
-  routed to it by CDS-WP-017, and performs repository hygiene. It creates **no**
-  design, token, component, or visual value; produces and admits **no** evidence;
-  changes **no** maturity; accepts or closes **no** risk; adds **no** ADR or
-  Decision; **does not rename the phase**; registers **no** capability; makes
-  **no** claim; and activates **no** Product Profile, pilot, consumer integration,
-  release, tag, publication, or later work package.
-- **CDS-WP-019 … CDS-WP-053: PLANNED / NOT ACTIVE / NOT AUTHORIZED.** They are
+- **CDS-WP-018 state: CLOSED.** Deferred Governance and Repository Hygiene
+  Reconciliation — a bounded documentary pass. It reconciled stale current-state
+  and mirror text against the normative sources, classified the deferred findings
+  routed to it by CDS-WP-017, and performed repository hygiene. It created **no**
+  design, token, component, or visual value; produced and admitted **no** evidence;
+  changed **no** maturity; accepted or closed **no** risk; added **no** ADR or
+  Decision; renamed **no** phase; and registered **no** capability. Closure became
+  effective with the Human-Maintainer commit
+  **`e5d5d492619071655ba956713980d1ee261d9213`**.
+- **Current work package: CDS-WP-019 — Core Visual Foundation Architecture.**
+  Authorized by the Human Maintainer as the single active work package, opening
+  **Phase V — Visual Foundation**. **Architecture only:** it defines *how* visual
+  foundations are structured, governed, represented, extended, validated, and
+  consumed — see *Visual foundation architecture* below. It creates **no** visual
+  value, token source file, schema, validator rule, component, brand, or Product
+  Profile; produces and admits **no** evidence; changes **no** maturity; accepts or
+  closes **no** risk; adds **no** ADR, Decision, or risk entry; **does not rename
+  the phase**; registers **no** capability; makes **no** claim; and activates
+  **no** Product Profile, pilot, consumer integration, release, tag, publication,
+  or later work package.
+- **CDS-WP-020 … CDS-WP-053: PLANNED / NOT ACTIVE / NOT AUTHORIZED.** They are
   recorded as a planning sequence so no competing roadmap can arise; **recording
   them activates nothing** and work on them has not started. The immediate next
-  planned work package is **CDS-WP-019 — Core Visual Foundation Architecture**,
-  which stays inactive until separately authorized. Each work package begins only
-  on an explicit Nova prompt and Human-Maintainer authorization, one at a time.
+  planned work package is **CDS-WP-020 — Reference and Semantic Token
+  Foundation**, which stays inactive until separately authorized. Each work package
+  begins only on an explicit Nova prompt and Human-Maintainer authorization, one at
+  a time.
+- **Phase-transition item open before CDS-WP-020.** CDS-WP-019 raised
+  **`PHASE_TRANSITION_RECOMMENDED`** as a forward-looking recommendation: the phase
+  label set by DEC-S-062 stays coherent for CDS-WP-019 but will be materially
+  strained by CDS-WP-020, the first work package that would create real visual
+  values. **CDS-WP-019 renamed nothing and created no Decision.** A relabel
+  requires a new Decision superseding DEC-S-062 and is a Human-Maintainer decision;
+  the item is tied to the still-open **F-017-04**.
 - **Scope-registration gate.** Audio and sonic design, haptics, multimodal
   feedback, and AI/agent interaction design are registered in **none** of the six
   capability domains and in **no** channel model today. Planning CDS-WP-040,
@@ -376,6 +394,12 @@ Before beginning a work package, inspect at minimum:
 - [docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md](docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md)
   — normative source for the logical architecture; entry point to the
   architecture documents
+- [docs/architecture/VISUAL_FOUNDATION_ARCHITECTURE.md](docs/architecture/VISUAL_FOUNDATION_ARCHITECTURE.md)
+  — normative source for the **structure** of the Layer-3 visual foundation
+  (CDS-WP-019); entry point to the colour, typography, spatial, shape and surface,
+  iconography and imagery, and theme architectures and to the accessibility,
+  channel, brand and profile, and governance mappings. **It selects no visual
+  value.**
 - [docs/governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md](docs/governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md)
   — normative source for the accessibility target, target-versus-claim boundary,
   and inclusive design; entry point to the accessibility documents and the
@@ -557,6 +581,73 @@ and the [Serialization/Digest Model](docs/architecture/DETERMINISTIC_SERIALIZATI
 - Compact orientation stays in the
   [Foundation Context Pack](project-system/CONTEXT_PACK_FOUNDATION.md) — a summary, never
   a normative source.
+
+## Visual foundation architecture (CDS-WP-019)
+
+The **structure** of the Layer-3 visual foundation is defined
+([Visual Foundation Architecture](docs/architecture/VISUAL_FOUNDATION_ARCHITECTURE.md)).
+**No visual value exists in CDS** — verified by search, not assumed — and
+CDS-WP-019 created none.
+
+- **Nine visual foundation families:** VF-1 Colour · VF-2 Typography · VF-3 Space
+  and Size · VF-4 Layout and Grid · VF-5 Shape · VF-6 Surface and Elevation ·
+  VF-7 Iconography · VF-8 Motion (**boundary only — CDS-WP-035 owns the Motion
+  System**) · VF-9 Theme and Context Mechanism. Each is a **separate artifact
+  family**; **maturity is never inherited**; **all nine are `Proposed`**.
+- **No new layer.** Visual constructs occupy positions in the existing eight-layer
+  model (DEC-S-021) and the existing five-layer token flow (DEC-S-024). A **theme
+  is a resolution context, not a layer**; a Product Profile enters at token-flow
+  layer 4 only; the **Component layer is never dropped** from the flow.
+- **No new Decision.** Every binding statement applies a decision already in force;
+  the derivation is recorded in the architecture document's *Authority basis*
+  section. **Claude adds no Decision, ADR, or risk on visual-foundation grounds
+  without explicit separate authorization.**
+- **Positioned, not registered** — the conservative reading in each case:
+  **opacity** is an attribute of VF-1 and VF-6, **illustration and imagery** are
+  **Layer 2** (Brand and Identity), and **focus indication** is a **cross-family
+  role set**.
+- **COLOUR ≠ STATUS · ICON ≠ STATUS · MOTION ≠ STATUS · ELEVATION ≠ STATUS.**
+  Status meaning stays with the Semantic Status Foundation; visual encoding is
+  **redundant** to it, never a substitute. The binding itself is **CDS-WP-023's**,
+  gated by CDS-WP-024 and CDS-WP-025. **An interaction state is not a semantic
+  status.**
+- **A theme re-binds; it never redefines.** It may change which primitive a role
+  resolves to — never the role's meaning, its existence, or an accessibility
+  guarantee. **Theme ≠ Brand ≠ Product Profile**, and **print is a channel, not a
+  theme**.
+- **Roles are mandatory; values vary only at named extension points — and that set
+  is empty.** No visual override is currently possible, and **no Product Profile
+  can be approved** (element 4, element 7, and element 10 all unsatisfiable;
+  Consumer Maintainer unstaffed, FM-F-006).
+- **Every semantic colour role declares its contrast obligation and its pairings.**
+  An unstated obligation cannot be validated, themed, or profiled safely.
+- **Focus visibility has no permitted mechanism of removal** — not by a theme, a
+  profile, an exception (DEC-S-059), or a consumer override.
+- **Accessibility:** 14 WCAG 2.2 A/AA criteria map to Layer 3, and **all five
+  criteria CDS owns without the consumer** (1.3.3, 1.4.1, 1.4.5, 2.3.1, 2.4.7) are
+  among them. Every visual artifact is **AE-0**; nothing has been evaluated; **no
+  accessibility claim of any level is valid**. `AE1-CDS-WP016-SEMSTATUS-004` does
+  **not** transfer here.
+- **Honesty:** **no** registered consumer requirement asks for a palette, a type
+  scale, a spacing scale, a radius scale, an elevation model, an icon library, or
+  illustration. The Layer-3 anchors are CR-002, CR-006, CR-021, CR-022, CR-023,
+  CR-025; **VF-3, VF-5, VF-6, and VF-7 carry no consumer demand evidence at all.**
+- **Deliberately open:** every visual value · the admitted DTCG `$type` set and the
+  concrete vocabulary (CDS-WP-020) · the responsive model and the Layer 3 / Layer 5
+  split (CDS-WP-021) · the **theme mechanism** (CDS-WP-022) · the status-to-visual
+  binding (CDS-WP-023) · the named extension-point set (CDS-WP-032) · motion values
+  (CDS-WP-035) · the icon system (CDS-WP-037) · data-visualization encoding
+  (CDS-WP-039).
+- **No visual value without an explicit prompt.** Claude creates no colour,
+  typeface, size, spacing, radius, stroke, shadow, opacity value, icon,
+  illustration, motion value, breakpoint, or theme instance — and no token source
+  file, schema, validator rule, component, brand, or Product Profile — in any
+  visual family, without a separately authorized work package.
+- **No font or asset is bundled, downloaded, vendored, referenced, or
+  distributed.** A typeface or icon set may become normative only after licence
+  identity, provenance, offline and air-gap viability, fallback, script coverage,
+  and distribution have been recorded and separately approved — an **Elevated**
+  change.
 
 ## Claim and release boundaries
 
