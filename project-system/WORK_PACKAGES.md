@@ -2,12 +2,15 @@
 
 Controlled work-package roadmap for the Core Design System (CDS).
 
-- **Phase:** Pre-Candidate Operating Enablement — **Foundation / Pre-Design:
-  Closed with Notes**
+- **Phase:** Post-Candidate Foundation & Design-System Enablement — **Foundation /
+  Pre-Design: Closed with Notes**. Set by **DEC-S-127** (2026-08-26), effective at
+  its Human-Maintainer integration commit; it supersedes `Pre-Candidate Operating
+  Enablement` (**DEC-S-062**) **for current and future state only**. **A phase is an
+  operating period, not a maturity state**, and it authorizes no work package.
 - **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**,
-  **CDS-WP-017**, **CDS-WP-018**
+  **CDS-WP-017**, **CDS-WP-018**, **CDS-WP-019**
 - **CDS-WP-016 is `Completed`.** Its Candidate authority sequence completed
   (`AE1-CDS-WP016-SEMSTATUS-004` admitted at AE-1, Human-Maintainer Candidate
   approval granted, exact-byte **Promotion Commit
@@ -21,15 +24,21 @@ Controlled work-package roadmap for the Core Design System (CDS).
   reconciliation was integrated by the Human-Maintainer commit
   **`e5d5d492619071655ba956713980d1ee261d9213`**, and closure became effective
   there.
-- **Current work package:** **CDS-WP-019 — Core Visual Foundation Architecture.**
-  Authorized by the Human Maintainer as the single active work package. It defines
+- **CDS-WP-019 is `Completed`.** Core Visual Foundation Architecture. It defines
   the **architecture** of the CDS visual foundation — structure, layer position,
   naming, machine-readable boundary, accessibility, channels, brand and profile
-  boundary, governance. It creates **no** visual value, **no** token source file,
-  **no** component, **no** brand, and **no** Product Profile; produces and admits
-  **no** evidence; changes **no** maturity; adds **no** ADR, Decision, or risk;
-  **renames no phase**; registers **no** capability; makes **no** claim; and
-  activates **no** later work package.
+  boundary, governance. It created **no** visual value, **no** token source file,
+  **no** component, **no** brand, and **no** Product Profile; produced and admitted
+  **no** evidence; changed **no** maturity; added **no** ADR, Decision, or risk;
+  **renamed no phase**; registered **no** capability; made **no** claim; and
+  activated **no** later work package. Its architecture was integrated by the
+  Human-Maintainer commit **`538fbccbf6f554de3b872e9fb75a70d13318feb6`**, and
+  closure became effective there.
+- **Current work package:** **none.** The **CDS Phase Transition Governance
+  Package** (**DEC-S-127**) runs between CDS-WP-019 closure and any CDS-WP-020
+  authorization. It is **not** a numbered work package, occupies no identifier in
+  the CDS-WP-020 … CDS-WP-053 sequence, changes **only** project-phase authority,
+  and activates nothing.
 - **Next planned work package:** **CDS-WP-020 — Reference and Semantic Token
   Foundation.** **`Planned`, not active, and not authorized**; it starts only on
   separate Human-Maintainer authorization.
@@ -72,7 +81,7 @@ review, and authority state are recorded per work package below.
 | CDS-WP-016 | Semantic Status Foundation Independent Evidence Review and Candidate Gate | Completed | CDS-WP-015 |
 | CDS-WP-017 | Post-WP-016 Roadmap, Authority and Scope Reconciliation | Completed | CDS-WP-016 |
 | CDS-WP-018 | Deferred Governance and Repository Hygiene Reconciliation | Completed | CDS-WP-017 |
-| **CDS-WP-019** | **Core Visual Foundation Architecture** | **Next** | CDS-WP-018 |
+| CDS-WP-019 | Core Visual Foundation Architecture | Completed | CDS-WP-018 |
 | CDS-WP-020 | Reference and Semantic Token Foundation | Planned | CDS-WP-019 |
 | CDS-WP-021 | Adaptive Layout and Responsive Foundation | Planned | CDS-WP-020 |
 | CDS-WP-022 | Theme and Environmental Presentation Model | Planned | CDS-WP-021 |
@@ -116,9 +125,11 @@ them has **not started**, and each is executable only on an explicit Nova prompt
 **and** Human-Maintainer authorization, one work package at a time. Listing
 CDS-WP-020 immediately after CDS-WP-019 activates nothing.
 
-**CDS-WP-019 proves the rule rather than breaking it:** it left `Planned` only when
+**CDS-WP-019 proved the rule rather than breaking it:** it left `Planned` only when
 the Human Maintainer authorized it separately — **not** because the roadmap listed
-it next.
+it next. **The phase transition does not change this.** DEC-S-127 relabels the
+project phase and grants no authority: CDS-WP-020 stays `Planned`, not active, and
+not authorized until the Human Maintainer authorizes it separately.
 
 The `Depends on` column records **sequence intent**, not permission. Four entries
 additionally require a **prior extension of the registered CDS scope** through an

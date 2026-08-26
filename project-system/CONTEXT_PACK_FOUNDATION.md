@@ -19,8 +19,16 @@
 
 ## Current phase
 
-Pre-Candidate Operating Enablement — **Foundation / Pre-Design: Closed with
-Notes** (CDS-WP-009; DEC-S-061, DEC-S-062).
+Post-Candidate Foundation & Design-System Enablement — **Foundation / Pre-Design:
+Closed with Notes** (**DEC-S-127**, 2026-08-26; closure per CDS-WP-009, DEC-S-061).
+
+DEC-S-127 supersedes `Pre-Candidate Operating Enablement` (**DEC-S-062**) **for
+current and future state only**, effective at its Human-Maintainer integration
+commit; DEC-S-062 stays `Accepted` and correct for the period it governed, and
+dated records naming the old label are **historical, not stale**. **A phase is an
+operating period, not a maturity state:** the transition grants no maturity, admits
+no evidence, creates no visual value, registers no capability, and activates no
+work package.
 
 Governance, scope, architecture, requirements, and accessibility policy are
 established; the Foundation is closed with mandatory notes; the committed governance
@@ -69,8 +77,12 @@ Concrete visual design values remain unauthorized (DEC-S-003). **CDS-WP-016 is
 by `df9b8f21ff3bde4607b1c9ff7fdcbe3144366040`; and **CDS-WP-018 is `Completed`**,
 closed by `e5d5d492619071655ba956713980d1ee261d9213`.
 
-The authorized work package is **CDS-WP-019 — Core Visual Foundation
-Architecture**: **architecture only.** It defines how the visual foundation is
+**CDS-WP-019 is `Completed`**, closed by
+`538fbccbf6f554de3b872e9fb75a70d13318feb6`. **No numbered work package is currently
+active**; the **CDS Phase Transition Governance Package** (**DEC-S-127**) changes
+project-phase authority only and activates nothing.
+
+CDS-WP-019 was **architecture only.** It defines how the visual foundation is
 structured, governed, represented, extended, validated, and consumed — nine visual
 foundation families (VF-1 … VF-9), fourteen invariants, a naming model, the
 machine-readable representation boundary, and the accessibility, channel, brand,
@@ -109,7 +121,7 @@ single active forward roadmap is the
 | CDS-WP-016 | Semantic Status Foundation Independent Evidence Review and Candidate Gate | Independently reviewed the WP-013/WP-015 evidence (reviewer ≠ executor) and ran the Candidate gate to completion. **Independent Review PASS**, Candidate Recommendation **GO**; Nova Candidate Maturity Review **NO-GO** (accessibility gate unmet) → Human-Maintainer-authorized **Candidate Accessibility Gate Remediation** (DEC-S-125; Candidate-scope WCAG and responsibility mappings; 25/25 evidence requirements matrix; `CDS-V4-STATUS-DESCRIPTION`; 6/6 review-required and 8/8 fail-closed coverage; AE-2 plan; support-baseline plan; 15-trigger regression plan; 16 limitations, 0 Critical) → **Candidate Finalization Governance Rework** (DEC-S-126, RISK-098, Candidate Approval Record Template, evidence-runner result format v2) → `AE1-CDS-WP016-SEMSTATUS-004` **admitted at AE-1** → Nova review **GO WITH NOTES** → Human-Maintainer Candidate approval → exact-byte **Promotion Commit `22fa0710…`** (15/15 blob identity, 47/47 · 64/64 · 184/184 · 24/24/0/0). Closed by commit `1fc53ae5…`. **Candidate for one channel-independent Layer-3 source/contract family only; no Stable, no claim, no conformance, no visual value, no component; every other artifact AE-0.** |
 | CDS-WP-017 | Post-WP-016 Roadmap, Authority and Scope Reconciliation | Governance, roadmap, context, and project-state reconciliation only. Recorded CDS-WP-016 as closed; registered **CDS-WP-018 … CDS-WP-053** as `Planned`, not active, not authorized; produced the single active [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md) (12 arcs, M1…M12, layer mapping, standing gates, requirement classification, PB001 disposition, deferred-finding routing). Closed by commit `df9b8f21…`. **No design, evidence, maturity, risk, ADR, Decision, claim, profile, pilot, release, or publication effect.** |
 | CDS-WP-018 | Deferred Governance and Repository Hygiene Reconciliation | Bounded documentary pass. Reconciled stale `pending commit` and mirror text (`NF-R4-OBS-001`, `NF-R3-OBS-001`, `NF-R5R-OBS-001`, `R3R-003`); corrected the already-decided *intentionally open decision areas* lists (`F-017-01`, `F-017-02`); repaired `.gitattributes` / `.gitignore` hygiene (`NF-R4-OBS-002`, `NF-R5R-OBS-003`); added additive dated notes to two Candidate-era records (`R1-F-01`). Closed by commit `e5d5d492…`. **No design, evidence, maturity, risk, ADR, Decision, claim, capability registration, phase rename, or publication effect.** |
-| CDS-WP-019 | Core Visual Foundation Architecture | **Active.** Architecture only: the Layer-3 [Visual Foundation Architecture](../docs/architecture/VISUAL_FOUNDATION_ARCHITECTURE.md) entry point (**9 families VF-1…VF-9**, **14 invariants**, naming model, machine-readable boundary, motion boundary, A–D layer reconciliation), 6 specialised architectures (colour, typography, spatial, shape and surface, iconography and imagery, theme), and 4 governance documents (accessibility mapping — 14 Layer-3 WCAG criteria and **all 5 CDS-alone criteria**; channel mapping — 9 families x 9 channels; brand and Product Profile boundary — extension-point set **empty**; governance and lifecycle). **Selects no visual value; creates no token source, schema, validator rule, component, brand, or profile; registers no new Decision, ADR, or risk; grants no maturity — all 9 families `Proposed`; renames no phase; activates no later work package.** |
+| CDS-WP-019 | Core Visual Foundation Architecture | **Completed**, closed by `538fbccbf6f554de3b872e9fb75a70d13318feb6`. Architecture only: the Layer-3 [Visual Foundation Architecture](../docs/architecture/VISUAL_FOUNDATION_ARCHITECTURE.md) entry point (**9 families VF-1…VF-9**, **14 invariants**, naming model, machine-readable boundary, motion boundary, A–D layer reconciliation), 6 specialised architectures (colour, typography, spatial, shape and surface, iconography and imagery, theme), and 4 governance documents (accessibility mapping — 14 Layer-3 WCAG criteria and **all 5 CDS-alone criteria**; channel mapping — 9 families x 9 channels; brand and Product Profile boundary — extension-point set **empty**; governance and lifecycle). **Selects no visual value; creates no token source, schema, validator rule, component, brand, or profile; registers no new Decision, ADR, or risk; grants no maturity — all 9 families `Proposed`; renames no phase; activates no later work package.** |
 
 ## Normative source map
 
@@ -202,7 +214,7 @@ and reference the normative policies; they do not replace them (DEC-S-063):
 
 ## Active decisions
 
-- Range: DEC-S-001 … DEC-S-126 · Count: 126 · All Accepted · ADRs: 3 (ADR-0001,
+- Range: DEC-S-001 … DEC-S-127 · Count: 127 · All Accepted · ADRs: 3 (ADR-0001,
   ADR-0002, ADR-0003)
 - DEC-S-001…006: strategic foundation decisions (CDS-WP-001)
 - DEC-S-007…012: strategic scope decisions (CDS-WP-002)
@@ -230,6 +242,8 @@ and reference the normative policies; they do not replace them (DEC-S-063):
   DEC-S-001…124 unchanged
 - DEC-S-126: candidate finalization / maturity / evidence transition decision
   (CDS-WP-016 Candidate Finalization Governance Rework) — DEC-S-001…125 unchanged
+- DEC-S-127: phase transition decision (CDS Phase Transition Governance Package) —
+  DEC-S-001…126 unchanged
 - ADR-0001 (Machine-Readable Token Source Format), ADR-0002 (Deterministic JSON
   Serialization), and ADR-0003 (Offline Token Validator Implementation Stack)
   exist — 3 ADRs.
@@ -297,7 +311,7 @@ and reference the normative policies; they do not replace them (DEC-S-063):
 | DEC-S-059 | Accessibility cannot be waived by an ordinary exception. |
 | DEC-S-060 | CR-024 resolved at policy level for the CoreOps pilot web scope. |
 | DEC-S-061 | Foundation milestone closed with mandatory notes; closure grants no Candidate/Stable/adoption/conformance/release/publication. |
-| DEC-S-062 | First post-Foundation phase is Pre-Candidate Operating Enablement; it precedes the first design Candidate. |
+| DEC-S-062 | First post-Foundation phase is Pre-Candidate Operating Enablement; it precedes the first design Candidate. **Superseded for current-state phase designation by DEC-S-127; still Accepted and historically valid.** |
 | DEC-S-063 | Operating playbooks and dossiers are non-normative; they may reduce ceremony but never obligation. |
 | DEC-S-064 | Critical risks affecting Elevated work need an executor role, review trigger, expected evidence, and blocking effect first. |
 | DEC-S-065 | The Accessibility Support Baseline defines what future evidence targets; it is not evidence, support, or a claim. |
@@ -362,6 +376,7 @@ and reference the normative policies; they do not replace them (DEC-S-063):
 | DEC-S-124 | No downstream artifact may present the Experimental status source as an approved Candidate before the gate succeeds. |
 | DEC-S-125 | Channel accessibility profiles gate channel artifacts, not channel-independent Layer-3 semantic sources; evidence transfers in neither direction; no waiver, no Candidate award. |
 | DEC-S-126 | A Proposed Candidate Revision is non-authoritative; target metadata grants nothing; evidence never transfers across a source revision; pre-commit evidence binds exact bytes; AE-1 admission precedes Candidate approval; the Promotion Commit is the maturity transition point. |
+| DEC-S-127 | For current and future state the project phase is `Post-Candidate Foundation & Design-System Enablement`; DEC-S-062 stays Accepted and historically valid. Phase is not maturity: the transition grants no maturity, evidence, capability, profile, pilot, release, or publication authority, and activates no work package. |
 
 ## Active risks
 
@@ -892,11 +907,12 @@ Candidate Finalization Review returned GO WITH NOTES**, the Human Maintainer
 integrated by the Human-Maintainer commit
 `1fc53ae5afa40807e1950171ab700b0860ee581e` — **CDS-WP-017 is closed**, by the
 Human-Maintainer commit `df9b8f21ff3bde4607b1c9ff7fdcbe3144366040`, and
-**CDS-WP-018 is closed**, by `e5d5d492619071655ba956713980d1ee261d9213`. The active
-work package is **CDS-WP-019 — Core Visual Foundation Architecture** (architecture
-only; **no visual value**);
-**CDS-WP-020 … CDS-WP-053 are `Planned`, not active, and not authorized**, and
-work on them has not started. See the
+**CDS-WP-018 is closed**, by `e5d5d492619071655ba956713980d1ee261d9213`, and
+**CDS-WP-019 — Core Visual Foundation Architecture** (architecture only; **no
+visual value**) **is closed**, by
+`538fbccbf6f554de3b872e9fb75a70d13318feb6`. **No numbered work package is currently
+active**, and **CDS-WP-020 … CDS-WP-053 are `Planned`, not active, and not
+authorized**, with work on them not started. See the
 [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md),
 the
 [Foundation Closure Record](../docs/governance/FOUNDATION_CLOSURE_RECORD.md) and the

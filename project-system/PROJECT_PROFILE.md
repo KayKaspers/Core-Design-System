@@ -19,12 +19,26 @@ library (see DEC-S-001).
 
 ## Current lifecycle status
 
-Pre-Candidate Operating Enablement — **Foundation / Pre-Design: Closed with Notes**
+Post-Candidate Foundation & Design-System Enablement — **Foundation / Pre-Design:
+Closed with Notes**
+
+Set by **DEC-S-127** (2026-08-26), effective at its Human-Maintainer integration
+commit. It supersedes `Pre-Candidate Operating Enablement` (**DEC-S-062**) **for
+current and future state only**; DEC-S-062 stays `Accepted` and correct for the
+period it governed. **A phase is an operating period, not a maturity state** — the
+transition grants no maturity, evidence, capability, Product Profile, pilot,
+release, or publication authority, and activates no work package.
 
 ## Work package status
 
-- **Current work package: CDS-WP-019 — Core Visual Foundation Architecture**
-  (roadmap status `Next` — the current authorized work package). **Architecture
+- **No numbered work package is currently active.** The **CDS Phase Transition
+  Governance Package** (**DEC-S-127**) runs between CDS-WP-019 closure and any
+  CDS-WP-020 authorization. It is **not** a numbered work package, occupies no
+  identifier in the CDS-WP-020 … CDS-WP-053 sequence, changes **only**
+  project-phase authority, and activates nothing.
+- **Most recent work package: CDS-WP-019 — Core Visual Foundation Architecture**
+  (**Completed**; closure became effective with the Human-Maintainer commit
+  `538fbccbf6f554de3b872e9fb75a70d13318feb6`). **Architecture
   only.** It defines how the CDS visual foundation is structured, governed,
   represented, extended, validated, and consumed: a Layer-3 entry-point
   architecture, a register of **nine visual foundation families** (VF-1 … VF-9),
@@ -32,11 +46,11 @@ Pre-Candidate Operating Enablement — **Foundation / Pre-Design: Closed with No
   boundary, a motion boundary, plus specialised colour, typography, spatial, shape
   and surface, iconography and imagery, and theme architectures, and four
   governance documents (accessibility mapping, channel mapping, brand and Product
-  Profile boundary, governance and lifecycle). It creates **no** visual value,
+  Profile boundary, governance and lifecycle). It created **no** visual value,
   token source file, schema, validator rule, component, brand, or Product Profile;
-  produces and admits **no** evidence; changes **no** maturity; adds **no** ADR,
-  Decision, or risk entry; **renames no phase**; **registers no capability**; and
-  **activates no later work package**.
+  produced and admitted **no** evidence; changed **no** maturity; added **no** ADR,
+  Decision, or risk entry; **renamed no phase**; **registered no capability**; and
+  **activated no later work package**.
 - **Preceding work package: CDS-WP-018 — Deferred Governance and Repository Hygiene
   Reconciliation.** **Completed**; closure became effective with the
   Human-Maintainer commit `e5d5d492619071655ba956713980d1ee261d9213`. Documentary
@@ -604,7 +618,7 @@ pilot contract is defined in CDS-WP-004.
 
 ## Register scope
 
-- Decisions: DEC-S-001 … DEC-S-126 (126) — 6 strategic foundation decisions
+- Decisions: DEC-S-001 … DEC-S-127 (127) — 6 strategic foundation decisions
   (CDS-WP-001), 6 strategic scope decisions (CDS-WP-002), 8 consumer and pilot
   scope decisions (CDS-WP-004), 12 logical architecture decisions (CDS-WP-005),
   16 governance, lifecycle and publication decisions (CDS-WP-006), 12
@@ -619,8 +633,10 @@ pilot contract is defined in CDS-WP-004.
   DEC-S-115 … DEC-S-124), **1 accessibility / maturity / channel boundary
   decision (CDS-WP-016, DEC-S-125)**, and **1 candidate finalization / maturity /
   evidence transition decision (CDS-WP-016 Candidate Finalization Governance
-  Rework, DEC-S-126)**. DEC-S-001 … DEC-S-114 unchanged by
-  CDS-WP-015; DEC-S-001 … DEC-S-125 unchanged by the rework.
+  Rework, DEC-S-126)**, and **1 phase transition decision (CDS Phase Transition
+  Governance Package, DEC-S-127)**. DEC-S-001 … DEC-S-114 unchanged by
+  CDS-WP-015; DEC-S-001 … DEC-S-125 unchanged by the rework; **DEC-S-001 …
+  DEC-S-126 unchanged by the phase transition**.
   **ADRs: 3 (ADR-0001, ADR-0002, ADR-0003).**
 - Risks: RISK-001 … RISK-098 (98) — **89 `Monitored`; RISK-031, RISK-040, RISK-044,
   RISK-066, RISK-067, RISK-068, RISK-069, RISK-071, and RISK-098 `Mitigating`**;

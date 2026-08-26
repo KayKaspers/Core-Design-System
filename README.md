@@ -14,13 +14,20 @@ Source of Truth. It is deliberately **not**:
 
 ## Project status
 
-**Pre-Candidate Operating Enablement — Foundation / Pre-Design: Closed with Notes**
+**Post-Candidate Foundation & Design-System Enablement — Foundation / Pre-Design:
+Closed with Notes**
 
-**First Candidate transition completed (2026-08-19).** The phase designation above
-is unchanged — it names the operating phase established by DEC-S-062, not a
-maturity state — and within it exactly one artifact family has passed the Candidate
-gate. Details in [Candidate promotion — 2026-08-19](#candidate-promotion--2026-08-19)
-below.
+**First Candidate transition completed (2026-08-19).** Exactly one artifact family
+has passed the Candidate gate. Details in
+[Candidate promotion — 2026-08-19](#candidate-promotion--2026-08-19) below.
+
+**The phase label changed on 2026-08-26 (DEC-S-127), and nothing else did.** The
+phase established by DEC-S-062, `Pre-Candidate Operating Enablement`, completed its
+operating purpose; **DEC-S-127 supersedes it for current and future state only**,
+and DEC-S-062 stays `Accepted` and correct for the period it governed. **A phase is
+an operating period, not a maturity state:** the transition awards no maturity,
+admits no evidence, creates no visual value, activates no work package, and grants
+no release, publication, Product Profile, or pilot authority.
 
 The Foundation is **closed with mandatory notes** (CDS-WP-009): governance, scope,
 architecture, requirements, and the accessibility policy are established, and the
@@ -131,17 +138,20 @@ and the [AE1-004 Admission Record](docs/governance/SEMANTIC_STATUS_AE1_004_ADMIS
 **Candidate is bounded validation only and is never normative** — it is not
 Stable, not a claim, not conformance, and not a release.
 
-**CDS-WP-016, CDS-WP-017 and CDS-WP-018 are closed** — the Human-Maintainer
-commits `1fc53ae5afa40807e1950171ab700b0860ee581e`,
-`df9b8f21ff3bde4607b1c9ff7fdcbe3144366040` and
-`e5d5d492619071655ba956713980d1ee261d9213` integrated their reconciliations. The
-active work package is **CDS-WP-019 — Core Visual Foundation Architecture**:
-**architecture only.** It defines *how* the visual foundation is structured,
-governed, represented, extended, validated, and consumed — nine visual foundation
-families, fourteen invariants, a naming model, and the accessibility, channel,
-brand, and governance boundaries. It selects **no colour, typeface, size, spacing,
-radius, stroke, shadow, opacity, icon, illustration, motion value, breakpoint, or
-theme**, and creates no token source, component, brand, or Product Profile.
+**CDS-WP-016 … CDS-WP-019 are closed** — the Human-Maintainer commits
+`1fc53ae5afa40807e1950171ab700b0860ee581e`,
+`df9b8f21ff3bde4607b1c9ff7fdcbe3144366040`,
+`e5d5d492619071655ba956713980d1ee261d9213` and
+`538fbccbf6f554de3b872e9fb75a70d13318feb6` integrated their work. The most recent,
+**CDS-WP-019 — Core Visual Foundation Architecture**, was **architecture only.** It
+defines *how* the visual foundation is structured, governed, represented, extended,
+validated, and consumed — nine visual foundation families, fourteen invariants, a
+naming model, and the accessibility, channel, brand, and governance boundaries. It
+selects **no colour, typeface, size, spacing, radius, stroke, shadow, opacity, icon,
+illustration, motion value, breakpoint, or theme**, and creates no token source,
+component, brand, or Product Profile. **No numbered work package is currently
+active**; the **CDS Phase Transition Governance Package** (DEC-S-127) changes
+project-phase authority only.
 **CDS-WP-020 … CDS-WP-053 are planned only — not active, not authorized, work not
 started** — and are recorded in the
 [Post-Candidate Development Roadmap](docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
@@ -631,13 +641,19 @@ maturity or approval it does not hold.
   and mirror text against the normative sources, corrected already-decided areas
   still listed as open, and repaired repository hygiene. Closed by commit
   `e5d5d492619071655ba956713980d1ee261d9213`.
-- **Current:** **CDS-WP-019 — Core Visual Foundation Architecture** — the authorized
-  roadmap position. **Architecture only:** nine visual foundation families, fourteen
-  invariants, a naming model, the machine-readable representation boundary, and the
-  accessibility, channel, brand, and governance boundaries. It creates **no** visual
-  value, token source, schema, validator rule, component, brand, or Product Profile;
-  produces and admits **no** evidence; changes **no** maturity; adds **no** ADR,
-  Decision, or risk; **renames no phase**; and **registers no capability**.
+- **Completed:** **CDS-WP-019 — Core Visual Foundation Architecture.**
+  **Architecture only:** nine visual foundation families, fourteen invariants, a
+  naming model, the machine-readable representation boundary, and the accessibility,
+  channel, brand, and governance boundaries. It created **no** visual value, token
+  source, schema, validator rule, component, brand, or Product Profile; produced and
+  admitted **no** evidence; changed **no** maturity; added **no** ADR, Decision, or
+  risk; **renamed no phase**; and **registered no capability**. Closed by commit
+  `538fbccbf6f554de3b872e9fb75a70d13318feb6`.
+- **Current:** **no numbered work package is active.** The **CDS Phase Transition
+  Governance Package** (**DEC-S-127**) sits between CDS-WP-019 closure and any
+  CDS-WP-020 authorization. It changes **project-phase authority only** — no
+  maturity, no evidence, no visual value, no capability, and no activation — and it
+  is **not** a numbered work package.
 - **Planned:** **CDS-WP-020 … CDS-WP-053** — **not active, not authorized, work not
   started.** The immediate next planned work package is **CDS-WP-020 — Reference and
   Semantic Token Foundation**, which remains inactive until separately authorized by
@@ -683,7 +699,7 @@ phase.
 
 ## Registers
 
-- Decisions: DEC-S-001 … DEC-S-126 (126) — 6 strategic foundation decisions,
+- Decisions: DEC-S-001 … DEC-S-127 (127) — 6 strategic foundation decisions,
   6 strategic scope decisions, 8 consumer and pilot scope decisions,
   12 logical architecture decisions, 16 governance, lifecycle and publication
   decisions, 12 accessibility and inclusive design decisions, 4 operating
@@ -693,7 +709,7 @@ phase.
   implementation decisions, 10 semantic status foundation decisions, 10 semantic
   status source and evidence decisions, 1 accessibility / maturity / channel
   boundary decision, 1 candidate finalization / maturity / evidence transition
-  decision · ADRs: 3 (ADR-0001, ADR-0002, ADR-0003)
+  decision, 1 phase transition decision · ADRs: 3 (ADR-0001, ADR-0002, ADR-0003)
 - Risks: RISK-001 … RISK-098 (98) — 89 Monitored; 9 Mitigating (RISK-031, RISK-040,
   RISK-044, RISK-066, RISK-067, RISK-068, RISK-069, RISK-071, RISK-098); owner
   model finalized; no risk accepted or closed

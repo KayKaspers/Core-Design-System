@@ -11,8 +11,8 @@ authorized work packages.
 
 ## Register scope
 
-- Decision range: DEC-S-001 … DEC-S-126
-- Number of decisions: 126
+- Decision range: DEC-S-001 … DEC-S-127
+- Number of decisions: 127
 - Decision record format: index entries, plus ADR files where a decision warrants an
   Architecture Decision Record. **ADR range: ADR-0001 … ADR-0003 (3 ADRs).**
 - [ADR-0001 — Machine-Readable Token Source Format](ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)
@@ -41,6 +41,7 @@ authorized work packages.
 | Semantic status source and evidence decision | DEC-S-115 … DEC-S-124 | CDS-WP-015 | The `semantic/status` Experimental source set (5 axes, 25 non-visual tokens, `status.<axis>.<value>` with 1:1 vocabulary traceability), fail-closed status validation, separate meaning-preserving DE/EN terminology, immutable WP-013 baseline cases, executor-produced evidence class, the Draft-only dossier rule, identity/digest alignment, and the no-premature-consumption boundary. |
 | Accessibility / maturity / channel boundary decision | DEC-S-125 | CDS-WP-016 | Channel Accessibility Profiles gate channel artifacts, not channel-independent Layer-3 semantic sources and contracts; evidence transfers in neither direction; no waiver of any accessibility requirement and no Candidate award. |
 | Candidate finalization / maturity / evidence transition decision | DEC-S-126 | CDS-WP-016 | A named non-authoritative Proposed Candidate Revision, target metadata that grants nothing, revision-bound evidence that never transfers, exact-byte pre-commit evidence binding, the fixed admission-before-approval authority order, and the Promotion Commit as the actual maturity transition point. |
+| Phase transition decision | DEC-S-127 | — (CDS Phase Transition Governance Package) | The phase established by DEC-S-062 completed its operating purpose; for current and future state the project phase is `Post-Candidate Foundation & Design-System Enablement`. Prospective, partial supersession of the phase designation only — no maturity, no evidence, no activation, and no authority is granted. |
 
 None of these types is an implementation decision. Logical architecture decisions
 define structure, responsibility, and flow — they select no technology, format,
@@ -4223,3 +4224,239 @@ recency wins, does not say that machine-readable sources override human-readable
 meaning, and does not alter DEC-S-022, DEC-S-023, or DEC-S-034. A conflict is
 still never resolved by recency or by convenience. See the
 [Candidate Promotion Effectivity Record](../governance/SEMANTIC_STATUS_CANDIDATE_PROMOTION_EFFECTIVITY_RECORD.md).
+
+---
+
+## DEC-S-127 — The current project phase is Post-Candidate Foundation & Design-System Enablement
+
+- **Status:** Accepted — **effective at the Human-Maintainer integration commit**
+  of the phase-transition package (see *Effectivity* below). Until that commit this
+  entry is uncommitted executor output and changes **no** authoritative phase state.
+- **Date:** 2026-08-26
+- **Type:** Phase transition decision
+- **Work package:** None. Registered by the **CDS Phase Transition Governance
+  Package**, a bounded governance package executed after CDS-WP-019 closure and
+  before any CDS-WP-020 authorization. **It is not a numbered work package** and
+  does not occupy an identifier in the CDS-WP-020 … CDS-WP-053 planning sequence.
+- **Human-Maintainer authorization:** 2026-08-26 (CDS Phase Transition Governance
+  Package), following the Nova adjudication that a superseding Decision is required
+  before CDS-WP-020 may be authorized.
+
+### Decision
+
+1. **The phase established by DEC-S-062 has completed its intended operating
+   purpose.** Governance operationalization, role readiness, critical-risk
+   actionability, and accessibility-support planning — the four prerequisites
+   DEC-S-062 placed before the first design Candidate — are established and
+   committed, and the first Candidate transition completed on 2026-08-19.
+
+2. **For current and future project state the authoritative project phase is
+   `Post-Candidate Foundation & Design-System Enablement`.** This label replaces
+   `Pre-Candidate Operating Enablement` in every carrier that states the
+   **maintained current phase**.
+
+3. **DEC-S-062 is not deleted, withdrawn, or retroactively invalidated.** Its
+   text, status, date, rationale, and consequences are **unchanged**, and it
+   remains the correct phase authority for the period it governed
+   (2026-07-16 … the effectivity of this decision). DEC-S-127 supersedes it
+   **only** for **current and future** phase designation. This is a
+   **prospective, partial supersession of the phase-designation effect**, not a
+   replacement of the decision record.
+
+4. **Historical carriers remain correct for their date and are not rewritten.**
+   Dated records — the [Foundation Closure Record](../governance/FOUNDATION_CLOSURE_RECORD.md),
+   the historical CDS-WP-009 [Pre-Candidate Operating Plan](../roadmap/PRE_CANDIDATE_OPERATING_PLAN.md),
+   prior review reports, prior work-package notes, prior closure and evidence
+   records, and historical changelog entries — continue to name
+   `Pre-Candidate Operating Enablement` and are **correct as written**.
+   **Historical state is not current state**, and a stale-looking phase label
+   inside a dated record is not drift.
+
+5. **Phase is not maturity.** A phase names an **operating period**, not an
+   artifact state. Entering this phase awards **no** maturity to anything.
+
+6. **Nothing is promoted.** No artifact becomes Candidate, and no artifact
+   becomes Stable, because of this decision. **Stable remains `No` across the
+   entire repository.**
+
+7. **Semantic Status is unchanged.** The `semantic/status` family remains at
+   source revision **`semantic-status-rev-0002-candidate`**, maturity
+   **`Candidate`**, approval **`Approved`**, **Candidate YES** — for the
+   channel-independent Layer-3 Semantic Source / Contract family **only**. The
+   admitted evidence in force remains **`AE1-CDS-WP016-SEMSTATUS-004`** at
+   **AE-1**, source/contract scope only.
+
+8. **The nine visual foundation families remain `Proposed`.** VF-1 … VF-9 gain
+   no maturity, no evidence, and no values. **There are zero Candidate visual
+   families.**
+
+9. **Evidence does not transfer because of a phase change.** A phase transition
+   is not an evidence event. It admits no evidence, produces no evidence,
+   revalidates no evidence, and extends no admission to any other artifact,
+   channel, consumer, or source revision. Every artifact remains **AE-0** apart
+   from the single admitted AE-1 source/contract scope above.
+
+10. **The Artifact Maturity Lifecycle remains authoritative.** This decision
+    changes no maturity state, no gate, no promotion rule, and no evidence
+    requirement in the
+    [Artifact Maturity Lifecycle](../governance/ARTIFACT_MATURITY_LIFECYCLE.md).
+    DEC-S-125 and DEC-S-126 remain binding and unmodified.
+
+11. **CDS-WP-020 is not activated and not authorized.** It remains
+    `Planned / not active / not authorized`, as do CDS-WP-021 … CDS-WP-053.
+    This decision is a **prerequisite** for a possible CDS-WP-020 authorization,
+    never the authorization itself.
+
+12. **Every future work package remains separately authorization-gated.**
+    Entering this phase authorizes no specific work package. Each begins only on
+    an explicit Nova prompt and Human-Maintainer authorization, one at a time.
+    **A roadmap is not an authorization.**
+
+13. **No visual value is created.** No colour, typeface, size, spacing, radius,
+    stroke, shadow, opacity value, icon, illustration, motion value, breakpoint,
+    or theme instance is selected — and no token source file, schema, validator
+    rule, or component is created.
+
+14. **No Product Profile, consumer, or pilot is activated.** No Product Profile
+    is authorized or approved, no consumer integration begins, and the CoreOps
+    pilot stays inactive. The named extension-point set remains **empty**.
+
+15. **No publication or release authority is created.** Publication remains
+    **`Private Development`**; no release, tag, licence, claim, or conformance
+    statement exists or becomes possible through this decision.
+
+16. **No capability is registered.** Audio and sonic design, haptics, multimodal
+    feedback, and AI/agent interaction design remain registered in **none** of the
+    six capability domains and in **no** channel model. F-017-03 remains a future
+    **Elevated** scope / capability-registration gate.
+
+### Phase definition
+
+**`Post-Candidate Foundation & Design-System Enablement`** covers the period in
+which CDS develops and validates the shared design-system foundation **after the
+first Candidate artifact family exists**, and before any Stable, release, or
+adoption state.
+
+The phase **admits** work of these classes — it does not schedule or authorize
+any of them:
+
+- concrete Visual Foundation development and visual value selection;
+- visual token architecture implementation and the concrete token vocabulary;
+- semantic-to-visual binding, under its own gates;
+- validation of visual foundations;
+- controlled foundation maturity progression;
+- component and pattern preparation;
+- theme and Product Profile **architecture** progression;
+- channel preservation work;
+- accessibility evidence preparation.
+
+**The phase authorizes no specific work package by itself.** Naming a work class
+here creates neither scope nor permission; scope still comes from the
+[Scope Boundary Matrix](../governance/SCOPE_BOUNDARY_MATRIX.md) and permission
+still comes from an explicit Human-Maintainer authorization.
+
+### What this phase is not
+
+The phase is explicitly **not** any of the following, and entering it moves CDS
+toward none of them automatically:
+
+| Not | State |
+| --- | --- |
+| Stable | No artifact is Stable; **Candidate is not Stable** |
+| Release | No release exists; no tag exists |
+| Publication | Remains **`Private Development`** |
+| Production rollout | None |
+| Consumer adoption | None; naming a consumer is not endorsement |
+| Product Profile activation | Zero active; **no Product Profile can currently be approved** |
+| Full component maturity | No component exists |
+| Ecosystem-wide deployment | None |
+| Conformance or claim | **No claim of any type is valid, by anyone, including CDS itself** |
+
+**No successor phase is named.** Naming the phase that follows this one would
+require its own Decision, and that decision is **deferred**.
+
+### Effectivity
+
+**The new phase begins only at the Human-Maintainer integration commit** of the
+phase-transition package. Before that commit:
+
+- the authoritative phase remains `Pre-Candidate Operating Enablement` (DEC-S-062);
+- uncommitted executor output changes no authoritative phase state;
+- a review PASS is not a commit, and a Nova recommendation is not an approval.
+
+This mirrors the effectivity rule already in force for maturity transitions
+(DEC-S-126, clause 9): **the commit is the transition point**, not the drafting,
+not the review, and not the recommendation.
+
+### Rationale
+
+DEC-S-062 was written on 2026-07-16 to place four prerequisites **before** the
+first design Candidate, and its consequences state that the phase produces
+operating enablement and prerequisite planning only — no design, token, component,
+tool, or product artifact. That description has been outgrown by committed
+reality: ADR-0001 selected a machine-readable source format, `tools/cds_validator`
+was implemented and executed, the `semantic/status` source set exists, and on
+2026-08-19 one artifact family was promoted to **Candidate**. The label survived
+this because it names an *operating phase, not a maturity state* — a reading
+recorded explicitly rather than assumed.
+
+That reading stops being sufficient at CDS-WP-020. CDS-WP-019 remained compatible
+with the old phase because **architecture is not visual value**: it defined how
+visual foundations are structured, governed, represented, extended, validated, and
+consumed, and selected no palette, typeface, spacing scale, radius scale,
+elevation model, icon library, motion value, token source, or Product Profile.
+CDS-WP-020 is the first work package that would create **real** visual values, and
+a phase whose own operating description says that no design value is selected
+cannot honestly govern that work.
+
+Continuing under the old label would resolve the tension the way the architecture
+forbids — by convenience, and by letting a stale label acquire meaning through
+drift rather than through decision. The conservative correction is to decide the
+phase explicitly, prospectively, and without granting anything: a new label, no
+new maturity, no new authority, and no activation.
+
+### Consequences
+
+- Carriers that state the **maintained current phase** read
+  `Post-Candidate Foundation & Design-System Enablement` from this decision's
+  effectivity: [README](../../README.md), [CLAUDE.md](../../CLAUDE.md),
+  [Project Profile](../../project-system/PROJECT_PROFILE.md),
+  [Next Phase](../../project-system/NEXT_PHASE.md),
+  [Work Packages](../../project-system/WORK_PACKAGES.md),
+  [Foundation Context Pack](../../project-system/CONTEXT_PACK_FOUNDATION.md),
+  [Project Brain](../../project-brain/PROJECT_BRAIN.md), the
+  [Risk Register](../risks/RISK_REGISTER.md) scope header, and the
+  [Post-Candidate Development Roadmap](../roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
+- **F-017-04** — its **phase-label governance portion is closed by this decision**.
+  The dependent-document hygiene CDS-WP-018 already repaired stays closed, and its
+  dated historical references stay historical.
+- **F-019-08 (`PHASE_TRANSITION_RECOMMENDED`)** is **closed and satisfied** by this
+  decision together with the accompanying carrier reconciliation.
+- **No risk is registered, accepted, or closed.** A governance-state transition
+  that grants no authority and changes no artifact creates no new technical
+  exposure; the register stays at **RISK-098**.
+- **No ADR is created.** This is phase designation, not an architecture or
+  technology selection. The register stays at **ADR-0003**.
+- The dated *Post-Promotion Current-State Note — 2026-08-19* above records a
+  decision count of **126** and states that no decision beyond DEC-S-126 was
+  created. That statement is **correct for its date** and is **not edited**. From
+  this decision's effectivity the register holds **127** decisions with highest
+  identifier **DEC-S-127**; the *Register scope* section at the head of this index
+  is the maintained current carrier.
+- **DEC-S-062 keeps `Status: Accepted`.** The register's `Superseded` status means
+  a decision replaced in full; this supersession is **prospective and partial**,
+  reaching only the current-state phase designation. Marking DEC-S-062
+  `Superseded` would overstate it and would edit a decision record this package is
+  required to leave unchanged.
+
+### Boundary
+
+Accepted here means accepted as a governance decision record, effective at the
+Human-Maintainer integration commit. It awards **no** maturity, **no** Candidate,
+**no** Stable, **no** evidence, **no** admission, **no** claim, **no**
+conformance, **no** capability registration, **no** Product Profile, **no**
+consumer activation, **no** pilot, **no** licence, **no** release, **no** tag, and
+**no** publication authority. It activates **no** work package — **CDS-WP-020
+remains `Planned`, not active, and not authorized**. Semantic Status stays exactly
+as admitted; VF-1 … VF-9 stay `Proposed`; publication stays
+**`Private Development`**.

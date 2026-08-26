@@ -7,8 +7,12 @@ summarizes; it does not duplicate the normative documents it points to.
 - **Repository:** KayKaspers/Core-Design-System
 - **Local path:** `D:\Projects\Core-Design-System`
 - **Framework:** Nova Development Framework v1.0.0
-- **Phase:** Pre-Candidate Operating Enablement — **Foundation / Pre-Design:
-  Closed with Notes**
+- **Phase:** Post-Candidate Foundation & Design-System Enablement — **Foundation /
+  Pre-Design: Closed with Notes** (**DEC-S-127**, 2026-08-26, effective at its
+  Human-Maintainer integration commit). It supersedes `Pre-Candidate Operating
+  Enablement` (**DEC-S-062**) **for current and future state only**; DEC-S-062 stays
+  `Accepted` and correct for the period it governed. **Phase is not maturity** — the
+  transition grants nothing.
 
 ## Strategic purpose
 
@@ -54,14 +58,14 @@ areas today.
 Governance foundation established. No final design or technology decisions are
 approved.
 
-- Decisions: DEC-S-001 … DEC-S-126 (126) — 6 foundation + 6 scope + 8 consumer
+- Decisions: DEC-S-001 … DEC-S-127 (127) — 6 foundation + 6 scope + 8 consumer
   and pilot scope + 12 logical architecture + 16 governance + 12 accessibility +
   4 operating enablement and pre-candidate + 8 accessibility support baseline and
   evidence + 10 machine-readable source and token format + 10 machine-readable
   bootstrap and validation + 12 offline validator implementation + 10 semantic
   status foundation + 10 semantic status source and evidence + 1 accessibility /
   maturity / channel boundary + 1 candidate finalization / maturity / evidence
-  transition decision ·
+  transition + 1 phase transition decision ·
   **ADRs: 3 (ADR-0001, ADR-0002, ADR-0003)**
 - Risks: RISK-001 … RISK-098 (98) — **89 Monitored; RISK-031, RISK-040, RISK-044,
   RISK-066, RISK-067, RISK-068, RISK-069, RISK-071, RISK-098 Mitigating**; **owner
@@ -69,14 +73,18 @@ approved.
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**,
-  **CDS-WP-017**, **CDS-WP-018**
-- Current work package: **CDS-WP-019 — Core Visual Foundation Architecture** (the
-  authorized work package) — **architecture only**: it defines how the visual
-  foundation is structured, governed, represented, extended, validated, and
-  consumed. It creates **no visual value**, no token source file, no component, no
-  brand, and no Product Profile; produces and admits no evidence; changes no
-  maturity; adds no ADR, Decision, or risk; renames no phase; registers no
-  capability; and activates no later work package.
+  **CDS-WP-017**, **CDS-WP-018**, **CDS-WP-019**
+- Closed work package: **CDS-WP-019 — Core Visual Foundation Architecture** —
+  **architecture only**: it defines how the visual foundation is structured,
+  governed, represented, extended, validated, and consumed. It created **no visual
+  value**, no token source file, no component, no brand, and no Product Profile;
+  produced and admitted no evidence; changed no maturity; added no ADR, Decision, or
+  risk; renamed no phase; registered no capability; and activated no later work
+  package. Closure became effective with the Human-Maintainer commit
+  `538fbccbf6f554de3b872e9fb75a70d13318feb6`.
+- Current work package: **none.** The **CDS Phase Transition Governance Package**
+  (**DEC-S-127**) runs between CDS-WP-019 closure and any CDS-WP-020 authorization.
+  It is **not** a numbered work package and activates nothing.
 - Closed work package: **CDS-WP-016 — Semantic Status Foundation Independent Evidence
   Review and Candidate Gate.** Its review work was
   **executed** — **Independent Review PASS**, **Candidate Recommendation GO**;
@@ -260,7 +268,7 @@ Details: [Provenance](../docs/governance/NDF_SKILLS_PROVENANCE.md) ·
 | DEC-S-059 | Accessibility cannot be waived by an ordinary exception. |
 | DEC-S-060 | CR-024 resolved at policy level for the CoreOps pilot web scope. |
 | DEC-S-061 | Foundation milestone closed with mandatory notes; closure grants no Candidate/Stable/adoption/conformance/release/publication. |
-| DEC-S-062 | First post-Foundation phase is Pre-Candidate Operating Enablement. |
+| DEC-S-062 | First post-Foundation phase is Pre-Candidate Operating Enablement. **Superseded for current-state phase designation by DEC-S-127; still Accepted and historically valid.** |
 | DEC-S-063 | Operating playbooks and dossiers are non-normative; reduce ceremony, never obligation. |
 | DEC-S-064 | Critical risks affecting Elevated work need executor, trigger, expected evidence, and blocking effect first. |
 | DEC-S-065 | The Accessibility Support Baseline defines what future evidence targets; not evidence, support, or a claim. |
@@ -958,12 +966,19 @@ safety subject matter, and activated **no Product Profile, pilot, consumer
 integration, release, tag, or publication**. Closure became effective with the
 Human-Maintainer commit `e5d5d492619071655ba956713980d1ee261d9213`.
 
-**The active work package is CDS-WP-019 — Core Visual Foundation Architecture**,
-authorized separately by the Human Maintainer on 2026-08-26. It opens **Phase V —
-Visual Foundation** with architecture rather than design: it defines **how** visual
-foundations are structured before any visual decision is made — see
+**CDS-WP-019 — Core Visual Foundation Architecture is closed**, authorized
+separately by the Human Maintainer on 2026-08-26 and integrated by the
+Human-Maintainer commit `538fbccbf6f554de3b872e9fb75a70d13318feb6`. It opened
+**Phase V — Visual Foundation** with architecture rather than design: it defines
+**how** visual foundations are structured before any visual decision is made — see
 [Core Visual Foundation Architecture (CDS-WP-019)](#core-visual-foundation-architecture-cds-wp-019)
 below.
+
+**No numbered work package is currently active.** The **CDS Phase Transition
+Governance Package** (**DEC-S-127**) sits between CDS-WP-019 closure and any
+CDS-WP-020 authorization. It changed the project-phase label and nothing else: no
+maturity, no evidence, no visual value, no capability, no Product Profile, no
+pilot, no release, and no activation.
 
 **The next planned work package is CDS-WP-020 — Reference and Semantic Token
 Foundation**, and it **remains inactive until separately authorized by the Human

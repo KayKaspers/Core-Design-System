@@ -1,12 +1,18 @@
 # Next Phase
 
-- **Phase:** Pre-Candidate Operating Enablement — **Foundation / Pre-Design:
-  Closed with Notes**
+- **Phase:** Post-Candidate Foundation & Design-System Enablement — **Foundation /
+  Pre-Design: Closed with Notes**. Set by **DEC-S-127** (2026-08-26), effective at
+  its Human-Maintainer integration commit; it supersedes `Pre-Candidate Operating
+  Enablement` (**DEC-S-062**) **for current and future state only**, and DEC-S-062
+  stays `Accepted` and correct for the period it governed. **A phase is an operating
+  period, not a maturity state** — the transition grants nothing.
 - **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**,
-  **CDS-WP-017**, **CDS-WP-018**
-- **Current work package:** **CDS-WP-019 — Core Visual Foundation Architecture.**
+  **CDS-WP-017**, **CDS-WP-018**, **CDS-WP-019**
+- **Current work package:** **none.** The **CDS Phase Transition Governance
+  Package** (**DEC-S-127**) runs between CDS-WP-019 closure and any CDS-WP-020
+  authorization. It is **not** a numbered work package and activates nothing.
 - **Candidate promotion: COMPLETE.** The Semantic Status Foundation passed the
   Candidate gate and was promoted by the Human-Maintainer exact-byte **Promotion
   Commit `22fa0710e2b75df22e7b420c2f9d86bbe67b2777`** on 2026-08-19 — gate **PASS**,
@@ -27,12 +33,14 @@
 - **CDS-WP-018 state:** **Closed.** Closure became effective with the
   Human-Maintainer commit `e5d5d492619071655ba956713980d1ee261d9213`, which
   integrated the deferred-governance and repository-hygiene reconciliation.
-- **CDS-WP-019:** **active** — Core Visual Foundation Architecture. **Architecture
-  only.** It defines how the visual foundation is structured, governed,
-  represented, extended, validated, and consumed. **No visual value, no token
-  source file, no component, no brand, no Product Profile, no evidence, no maturity
-  change, no Decision, no risk entry, no capability registration, no phase rename,
-  and no publication effect.**
+- **CDS-WP-019 state:** **Closed.** Core Visual Foundation Architecture.
+  **Architecture only.** It defines how the visual foundation is structured,
+  governed, represented, extended, validated, and consumed. **No visual value, no
+  token source file, no component, no brand, no Product Profile, no evidence, no
+  maturity change, no Decision, no risk entry, no capability registration, no phase
+  rename, and no publication effect.** Closure became effective with the
+  Human-Maintainer commit `538fbccbf6f554de3b872e9fb75a70d13318feb6`, which
+  integrated the eleven normative visual foundation documents.
 - **CDS-WP-020 … CDS-WP-053:** **`Planned`, not active, not authorized, work not
   started** — see the
   [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
@@ -42,32 +50,43 @@
 **No visual value is created and no future work package is activated.** The only
 authorized next steps, in this order:
 
+Steps 1 – 4 of the CDS-WP-019 sequence are **complete**: the architecture was
+reviewed, adjudicated, and integrated by the Human-Maintainer commit
+`538fbccbf6f554de3b872e9fb75a70d13318feb6`, at which CDS-WP-019 closure became
+effective. The remaining sequence is:
+
 | # | Step | Authority |
 | --- | --- | --- |
-| 1 | **Fresh independent review** of the CDS-WP-019 architecture | Reviewer ≠ executor |
+| 1 | **Fresh independent review** of the phase-transition package | Reviewer ≠ executor |
 | 2 | **Nova adjudication** of that review | Nova — recommendation only, never approval |
-| 3 | **Human-Maintainer integration commit** of the architecture | Human Maintainer |
-| 4 | **CDS-WP-019 closure becomes committed and effective** | Effective at step 3 |
+| 3 | **Human-Maintainer integration commit** of the phase transition | Human Maintainer |
+| 4 | **DEC-S-127 and the new phase become effective** | Effective at step 3 |
 | 5 | **CDS-WP-020 authorization** — a separate, explicit Human-Maintainer decision | Human Maintainer |
 
 **Step 4 is not reached before step 3**, and **step 5 is not implied by step 4**.
-Uncommitted executor output changes no authoritative work-package status, and a
-review PASS is not a commit. **CDS-WP-020 remains inactive until separately
+Uncommitted executor output changes no authoritative phase or work-package status,
+and a review PASS is not a commit. **CDS-WP-020 remains inactive until separately
 authorized**, and **no concrete visual value is created at any step above.**
 
-### Phase-transition note (raised, not acted on)
+### Phase-transition note (resolved by DEC-S-127)
 
-The phase label **`Pre-Candidate Operating Enablement`** (DEC-S-062) remains
-authoritative and **is not renamed**. It stays coherent for CDS-WP-019, which
-creates no visual value.
+CDS-WP-019 raised **`PHASE_TRANSITION_RECOMMENDED`** (**F-019-08**) as a
+forward-looking recommendation: the label `Pre-Candidate Operating Enablement`
+(DEC-S-062) stayed coherent for CDS-WP-019, which creates no visual value, but would
+be **materially strained by CDS-WP-020**, the first work package that would create
+real colour, typographic, and dimensional values. **CDS-WP-019 itself renamed
+nothing and created no Decision.**
 
-It will be **materially strained by CDS-WP-020**, which is the first work package
-that would create real colour, typographic, and dimensional values. CDS-WP-019
-therefore **raises `PHASE_TRANSITION_RECOMMENDED` as a forward-looking
-recommendation**, to be resolved **before CDS-WP-020 is authorized**, together with
-the still-open governance item **F-017-04**. A relabel requires a **new Decision
-superseding DEC-S-062** and is a Human-Maintainer decision. **CDS-WP-019 renames
-nothing and creates no Decision.**
+**DEC-S-127 (2026-08-26) resolves it.** For current and future state the phase is
+**`Post-Candidate Foundation & Design-System Enablement`**; DEC-S-062 keeps
+`Status: Accepted` and stays correct for the period it governed, and dated records
+naming the old label remain **historical, not stale**. This closes **F-019-08** and
+the **phase-label portion of F-017-04**.
+
+**The relabel is a prerequisite, not an authorization.** It grants no maturity,
+admits no evidence, creates no visual value, registers no capability, and
+**activates no work package** — authorizing CDS-WP-020 remains a separate
+Human-Maintainer decision.
 
 ## Status of completed work packages
 
@@ -588,13 +607,15 @@ became effective with the Human-Maintainer commit
   capability registration** for audio/sonic, haptic, multimodal, AI/agent, or safety
   subject matter; **no activation of CDS-WP-019 or any later work package**.
 
-## Next work package — CDS-WP-019 (authorized; active)
+## Most recent work package — CDS-WP-019 (closed)
 
 **CDS-WP-019 — Core Visual Foundation Architecture.**
 
-CDS-WP-018 is closed. **Phase V — Visual Foundation** opens with an architecture
+CDS-WP-018 is closed. **Phase V — Visual Foundation** opened with an architecture
 work package: it defines **how** visual foundations are structured before any
-visual decision is made.
+visual decision is made. CDS-WP-019 is itself now **closed** — closure became
+effective with the Human-Maintainer commit
+`538fbccbf6f554de3b872e9fb75a70d13318feb6`.
 
 ### Objective of CDS-WP-019
 
@@ -642,11 +663,13 @@ visual decision is made.
   and **no change to any Semantic Status source, revision, maturity, or evidence
   package**.
 
-### Still prohibited in the Pre-Candidate phase
+### Still prohibited in the current phase
 
 *(Unchanged by CDS-WP-019. An **architecture** for the visual foundation is not
 concrete visual design, and defining how a colour role must behave is not selecting
-a colour.)*
+a colour. **Unchanged by DEC-S-127 as well:** a phase transition grants no
+authority, so every prohibition below survives the relabel intact and is lifted
+only by a separately authorized work package.)*
 
 - concrete visual design; selecting colours, typography, icons, logos, or themes,
 - implementing components or product code,
@@ -662,12 +685,13 @@ a colour.)*
 
 ### Authorization note
 
-CDS-WP-019 is registered as `Next` — the roadmap label for the current authorized
-work package. It is executed under an explicit Nova prompt and Human-Maintainer
-authorization. **Planning is not authorization:** recording CDS-WP-020 …
-CDS-WP-053 activates none of them, and each requires its own explicit Nova prompt
-and Human-Maintainer authorization. **Execution is not closure:** uncommitted
-executor output changes no authoritative work-package status.
+CDS-WP-019 was executed under an explicit Nova prompt and Human-Maintainer
+authorization and is now **`Completed`**. **No numbered work package is currently
+active.** **Planning is not authorization:** recording CDS-WP-020 … CDS-WP-053
+activates none of them, and each requires its own explicit Nova prompt and
+Human-Maintainer authorization. **Execution is not closure:** uncommitted executor
+output changes no authoritative work-package status. **A phase transition is not an
+authorization either:** DEC-S-127 changes the phase label and nothing else.
 
 ## Related documents
 

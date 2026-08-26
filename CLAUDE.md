@@ -16,8 +16,15 @@ library, or a design project scoped exclusively to CoreOps.
 - Repository: KayKaspers/Core-Design-System
 - Local path: `D:\Projects\Core-Design-System`
 - Framework: Nova Development Framework v1.0.0
-- Phase: **Pre-Candidate Operating Enablement — Foundation / Pre-Design: Closed
-  with Notes.** The Human Maintainer accepted `GO WITH NOTES` (commit of
+- Phase: **Post-Candidate Foundation & Design-System Enablement** — set by
+  **DEC-S-127** and effective at its Human-Maintainer integration commit. It
+  supersedes `Pre-Candidate Operating Enablement` (**DEC-S-062**) **for current and
+  future state only**: DEC-S-062 stays `Accepted` and remains correct for the period
+  it governed, and dated records still naming the old phase are **historical, not
+  stale**. **A phase is an operating period, not a maturity state** — the new phase
+  awards no maturity, admits no evidence, activates no work package, and grants no
+  authority. The Foundation remains **Foundation / Pre-Design: Closed with Notes**:
+  the Human Maintainer accepted `GO WITH NOTES` (commit of
   CDS-WP-008 + initiation of CDS-WP-009); the
   [Foundation Closure Record](docs/governance/FOUNDATION_CLOSURE_RECORD.md) is
   normative for the fact of closure, the authority state, and the phase boundary.
@@ -182,17 +189,23 @@ library, or a design project scoped exclusively to CoreOps.
   Decision; renamed **no** phase; and registered **no** capability. Closure became
   effective with the Human-Maintainer commit
   **`e5d5d492619071655ba956713980d1ee261d9213`**.
-- **Current work package: CDS-WP-019 — Core Visual Foundation Architecture.**
-  Authorized by the Human Maintainer as the single active work package, opening
-  **Phase V — Visual Foundation**. **Architecture only:** it defines *how* visual
+- **CDS-WP-019 state: CLOSED.** Core Visual Foundation Architecture, which opened
+  **Phase V — Visual Foundation**. **Architecture only:** it defined *how* visual
   foundations are structured, governed, represented, extended, validated, and
-  consumed — see *Visual foundation architecture* below. It creates **no** visual
+  consumed — see *Visual foundation architecture* below. It created **no** visual
   value, token source file, schema, validator rule, component, brand, or Product
-  Profile; produces and admits **no** evidence; changes **no** maturity; accepts or
-  closes **no** risk; adds **no** ADR, Decision, or risk entry; **does not rename
-  the phase**; registers **no** capability; makes **no** claim; and activates
-  **no** Product Profile, pilot, consumer integration, release, tag, publication,
-  or later work package.
+  Profile; produced and admitted **no** evidence; changed **no** maturity; accepted
+  or closed **no** risk; added **no** ADR, Decision, or risk entry; renamed **no**
+  phase; registered **no** capability; made **no** claim; and activated **no**
+  Product Profile, pilot, consumer integration, release, tag, publication, or later
+  work package. Closure became effective with the Human-Maintainer commit
+  **`538fbccbf6f554de3b872e9fb75a70d13318feb6`**, which integrated the eleven
+  normative visual foundation documents.
+- **No numbered work package is currently active.** The **CDS Phase Transition
+  Governance Package** (**DEC-S-127**) runs between CDS-WP-019 closure and any
+  CDS-WP-020 authorization. It is **not** a numbered work package, occupies no
+  identifier in the CDS-WP-020 … CDS-WP-053 sequence, changes **only** project-phase
+  authority, and activates nothing.
 - **CDS-WP-020 … CDS-WP-053: PLANNED / NOT ACTIVE / NOT AUTHORIZED.** They are
   recorded as a planning sequence so no competing roadmap can arise; **recording
   them activates nothing** and work on them has not started. The immediate next
@@ -200,13 +213,15 @@ library, or a design project scoped exclusively to CoreOps.
   Foundation**, which stays inactive until separately authorized. Each work package
   begins only on an explicit Nova prompt and Human-Maintainer authorization, one at
   a time.
-- **Phase-transition item open before CDS-WP-020.** CDS-WP-019 raised
-  **`PHASE_TRANSITION_RECOMMENDED`** as a forward-looking recommendation: the phase
-  label set by DEC-S-062 stays coherent for CDS-WP-019 but will be materially
-  strained by CDS-WP-020, the first work package that would create real visual
-  values. **CDS-WP-019 renamed nothing and created no Decision.** A relabel
-  requires a new Decision superseding DEC-S-062 and is a Human-Maintainer decision;
-  the item is tied to the still-open **F-017-04**.
+- **Phase-transition item: RESOLVED by DEC-S-127.** CDS-WP-019 raised
+  **`PHASE_TRANSITION_RECOMMENDED`** (**F-019-08**) because the label set by
+  DEC-S-062 stayed coherent for CDS-WP-019 but would be materially strained by
+  CDS-WP-020, the first work package that would create real visual values.
+  **CDS-WP-019 itself renamed nothing and created no Decision.** DEC-S-127 now
+  supersedes DEC-S-062 for current and future phase state, closing **F-019-08** and
+  the **phase-label portion of F-017-04**. It is a **prerequisite** for a possible
+  CDS-WP-020 authorization — **never the authorization itself**, which remains a
+  separate Human-Maintainer decision.
 - **Scope-registration gate.** Audio and sonic design, haptics, multimodal
   feedback, and AI/agent interaction design are registered in **none** of the six
   capability domains and in **no** channel model today. Planning CDS-WP-040,
@@ -481,10 +496,12 @@ looks Standard but touches an Elevated trigger **is Elevated**.
 Full model:
 [Governance Operating Model](docs/governance/GOVERNANCE_OPERATING_MODEL.md).
 
-## Operating enablement (Pre-Candidate phase)
+## Operating enablement
 
 The Foundation is **Closed with Notes** (DEC-S-061); the active phase is
-**Pre-Candidate Operating Enablement** (DEC-S-062). To run a change day to day,
+**Post-Candidate Foundation & Design-System Enablement** (DEC-S-127), which
+supersedes `Pre-Candidate Operating Enablement` (DEC-S-062) for current and future
+state only. To run a change day to day,
 use the
 [Foundation Operating Playbook](docs/operations/FOUNDATION_OPERATING_PLAYBOOK.md)
 as the operative entry aid, with the
@@ -502,17 +519,20 @@ as the operative entry aid, with the
   for the twelve Critical Risks. A named executor authorizes no work; documentation
   is not mitigation.
 - **No design work before an explicit prompt.** The phase label
-  `Pre-Candidate Operating Enablement` is set by **DEC-S-062** and remains
-  authoritative until a Decision supersedes it; it names an **operating phase, not
-  a maturity state**. Its original CDS-WP-009 description — that no token, format,
-  tool, or Candidate is created or selected in this phase — is **historical and has
-  been outgrown**: a machine-readable source format (ADR-0001), the
-  `tools/cds_validator` offline validator, the `semantic/status` token source set,
-  and one **Candidate** artifact family all now exist and are committed. What still
-  holds, and is what this rule means today: **no colour, typography, icon, logo,
-  theme, visual value, component, Product Profile, pilot, licence, release, or
-  publication is created or selected without an explicit prompt.** The original
-  phase description is preserved in the
+  `Post-Candidate Foundation & Design-System Enablement` is set by **DEC-S-127** and
+  remains authoritative until a Decision supersedes it; like its predecessor it
+  names an **operating phase, not a maturity state**. The earlier label
+  `Pre-Candidate Operating Enablement` (**DEC-S-062**) is **historical for current
+  state** and stays correct for the period it governed. That decision's original
+  CDS-WP-009 description — that no token, format, tool, or Candidate is created or
+  selected in this phase — had already been **outgrown** before the relabel: a
+  machine-readable source format (ADR-0001), the `tools/cds_validator` offline
+  validator, the `semantic/status` token source set, and one **Candidate** artifact
+  family all exist and are committed. What still holds, and is what this rule means
+  today — **unchanged by the phase transition, which grants nothing**: **no colour,
+  typography, icon, logo, theme, visual value, component, Product Profile, pilot,
+  licence, release, or publication is created or selected without an explicit
+  prompt.** The original phase description is preserved in the
   [Pre-Candidate Operating Plan](docs/roadmap/PRE_CANDIDATE_OPERATING_PLAN.md) —
   a **historical CDS-WP-009 plan**, whose forward-looking "next work package"
   references (CDS-WP-010, CDS-WP-011) are historical and are **not** the current

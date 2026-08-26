@@ -88,6 +88,18 @@ Only the work-package rows have advanced: **CDS-WP-018 is `Closed`** — closure
 commit `e5d5d492619071655ba956713980d1ee261d9213` — **CDS-WP-019 is `Active`**, and
 **CDS-WP-020 … CDS-WP-053** remain **`Planned` · not active · not authorized**.
 
+**Work-package rows updated again by the phase transition (2026-08-26).** The
+maturity, evidence, claim, conformance, and publication rows above remain
+**unchanged** — Candidate families **1**, Stable **No**, claims **None**,
+conformance **None**, AE-2/AE-3/AE-4 **None**, visual value **None**, component
+**None**, pilot **Inactive**, publication **`Private Development`**, releases
+**None**, tags **0**. Only the work-package rows have advanced: **CDS-WP-019 is
+`Closed`** — closure commit `538fbccbf6f554de3b872e9fb75a70d13318feb6` — **no
+numbered work package is active**, and **CDS-WP-020 … CDS-WP-053** remain
+**`Planned` · not active · not authorized**. The phase relabel by **DEC-S-127**
+changed the project-phase label and **nothing else**; it advanced no maturity and
+authorized no work package.
+
 **CDS-WP-019 created no visual value.** It defined the *architecture* of the visual
 foundation — nine families, fourteen invariants, a naming model, and the
 accessibility, channel, brand, and governance boundaries — and selected **no
@@ -138,7 +150,7 @@ normative source.
 
 | ID | Title | Layer | Status |
 | --- | --- | --- | --- |
-| CDS-WP-019 | Core Visual Foundation Architecture | 3 | **Active** |
+| CDS-WP-019 | Core Visual Foundation Architecture | 3 | **Closed** |
 | CDS-WP-020 | Reference and Semantic Token Foundation | 3 | Planned · not active |
 | CDS-WP-021 | Adaptive Layout and Responsive Foundation | 3 | Planned · not active |
 | CDS-WP-022 | Theme and Environmental Presentation Model | 3 | Planned · not active |
@@ -226,8 +238,9 @@ normative source.
 
 **Sequence integrity:** CDS-WP-017 … CDS-WP-053 is a contiguous range of **37**
 identifiers with no gap and no duplicate. **34** of them — CDS-WP-020 …
-CDS-WP-053 — are `Planned · not active`; exactly **one**, CDS-WP-019, is active;
-and **two**, CDS-WP-017 and CDS-WP-018, are closed.
+CDS-WP-053 — are `Planned · not active`; **none** is active; and **three** —
+CDS-WP-017, CDS-WP-018, and CDS-WP-019 — are closed. The **CDS Phase Transition
+Governance Package** occupies **no** identifier in this range.
 
 ## Milestones
 
@@ -478,6 +491,18 @@ hygiene item.
 | **F-017-03** | Scope registration gap for audio/sonic, haptic, multimodal, and AI/agent subject matter — see the multimodal and AI scope-registration gate above. Not blocking for anything currently authorized. | **Not CDS-WP-018 hygiene.** → a future **Elevated scope / capability-registration gate**, which **blocks later authorization of CDS-WP-040, CDS-WP-041, CDS-WP-042, and CDS-WP-044 until resolved**. |
 | **F-017-04** | The phase label set by **DEC-S-062** ("Pre-Candidate Operating Enablement") predates the completed first Candidate transition. **The label remains authoritative until a Decision supersedes it**, and it names an *operating phase*, **not a maturity state**. The staleness is broader than the label alone: dependent operating-description and current-state text still carries **Pre-Candidate assumptions** the repository has outgrown — for example prose asserting that no token, format, tool, or Candidate is created or selected in this phase, although a Semantic Status token source, ADR-0001, `tools/cds_validator`, and one Candidate family all now exist. It also includes **stale forward "next work package" references** frozen at the time each dependent text was written — `CLAUDE.md` naming **CDS-WP-010** as "the next work package", the historical CDS-WP-009 [Pre-Candidate Operating Plan](PRE_CANDIDATE_OPERATING_PLAN.md) naming **CDS-WP-011**, and the [Foundation Closure Record](../governance/FOUNDATION_CLOSURE_RECORD.md) naming **CDS-WP-010** — none of which is the current work package. **CDS-WP-017 renames nothing and repairs none of that text.** | **Not an executor-owned CDS-WP-018 decision.** → **open governance / phase-transition item**: a relabel requires a **new Decision superseding DEC-S-062**. **CDS-WP-018 reconciled the dependent documentary text only** — it corrected the stale `CLAUDE.md` operating description and its `CDS-WP-010` next-work-package reference, and framed the historical carriers as historical; it **did not rename the phase, create a superseding Decision, or touch `DECISION_INDEX.md`**. The label itself remains open. **None of this blocked CDS-WP-017 integration.** |
 
+**Status after the phase transition (2026-08-26).** The routing table above is
+CDS-WP-017's record and is **not rewritten**. Since it was written, **DEC-S-127**
+has superseded DEC-S-062 for current and future phase state, relabelling the project
+phase to **`Post-Candidate Foundation & Design-System Enablement`**. Its effect on
+the four findings:
+
+| ID | Status |
+| --- | --- |
+| `F-017-01`, `F-017-02` | Unchanged — repaired by CDS-WP-018; remain closed. |
+| `F-017-03` | **Unchanged and still open.** The phase transition **registers no capability** for audio/sonic, haptic, multimodal, or AI/agent subject matter; the future **Elevated scope / capability-registration gate** still blocks later authorization of CDS-WP-040, CDS-WP-041, CDS-WP-042, and CDS-WP-044. |
+| **`F-017-04`** | **Phase-label governance portion: CLOSED BY DEC-S-127.** The relabel is decided rather than drifted, and DEC-S-062 stays `Accepted` and historically valid. The dependent-document hygiene CDS-WP-018 already repaired **remains closed**. The **dated historical references remain historical and are not rewritten** — including the stale forward "next work package" pointers inside the [Pre-Candidate Operating Plan](PRE_CANDIDATE_OPERATING_PLAN.md) and the [Foundation Closure Record](../governance/FOUNDATION_CLOSURE_RECORD.md), which are correct for their dates. **Source history is not rewritten merely to remove an identifier.** |
+
 ### Findings from the R1 independent review
 
 The fresh independent review of this reconciliation (**R1**, reviewer ≠ executor)
@@ -509,6 +534,18 @@ not repaired** — CDS-WP-019 is an architecture work package, not a hygiene pas
 | **F-019-08** | The phase label set by **DEC-S-062** stays coherent for CDS-WP-019 but will be **materially strained by CDS-WP-020**, the first work package that would create real visual values. | **`PHASE_TRANSITION_RECOMMENDED`** raised as a forward-looking recommendation, tied to the still-open **F-017-04**, to be resolved **before CDS-WP-020 is authorized**. **CDS-WP-019 renames nothing and creates no Decision.** |
 | **F-019-09** | **`R1-F-01` recurs by construction.** The [Candidate Dossier](../operations/SEMANTIC_STATUS_CANDIDATE_DOSSIER.md) carries `CDS-WP-018 **active**` in its *"Current state (authoritative for this document)"* header — true when CDS-WP-018 wrote it, made stale by CDS-WP-019's activation. This is the **same recurrence R1-F-01 described**, and it will recur at every activation for as long as a maturity-boundary record carries a work-package-status row at all. | **Not repaired by CDS-WP-019**: `docs/operations/**` is outside this work package's file scope. Deferred → a **bounded, separately authorized repair**. Per the R1-F-01 disposition, any repair must be **additive** — a dated supersession note, or **removal of the work-package-status row from the maturity-boundary record** — never a rewrite of a dated table. **Removal is the structural fix**: the controlled carrier for work-package status is [Work Packages](../../project-system/WORK_PACKAGES.md), and the dossier header already says so. **Disclosure:** the dated CDS-WP-017 forward-view note in the [Pre-Candidate Operating Plan](PRE_CANDIDATE_OPERATING_PLAN.md) likewise still reads *"CDS-WP-019 onwards is `Planned` only"*; it is **historical by its own header**, its prohibitions remain in force, and it is **not rewritten**. |
 
+**Status after the phase transition (2026-08-26).** The CDS-WP-019 findings table
+above is that work package's record and is **not rewritten**. One finding has since
+been dispositioned:
+
+| ID | Status |
+| --- | --- |
+| **`F-019-08`** — `PHASE_TRANSITION_RECOMMENDED` | **CLOSED / SATISFIED BY DEC-S-127.** The recommendation asked that the phase label be resolved **before CDS-WP-020 is authorized**; DEC-S-127 does exactly that, superseding DEC-S-062 for current and future state and relabelling the phase to **`Post-Candidate Foundation & Design-System Enablement`**. The **phase-label portion of the tied item `F-017-04` closes with it.** |
+
+`F-019-01` … `F-019-07` and `F-019-09` are **unchanged** by the phase transition and
+keep their recorded dispositions. A relabel repairs no document and closes no
+hygiene item.
+
 ## Immediate next step
 
 **CDS-WP-020 — Reference and Semantic Token Foundation.**
@@ -518,17 +555,21 @@ the Human Maintainer**. Nothing here starts it, scopes it in detail, or performs
 part of it in advance.
 
 **CDS-WP-019 was authorized separately by the Human Maintainer on 2026-08-26** and
-is the currently active work package. Its authorization came from that decision
-alone — **not** from its position in this roadmap.
+is now **closed** — its architecture was integrated by the Human-Maintainer commit
+`538fbccbf6f554de3b872e9fb75a70d13318feb6`. Its authorization came from that
+decision alone — **not** from its position in this roadmap. **No numbered work
+package is currently active.**
 
-**A phase-transition item is open before CDS-WP-020.** CDS-WP-020 would be the
-first work package to create real colour, typographic, and dimensional values, and
-the phase label set by **DEC-S-062** predates that possibility. CDS-WP-019 raised
-**`PHASE_TRANSITION_RECOMMENDED`** as a forward-looking recommendation, tied to the
-still-open **F-017-04**, and **renamed nothing**. A relabel requires a **new
-Decision superseding DEC-S-062** and is a Human-Maintainer decision. **Nothing here
-schedules it, and it does not by itself block CDS-WP-020's authorization** — it is
-recorded so the decision is taken deliberately rather than by drift.
+**The phase-transition item is resolved.** CDS-WP-020 would be the first work
+package to create real colour, typographic, and dimensional values, and the phase
+label set by **DEC-S-062** predated that possibility. CDS-WP-019 raised
+**`PHASE_TRANSITION_RECOMMENDED`** (**F-019-08**) as a forward-looking
+recommendation, tied to **F-017-04**, and **renamed nothing**. **DEC-S-127
+(2026-08-26) supersedes DEC-S-062 for current and future phase state**, closing
+`F-019-08` and the phase-label portion of `F-017-04`. **The transition authorizes
+nothing:** it grants no maturity, admits no evidence, creates no visual value, and
+**does not activate CDS-WP-020**, whose authorization remains a separate
+Human-Maintainer decision.
 
 ## Related documents
 

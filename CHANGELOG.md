@@ -9,6 +9,70 @@ released and no release is announced.
 
 ### Added
 
+- **DEC-S-127 — the project phase becomes `Post-Candidate Foundation &
+  Design-System Enablement`.** The phase established by **DEC-S-062** completed its
+  intended operating purpose: its four prerequisites are committed, and the first
+  Candidate transition completed on 2026-08-19. DEC-S-127 supersedes it **for
+  current and future state only** and takes effect at its **Human-Maintainer
+  integration commit**. **DEC-S-062 is not deleted, withdrawn, or retroactively
+  invalidated** — it keeps `Status: Accepted` and remains correct for the period it
+  governed. The register moves to **127 decisions, highest `DEC-S-127`**; **no risk
+  and no ADR was added** — **RISK-098** and **ADR-0003** are unchanged.
+  (CDS Phase Transition Governance Package)
+- **The new phase is defined narrowly, and bounded explicitly.** It covers the
+  period in which CDS develops and validates the shared design-system foundation
+  **after the first Candidate family exists** — admitting work classes such as
+  concrete visual foundation development, visual token architecture, semantic-visual
+  binding, foundation maturity progression, component and pattern preparation, and
+  accessibility evidence preparation. It is explicitly **not** Stable, release,
+  publication, production rollout, consumer adoption, Product Profile activation,
+  full component maturity, or ecosystem deployment. **No successor phase is named**
+  — that would require its own Decision, and it is deferred.
+  (CDS Phase Transition Governance Package)
+
+### Changed
+
+- **Phase carriers reconciled, historical carriers preserved.** The maintained
+  current-phase statements in `README.md`, `CLAUDE.md`,
+  `project-system/PROJECT_PROFILE.md`, `project-system/NEXT_PHASE.md`,
+  `project-system/WORK_PACKAGES.md`, `project-system/CONTEXT_PACK_FOUNDATION.md`,
+  `project-brain/PROJECT_BRAIN.md`, the `docs/risks/RISK_REGISTER.md` scope header,
+  and the forward roadmap now read the new label. **Dated records were not
+  rewritten** — the [Foundation Closure Record](docs/governance/FOUNDATION_CLOSURE_RECORD.md),
+  the historical CDS-WP-009 [Pre-Candidate Operating Plan](docs/roadmap/PRE_CANDIDATE_OPERATING_PLAN.md),
+  prior review reports, prior work-package notes, DEC-S-062 itself, and historical
+  changelog entries still name `Pre-Candidate Operating Enablement` and are
+  **correct as written**. **Historical state is not current state.**
+  (CDS Phase Transition Governance Package)
+- **CDS-WP-019 recorded as `Completed`.** Its closure became effective with the
+  Human-Maintainer commit `538fbccbf6f554de3b872e9fb75a70d13318feb6`, which
+  integrated the eleven normative visual foundation documents — the repository's own
+  rule that closure "becomes committed and effective" at the integration commit.
+  **No numbered work package is currently active**, and **CDS-WP-020 … CDS-WP-053
+  remain `Planned`, not active, and not authorized**.
+  (CDS Phase Transition Governance Package)
+- **`F-017-04` phase-label governance portion CLOSED, and `F-019-08`
+  (`PHASE_TRANSITION_RECOMMENDED`) CLOSED / SATISFIED** by DEC-S-127, recorded as
+  **additive dated status notes** in the forward roadmap. The dated CDS-WP-017 and
+  CDS-WP-019 findings tables were **not rewritten**, and `F-017-03` remains open as
+  a future **Elevated** scope / capability-registration gate.
+  (CDS Phase Transition Governance Package)
+- **The transition changed governance state only.** **No** maturity changed: the
+  `semantic/status` family stays at `semantic-status-rev-0002-candidate`,
+  **`Candidate`**, **`Approved`**, with **`AE1-CDS-WP016-SEMSTATUS-004`** at
+  **AE-1** for the channel-independent source/contract family only, and the nine
+  visual foundation families **VF-1 … VF-9 stay `Proposed`** with **zero** Candidate
+  visual families. **No** evidence was produced, admitted, altered, or transferred —
+  **evidence does not transfer because of a phase change**. Nothing under `tokens/`,
+  `schemas/`, `tools/`, `tests/`, `artifacts/`, or `docs/foundations/` was touched,
+  and the eleven CDS-WP-019 visual foundation documents are **unchanged**. **No**
+  capability was registered, **no** claim was made, **no** artifact reached
+  `Stable`, **no** Product Profile or pilot was activated, publication remains
+  **`Private Development`**, there are **0 tags and no release**, and **no Git write
+  was performed**. (CDS Phase Transition Governance Package)
+
+### Added
+
 - **Core Visual Foundation Architecture — the Layer-3 visual foundation now has a
   structure, and still no values.** Eleven new normative documents establish **how**
   visual foundations are structured, governed, represented, extended, validated, and

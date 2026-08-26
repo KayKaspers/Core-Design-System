@@ -7,7 +7,10 @@ must be controlled from the start of the project.
 
 - Risk range: RISK-001 … RISK-098
 - Number of risks: 98
-- Phase: Pre-Candidate Operating Enablement (Foundation / Pre-Design closed with notes)
+- Phase: Post-Candidate Foundation & Design-System Enablement (Foundation /
+  Pre-Design closed with notes) — DEC-S-127, superseding DEC-S-062 for current and
+  future state only. **No risk was added, accepted, or closed by the phase
+  transition; the register stays at 98.**
 
 Risks RISK-001 … RISK-005 were registered by CDS-WP-001. Risks
 RISK-006 … RISK-009 were registered by CDS-WP-002 alongside the scope
