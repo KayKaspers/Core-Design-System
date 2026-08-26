@@ -3,10 +3,11 @@
 - **Project:** Core Design System (CDS)
 - **Registered by:** CDS-WP-012 — Machine-Readable Source Bootstrap and Validation Contract
 - **Date:** 2026-07-17
-- **Status:** **Normative** for the canonicalization and content-digest method,
-  **pending Human-Maintainer commit** of CDS-WP-012 and ADR-0002. It decides a
-  *method*; it **implements no canonicalizer** and computes no digest. Full decision
-  record: [ADR-0002](../decisions/ADR-0002-DETERMINISTIC_JSON_SERIALIZATION.md).
+- **Status:** **Normative and in effect** for the canonicalization and
+  content-digest method; CDS-WP-012 and ADR-0002 were committed (`1ad9787`,
+  2026-07-17). It decides a *method*; **this document implements no canonicalizer and
+  computes no digest** — the separate CDS-WP-013 validator does. Full decision record:
+  [ADR-0002](../decisions/ADR-0002-DETERMINISTIC_JSON_SERIALIZATION.md).
 
 ## Purpose
 

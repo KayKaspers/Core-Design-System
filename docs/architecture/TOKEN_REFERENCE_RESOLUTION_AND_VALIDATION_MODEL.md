@@ -3,9 +3,10 @@
 - **Project:** Core Design System (CDS)
 - **Registered by:** CDS-WP-011 — Machine-Readable Source and Token Format Decision
 - **Date:** 2026-07-16
-- **Status:** **Normative** for token reference, resolution, and validation,
-  **pending Human-Maintainer commit** of ADR-0001. It defines rules and a validation
-  contract; it implements **no validator** and creates no token.
+- **Status:** **Normative and in effect** for token reference, resolution, and
+  validation; ADR-0001 was committed with CDS-WP-011 (`a81772c`, 2026-07-17). It
+  defines rules and a validation contract; it implements **no validator** and creates
+  no token — the separate CDS-WP-013 validator implements against this contract.
 
 ## Purpose
 

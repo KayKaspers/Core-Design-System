@@ -3,9 +3,10 @@
 - **Project:** Core Design System (CDS)
 - **Registered by:** CDS-WP-011 — Machine-Readable Source and Token Format Decision
 - **Date:** 2026-07-16
-- **Status:** **Normative** for token/source-set identity, metadata, and provenance,
-  **pending Human-Maintainer commit** of ADR-0001. It defines required identity; it
-  implements **no extension structure** and creates no token.
+- **Status:** **Normative and in effect** for token/source-set identity, metadata,
+  and provenance; ADR-0001 was committed with CDS-WP-011 (`a81772c`, 2026-07-17). It
+  defines required identity; it implements **no extension structure** and creates no
+  token.
 
 ## Purpose
 

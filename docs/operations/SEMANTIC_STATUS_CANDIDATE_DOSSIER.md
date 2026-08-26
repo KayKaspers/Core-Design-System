@@ -19,8 +19,10 @@
   Promotion Commit **`22fa0710e2b75df22e7b420c2f9d86bbe67b2777`** (2026-08-19) ·
   Stable **no** · claims **none** · conformance **none** · AE-2/AE-3/AE-4
   **none** · channel evidence **none** · consumer evidence **none** · pilot
-  **inactive** · publication **`Private Development`** · CDS-WP-017
-  **inactive**.
+  **inactive** · publication **`Private Development`** · CDS-WP-017 **closed**
+  (2026-08-25) · CDS-WP-018 **active** — see the
+  [work-package status note](#work-package-status-note-additive-cds-wp-018-2026-08-25)
+  and, authoritatively, [Work Packages](../../project-system/WORK_PACKAGES.md).
 - **Reading order:** every section below is **additive and dated**. Each records
   the state at its own stage and is **not rewritten** when a later stage changes
   that state. Where a section conflicts with the current state, the header above
@@ -489,3 +491,32 @@ Candidate is **bounded validation only, and is never normative**. Candidate is n
 Stable, not a claim, not conformance, not a release, and not a pilot
 authorization. See the
 [Candidate Promotion Effectivity Record](../governance/SEMANTIC_STATUS_CANDIDATE_PROMOTION_EFFECTIVITY_RECORD.md).
+
+## Work-package status note (additive, CDS-WP-018, 2026-08-25)
+
+*Additive current-state note. Every section above is preserved as written, and the
+dated `Current state` table of the CDS-WP-016 closure section is **not rewritten**.*
+
+One row of that dated table has since gone out of date: `CDS-WP-017 | INACTIVE`. It
+was true on 2026-08-19. CDS-WP-017 was subsequently authorized, executed, and
+**closed** by the Human-Maintainer commit
+`df9b8f21ff3bde4607b1c9ff7fdcbe3144366040`, and **CDS-WP-018 — Deferred Governance
+and Repository Hygiene Reconciliation** is the currently authorized work package.
+
+**Work-package activation status is not the authority of this dossier.** The
+controlled carrier for it is
+[Work Packages](../../project-system/WORK_PACKAGES.md). Where the two differ, Work
+Packages is current and the dossier row is historical.
+
+**Nothing else changes.** The Candidate state recorded above stands unaltered:
+source revision **`semantic-status-rev-0002-candidate`** · maturity **`Candidate`**
+· approval **`Approved`** · **Candidate YES** · admitted evidence
+**`AE1-CDS-WP016-SEMSTATUS-004`** at **AE-1**, source/contract scope only ·
+**Stable NO** · claims, conformance, AE-2, AE-3, AE-4, channel evidence, and
+consumer evidence all **NONE**. `AE1-CDS-WP016-SEMSTATUS-002` remains a historical
+`semantic-status-rev-0001` admission only and `AE1-CDS-WP016-SEMSTATUS-003` remains
+**NOT ADMITTED**. **Evidence never transfers across a source revision**
+(DEC-S-126).
+
+This note is **not evidence, not an admission, not an approval, and not a
+promotion**, and it grants no authority of any kind.

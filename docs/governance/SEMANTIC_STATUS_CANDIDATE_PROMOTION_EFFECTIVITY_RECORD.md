@@ -209,6 +209,32 @@ is prohibited; no certification programme exists (DEC-S-044).
 keyboard, renderer, or user was involved in any admitted evidence, so no
 environment is supported and no support claim exists (DEC-S-069).
 
+## Work-package status note (additive, CDS-WP-018, 2026-08-25)
+
+**The dated Boundaries table above is not rewritten.** It records the state as of
+**2026-08-19**, and every entry in it was true then. This note is additive and
+changes no row.
+
+One row has since gone out of date: `CDS-WP-017 | INACTIVE / NOT AUTHORIZED / NOT
+DEFINED`. CDS-WP-017 was subsequently defined, authorized, executed, and **closed**
+by the Human-Maintainer commit `df9b8f21ff3bde4607b1c9ff7fdcbe3144366040`, and
+**CDS-WP-018 — Deferred Governance and Repository Hygiene Reconciliation** is the
+currently authorized work package.
+
+**Work-package activation status is not the authority of a maturity-boundary
+table.** The controlled carrier for it is
+[Work Packages](../../project-system/WORK_PACKAGES.md); this record's authority is
+the promotion effectivity event, not the work-package roadmap. Where the two differ,
+Work Packages is current and this row is historical.
+
+**This note changes nothing else.** Every other row of the Boundaries table remains
+true and in force: **Candidate YES · Stable NO** · claims, conformance, WCAG
+conformance, AE-2, AE-3, AE-4, channel evidence, consumer evidence, and Product
+Profile authority all **NONE** · CoreOps pilot **INACTIVE** · publication
+**`Private Development`** · release **NONE** · tag **NONE**. The note is **not
+evidence, not an admission, not an approval, and not a promotion**, and it grants no
+authority of any kind.
+
 ## Related documents
 
 - [Semantic Status Candidate Approval Record](../operations/SEMANTIC_STATUS_CANDIDATE_APPROVAL_RECORD.md) — the Human-Maintainer Candidate decision instrument

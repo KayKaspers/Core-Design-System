@@ -23,19 +23,25 @@ Pre-Candidate Operating Enablement — **Foundation / Pre-Design: Closed with No
 
 ## Work package status
 
-- **Current work package: CDS-WP-017 — Post-WP-016 Roadmap, Authority and Scope
+- **Current work package: CDS-WP-018 — Deferred Governance and Repository Hygiene
   Reconciliation** (roadmap status `Next` — the current authorized work package).
-  Governance, roadmap, context, and project-state reconciliation only: it records
-  CDS-WP-016 as closed, registers CDS-WP-018 … CDS-WP-053 as `Planned` and **not
-  active**, and produces the single active
+  Documentary current-state, mirror, and repository-hygiene reconciliation only: it
+  reconciles stale `pending commit` and mirror text against the normative sources,
+  corrects the intentionally open decision areas that were already decided, repairs
+  the `.gitattributes` / `.gitignore` hygiene, and adds additive dated notes to the
+  two Candidate-era records that still carry `CDS-WP-017: INACTIVE`. It creates
+  **no** design, token, component, evidence, maturity, claim, Product Profile,
+  pilot, release, or publication effect; it **renames no phase**, **registers no
+  capability**, and **activates no later work package**.
+- **Preceding work package: CDS-WP-017 — Post-WP-016 Roadmap, Authority and Scope
+  Reconciliation.** **Completed**; closure became effective with the
+  Human-Maintainer commit `df9b8f21ff3bde4607b1c9ff7fdcbe3144366040`. It recorded
+  CDS-WP-016 as closed, registered CDS-WP-018 … CDS-WP-053 as `Planned` and **not
+  active**, and produced the single active
   [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
-  It creates **no** design, token, component, evidence, maturity, claim, Product
-  Profile, pilot, release, or publication effect, and **activates no later work
-  package**.
-- **Next planned work package: CDS-WP-018 — Deferred Governance and Repository
-  Hygiene Reconciliation** — **`Planned`, not active, not authorized, work not
-  started.**
-- Preceding work package: **CDS-WP-016 — Semantic Status Foundation
+- **Next planned work package: CDS-WP-019 — Core Visual Foundation Architecture** —
+  **`Planned`, not active, not authorized, work not started.**
+- Earlier work package: **CDS-WP-016 — Semantic Status Foundation
   Independent Evidence Review and Candidate Gate.** Its review work was
   **executed**: Independent Review **PASS**, Candidate Recommendation **GO**.
   **GO is not a Candidate award.**
@@ -72,7 +78,8 @@ Pre-Candidate Operating Enablement — **Foundation / Pre-Design: Closed with No
   `1fc53ae5afa40807e1950171ab700b0860ee581e`, and closure became effective there.
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
-  CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**
+  CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**,
+  **CDS-WP-017**
 
 ## Operating enablement status
 
@@ -132,8 +139,10 @@ Documents:
 
 ## Machine-readable source status
 
-- Machine-readable source status: **Decided, not implemented** (CDS-WP-011,
-  2026-07-16; ADR-0001 pending Human-Maintainer commit)
+- Machine-readable source status: **Decided and committed** (CDS-WP-011,
+  2026-07-16; ADR-0001 committed `a81772c`, 2026-07-17). It was *not implemented* at
+  CDS-WP-011; it **has since been implemented** — see the bootstrap, validator, and
+  Semantic Status Source Set sections below.
 - Token Format Profile: **DTCG 2025.10-based CDS profile**
 - DTCG binding: **2025.10** (Format, Color, Resolver modules; Final Community Group
   Report — **not** a W3C Standard)
@@ -147,10 +156,12 @@ Documents:
 - Validation layers: **4** (V1 Syntax · V2 DTCG · V3 CDS Profile · V4 Semantic/
   Governance)
 - ADR count: **3** (ADR-0001, ADR-0002, ADR-0003)
-- **No token value implemented. The schema and resolver contracts created by
-  CDS-WP-012 are Experimental and carry no Candidate/Stable status; the offline
-  validator exists since CDS-WP-013 (Experimental; its evidence independently
-  reviewed by CDS-WP-016 — PASS); publication state `Private Development`.**
+- **No visual or design token value is implemented** — the only implemented token
+  source set is the non-visual `semantic/status` set (CDS-WP-015). **The schema and
+  resolver contracts created by CDS-WP-012 are Experimental and carry no
+  Candidate/Stable status; the offline validator exists since CDS-WP-013
+  (Experimental; its evidence independently reviewed by CDS-WP-016 — PASS);
+  publication state `Private Development`.**
 
 Documents:
 [ADR-0001](../docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md) ·
@@ -165,7 +176,7 @@ Documents:
 ## Machine-readable bootstrap status
 
 - Machine-readable bootstrap: **Implemented, Experimental** (CDS-WP-012, 2026-07-17;
-  ADR-0002 pending Human-Maintainer commit) — no Candidate status (DEC-S-092)
+  ADR-0002 committed `1ad9787`) — no Candidate status (DEC-S-092)
 - Token Document Schema: **Present** · Source-Set Manifest Schema: **Present** ·
   Resolver Schema: **Present** · Validation Case Schema: **Present** (4 CDS-owned JSON
   Schema Draft 2020-12 contracts; stable `tag:` `$id`s; local `$ref`; offline)
@@ -186,8 +197,8 @@ Documents:
 ## Offline validator status (CDS-WP-013)
 
 - Validator status: **Implemented, Experimental; its evidence independently reviewed
-  by CDS-WP-016 (Independent Review PASS)** (CDS-WP-013, 2026-07-17; ADR-0003 pending
-  Human-Maintainer commit)
+  by CDS-WP-016 (Independent Review PASS)** (CDS-WP-013, 2026-07-17; ADR-0003
+  committed `a7f2691`)
 - Validator runtime: **Python 3.12.10** (CPython, win32; requirement ≥ 3.11) ·
   Validator version: **0.1.0** · Entry point: `python -m tools.cds_validator`
 - Dependency versions (exact; [lock](../requirements-validator.lock)):
@@ -203,7 +214,10 @@ Documents:
 - Evidence: [results](../artifacts/validation/wp013-fixture-results.json) ·
   [digests](../artifacts/validation/wp013-fixture-digests.json) ·
   [Execution Review](../docs/reviews/OFFLINE_TOKEN_VALIDATOR_EXECUTION_REVIEW.md) —
-  **executor-produced, `independentReviewState: pending`** (DEC-S-103)
+  **executor-produced**. The artifacts carry the frozen field
+  `independentReviewState: pending` from their CDS-WP-013 production run and are
+  **not edited**; the **evidence has since been independently reviewed by
+  CDS-WP-016 (PASS)**, so the DEC-S-103 unreviewed state is superseded.
 - **No full-DTCG conformance statement (bounded V2, DEC-S-098); no Candidate/Stable
   artifact (DEC-S-104); publication state `Private Development`; current claims:
   None.**
@@ -235,7 +249,8 @@ Documents:
   made effective by Promotion Commit `22fa0710e2b75df22e7b420c2f9d86bbe67b2777` on
   2026-08-19. At CDS-WP-014 it was **Not Candidate**, with 10 prerequisites and none
   met
-- Validator independent review: **Pending** (WP-013 evidence executor-produced)
+- Validator independent review: **Complete — PASS** (the executor-produced WP-013
+  evidence was independently reviewed by CDS-WP-016)
 - **Publication state `Private Development`; current claims: None.**
 
 Documents:
@@ -600,7 +615,6 @@ No final decision exists for:
 - light theme,
 - design tool,
 - component framework,
-- token format,
 - token build system,
 - documentation platform,
 - package architecture,
@@ -609,13 +623,26 @@ No final decision exists for:
 - public release,
 - contribution model,
 - long-term compatibility commitments,
-- concrete product signatures,
-- versioning and maturity model,
-- conformance and adoption policy,
-- product profile and override governance.
+- concrete product signatures.
 
 These areas remain open until an explicitly authorized work package decides
 them (see DEC-S-003).
+
+**Areas that are no longer open.** Four areas that this list previously carried
+have since been decided and are governed by committed normative sources. They are
+recorded here so the list is not read as still open:
+
+| Area | Decided by | Normative source |
+| --- | --- | --- |
+| Token format (machine-readable source format) | CDS-WP-011 · ADR-0001 · DEC-S-073 … DEC-S-082 | [ADR-0001](../docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md) · [CDS Token Format Profile](../docs/architecture/CDS_TOKEN_FORMAT_PROFILE.md) |
+| Versioning and maturity model | CDS-WP-006 · DEC-S-035 … DEC-S-040 | [Artifact Maturity Lifecycle](../docs/governance/ARTIFACT_MATURITY_LIFECYCLE.md) · [Versioning, Compatibility and Deprecation Policy](../docs/governance/VERSIONING_COMPATIBILITY_AND_DEPRECATION_POLICY.md) |
+| Conformance and adoption policy | CDS-WP-006 · DEC-S-044 | [Adoption, Conformance and Claims Policy](../docs/governance/ADOPTION_CONFORMANCE_AND_CLAIMS_POLICY.md) |
+| Product Profile and override governance | CDS-WP-005 · CDS-WP-006 · DEC-S-042, DEC-S-043 | [Exception and Product Profile Governance](../docs/governance/EXCEPTION_AND_PRODUCT_PROFILE_GOVERNANCE.md) · [Product Profile and Extension Model](../docs/architecture/PRODUCT_PROFILE_AND_EXTENSION_MODEL.md) |
+
+**A decided model is not an applied one.** No Product Profile exists or is
+activated, no adoption or conformance claim is valid, no artifact is `Stable`, and
+no version has been released. **Token build system** remains open and is distinct
+from the decided token *format*.
 
 ## Related documents
 

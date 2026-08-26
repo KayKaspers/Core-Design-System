@@ -3,10 +3,12 @@
 - **Project:** Core Design System (CDS)
 - **Registered by:** CDS-WP-012 — Machine-Readable Source Bootstrap and Validation Contract
 - **Date:** 2026-07-17
-- **Status:** **Normative** for the CDS machine-readable validation contract,
-  **pending Human-Maintainer commit** of CDS-WP-012 and ADR-0002. It defines what a
-  future offline validator must check; it **implements no validator** and executes no
-  validation. It operationalizes DEC-S-078 and the
+- **Status:** **Normative and in effect** for the CDS machine-readable validation
+  contract; CDS-WP-012 and ADR-0002 were committed (`1ad9787`, 2026-07-17). It defines
+  what an offline validator must check; **this document implements no validator and
+  executes no validation** — the separate CDS-WP-013 `tools/cds_validator`
+  implementation does, and on any divergence this contract wins (DEC-S-102). It
+  operationalizes DEC-S-078 and the
   [Token Reference, Resolution and Validation Model](TOKEN_REFERENCE_RESOLUTION_AND_VALIDATION_MODEL.md).
 
 ## Purpose

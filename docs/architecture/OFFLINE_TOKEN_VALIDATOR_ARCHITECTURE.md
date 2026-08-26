@@ -89,8 +89,12 @@ On a Semantic Status document (root `status` group) the objective V4 checker
 evaluates a maturity/approval state machine over the CDS extension payload:
 
 - **Experimental source:** `maturityState: Experimental` with
-  `approvalState: Unapproved` (or absent metadata) — coherent, the committed
-  default.
+  `approvalState: Unapproved` (or absent metadata) — coherent, and the default
+  for any source that has not been promoted. It was the committed state of
+  `semantic/status` until the exact-byte Promotion Commit
+  `22fa0710e2b75df22e7b420c2f9d86bbe67b2777` (2026-08-19); that source now
+  declares the Candidate combination described next. **This arm of the state
+  machine is unchanged** — it still governs every unpromoted source.
 - **Candidate source:** `maturityState: Candidate` **and** `approvalState:
   Approved`, **and** a `sourceRevision` matching the Candidate-revision pattern
   `^semantic-status-rev-[0-9]{4}-candidate$`, **and** not a fixture

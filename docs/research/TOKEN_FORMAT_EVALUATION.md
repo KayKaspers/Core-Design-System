@@ -6,8 +6,9 @@
 - **Status:** **Research evidence — NON-normative.** Explains *why* the format
   decision is what it is. The binding decision lives in
   [ADR-0001](../decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md) and the
-  normative profile, and takes effect only on Human-Maintainer commit. **No numeric
-  score is used** (a single disqualifying property outweighs many minor advantages).
+  normative profile, both committed with CDS-WP-011 (`a81772c`, 2026-07-17); this
+  evaluation remains non-normative and decides nothing. **No numeric score is used**
+  (a single disqualifying property outweighs many minor advantages).
 
 ## Methodology
 

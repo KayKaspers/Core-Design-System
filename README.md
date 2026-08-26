@@ -61,7 +61,7 @@ implemented** (CDS-WP-015): the
 with 25 non-visual tokens, a 24/24 validation harness, 25/25 DE/EN terminology,
 and a [Candidate Dossier](docs/operations/SEMANTIC_STATUS_CANDIDATE_DOSSIER.md)
 — **executor-produced evidence, since independently reviewed; not Candidate at
-that milestone**. The authorized work package is **CDS-WP-016 — Semantic Status
+that milestone**. The earlier authorized work package was **CDS-WP-016 — Semantic Status
 Foundation Independent Evidence Review and Candidate Gate**; its review work is
 **executed**:
 **Independent Review PASS**, **Candidate Recommendation GO**. **GO is not a Candidate
@@ -131,12 +131,13 @@ and the [AE1-004 Admission Record](docs/governance/SEMANTIC_STATUS_AE1_004_ADMIS
 **Candidate is bounded validation only and is never normative** — it is not
 Stable, not a claim, not conformance, and not a release.
 
-**CDS-WP-016 is closed** — the Human-Maintainer commit
-`1fc53ae5afa40807e1950171ab700b0860ee581e` integrated its post-promotion
-current-state reconciliation. The active work package is **CDS-WP-017 — Post-WP-016
-Roadmap, Authority and Scope Reconciliation**, a governance and roadmap
-reconciliation with no design, evidence, maturity, claim, or publication effect.
-**CDS-WP-018 … CDS-WP-053 are planned only — not active, not authorized, work not
+**CDS-WP-016 and CDS-WP-017 are closed** — the Human-Maintainer commits
+`1fc53ae5afa40807e1950171ab700b0860ee581e` and
+`df9b8f21ff3bde4607b1c9ff7fdcbe3144366040` integrated their reconciliations. The
+active work package is **CDS-WP-018 — Deferred Governance and Repository Hygiene
+Reconciliation**, a documentary current-state, mirror, and hygiene reconciliation
+with no design, evidence, maturity, claim, or publication effect.
+**CDS-WP-019 … CDS-WP-053 are planned only — not active, not authorized, work not
 started** — and are recorded in the
 [Post-Candidate Development Roadmap](docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
 
@@ -160,12 +161,22 @@ No final decision exists for:
 - package architecture and repository split,
 - license, public release, and contribution model,
 - long-term compatibility commitments,
-- concrete product signatures,
-- versioning and maturity model,
-- conformance and adoption policy.
+- concrete product signatures.
 
 These areas remain open until an explicitly authorized work package decides
 them.
+
+The **versioning and maturity model** and the **conformance and adoption policy**
+were previously listed here and are **no longer open**: both were decided by
+CDS-WP-006 and are governed by the
+[Artifact Maturity Lifecycle](docs/governance/ARTIFACT_MATURITY_LIFECYCLE.md), the
+[Versioning, Compatibility and Deprecation Policy](docs/governance/VERSIONING_COMPATIBILITY_AND_DEPRECATION_POLICY.md),
+and the
+[Adoption, Conformance and Claims Policy](docs/governance/ADOPTION_CONFORMANCE_AND_CLAIMS_POLICY.md).
+The **token format** is likewise decided (CDS-WP-011, ADR-0001); the **token build
+system** above is a different question and stays open. **A decided model is not an
+applied one** — no version has been released, no artifact is `Stable`, and no
+adoption or conformance claim is valid.
 
 ## Scope
 
@@ -565,17 +576,25 @@ maturity or approval it does not hold.
   2026-08-19. **Candidate is now YES** for that one family at
   `semantic-status-rev-0002-candidate`; every other artifact remains AE-0 and no
   artifact is Stable.
-- **Current:** **CDS-WP-017 — Post-WP-016 Roadmap, Authority and Scope
-  Reconciliation** — the authorized roadmap position. It reconciles the state
-  reached after CDS-WP-016 with the accepted forward planning basis so that exactly
-  one active future sequence exists, and records the twelve development arcs,
-  milestones **M1 … M12**, standing gates, and requirement classification model.
-  It creates **no** design, token, component, evidence, maturity, claim, Product
-  Profile, pilot, release, or publication effect.
-- **Planned:** **CDS-WP-018 … CDS-WP-053** — **not active, not authorized, work not
-  started.** The immediate next planned work package is **CDS-WP-018 — Deferred
-  Governance and Repository Hygiene Reconciliation**, which remains inactive until
-  separately authorized by the Human Maintainer.
+- **CDS-WP-017 — Post-WP-016 Roadmap, Authority and Scope Reconciliation:**
+  **closed** by the Human-Maintainer commit
+  `df9b8f21ff3bde4607b1c9ff7fdcbe3144366040`. It reconciled the state reached after
+  CDS-WP-016 with the accepted forward planning basis so that exactly one active
+  future sequence exists, and recorded the twelve development arcs, milestones
+  **M1 … M12**, standing gates, and requirement classification model. It created
+  **no** design, token, component, evidence, maturity, claim, Product Profile,
+  pilot, release, or publication effect.
+- **Current:** **CDS-WP-018 — Deferred Governance and Repository Hygiene
+  Reconciliation** — the authorized roadmap position. A bounded documentary pass:
+  it reconciles stale current-state and mirror text against the normative sources,
+  corrects already-decided areas still listed as open, and repairs repository
+  hygiene. It creates **no** design, token, component, evidence, maturity, claim,
+  Product Profile, pilot, release, or publication effect; it **renames no phase**
+  and **registers no capability**.
+- **Planned:** **CDS-WP-019 … CDS-WP-053** — **not active, not authorized, work not
+  started.** The immediate next planned work package is **CDS-WP-019 — Core Visual
+  Foundation Architecture**, which remains inactive until separately authorized by
+  the Human Maintainer.
 
 The full controlled roadmap is in
 [project-system/WORK_PACKAGES.md](project-system/WORK_PACKAGES.md); the forward

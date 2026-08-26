@@ -6,22 +6,27 @@ Controlled work-package roadmap for the Core Design System (CDS).
   Closed with Notes**
 - **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
-  CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**
+  CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**,
+  **CDS-WP-017**
 - **CDS-WP-016 is `Completed`.** Its Candidate authority sequence completed
   (`AE1-CDS-WP016-SEMSTATUS-004` admitted at AE-1, Human-Maintainer Candidate
   approval granted, exact-byte **Promotion Commit
   `22fa0710e2b75df22e7b420c2f9d86bbe67b2777`** on 2026-08-19), and its
   post-promotion current-state reconciliation was closed by the Human-Maintainer
   commit **`1fc53ae5afa40807e1950171ab700b0860ee581e`**.
-- **Current work package:** **CDS-WP-017 — Post-WP-016 Roadmap, Authority and Scope
-  Reconciliation.** Governance, roadmap, and scope reconciliation only; it creates
-  no design, token, component, evidence, claim, or maturity.
-- **Next planned work package:** **CDS-WP-018 — Deferred Governance and Repository
-  Hygiene Reconciliation.** **`Planned`, not active, and not authorized**; it starts
-  only on separate Human-Maintainer authorization.
+- **CDS-WP-017 is `Completed`.** Its reconciliation was integrated by the
+  Human-Maintainer commit **`df9b8f21ff3bde4607b1c9ff7fdcbe3144366040`**, and
+  closure became effective there.
+- **Current work package:** **CDS-WP-018 — Deferred Governance and Repository
+  Hygiene Reconciliation.** Documentary current-state, mirror, and repository
+  hygiene reconciliation only; it creates no design, token, component, evidence,
+  claim, or maturity, renames no phase, and registers no capability.
+- **Next planned work package:** **CDS-WP-019 — Core Visual Foundation
+  Architecture.** **`Planned`, not active, and not authorized**; it starts only on
+  separate Human-Maintainer authorization.
 - **Forward roadmap:** CDS-WP-017 … CDS-WP-053 are recorded in the
   [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
-  **CDS-WP-018 … CDS-WP-053 are `Planned` only.**
+  **CDS-WP-019 … CDS-WP-053 are `Planned` only.**
 
 ## Status values
 
@@ -56,8 +61,8 @@ review, and authority state are recorded per work package below.
 | CDS-WP-014 | Semantic Status Foundation Contract and First Candidate Plan | Completed | CDS-WP-013 |
 | CDS-WP-015 | Semantic Status Foundation Source Set and Candidate Evidence | Completed | CDS-WP-014 |
 | CDS-WP-016 | Semantic Status Foundation Independent Evidence Review and Candidate Gate | Completed | CDS-WP-015 |
-| **CDS-WP-017** | **Post-WP-016 Roadmap, Authority and Scope Reconciliation** | **Next** | CDS-WP-016 |
-| CDS-WP-018 | Deferred Governance and Repository Hygiene Reconciliation | Planned | CDS-WP-017 |
+| CDS-WP-017 | Post-WP-016 Roadmap, Authority and Scope Reconciliation | Completed | CDS-WP-016 |
+| **CDS-WP-018** | **Deferred Governance and Repository Hygiene Reconciliation** | **Next** | CDS-WP-017 |
 | CDS-WP-019 | Core Visual Foundation Architecture | Planned | CDS-WP-018 |
 | CDS-WP-020 | Reference and Semantic Token Foundation | Planned | CDS-WP-019 |
 | CDS-WP-021 | Adaptive Layout and Responsive Foundation | Planned | CDS-WP-020 |
@@ -96,11 +101,11 @@ review, and authority state are recorded per work package below.
 
 ### How to read this table
 
-**`Planned` is not `Active` and not authorization.** CDS-WP-018 … CDS-WP-053 are
+**`Planned` is not `Active` and not authorization.** CDS-WP-019 … CDS-WP-053 are
 recorded so the direction is legible and so no competing roadmap can arise. Work on
 them has **not started**, and each is executable only on an explicit Nova prompt
 **and** Human-Maintainer authorization, one work package at a time. Listing
-CDS-WP-018 immediately after CDS-WP-017 activates nothing.
+CDS-WP-019 immediately after CDS-WP-018 activates nothing.
 
 The `Depends on` column records **sequence intent**, not permission. Four entries
 additionally require a **prior extension of the registered CDS scope** through an
@@ -497,7 +502,8 @@ authorization.
 
 ### CDS-WP-017 — Post-WP-016 Roadmap, Authority and Scope Reconciliation
 
-**Status:** Next *(the current authorized work package)*
+**Status:** Completed *(closed by Human-Maintainer commit
+`df9b8f21ff3bde4607b1c9ff7fdcbe3144366040`)*
 
 Reconciles the repository state actually reached after CDS-WP-016 with the accepted
 forward planning basis, so that exactly **one** active future work-package sequence
@@ -532,12 +538,42 @@ integration, release, tag, or publication; and performs no Git write.**
 
 ### CDS-WP-018 — Deferred Governance and Repository Hygiene Reconciliation
 
-**Status:** Planned — **not active, not authorized, work not started**
+**Status:** Next *(the current authorized work package)*
 
-Registered as the immediate next planned work package so that the deferred findings
-have a named destination. **CDS-WP-017 does not scope it in detail and does not
-begin any part of it.** It becomes executable only on separate Human-Maintainer
-authorization.
+A bounded, documentary current-state, mirror, and repository-hygiene reconciliation
+pass following the closure of CDS-WP-017. It takes up the findings CDS-WP-017 routed
+to it, and nothing beyond that class.
+
+- Reconciles **stale current-state and mirror text** against the normative sources:
+  `pending Human-Maintainer commit` statements for artifacts the repository history
+  shows as committed (**NF-R4-OBS-001**), the `PROJECT_BRAIN.md` risk-status mirror
+  for RISK-066/067/068/069/071 (**NF-R3-OBS-001**), the post-Candidate precision of
+  the validator-architecture maturity/approval wording (**NF-R5R-OBS-001**), and the
+  research-baseline status wording (**R3R-003**).
+- Corrects the **intentionally open decision areas** lists that still carried
+  already-decided areas — token format, versioning and maturity model, conformance
+  and adoption policy, product profile and override governance (**F-017-01**,
+  **F-017-02**).
+- Repairs **repository hygiene**: the UTF-8 BOM on `.gitattributes` and `.gitignore`
+  and the missing Python ignore entries (**NF-R4-OBS-002**, **NF-R5R-OBS-003**).
+- Adds **additive, dated current-state notes** to the two Candidate-era records that
+  still carry `CDS-WP-017: INACTIVE` (**R1-F-01**) — neither dated table is
+  rewritten.
+- Corrects the self-referentially imprecise "none of these identifiers occurs in
+  this repository" wording (**R2-N-01**) and completes the **F-017-04** disclosure
+  with its stale next-work-package references (**R2-N-02**).
+
+**Explicitly outside CDS-WP-018.** The phase label set by **DEC-S-062** is **not
+renamed** and no Decision superseding it is created (**F-017-04**); no capability is
+registered for audio/sonic, haptic, multimodal, AI/agent, or safety subject matter
+(**F-017-03**, **R1-F-05**); and the five `AE1-CDS-WP016-SEMSTATUS-004`-bound
+Foundation documents, the ADRs, the Decision Index, and every evidence artifact are
+**not** edited.
+
+**CDS-WP-018 creates no design, token, component, or visual value; produces and
+admits no evidence; changes no maturity; accepts or closes no risk; adds no ADR or
+Decision; makes no claim; activates no Product Profile, pilot, consumer integration,
+release, tag, or publication; and performs no Git write.**
 
 ## Roadmap evolution
 

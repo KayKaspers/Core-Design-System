@@ -68,9 +68,14 @@ approved.
   model finalized**; no risk accepted or closed
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
-  CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015
-- Current work package: **CDS-WP-016 — Semantic Status Foundation Independent Evidence
-  Review and Candidate Gate** (the authorized work package). Its review work is
+  CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**,
+  **CDS-WP-017**
+- Current work package: **CDS-WP-018 — Deferred Governance and Repository Hygiene
+  Reconciliation** (the authorized work package) — documentary current-state,
+  mirror, and repository-hygiene reconciliation only; it renames no phase,
+  registers no capability, and activates no later work package.
+- Closed work package: **CDS-WP-016 — Semantic Status Foundation Independent Evidence
+  Review and Candidate Gate.** Its review work was
   **executed** — **Independent Review PASS**, **Candidate Recommendation GO**;
   **GO is not a Candidate award**. The **Nova Candidate Maturity Review** then
   returned **NO-GO** (Candidate Accessibility Gate unmet), the read-only gap
@@ -102,8 +107,9 @@ approved.
 | Stable · claims · conformance | **No** · **None** · **None** |
 | AE-2 / AE-3 / AE-4 · channel · consumer evidence | **None** everywhere |
 | **CDS-WP-016** | **Closed** — post-promotion closure reconciliation integrated by the Human-Maintainer commit `1fc53ae5afa40807e1950171ab700b0860ee581e` |
-| **CDS-WP-017** | **Active** — Post-WP-016 Roadmap, Authority and Scope Reconciliation (governance/roadmap only; no design, evidence, maturity, claim, or publication effect) |
-| **CDS-WP-018 … CDS-WP-053** | **PLANNED / NOT ACTIVE / NOT AUTHORIZED** — work not started |
+| **CDS-WP-017** | **Closed** — Post-WP-016 Roadmap, Authority and Scope Reconciliation, integrated by the Human-Maintainer commit `df9b8f21ff3bde4607b1c9ff7fdcbe3144366040` (governance/roadmap only; no design, evidence, maturity, claim, or publication effect) |
+| **CDS-WP-018** | **Active** — Deferred Governance and Repository Hygiene Reconciliation (documentary current-state, mirror, and hygiene reconciliation only; no phase rename, no capability registration) |
+| **CDS-WP-019 … CDS-WP-053** | **PLANNED / NOT ACTIVE / NOT AUTHORIZED** — work not started |
 
 **F-001 lifecycle-metadata resolution (Human Maintainer, 2026-08-19).** The five
 `AE1-CDS-WP016-SEMSTATUS-004`-bound normative Foundation documents remain
@@ -355,12 +361,12 @@ Details: [Decision Index](../docs/decisions/DECISION_INDEX.md) ·
 | RISK-063 | Transformation-tool lock-in. | Monitored |
 | RISK-064 | CDS schema contract incompleteness. | Monitored |
 | RISK-065 | Synthetic fixtures mistaken for design tokens. | Monitored |
-| RISK-066 | Schema and validator divergence. | Monitored |
-| RISK-067 | Canonicalization and digest mismatch. | Monitored |
-| RISK-068 | Duplicate-key ambiguity. | Monitored |
-| RISK-069 | Manifest and resolver graph inconsistency. | Monitored |
+| RISK-066 | Schema and validator divergence. | **Mitigating** |
+| RISK-067 | Canonicalization and digest mismatch. | **Mitigating** |
+| RISK-068 | Duplicate-key ambiguity. | **Mitigating** |
+| RISK-069 | Manifest and resolver graph inconsistency. | **Mitigating** |
 | RISK-070 | Validation fixture coverage gap. | Monitored |
-| RISK-071 | Validation expectation drift. | Monitored |
+| RISK-071 | Validation expectation drift. | **Mitigating** |
 | RISK-072 | Digest mistaken for authenticity. | Monitored |
 
 **Owner model finalized** (DEC-S-045): Human Maintainer accountable · Nova
@@ -587,9 +593,15 @@ No final decision exists for: logo, logo architecture, colors, typography,
 icons, illustration, imagery, dark theme, light theme, design tool, component
 framework, token build system, documentation platform, package
 architecture, repository split, license, public release, contribution model,
-long-term compatibility commitments, concrete product signatures, versioning
-and maturity model, conformance and adoption policy, or product profile and
-override governance.
+long-term compatibility commitments, or concrete product signatures.
+
+**No longer open** (previously listed here): **versioning and maturity model**
+(CDS-WP-006, DEC-S-035…040), **conformance and adoption policy** (CDS-WP-006,
+DEC-S-044), and **Product Profile and override governance** (CDS-WP-005/006,
+DEC-S-042, DEC-S-043) — as is the **token format** (CDS-WP-011, ADR-0001), which is
+distinct from the still-open token *build system*. **A decided model is not an
+applied one:** no Product Profile is activated, no adoption or conformance claim is
+valid, no artifact is `Stable`, and no version has been released.
 
 ## Accessibility policy (CDS-WP-007)
 
@@ -826,8 +838,12 @@ minimal additive validation-case-schema correction):
 
 ## Next step
 
+**CDS-WP-018 — Deferred Governance and Repository Hygiene Reconciliation** is the
+authorized work package. The sections below record how the repository reached that
+point.
+
 **CDS-WP-016 — Semantic Status Foundation Independent Evidence Review and
-Candidate Gate** is the authorized work package and its review work is **executed**:
+Candidate Gate** is closed, and its review work was **executed**:
 the WP-013/WP-015 evidence was independently reviewed by a separately authorized
 reviewer (re-execution and artifact assessment), together with
 traceability/accessibility/content/dossier review, producing the Candidate-gate
@@ -909,26 +925,40 @@ pilot**.
 `1fc53ae5afa40807e1950171ab700b0860ee581e` integrated the post-promotion
 current-state reconciliation, and closure became effective there.
 
-**The active work package is CDS-WP-017 — Post-WP-016 Roadmap, Authority and Scope
-Reconciliation.** It reconciles the state actually reached with the accepted forward
-planning basis so that exactly one active future work-package sequence exists:
-CDS-WP-016 recorded as closed, CDS-WP-017 recorded as active, and **CDS-WP-018 …
-CDS-WP-053 recorded as `Planned`, not active, not authorized, work not started** —
-a contiguous, gap-free, duplicate-free sequence held in the
+**CDS-WP-017 — Post-WP-016 Roadmap, Authority and Scope Reconciliation is closed.**
+It reconciled the state actually reached with the accepted forward planning basis so
+that exactly one active future work-package sequence exists: CDS-WP-016 recorded as
+closed, CDS-WP-017 recorded as active at the time, and **CDS-WP-018 … CDS-WP-053
+recorded as `Planned`, not active, not authorized, work not started** — a
+contiguous, gap-free, duplicate-free sequence held in the
 [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md)
 together with its arcs, milestones **M1 … M12**, architecture-layer mapping, standing
-gates, and requirement classification model.
+gates, and requirement classification model. Closure became effective with the
+Human-Maintainer commit `df9b8f21ff3bde4607b1c9ff7fdcbe3144366040`.
 
-CDS-WP-017 produces and admits **no evidence**, changes **no maturity**, makes
-**no claim**, activates **no Product Profile, pilot, consumer integration, release,
-tag, or publication**, and **activates no later work package**. Its own closure is
-not the executor's to make: a fresh independent review, Nova adjudication, and a
-Human-Maintainer integration commit. Uncommitted executor output changes no
-authoritative work-package status, and a review PASS is not a commit.
+**The active work package is CDS-WP-018 — Deferred Governance and Repository
+Hygiene Reconciliation.** It takes up the findings CDS-WP-017 routed forward without
+repairing — routing is not repair — and reconciles them within a bounded documentary
+scope: stale `pending commit` and mirror text against the normative sources
+(**NF-R4-OBS-001**, **NF-R3-OBS-001**, **NF-R5R-OBS-001**, **R3R-003**), the
+already-decided areas still listed as intentionally open (**F-017-01**,
+**F-017-02**), repository hygiene on `.gitattributes` and `.gitignore`
+(**NF-R4-OBS-002**, **NF-R5R-OBS-003**), additive dated notes on the two
+Candidate-era records that still carry `CDS-WP-017: INACTIVE` (**R1-F-01**), and the
+imprecise occurrence and disclosure wording (**R2-N-01**, **R2-N-02**).
 
-**The next planned work package is CDS-WP-018 — Deferred Governance and Repository
-Hygiene Reconciliation**, and it **remains inactive until separately authorized by
-the Human Maintainer**. Any further step begins only on an explicit Nova prompt and
+CDS-WP-018 produces and admits **no evidence**, changes **no maturity**, makes
+**no claim**, **renames no phase** and creates no Decision superseding DEC-S-062,
+**registers no capability** for audio/sonic, haptic, multimodal, AI/agent, or safety
+subject matter, activates **no Product Profile, pilot, consumer integration,
+release, tag, or publication**, and **activates no later work package**. Its own
+closure is not the executor's to make: a fresh independent review, Nova
+adjudication, and a Human-Maintainer integration commit. Uncommitted executor output
+changes no authoritative work-package status, and a review PASS is not a commit.
+
+**The next planned work package is CDS-WP-019 — Core Visual Foundation
+Architecture**, and it **remains inactive until separately authorized by the Human
+Maintainer**. Any further step begins only on an explicit Nova prompt and
 Human-Maintainer authorization.
 
 ## Related documents

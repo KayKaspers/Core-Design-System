@@ -26,7 +26,8 @@ library, or a design project scoped exclusively to CoreOps.
 - First reference consumer: CoreOps (not the sole design target)
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
-  CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015
+  CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**,
+  **CDS-WP-017**
 - Accessibility support baseline: **A11Y-BL-001 declared and committed**
   (CDS-WP-010) — a **test contract, not evidence**; **no test has been run in any
   baseline environment**, and every artifact is AE-0 except the channel-independent
@@ -36,14 +37,15 @@ library, or a design project scoped exclusively to CoreOps.
   bootstrap is implemented** (CDS-WP-012, ADR-0002): 4 CDS-owned JSON Schema 2020-12
   contracts, 15 synthetic fixtures, a V1–V4 validation contract, and the RFC 8785 +
   SHA-256 serialization decision — **Experimental, no real token value**.
-- Offline validator: **implemented and executed** (CDS-WP-013, ADR-0003, pending
-  commit) — `python -m tools.cds_validator` on a pinned Python/`jsonschema`/`rfc8785`
+- Offline validator: **implemented and executed** (CDS-WP-013, ADR-0003, committed
+  `a7f2691`) — `python -m tools.cds_validator` on a pinned Python/`jsonschema`/`rfc8785`
   stack; 71/71 unit tests; **15/15 validation cases matching committed expected
   outcomes**; 14 fixture digests. **Executor-produced, independently unreviewed
   (DEC-S-103); bounded DTCG V2 coverage — never a full-DTCG statement (DEC-S-098);
   Experimental, no Candidate (DEC-S-104).**
-- Semantic Status Foundation: **Contract defined** (CDS-WP-014, pending commit) —
-  five independent axes (`condition`/`severity`/`confidence`/`freshness`/`evidence`),
+- Semantic Status Foundation: **Contract defined** (CDS-WP-014, committed
+  `943229d`) — five independent axes
+  (`condition`/`severity`/`confidence`/`freshness`/`evidence`),
   a fixed 25-value vocabulary with explicit `unknown`, ten invariants, combination/
   conflict rules, a text-first communication/accessibility contract, and a
   value-neutral token contract. At CDS-WP-014 this was **Experimental, with no
@@ -63,8 +65,8 @@ library, or a design project scoped exclusively to CoreOps.
   (24/24 matches), independently unreviewed at the time (DEC-S-121); not Candidate
   at that milestone.** DEC-S-124 remains binding: **never represent any artifact as
   carrying a maturity or approval it does not hold.**
-- Current work package: **CDS-WP-016 — Semantic Status Foundation Independent Evidence
-  Review and Candidate Gate** (the authorized work package; its review work is
+- Closed work package: **CDS-WP-016 — Semantic Status Foundation Independent Evidence
+  Review and Candidate Gate** (the then-authorized work package; its review work is
   **executed**). Wherever this file records the WP-013/WP-015 evidence as
   independently unreviewed under DEC-S-103 or DEC-S-121, that state is **superseded**:
   the evidence **has since been reviewed independently**
@@ -158,24 +160,35 @@ library, or a design project scoped exclusively to CoreOps.
   work package) was integrated by the Human-Maintainer commit
   **`1fc53ae5afa40807e1950171ab700b0860ee581e`**, and closure became effective
   there.
-- **Current work package: CDS-WP-017 — Post-WP-016 Roadmap, Authority and Scope
-  Reconciliation.** Governance, roadmap, context, and project-state reconciliation
-  only. It records CDS-WP-016 as closed, registers **CDS-WP-018 … CDS-WP-053 as
-  `Planned`, not active, and not authorized**, and produces the single active
+- **CDS-WP-017 state: CLOSED.** Post-WP-016 Roadmap, Authority and Scope
+  Reconciliation — governance, roadmap, context, and project-state reconciliation
+  only. It recorded CDS-WP-016 as closed, registered **CDS-WP-018 … CDS-WP-053 as
+  `Planned`, not active, and not authorized**, and produced the single active
   [Post-Candidate Development Roadmap](docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md)
   (twelve arcs, milestones M1 … M12, architecture-layer mapping, standing gates,
   requirement classification model, PB001 disposition, deferred-finding routing).
-  It creates **no** design, token, component, or visual value; produces and admits
-  **no** evidence; changes **no** maturity; accepts or closes **no** risk; adds
-  **no** ADR or Decision; makes **no** claim; and activates **no** Product Profile,
-  pilot, consumer integration, release, tag, or publication.
-- **CDS-WP-018 … CDS-WP-053: PLANNED / NOT ACTIVE / NOT AUTHORIZED.** They are
+  It created **no** design, token, component, or visual value; produced and admitted
+  **no** evidence; changed **no** maturity; accepted or closed **no** risk; added
+  **no** ADR or Decision; made **no** claim; and activated **no** Product Profile,
+  pilot, consumer integration, release, tag, or publication. Closure became
+  effective with the Human-Maintainer commit
+  **`df9b8f21ff3bde4607b1c9ff7fdcbe3144366040`**.
+- **Current work package: CDS-WP-018 — Deferred Governance and Repository Hygiene
+  Reconciliation.** Authorized by the Human Maintainer as the single active work
+  package. A bounded documentary pass only: it reconciles stale current-state and
+  mirror text against the normative sources, classifies the deferred findings
+  routed to it by CDS-WP-017, and performs repository hygiene. It creates **no**
+  design, token, component, or visual value; produces and admits **no** evidence;
+  changes **no** maturity; accepts or closes **no** risk; adds **no** ADR or
+  Decision; **does not rename the phase**; registers **no** capability; makes
+  **no** claim; and activates **no** Product Profile, pilot, consumer integration,
+  release, tag, publication, or later work package.
+- **CDS-WP-019 … CDS-WP-053: PLANNED / NOT ACTIVE / NOT AUTHORIZED.** They are
   recorded as a planning sequence so no competing roadmap can arise; **recording
   them activates nothing** and work on them has not started. The immediate next
-  planned work package is **CDS-WP-018 — Deferred Governance and Repository Hygiene
-  Reconciliation**, which stays inactive until separately authorized. Each work
-  package begins only on an explicit Nova prompt and Human-Maintainer
-  authorization, one at a time.
+  planned work package is **CDS-WP-019 — Core Visual Foundation Architecture**,
+  which stays inactive until separately authorized. Each work package begins only
+  on an explicit Nova prompt and Human-Maintainer authorization, one at a time.
 - **Scope-registration gate.** Audio and sonic design, haptics, multimodal
   feedback, and AI/agent interaction design are registered in **none** of the six
   capability domains and in **no** channel model today. Planning CDS-WP-040,
@@ -464,22 +477,34 @@ as the operative entry aid, with the
   the [Critical Risk Action Register](docs/operations/CRITICAL_RISK_ACTION_REGISTER.md)
   for the twelve Critical Risks. A named executor authorizes no work; documentation
   is not mitigation.
-- **No design work before an explicit prompt.** The Pre-Candidate phase produces
-  operating enablement and prerequisite planning only. No token, component, colour,
-  typography, icon, theme, tool, format, Candidate, pilot, licence, or publication
-  is created or selected. The next work package (CDS-WP-010) defines the
-  accessibility support baseline and evidence strategy only, and starts no design
-  work. See the
-  [Pre-Candidate Operating Plan](docs/roadmap/PRE_CANDIDATE_OPERATING_PLAN.md).
+- **No design work before an explicit prompt.** The phase label
+  `Pre-Candidate Operating Enablement` is set by **DEC-S-062** and remains
+  authoritative until a Decision supersedes it; it names an **operating phase, not
+  a maturity state**. Its original CDS-WP-009 description — that no token, format,
+  tool, or Candidate is created or selected in this phase — is **historical and has
+  been outgrown**: a machine-readable source format (ADR-0001), the
+  `tools/cds_validator` offline validator, the `semantic/status` token source set,
+  and one **Candidate** artifact family all now exist and are committed. What still
+  holds, and is what this rule means today: **no colour, typography, icon, logo,
+  theme, visual value, component, Product Profile, pilot, licence, release, or
+  publication is created or selected without an explicit prompt.** The original
+  phase description is preserved in the
+  [Pre-Candidate Operating Plan](docs/roadmap/PRE_CANDIDATE_OPERATING_PLAN.md) —
+  a **historical CDS-WP-009 plan**, whose forward-looking "next work package"
+  references (CDS-WP-010, CDS-WP-011) are historical and are **not** the current
+  work package. The current one is always
+  [Work Packages](project-system/WORK_PACKAGES.md).
 - Compact orientation stays in the
   [Foundation Context Pack](project-system/CONTEXT_PACK_FOUNDATION.md) — a summary,
   never a normative source.
 
 ## Machine-readable source and token format (CDS-WP-011)
 
-The normative machine-readable source format is **decided**
-([ADR-0001](docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md), pending
-commit) and **not implemented**.
+The normative machine-readable source format is **decided and committed**
+([ADR-0001](docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md),
+`a81772c`). It has since been **implemented** — the CDS-WP-012 bootstrap, the
+CDS-WP-013 offline validator, and the CDS-WP-015 `semantic/status` source set all
+exist and are committed. **No visual or design token value exists.**
 
 - **External basis: DTCG 2025.10 only** (Format, Color, Resolver) — a **Final
   Community Group Report, not a W3C Standard** (DEC-S-073). Only the **pinned stable**
@@ -502,8 +527,9 @@ commit) and **not implemented**.
 
 ### Machine-readable bootstrap (CDS-WP-012)
 
-The value-neutral bootstrap is **implemented** (Experimental, pending commit): four
-CDS-owned JSON Schema 2020-12 contracts in `schemas/`, synthetic fixtures and a
+The value-neutral bootstrap is **implemented and committed** (`1ad9787`;
+Experimental): four CDS-owned JSON Schema 2020-12 contracts in `schemas/`,
+synthetic fixtures and a
 validation-case matrix in `tests/fixtures/machine-readable/`, the
 [Validation Contract](docs/architecture/MACHINE_READABLE_VALIDATION_CONTRACT.md) (V1–V4),
 and the [Serialization/Digest Model](docs/architecture/DETERMINISTIC_SERIALIZATION_AND_DIGEST_MODEL.md)

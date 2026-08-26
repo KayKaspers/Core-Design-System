@@ -35,10 +35,14 @@ document supersedes it **as the forward view only** and rewrites none of it.
 | Renderer behaviour | Governance authority |
 | AI or executor output | Approval |
 
-**CDS-WP-018 through CDS-WP-053 are `Planned`, `Not active`, and `Not authorized
+**CDS-WP-019 through CDS-WP-053 are `Planned`, `Not active`, and `Not authorized
 for execution`. Work on them has not started.** Each becomes executable only on an
 explicit Nova prompt **and** Human-Maintainer authorization, one work package at a
 time. Nothing in this document activates the next one automatically.
+
+**CDS-WP-018 is the exception, and it proves the rule:** it left `Planned` only when
+the Human Maintainer authorized it separately on 2026-08-25 — **not** because this
+roadmap listed it next.
 
 ## Current state at the reconciled baseline
 
@@ -65,6 +69,15 @@ Sources: the
 [Candidate Promotion Effectivity Record](../governance/SEMANTIC_STATUS_CANDIDATE_PROMOTION_EFFECTIVITY_RECORD.md),
 the [Candidate Approval Record](../operations/SEMANTIC_STATUS_CANDIDATE_APPROVAL_RECORD.md),
 and the [AE1-004 Admission Record](../governance/SEMANTIC_STATUS_AE1_004_ADMISSION_RECORD.md).
+
+**Work-package rows updated by CDS-WP-018 (2026-08-25).** The table above is bound
+to baseline `1fc53ae5afa40807e1950171ab700b0860ee581e` and its maturity, evidence,
+claim, and publication rows are **unchanged**. Only the work-package rows have
+advanced: **CDS-WP-017 is `Closed`** — closure commit
+`df9b8f21ff3bde4607b1c9ff7fdcbe3144366040` — **CDS-WP-018 is `Active`**, and
+**CDS-WP-019 … CDS-WP-053** remain **`Planned` · not active · not authorized**. The
+controlled carrier for work-package status is
+[Work Packages](../../project-system/WORK_PACKAGES.md), never this planning view.
 
 **Evidence never transfers across a source revision** (DEC-S-126). Every later
 revision needs fresh evidence, a fresh independent review, and a fresh admission.
@@ -101,8 +114,8 @@ normative source.
 
 | ID | Title | Layer | Status |
 | --- | --- | --- | --- |
-| CDS-WP-017 | Post-WP-016 Roadmap, Authority and Scope Reconciliation | 1 | **Active** |
-| CDS-WP-018 | Deferred Governance and Repository Hygiene Reconciliation | 1 | Planned · not active |
+| CDS-WP-017 | Post-WP-016 Roadmap, Authority and Scope Reconciliation | 1 | **Closed** |
+| CDS-WP-018 | Deferred Governance and Repository Hygiene Reconciliation | 1 | **Active** |
 
 ### Phase V — Visual Foundation
 
@@ -195,8 +208,9 @@ normative source.
 | CDS-WP-053 | Stable Gate and Distribution Readiness | 1 → 7 | Planned · not active |
 
 **Sequence integrity:** CDS-WP-017 … CDS-WP-053 is a contiguous range of **37**
-identifiers with no gap and no duplicate. **36** of them are `Planned · not
-active`; exactly **one**, CDS-WP-017, is active.
+identifiers with no gap and no duplicate. **35** of them — CDS-WP-019 …
+CDS-WP-053 — are `Planned · not active`; exactly **one**, CDS-WP-018, is active;
+and **one**, CDS-WP-017, is closed.
 
 ## Milestones
 
@@ -390,9 +404,16 @@ and Repository Hygiene Reconciliation**. CDS-WP-017 **classifies and routes them
 only**; it repairs none of them, and routing is not repair.
 
 As with PB001, CDS-WP-017 searched the tracked repository and found **no
-occurrence of any of these identifiers**. They are held outside this repository,
-so this table routes them **by identifier**, and CDS-WP-018 must obtain each
-finding's text from its source before acting on it.
+pre-existing occurrence of any of these identifiers**: before this routing was
+written, no finding text and no finding record for them was held here. The routing
+itself is now the only reason the identifiers appear in the repository at all, and
+an identifier in a routing table is **not** the finding.
+
+The finding text is still held **outside this repository**. This table therefore
+routes them **by identifier only**, and CDS-WP-018 must obtain each finding's text
+from its original source and reconstruct its content before acting on it.
+**Routing is not repair**, and a routed identifier is not a local authority for what
+the finding says.
 
 | Finding | Disposition |
 | --- | --- |
@@ -403,6 +424,16 @@ finding's text from its source before acting on it.
 | `NF-R5R-OBS-001` | Deferred → **CDS-WP-018** |
 | `NF-R5R-OBS-002` | **Informational** — historical evidence limitation; **no repair required**; not routed |
 | `NF-R5R-OBS-003` | Deferred → **CDS-WP-018** |
+
+**Status after CDS-WP-018 (2026-08-25).** The routing above is CDS-WP-017's record
+and is not rewritten. CDS-WP-018 has since taken up all six routed findings, plus
+`F-017-01`, `F-017-02`, `R1-F-01`, `R2-N-01`, and `R2-N-02`, and classified each as
+repaired, preserved as historical, or explicitly not repaired with a destination.
+What it did and did not do is recorded in
+[Work Packages](../../project-system/WORK_PACKAGES.md) and the
+[CDS-WP-018 notes](../../project-brain/CDS_WP_018_DEFERRED_GOVERNANCE_HYGIENE_NOTES.md).
+`F-017-03` and `R1-F-05` were **not** CDS-WP-018 work and remain routed to their
+scope gates; the `F-017-04` phase label remains an open governance item.
 
 ### Repository-side findings observed by CDS-WP-017
 
@@ -416,7 +447,7 @@ hygiene item.
 | **F-017-01** | `project-system/PROJECT_PROFILE.md` — "Intentionally open decision areas" still lists *token format*, *versioning and maturity model*, *conformance and adoption policy*, and *product profile and override governance* as open, although CDS-WP-006 and CDS-WP-011 decided them (DEC-S-035…044, ADR-0001). | Deferred → **CDS-WP-018** |
 | **F-017-02** | `README.md` — the equivalent open-decision list carries the same drift for *versioning and maturity model* and *conformance and adoption policy*. | Deferred → **CDS-WP-018** |
 | **F-017-03** | Scope registration gap for audio/sonic, haptic, multimodal, and AI/agent subject matter — see the multimodal and AI scope-registration gate above. Not blocking for anything currently authorized. | **Not CDS-WP-018 hygiene.** → a future **Elevated scope / capability-registration gate**, which **blocks later authorization of CDS-WP-040, CDS-WP-041, CDS-WP-042, and CDS-WP-044 until resolved**. |
-| **F-017-04** | The phase label set by **DEC-S-062** ("Pre-Candidate Operating Enablement") predates the completed first Candidate transition. **The label remains authoritative until a Decision supersedes it**, and it names an *operating phase*, **not a maturity state**. The staleness is broader than the label alone: dependent operating-description and current-state text still carries **Pre-Candidate assumptions** the repository has outgrown — for example prose asserting that no token, format, tool, or Candidate is created or selected in this phase, although a Semantic Status token source, ADR-0001, `tools/cds_validator`, and one Candidate family all now exist. **CDS-WP-017 renames nothing and repairs none of that text.** | **Not an executor-owned CDS-WP-018 decision.** → **open governance / phase-transition item**: a relabel requires a **new Decision superseding DEC-S-062**. Dependent documentary and historical hygiene may be reconciled separately, around or after that decision. **None of this blocks CDS-WP-017 integration.** |
+| **F-017-04** | The phase label set by **DEC-S-062** ("Pre-Candidate Operating Enablement") predates the completed first Candidate transition. **The label remains authoritative until a Decision supersedes it**, and it names an *operating phase*, **not a maturity state**. The staleness is broader than the label alone: dependent operating-description and current-state text still carries **Pre-Candidate assumptions** the repository has outgrown — for example prose asserting that no token, format, tool, or Candidate is created or selected in this phase, although a Semantic Status token source, ADR-0001, `tools/cds_validator`, and one Candidate family all now exist. It also includes **stale forward "next work package" references** frozen at the time each dependent text was written — `CLAUDE.md` naming **CDS-WP-010** as "the next work package", the historical CDS-WP-009 [Pre-Candidate Operating Plan](PRE_CANDIDATE_OPERATING_PLAN.md) naming **CDS-WP-011**, and the [Foundation Closure Record](../governance/FOUNDATION_CLOSURE_RECORD.md) naming **CDS-WP-010** — none of which is the current work package. **CDS-WP-017 renames nothing and repairs none of that text.** | **Not an executor-owned CDS-WP-018 decision.** → **open governance / phase-transition item**: a relabel requires a **new Decision superseding DEC-S-062**. **CDS-WP-018 reconciled the dependent documentary text only** — it corrected the stale `CLAUDE.md` operating description and its `CDS-WP-010` next-work-package reference, and framed the historical carriers as historical; it **did not rename the phase, create a superseding Decision, or touch `DECISION_INDEX.md`**. The label itself remains open. **None of this blocked CDS-WP-017 integration.** |
 
 ### Findings from the R1 independent review
 
@@ -433,11 +464,16 @@ repairs nothing and authorizes nothing.**
 
 ## Immediate next step
 
-**CDS-WP-018 — Deferred Governance and Repository Hygiene Reconciliation.**
+**CDS-WP-019 — Core Visual Foundation Architecture.**
 
-CDS-WP-018 is **inactive** and **remains inactive until separately authorized by
-the Human Maintainer**. CDS-WP-017 does not start it, does not scope it in
-detail, and does not perform any part of it in advance.
+CDS-WP-019 is **inactive** and **remains inactive until separately authorized by
+the Human Maintainer**. Nothing here starts it, scopes it in detail, or performs any
+part of it in advance.
+
+**CDS-WP-018 was authorized separately by the Human Maintainer on 2026-08-25** and
+is the currently active work package; the dispositions above record what it took up.
+Its authorization came from that decision alone — **not** from its position in this
+roadmap.
 
 ## Related documents
 

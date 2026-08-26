@@ -9,6 +9,109 @@ released and no release is announced.
 
 ### Added
 
+- **Python repository hygiene added to `.gitignore`** — `__pycache__/` and `*.pyc`,
+  so an offline validator or `unittest` run cannot leave untracked bytecode in a
+  working tree whose cleanliness the DEC-S-126 exact-byte evidence workflow depends
+  on. No runtime, build, or validation semantics change. (CDS-WP-018)
+- **Additive, dated work-package status notes** added to the
+  [Candidate Promotion Effectivity Record](docs/governance/SEMANTIC_STATUS_CANDIDATE_PROMOTION_EFFECTIVITY_RECORD.md)
+  and the [Candidate Dossier](docs/operations/SEMANTIC_STATUS_CANDIDATE_DOSSIER.md),
+  recording that the `CDS-WP-017: INACTIVE` row each of them carries is historical
+  and that work-package status is carried by
+  [Work Packages](project-system/WORK_PACKAGES.md), not by a maturity-boundary
+  table. **Neither dated table was rewritten**, and neither note is evidence, an
+  admission, an approval, or a promotion. (CDS-WP-018, finding `R1-F-01`)
+- **Work-package notes for CDS-WP-018**
+  (`project-brain/CDS_WP_018_DEFERRED_GOVERNANCE_HYGIENE_NOTES.md`) — the finding
+  classification, the repairs performed, and the items explicitly not repaired.
+  (CDS-WP-018)
+
+### Fixed
+
+- **Stale `pending Human-Maintainer commit` current-state statements corrected**
+  for artifacts the repository history shows as committed: the six
+  `docs/architecture/**` machine-readable status headers (ADR-0001 `a81772c`,
+  ADR-0002 `1ad9787`), the `CLAUDE.md` project-context bullets, the
+  `project-system/PROJECT_PROFILE.md` ADR-0001/0002/0003 status lines, and two
+  research status headers. **Per-work-package history sections and tables keep the
+  `(pending commit)` convention** — they record each work package's state as of its
+  own completion and are historical by construction. (CDS-WP-018, finding
+  `NF-R4-OBS-001`)
+- **`PROJECT_BRAIN.md` risk-status mirror synchronized** with the normative
+  [Risk Register](docs/risks/RISK_REGISTER.md): RISK-066, RISK-067, RISK-068,
+  RISK-069, and RISK-071 now read `Mitigating` in the mirror, matching the register
+  and the narrative directly beneath the table. **No risk was accepted, closed, or
+  reclassified** — only the mirror was corrected. (CDS-WP-018, finding
+  `NF-R3-OBS-001`)
+- **Validator maturity/approval wording made current-state precise** in the
+  [Offline Token Validator Architecture](docs/architecture/OFFLINE_TOKEN_VALIDATOR_ARCHITECTURE.md):
+  `Experimental` / `Unapproved` is the default for an **unpromoted** source, not
+  "the committed default", since `semantic/status` has declared
+  `Candidate` / `Approved` since the Promotion Commit. **No state-machine arm and no
+  validator behaviour changed.** (CDS-WP-018, finding `NF-R5R-OBS-001`)
+- **Already-decided areas removed from the "intentionally open decision areas"
+  lists** in `README.md`, `project-system/PROJECT_PROFILE.md`,
+  `project-system/CONTEXT_PACK_FOUNDATION.md`, and `project-brain/PROJECT_BRAIN.md`:
+  **token format** (CDS-WP-011, ADR-0001), **versioning and maturity model**
+  (DEC-S-035…040), **conformance and adoption policy** (DEC-S-044), and **Product
+  Profile and override governance** (DEC-S-042, DEC-S-043). Each is recorded with
+  the decision and normative source that closed it. **A decided model is not an
+  applied one** — no Product Profile is activated, no claim is valid, no artifact is
+  `Stable`, and no version has been released. The **token build system** stays open.
+  (CDS-WP-018, findings `F-017-01`, `F-017-02`)
+- **Research baseline status wording corrected** in
+  [Accessibility Baseline Selection Rationale](docs/research/ACCESSIBILITY_BASELINE_SELECTION_RATIONALE.md)
+  — A11Y-BL-001 is committed (`abe84b6`), not awaiting commit — with the
+  baseline-is-not-evidence and source-decay boundaries restated. The
+  [Source Register](docs/research/ACCESSIBILITY_BASELINE_SOURCE_REGISTER.md) needed
+  **no change**: its dated snapshots and decay markers were already correct. **No
+  research evidence became normative and no accessibility claim was made.**
+  (CDS-WP-018, finding `R3R-003`)
+- **UTF-8 BOM removed** from `.gitattributes` and `.gitignore` — the only two
+  BOM-carrying tracked files in the repository. Byte-verified: three bytes removed
+  from each file and no other content change; the LF-only line-ending policy is
+  preserved. (CDS-WP-018, findings `NF-R4-OBS-002`, `NF-R5R-OBS-003`)
+- **Self-referentially imprecise deferred-finding wording corrected** in the
+  [Post-Candidate Development Roadmap](docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md)
+  and this changelog: the identifiers had no **pre-existing** repository occurrence,
+  the routing itself is why they appear here, and the finding text is still held
+  outside the repository. **Routing is not repair.** (CDS-WP-018, finding `R2-N-01`)
+- **The `F-017-04` disclosure completed** with the stale forward "next work package"
+  references it governs — `CLAUDE.md` naming CDS-WP-010, the historical
+  Pre-Candidate Operating Plan naming CDS-WP-011, and the Foundation Closure Record
+  naming CDS-WP-010. The dependent `CLAUDE.md` operating text was reconciled and the
+  historical carriers were framed as historical. **The phase label set by DEC-S-062
+  was not renamed, no superseding Decision was created, and `DECISION_INDEX.md` was
+  not modified.** (CDS-WP-018, finding `R2-N-02`)
+
+### Changed
+
+- **CDS-WP-017 recorded as `Completed`** and **CDS-WP-018 recorded as the active
+  work package** across the current-state surfaces (`README.md`, `CLAUDE.md`,
+  `project-system/WORK_PACKAGES.md`, `project-system/NEXT_PHASE.md`,
+  `project-system/PROJECT_PROFILE.md`,
+  `project-system/CONTEXT_PACK_FOUNDATION.md`, `project-brain/PROJECT_BRAIN.md`,
+  and the forward roadmap). CDS-WP-017 closure became effective with the
+  Human-Maintainer commit `df9b8f21ff3bde4607b1c9ff7fdcbe3144366040`.
+  **CDS-WP-019 … CDS-WP-053 remain `Planned`, not active, and not authorized**, and
+  CDS-WP-018's own authorization came from a separate explicit Human-Maintainer
+  decision, never from its roadmap position. (CDS-WP-018)
+
+**Boundaries of the CDS-WP-018 entries above.** No maturity changed; the Semantic
+Status Foundation stays `Candidate` / `Approved` at
+`semantic-status-rev-0002-candidate` with `AE1-CDS-WP016-SEMSTATUS-004` at **AE-1**,
+source/contract scope only. **No evidence was produced, admitted, altered, or
+transferred**; the five evidence-bound Foundation documents, the ADRs,
+`DECISION_INDEX.md`, and every artifact under `tokens/`, `schemas/`, `tools/`,
+`tests/`, and `artifacts/` are **unchanged**. No Decision and no ADR was added — the
+register stays at **DEC-S-126** and **ADR-0003**; no risk was added, accepted, or
+closed — the register stays at **RISK-098**. No phase was renamed, no capability was
+registered, no claim was made, no artifact reached `Stable`, no Product Profile or
+pilot was activated, publication remains **`Private Development`**, there are **0
+tags and no release**, and **no Git write was performed**.
+
+### Added
+
 - **Post-Candidate Development Roadmap** added
   (`docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md`) — the **single active
   forward roadmap**: twelve development arcs from Reconciliation through Stable
@@ -32,9 +135,12 @@ released and no release is announced.
 - **Deferred finding routing recorded.** `R3R-003`, `NF-R3-OBS-001`,
   `NF-R4-OBS-001`, `NF-R4-OBS-002`, `NF-R5R-OBS-001`, and `NF-R5R-OBS-003` are
   routed to **CDS-WP-018**; `NF-R5R-OBS-002` stays **informational — a historical
-  evidence limitation requiring no repair**. None of these identifiers occurs in
-  this repository, so routing is by identifier only. **Routing is not repair**, and
-  CDS-WP-017 repaired none of them. (CDS-WP-017)
+  evidence limitation requiring no repair**. None of these identifiers had any
+  **pre-existing** occurrence in this repository — the routing itself is the only
+  reason they appear here — and their finding text is still held outside it, so
+  routing is by identifier only and CDS-WP-018 must reconstruct each finding's
+  content from its original source. **Routing is not repair**, and CDS-WP-017
+  repaired none of them. (CDS-WP-017)
 
 - **Semantic Status Foundation promoted to `Candidate`** (CDS-WP-016). The
   Human-Maintainer exact-byte **Promotion Commit

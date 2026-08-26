@@ -6,7 +6,7 @@
 > it never defines. Where it disagrees with a normative source, the normative
 > source wins and this pack is wrong and must be corrected.
 
-- **Maintained by:** CDS-WP-017
+- **Maintained by:** CDS-WP-018
 - **Date:** 2026-08-25
 
 ## Project identity
@@ -65,12 +65,14 @@ artifact **AE-0** · no AE-2/AE-3/AE-4 · no channel or consumer evidence · pil
 
 Concrete visual design values remain unauthorized (DEC-S-003). **CDS-WP-016 is
 `Completed`**, closed by the Human-Maintainer commit
-`1fc53ae5afa40807e1950171ab700b0860ee581e`. The authorized work package is
-**CDS-WP-017 — Post-WP-016 Roadmap, Authority and Scope Reconciliation**:
-governance, roadmap, context, and project-state reconciliation only, with no
-design, evidence, maturity, claim, or publication effect. **CDS-WP-018 …
-CDS-WP-053 are `Planned`, not active, and not authorized**; the single active
-forward roadmap is the
+`1fc53ae5afa40807e1950171ab700b0860ee581e`, and **CDS-WP-017 is `Completed`**,
+closed by the Human-Maintainer commit
+`df9b8f21ff3bde4607b1c9ff7fdcbe3144366040`. The authorized work package is
+**CDS-WP-018 — Deferred Governance and Repository Hygiene Reconciliation**:
+documentary current-state, mirror, and repository-hygiene reconciliation only, with
+no design, evidence, maturity, claim, capability-registration, phase-rename, or
+publication effect. **CDS-WP-019 … CDS-WP-053 are `Planned`, not active, and not
+authorized**; the single active forward roadmap is the
 [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
 
 ## Completed work packages
@@ -563,11 +565,17 @@ availability, or support may be made.
 ## Deferred decisions
 
 Logo and logo architecture · colors · typography · icons · illustration ·
-imagery · themes · design tool · component framework · token format · token
-build system · documentation platform · package architecture · repository
-split · license · public release · contribution model · compatibility
-commitments · product signatures · versioning and maturity model · conformance
-and adoption policy · product profile and override governance.
+imagery · themes · design tool · component framework · token build system ·
+documentation platform · package architecture · repository split · license ·
+public release · contribution model · compatibility commitments · product
+signatures.
+
+**No longer deferred** (previously listed here): **token format** (CDS-WP-011,
+ADR-0001) · **versioning and maturity model** (CDS-WP-006, DEC-S-035…040) ·
+**conformance and adoption policy** (CDS-WP-006, DEC-S-044) · **Product Profile
+and override governance** (CDS-WP-005/006, DEC-S-042, DEC-S-043). A decided model
+is not an applied one: no Product Profile is activated, no claim is valid, and no
+version has been released.
 
 ## Repository constraints
 
@@ -576,8 +584,10 @@ and adoption policy · product profile and override governance.
 - `.claude/skills/` holds 38 verified Skills / 39 files, pinned to NDF v1.0.0
   commit `9dcadc12fb960914b9a5baeff2ab1aee75912b57`. Never modify during
   product work.
-- `.claude/rules/`, `docs/architecture/`, `docs/research/`, `docs/roadmap/` are
-  empty placeholders.
+- `.claude/rules/` is an empty placeholder. `docs/architecture/`,
+  `docs/research/`, and `docs/roadmap/` are **populated** — they were empty only at
+  CDS-WP-001A and have carried committed documents since CDS-WP-005 / CDS-WP-003 /
+  CDS-WP-009 respectively.
 
 ## Skills-first instructions
 
@@ -865,9 +875,11 @@ Candidate Finalization Review returned GO WITH NOTES**, the Human Maintainer
 
 **CDS-WP-016 is closed** — its post-promotion current-state reconciliation was
 integrated by the Human-Maintainer commit
-`1fc53ae5afa40807e1950171ab700b0860ee581e`. The active work package is
-**CDS-WP-017 — Post-WP-016 Roadmap, Authority and Scope Reconciliation**;
-**CDS-WP-018 … CDS-WP-053 are `Planned`, not active, and not authorized**, and
+`1fc53ae5afa40807e1950171ab700b0860ee581e` — and **CDS-WP-017 is closed**, by the
+Human-Maintainer commit `df9b8f21ff3bde4607b1c9ff7fdcbe3144366040`. The active
+work package is **CDS-WP-018 — Deferred Governance and Repository Hygiene
+Reconciliation**;
+**CDS-WP-019 … CDS-WP-053 are `Planned`, not active, and not authorized**, and
 work on them has not started. See the
 [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md),
 the

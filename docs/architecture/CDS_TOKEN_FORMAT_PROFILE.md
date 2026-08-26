@@ -3,9 +3,10 @@
 - **Project:** Core Design System (CDS)
 - **Registered by:** CDS-WP-011 — Machine-Readable Source and Token Format Decision
 - **Date:** 2026-07-16
-- **Status:** **Normative** for the CDS token format profile, **pending
-  Human-Maintainer commit** of ADR-0001. It constrains a format; it defines **no
-  token value, name, colour, typography, spacing, or size**.
+- **Status:** **Normative and in effect** for the CDS token format profile;
+  ADR-0001 was committed with CDS-WP-011 (`a81772c`, 2026-07-17). It constrains a
+  format; it defines **no token value, name, colour, typography, spacing, or
+  size**.
 
 ## Profile identity
 

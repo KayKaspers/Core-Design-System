@@ -5,8 +5,10 @@
 - **Date:** 2026-07-16
 - **Status:** **Research evidence — NON-normative.** Explains *why* the initial
   baseline (A11Y-BL-001) is composed as it is. It decides nothing; the normative
-  choice lives in the [Accessibility Support Baseline](../governance/ACCESSIBILITY_SUPPORT_BASELINE.md)
-  and takes effect only on Human-Maintainer commit.
+  choice lives in the [Accessibility Support Baseline](../governance/ACCESSIBILITY_SUPPORT_BASELINE.md),
+  declared and committed by CDS-WP-010 (`abe84b6`, 2026-07-16). A committed baseline
+  is still **not evidence**: no baseline environment has been exercised, and the
+  dated findings below decay — re-verify before relying on any of them.
 
 ## Methodology
 
