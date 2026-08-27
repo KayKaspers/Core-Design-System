@@ -35,14 +35,15 @@ document supersedes it **as the forward view only** and rewrites none of it.
 | Renderer behaviour | Governance authority |
 | AI or executor output | Approval |
 
-**CDS-WP-020 through CDS-WP-053 are `Planned`, `Not active`, and `Not authorized
+**CDS-WP-021 through CDS-WP-053 are `Planned`, `Not active`, and `Not authorized
 for execution`. Work on them has not started.** Each becomes executable only on an
 explicit Nova prompt **and** Human-Maintainer authorization, one work package at a
 time. Nothing in this document activates the next one automatically.
 
-**CDS-WP-018 and CDS-WP-019 are the exceptions, and they prove the rule:** each left
-`Planned` only when the Human Maintainer authorized it separately — CDS-WP-018 on
-2026-08-25, CDS-WP-019 on 2026-08-26 — **not** because this roadmap listed it next.
+**CDS-WP-018, CDS-WP-019 and CDS-WP-020 are the exceptions, and they prove the
+rule:** each left `Planned` only when the Human Maintainer authorized it separately
+— CDS-WP-018 on 2026-08-25, CDS-WP-019 and CDS-WP-020 on 2026-08-26 — **not**
+because this roadmap listed it next.
 
 ## Current state at the reconciled baseline
 
@@ -100,6 +101,20 @@ numbered work package is active**, and **CDS-WP-020 … CDS-WP-053** remain
 changed the project-phase label and **nothing else**; it advanced no maturity and
 authorized no work package.
 
+**Work-package rows updated again by CDS-WP-020 (2026-08-26).** The maturity,
+evidence, claim, conformance, and publication rows above remain **unchanged** —
+Candidate families **1**, Stable **No**, claims **None**, conformance **None**,
+AE-2/AE-3/AE-4 **None**, **visual value None**, component **None**, pilot
+**Inactive**, publication **`Private Development`**, releases **None**, tags **0**.
+Only the work-package rows have advanced: **CDS-WP-020 was authorized separately on
+2026-08-26 and is `Active` — executed with result `DECISION_REQUIRED`, not
+closed** — and **CDS-WP-021 … CDS-WP-053** remain **`Planned` · not active · not
+authorized**. CDS-WP-020 delivered a **contract**, not values: it created no visual
+value, no identifier, no token source, no schema, and no validator rule, registered
+**no** Decision, ADR, or risk, and advanced **no** maturity. **DEC-S-128 and
+ADR-0004 are recommended and were not created**; the registers stay at **127** and
+**98**.
+
 **CDS-WP-019 created no visual value.** It defined the *architecture* of the visual
 foundation — nine families, fourteen invariants, a naming model, and the
 accessibility, channel, brand, and governance boundaries — and selected **no
@@ -151,7 +166,7 @@ normative source.
 | ID | Title | Layer | Status |
 | --- | --- | --- | --- |
 | CDS-WP-019 | Core Visual Foundation Architecture | 3 | **Closed** |
-| CDS-WP-020 | Reference and Semantic Token Foundation | 3 | Planned · not active |
+| CDS-WP-020 | Reference and Semantic Token Foundation | 3 | **Active** · executed, `DECISION_REQUIRED`, not closed |
 | CDS-WP-021 | Adaptive Layout and Responsive Foundation | 3 | Planned · not active |
 | CDS-WP-022 | Theme and Environmental Presentation Model | 3 | Planned · not active |
 
@@ -237,10 +252,11 @@ normative source.
 | CDS-WP-053 | Stable Gate and Distribution Readiness | 1 → 7 | Planned · not active |
 
 **Sequence integrity:** CDS-WP-017 … CDS-WP-053 is a contiguous range of **37**
-identifiers with no gap and no duplicate. **34** of them — CDS-WP-020 …
-CDS-WP-053 — are `Planned · not active`; **none** is active; and **three** —
-CDS-WP-017, CDS-WP-018, and CDS-WP-019 — are closed. The **CDS Phase Transition
-Governance Package** occupies **no** identifier in this range.
+identifiers with no gap and no duplicate. **33** of them — CDS-WP-021 …
+CDS-WP-053 — are `Planned · not active`; **one** — CDS-WP-020 — is active and not
+closed; and **three** — CDS-WP-017, CDS-WP-018, and CDS-WP-019 — are closed. The
+**CDS Phase Transition Governance Package** occupies **no** identifier in this
+range.
 
 ## Milestones
 
@@ -546,30 +562,91 @@ been dispositioned:
 keep their recorded dispositions. A relabel repairs no document and closes no
 hygiene item.
 
+### Findings observed by CDS-WP-020
+
+Recorded while defining the reference and semantic visual token contract. Each is
+**recorded and not repaired** — CDS-WP-020 is a contract work package, not a hygiene
+pass, and **routing is not repair**. None of them blocked CDS-WP-020.
+
+| ID | Observation | Disposition |
+| --- | --- | --- |
+| **F-020-01** | The **value half** of CDS-WP-020 is gated on **seven** normative choices that no committed CDS source has made. The five earlier work packages that made comparable first-of-their-kind normative choices — **CDS-WP-011 … CDS-WP-015** — each registered a Decision block, and three of them an ADR; CDS-WP-020 holds no authority to register either. | **`DECISION_REQUIRED`.** Recorded as **OD-1 … OD-7** in the **non-normative** [Visual Token Foundation Open Decisions](VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md) register. **Partially answered on 2026-08-27** by the Human-Maintainer-authorized **CDS-WP-020 Decision Integration Pass**: **DEC-S-128, DEC-S-129, DEC-S-130, DEC-S-131** and **ADR-0004** are **prepared and authorized for integration, NOT YET EFFECTIVE**. They answer **OD-1, OD-2 and OD-3** and add the contrast evaluation authority. **OD-4 … OD-7 stay open, the value half stays gated, and CDS-WP-020 stays `DECISION_REQUIRED` and not closed.** |
+| **F-020-02** | **AF-1 / AF-3 versus source-set metadata.** A source-set payload carries **one** `maturityState`, but the [Visual Foundation Governance and Lifecycle](../governance/VISUAL_FOUNDATION_GOVERNANCE_AND_LIFECYCLE.md) requires that maturity is never inherited (AF-1) and that a family may mature at its own pace (AF-3). A shared visual source set cannot express both. **Corrected 2026-08-27 — see the disposition.** | **ANSWERED by DEC-S-131**, with the finding corrected precisely: its **conclusion stands** — a shared visual source set cannot express per-family maturity, so the unit is **one source set per independently evaluable Family × Token-Flow-Layer unit**. Its **artifact-count mechanism was imprecise**: it implied that per-family, per-layer source sets multiply manifests and resolvers at the same rate. They do not — the committed manifest contract carries a **`sourceSets` array**, so **one manifest may aggregate many source sets**, each retaining its own maturity. **A source set is not a manifest**, and **AGGREGATED is not MATURE**. **Residual:** the concrete root identifiers are **not** created, coupled to **OD-4**; **OD-6 stays open and is not pre-answered**. |
+| **F-020-03** | **T-2 is vacuously satisfiable today.** *"Every semantic role must resolve in every supported context"* is trivially true when **zero** contexts are supported, so it cannot guide whether a default role binding is legitimate or a pre-emption of **CDS-WP-022**. | Recorded as **OD-7**. The [Visual Semantic Token Foundation](../architecture/VISUAL_SEMANTIC_TOKEN_FOUNDATION.md) adds **TC-6** so the gap is at least stated. **The theme mechanism remains CDS-WP-022's.** |
+| **F-020-04** | The offline validator's bounded token-`$type` set is routinely readable as a **CDS profile admission**. It is a **DEC-S-098 V2 coverage boundary**, and the committed token-document schema constrains `$type` **not at all**. | Stated explicitly in the [Visual Reference Token Foundation](../architecture/VISUAL_REFERENCE_TOKEN_FOUNDATION.md) machine-readable disposition and in **OD-2**, citing **RISK-074**. **CLOSED by DEC-S-130** (2026-08-27, not yet effective), which states the admission profile explicitly — `color`, `dimension`, `number` — and restates that **a tool accepting a type is not the profile admitting it**. **The DEC-S-098 coverage boundary is unchanged, and no schema, validator, test, or fixture was changed.** |
+| **F-020-05** | **`F-019-04` is incomplete.** `docs/architecture/TOKEN_AND_THEME_ARCHITECTURE.md` question **4** (*"How are aliases represented?"*) is stale in the same way F-019-04 records questions 1, 2, and 7 to be: the [CDS Token Format Profile](../architecture/CDS_TOKEN_FORMAT_PROFILE.md) and **DEC-S-078** settled alias representation. F-019-04 does not currently name question 4. | Deferred → the **same destination as `F-019-04`**: a bounded, separately authorized reconciliation. **Not repaired by CDS-WP-020**, which edited no CDS-WP-005 document. |
+| **F-020-06** | **`F-019-06` is load-bearing for the role vocabulary.** No registered consumer requirement asks for a palette, a type scale, a spacing scale, a radius scale, an elevation model, an icon library, or illustration, and **VF-3, VF-5, VF-6, VF-7** carry no consumer demand evidence at all. Inventing a full role vocabulary now would be unevidenced structure. | Carried into **OD-6** as the argument for a **minimal vocabulary bound to the six registered Layer-3 consumer anchors**. Mapped to **RISK-021**, **RISK-026**, **RISK-003**; **no new risk is registered**. |
+| **F-020-07** | **The pinned validator stack is not installed** in the execution environment (`jsonschema`, `rfc8785`, `pytest` absent; no venv), and installing dependencies is prohibited without explicit approval. **No validator run and no test execution was possible.** | Recorded. **No implementation file was added**, so no regression run was owed, and **nothing was weakened to compensate**. A future implementation work package must have the pinned stack available before it may add a machine-readable source. |
+| **F-020-08** | **`F-019-07` is answerable only together with the role vocabulary.** Nine artifact families, one Human Maintainer, Consumer Maintainer unstaffed (FM-F-006) — the capacity question CDS-WP-019 routed here cannot be separated from how many roles and families actually exist. | Answered as a **recommendation inside OD-6** — reduce the number of families matured separately. **The family register was not changed**, and **`F-019-07` stays open** until OD-6 is decided. |
+
+**Recording a finding repairs nothing and authorizes nothing.**
+
 ## Immediate next step
 
-**CDS-WP-020 — Reference and Semantic Token Foundation.**
+**Fresh Independent Final CDS-WP-020 Review of the prepared Decision object, then
+Nova integration adjudication, then the Human-Maintainer exact-byte integration
+commit.**
 
-CDS-WP-020 is **inactive** and **remains inactive until separately authorized by
-the Human Maintainer**. Nothing here starts it, scopes it in detail, or performs any
-part of it in advance.
+### CDS-WP-020 Decision Integration Pass — 2026-08-27
 
-**CDS-WP-019 was authorized separately by the Human Maintainer on 2026-08-26** and
-is now **closed** — its architecture was integrated by the Human-Maintainer commit
-`538fbccbf6f554de3b872e9fb75a70d13318feb6`. Its authorization came from that
-decision alone — **not** from its position in this roadmap. **No numbered work
-package is currently active.**
+**Authorized separately by the Human Maintainer on 2026-08-27**, following the Nova
+adjudication of OD-1 … OD-7. It **prepared, and did not commit**:
 
-**The phase-transition item is resolved.** CDS-WP-020 would be the first work
-package to create real colour, typographic, and dimensional values, and the phase
-label set by **DEC-S-062** predated that possibility. CDS-WP-019 raised
-**`PHASE_TRANSITION_RECOMMENDED`** (**F-019-08**) as a forward-looking
-recommendation, tied to **F-017-04**, and **renamed nothing**. **DEC-S-127
-(2026-08-26) supersedes DEC-S-062 for current and future phase state**, closing
-`F-019-08` and the phase-label portion of `F-017-04`. **The transition authorizes
-nothing:** it grants no maturity, admits no evidence, creates no visual value, and
-**does not activate CDS-WP-020**, whose authorization remains a separate
-Human-Maintainer decision.
+| Instrument | Substance |
+| --- | --- |
+| **DEC-S-128** | One canonical normative visual colour representation — the pinned DTCG 2025.10 colour space keyed `srgb`; OKLCH derivational only; delivery quantization at the channel boundary; out-of-model source values fail closed |
+| **DEC-S-129** | **WCAG 2.2** as the contrast evaluation authority — not `WCAG 2.x`, not `latest`; full-precision comparison with no rounding before comparison; APCA and other methods **informational only**; an automated calculation is **not** evidence and grants **no** AE level |
+| **DEC-S-130** | An explicit, minimal, closed `$type` admission profile — `color`, `dimension`, `number`; explicit own typing; no composites; `$type` carries value-type semantics only; **`profileVersion` stays `"1"`** |
+| **DEC-S-131** | The **Source Set** as the independently evaluable unit; one set per Family × Token-Flow-Layer; maturity binds to (`sourceSetId`, `sourceRevision`); **AGGREGATED is not MATURE** |
+| **ADR-0004** | Architecture rationale for DEC-S-128, DEC-S-130 and DEC-S-131. **DEC-S-129 is deliberately not an architecture dependency of it.** |
+
+**All five are `PROPOSED / AUTHORIZED FOR INTEGRATION` and NOT YET EFFECTIVE.**
+Effectivity occurs **only** at the Human-Maintainer exact-byte integration commit,
+after a Fresh Independent Review and Nova integration adjudication. **A review PASS
+is not a commit, and a Nova recommendation is not an approval.** Until then the
+effective registers stay at **DEC-S-127** and **ADR-0003**.
+
+**What the pass did not do:** it created **no** visual value, **no** identifier,
+**no** token source file, manifest, resolver, schema, validator rule, test, or
+fixture; it admitted **no** evidence; it changed **no** maturity; it accepted,
+closed, or re-scored **no** risk — **`RISK-099` was assessed and is not required**,
+because the normative OKLCH-to-sRGB accessibility-path conversion architecture that
+would have created the exposure was **rejected**; it registered **no** capability;
+it made **no** claim; it touched **no** Semantic Status byte; and it activated
+**no** work package. **CDS-WP-020 remains `DECISION_REQUIRED` and not closed.**
+
+### Standing position
+
+**CDS-WP-020 was authorized separately by the Human Maintainer on 2026-08-26** —
+its authorization came from that decision alone, **not** from its position in this
+roadmap — and it has been **executed with result `DECISION_REQUIRED`**. It is **not
+closed**: closure is a separate Human-Maintainer act at an integration commit.
+
+**CDS-WP-019 is closed**, integrated by the Human-Maintainer commit
+`538fbccbf6f554de3b872e9fb75a70d13318feb6`, and **the phase-transition item is
+resolved**: **DEC-S-127 (2026-08-26) supersedes DEC-S-062 for current and future
+phase state**, closing `F-019-08` and the phase-label portion of `F-017-04`. **The
+transition authorized nothing** — the CDS-WP-020 authorization was an independent
+Human-Maintainer decision taken afterwards.
+
+**CDS-WP-020 did not create the visual values the phase-transition item
+anticipated.** Its contract half is delivered; its value half was **gated** on seven
+normative choices no committed CDS source had made, recorded as **OD-1 … OD-7** in
+the **non-normative**
+[Visual Token Foundation Open Decisions](VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md)
+register. **Three of the seven are now answered** — OD-1, OD-2 and OD-3, by the
+Decision Integration Pass above — and **the value half stays gated all the same**:
+**OD-4, OD-5, OD-6 and OD-7 are open**, and **VP-3, VP-4 and VP-5 remain
+unsatisfied for every visual family**. **Visual values: 0. Visual source sets: 0.
+Visual Candidate families: 0. VF-1 … VF-9: `Proposed`.**
+
+**OD-7 carries a sequencing recommendation this roadmap must not act on by
+itself:** that **CDS-WP-022 — Theme and Environmental Presentation Model** be
+considered before any value-selection work package, because colour values and the
+light/dark token layering are the same decision seen from two sides. **A roadmap
+entry is a plan, not permission** — reordering the sequence is a Human-Maintainer
+decision, and **CDS-WP-021 … CDS-WP-053 all remain `Planned`, not active, and not
+authorized.**
 
 ## Related documents
 
@@ -584,4 +661,7 @@ Human-Maintainer decision.
 - [Concept and Scope](../governance/CONCEPT_AND_SCOPE.md)
 - [Accessibility and Inclusive Design Policy](../governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md)
 - [Candidate Promotion Effectivity Record](../governance/SEMANTIC_STATUS_CANDIDATE_PROMOTION_EFFECTIVITY_RECORD.md)
+- [Visual Token Foundation Open Decisions](VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md) — **non-normative**; OD-1 … OD-7 (CDS-WP-020); OD-1 … OD-3 answered, OD-4 … OD-7 open
+- [Visual Reference Token Foundation](../architecture/VISUAL_REFERENCE_TOKEN_FOUNDATION.md) · [Visual Semantic Token Foundation](../architecture/VISUAL_SEMANTIC_TOKEN_FOUNDATION.md) · [Visual Token Value Selection Rules](../governance/VISUAL_TOKEN_VALUE_SELECTION_RULES.md)
+- [ADR-0004 — Visual Token Representation and Source Identity Architecture](../decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md) — **prepared, not yet effective**
 - [Decision Index](../decisions/DECISION_INDEX.md) · [Risk Register](../risks/RISK_REGISTER.md)

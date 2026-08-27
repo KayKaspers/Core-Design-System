@@ -294,7 +294,7 @@ When the visual foundation is later expressed machine-readably, it uses the
 | --- | --- |
 | **Format** | Strict JSON per RFC 8259, `.tokens.json`, under the CDS Token Format Profile over pinned **DTCG 2025.10** (DEC-S-073, DEC-S-074, DEC-S-075). |
 | **Source-set classes** | Reference Source Set and Semantic Source Set first; Component and Product Profile Source Sets later; each with a **Source-Set Manifest** and, where contexts exist, a **Resolver / Composition document**. |
-| **Typing** | Every token declares an explicit `$type` drawn from the type set the CDS profile admits. **That admitted type set is not enumerated here** — enumerating it is CDS-WP-020's, and an overstated coverage claim is RISK-074. |
+| **Typing** | Every token declares an explicit `$type` drawn from the type set the CDS profile admits, and **must not rely on group- or root-level typing**. **The admitted set is enumerated in the [CDS Token Format Profile](CDS_TOKEN_FORMAT_PROFILE.md), not here** — `color`, `dimension`, `number` (DEC-S-130, CDS-WP-020). The validator's bounded V2 type set is a **DEC-S-098 coverage boundary, not the admission**, and an overstated coverage claim is RISK-074. |
 | **References** | Token-to-token references use the DTCG `{group.token}` form; document, property, resolver, and source-set references use `$ref` / RFC 6901 JSON Pointer. Cross-file references must be declared, offline-resolvable, and revision-bound. |
 | **CDS metadata** | Only inside DTCG `$extensions` under `io.github.kaykaspers.cds`, carrying `profileVersion`. Foreign extensions are preserved and never automatically normative. |
 | **Identity** | Source-set ID, CDS profile version, DTCG report version, immutable source revision, maturity state, approval state, owner role, layer, dependency set — an identity missing any required element fails closed at V3. |
@@ -382,8 +382,8 @@ decide, schedule, or authorize it.)*
 | # | Open question | Destination |
 | --- | --- | --- |
 | 1 | Every concrete visual value — colour, palette, typeface, size, spacing, radius, stroke, shadow, opacity, icon, illustration, motion value, breakpoint | CDS-WP-020 and later, each separately authorized |
-| 2 | The admitted DTCG `$type` set for visual families | CDS-WP-020 |
-| 3 | The concrete shared vocabulary of families, roles, and modifiers | CDS-WP-020 |
+| 2 | The admitted DTCG `$type` set for visual families — **CLOSED by DEC-S-130** (CDS-WP-020 Decision Integration Pass, 2026-08-27): `color`, `dimension`, `number`. Composite types and font-family / font-weight identity **stay deferred** | **Closed**; residual under **OD-2** |
+| 3 | The concrete shared vocabulary of families, roles, and modifiers | CDS-WP-020 successor work, **still open** as **OD-6** |
 | 4 | The responsive-range model, and the Layer 3 / Layer 5 split for viewport strategy | CDS-WP-021 |
 | 5 | Whether a theme is a resolver context, a separate source set, or a Product Profile concern — and the token layering light and dark imply (CR-025) | **CDS-WP-022** |
 | 6 | Whether high contrast is a CDS context, a platform-honouring behaviour, or both | CDS-WP-022 |
@@ -433,6 +433,10 @@ not by a generated artifact.
 
 | Topic | Document |
 | --- | --- |
+| **Reference layer** (token-flow layer 1) | [Visual Reference Token Foundation](VISUAL_REFERENCE_TOKEN_FOUNDATION.md) — CDS-WP-020 |
+| **Semantic layer** (token-flow layer 2) | [Visual Semantic Token Foundation](VISUAL_SEMANTIC_TOKEN_FOUNDATION.md) — CDS-WP-020 |
+| **Value-selection discipline** | [Visual Token Value Selection Rules](../governance/VISUAL_TOKEN_VALUE_SELECTION_RULES.md) — CDS-WP-020 |
+| Open decisions gating every value | [Visual Token Foundation Open Decisions](../roadmap/VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md) — **non-normative** |
 | Colour | [Visual Foundation Colour Architecture](VISUAL_FOUNDATION_COLOR_ARCHITECTURE.md) |
 | Typography | [Visual Foundation Typography Architecture](VISUAL_FOUNDATION_TYPOGRAPHY_ARCHITECTURE.md) |
 | Spacing, sizing, layout, grid, responsive | [Visual Foundation Spatial Architecture](VISUAL_FOUNDATION_SPATIAL_ARCHITECTURE.md) |

@@ -34,17 +34,51 @@ Controlled work-package roadmap for the Core Design System (CDS).
   activated **no** later work package. Its architecture was integrated by the
   Human-Maintainer commit **`538fbccbf6f554de3b872e9fb75a70d13318feb6`**, and
   closure became effective there.
-- **Current work package:** **none.** The **CDS Phase Transition Governance
-  Package** (**DEC-S-127**) runs between CDS-WP-019 closure and any CDS-WP-020
-  authorization. It is **not** a numbered work package, occupies no identifier in
-  the CDS-WP-020 … CDS-WP-053 sequence, changes **only** project-phase authority,
-  and activates nothing.
-- **Next planned work package:** **CDS-WP-020 — Reference and Semantic Token
+- **Current work package:** **CDS-WP-020 — Reference and Semantic Token
+  Foundation**, authorized separately by the Human Maintainer on 2026-08-26 and
+  **executed, not closed**. The **CDS Phase Transition Governance Package**
+  (**DEC-S-127**) ran between CDS-WP-019 closure and that authorization; it is
+  **not** a numbered work package, occupies no identifier in the
+  CDS-WP-020 … CDS-WP-053 sequence, changed **only** project-phase authority, and
+  activated nothing — **the authorization was a separate Human-Maintainer
+  decision.**
+- **CDS-WP-020 returned `DECISION_REQUIRED`.** Its **contract** half is delivered:
+  the [Visual Reference Token Foundation](../docs/architecture/VISUAL_REFERENCE_TOKEN_FOUNDATION.md),
+  the [Visual Semantic Token Foundation](../docs/architecture/VISUAL_SEMANTIC_TOKEN_FOUNDATION.md),
+  and the [Visual Token Value Selection Rules](../docs/governance/VISUAL_TOKEN_VALUE_SELECTION_RULES.md).
+  Its **value and machine-readable** half is **gated** on seven normative choices
+  that no committed CDS source has made, recorded as **OD-1 … OD-7** in the
+  non-normative
+  [Visual Token Foundation Open Decisions](../docs/roadmap/VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md)
+  register. It created **no** visual value, **no** identifier, **no** token source
+  file, **no** schema, and **no** validator rule; produced and admitted **no**
+  evidence; changed **no** maturity; added **no** risk; and
+  activated **no** later work package. **Closure is a separate Human-Maintainer
+  act and has not occurred.**
+- **CDS-WP-020 Decision Integration Pass (2026-08-27) — prepared, NOT YET
+  EFFECTIVE.** Separately authorized by the Human Maintainer after Nova adjudicated
+  OD-1 … OD-7. It prepared **DEC-S-128** (one canonical `srgb` colour
+  representation; OKLCH derivational only), **DEC-S-129** (**WCAG 2.2** contrast
+  evaluation authority; full-precision comparison; APCA informational only),
+  **DEC-S-130** (an explicit, minimal, closed `$type` admission profile — `color`,
+  `dimension`, `number`; explicit own typing; no composites; **`profileVersion`
+  stays `1`**), **DEC-S-131** (the **Source Set** as the independently evaluable
+  unit; **AGGREGATED is not MATURE**) and **ADR-0004**. **All five become effective
+  only at the Human-Maintainer exact-byte integration commit.** They answer
+  **OD-1, OD-2 and OD-3**; **OD-4 … OD-7 stay open** and **VP-3, VP-4 and VP-5 stay
+  unsatisfied**, so **no visual value may be selected**. The pass created **no**
+  value, **no** identifier, and **no** token source, schema, validator rule, test,
+  or fixture; admitted **no** evidence; changed **no** maturity; added **no** risk
+  entry — **`RISK-099` is not required**; activated **no** work package; and **did
+  not close CDS-WP-020**.
+- **Next planned work package:** **CDS-WP-021 — Adaptive Layout and Responsive
   Foundation.** **`Planned`, not active, and not authorized**; it starts only on
-  separate Human-Maintainer authorization.
+  separate Human-Maintainer authorization. **OD-7 recommends that CDS-WP-022 be
+  considered before any value-selection work package** — a sequencing
+  recommendation only, which authorizes nothing.
 - **Forward roadmap:** CDS-WP-017 … CDS-WP-053 are recorded in the
   [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
-  **CDS-WP-020 … CDS-WP-053 are `Planned` only.**
+  **CDS-WP-021 … CDS-WP-053 are `Planned` only.**
 
 ## Status values
 
@@ -82,7 +116,7 @@ review, and authority state are recorded per work package below.
 | CDS-WP-017 | Post-WP-016 Roadmap, Authority and Scope Reconciliation | Completed | CDS-WP-016 |
 | CDS-WP-018 | Deferred Governance and Repository Hygiene Reconciliation | Completed | CDS-WP-017 |
 | CDS-WP-019 | Core Visual Foundation Architecture | Completed | CDS-WP-018 |
-| CDS-WP-020 | Reference and Semantic Token Foundation | Planned | CDS-WP-019 |
+| CDS-WP-020 | Reference and Semantic Token Foundation | Next | CDS-WP-019 |
 | CDS-WP-021 | Adaptive Layout and Responsive Foundation | Planned | CDS-WP-020 |
 | CDS-WP-022 | Theme and Environmental Presentation Model | Planned | CDS-WP-021 |
 | CDS-WP-023 | Semantic Status Visual Binding Contract | Planned | CDS-WP-022 |
@@ -119,17 +153,19 @@ review, and authority state are recorded per work package below.
 
 ### How to read this table
 
-**`Planned` is not `Active` and not authorization.** CDS-WP-020 … CDS-WP-053 are
+**`Planned` is not `Active` and not authorization.** CDS-WP-021 … CDS-WP-053 are
 recorded so the direction is legible and so no competing roadmap can arise. Work on
 them has **not started**, and each is executable only on an explicit Nova prompt
 **and** Human-Maintainer authorization, one work package at a time. Listing
-CDS-WP-020 immediately after CDS-WP-019 activates nothing.
+CDS-WP-021 immediately after CDS-WP-020 activates nothing.
 
-**CDS-WP-019 proved the rule rather than breaking it:** it left `Planned` only when
-the Human Maintainer authorized it separately — **not** because the roadmap listed
-it next. **The phase transition does not change this.** DEC-S-127 relabels the
-project phase and grants no authority: CDS-WP-020 stays `Planned`, not active, and
-not authorized until the Human Maintainer authorizes it separately.
+**CDS-WP-019 and CDS-WP-020 both proved the rule rather than breaking it:** each
+left `Planned` only when the Human Maintainer authorized it separately — **not**
+because the roadmap listed it next. **The phase transition changed nothing here.**
+DEC-S-127 relabelled the project phase and granted no authority; CDS-WP-020's
+activation was an independent Human-Maintainer decision taken afterwards, and
+**CDS-WP-021 stays `Planned`, not active, and not authorized** until the Human
+Maintainer authorizes it the same way.
 
 The `Depends on` column records **sequence intent**, not permission. Four entries
 additionally require a **prior extension of the registered CDS scope** through an
@@ -602,7 +638,8 @@ release, tag, or publication; and performs no Git write.**
 
 ### CDS-WP-019 — Core Visual Foundation Architecture
 
-**Status:** Next *(the current authorized work package)*
+**Status:** Completed *(integrated by the Human-Maintainer commit
+`538fbccbf6f554de3b872e9fb75a70d13318feb6`, where closure became effective)*
 
 The first work package of **Phase V — Visual Foundation**. It defines **how** the
 CDS visual foundation is structured, governed, represented, extended, validated, and
@@ -638,6 +675,77 @@ channel adapter, or asset is created; no extension point is named; and the theme
 left explicitly open for CDS-WP-022, CDS-WP-021, and CDS-WP-023.
 
 **CDS-WP-019 creates no visual value, brand, or Product Profile; produces and
+admits no evidence; changes no maturity; accepts or closes no risk; adds no ADR,
+Decision, or risk entry; makes no claim; renames no phase; registers no capability;
+activates no pilot, consumer integration, release, tag, or publication; activates no
+later work package; and performs no Git write.**
+
+### CDS-WP-020 — Reference and Semantic Token Foundation
+
+**Status:** Next *(the current authorized work package — executed, `DECISION_REQUIRED`,
+not closed)*
+
+The second work package of **Phase V — Visual Foundation**. It establishes the
+first concrete **Reference** and **Semantic** visual token layer on top of the
+CDS-WP-019 architecture — the **contract** for those two token-flow layers, and an
+explicit escalation for the value work that contract cannot yet carry.
+
+- Establishes the [Visual Reference Token Foundation](../docs/architecture/VISUAL_REFERENCE_TOKEN_FOUNDATION.md)
+  for token-flow layer **1**: what a reference primitive is and is not, which
+  families hold one and which deliberately do not, ten reference obligations
+  (RP-1 … RP-10), seven requirements on any future scale (ST-1 … ST-7), the naming
+  rules at the reference position, the provenance and lifecycle rules, the theme
+  and Product Profile boundary, and ten validation requirements handed to
+  CDS-WP-024.
+- Establishes the [Visual Semantic Token Foundation](../docs/architecture/VISUAL_SEMANTIC_TOKEN_FOUNDATION.md)
+  for token-flow layer **2**: the role classes each family holds, twelve universal
+  role obligations (SR-1 … SR-12) consolidating the CDS-WP-019 family obligations,
+  the **alias model** (AL-1 … AL-8), the semantic naming rules, channel and product
+  neutrality, seven theme-compatibility requirements that keep CDS-WP-022 free, the
+  Semantic Status boundary (SS-1 … SS-8), the **focus role set**, the
+  component-independent state constraints, and fifteen validation requirements.
+- Establishes the [Visual Token Value Selection Rules](../docs/governance/VISUAL_TOKEN_VALUE_SELECTION_RULES.md):
+  seven prerequisites that gate any value selection, a twelve-criterion evaluation,
+  ten **inadmissible grounds**, the eight-field value record, ten accessibility
+  constraints on selection, the validation strategy, the lifecycle disposition, and
+  the change classification for value work.
+- Records the [Visual Token Foundation Open Decisions](../docs/roadmap/VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md)
+  register — **non-normative** — holding **OD-1 … OD-7** with proposition,
+  alternatives, recommendation, affected files, and track, plus the items that are
+  deliberately *not* open decisions.
+- **Registered no new Decision at the original milestone.** Every binding statement
+  in the three normative documents was an application of a decision already in
+  force; each document records the derivation in its *Authority basis* section. The
+  separately authorized **Decision Integration Pass** of **2026-08-27** later
+  prepared **DEC-S-128 … DEC-S-131** and **ADR-0004** — **not yet effective**, and
+  amending those documents only where a Decision required it.
+
+**Result: `DECISION_REQUIRED`.** The **value** and **machine-readable** half of the
+work package is gated on seven normative choices that no committed CDS source has
+made — the colour space (OD-1), the admitted `$type` set (OD-2), the visual
+source-set identity and topology (OD-3), the concrete identifier grammar (OD-4),
+scale topology (OD-5), the role vocabulary and family granularity (OD-6), and the
+sequencing against CDS-WP-022 (OD-7). **The machinery was always sufficient; the
+decisions were not** — nothing in the format profile, the schemas, the validator, or
+the serialization contract blocks a visual source set.
+
+**Three of the seven are now answered**, by the 2026-08-27 Decision Integration
+Pass: **OD-1** (DEC-S-128), **OD-2** (DEC-S-130) and **OD-3** (DEC-S-131), with
+**DEC-S-129** adding the contrast evaluation authority and **ADR-0004** the
+architecture rationale — **all five prepared and NOT YET EFFECTIVE**. **OD-4, OD-5,
+OD-6 and OD-7 remain open**, **VP-3, VP-4 and VP-5 remain unsatisfied for every
+family**, a new risk entry remains **not** recommended and **`RISK-099` is not
+required**, and **CDS-WP-020 remains `DECISION_REQUIRED` and not closed**.
+
+**Explicitly outside CDS-WP-020.** No colour, colour space, palette, typeface, font
+stack, weight, size, line height, tracking, spacing step, radius, stroke, shadow,
+opacity level, elevation step, icon dimension, motion value, breakpoint, or theme
+instance is selected; **no identifier is created, adopted, or reserved**; no token
+source file, manifest, resolver, schema, validator rule, test, component, channel
+adapter, or asset is created; no extension point is named; and CR-004's registered
+Layer-5 mapping is unchanged.
+
+**CDS-WP-020 creates no visual value, brand, or Product Profile; produces and
 admits no evidence; changes no maturity; accepts or closes no risk; adds no ADR,
 Decision, or risk entry; makes no claim; renames no phase; registers no capability;
 activates no pilot, consumer integration, release, tag, or publication; activates no

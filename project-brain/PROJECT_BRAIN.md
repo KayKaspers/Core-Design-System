@@ -58,15 +58,20 @@ areas today.
 Governance foundation established. No final design or technology decisions are
 approved.
 
-- Decisions: DEC-S-001 … DEC-S-127 (127) — 6 foundation + 6 scope + 8 consumer
+- Decisions: DEC-S-001 … DEC-S-131 (131) — 6 foundation + 6 scope + 8 consumer
   and pilot scope + 12 logical architecture + 16 governance + 12 accessibility +
   4 operating enablement and pre-candidate + 8 accessibility support baseline and
   evidence + 10 machine-readable source and token format + 10 machine-readable
   bootstrap and validation + 12 offline validator implementation + 10 semantic
   status foundation + 10 semantic status source and evidence + 1 accessibility /
   maturity / channel boundary + 1 candidate finalization / maturity / evidence
-  transition + 1 phase transition decision ·
-  **ADRs: 3 (ADR-0001, ADR-0002, ADR-0003)**
+  transition + 1 phase transition + 4 visual token representation, evaluation
+  authority and source identity decisions ·
+  **ADRs: 4 (ADR-0001, ADR-0002, ADR-0003, ADR-0004)**
+  - **Effectivity: DEC-S-128 … DEC-S-131 and ADR-0004 are `PROPOSED / AUTHORIZED FOR
+    INTEGRATION` and NOT YET EFFECTIVE.** Until the Human-Maintainer exact-byte
+    integration commit of the CDS-WP-020 Decision Integration Pass the **effective**
+    register is **DEC-S-001 … DEC-S-127 (127)** with **3 ADRs**.
 - Risks: RISK-001 … RISK-098 (98) — **89 Monitored; RISK-031, RISK-040, RISK-044,
   RISK-066, RISK-067, RISK-068, RISK-069, RISK-071, RISK-098 Mitigating**; **owner
   model finalized**; no risk accepted or closed
@@ -82,9 +87,21 @@ approved.
   risk; renamed no phase; registered no capability; and activated no later work
   package. Closure became effective with the Human-Maintainer commit
   `538fbccbf6f554de3b872e9fb75a70d13318feb6`.
-- Current work package: **none.** The **CDS Phase Transition Governance Package**
-  (**DEC-S-127**) runs between CDS-WP-019 closure and any CDS-WP-020 authorization.
-  It is **not** a numbered work package and activates nothing.
+- Current work package: **CDS-WP-020 — Reference and Semantic Token Foundation**,
+  authorized separately by the Human Maintainer on 2026-08-26 and **executed with
+  result `DECISION_REQUIRED`; not closed.** **Contract only:** it defines what a
+  visual reference primitive and a visual semantic role are, what each must declare,
+  how a role aliases a primitive, and the discipline any future value must satisfy.
+  It selects **no value**, creates **no identifier**, and creates no token source
+  file, schema, validator rule, or test; produced and admitted no evidence; changed
+  no maturity; added no risk; renamed no phase; registered no
+  capability; and activated no later work package. Its value and machine-readable
+  half is **gated** on **OD-1 … OD-7** — of which **OD-1, OD-2 and OD-3 were
+  answered** by the separately authorized **Decision Integration Pass** of
+  2026-08-27 (**DEC-S-128 … DEC-S-131 + ADR-0004, prepared and NOT YET EFFECTIVE**),
+  while **OD-4 … OD-7 stay open** and **VP-3, VP-4 and VP-5 stay unsatisfied**. The **CDS Phase Transition Governance
+  Package** (**DEC-S-127**) ran between CDS-WP-019 closure and this authorization;
+  it is **not** a numbered work package and activated nothing.
 - Closed work package: **CDS-WP-016 — Semantic Status Foundation Independent Evidence
   Review and Candidate Gate.** Its review work was
   **executed** — **Independent Review PASS**, **Candidate Recommendation GO**;
@@ -120,8 +137,9 @@ approved.
 | **CDS-WP-016** | **Closed** — post-promotion closure reconciliation integrated by the Human-Maintainer commit `1fc53ae5afa40807e1950171ab700b0860ee581e` |
 | **CDS-WP-017** | **Closed** — Post-WP-016 Roadmap, Authority and Scope Reconciliation, integrated by the Human-Maintainer commit `df9b8f21ff3bde4607b1c9ff7fdcbe3144366040` (governance/roadmap only; no design, evidence, maturity, claim, or publication effect) |
 | **CDS-WP-018** | **Closed** — Deferred Governance and Repository Hygiene Reconciliation, integrated by the Human-Maintainer commit `e5d5d492619071655ba956713980d1ee261d9213` (documentary current-state, mirror, and hygiene reconciliation only; no phase rename, no capability registration) |
-| **CDS-WP-019** | **Active** — Core Visual Foundation Architecture (**architecture only; no visual value**; no token source, component, brand, profile, evidence, maturity change, Decision, ADR, risk, phase rename, or capability registration) |
-| **CDS-WP-020 … CDS-WP-053** | **PLANNED / NOT ACTIVE / NOT AUTHORIZED** — work not started |
+| **CDS-WP-019** | **Closed** — Core Visual Foundation Architecture (**architecture only; no visual value**; no token source, component, brand, profile, evidence, maturity change, Decision, ADR, risk, phase rename, or capability registration), integrated by the Human-Maintainer commit `538fbccbf6f554de3b872e9fb75a70d13318feb6` |
+| **CDS-WP-020** | **Active — executed, `DECISION_REQUIRED`, not closed.** Reference and Semantic Token Foundation (**contract only; no visual value, no identifier**; no token source, schema, validator rule, test, component, brand, profile, evidence, maturity change, Decision, ADR, risk, phase rename, or capability registration). **`AE1-CDS-WP016-SEMSTATUS-004` was not transferred to it.** |
+| **CDS-WP-021 … CDS-WP-053** | **PLANNED / NOT ACTIVE / NOT AUTHORIZED** — work not started |
 
 **F-001 lifecycle-metadata resolution (Human Maintainer, 2026-08-19).** The five
 `AE1-CDS-WP016-SEMSTATUS-004`-bound normative Foundation documents remain
@@ -974,13 +992,18 @@ Human-Maintainer commit `538fbccbf6f554de3b872e9fb75a70d13318feb6`. It opened
 [Core Visual Foundation Architecture (CDS-WP-019)](#core-visual-foundation-architecture-cds-wp-019)
 below.
 
-**No numbered work package is currently active.** The **CDS Phase Transition
-Governance Package** (**DEC-S-127**) sits between CDS-WP-019 closure and any
-CDS-WP-020 authorization. It changed the project-phase label and nothing else: no
-maturity, no evidence, no visual value, no capability, no Product Profile, no
-pilot, no release, and no activation.
+The **CDS Phase Transition Governance Package** (**DEC-S-127**) sat between
+CDS-WP-019 closure and the CDS-WP-020 authorization. It changed the project-phase
+label and nothing else: no maturity, no evidence, no visual value, no capability, no
+Product Profile, no pilot, no release, and no activation.
 
-**The next planned work package is CDS-WP-020 — Reference and Semantic Token
+**CDS-WP-020 — Reference and Semantic Token Foundation is the current authorized
+work package**, authorized separately by the Human Maintainer on 2026-08-26 and
+**executed with result `DECISION_REQUIRED`; not closed** — see
+[Reference and Semantic Token Foundation (CDS-WP-020)](#reference-and-semantic-token-foundation-cds-wp-020)
+below.
+
+**The next planned work package is CDS-WP-021 — Adaptive Layout and Responsive
 Foundation**, and it **remains inactive until separately authorized by the Human
 Maintainer**. Any further step begins only on an explicit Nova prompt and
 Human-Maintainer authorization.
@@ -1059,8 +1082,9 @@ establishing demand.
 
 The theme **mechanism** (CDS-WP-022) · the responsive **model** and the Layer 3 /
 Layer 5 split (CDS-WP-021) · the status-to-visual **binding** (CDS-WP-023) · the
-admitted DTCG `$type` set and the concrete vocabulary (CDS-WP-020) · the named
-extension-point set (CDS-WP-032) · every visual value.
+admitted DTCG `$type` set and the concrete vocabulary (CDS-WP-020 — **still open**;
+recorded as **OD-2** and **OD-6**) · the named extension-point set (CDS-WP-032) ·
+every visual value.
 
 ### What it did not do
 
@@ -1071,6 +1095,98 @@ Decision, ADR, or risk** — every binding statement applies a decision already 
 force; **renamed no phase**; registered **no** capability; made **no** claim; and
 activated **no** later work package. It touched **no** Semantic Status source,
 revision, maturity, or evidence package.
+
+## Reference and Semantic Token Foundation (CDS-WP-020)
+
+**Contract only. No visual value exists in CDS, and CDS-WP-020 created none** —
+verified by search at the baseline, not assumed: no hexadecimal colour literal, no
+`colorSpace` or `components` member, and no `px`, `rem`, `em`, or `pt` dimension
+literal anywhere in the tracked token sources or schemas. **No identifier was
+created either.**
+
+### What it established
+
+- The [Visual Reference Token Foundation](../docs/architecture/VISUAL_REFERENCE_TOKEN_FOUNDATION.md) —
+  token-flow layer **1**. *A reference token is a value without a purpose.* Ten
+  obligations (RP-1 … RP-10), seven requirements on any future scale
+  (ST-1 … ST-7), the reference naming rules (RN-1 … RN-9), provenance and lifecycle
+  (RV-1 … RV-5), the theme and profile boundary (RB-1 … RB-5), the machine-readable
+  disposition, and ten validation requirements handed to CDS-WP-024.
+- The [Visual Semantic Token Foundation](../docs/architecture/VISUAL_SEMANTIC_TOKEN_FOUNDATION.md) —
+  token-flow layer **2**. *A semantic role is a named purpose that resolves to a
+  value it does not own.* Twelve universal role obligations (SR-1 … SR-12)
+  consolidating the CDS-WP-019 family obligations, the **alias model**
+  (AL-1 … AL-8), semantic naming (SN-1 … SN-9), channel and product neutrality
+  (PN-1 … PN-5), theme compatibility (TC-1 … TC-7), the Semantic Status boundary
+  (SS-1 … SS-8), the **focus role set**, state-role constraints (IS-1 … IS-5), and
+  fifteen validation requirements.
+- The [Visual Token Value Selection Rules](../docs/governance/VISUAL_TOKEN_VALUE_SELECTION_RULES.md) —
+  *no visual value enters CDS without a recorded reason that someone else can
+  disagree with.* Seven prerequisites, a twelve-criterion evaluation, ten
+  inadmissible grounds, the eight-field value record, ten accessibility constraints,
+  the validation strategy, and the lifecycle disposition.
+- The **non-normative**
+  [Visual Token Foundation Open Decisions](../docs/roadmap/VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md)
+  register — **OD-1 … OD-7**.
+
+### The three rules worth remembering
+
+- **A reference token cannot be accessible.** Accessibility is a property of a
+  pair, a composition, and a context — none of which exists at layer 1. Obligations
+  are declared at the **semantic** layer, where they can be checked.
+- **An alias transports a value, never an obligation** (AL-7). If obligations
+  travelled along aliases, a theme could satisfy an accessibility obligation by
+  re-binding, and the role would stop being where the obligation is checked.
+- **The machinery was always sufficient; the decisions were not.** Nothing in the
+  format profile, the schemas, the validator, or the serialization contract blocks a
+  visual source set. Writing one anyway would have settled OD-1 … OD-5 by
+  implication — **acquiring** authority rather than receiving it (DEC-S-033). **Three
+  of those choices are now made, and a source set still may not be written**: OD-4
+  and OD-5 are open, and **VP-3, VP-4 and VP-5 are unsatisfied for every family**.
+
+### Why it returned `DECISION_REQUIRED`
+
+Seven normative choices that no committed CDS source has made gate every concrete
+value and every machine-readable visual source: the **colour space** (OD-1), the
+**admitted `$type` set** (OD-2), the **visual source-set identity and topology**
+(OD-3), the **identifier grammar** (OD-4), **scale topology** (OD-5), the **role
+vocabulary and family granularity** (OD-6), and the **sequencing against
+CDS-WP-022** (OD-7). The five earlier work packages that made comparable
+first-of-their-kind normative choices — **CDS-WP-011 … CDS-WP-015** — each
+registered a Decision block, and three of them an ADR; CDS-WP-020 could register
+neither on its own authority, so it escalated instead.
+
+**The escalation was answered on 2026-08-27.** The Human Maintainer separately
+authorized a bounded **Decision Integration Pass**, which **prepared** **DEC-S-128**
+(one canonical `srgb` colour representation; OKLCH derivational only),
+**DEC-S-129** (**WCAG 2.2** contrast evaluation authority; full-precision
+comparison; APCA and other methods informational only), **DEC-S-130** (an explicit,
+minimal, closed `$type` admission profile — `color`, `dimension`, `number`;
+explicit own typing; no composites; **`profileVersion` stays `1`**), **DEC-S-131**
+(the **Source Set** as the independently evaluable unit; **AGGREGATED is not
+MATURE**) and **ADR-0004**. **All five are `PROPOSED / AUTHORIZED FOR INTEGRATION`
+and NOT YET EFFECTIVE.** They answer **OD-1, OD-2 and OD-3** and **select no
+value**; **OD-4 … OD-7 stay open**, **VP-3, VP-4 and VP-5 stay unsatisfied**, **a
+new risk entry is still not recommended and `RISK-099` is not required**, and
+**CDS-WP-020 stays `DECISION_REQUIRED` and not closed**.
+
+### What it did not do
+
+It created **no** visual value, identifier, token source file, manifest, resolver,
+schema, validator rule, diagnostic, test, fixture, component, channel adapter,
+brand, identity, or Product Profile; produced and admitted **no** evidence; changed
+**no** maturity — all nine families stay **`Proposed`**, visual source sets stay
+**0**, visual Candidate families stay **0**; **registered no new risk** — the Risk
+Register stays at **98**, and **`RISK-099` is not required**. *(At the original
+milestone it also registered no Decision and no ADR, with the registers at **127**
+and the ADR range at **ADR-0001 … ADR-0003**; the separately authorized 2026-08-27
+Decision Integration Pass prepared **DEC-S-128 … DEC-S-131** and **ADR-0004**, which
+are **not yet effective**.)* It **renamed no phase**; registered **no** capability; made
+**no** claim; and activated **no** later work package. It touched **no** Semantic
+Status source, revision, maturity, approval, or evidence package, and
+**`AE1-CDS-WP016-SEMSTATUS-004` was not transferred to anything**. **CR-004's
+registered Layer-5 mapping is unchanged**, and **no test expectation was weakened
+and no fixture rewritten.**
 
 ## Related documents
 
@@ -1101,10 +1217,15 @@ revision, maturity, or evidence package.
 - [CDS-WP-017 Post-WP-016 Roadmap Reconciliation Notes](CDS_WP_017_POST_WP016_ROADMAP_RECONCILIATION_NOTES.md)
 - [CDS-WP-018 Deferred Governance Hygiene Notes](CDS_WP_018_DEFERRED_GOVERNANCE_HYGIENE_NOTES.md)
 - [CDS-WP-019 Core Visual Foundation Architecture Notes](CDS_WP_019_CORE_VISUAL_FOUNDATION_ARCHITECTURE_NOTES.md)
+- [CDS-WP-020 Reference and Semantic Token Foundation Notes](CDS_WP_020_REFERENCE_AND_SEMANTIC_TOKEN_FOUNDATION_NOTES.md)
 - [Visual Foundation Architecture](../docs/architecture/VISUAL_FOUNDATION_ARCHITECTURE.md) — CDS-WP-019 entry point
+- [Visual Reference Token Foundation](../docs/architecture/VISUAL_REFERENCE_TOKEN_FOUNDATION.md) · [Visual Semantic Token Foundation](../docs/architecture/VISUAL_SEMANTIC_TOKEN_FOUNDATION.md) — CDS-WP-020 entry points
+- [Visual Token Value Selection Rules](../docs/governance/VISUAL_TOKEN_VALUE_SELECTION_RULES.md)
+- [Visual Token Foundation Open Decisions](../docs/roadmap/VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md) — **non-normative**
 - [Foundation Milestone Review](../docs/reviews/FOUNDATION_MILESTONE_REVIEW.md)
 - [Foundation Closure Record](../docs/governance/FOUNDATION_CLOSURE_RECORD.md)
 - [Accessibility Support Baseline](../docs/governance/ACCESSIBILITY_SUPPORT_BASELINE.md)
 - [ADR-0001 — Machine-Readable Token Source Format](../docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)
 - [ADR-0002 — Deterministic JSON Serialization](../docs/decisions/ADR-0002-DETERMINISTIC_JSON_SERIALIZATION.md)
 - [ADR-0003 — Offline Token Validator Implementation Stack](../docs/decisions/ADR-0003-OFFLINE_TOKEN_VALIDATOR_IMPLEMENTATION_STACK.md)
+- [ADR-0004 — Visual Token Representation and Source Identity Architecture](../docs/decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md) — **prepared, not yet effective**

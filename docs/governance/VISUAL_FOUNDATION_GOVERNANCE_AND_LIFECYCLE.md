@@ -3,6 +3,12 @@
 - **Project:** Core Design System (CDS)
 - **Registered by:** CDS-WP-019 — Core Visual Foundation Architecture
 - **Date:** 2026-08-26
+- **Amended by:** CDS-WP-020 (Decision Integration Pass), 2026-08-27 — the
+  *Where maturity binds, and what aggregation confers* subsection, under
+  **DEC-S-131**. **That subsection is `PROPOSED / AUTHORIZED FOR INTEGRATION` and
+  NOT YET EFFECTIVE** until the Human-Maintainer exact-byte integration commit. It
+  **applies** AF-1 … AF-5 and adds **no** maturity rule, gate, or evidence
+  requirement; AF-1 … AF-5 and VR-1 … VR-5 are unchanged.
 - **Artifact class:** **1 — Normative human-readable source** (DEC-S-022)
 - **Status:** **Normative for how visual foundation artifacts are owned, changed,
   matured, validated, and retired.** It **grants no maturity**.
@@ -54,6 +60,36 @@ with its own maturity, evidence, gate, and compatibility statement.
 | **AF-3** | **A family may mature at its own pace.** One family reaching Candidate grants nothing to any other. |
 | **AF-4** | **A cross-family construct matures no faster than its weakest constituent.** The focus role set spans VF-1, VF-5, and VF-3; it is not Candidate while any of them is not. |
 | **AF-5** | **An architecture document is not the artifact.** These documents describe the families; they are not the source sets, and committing them matures nothing. |
+
+### Where maturity binds, and what aggregation confers
+
+*(Normative — **DEC-S-131**,
+[ADR-0004](../decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md),
+CDS-WP-020 Decision Integration Pass, 2026-08-27. **PROPOSED / AUTHORIZED FOR
+INTEGRATION — NOT YET EFFECTIVE** until the Human-Maintainer exact-byte integration
+commit. It applies AF-1 … AF-5 and **adds no new maturity rule, gate, or evidence
+requirement**.)*
+
+- **The Source Set is the independently evaluable unit**, and the visual topology
+  is **one source set per independently evaluable Family × Token-Flow-Layer unit**.
+  A family occupying token-flow layers 1 and 2 may therefore have two.
+- **Maturity binds to the pair (`sourceSetId`, `sourceRevision`)** and to nothing
+  else. **A new revision inherits no evidence and no admission** (AF-2, DEC-S-126).
+- **One manifest may aggregate several source sets**, and a manifest's own
+  `maturityState` and `approvalState` describe **only the manifest artifact
+  itself** — **not** a roll-up, **not** a maximum, **not** a minimum, **not**
+  inherited in either direction.
+- **AGGREGATED is not MATURE.** Declaring an inventory is a structural act; it
+  confers nothing on what is inventoried, and nothing on the inventory. This is
+  AF-1 restated at the point where it is easiest to lose quietly, alongside the
+  three cases CDS already names: metadata is not authority (VR-4), a validator pass
+  is not maturity authority (DEC-S-053), and a digest is not a signature
+  (DEC-S-090).
+- **A `sourceSetId` change invalidates admitted evidence** and is a migration and
+  identity event; **a file move alone is not a `sourceSetId` change.**
+
+**This changes no gate and promotes nothing.** Visual foundation source sets in
+existence remain **0**, and **VF-1 … VF-9 remain `Proposed`**.
 
 ## Current maturity state
 
@@ -281,7 +317,11 @@ and gate, is **a substantial governance load that has never been run**.
   reduce ceremony, or to widen authority through an explicit, governed decision.
 - **Fewer families that actually reach a gate beat nine that do not.** Whether all
   nine are worth maturing separately is a real question for CDS-WP-020, and this
-  document does not pre-answer it.
+  document does not pre-answer it. **DEC-S-131 does not pre-answer it either:** it
+  fixes the *unit* of evaluation, not how many families CDS chooses to mature. That
+  question stays open as **OD-6**, and the cost basis it rests on has been
+  corrected — per-family, per-layer source sets do **not** multiply manifests,
+  because one manifest may aggregate many source sets.
 
 ## Risks this governance is answering
 

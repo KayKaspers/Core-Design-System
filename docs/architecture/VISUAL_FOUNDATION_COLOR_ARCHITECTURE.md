@@ -3,6 +3,12 @@
 - **Project:** Core Design System (CDS)
 - **Registered by:** CDS-WP-019 — Core Visual Foundation Architecture
 - **Date:** 2026-08-26
+- **Amended by:** CDS-WP-020 (Decision Integration Pass), 2026-08-27 — the
+  *Colour space and encoding* and *Contrast evaluation authority* sections, under
+  **DEC-S-128** and **DEC-S-129**. **Both are `PROPOSED / AUTHORIZED FOR
+  INTEGRATION` and NOT YET EFFECTIVE** until the Human-Maintainer exact-byte
+  integration commit; the rest of this document is unchanged. **No colour value is
+  selected.**
 - **Artifact class:** **1 — Normative human-readable source** (DEC-S-022)
 - **Status:** **Normative for the structure of CDS colour.** It defines the colour
   architecture (**VF-1**) and **selects no colour**.
@@ -181,19 +187,58 @@ Constraints any later data-visualization work inherits:
 
 ## Colour space and encoding
 
-*(Deliberately open — DEC-S-032)*
+*(Normative — **DEC-S-128**, ADR-0004, CDS-WP-020 Decision Integration Pass,
+2026-08-27. **PROPOSED / AUTHORIZED FOR INTEGRATION — NOT YET EFFECTIVE** until the
+Human-Maintainer exact-byte integration commit. **It selects no colour value.**)*
 
 The CDS Token Format Profile pins **DTCG 2025.10** and uses the Color Module's
-structure **as defined**, selecting **no** colour value. Consequently:
+structure **as defined**. The colour space is **no longer open**:
 
-- **Which colour space CDS authors in is not decided here.** It is CDS-WP-020's.
-- **No gamut, no encoding, and no conversion rule is selected.**
-- Whatever is chosen must satisfy the existing determinism requirement: the same
-  source revision plus the same transformation revision yields the same output
-  (DEC-S-080), computable **offline** with no external service (DEC-S-030).
+- **CDS authors normative visual colour in exactly one canonical space: the pinned
+  DTCG 2025.10 colour space keyed `srgb`**, with components in that report's
+  representation and range **as defined**. No 8-bit-only or `n/255` restriction
+  applies.
+- **A perceptually uniform space such as OKLCH is a derivation and design-analysis
+  space only** — never a normative source space, never a second canonical
+  representation, never authority for a value, and never an evidence carrier. A
+  derivation result is recorded as the canonical value; the derivation is
+  **provenance**.
+- **A normative source value outside the admitted canonical model fails closed.**
+- **Delivery quantization belongs to the channel and generated-output boundary** and
+  never rewrites a canonical source value.
+- **`alpha` is part of the colour value; no standalone opacity family exists** —
+  opacity remains an attribute of VF-1 and VF-6.
+- **`hex` stays what the pinned report defines: an optional fallback.** It may never
+  become a second source of truth. Whether CDS requires or prohibits it in a
+  normative visual source is **deferred** (residual under **OD-1**).
+- The existing determinism requirement is unchanged: the same source revision plus
+  the same transformation revision yields the same output (DEC-S-080), computable
+  **offline** with no external service (DEC-S-030).
 - A conversion performed during channel transformation is a **transformation**, and
   it may not introduce a decision absent from the source, nor discard a declared
   pairing or contrast obligation.
+
+**Still open, and unchanged by this:** every palette, hue, tonal step, scale, light
+or dark instance, high-contrast instance, brand colour, and product colour. **A
+representation is not a value.**
+
+## Contrast evaluation authority
+
+*(Normative — **DEC-S-129**, CDS-WP-020 Decision Integration Pass, 2026-08-27.
+**PROPOSED / AUTHORIZED FOR INTEGRATION — NOT YET EFFECTIVE.** **No threshold is
+restated or invented, and no contrast is evaluated.**)*
+
+| # | Rule |
+| --- | --- |
+| 1 | **The normative baseline is WCAG 2.2** — the version already established as the sole normative accessibility basis (DEC-S-049, DEC-S-054). **Not `WCAG 2.x`, not `latest`;** a floating version is not an identity. |
+| 2 | **Contrast is computed by the contrast-ratio method the cited WCAG 2.2 contrast criteria themselves require.** CDS adopts it by reference and defines no method of its own. |
+| 3 | **CDS restates no criterion threshold and invents none** — unchanged from *Foreground and background pairing* rule 5 above. |
+| 4 | **Pass and fail comparison uses the full available computation precision, with no rounding before comparison.** Presentation or display rounding is a formatting artifact and cannot alter the outcome. |
+| 5 | **Additional methods, including APCA, may be calculated and recorded as informational or experimental analysis only.** Calculating one grants it **no** normative authority, satisfies **no** CDS obligation, and supports **no** claim. |
+| 6 | **An automated contrast calculation is not accessibility evidence and grants no AE level** (DEC-S-053, EV-1), and **absence of a failure is not evidence of success** (EV-4). |
+
+**No contrast has been measured**, because **no colour value exists**. Contrast
+remains a property of a **pair, in a context, in a channel** — never of a value.
 
 ## What a Product Profile may do with colour
 
@@ -244,12 +289,16 @@ perceivable by a person.
 
 ## Deferred decisions
 
-Palette · hue set · scale structure and step count · every colour value · colour
-space and encoding · light and dark instances · high-contrast instance · the
-concrete role vocabulary · data-visualization sequences · brand colour · product
-colour · named extension points.
+Palette · hue set · scale structure and step count · every colour value · light and
+dark instances · high-contrast instance · the concrete role vocabulary ·
+data-visualization sequences · brand colour · product colour · named extension
+points · the CDS-specific disposition of the optional DTCG `hex` member.
 
 **Each requires its own explicitly authorized work package.**
+
+**Closed since CDS-WP-019:** *colour space and encoding*, decided by **DEC-S-128**
+(see *Colour space and encoding* above). Closing it decided a **representation**,
+not a value — **no colour value exists in CDS**, and **VF-1 remains `Proposed`**.
 
 ## Related documents
 

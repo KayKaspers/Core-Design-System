@@ -9,6 +9,164 @@ released and no release is announced.
 
 ### Added
 
+- **CDS-WP-020 Decision Integration Pass — `DEC-S-128 … DEC-S-131` and `ADR-0004`,
+  prepared and NOT YET EFFECTIVE.** Separately authorized by the Human Maintainer on
+  **2026-08-27** after Nova adjudicated **OD-1 … OD-7**. All five are
+  **`PROPOSED / AUTHORIZED FOR INTEGRATION`** and become effective **only** at the
+  Human-Maintainer exact-byte integration commit, after a Fresh Independent Review
+  and Nova integration adjudication. Until then the **effective** registers remain
+  **DEC-S-127** and **ADR-0003**; the **prepared** object holds **131** decisions and
+  **4** ADRs. **A review PASS is not a commit, and a Nova recommendation is not an
+  approval.** (CDS-WP-020)
+- **`DEC-S-128` — exactly one canonical normative visual colour representation.**
+  The pinned DTCG 2025.10 colour space keyed **`srgb`**, with components as that
+  report defines them — **no 8-bit-only or `n/255` restriction**. **OKLCH is a
+  derivation and design-analysis space only**: not a source space, not a second
+  canonical representation, not authority for a value, and not an evidence carrier;
+  a derivation result is recorded as the canonical value with the derivation kept as
+  **provenance**. Delivery quantization belongs to the channel and generated-output
+  boundary and **never rewrites a source value**; an out-of-model source value
+  **fails closed**. `alpha` remains part of the colour value, **no standalone opacity
+  family** is introduced, and **`hex` gains no new authority and no new
+  prohibition** — it may never become a second source of truth, and its CDS-specific
+  disposition stays deferred. **No colour value, palette, hue, or scale is
+  selected.** (CDS-WP-020)
+- **`DEC-S-129` — WCAG 2.2 is the contrast evaluation authority, and precision is
+  not negotiable.** **Not `WCAG 2.x`, not `latest`** — a floating version is not an
+  identity. The method is the one the cited criteria themselves require; **CDS
+  restates no threshold and invents none.** Pass and fail are compared at **full
+  available precision with no rounding before comparison**, and presentation
+  rounding cannot alter the outcome. **APCA and other methods may be calculated and
+  recorded as informational or experimental analysis only** — **calculation is not
+  adoption**, and such a method satisfies no CDS obligation and supports no claim
+  merely by being computed. **An automated contrast calculation is not accessibility
+  evidence and grants no AE level**, and **no contrast was evaluated** — there is
+  nothing to evaluate. (CDS-WP-020)
+- **`DEC-S-130` — an explicit, minimal, closed `$type` admission profile.** Exactly
+  **`color`**, **`dimension`** and **`number`**, each verified **directly against the
+  final DTCG 2025.10 Format Module** (Final Community Group Report, 28 October 2025).
+  **DTCG-defined is not CDS-admitted.** Every normative visual token carries its
+  **own** explicit `$type`; **group and root typing are not typing authority** (a CDS
+  profile restriction that does **not** redefine DTCG); **no composite type is
+  admitted**, and font-family / font-weight identity is **not** admitted prematurely.
+  **`$type` carries value-type semantics only** — never maturity, evidence, approval,
+  lifecycle, authority, publication, or conformance. It is identity- and
+  digest-affecting, and **evidence never transfers over that revision change**.
+  **`profileVersion` stays `1`**, and **no schema, validator, test, or fixture was
+  changed** — the validator's bounded V2 type set remains a **DEC-S-098 coverage
+  boundary, not an admission** (RISK-074). (CDS-WP-020)
+- **`DEC-S-131` — the Source Set is the independently evaluable unit, and
+  aggregation confers nothing.** One source set per **Family × Token-Flow-Layer**,
+  each carrying its own `sourceSetId`, `sourceRevision`, `layer`, dependencies,
+  `maturityState` and `approvalState`. **Maturity binds to
+  (`sourceSetId`, `sourceRevision`)** and to nothing else; a new revision inherits
+  **no** evidence. **One manifest may aggregate many source sets** — **a source set
+  is not a manifest** — and a manifest's own maturity describes **only the manifest
+  artifact**: not a roll-up, not a maximum, not a minimum, not inherited.
+  **AGGREGATED is not MATURE.** A rename is a migration and identity event; **a file
+  move is not**; a `sourceSetId` change **invalidates admitted evidence**.
+  (CDS-WP-020)
+- **`ADR-0004` — Visual Token Representation and Source Identity Architecture.**
+  Records why `srgb` is canonical (the contrast obligation stays computable from the
+  source with **no conversion inside the normative path**, and the registered print,
+  export and greyscale channels are served without gamut mapping), why OKLCH is
+  derivational (a second canonical representation would manufacture the
+  normative-source conflict DEC-S-034 resolves by **invalidating the artifact
+  state**), why the admitted type set is closed and minimal (a composite cannot
+  carry a **per-part** obligation under SR-3 … SR-5), why **`profileVersion` stays
+  `1`**, why source sets rather than manifests carry independent maturity, and why
+  aggregation confers no maturity — plus alternatives, consequences, compatibility,
+  and four implementation obligations handed to **CDS-WP-024**. **DEC-S-129 is
+  deliberately not an architecture dependency of it.** (CDS-WP-020)
+- **`F-020-02` corrected precisely — conclusion upheld, mechanism corrected.** A
+  source-set payload does carry **one** `maturityState`, so a shared visual source
+  set cannot express the per-family, never-inherited maturity **AF-1** and **AF-3**
+  require; that conclusion stands. Its **artifact-count mechanism was imprecise**:
+  it implied that per-family, per-layer source sets multiply manifests and resolvers
+  at the same rate. The committed manifest contract carries a **`sourceSets`
+  array**, so **one manifest may aggregate many source sets**, each retaining its own
+  maturity — the governance cost of preserving AF-1 and AF-3 is smaller than the
+  finding assumed, and the argument for collapsing independent maturities loses its
+  cost basis. (CDS-WP-020)
+- **`OD-1`, `OD-2` and `OD-3` answered; `OD-4` … `OD-7` deliberately left open**,
+  with three residuals recorded rather than silently deferred: the CDS-specific
+  disposition of the optional DTCG **`hex`** member, the representation of
+  **font-family and font-weight identity** (with composite-type admission), and the
+  **concrete visual source-set root identifiers**. **VP-2 is now satisfied** for the
+  families expressible in `color`, `dimension` and `number`; **VP-3, VP-4 and VP-5
+  remain unsatisfied for every family**, so **no visual value may be selected.**
+  **Four Decisions do not complete the value system.** (CDS-WP-020)
+- **CDS-WP-020 — Reference and Semantic Token Foundation: the contract for
+  token-flow layers 1 and 2 of the visual foundation.** Three normative documents —
+  the [Visual Reference Token Foundation](docs/architecture/VISUAL_REFERENCE_TOKEN_FOUNDATION.md),
+  the [Visual Semantic Token Foundation](docs/architecture/VISUAL_SEMANTIC_TOKEN_FOUNDATION.md),
+  and the [Visual Token Value Selection Rules](docs/governance/VISUAL_TOKEN_VALUE_SELECTION_RULES.md)
+  — plus one **non-normative**
+  [open-decision register](docs/roadmap/VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md).
+  **They select no value and create no identifier.** (CDS-WP-020)
+- **The Reference layer, defined as a restriction.** *A reference token is a value
+  without a purpose.* Ten obligations (RP-1 … RP-10), seven requirements on any
+  future scale (ST-1 … ST-7), nine reference naming rules (RN-1 … RN-9), five
+  provenance and lifecycle rules (RV-1 … RV-5), five theme and Product Profile
+  boundary rules (RB-1 … RB-5), and ten validation requirements handed to
+  CDS-WP-024. Five families hold reference constructs (VF-1, VF-2, VF-3, VF-5,
+  VF-6); **VF-4, VF-7, VF-8, and VF-9 deliberately hold none**, and the exclusion is
+  stated so absence is not read as oversight. (CDS-WP-020)
+- **A reference token cannot be accessible — stated normatively.** Accessibility is
+  a property of a **pair, a composition, and a context**, none of which exists at
+  token-flow layer 1. A colour primitive has no contrast ratio. Recording an
+  obligation on a primitive would put it where nothing can check it and where a
+  theme could silently move it — the failure **VF-I-8** exists to prevent.
+  (CDS-WP-020)
+- **The Semantic layer, and the twelve obligations that bind every role.**
+  *A semantic role is a named purpose that resolves to a value it does not own.*
+  SR-1 … SR-12 consolidate the CDS-WP-019 family obligations (CR-1 … CR-6,
+  TR-1 … TR-6, SP-1 … SP-5, SH-1 … SH-5) without adding one. **A role that does not
+  declare its contrast obligation and its pairings must not exist**, and declaring
+  *"this role conveys nothing"* is a real answer where a blank is not. Adds the
+  semantic naming rules (SN-1 … SN-9), channel and product neutrality
+  (PN-1 … PN-5), the Semantic Status boundary (SS-1 … SS-8), the **focus role set**,
+  component-independent state constraints (IS-1 … IS-5), and fifteen validation
+  requirements. (CDS-WP-020)
+- **The alias model (AL-1 … AL-8), and the rule that keeps the layers honest.**
+  **An alias transports a value, never an obligation** (AL-7): a role's contrast
+  obligation, pairing set, and non-visual carrier are properties of the **role**,
+  never inherited from or delegated to the primitive it resolves to — otherwise a
+  theme could satisfy an accessibility obligation by re-binding. A role never holds
+  a raw literal (AL-1), never aliases another role (AL-2), and an unresolved alias
+  **fails closed** (AL-4). (CDS-WP-020)
+- **Seven theme-compatibility requirements (TC-1 … TC-7) that keep CDS-WP-022
+  free.** Including **TC-6**: the semantic layer presupposes no context count and no
+  context set — *a role model that only works if exactly two contexts exist has
+  decided CDS-WP-022's question by implication.* (CDS-WP-020)
+- **The value-selection discipline.** *No visual value enters CDS without a
+  recorded reason that someone else can disagree with.* Seven prerequisites
+  (VP-1 … VP-7 — **none of VP-2 … VP-5 held for any family at that milestone**;
+  VP-2 was satisfied later, by DEC-S-128 and DEC-S-130), a
+  twelve-criterion evaluation (VE-1 … VE-12), **ten inadmissible grounds**
+  (IG-1 … IG-10: taste, imitation, a consumer asking, a tool default, a generated
+  artifact, an example or fixture, a validator pass, prior existence, schedule
+  pressure, and making a failing check pass), the eight-field value record
+  (VD-1 … VD-8), ten accessibility constraints (VA-1 … VA-10), and the validation
+  strategy (VS-1 … VS-6). (CDS-WP-020)
+- **`OD-1 … OD-7` — the open decisions that gate every visual value**, recorded
+  **non-normatively** with proposition, alternatives, recommendation, affected
+  files, and governance track: the **colour space and encoding**, the **admitted
+  DTCG `$type` set**, the **visual source-set identity, granularity and topology**,
+  the **concrete identifier grammar**, **scale topology** for the dimensional
+  families, the **role vocabulary and how many families CDS matures separately**,
+  and the **sequencing against CDS-WP-022**. The register also records the items
+  that are deliberately *not* open decisions — the typeface (already governed by
+  FP-1 … FP-8 and deferred), the theme mechanism, the responsive model, the
+  status-to-visual binding, extension points, motion, icons, data visualization, and
+  the transformation tool. (CDS-WP-020)
+- **Eight CDS-WP-020 findings recorded in the forward roadmap** (`F-020-01` …
+  `F-020-08`), including the **AF-1 / AF-3 versus source-set-metadata tension**
+  (one `maturityState` per source set against per-family maturity that is never
+  inherited), the observation that **T-2 is vacuously satisfiable** while zero
+  contexts are supported, and that **`F-019-04` is incomplete** — question 4 of the
+  Token and Theme Architecture is stale in the same way questions 1, 2, and 7 are.
+  **Recording a finding repairs nothing and authorizes nothing.** (CDS-WP-020)
 - **DEC-S-127 — the project phase becomes `Post-Candidate Foundation &
   Design-System Enablement`.** The phase established by **DEC-S-062** completed its
   intended operating purpose: its four prerequisites are committed, and the first
@@ -32,6 +190,48 @@ released and no release is announced.
 
 ### Changed
 
+- **CDS-WP-020 recorded as the current authorized work package — executed,
+  `DECISION_REQUIRED`, not closed.** `project-system/WORK_PACKAGES.md`,
+  `project-system/NEXT_PHASE.md`, `project-system/PROJECT_PROFILE.md`,
+  `project-system/CONTEXT_PACK_FOUNDATION.md`, `project-brain/PROJECT_BRAIN.md`,
+  `README.md`, `CLAUDE.md`, and the forward roadmap now record it, and
+  **CDS-WP-021 … CDS-WP-053** as `Planned`, not active, not authorized. Its
+  authorization came from a **separate Human-Maintainer decision** on 2026-08-26,
+  **not** from its roadmap position — and **not** from the DEC-S-127 phase
+  transition, which granted no authority. **Closure is a separate Human-Maintainer
+  act and has not occurred.** (CDS-WP-020)
+- **Two stale current-state statements corrected.** `WORK_PACKAGES.md` still
+  described CDS-WP-019 as *"Next — the current authorized work package"* and
+  `PROJECT_BRAIN.md` still carried `CDS-WP-019: Active`, although both files' own
+  headers and tables already recorded it as `Completed` and closed by commit
+  `538fbccbf6f554de3b872e9fb75a70d13318feb6`. This is the recurrence `R1-F-01` and
+  `F-019-09` describe: a work-package-status row goes stale at the next activation.
+  (CDS-WP-020)
+- **The Visual Foundation Architecture gained four *Related documents* rows** —
+  additive only. **No other CDS-WP-019 document was modified**, and no CDS-WP-005
+  document was touched: `F-020-05` (the stale alias question in the Token and Theme
+  Architecture) is **routed, not repaired**. (CDS-WP-020)
+- **Nothing else changed, and the negative state is the point.** CDS-WP-020 touched
+  no `tokens/**`, `schemas/**`, `tools/**`, `tests/**`, `artifacts/**`,
+  `docs/foundations/**`, `docs/decisions/**`, or `docs/risks/**`. **No visual value,
+  no identifier, no token source file, manifest, resolver, schema, validator rule,
+  diagnostic, test, or fixture** was created; **no test expectation was weakened and
+  no fixture rewritten**; **no evidence** was produced or admitted; **no maturity**
+  changed — all nine visual families stay `Proposed`, visual source sets stay **0**,
+  visual Candidate families stay **0**, Stable stays **0**; **no risk** was accepted,
+  closed, or re-scored; **no phase** was renamed; **no capability** was registered;
+  **no claim, Product Profile, extension point, pilot, consumer integration,
+  release, tag, or publication** was created or activated; **CR-004's registered
+  Layer-5 mapping is unchanged**; and **no Semantic Status source, revision,
+  maturity, approval, or evidence package** was touched —
+  **`AE1-CDS-WP016-SEMSTATUS-004` was not transferred to anything.** At that
+  milestone the Decision register stayed at **127**, the ADR range at
+  **ADR-0001 … ADR-0003**, and the Risk Register at **98**: **DEC-S-128 and ADR-0004
+  were recommended and not created**, and a new risk entry was **not** recommended.
+  *(Superseded for current state by the 2026-08-27 Decision Integration Pass above,
+  which prepared DEC-S-128 … DEC-S-131 and ADR-0004 under a separate Human-Maintainer
+  authorization. **The Risk Register stays at 98** — `RISK-099` was assessed and is
+  not required.)* **No Git write was performed.** (CDS-WP-020)
 - **Phase carriers reconciled, historical carriers preserved.** The maintained
   current-phase statements in `README.md`, `CLAUDE.md`,
   `project-system/PROJECT_PROFILE.md`, `project-system/NEXT_PHASE.md`,

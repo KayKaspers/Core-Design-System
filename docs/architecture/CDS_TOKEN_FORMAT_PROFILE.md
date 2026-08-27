@@ -3,6 +3,14 @@
 - **Project:** Core Design System (CDS)
 - **Registered by:** CDS-WP-011 — Machine-Readable Source and Token Format Decision
 - **Date:** 2026-07-16
+- **Amended by:** CDS-WP-020 (Decision Integration Pass), 2026-08-27 — the
+  *Canonical colour representation* and *The CDS `$type` admission profile*
+  subsections below, under **DEC-S-128** and **DEC-S-130**
+  ([ADR-0004](../decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md)).
+  **Those two subsections are `PROPOSED / AUTHORIZED FOR INTEGRATION` and NOT YET
+  EFFECTIVE** until the Human-Maintainer exact-byte integration commit; the rest of
+  this profile is unchanged and remains in effect. **The profile version is not
+  bumped.**
 - **Status:** **Normative and in effect** for the CDS token format profile;
   ADR-0001 was committed with CDS-WP-011 (`a81772c`, 2026-07-17). It constrains a
   format; it defines **no token value, name, colour, typography, spacing, or
@@ -73,6 +81,32 @@ The reserved DTCG `$`-properties are used **as defined**, never redefined
 the Color Module's `colorSpace` + `components` (+ optional `alpha`, `hex`) as
 defined — CDS selects **no** colour value here.
 
+### Canonical colour representation
+
+*(Normative — DEC-S-128, ADR-0004. **No colour value is selected.**)*
+
+- **Exactly one canonical normative CDS visual colour space exists:** the pinned
+  DTCG 2025.10 Color Module colour space keyed **`srgb`**. Components follow that
+  report's representation and range **as defined**; **no 8-bit-only, integer-only,
+  or `n/255` restriction applies**, and none may be inferred.
+- **A perceptually uniform space such as OKLCH may be used for derivation and
+  design analysis only.** It is **not** a normative source space, **not** a second
+  canonical representation, **not** authority for a value, and **not** an evidence
+  carrier. A derivation result is recorded as the canonical `srgb` value, with the
+  derivation kept as **provenance**.
+- **A normative source value outside the admitted canonical model fails closed.**
+- **Delivery quantization is a channel and generated-output concern.** A converted
+  or quantized form is a class-3 generated artifact; it never rewrites a canonical
+  source value and is never readable back as one (DEC-S-029, DEC-S-079).
+- **`alpha` is part of the colour value** where the pinned report admits it, and
+  **no standalone opacity family exists** — opacity is an attribute of VF-1 and
+  VF-6.
+- **`hex` is admitted only as the pinned report defines it** — an optional
+  fallback. **It may never become a second source of truth for a CDS colour value.**
+  Whether CDS additionally requires or prohibits it in a normative visual source is
+  **deferred** (residual under **OD-1**); this profile creates **no** hex authority
+  and **no** new hex prohibition.
+
 ## CDS `$extensions` boundary
 
 *(Normative)*
@@ -109,10 +143,53 @@ defined — CDS selects **no** colour value here.
 ## Type handling
 
 - Every CDS token declares an explicit `$type` from the DTCG-defined types
-  applicable to CDS scope; unknown or CDS-unsupported types **fail closed** at V3.
+  applicable to CDS scope; unknown or CDS-unsupported types **fail closed**.
 - Type compatibility across references is enforced (a reference must resolve to a
   compatible type) — detail in the
   [Token Reference, Resolution and Validation Model](TOKEN_REFERENCE_RESOLUTION_AND_VALIDATION_MODEL.md).
+
+### The CDS `$type` admission profile
+
+*(Normative — DEC-S-130, ADR-0004. **No token and no value is created.**)*
+
+The set the bullet above leaves unenumerated is enumerated here. **The admitted
+visual token type set is exactly three values:**
+
+| Admitted `$type` | Verified against |
+| --- | --- |
+| `color` | Design Tokens **Format Module 2025.10**, Final Community Group Report, 28 October 2025 |
+| `dimension` | Design Tokens **Format Module 2025.10**, Final Community Group Report, 28 October 2025 |
+| `number` | Design Tokens **Format Module 2025.10**, Final Community Group Report, 28 October 2025 |
+
+- **DTCG-defined is not CDS-admitted.** The pinned report defines further types;
+  this profile admits three. There is **no arbitrary or free-form admission**.
+- **Two distinct fail-closed cases.** A `$type` the pinned report does **not**
+  define fails closed at the **DTCG contract layer**; a `$type` the report defines
+  but this profile does **not admit** fails closed at **CDS profile validation**.
+  The cases stay distinguishable.
+- **No composite type is admitted.** A composite bundles several decisions into one
+  token, which is exactly where a **per-part** obligation (SR-3, SR-4, SR-5) can no
+  longer be declared. **Font-family and font-weight identity is not admitted
+  prematurely** and remains deferred (residual under **OD-2**), still gated by the
+  Typography Architecture's FP-1 … FP-8 as an **Elevated** change.
+- **Explicit own typing is required.** A normative visual source **must not** rely
+  on a group-level or root-level `$type` as typing authority. This is a **CDS
+  profile restriction only** and **does not redefine DTCG** (DEC-S-076).
+- **`$type` carries value-type semantics only.** It must never imply or be read as
+  maturity, evidence, approval, lifecycle, authority, publication, or conformance.
+- **`$type` is identity- and digest-affecting.** Adding, removing, or changing one
+  changes the canonical source bytes and the RFC 8785 + SHA-256 digest, and
+  **existing evidence never transfers over that revision change** (DEC-S-126, AF-2).
+- **Extension is additive and governed** — an **Elevated** profile change
+  (DEC-S-082), never a tool accepting a type, a fixture using one, or a document
+  containing one.
+
+> **A tool accepting a type is not the profile admitting it.** The committed
+> token-document schema constrains `$type` **not at all**, and the offline
+> validator's bounded token-`$type` set is a **DEC-S-098 V2 coverage boundary, not a
+> profile admission**. Reading either as the admitted set is **RISK-074**. **This
+> profile change alters no schema, no validator, no test, and no fixture, and
+> `profileVersion` stays `1`.**
 
 ## Source-Set layer metadata
 
@@ -163,3 +240,5 @@ Candidate. **No artifact is Stable.**
 - [Token Metadata, Provenance and Identity Model](TOKEN_METADATA_PROVENANCE_AND_IDENTITY_MODEL.md)
 - [Token and Theme Architecture](TOKEN_AND_THEME_ARCHITECTURE.md)
 - [ADR-0001](../decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)
+- [ADR-0004 — Visual Token Representation and Source Identity Architecture](../decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md)
+- [Visual Reference Token Foundation](VISUAL_REFERENCE_TOKEN_FOUNDATION.md) · [Visual Semantic Token Foundation](VISUAL_SEMANTIC_TOKEN_FOUNDATION.md)

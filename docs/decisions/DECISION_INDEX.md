@@ -11,16 +11,27 @@ authorized work packages.
 
 ## Register scope
 
-- Decision range: DEC-S-001 … DEC-S-127
-- Number of decisions: 127
+- Decision range: DEC-S-001 … DEC-S-131
+- Number of decisions: 131
+- **Effectivity qualification.** **DEC-S-128 … DEC-S-131 are prepared and
+  authorized for integration but are NOT YET EFFECTIVE.** Until the
+  Human-Maintainer exact-byte integration commit of the CDS-WP-020 Decision
+  Integration Pass, the **effective** register is **DEC-S-001 … DEC-S-127 (127
+  decisions)** and the **effective** ADR range is **ADR-0001 … ADR-0003 (3 ADRs)**.
+  The counts above are the maintained forward carrier for the prepared object; each
+  of the four entries states its own effectivity.
 - Decision record format: index entries, plus ADR files where a decision warrants an
-  Architecture Decision Record. **ADR range: ADR-0001 … ADR-0003 (3 ADRs).**
+  Architecture Decision Record. **ADR range: ADR-0001 … ADR-0004 (4 ADRs).**
 - [ADR-0001 — Machine-Readable Token Source Format](ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)
   (accepted upon Human-Maintainer commit following Nova approval).
 - [ADR-0002 — Deterministic JSON Serialization](ADR-0002-DETERMINISTIC_JSON_SERIALIZATION.md)
   (accepted upon Human-Maintainer commit following Nova approval).
 - [ADR-0003 — Offline Token Validator Implementation Stack](ADR-0003-OFFLINE_TOKEN_VALIDATOR_IMPLEMENTATION_STACK.md)
   (accepted upon Human-Maintainer commit following Nova approval).
+- [ADR-0004 — Visual Token Representation and Source Identity Architecture](ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md)
+  — **PROPOSED / AUTHORIZED FOR INTEGRATION, not yet effective and not yet
+  accepted.** It records the rationale for DEC-S-128, DEC-S-130 and DEC-S-131, and
+  **DEC-S-129 is deliberately not an architecture dependency of it.**
 
 ## Decision types
 
@@ -42,6 +53,7 @@ authorized work packages.
 | Accessibility / maturity / channel boundary decision | DEC-S-125 | CDS-WP-016 | Channel Accessibility Profiles gate channel artifacts, not channel-independent Layer-3 semantic sources and contracts; evidence transfers in neither direction; no waiver of any accessibility requirement and no Candidate award. |
 | Candidate finalization / maturity / evidence transition decision | DEC-S-126 | CDS-WP-016 | A named non-authoritative Proposed Candidate Revision, target metadata that grants nothing, revision-bound evidence that never transfers, exact-byte pre-commit evidence binding, the fixed admission-before-approval authority order, and the Promotion Commit as the actual maturity transition point. |
 | Phase transition decision | DEC-S-127 | — (CDS Phase Transition Governance Package) | The phase established by DEC-S-062 completed its operating purpose; for current and future state the project phase is `Post-Candidate Foundation & Design-System Enablement`. Prospective, partial supersession of the phase designation only — no maturity, no evidence, no activation, and no authority is granted. |
+| Visual token representation, evaluation authority and source identity decision | DEC-S-128 … DEC-S-131 | CDS-WP-020 (Decision Integration Pass) | One canonical `srgb` colour representation with perceptual spaces admitted as derivation only; WCAG 2.2 as the contrast evaluation authority with full-precision comparison and additional methods informational only; an explicit, minimal, closed CDS `$type` admission profile with explicit own typing; and the Source Set as the independently evaluable unit to which maturity binds, with aggregation conferring nothing (ADR-0004 for DEC-S-128, DEC-S-130, DEC-S-131). **Prepared and authorized for integration; NOT YET EFFECTIVE.** They select **no** value, create **no** identifier, and grant **no** maturity. |
 
 None of these types is an implementation decision. Logical architecture decisions
 define structure, responsibility, and flow — they select no technology, format,
@@ -4460,3 +4472,599 @@ consumer activation, **no** pilot, **no** licence, **no** release, **no** tag, a
 remains `Planned`, not active, and not authorized**. Semantic Status stays exactly
 as admitted; VF-1 … VF-9 stay `Proposed`; publication stays
 **`Private Development`**.
+
+---
+
+## DEC-S-128 — CDS authors visual colour in exactly one canonical sRGB representation
+
+- **Status:** **PROPOSED / AUTHORIZED FOR INTEGRATION — NOT YET EFFECTIVE.** This
+  entry is uncommitted executor output prepared under an explicit Human-Maintainer
+  authorization. It becomes `Accepted` and normative **only** at the
+  Human-Maintainer exact-byte integration commit of the CDS-WP-020 Decision
+  Integration Pass, following a Fresh Independent Review and Nova integration
+  adjudication. Until that commit it changes **no** authoritative CDS state, and no
+  earlier wording confers effectivity.
+- **Date:** 2026-08-27
+- **Type:** Visual token representation, evaluation authority and source identity
+  decision
+- **Work package:** CDS-WP-020 — Reference and Semantic Token Foundation (Decision
+  Integration Pass)
+- **Human-Maintainer authorization:** 2026-08-27, following the Nova adjudication of
+  **OD-1** of the
+  [Visual Token Foundation Open Decisions](../roadmap/VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md)
+  register
+- **Architecture record:** [ADR-0004](ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md)
+
+### Decision
+
+1. **Exactly one canonical normative CDS visual colour space exists:** the DTCG
+   2025.10 Color Module colour space identified by the `colorSpace` key **`srgb`**.
+   A normative CDS visual colour source value is authored in that representation and
+   in no other.
+
+2. **OKLCH may be used as the preferred derivation and design-analysis space.**
+   Computing a tonal step, a lightness relationship, or a candidate scale
+   perceptually is admissible and encouraged where it produces a better-reasoned
+   result.
+
+3. **OKLCH is explicitly none of the following:** a normative source space; a second
+   canonical representation; authority for a value; or an evidence carrier. A
+   perceptual computation is a calculation, and a calculation demonstrates nothing
+   about perceivability (DEC-S-053, EV-4).
+
+4. **The result of an OKLCH or other perceptual derivation is recorded as the
+   canonical sRGB source value**, with the derivation method and inputs recorded as
+   **provenance** where a record is required. The provenance record is
+   non-authoritative and never stands against the canonical value (DEC-S-022,
+   DEC-S-031).
+
+5. **Canonical component representation and range follow the pinned DTCG 2025.10
+   Color Module as defined** — the sRGB components in that report's order and
+   numeric range. **No 8-bit-only, integer-only, or `n/255` restriction is
+   introduced**, and none may be inferred from this decision.
+
+6. **Delivery quantization belongs to the channel and generated-output boundary.**
+   A channel or platform output may quantize, encode, or round for delivery; it
+   **must not** rewrite, replace, or be read back into a canonical source value
+   (DEC-S-029, DEC-S-079).
+
+7. **A normative source value outside the admitted canonical model fails closed.**
+   It is not repaired, coerced, normalized, or accepted with a warning
+   (DEC-S-023, DEC-S-078).
+
+8. **A colour-space transformation is a generated, class-3 output** and does not
+   mutate normative source identity. The source revision, digest, and identity of
+   the source are unaffected by any transformation performed downstream.
+
+9. **A transformation remains subject to the existing boundary, alias and
+   provenance rules** (TB rules of the channel mapping, AL-1 … AL-8, DEC-S-031). It
+   may not introduce a decision absent from the source, and it may not discard,
+   weaken, or silently erase a declared contrast obligation or pairing.
+
+10. **`alpha` remains part of the colour value where the pinned report admits it.**
+    It is a property of the colour value, not a separate construct.
+
+11. **No standalone opacity family is introduced.** Opacity stays what the visual
+    foundation architecture already positions it as: an attribute of **VF-1**
+    (alpha within a colour value) and **VF-6** (overlay and scrim). An opacity
+    change is a colour change or a surface change and inherits that family's
+    obligations.
+
+12. **Translucency creates no accessibility exception.** A translucent value used by
+    a contrast-sensitive role still resolves to a **pair**, and a pairing outside a
+    role's declared pairing set is **undefined and fails closed** (Colour
+    Architecture pairing rule 2; SR-3, SR-4). This clause adds no obligation; it
+    records that `alpha` removes none.
+
+13. **HEX disposition — no new authority and no new prohibition.** The pinned DTCG
+    2025.10 Color Module permits an optional `hex` member in a colour value, and the
+    [CDS Token Format Profile](../architecture/CDS_TOKEN_FORMAT_PROFILE.md) already
+    admits the Color Module structure **as defined**. This decision therefore
+    **creates no normative hex authority** and **creates no new hard prohibition**.
+    What it does state is the boundary: **`hex` may never become a second source of
+    truth for a CDS colour value.** The CDS-specific question of whether `hex` is
+    admitted, required, or prohibited in a normative CDS visual source **remains
+    deferred**, recorded as a residual open item under **OD-1**.
+
+14. **No colour value is selected.** No palette, no hue, no scale, no tonal step, no
+    light or dark instance, no high-contrast instance, no brand colour, and no
+    product colour is created, adopted, reserved, or recommended.
+
+15. **No identifier is created.** This decision names no token, no group, and no
+    source set.
+
+### External authority verification
+
+The colour-space key and the component model were verified **directly against the
+final published reports**, not inferred from CDS tooling:
+
+| Verified item | Literal | Source |
+| --- | --- | --- |
+| sRGB `colorSpace` key | `srgb` | Design Tokens **Color Module 2025.10**, Final Community Group Report, 28 October 2025 |
+| sRGB components and range | Red, Green, Blue, each in the range 0 – 1 | Design Tokens **Color Module 2025.10**, Final Community Group Report, 28 October 2025 |
+| Optional `hex` member | Optional string fallback in 6-digit CSS hex notation | Design Tokens **Color Module 2025.10**, Final Community Group Report, 28 October 2025 |
+| Optional `alpha` member | Optional number in the range 0 – 1; assumed fully opaque when omitted | Design Tokens **Color Module 2025.10**, Final Community Group Report, 28 October 2025 |
+
+**Preview, draft, editor and future reports are not part of this profile**
+(DEC-S-074, RISK-056), and the 2026 draft and preview material is **not** authority
+for anything in this decision. **A tool accepting a literal is not the profile
+admitting it**; committed CDS validator strings were treated as corroboration only.
+
+### Rationale
+
+WCAG's contrast obligation is defined over relative luminance computed from sRGB
+components. Authoring the normative source in that representation makes a role
+pairing's declared contrast obligation computable **directly from the source**,
+offline and deterministically, with **no conversion inside the normative path**.
+Every conversion in that path is a place where an accessibility obligation can
+change without any artifact recording that it did — and the visual foundation
+carries all five WCAG 2.2 criteria CDS owns without the consumer.
+
+The registered channel model is not screen-only: it includes paginated, printed,
+projected and exported channels, and **four of nine channels have no accessibility
+profile at all** (RISK-046). A representation strongest on screen and weakest in
+print would be strongest exactly where CDS has the least registered obligation.
+
+The perceptual argument is nevertheless real, and it is granted in full where it
+belongs: **in how a value is arrived at**. Making a perceptual space canonical —
+alone or alongside `srgb` — would manufacture two normative sources for one value,
+and DEC-S-034 does not resolve such a conflict by recency or convenience; it
+**invalidates the affected artifact state**. Synchronization is not a mitigation.
+
+Full architecture rationale:
+[ADR-0004](ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md).
+
+### Consequences
+
+- The [CDS Token Format Profile](../architecture/CDS_TOKEN_FORMAT_PROFILE.md) and
+  the [Visual Foundation Colour Architecture](../architecture/VISUAL_FOUNDATION_COLOR_ARCHITECTURE.md)
+  state the canonical representation; the colour architecture's *colour space and
+  encoding* deferral is closed and **all its other deferrals stand**.
+- **OD-1 is answered**, with the `hex` question recorded as an explicit residual.
+- **VP-2** of the value-selection prerequisites is satisfied for colour.
+  **VP-3, VP-4 and VP-5 remain unsatisfied**, so **no colour value may be
+  selected**.
+- **No schema, validator, test, or fixture changes.** `profileVersion` stays `"1"`.
+- Enforcement of clause 7 is a stated obligation on **CDS-WP-024** and is **not
+  implemented**.
+- **No accessibility claim, no evidence, and no maturity results.** Every visual
+  artifact stays **AE-0**; VF-1 stays `Proposed`.
+
+### Boundary
+
+This decision selects a **representation**, not a value. It awards no maturity, no
+Candidate, no Stable, no evidence, no admission, no claim, no conformance, no
+Product Profile, no consumer activation, no pilot, no licence, no release, no tag,
+and no publication authority, and it activates no work package.
+
+---
+
+## DEC-S-129 — WCAG 2.2 is the contrast evaluation authority; additional methods are informational only
+
+- **Status:** **PROPOSED / AUTHORIZED FOR INTEGRATION — NOT YET EFFECTIVE.** This
+  entry is uncommitted executor output prepared under an explicit Human-Maintainer
+  authorization. It becomes `Accepted` and normative **only** at the
+  Human-Maintainer exact-byte integration commit of the CDS-WP-020 Decision
+  Integration Pass, following a Fresh Independent Review and Nova integration
+  adjudication. Until that commit it changes **no** authoritative CDS state.
+- **Date:** 2026-08-27
+- **Type:** Visual token representation, evaluation authority and source identity
+  decision
+- **Work package:** CDS-WP-020 — Reference and Semantic Token Foundation (Decision
+  Integration Pass)
+- **Human-Maintainer authorization:** 2026-08-27
+- **Architecture record:** none. **DEC-S-129 is deliberately not an architecture
+  dependency of [ADR-0004](ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md)**
+  — it is an accessibility-methodology decision, not a representation or
+  source-identity decision.
+
+### Decision
+
+1. **The normative contrast evaluation baseline is WCAG 2.2** — the W3C
+   Recommendation already established as the sole normative accessibility basis
+   (DEC-S-049, DEC-S-054). **Not `WCAG 2.x`. Not `latest`.** A floating version is
+   not an identity, exactly as `latest` is not an identity for a source revision
+   (DEC-S-080).
+
+2. **Contrast is computed by the contrast-ratio method that the WCAG 2.2 contrast
+   criteria already cited in CDS scope themselves require.** CDS adopts that method
+   by reference and defines no method of its own.
+
+3. **CDS restates no criterion threshold and invents none.** The obligation is
+   whatever the cited criterion itself requires. This continues the position the
+   Accessibility Requirements Baseline and the Colour Architecture already hold, and
+   changes it in no way.
+
+4. **Contrast is contextual and pair-based.** It is a property of a **pair, in a
+   context, in a channel** — never of a single colour value. A record that states a
+   single value's contrast has evaluated nothing (CR-2, CR-3, SR-3, SR-4, VE-1).
+
+5. **Pass and fail comparison uses the full available computation precision.**
+
+6. **No rounding is performed before comparison.** A value is not rounded,
+   truncated, or snapped and then compared.
+
+7. **Presentation and display rounding cannot alter the decision.** A rounded figure
+   shown in a report, a table, or a user interface is a presentation artifact; the
+   comparison outcome is computed from the unrounded result.
+
+8. **Additional contrast methods, including APCA, may be calculated and recorded**
+   as **informational or experimental analysis** alongside the normative evaluation.
+
+9. **Calculating an additional method grants it no normative authority whatsoever.**
+   Recording a figure is not adopting a method.
+
+10. **An additional method satisfies no CDS obligation and supports no claim merely
+    by being computed.** It may not be used to argue that a pairing meets an
+    obligation, to substitute for the normative evaluation, or to relax one.
+
+11. **An automated contrast calculation is not accessibility evidence and grants no
+    AE level** (DEC-S-053, EV-1). It is input to a review, never consent, and
+    **absence of a failure is not evidence of success** (EV-4).
+
+12. **This decision creates no conformance claim.** A target is not a claim
+    (DEC-S-050), and **no accessibility claim of any level is valid today**, by
+    anyone, including CDS itself.
+
+13. **No contrast evaluation is performed by this work package.** No pair exists to
+    evaluate: **no visual value exists in CDS**, and none is created here.
+
+### Rationale
+
+Two failure modes are being closed before either can occur.
+
+The first is **version drift**. A baseline recorded as `WCAG 2.x` or `latest` cannot
+be bound to an evidence record, cannot be reviewed for freshness, and silently
+changes what an artifact was evaluated against. CDS already refuses floating
+identities for source revisions and for baseline environments (DEC-S-068,
+DEC-S-071, DEC-S-080); the same refusal applies here.
+
+The second is **precision laundering**. Rounding before comparison converts a fail
+into a pass at the boundary, and it does so invisibly, in a step that looks like
+formatting rather than like a decision. Fixing the rule now — full precision for the
+comparison, rounding only for presentation — costs nothing while no value exists,
+and is very hard to retrofit once evidence records exist that were produced the
+other way.
+
+The third concern is the standing of **alternative perceptual contrast models**.
+They are genuinely interesting and may well be more predictive for some conditions,
+and CDS has no reason to forbid computing them. What CDS must forbid is the quiet
+promotion from *computed* to *authoritative* — the same pattern as a validator pass
+becoming maturity authority (VR-4) or a digest becoming a signature (DEC-S-090).
+**Calculation is not adoption.**
+
+### Consequences
+
+- The
+  [Visual Token Value Selection Rules](../governance/VISUAL_TOKEN_VALUE_SELECTION_RULES.md)
+  and the [Visual Foundation Colour Architecture](../architecture/VISUAL_FOUNDATION_COLOR_ARCHITECTURE.md)
+  name the evaluation authority and the precision rule; **no threshold is added to
+  either**.
+- Any future evidence record carrying a contrast figure must state the method, the
+  pair, the context, the channel, and the WCAG 2.2 criterion — and must not round
+  before comparing.
+- **No new accessibility requirement is created**, and the WCAG 2.2 AA target and
+  the applicability matrix are unchanged.
+- **No evidence is produced or admitted.** Every visual artifact stays **AE-0**;
+  `AE1-CDS-WP016-SEMSTATUS-004` is unaffected and does not transfer.
+- **No risk is registered, accepted, or closed.**
+
+### Boundary
+
+This decision names an **evaluation authority and a precision rule**. It evaluates
+nothing, measures nothing, and claims nothing. It awards no maturity, no Candidate,
+no Stable, no evidence, no admission, no claim, and no conformance, and it activates
+no work package.
+
+---
+
+## DEC-S-130 — The CDS profile admits an explicit, minimal, closed visual token type set
+
+- **Status:** **PROPOSED / AUTHORIZED FOR INTEGRATION — NOT YET EFFECTIVE.** This
+  entry is uncommitted executor output prepared under an explicit Human-Maintainer
+  authorization. It becomes `Accepted` and normative **only** at the
+  Human-Maintainer exact-byte integration commit of the CDS-WP-020 Decision
+  Integration Pass, following a Fresh Independent Review and Nova integration
+  adjudication. Until that commit it changes **no** authoritative CDS state.
+- **Date:** 2026-08-27
+- **Type:** Visual token representation, evaluation authority and source identity
+  decision
+- **Work package:** CDS-WP-020 — Reference and Semantic Token Foundation (Decision
+  Integration Pass)
+- **Human-Maintainer authorization:** 2026-08-27, following the Nova adjudication of
+  **OD-2**
+- **Architecture record:** [ADR-0004](ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md)
+
+### Decision
+
+1. **The CDS Token Format Profile carries an explicit `$type` admission profile.**
+   The profile previously required an explicit `$type` *"from the DTCG-defined types
+   applicable to CDS scope"* and **enumerated no set**. That set is now enumerated.
+
+2. **The initial admitted visual token type set is exactly three values:**
+
+   | Admitted `$type` | Verified against |
+   | --- | --- |
+   | `color` | Design Tokens **Format Module 2025.10**, Final Community Group Report, 28 October 2025 |
+   | `dimension` | Design Tokens **Format Module 2025.10**, Final Community Group Report, 28 October 2025 |
+   | `number` | Design Tokens **Format Module 2025.10**, Final Community Group Report, 28 October 2025 |
+
+   Each literal was verified **directly against the final published report**, not
+   inferred from CDS tooling.
+
+3. **No arbitrary or free-form type admission exists.** A `$type` that is not in the
+   admitted set is not admitted, whatever its provenance.
+
+4. **DTCG-defined is not CDS-admitted.** The pinned report defines further types;
+   CDS admits three. The difference is deliberate and is the substance of this
+   decision.
+
+5. **A `$type` the pinned report does not define fails closed at the applicable
+   lower validation layer** — the DTCG contract layer, where the type is unknown to
+   the external basis itself.
+
+6. **A `$type` the pinned report defines but CDS does not admit fails closed at CDS
+   profile validation.** The two cases are distinct and must remain distinguishable:
+   one is *not a DTCG type*, the other is *not a CDS-admitted type*.
+
+7. **No composite type is admitted now.** A composite bundles several decisions into
+   one token — a shadow bundles colour with offsets and blur; a typography token
+   bundles family, weight, size and line height — and that bundling is exactly where
+   the semantic layer loses the ability to declare a **per-part** obligation under
+   SR-3, SR-4 and SR-5.
+
+8. **Font-family and font-weight identity is not admitted prematurely.** The
+   representation of a typeface identity and a weight identity remains **deferred**,
+   recorded as a residual open item under **OD-2**, and it stays subject to the
+   Typography Architecture's FP-1 … FP-8 licensing, provenance, offline, fallback,
+   script-coverage and distribution gate, which is an **Elevated** change.
+
+9. **Every normative CDS visual token carries its own explicit `$type`.**
+   **Inheritance-only typing is not sufficient for CDS profile conformance.** This
+   restates and applies the CDS Token Format Profile's existing explicit-typing
+   requirement; it introduces no new obligation.
+
+10. **A normative visual source must not rely on a group-level or root-level
+    `$type` as typing authority.** This is a **CDS profile restriction only**. It
+    **does not redefine DTCG**, which remains free to permit what it permits; CDS
+    simply requires more of its own normative sources than the external basis
+    requires of a document in general (DEC-S-076).
+
+11. **`$type` carries value-type semantics only.** It **must not** imply, encode, or
+    be read as maturity, evidence, approval, lifecycle, authority, publication, or
+    conformance. A type is what a value *is*, never what an artifact has *earned*.
+
+12. **`$type` is identity-affecting and digest-affecting.** Adding, removing, or
+    changing a `$type` changes the canonical source bytes and therefore the RFC 8785
+    canonicalization and its SHA-256 digest (ADR-0002, DEC-S-090).
+
+13. **Existing evidence never transfers over that revision change.** A `$type` change
+    is a source-revision change, and evidence is bound to a source revision
+    (DEC-S-126, AF-2, RV-4). Fresh evidence, a fresh independent review, and a fresh
+    admission are required.
+
+14. **`profileVersion` remains exactly `"1"`.** It is **not** bumped by this
+    decision. The admitted set is an explicit statement of what the profile already
+    required but never enumerated; it constrains **no existing artifact**, because no
+    visual token exists and the one existing normative token source
+    (`semantic/status`) is non-visual and untouched. A `profileVersion` change is a
+    compatibility and migration event under DEC-S-082 and belongs to the work package
+    that implements enforcement, if that implementation requires one.
+
+15. **This decision modifies no `schemas/`, no `tools/`, and no `tests/` artifact.**
+    In particular, the committed token-document schema still constrains `$type` **not
+    at all**, and the offline validator's bounded token-`$type` set remains a
+    **DEC-S-098 V2 coverage boundary and not a profile admission** — reading it as one
+    is **RISK-074**, and this decision exists partly to close that misreading.
+
+16. **Implementation requirements recorded for CDS-WP-024, and not implemented
+    here:** explicit-own-`$type` enforcement; CDS admitted-set validation, distinct
+    from unknown-DTCG-type handling; and fail-closed handling for both.
+
+17. **Extension is additive and governed.** A later family needing a further type
+    obtains it through an **Elevated** profile change with compatibility, migration,
+    evidence, Nova review, and Human-Maintainer approval (DEC-S-082) — never by a
+    tool accepting it, a fixture using it, or a document containing it.
+
+18. **No token, no value, and no identifier is created.**
+
+### Rationale
+
+Minimal is the only setting in which **admitted does not exceed validated**, and the
+gap between those two is precisely the shape RISK-074 describes. Two repository
+facts make the risk concrete and both are easy to misread: the committed
+token-document schema places **no** `$type` constraint, and the validator's bounded
+type set is a **coverage boundary** rather than an admission. Neither states what
+CDS admits, and neither may be read as though it did — so the admission has to be
+stated explicitly, in a normative human-readable source.
+
+Composites are excluded now for a reason that is structural rather than
+conservative: a bundled token cannot carry a per-part accessibility obligation, and
+admitting one before the roles that would use it exist would decide the granularity
+question by implication — the failure mode this entire pass exists to avoid.
+
+Clause 11 closes the other direction of the same confusion. `$type` is metadata a
+tool reads, and metadata is routinely over-read as standing: a source set declaring
+`Candidate` is not Candidate (VR-3, VR-4, DEC-S-126). A type is a value-shape
+statement and nothing more.
+
+Full architecture rationale:
+[ADR-0004](ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md).
+
+### Consequences
+
+- The [CDS Token Format Profile](../architecture/CDS_TOKEN_FORMAT_PROFILE.md) states
+  the admitted set; the
+  [Machine-Readable Validation Contract](../architecture/MACHINE_READABLE_VALIDATION_CONTRACT.md)
+  records the two-layer fail-closed split as a requirement on CDS-WP-024.
+- The [Visual Foundation Architecture](../architecture/VISUAL_FOUNDATION_ARCHITECTURE.md)
+  deferral *"the admitted DTCG `$type` set for visual families"* is closed; **its
+  other fourteen deferrals stand**.
+- **OD-2 is answered**, with font-family and font-weight identity recorded as an
+  explicit residual.
+- **VP-2** is satisfied for the families expressible in `color`, `dimension` and
+  `number`; it is **not** satisfied for typeface and weight identity.
+  **VP-3, VP-4 and VP-5 remain unsatisfied**, so **no value may be selected**.
+- **No schema, validator, test, or fixture changes**, and **`profileVersion` stays
+  `"1"`**.
+- **No maturity, no evidence, and no claim results.**
+
+### Boundary
+
+This decision admits **types**, not values. It awards no maturity, no Candidate, no
+Stable, no evidence, no admission, no claim, no conformance, no Product Profile, no
+consumer activation, no pilot, no licence, no release, no tag, and no publication
+authority, and it activates no work package.
+
+---
+
+## DEC-S-131 — The Source Set is the independently evaluable unit; aggregation confers no maturity
+
+- **Status:** **PROPOSED / AUTHORIZED FOR INTEGRATION — NOT YET EFFECTIVE.** This
+  entry is uncommitted executor output prepared under an explicit Human-Maintainer
+  authorization. It becomes `Accepted` and normative **only** at the
+  Human-Maintainer exact-byte integration commit of the CDS-WP-020 Decision
+  Integration Pass, following a Fresh Independent Review and Nova integration
+  adjudication. Until that commit it changes **no** authoritative CDS state.
+- **Date:** 2026-08-27
+- **Type:** Visual token representation, evaluation authority and source identity
+  decision
+- **Work package:** CDS-WP-020 — Reference and Semantic Token Foundation (Decision
+  Integration Pass)
+- **Human-Maintainer authorization:** 2026-08-27, following the Nova adjudication of
+  **OD-3**
+- **Architecture record:** [ADR-0004](ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md)
+
+### Decision
+
+1. **The Source Set is the canonical independently evaluable unit** of a CDS
+   machine-readable source. Evaluation, evidence, maturity, and approval attach
+   there.
+
+2. **Each source set independently carries** its `sourceSetId`, its
+   `sourceRevision`, its `layer`, its dependency set where applicable, its
+   `maturityState`, and its `approvalState`.
+
+3. **Identity is stable and explicit.** A source set's identity is declared, not
+   derived from a path, a file name, a directory, or a tool's convention.
+
+4. **The root vocabulary is controlled by the registered CDS Visual Foundation
+   families** (VF-1 … VF-9). **No concrete root identifier is invented, adopted,
+   reserved, or recommended by this decision**; the concrete identifiers remain a
+   residual open item under **OD-3**, coupled to **OD-4**.
+
+5. **Topology: one source set per independently evaluable Family × Token-Flow-Layer
+   unit.**
+
+6. **A family occupying token-flow layer 1 and token-flow layer 2 may therefore have
+   two source sets** — one Reference, one Semantic — each independently evaluable.
+
+7. **One manifest may aggregate multiple source sets.** **A source set is not a
+   manifest, and one source set must never be equated with one manifest.** The
+   committed Source-Set Manifest contract carries an inventory of entries, each with
+   its own identity, revision, maturity and approval.
+
+8. **Correction of finding CDS-WP-020-R1-F-02 (recorded as `F-020-02`).** Its
+   **conclusion stands**: a source-set payload carries **one** `maturityState`, so a
+   single shared visual source set spanning several families cannot express the
+   per-family, never-inherited maturity that **AF-1** and **AF-3** require. Its
+   **artifact-count mechanism was imprecise**: it implied that per-family, per-layer
+   source sets multiply manifests and resolvers at the same rate. They do not —
+   clause 7 is why. The governance cost of preserving AF-1 and AF-3 is a source set
+   per independently evaluable unit, not a manifest per family.
+
+9. **Maturity binds to the pair (`sourceSetId`, `sourceRevision`)**, and to nothing
+   else.
+
+10. **A new source revision inherits no evidence and no admission.** Evidence is
+    revision-bound and never transfers (DEC-S-126, AF-2, RV-4). A later revision
+    requires fresh evidence, a fresh independent review, and a fresh
+    Human-Maintainer admission.
+
+11. **No maturity propagation exists** — in either direction — between source sets,
+    between token-flow layers, between families, from a manifest to its entries,
+    from entries to their manifest, to or from generated artifacts, out of metadata,
+    or out of a validator result.
+
+12. **Manifest-level maturity and approval describe only the manifest artifact
+    itself.** They are **not** a roll-up, **not** a maximum, **not** a minimum, and
+    **not** inherited.
+
+13. **Binding invariant: AGGREGATED is not MATURE.** Declaring an inventory is a
+    structural act and confers nothing on what is inventoried, and nothing on the
+    inventory.
+
+14. **Evidence remains exact-byte and revision-bound**, with byte-drift
+    invalidation, exactly as DEC-S-126 already requires.
+
+15. **A source-set rename is a migration and identity event**, carrying a migration
+    reference (DEC-S-082, DEC-S-040).
+
+16. **A file move alone is not a `sourceSetId` change.** Location is not identity.
+
+17. **A `sourceSetId` change invalidates admitted evidence.** The evaluated thing is
+    no longer the same thing.
+
+18. **Cross-family aliases and references stay governed by the existing rules** —
+    strictly downward dependency, offline resolvability, declared local
+    Manifest/Resolver graph, fail-closed on anything dangling, cyclic, undeclared,
+    type-incompatible, or non-local (DEC-S-078, DEC-S-079, DEC-S-091, AL-1 … AL-8).
+
+19. **No source set, manifest, resolver, identifier, or value is created by this
+    decision.** Visual source sets in existence remain **0**.
+
+### Rationale
+
+**AF-1** forbids inherited maturity and **AF-3** grants each family its own pace.
+Both were written knowing the governance cost, and a topology that cannot express
+them is the wrong topology — the reason to reject one is not expense but
+correctness.
+
+The imprecision corrected in clause 8 matters because it changed the apparent price
+of doing the right thing. Reading the committed manifest contract rather than
+reasoning about it shows that a manifest declares an **inventory of entries**, each
+carrying its own identity, revision, maturity and approval. Per-family, per-layer
+source sets therefore do not multiply manifests, and the argument for collapsing
+independent maturities into one shared artifact loses the cost basis it rested on.
+
+Clauses 11 to 13 exist because **aggregation is where maturity is most likely to be
+lost quietly**. It is the same failure CDS has already had to name three times: a
+source set declaring `Candidate` is not Candidate (VR-4, RV-3), a validator pass is
+metadata coherence and never maturity authority (VR-4, DEC-S-053), and a digest is
+not a signature (DEC-S-090). A manifest that appeared to roll up its entries would
+be a fourth instance, and the most convincing one, because a roll-up looks like
+bookkeeping rather than like a claim.
+
+Full architecture rationale:
+[ADR-0004](ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md).
+
+### Consequences
+
+- The [Machine-Readable Source Model](../architecture/MACHINE_READABLE_SOURCE_MODEL.md)
+  and the
+  [Visual Foundation Governance and Lifecycle](../governance/VISUAL_FOUNDATION_GOVERNANCE_AND_LIFECYCLE.md)
+  record the source-set unit, the manifest boundary, and the aggregation invariant.
+- **OD-3 is answered** for identity, topology and maturity granularity, with the
+  concrete root identifiers recorded as an explicit residual coupled to **OD-4**.
+- **`F-020-02` is corrected as stated in clause 8** — conclusion upheld, mechanism
+  corrected — in the forward roadmap and the CDS-WP-020 notes.
+- **VP-5 remains unsatisfied**: the topology rule is decided, but **no concrete
+  source-set identity and no source revision exists**, so no value may be selected
+  against one.
+- **`OD-6` is unaffected.** How many families CDS matures separately remains open,
+  and this decision pre-answers none of it.
+- **No schema, validator, test, or fixture changes**, and **`profileVersion` stays
+  `"1"`**.
+- Enforcement of clauses 9 to 13 is a stated obligation on **CDS-WP-024** and is
+  **not implemented**.
+- **`semantic/status` is entirely unaffected** — its source set, revision, maturity,
+  approval, and admitted evidence are unchanged, and
+  `AE1-CDS-WP016-SEMSTATUS-004` transfers to nothing.
+
+### Boundary
+
+This decision fixes a **unit of evaluation**, not an artifact. It awards no
+maturity, no Candidate, no Stable, no evidence, no admission, no claim, no
+conformance, no Product Profile, no consumer activation, no pilot, no licence, no
+release, no tag, and no publication authority, and it activates no work package.
+**VF-1 … VF-9 stay `Proposed`; visual source sets stay 0; Stable stays `No`.**

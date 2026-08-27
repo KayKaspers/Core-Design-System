@@ -6,6 +6,13 @@
 - **Status:** **Normative and in effect** for the machine-readable source
   architecture; ADR-0001 was committed with CDS-WP-011 (`a81772c`, 2026-07-17). It
   defines structure and authority; it implements nothing and creates no token.
+- **Amended by:** CDS-WP-020 (Decision Integration Pass), 2026-08-27 — the
+  *The source set is the independently evaluable unit* subsection, under
+  **DEC-S-131**
+  ([ADR-0004](../decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md)).
+  **That subsection is `PROPOSED / AUTHORIZED FOR INTEGRATION` and NOT YET
+  EFFECTIVE** until the Human-Maintainer exact-byte integration commit; the rest of
+  this model is unchanged and remains in effect.
 
 ## Purpose and authority
 
@@ -99,6 +106,30 @@ revision, dependency set, maturity state, approval state, owner role, and (where
 applicable) product profile and channel scope. Detail:
 [Token Metadata, Provenance and Identity Model](TOKEN_METADATA_PROVENANCE_AND_IDENTITY_MODEL.md).
 
+### The source set is the independently evaluable unit
+
+*(Normative — **DEC-S-131**,
+[ADR-0004](../decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md),
+CDS-WP-020 Decision Integration Pass, 2026-08-27. **PROPOSED / AUTHORIZED FOR
+INTEGRATION — NOT YET EFFECTIVE** until the Human-Maintainer exact-byte integration
+commit. **No source set, manifest, resolver, or identifier is created.**)*
+
+| # | Rule |
+| --- | --- |
+| 1 | **The Source Set is the canonical independently evaluable unit.** Evaluation, evidence, maturity, and approval attach there and nowhere else. |
+| 2 | **Each source set independently carries** its `sourceSetId`, `sourceRevision`, `layer`, dependency set where applicable, `maturityState`, and `approvalState`. Identity is declared, never derived from a path, file name, directory, or tool convention. |
+| 3 | **One manifest may aggregate multiple source sets.** **A source set is not a manifest**, and one source set must never be equated with one manifest. |
+| 4 | **Maturity binds to the pair (`sourceSetId`, `sourceRevision`)**, and to nothing else. A new revision inherits **no** evidence and **no** admission (DEC-S-126). |
+| 5 | **No maturity propagation exists in either direction** — between source sets, between token-flow layers, between families, from a manifest to its entries, from entries to their manifest, to or from generated artifacts, out of metadata, or out of a validator result. |
+| 6 | **Manifest-level maturity and approval describe only the manifest artifact itself.** They are **not** a roll-up, **not** a maximum, **not** a minimum, and **not** inherited. |
+| 7 | **A source-set rename is a migration and identity event** (DEC-S-082, DEC-S-040). **A file move alone is not a `sourceSetId` change** — location is not identity. **A `sourceSetId` change invalidates admitted evidence.** |
+
+> **AGGREGATED is not MATURE.** Declaring an inventory is a structural act. It
+> confers nothing on what is inventoried, and nothing on the inventory — the same
+> rule that makes a `Candidate` declaration in metadata not Candidate (VR-4), a
+> validator pass not maturity authority (DEC-S-053), and a digest not a signature
+> (DEC-S-090).
+
 ## Resolver and composition role
 
 The Resolver/Composition document (DTCG Resolver Module 2025.10) declares how sets
@@ -149,4 +180,5 @@ the deterministic-serialization mechanism, and any real token value or name.
 - [Token Metadata, Provenance and Identity Model](TOKEN_METADATA_PROVENANCE_AND_IDENTITY_MODEL.md)
 - [Token and Theme Architecture](TOKEN_AND_THEME_ARCHITECTURE.md) ·
   [Source of Truth and Authority Model](SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md)
-- [ADR-0001](../decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)
+- [ADR-0001](../decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md) ·
+  [ADR-0004](../decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md)

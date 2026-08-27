@@ -197,6 +197,31 @@ carry the proposed source revision, the authoritative base repository revision, 
 exact input paths, and the recorded digests, so that the run can be re-executed
 against identical bytes (DEC-S-126 §5).
 
+## Visual token requirements handed to CDS-WP-024
+
+*(Stated as **requirements**, under **DEC-S-130** and **DEC-S-131**, CDS-WP-020
+Decision Integration Pass, 2026-08-27. **PROPOSED / AUTHORIZED FOR INTEGRATION —
+NOT YET EFFECTIVE** until the Human-Maintainer exact-byte integration commit.
+**Nothing below is implemented. `tools/`, `tests/`, `schemas/` and every fixture
+are untouched, and no diagnostic identifier is introduced.**)*
+
+| # | Requirement | Layer |
+| --- | --- | --- |
+| 1 | **Explicit-own-`$type` enforcement.** A normative CDS visual token relying on inherited or group-level typing instead of declaring its own `$type` must be detectable and must **fail closed**. | **V3** |
+| 2 | **CDS admitted-set validation.** A `$type` that is DTCG-known but **CDS-unadmitted** — the admitted set being `color`, `dimension`, `number` — must **fail closed**. | **V3** |
+| 3 | **Unknown-DTCG-type handling, kept distinct from requirement 2.** A `$type` the pinned report does not define at all must **fail closed** at the DTCG contract layer. The two cases must remain distinguishable in the result. | **V2** |
+| 4 | **Canonical colour-representation enforcement.** A normative colour source value outside the admitted canonical `srgb` model must **fail closed**, and a converted or delivery-quantized form must never be readable as a normative source value. | **V2 / V3** |
+| 5 | **Source-set identity and maturity checks.** Per-source-set identity and revision binding must be checkable; a manifest's own maturity must never be evaluated as a roll-up of its entries; a `sourceSetId` change must be detectable as an identity event. | **V3 / V4** |
+
+**The existing V2 token-`$type` coverage boundary is unchanged and is not the
+admission profile.** It remains bounded by **DEC-S-098**, and reading it as the set
+CDS admits is **RISK-074**. The admission profile lives in the
+[CDS Token Format Profile](CDS_TOKEN_FORMAT_PROFILE.md).
+
+**A pass proves structure, never correctness** (VR-1), a `Fail` or `Blocked` stops
+later layers, which are recorded `Not assessed` (VR-2), and **an automated check is
+never sufficient accessibility evidence** (DEC-S-053).
+
 ## Change control
 
 This contract is Elevated; changes require compatibility, migration, evidence, Nova
@@ -210,4 +235,5 @@ after any profile, DTCG, schema, or governance change (RISK-071).
 - [Machine-Readable Source Model](MACHINE_READABLE_SOURCE_MODEL.md)
 - [Deterministic Serialization and Digest Model](DETERMINISTIC_SERIALIZATION_AND_DIGEST_MODEL.md)
 - [ADR-0002 — Deterministic JSON Serialization](../decisions/ADR-0002-DETERMINISTIC_JSON_SERIALIZATION.md)
+- [ADR-0004 — Visual Token Representation and Source Identity Architecture](../decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md)
 - [Candidate Approval Record Template](../operations/CANDIDATE_APPROVAL_RECORD_TEMPLATE.md)
