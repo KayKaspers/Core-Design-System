@@ -92,11 +92,12 @@ approved.
   Foundation** was authorized separately by the Human Maintainer on 2026-08-26,
   **executed with result `DECISION_REQUIRED`**, and **integrated** by the
   Human-Maintainer commit `42a568d823de3388e45af62967546f13ad67eff6`. It is recorded
-  as **`Completed`**; **closure is recorded in the working object of the CDS-WP-020
-  closure and routing pass and becomes effective only at that object's
-  Human-Maintainer integration commit.** **Contract only:** it defines what a
-  visual reference primitive and a visual semantic role are, what each must declare,
-  how a role aliases a primitive, and the discipline any future value must satisfy.
+  as **`Completed`**; **closure was recorded in the working object of the
+  CDS-WP-020 closure and routing pass and became effective at that object's
+  Human-Maintainer integration commit `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.**
+  **Contract only:** it defines what a visual reference primitive and a visual
+  semantic role are, what each must declare, how a role aliases a primitive, and
+  the discipline any future value must satisfy.
   It selects **no value**, creates **no identifier**, and creates no token source
   file, schema, validator rule, or test; produced and admitted no evidence; changed
   no maturity; added no risk; renamed no phase; registered no
@@ -154,7 +155,7 @@ approved.
 | **CDS-WP-017** | **Closed** — Post-WP-016 Roadmap, Authority and Scope Reconciliation, integrated by the Human-Maintainer commit `df9b8f21ff3bde4607b1c9ff7fdcbe3144366040` (governance/roadmap only; no design, evidence, maturity, claim, or publication effect) |
 | **CDS-WP-018** | **Closed** — Deferred Governance and Repository Hygiene Reconciliation, integrated by the Human-Maintainer commit `e5d5d492619071655ba956713980d1ee261d9213` (documentary current-state, mirror, and hygiene reconciliation only; no phase rename, no capability registration) |
 | **CDS-WP-019** | **Closed** — Core Visual Foundation Architecture (**architecture only; no visual value**; no token source, component, brand, profile, evidence, maturity change, Decision, ADR, risk, phase rename, or capability registration), integrated by the Human-Maintainer commit `538fbccbf6f554de3b872e9fb75a70d13318feb6` |
-| **CDS-WP-020** | **Closed** — executed with result `DECISION_REQUIRED`; Reference and Semantic Token Foundation (**contract only; no visual value, no identifier**; no token source, schema, validator rule, test, component, brand, profile, evidence, maturity change, risk, phase rename, or capability registration), integrated by the Human-Maintainer commit `42a568d823de3388e45af62967546f13ad67eff6`. **Closure is proposed in the closure and routing object and effective at its Human-Maintainer integration commit.** **`AE1-CDS-WP016-SEMSTATUS-004` was not transferred to it.** |
+| **CDS-WP-020** | **Closed** — executed with result `DECISION_REQUIRED`; Reference and Semantic Token Foundation (**contract only; no visual value, no identifier**; no token source, schema, validator rule, test, component, brand, profile, evidence, maturity change, risk, phase rename, or capability registration), integrated by the Human-Maintainer commit `42a568d823de3388e45af62967546f13ad67eff6`. **Closure was recorded in the closure and routing object and became effective at the Human-Maintainer commit `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.** **`AE1-CDS-WP016-SEMSTATUS-004` was not transferred to it.** |
 | **`CDS-WP-020A`** | **PLANNED / NOT ACTIVE / NOT AUTHORIZED** — Visual Token Source Authoring and Source Set Realization; the `FR-N-03` authoring destination; **inserted** identifier, nothing renumbered; owns authoring, never validation or conformance |
 | **CDS-WP-021 … CDS-WP-053** | **PLANNED / NOT ACTIVE / NOT AUTHORIZED** — work not started |
 
@@ -1019,9 +1020,9 @@ separately by the Human Maintainer on 2026-08-26, **executed with result
 `DECISION_REQUIRED`**, and **integrated** by the Human-Maintainer commit
 `42a568d823de3388e45af62967546f13ad67eff6` — see
 [Reference and Semantic Token Foundation (CDS-WP-020)](#reference-and-semantic-token-foundation-cds-wp-020)
-below. **Its closure is recorded in the working object of the closure and routing
-pass and becomes effective only at that object's Human-Maintainer integration
-commit.** **No work package is currently authorized.**
+below. **Its closure was recorded in the working object of the closure and routing
+pass and became effective at that object's Human-Maintainer integration commit
+`3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.** **No work package is currently authorized.**
 
 **The next planned work packages are `CDS-WP-020A` — Visual Token Source Authoring
 and Source Set Realization** (the `FR-N-03` authoring destination) **and CDS-WP-021 —

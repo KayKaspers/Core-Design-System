@@ -376,8 +376,9 @@ admission, **no** claim, **no** conformance, **no** capability registration, **n
 Product Profile, **no** consumer activation, **no** pilot, **no** licence, **no**
 release, **no** tag, and **no** publication authority. It activates **no** work
 package: **CDS-WP-021 … CDS-WP-053 remain `Planned`, not active, and not
-authorized**, and **CDS-WP-020 remains open** — closure is a separate
-Human-Maintainer act.
+authorized**, and **this ADR did not close CDS-WP-020** — closure is a separate
+Human-Maintainer act, effective at the Human-Maintainer commit
+`3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.
 
 Publication remains **`Private Development`**. **Stable remains `No` across the
 entire repository.**

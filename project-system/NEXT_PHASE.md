@@ -14,10 +14,10 @@
   Foundation** was authorized separately by the Human Maintainer on 2026-08-26 and
   **executed with result `DECISION_REQUIRED`**; its reviewed object was
   **integrated** by the Human-Maintainer commit
-  `42a568d823de3388e45af62967546f13ad67eff6`. **Closure is recorded in the working
-  object of the CDS-WP-020 closure and routing pass and becomes effective only at
-  that object's Human-Maintainer integration commit.** **No successor work package
-  is active or authorized.** The **CDS Phase Transition Governance Package**
+  `42a568d823de3388e45af62967546f13ad67eff6`. **Closure was recorded in the
+  CDS-WP-020 closure and routing object and became effective at that object's
+  Human-Maintainer integration commit `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.** **No successor work
+  package is active or authorized.** The **CDS Phase Transition Governance Package**
   (**DEC-S-127**) ran between CDS-WP-019 closure and that authorization; it is
   **not** a numbered work package and activated nothing.
 - **Candidate promotion: COMPLETE.** The Semantic Status Foundation passed the
@@ -48,8 +48,9 @@
   rename, and no publication effect.** Closure became effective with the
   Human-Maintainer commit `538fbccbf6f554de3b872e9fb75a70d13318feb6`, which
   integrated the eleven normative visual foundation documents.
-- **CDS-WP-020 state:** **Executed with result `DECISION_REQUIRED`; integrated;
-  closure proposed, not yet effective.** Reference
+- **CDS-WP-020 state:** **Closed** — executed with result `DECISION_REQUIRED`;
+  integrated; **closure effective at the Human-Maintainer commit
+  `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.** Reference
   and Semantic Token Foundation. **Contract only.** It defines what a visual
   reference primitive and a visual semantic role are, what each must declare, how a
   role aliases a primitive, and the discipline any future value must satisfy — and
@@ -57,9 +58,9 @@
   concrete value and every machine-readable visual source. **No visual value, no
   identifier, no token source file, no schema, no validator rule, no test, no
   evidence, no maturity change, no risk entry, no capability registration, no phase
-  rename, and no publication effect.** Closure is a separate Human-Maintainer act,
-  recorded in the closure and routing object and **effective at its integration
-  commit** — an uncommitted edit changes no repository history.
+  rename, and no publication effect.** Closure is a separate Human-Maintainer act:
+  it was recorded in the closure and routing object and **became effective at that
+  object's Human-Maintainer integration commit `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.**
   **`DECISION_REQUIRED` stands as the executed result**: closure answers **no** open
   decision and selects **no** value. **OD-4 … OD-7 stay open**, and **VP-3, VP-4 and
   VP-5 stay unsatisfied.**
@@ -107,10 +108,10 @@ then authorized separately** and has been executed. The remaining sequence is:
 | 2 | **Nova adjudication** of that review | Nova — recommendation only, never approval | **Done** |
 | 3 | **Human-Maintainer integration commit** of the CDS-WP-020 object | Human Maintainer | **Done** — `42a568d823de3388e45af62967546f13ad67eff6` |
 | 4 | **Adjudication of OD-1 … OD-7** — **partially done.** Nova adjudicated on 2026-08-27 and the Human Maintainer authorized a bounded **Decision Integration Pass**, which prepared **DEC-S-128 … DEC-S-131** and **ADR-0004**. **OD-4 … OD-7 were deliberately left open.** | Nova recommends · Human Maintainer decides | **Partial** |
-| 5 | **Independent review** of the CDS-WP-020 closure and routing object | Reviewer ≠ executor | **Next** |
-| 6 | **Nova adjudication** of that review | Nova — recommendation only, never approval | Pending |
-| 7 | **Human-Maintainer integration commit** of the closure and routing object | Human Maintainer | Pending |
-| 8 | **CDS-WP-020 closure becomes effective** | Effective at step 7 | Pending |
+| 5 | **Independent review** of the CDS-WP-020 closure and routing object | Reviewer ≠ executor | **Done** |
+| 6 | **Nova adjudication** of that review | Nova — recommendation only, never approval | **Done** |
+| 7 | **Human-Maintainer integration commit** of the closure and routing object | Human Maintainer | **Done** — `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7` |
+| 8 | **CDS-WP-020 closure becomes effective** | Effective at step 7 | **Done** — effective at `3f37ecf…` |
 | 9 | **Decision on OD-4, OD-5, OD-6 and the OD-7 sequencing** | Human Maintainer | Pending |
 | 10 | **Authorization of the next work package** — a separate, explicit Human-Maintainer decision | Human Maintainer | Pending |
 
@@ -745,7 +746,7 @@ effective with the Human-Maintainer commit
   and **no change to any Semantic Status source, revision, maturity, or evidence
   package**.
 
-## Most recent work package — CDS-WP-020 (executed, `DECISION_REQUIRED`, integrated, closure proposed)
+## Most recent work package — CDS-WP-020 (executed, `DECISION_REQUIRED`, integrated, closed)
 
 **CDS-WP-020 — Reference and Semantic Token Foundation.**
 

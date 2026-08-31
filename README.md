@@ -153,9 +153,9 @@ component, brand, or Product Profile. The **CDS Phase Transition Governance
 Package** (DEC-S-127) then changed project-phase authority only.
 **CDS-WP-020 — Reference and Semantic Token Foundation** is **`Completed`**:
 **executed with result `DECISION_REQUIRED`** and **integrated** by the
-Human-Maintainer commit `42a568d823de3388e45af62967546f13ad67eff6`, with **closure
-recorded in the working object of the CDS-WP-020 closure and routing pass and
-effective only at that object's Human-Maintainer integration commit.** **No work
+Human-Maintainer commit `42a568d823de3388e45af62967546f13ad67eff6`. **Its closure
+was recorded in the CDS-WP-020 closure and routing object and became effective at
+that object's Human-Maintainer integration commit `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.** **No work
 package is currently authorized.** It is **contract only**: it defines what a visual **reference primitive**
 and a visual **semantic role** are, what each must declare, how a role aliases a
 primitive, and the discipline any future value must satisfy — and it records the
@@ -722,9 +722,9 @@ maturity or approval it does not hold.
 - **Completed:** **CDS-WP-020 — Reference and Semantic Token Foundation**,
   authorized separately by the Human Maintainer on 2026-08-26, **executed with
   result `DECISION_REQUIRED`**, and **integrated** by the Human-Maintainer commit
-  `42a568d823de3388e45af62967546f13ad67eff6`. **Closure is recorded in the working
-  object of the CDS-WP-020 closure and routing pass and becomes effective only at
-  that object's Human-Maintainer integration commit.** **Contract only:** the
+  `42a568d823de3388e45af62967546f13ad67eff6`. **Closure was recorded in the
+  CDS-WP-020 closure and routing object and became effective at that object's
+  Human-Maintainer integration commit `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.** **Contract only:** the
   [Visual Reference Token Foundation](docs/architecture/VISUAL_REFERENCE_TOKEN_FOUNDATION.md)
   (token-flow layer 1), the
   [Visual Semantic Token Foundation](docs/architecture/VISUAL_SEMANTIC_TOKEN_FOUNDATION.md)

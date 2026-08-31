@@ -228,6 +228,29 @@ released and no release is announced.
 
 ### Changed
 
+- **CDS-WP-020 closure recorded as effective — `F-020C-04` resolved.** The condition
+  the closure and routing pass stated — a separate Human-Maintainer integration
+  commit of its working object — was met by commit
+  `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7` (parent
+  `42a568d823de3388e45af62967546f13ad67eff6`), whose exact object passed the
+  **CDS-WP-020 EXACT-OBJECT CLOSURE INTEGRATION GATE R4**. The live current-state
+  carriers no longer describe that closure as *proposed*, *pending*, or *not yet
+  effective*: **CDS-WP-020 is `Closed`, effective at that commit**, and **no work
+  package is currently authorized**. **This records a completed Human-Maintainer act
+  and performs none.** **Point-in-time records were preserved**, not rewritten:
+  dated review, execution, decision-time, and event-time changelog statements that
+  were true before that commit remain as written. **`DECISION_REQUIRED` stands as
+  the executed result** — closure answers **no** open decision, satisfies **no**
+  value prerequisite, and selects **no** value. **No work package was activated** —
+  **`CDS-WP-020A`** and **CDS-WP-021 … CDS-WP-053** all remain `Planned`, not
+  active, not authorized. **OD-4, OD-5, OD-6 and OD-7 stay open**; **VP-3, VP-4 and
+  VP-5 stay unsatisfied**; visual values **0**, visual source sets **0**, visual
+  Candidate families **0**, VF-1 … VF-9 **`Proposed`**. **No Decision, ADR, or risk
+  was added, changed, or removed** — the registers stay at **131**, **4**, and
+  **98**; **no `DEC-S-132`, no `ADR-0005`, no `RISK-099`.** **No evidence was
+  admitted, no maturity changed, no claim was made, no capability was registered, no
+  phase was renamed, and no release, tag, or publication occurred.**
+  (CDS-WP-020 post-closure current-state reconciliation)
 - **`DEC-S-128 … DEC-S-131` and `ADR-0004` reconciled to their effective state, and
   `F-020C-01` resolved.** The condition those entries themselves stated — the
   Human-Maintainer exact-byte integration commit of the CDS-WP-020 Decision

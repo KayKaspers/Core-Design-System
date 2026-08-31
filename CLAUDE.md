@@ -202,7 +202,8 @@ library, or a design project scoped exclusively to CoreOps.
   **`538fbccbf6f554de3b872e9fb75a70d13318feb6`**, which integrated the eleven
   normative visual foundation documents.
 - **CDS-WP-020 state: CLOSED — executed with result `DECISION_REQUIRED`,
-  integrated; closure proposed, effective at its integration commit.**
+  integrated; closure effective at the Human-Maintainer commit
+  `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.**
   Reference and Semantic Token Foundation, authorized separately by the Human
   Maintainer on 2026-08-26. **Contract only:** it defines the Reference and Semantic
   token layers of the visual foundation — see *Reference and semantic visual token
@@ -214,12 +215,12 @@ library, or a design project scoped exclusively to CoreOps.
   tag, publication, or later work package. Its reviewed object — **22 paths** — was
   **integrated** by the Human-Maintainer commit
   **`42a568d823de3388e45af62967546f13ad67eff6`**. **Closure is a separate
-  Human-Maintainer act**: it is recorded in the working object of the **CDS-WP-020
-  closure and routing pass** and becomes effective only at that object's
-  Human-Maintainer integration commit — **an uncommitted edit changes no repository
-  history.** **`DECISION_REQUIRED` stands as the executed result**: closing the work
+  Human-Maintainer act**: it was recorded in the working object of the
+  **CDS-WP-020 closure and routing pass** and **became effective at that object's
+  Human-Maintainer integration commit `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.**
+  **`DECISION_REQUIRED` stands as the executed result**: closing the work
   package answers **no** open decision, satisfies **no** value prerequisite, and
-  selects **no** value. The **CDS Phase Transition Governance Package**
+  selects **no** value. **No work package is currently authorized.** The **CDS Phase Transition Governance Package**
   (**DEC-S-127**) ran between CDS-WP-019 closure and this authorization; it occupied
   no identifier in the CDS-WP-020 … CDS-WP-053 sequence and activated nothing.
   A subsequent, separately authorized **Decision Integration Pass** (2026-08-27)
@@ -855,8 +856,9 @@ activated, and the roadmap is not reordered.** **`RISK-099` was assessed and is 
 required** — the normative OKLCH-to-sRGB accessibility-path conversion architecture
 that would have created the exposure was **rejected** — so the register stays at
 **98** with **no** risk accepted, closed, or re-scored. **The pass itself did not
-close CDS-WP-020**; closure is recorded separately by the CDS-WP-020 closure and
-routing pass and is effective only at its Human-Maintainer integration commit.
+close CDS-WP-020**; closure was recorded separately by the CDS-WP-020 closure and
+routing pass and became effective at its Human-Maintainer integration commit
+`3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.
 
 ## Claim and release boundaries
 

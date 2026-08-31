@@ -136,6 +136,15 @@ the separately authorized post-integration effectiveness reconciliation has sinc
 done so — see `F-020C-01`.** **DEC-S-128 … DEC-S-131 are effective and ADR-0004 is
 `Accepted`**, at the integration commit named above.
 
+**Superseded in part (2026-08-31).** The condition stated in the paragraph above —
+the Human-Maintainer integration commit of the closure and routing object — has
+been met by commit `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`. **CDS-WP-020
+closure is effective at that commit**, and
+**no work package is currently authorized**; **`CDS-WP-020A`** and
+**CDS-WP-021 … CDS-WP-053** stay **`Planned` · not active · not authorized**. The
+maturity, evidence, claim, conformance, and publication rows above remain
+**unchanged**.
+
 **CDS-WP-019 created no visual value.** It defined the *architecture* of the visual
 foundation — nine families, fourteen invariants, a naming model, and the
 accessibility, channel, brand, and governance boundaries — and selected **no
@@ -187,7 +196,7 @@ normative source.
 | ID | Title | Layer | Status |
 | --- | --- | --- | --- |
 | CDS-WP-019 | Core Visual Foundation Architecture | 3 | **Closed** |
-| CDS-WP-020 | Reference and Semantic Token Foundation | 3 | **Closed** *(proposed in this pass; effective at the Human-Maintainer integration commit)* |
+| CDS-WP-020 | Reference and Semantic Token Foundation | 3 | **Closed** *(effective at the Human-Maintainer commit `3f37ecf…`)* |
 | CDS-WP-020A | Visual Token Source Authoring and Source Set Realization | 3 | Planned · not active · not authorized |
 | CDS-WP-021 | Adaptive Layout and Responsive Foundation | 3 | Planned · not active |
 | CDS-WP-022 | Theme and Environmental Presentation Model | 3 | Planned · not active |
@@ -644,7 +653,7 @@ pass, and **routing is not repair**. None of them blocked CDS-WP-020.
 
 | ID | Observation | Disposition |
 | --- | --- | --- |
-| **F-020-01** | The **value half** of CDS-WP-020 is gated on **seven** normative choices that no committed CDS source has made. The five earlier work packages that made comparable first-of-their-kind normative choices — **CDS-WP-011 … CDS-WP-015** — each registered a Decision block, and three of them an ADR; CDS-WP-020 holds no authority to register either. | **`DECISION_REQUIRED`.** Recorded as **OD-1 … OD-7** in the **non-normative** [Visual Token Foundation Open Decisions](VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md) register. **Partially answered on 2026-08-27** by the Human-Maintainer-authorized **CDS-WP-020 Decision Integration Pass**: **DEC-S-128, DEC-S-129, DEC-S-130, DEC-S-131** and **ADR-0004** were **prepared and authorized for integration, and at that date NOT YET EFFECTIVE**. They answer **OD-1, OD-2 and OD-3** and add the contrast evaluation authority. **OD-4 … OD-7 stay open, the value half stays gated, and CDS-WP-020 stays `DECISION_REQUIRED` and not closed.** *(Stated as at 2026-08-27, before integration.)* **Superseded in part:** the CDS-WP-020 object was integrated by the Human-Maintainer commit `42a568d823de3388e45af62967546f13ad67eff6` — at which **DEC-S-128 … DEC-S-131 and ADR-0004 became effective** and CDS-WP-020 is now recorded as **`Closed`** — closure proposed in the closure and routing pass, effective at its Human-Maintainer integration commit. **The `DECISION_REQUIRED` result stands as the executed result of the work package**, **OD-4 … OD-7 stay open**, and the value half stays gated; the value and machine-readable work is routed to **`CDS-WP-020A`** (`FR-N-03`), which is **`Planned`, not active, and not authorized**. |
+| **F-020-01** | The **value half** of CDS-WP-020 is gated on **seven** normative choices that no committed CDS source has made. The five earlier work packages that made comparable first-of-their-kind normative choices — **CDS-WP-011 … CDS-WP-015** — each registered a Decision block, and three of them an ADR; CDS-WP-020 holds no authority to register either. | **`DECISION_REQUIRED`.** Recorded as **OD-1 … OD-7** in the **non-normative** [Visual Token Foundation Open Decisions](VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md) register. **Partially answered on 2026-08-27** by the Human-Maintainer-authorized **CDS-WP-020 Decision Integration Pass**: **DEC-S-128, DEC-S-129, DEC-S-130, DEC-S-131** and **ADR-0004** were **prepared and authorized for integration, and at that date NOT YET EFFECTIVE**. They answer **OD-1, OD-2 and OD-3** and add the contrast evaluation authority. **OD-4 … OD-7 stay open, the value half stays gated, and CDS-WP-020 stays `DECISION_REQUIRED` and not closed.** *(Stated as at 2026-08-27, before integration.)* **Superseded in part:** the CDS-WP-020 object was integrated by the Human-Maintainer commit `42a568d823de3388e45af62967546f13ad67eff6` — at which **DEC-S-128 … DEC-S-131 and ADR-0004 became effective** — and CDS-WP-020 is now **`Closed`**, closure effective at the Human-Maintainer commit `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`. **The `DECISION_REQUIRED` result stands as the executed result of the work package**, **OD-4 … OD-7 stay open**, and the value half stays gated; the value and machine-readable work is routed to **`CDS-WP-020A`** (`FR-N-03`), which is **`Planned`, not active, and not authorized**. |
 | **F-020-02** | **AF-1 / AF-3 versus source-set metadata.** A source-set payload carries **one** `maturityState`, but the [Visual Foundation Governance and Lifecycle](../governance/VISUAL_FOUNDATION_GOVERNANCE_AND_LIFECYCLE.md) requires that maturity is never inherited (AF-1) and that a family may mature at its own pace (AF-3). A shared visual source set cannot express both. **Corrected 2026-08-27 — see the disposition.** | **ANSWERED by DEC-S-131**, with the finding corrected precisely: its **conclusion stands** — a shared visual source set cannot express per-family maturity, so the unit is **one source set per independently evaluable Family × Token-Flow-Layer unit**. Its **artifact-count mechanism was imprecise**: it implied that per-family, per-layer source sets multiply manifests and resolvers at the same rate. They do not — the committed manifest contract carries a **`sourceSets` array**, so **one manifest may aggregate many source sets**, each retaining its own maturity. **A source set is not a manifest**, and **AGGREGATED is not MATURE**. **Residual:** the concrete root identifiers are **not** created, coupled to **OD-4**; **OD-6 stays open and is not pre-answered**. |
 | **F-020-03** | **T-2 is vacuously satisfiable today.** *"Every semantic role must resolve in every supported context"* is trivially true when **zero** contexts are supported, so it cannot guide whether a default role binding is legitimate or a pre-emption of **CDS-WP-022**. | Recorded as **OD-7**. The [Visual Semantic Token Foundation](../architecture/VISUAL_SEMANTIC_TOKEN_FOUNDATION.md) adds **TC-6** so the gap is at least stated. **The theme mechanism remains CDS-WP-022's.** |
 | **F-020-04** | The offline validator's bounded token-`$type` set is routinely readable as a **CDS profile admission**. It is a **DEC-S-098 V2 coverage boundary**, and the committed token-document schema constrains `$type` **not at all**. | Stated explicitly in the [Visual Reference Token Foundation](../architecture/VISUAL_REFERENCE_TOKEN_FOUNDATION.md) machine-readable disposition and in **OD-2**, citing **RISK-074**. **CLOSED by DEC-S-130** (2026-08-27, effective at commit `42a568d823de3388e45af62967546f13ad67eff6`), which states the admission profile explicitly — `color`, `dimension`, `number` — and restates that **a tool accepting a type is not the profile admitting it**. **The DEC-S-098 coverage boundary is unchanged, and no schema, validator, test, or fixture was changed.** |
@@ -684,27 +693,34 @@ effectiveness reconciliation; **`F-020C-02` remains deferred.**
 | **`F-020C-01`** | **STALE CURRENT-STATE — decision and ADR effectivity.** *(Observed by the closure and routing pass; since resolved.)* Live assertions across **21** files still stated that **DEC-S-128 … DEC-S-131** and **ADR-0004** were `PROPOSED / AUTHORIZED FOR INTEGRATION` and **NOT YET EFFECTIVE** *"until the Human-Maintainer exact-byte integration commit"*, and that the effective registers stayed at **DEC-S-127** and **ADR-0003** — **74** by that pass's count. That commit has occurred — `42a568d823de3388e45af62967546f13ad67eff6` — so the stated condition is met and the qualification is stale. Carriers include the **normative** [Decision Index](../decisions/DECISION_INDEX.md) *Register scope* section and the **ADR-0004** status line. | **RESOLVED → the separately authorized CDS-WP-020 post-integration effectiveness reconciliation** (2026-08-31), on the **CDS-WP-016 post-promotion precedent**, where current-state reconciliation after an exact-byte commit was its own authorized pass. **Not repaired by the closure and routing pass:** the volume was a material scope expansion beyond closure and routing, and **marking an ADR `Accepted` is a Human-Maintainer act** the executor may not perform autonomously; **that pass asserted no effectivity state** and changed no effectivity wording anywhere. The reconciliation pass reproduced the finding independently — **78 line-hits / 69 merged statements across 21 files at baseline `42a568d8…`**, and **83 / 74 across 22 files** in the combined working tree — and reconciled the live carriers to the effective state. It **records a completed Human-Maintainer act and performs none**: acceptance follows from the exact-byte integration commit to which the reviewed ADR and Decision text bound it. **The decision and ADR *counts* — 131 and 4 — were already correct** in the register; only the effectivity qualification was stale. |
 | **`F-020C-02`** | **Milestone mapping not re-derived.** **M2 — Visual Foundation Ready** is *"reached after CDS-WP-022"*. Registering **CDS-WP-020A** in Phase V leaves it unstated whether M2 should also depend on it. | **Deferred → Nova and Human-Maintainer disposition once OD-4 … OD-7 are decided.** **M2 is unchanged.** Re-deriving it now would be a sequencing decision, and **OD-7 — the sequencing of value-selection work against CDS-WP-022 — is open**. |
 
+### Finding observed after the CDS-WP-020 closure commit
+
+| ID | Observation | Disposition |
+| --- | --- | --- |
+| **`F-020C-04`** | **POST-CLOSURE CURRENT-STATE EFFECTIVITY DRIFT.** Live current-state carriers still described CDS-WP-020 closure in pre-integration terms — *closure proposed*, *not yet effective*, *becomes effective only at the Human-Maintainer integration commit*, *recorded in the working object* — although the Human-Maintainer closure integration commit `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7` (parent `42a568d823de3388e45af62967546f13ad67eff6`) had occurred and its exact object had passed the **CDS-WP-020 EXACT-OBJECT CLOSURE INTEGRATION GATE R4**. Those formulations were truthful **before** that commit; they are stale only as **live** current state. | **RESOLVED → the separately authorized CDS-WP-020 post-closure current-state reconciliation** (2026-08-31), on the **CDS-WP-016 post-promotion precedent**, where current-state reconciliation after a Human-Maintainer commit was its own authorized pass. The live carriers now record CDS-WP-020 as **`Closed`, effective at that commit**, and **no work package as currently authorized**. It **records a completed Human-Maintainer act and performs none.** **Point-in-time records were preserved**, not rewritten: dated review, execution, decision-time, and event-time changelog statements remain as written. **No successor was activated**; **no Decision, ADR, or risk was added, changed, or removed**; and **`DECISION_REQUIRED` stands as the executed result of CDS-WP-020.** |
+
 ## Immediate next step
 
-**Independent review of the CDS-WP-020 closure and routing object, then Nova
-adjudication, then the Human-Maintainer exact-byte integration commit that makes
-CDS-WP-020 closure effective.**
+**A Human-Maintainer decision on OD-4, OD-5, OD-6 and the OD-7 sequencing, and a
+separate explicit Human-Maintainer authorization of a next work package. Neither
+has occurred, and no work package is currently authorized.**
 
-The step this section previously named — *fresh independent review of the prepared
-Decision object, Nova integration adjudication, Human-Maintainer exact-byte
-integration commit* — **has been completed**. The reviewed CDS-WP-020 object was
-integrated by the Human-Maintainer commit
-`42a568d823de3388e45af62967546f13ad67eff6`.
+The steps this section previously named — *independent review of the CDS-WP-020
+closure and routing object, Nova adjudication, and the Human-Maintainer exact-byte
+integration commit that makes CDS-WP-020 closure effective* — **have been
+completed.** The reviewed CDS-WP-020 object was integrated by the Human-Maintainer
+commit `42a568d823de3388e45af62967546f13ad67eff6`, and the closure and routing object by the
+Human-Maintainer commit `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.
 
-**Closure is proposed, not effective.** The working object of this pass records
-CDS-WP-020 as closed; that state becomes effective only at the Human-Maintainer
-integration commit of this object. **No later work package is activated by it** —
-**CDS-WP-020A** and **CDS-WP-021 … CDS-WP-053** all remain `Planned`, not active,
-and not authorized, and each begins only on an explicit Nova prompt **and** separate
-Human-Maintainer authorization.
+**CDS-WP-020 closure is effective at that commit.** **No later work package was
+activated by it** — **`CDS-WP-020A`** and **CDS-WP-021 … CDS-WP-053** all remain
+`Planned`, not active, and not authorized, and each begins only on an explicit Nova
+prompt **and** separate Human-Maintainer authorization. **Closure answers no open
+decision, satisfies no value prerequisite, and selects no value.**
 
 **The effectivity qualification of DEC-S-128 … DEC-S-131 and ADR-0004 was not
-reconciled by this pass** and is routed as **`F-020C-01`** above.
+reconciled by the closure and routing pass**; it is routed as **`F-020C-01`** above
+and has since been **resolved**.
 
 ### CDS-WP-020 Decision Integration Pass — 2026-08-27
 
@@ -732,9 +748,9 @@ closed, or re-scored **no** risk — **`RISK-099` was assessed and is not requir
 because the normative OKLCH-to-sRGB accessibility-path conversion architecture that
 would have created the exposure was **rejected**; it registered **no** capability;
 it made **no** claim; it touched **no** Semantic Status byte; and it activated
-**no** work package. **The pass itself did not close CDS-WP-020**; closure is
-recorded separately by the CDS-WP-020 closure and routing pass and is effective only
-at its Human-Maintainer integration commit.
+**no** work package. **The pass itself did not close CDS-WP-020**; closure was
+recorded separately by the CDS-WP-020 closure and routing pass and became effective
+at its Human-Maintainer integration commit `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.
 
 ### Standing position
 
@@ -743,10 +759,11 @@ its authorization came from that decision alone, **not** from its position in th
 roadmap — and it was **executed with result `DECISION_REQUIRED`**. Its reviewed
 object was then **integrated** by the Human-Maintainer commit
 `42a568d823de3388e45af62967546f13ad67eff6`, and the CDS-WP-020 closure and routing
-pass records it as **`Closed`**. **That closure is proposed in the working object
-and is not yet effective**: it becomes effective only at the Human-Maintainer
-integration commit of that object. **Closure grants no maturity, no evidence, no
-claim, and no publication effect.**
+pass recorded it as **`Closed`**. **That closure is effective** at the
+Human-Maintainer integration commit of that object,
+`3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`. **Closure grants no maturity, no evidence,
+no claim, and no publication effect**, and **no work package is currently
+authorized.**
 
 **CDS-WP-019 is closed**, integrated by the Human-Maintainer commit
 `538fbccbf6f554de3b872e9fb75a70d13318feb6`, and **the phase-transition item is

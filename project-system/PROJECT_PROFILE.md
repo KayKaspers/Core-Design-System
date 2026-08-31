@@ -36,9 +36,9 @@ release, or publication authority, and activates no work package.
   **executed with result `DECISION_REQUIRED`**, and its reviewed object was
   **integrated** by the Human-Maintainer commit
   `42a568d823de3388e45af62967546f13ad67eff6`. It is recorded as **`Completed`**;
-  **closure is recorded in the working object of the CDS-WP-020 closure and routing
-  pass and becomes effective only at that object's Human-Maintainer integration
-  commit.** **No successor work package is active or authorized.** **Contract
+  **closure was recorded in the CDS-WP-020 closure and routing object and became
+  effective at that object's Human-Maintainer integration commit
+  `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.** **No successor work package is active or authorized.** **Contract
   only.** It defines what a
   visual **reference primitive** and a visual **semantic role** are, what each must
   declare, how a role aliases a primitive, and the discipline any future value must

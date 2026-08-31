@@ -38,10 +38,10 @@ Controlled work-package roadmap for the Core Design System (CDS).
   Foundation** was authorized separately by the Human Maintainer on 2026-08-26,
   **executed**, and its reviewed object was **integrated** by the Human-Maintainer
   commit **`42a568d823de3388e45af62967546f13ad67eff6`**. It is recorded as
-  **`Completed`** below. **That closure is recorded in the working object of the
-  CDS-WP-020 closure and routing pass and becomes effective only at the
-  Human-Maintainer integration commit of that object** — an uncommitted edit changes
-  no repository history. **No successor work package is active or authorized.** The
+  **`Completed`** below. **That closure was recorded in the working object of the
+  CDS-WP-020 closure and routing pass and became effective at the Human-Maintainer
+  integration commit of that object, `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.** **No successor
+  work package is active or authorized.** The
   **CDS Phase Transition Governance Package**
   (**DEC-S-127**) ran between CDS-WP-019 closure and that authorization; it is
   **not** a numbered work package, occupies no identifier in the
@@ -60,7 +60,8 @@ Controlled work-package roadmap for the Core Design System (CDS).
   file, **no** schema, and **no** validator rule; produced and admitted **no**
   evidence; changed **no** maturity; added **no** risk; and
   activated **no** later work package. **Closure is a separate Human-Maintainer
-  act**, recorded in this object and effective at its integration commit.
+  act**: it was recorded in the closure and routing object and became effective at
+  that object's Human-Maintainer integration commit `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.
   **`DECISION_REQUIRED` stands as the executed result of the work package**;
   closing the work package neither answers **OD-4 … OD-7** nor satisfies **VP-3,
   VP-4 and VP-5**, and **no visual value may be selected.**
@@ -718,9 +719,9 @@ later work package; and performs no Git write.**
 
 **Status:** Completed *(executed with result `DECISION_REQUIRED`; the reviewed
 object was integrated by the Human-Maintainer commit
-`42a568d823de3388e45af62967546f13ad67eff6`; **closure is recorded in the working
-object of the CDS-WP-020 closure and routing pass and becomes effective only at that
-object's Human-Maintainer integration commit**)*
+`42a568d823de3388e45af62967546f13ad67eff6`; **closure was recorded in the working
+object of the CDS-WP-020 closure and routing pass and became effective at that
+object's Human-Maintainer integration commit `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`**)*
 
 The second work package of **Phase V — Visual Foundation**. It establishes the
 first concrete **Reference** and **Semantic** visual token layer on top of the
