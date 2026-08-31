@@ -9,14 +9,52 @@ released and no release is announced.
 
 ### Added
 
-- **CDS-WP-020 Decision Integration Pass — `DEC-S-128 … DEC-S-131` and `ADR-0004`,
-  prepared and NOT YET EFFECTIVE.** Separately authorized by the Human Maintainer on
-  **2026-08-27** after Nova adjudicated **OD-1 … OD-7**. All five are
-  **`PROPOSED / AUTHORIZED FOR INTEGRATION`** and become effective **only** at the
-  Human-Maintainer exact-byte integration commit, after a Fresh Independent Review
-  and Nova integration adjudication. Until then the **effective** registers remain
-  **DEC-S-127** and **ADR-0003**; the **prepared** object holds **131** decisions and
-  **4** ADRs. **A review PASS is not a commit, and a Nova recommendation is not an
+- **`CDS-WP-020A` — Visual Token Source Authoring and Source Set Realization,
+  registered as `Planned`, not active, not authorized.** The explicit destination
+  for the concrete machine-readable **Visual Token Source and Value Authoring** work
+  that CDS-WP-020 returned as `DECISION_REQUIRED`. It resolves **`FR-N-03`**, which
+  Nova adjudicated with Human-Maintainer approval — **Option 2: source and value
+  authoring is a responsibility separate from validation**, and must not be absorbed
+  into **CDS-WP-024**. **An inserted identifier on the existing `CDS-WP-001A`
+  precedent: no work package was renumbered**, and the numeric sequence
+  CDS-WP-017 … CDS-WP-053 is unchanged. It owns visual source sets, machine-readable
+  source authoring at token-flow layers 1 and 2, source-set identity, revision,
+  provenance, and family × layer topology — and, only once **OD-4** and **OD-5** are
+  decided and **VP-1 … VP-7** are satisfied, identifier realization and concrete
+  normative values. It **never** acquires validator implementation, validation
+  authority, conformance determination, evidence admission, maturity promotion,
+  Product Profile activation, pilot activation, release authority, `Stable`
+  declaration, or runtime renderer implementation. **Registration is not
+  activation**, and **no visual value, identifier, token source, schema, validator
+  rule, test, or fixture was created.** (CDS-WP-020 closure and routing)
+- **An *authoring and validation separation* standing gate in the forward roadmap.**
+  **AUTHOR is not VALIDATE; SOURCE CREATION is not CONFORMANCE DETERMINATION.** A
+  work package that authors machine-readable sources gains **no** validation
+  authority because validators read what it wrote, and **CDS-WP-024** gains **no**
+  authoring authority because it validates what someone else wrote. This is a
+  responsibility boundary, not a runtime-dependency mandate; it derives from
+  DEC-S-022, DEC-S-031, DEC-S-053, DEC-S-079, and DEC-S-126 and **registers no new
+  Decision and no new ADR.** (CDS-WP-020 closure and routing)
+- **Two findings recorded and routed, not repaired.** **`F-020C-01`** — **74**
+  live assertions across **21** files still qualify **DEC-S-128 … DEC-S-131**
+  and **ADR-0004** as `NOT YET EFFECTIVE` *"until the Human-Maintainer exact-byte
+  integration commit"*, a condition met by commit
+  `42a568d823de3388e45af62967546f13ad67eff6`; deferred to a **separately authorized
+  effectivity reconciliation pass**, on the CDS-WP-016 post-promotion precedent,
+  because the volume exceeds a bounded closure pass and **marking an ADR `Accepted`
+  is a Human-Maintainer act**. **`F-020C-01` has since been resolved** by that
+  separately authorized pass; **`F-020C-02` remains deferred.** **`F-020C-02`** — the **M2** milestone mapping was
+  **not** re-derived, because doing so would decide sequencing while **OD-7** is
+  open. (CDS-WP-020 closure and routing)
+- **CDS-WP-020 Decision Integration Pass — `DEC-S-128 … DEC-S-131` and `ADR-0004`.**
+  Separately authorized by the Human Maintainer on **2026-08-27** after Nova
+  adjudicated **OD-1 … OD-7**. All five were prepared as
+  **`PROPOSED / AUTHORIZED FOR INTEGRATION`** and became effective **only** at the
+  Human-Maintainer exact-byte integration commit
+  `42a568d823de3388e45af62967546f13ad67eff6`, which followed a Fresh Independent
+  Review and Nova integration adjudication. The **effective** registers are
+  therefore **DEC-S-131** and **ADR-0004**, holding **131** decisions and **4**
+  ADRs. **A review PASS is not a commit, and a Nova recommendation is not an
   approval.** (CDS-WP-020)
 - **`DEC-S-128` — exactly one canonical normative visual colour representation.**
   The pinned DTCG 2025.10 colour space keyed **`srgb`**, with components as that
@@ -190,8 +228,50 @@ released and no release is announced.
 
 ### Changed
 
-- **CDS-WP-020 recorded as the current authorized work package — executed,
-  `DECISION_REQUIRED`, not closed.** `project-system/WORK_PACKAGES.md`,
+- **`DEC-S-128 … DEC-S-131` and `ADR-0004` reconciled to their effective state, and
+  `F-020C-01` resolved.** The condition those entries themselves stated — the
+  Human-Maintainer exact-byte integration commit of the CDS-WP-020 Decision
+  Integration Pass — was met by commit
+  `42a568d823de3388e45af62967546f13ad67eff6`, so the repository's live current-state
+  carriers no longer qualify them as `PROPOSED / AUTHORIZED FOR INTEGRATION` or
+  `NOT YET EFFECTIVE`, and no longer name **DEC-S-127** and **ADR-0003** as the
+  highest effective entries. **DEC-S-128 … DEC-S-131 are effective and ADR-0004 is
+  `Accepted`**; the effective registers are **DEC-S-001 … DEC-S-131 (131)** and
+  **ADR-0001 … ADR-0004 (4)**. **This records a completed Human-Maintainer act and
+  performs none** — an ADR is accepted by the Human-Maintainer commit its own status
+  text bound acceptance to, never by an executor. **Point-in-time records were
+  preserved**, not rewritten: dated review, evidence, decision-time, and changelog
+  statements that were true before integration remain as written. **No Decision,
+  ADR, or risk was added, changed in substance, or removed** — the registers stay at
+  **131**, **4**, and **98**; **no `DEC-S-132`, no `ADR-0005`, no `RISK-099`.** **No
+  ADR rationale, alternative, consequence, or Decision scope was altered**; no
+  visual value, identifier, token source, schema, validator rule, test, or fixture
+  was created; **no** evidence was admitted, **no** maturity changed, **no** claim
+  was made, and **no** work package was activated. **CDS-WP-020 closure remains
+  proposed and not yet effective** — a separate Human-Maintainer integration commit.
+  (CDS-WP-020 post-integration effectiveness reconciliation)
+- **CDS-WP-020 recorded as `Completed` — executed with result `DECISION_REQUIRED`,
+  integrated, closure proposed.** Its reviewed object — **22 paths** — was
+  integrated by the Human-Maintainer commit
+  `42a568d823de3388e45af62967546f13ad67eff6`. `project-system/WORK_PACKAGES.md`,
+  `project-system/NEXT_PHASE.md`, `project-system/PROJECT_PROFILE.md`,
+  `project-system/CONTEXT_PACK_FOUNDATION.md`, `project-brain/PROJECT_BRAIN.md`,
+  `README.md`, `CLAUDE.md`, and the forward roadmap now record it as closed.
+  **Closure is recorded in the working object of the closure and routing pass and
+  becomes effective only at that object's Human-Maintainer integration commit** — an
+  uncommitted edit changes no repository history. **`DECISION_REQUIRED` stands as
+  the executed result**: closure answers **no** open decision, satisfies **no**
+  value prerequisite, and selects **no** value. **OD-4, OD-5, OD-6 and OD-7 stay
+  open**; **VP-3, VP-4 and VP-5 stay unsatisfied**; visual values **0**, visual
+  source sets **0**, visual Candidate families **0**, VF-1 … VF-9 **`Proposed`**.
+  **No successor work package was activated** — **`CDS-WP-020A`** and
+  **CDS-WP-021 … CDS-WP-053** all remain `Planned`, not active, not authorized.
+  **No Decision, ADR, or risk was added**; the registers stay at **131**, **4**, and
+  **98**. **No evidence was admitted, no maturity changed, no claim was made, no
+  capability was registered, no phase was renamed, and no release, tag, or
+  publication occurred.** (CDS-WP-020 closure and routing)
+- **CDS-WP-020 previously recorded as the current authorized work package —
+  executed, `DECISION_REQUIRED`, not closed.** `project-system/WORK_PACKAGES.md`,
   `project-system/NEXT_PHASE.md`, `project-system/PROJECT_PROFILE.md`,
   `project-system/CONTEXT_PACK_FOUNDATION.md`, `project-brain/PROJECT_BRAIN.md`,
   `README.md`, `CLAUDE.md`, and the forward roadmap now record it, and

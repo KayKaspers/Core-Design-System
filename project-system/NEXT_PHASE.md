@@ -9,12 +9,17 @@
 - **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**,
-  **CDS-WP-017**, **CDS-WP-018**, **CDS-WP-019**
-- **Current work package:** **CDS-WP-020 — Reference and Semantic Token
-  Foundation**, authorized separately by the Human Maintainer on 2026-08-26.
-  **Executed with result `DECISION_REQUIRED`; not closed.** The **CDS Phase
-  Transition Governance Package** (**DEC-S-127**) ran between CDS-WP-019 closure and
-  that authorization; it is **not** a numbered work package and activated nothing.
+  **CDS-WP-017**, **CDS-WP-018**, **CDS-WP-019**, **CDS-WP-020**
+- **Current work package:** **none.** **CDS-WP-020 — Reference and Semantic Token
+  Foundation** was authorized separately by the Human Maintainer on 2026-08-26 and
+  **executed with result `DECISION_REQUIRED`**; its reviewed object was
+  **integrated** by the Human-Maintainer commit
+  `42a568d823de3388e45af62967546f13ad67eff6`. **Closure is recorded in the working
+  object of the CDS-WP-020 closure and routing pass and becomes effective only at
+  that object's Human-Maintainer integration commit.** **No successor work package
+  is active or authorized.** The **CDS Phase Transition Governance Package**
+  (**DEC-S-127**) ran between CDS-WP-019 closure and that authorization; it is
+  **not** a numbered work package and activated nothing.
 - **Candidate promotion: COMPLETE.** The Semantic Status Foundation passed the
   Candidate gate and was promoted by the Human-Maintainer exact-byte **Promotion
   Commit `22fa0710e2b75df22e7b420c2f9d86bbe67b2777`** on 2026-08-19 — gate **PASS**,
@@ -43,7 +48,8 @@
   rename, and no publication effect.** Closure became effective with the
   Human-Maintainer commit `538fbccbf6f554de3b872e9fb75a70d13318feb6`, which
   integrated the eleven normative visual foundation documents.
-- **CDS-WP-020 state:** **Executed, `DECISION_REQUIRED`, not closed.** Reference
+- **CDS-WP-020 state:** **Executed with result `DECISION_REQUIRED`; integrated;
+  closure proposed, not yet effective.** Reference
   and Semantic Token Foundation. **Contract only.** It defines what a visual
   reference primitive and a visual semantic role are, what each must declare, how a
   role aliases a primitive, and the discipline any future value must satisfy — and
@@ -51,16 +57,35 @@
   concrete value and every machine-readable visual source. **No visual value, no
   identifier, no token source file, no schema, no validator rule, no test, no
   evidence, no maturity change, no risk entry, no capability registration, no phase
-  rename, and no publication effect.** Closure is a separate Human-Maintainer act
-  and **has not occurred**.
+  rename, and no publication effect.** Closure is a separate Human-Maintainer act,
+  recorded in the closure and routing object and **effective at its integration
+  commit** — an uncommitted edit changes no repository history.
+  **`DECISION_REQUIRED` stands as the executed result**: closure answers **no** open
+  decision and selects **no** value. **OD-4 … OD-7 stay open**, and **VP-3, VP-4 and
+  VP-5 stay unsatisfied.**
+- **`FR-N-03` state:** **RESOLVED BY EXPLICIT AUTHORING-WP DESTINATION.** Nova
+  adjudicated it with Human-Maintainer approval — **Option 2**: **source and value
+  authoring is not validation.** The concrete machine-readable Visual Token Source
+  and Value Authoring work is routed to **`CDS-WP-020A` — Visual Token Source
+  Authoring and Source Set Realization**, and **CDS-WP-024 keeps its validation and
+  conformance boundary unchanged**. **Routing is not repair, and registration is not
+  activation.**
+- **`CDS-WP-020A` state:** **`Planned`, not active, not authorized, work not
+  started.** An **inserted** identifier on the `CDS-WP-001A` precedent; **no work
+  package was renumbered** and the numeric sequence CDS-WP-017 … CDS-WP-053 is
+  unchanged. See [Work Packages](WORK_PACKAGES.md) for its scope and exclusions.
 - **CDS-WP-020 Decision Integration Pass (2026-08-27):** separately authorized;
-  **prepared DEC-S-128 … DEC-S-131 and ADR-0004**, which are **`PROPOSED /
-  AUTHORIZED FOR INTEGRATION` and NOT YET EFFECTIVE**. They answer **OD-1, OD-2 and
-  OD-3**; **OD-4 … OD-7 stay open** and **VP-3, VP-4 and VP-5 stay unsatisfied**.
+  registered **DEC-S-128 … DEC-S-131 and ADR-0004**, which are **effective** at the
+  Human-Maintainer exact-byte integration commit
+  `42a568d823de3388e45af62967546f13ad67eff6`. They answer **OD-1, OD-2 and OD-3**; **OD-4 … OD-7 stay open** and **VP-3, VP-4 and VP-5 stay unsatisfied**.
   The pass created **no** value, **no** identifier, **no** token source, schema,
   validator rule, test, or fixture; admitted **no** evidence; changed **no**
   maturity; added **no** risk entry (**`RISK-099` is not required**); activated
-  **no** work package; and **did not close CDS-WP-020**.
+  **no** work package; and **did not itself close CDS-WP-020**. *(Its effectivity
+  qualification was not reconciled by the closure and routing pass; the separately
+  authorized post-integration effectiveness reconciliation has since done so — see
+  `F-020C-01` in the
+  [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).)*
 - **CDS-WP-021 … CDS-WP-053:** **`Planned`, not active, not authorized, work not
   started** — see the
   [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
@@ -76,20 +101,27 @@ was integrated by the Human-Maintainer commit
 Human-Maintainer commit `e956560be2b5650cc1ce717931f3da39a2414a1b`. **CDS-WP-020 was
 then authorized separately** and has been executed. The remaining sequence is:
 
-| # | Step | Authority |
-| --- | --- | --- |
-| 1 | **Fresh independent review** of the CDS-WP-020 working-tree object | Reviewer ≠ executor |
-| 2 | **Nova adjudication** of that review | Nova — recommendation only, never approval |
-| 3 | **Human-Maintainer integration commit** of CDS-WP-020 | Human Maintainer |
-| 4 | **CDS-WP-020 closure becomes effective** | Effective at step 3 |
-| 5 | **Adjudication of OD-1 … OD-7** — **partially done.** Nova adjudicated on 2026-08-27 and the Human Maintainer authorized a bounded **Decision Integration Pass**, which prepared **DEC-S-128 … DEC-S-131** and **ADR-0004** in the working tree. **OD-4 … OD-7 were deliberately left open.** | Nova recommends · Human Maintainer decides |
-| 6 | **Authorization of the next work package** — a separate, explicit Human-Maintainer decision | Human Maintainer |
+| # | Step | Authority | State |
+| --- | --- | --- | --- |
+| 1 | **Fresh independent review** of the CDS-WP-020 working-tree object | Reviewer ≠ executor | **Done** |
+| 2 | **Nova adjudication** of that review | Nova — recommendation only, never approval | **Done** |
+| 3 | **Human-Maintainer integration commit** of the CDS-WP-020 object | Human Maintainer | **Done** — `42a568d823de3388e45af62967546f13ad67eff6` |
+| 4 | **Adjudication of OD-1 … OD-7** — **partially done.** Nova adjudicated on 2026-08-27 and the Human Maintainer authorized a bounded **Decision Integration Pass**, which prepared **DEC-S-128 … DEC-S-131** and **ADR-0004**. **OD-4 … OD-7 were deliberately left open.** | Nova recommends · Human Maintainer decides | **Partial** |
+| 5 | **Independent review** of the CDS-WP-020 closure and routing object | Reviewer ≠ executor | **Next** |
+| 6 | **Nova adjudication** of that review | Nova — recommendation only, never approval | Pending |
+| 7 | **Human-Maintainer integration commit** of the closure and routing object | Human Maintainer | Pending |
+| 8 | **CDS-WP-020 closure becomes effective** | Effective at step 7 | Pending |
+| 9 | **Decision on OD-4, OD-5, OD-6 and the OD-7 sequencing** | Human Maintainer | Pending |
+| 10 | **Authorization of the next work package** — a separate, explicit Human-Maintainer decision | Human Maintainer | Pending |
 
-**Step 4 is not reached before step 3**, and **step 6 is not implied by step 4 or
-step 5**. Uncommitted executor output changes no authoritative phase or
+**Step 8 is not reached before step 7**, and **step 10 is not implied by step 8 or
+step 9**. Uncommitted executor output changes no authoritative phase or
 work-package status, and a review PASS is not a commit. **No concrete visual value
 is created at any step above**, and **no value work is possible while OD-4 and
 OD-5 remain open** — **VP-3, VP-4 and VP-5 are unsatisfied for every family.**
+**Registering `CDS-WP-020A` at step 5 activates nothing**: it stays `Planned`, not
+active, and not authorized until a separate Human-Maintainer authorization at
+step 10.
 
 ### Why step 5 exists, and what it has produced so far
 
@@ -106,10 +138,10 @@ full-precision comparison; APCA and other methods informational only),
 **DEC-S-130** (an explicit, minimal, closed `$type` admission profile — `color`,
 `dimension`, `number`; **`profileVersion` stays `1`**), **DEC-S-131** (the **Source
 Set** as the independently evaluable unit; **AGGREGATED is not MATURE**) and
-**ADR-0004**. **All five are `PROPOSED / AUTHORIZED FOR INTEGRATION` and NOT YET
-EFFECTIVE** — effectivity occurs only at the Human-Maintainer exact-byte
-integration commit, after a Fresh Independent Review and Nova integration
-adjudication.
+**ADR-0004**. **All five are effective** — effectivity occurred only at the
+Human-Maintainer exact-byte integration commit
+`42a568d823de3388e45af62967546f13ad67eff6`, which followed a Fresh Independent
+Review and Nova integration adjudication.
 
 **OD-4, OD-5, OD-6 and OD-7 remain open**, with three residuals recorded under the
 answered entries. The propositions, alternatives, recommendations, and affected
@@ -713,7 +745,7 @@ effective with the Human-Maintainer commit
   and **no change to any Semantic Status source, revision, maturity, or evidence
   package**.
 
-## Current work package — CDS-WP-020 (executed, `DECISION_REQUIRED`, not closed)
+## Most recent work package — CDS-WP-020 (executed, `DECISION_REQUIRED`, integrated, closure proposed)
 
 **CDS-WP-020 — Reference and Semantic Token Foundation.**
 
@@ -782,9 +814,9 @@ it, which DEC-S-033 prohibits.
 - **no risk entry** — the Risk Register stays at **98** with **no risk accepted,
   closed, or re-scored**, and **`RISK-099` is not required**. *(At the original
   CDS-WP-020 milestone this bullet also read "no Decision, no ADR"; the separately
-  authorized 2026-08-27 Decision Integration Pass prepared **DEC-S-128 … DEC-S-131**
-  and **ADR-0004**, which are **not yet effective** — until integration the
-  effective registers remain **DEC-S-127** and **ADR-0003**.)*;
+  authorized 2026-08-27 Decision Integration Pass registered **DEC-S-128 …
+  DEC-S-131** and **ADR-0004**, which are **effective** — since the integration
+  commit `42a568d8…` the effective registers are **DEC-S-131** and **ADR-0004**.)*;
 - **no phase rename**; **no capability registration** for audio/sonic, haptic,
   multimodal, AI/agent, or safety subject matter;
 - **no activation of CDS-WP-021 or any later work package**, and **no change to
@@ -817,16 +849,21 @@ authorized work package.)*
 - starting the CoreOps pilot,
 - modifying Skill files or consumer repositories,
 - creating a new work-package ID beyond the recorded CDS-WP-017 … CDS-WP-053
-  planning sequence without Human-Maintainer approval.
+  planning sequence without Human-Maintainer approval. *(**`CDS-WP-020A`** was
+  registered **with** that approval, as the Human-Maintainer-approved Nova
+  adjudication of **`FR-N-03`**. It is an **inserted** identifier that renumbered
+  nothing, and **registering it activated nothing**.)*
 
 ### Authorization note
 
 CDS-WP-019 was executed under an explicit Nova prompt and Human-Maintainer
-authorization and is now **`Completed`**. **CDS-WP-020 is the currently authorized
-work package**, authorized the same way and **executed but not closed**.
-**Planning is not authorization:** recording CDS-WP-021 … CDS-WP-053 activates none
-of them, and each requires its own explicit Nova prompt and Human-Maintainer
-authorization. **Execution is not closure:** uncommitted executor output changes no
+authorization and is **`Completed`**. **CDS-WP-020 was authorized the same way,
+executed, and integrated**, and is recorded as **`Completed`** with closure
+effective at the Human-Maintainer integration commit of the closure and routing
+object. **No work package is currently authorized.**
+**Planning is not authorization:** recording `CDS-WP-020A` and CDS-WP-021 …
+CDS-WP-053 activates none of them, and each requires its own explicit Nova prompt
+and Human-Maintainer authorization. **Execution is not closure:** uncommitted executor output changes no
 authoritative work-package status. **A phase transition is not an authorization
 either:** DEC-S-127 changed the phase label and nothing else.
 

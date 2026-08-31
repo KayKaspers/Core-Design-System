@@ -7,9 +7,9 @@
   the *Machine-readable disposition*, and the *Deferred decisions* section, to
   apply **DEC-S-128**, **DEC-S-130** and **DEC-S-131**
   ([ADR-0004](../decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md)).
-  **Those amendments are `PROPOSED / AUTHORIZED FOR INTEGRATION` and NOT YET
-  EFFECTIVE** until the Human-Maintainer exact-byte integration commit. **They
-  select no value and create no identifier**, and RP-1, RP-3 … RP-10, ST-1 … ST-7,
+  **Those amendments are effective** at the Human-Maintainer exact-byte
+  integration commit `42a568d823de3388e45af62967546f13ad67eff6` (2026-08-27).
+  **They select no value and create no identifier**, and RP-1, RP-3 … RP-10, ST-1 … ST-7,
   RN-1 … RN-9, RV-1 … RV-5 and RB-1 … RB-5 are unchanged.
 - **Artifact class:** **1 — Normative human-readable source** (DEC-S-022)
 - **Status:** **Normative for what a CDS visual reference token is** — token-flow
@@ -343,9 +343,9 @@ register. **Recording one defers it; it does not decide, schedule, or authorize
 it**, and each requires its own explicitly authorized decision.
 
 **Decided since this document was first written**, by the CDS-WP-020 Decision
-Integration Pass (2026-08-27) and **not yet effective** until the Human-Maintainer
-exact-byte integration commit: the **colour space and encoding** (DEC-S-128), the
-**admitted `$type` set** (DEC-S-130), and the **visual source-set unit, topology
+Integration Pass (2026-08-27) and **effective** at the Human-Maintainer exact-byte
+integration commit `42a568d823de3388e45af62967546f13ad67eff6`: the **colour space
+and encoding** (DEC-S-128), the **admitted `$type` set** (DEC-S-130), and the **visual source-set unit, topology
 and maturity granularity** (DEC-S-131). **None of the three selects a value or
 creates an identifier.**
 

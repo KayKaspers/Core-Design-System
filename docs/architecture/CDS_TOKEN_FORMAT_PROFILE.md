@@ -7,9 +7,9 @@
   *Canonical colour representation* and *The CDS `$type` admission profile*
   subsections below, under **DEC-S-128** and **DEC-S-130**
   ([ADR-0004](../decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md)).
-  **Those two subsections are `PROPOSED / AUTHORIZED FOR INTEGRATION` and NOT YET
-  EFFECTIVE** until the Human-Maintainer exact-byte integration commit; the rest of
-  this profile is unchanged and remains in effect. **The profile version is not
+  **Those two subsections are effective** at the Human-Maintainer exact-byte
+  integration commit `42a568d823de3388e45af62967546f13ad67eff6` (2026-08-27); the
+  rest of this profile is unchanged and remains in effect. **The profile version is not
   bumped.**
 - **Status:** **Normative and in effect** for the CDS token format profile;
   ADR-0001 was committed with CDS-WP-011 (`a81772c`, 2026-07-17). It constrains a

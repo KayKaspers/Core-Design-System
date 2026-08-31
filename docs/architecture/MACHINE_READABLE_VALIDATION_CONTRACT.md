@@ -200,8 +200,8 @@ against identical bytes (DEC-S-126 §5).
 ## Visual token requirements handed to CDS-WP-024
 
 *(Stated as **requirements**, under **DEC-S-130** and **DEC-S-131**, CDS-WP-020
-Decision Integration Pass, 2026-08-27. **PROPOSED / AUTHORIZED FOR INTEGRATION —
-NOT YET EFFECTIVE** until the Human-Maintainer exact-byte integration commit.
+Decision Integration Pass, 2026-08-27. **Effective** at the Human-Maintainer
+exact-byte integration commit `42a568d823de3388e45af62967546f13ad67eff6`.
 **Nothing below is implemented. `tools/`, `tests/`, `schemas/` and every fixture
 are untouched, and no diagnostic identifier is introduced.**)*
 

@@ -34,7 +34,7 @@ library, or a design project scoped exclusively to CoreOps.
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**,
-  **CDS-WP-017**, **CDS-WP-018**, **CDS-WP-019**
+  **CDS-WP-017**, **CDS-WP-018**, **CDS-WP-019**, **CDS-WP-020**
 - Accessibility support baseline: **A11Y-BL-001 declared and committed**
   (CDS-WP-010) — a **test contract, not evidence**; **no test has been run in any
   baseline environment**, and every artifact is AE-0 except the channel-independent
@@ -201,7 +201,8 @@ library, or a design project scoped exclusively to CoreOps.
   work package. Closure became effective with the Human-Maintainer commit
   **`538fbccbf6f554de3b872e9fb75a70d13318feb6`**, which integrated the eleven
   normative visual foundation documents.
-- **CDS-WP-020 state: ACTIVE — executed, `DECISION_REQUIRED`, NOT CLOSED.**
+- **CDS-WP-020 state: CLOSED — executed with result `DECISION_REQUIRED`,
+  integrated; closure proposed, effective at its integration commit.**
   Reference and Semantic Token Foundation, authorized separately by the Human
   Maintainer on 2026-08-26. **Contract only:** it defines the Reference and Semantic
   token layers of the visual foundation — see *Reference and semantic visual token
@@ -210,20 +211,54 @@ library, or a design project scoped exclusively to CoreOps.
   produced and admitted **no** evidence; changed **no** maturity; accepted or closed
   **no** risk; renamed **no** phase; registered **no** capability; made **no**
   claim; and activated **no** Product Profile, pilot, consumer integration, release,
-  tag, publication, or later work package. **Closure is a separate Human-Maintainer
-  act and has not occurred.** The **CDS Phase Transition Governance Package**
+  tag, publication, or later work package. Its reviewed object — **22 paths** — was
+  **integrated** by the Human-Maintainer commit
+  **`42a568d823de3388e45af62967546f13ad67eff6`**. **Closure is a separate
+  Human-Maintainer act**: it is recorded in the working object of the **CDS-WP-020
+  closure and routing pass** and becomes effective only at that object's
+  Human-Maintainer integration commit — **an uncommitted edit changes no repository
+  history.** **`DECISION_REQUIRED` stands as the executed result**: closing the work
+  package answers **no** open decision, satisfies **no** value prerequisite, and
+  selects **no** value. The **CDS Phase Transition Governance Package**
   (**DEC-S-127**) ran between CDS-WP-019 closure and this authorization; it occupied
   no identifier in the CDS-WP-020 … CDS-WP-053 sequence and activated nothing.
   A subsequent, separately authorized **Decision Integration Pass** (2026-08-27)
-  **prepared DEC-S-128 … DEC-S-131 and ADR-0004** in the working tree — see
-  *CDS-WP-020 Decision Integration Pass* below. **They are not yet effective**, they
+  registered **DEC-S-128 … DEC-S-131 and ADR-0004** — see *CDS-WP-020 Decision
+  Integration Pass* below. **They are effective**, at the Human-Maintainer
+  exact-byte integration commit `42a568d823de3388e45af62967546f13ad67eff6`; they
   create **no** visual value and **no** identifier, they add **no** risk entry, and
-  they do **not** close CDS-WP-020.
+  they did **not** themselves close CDS-WP-020. **Their effectivity qualification
+  was not reconciled by the closure and routing pass**, but has since been
+  reconciled by the separately authorized post-integration effectiveness
+  reconciliation — recorded as **`F-020C-01`** in the
+  [Post-Candidate Development Roadmap](docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md)
+  and routed to a separately authorized effectivity reconciliation. **Claude does
+  not mark an ADR `Accepted`; that is a Human-Maintainer act.**
+- **`FR-N-03` state: RESOLVED BY EXPLICIT AUTHORING-WP DESTINATION.** Nova
+  adjudicated it with Human-Maintainer approval — **Option 2**: **AUTHOR is not
+  VALIDATE, and SOURCE CREATION is not CONFORMANCE DETERMINATION.** The concrete
+  machine-readable Visual Token Source and Value Authoring work has its own
+  destination and is **not** absorbed into CDS-WP-024.
+- **`CDS-WP-020A` state: PLANNED / NOT ACTIVE / NOT AUTHORIZED.** **Visual Token
+  Source Authoring and Source Set Realization** — the `FR-N-03` destination. An
+  **inserted** identifier on the existing **`CDS-WP-001A`** precedent: **no work
+  package was renumbered**, and the numeric sequence CDS-WP-017 … CDS-WP-053 is
+  unchanged. It **owns** visual source sets, machine-readable source authoring at
+  token-flow layers 1 and 2, source-set identity, revision, provenance, family ×
+  layer topology, and — only once **OD-4** and **OD-5** are decided and
+  **VP-1 … VP-7** are satisfied — identifier realization and concrete normative
+  values. It **never** acquires validator implementation, validation authority,
+  conformance determination, evidence admission, maturity promotion, Product Profile
+  activation, pilot activation, release authority, `Stable` declaration, or runtime
+  renderer implementation. **CDS-WP-024 keeps its validation, render-gate, and
+  conformance boundary unchanged** and gains **no** authoring authority.
+  **Registration is not activation, and a dependency is not authority.**
 - **CDS-WP-021 … CDS-WP-053: PLANNED / NOT ACTIVE / NOT AUTHORIZED.** They are
   recorded as a planning sequence so no competing roadmap can arise; **recording
   them activates nothing** and work on them has not started. The immediate next
-  planned work package is **CDS-WP-021 — Adaptive Layout and Responsive
-  Foundation**, which stays inactive until separately authorized. **OD-7 recommends
+  planned work packages are **`CDS-WP-020A`** and **CDS-WP-021 — Adaptive Layout and
+  Responsive Foundation**; both stay inactive until separately authorized, and **the
+  order between them is not decided here.** **OD-7 recommends
   considering CDS-WP-022 before any value-selection work package** — a sequencing
   recommendation that authorizes nothing. Each work package begins only on an
   explicit Nova prompt and Human-Maintainer authorization, one at a time.
@@ -444,8 +479,9 @@ Before beginning a work package, inspect at minimum:
 - [docs/decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md](docs/decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md)
   — architecture rationale for the colour representation, the `$type` admission
   profile, and the source-set identity model (DEC-S-128, DEC-S-130, DEC-S-131).
-  **`PROPOSED / AUTHORIZED FOR INTEGRATION`, not yet effective and not yet
-  accepted**; DEC-S-129 is deliberately **not** an architecture dependency of it
+  **`Accepted` and effective** at the Human-Maintainer integration commit
+  `42a568d823de3388e45af62967546f13ad67eff6`; DEC-S-129 is deliberately **not** an
+  architecture dependency of it
 - [docs/governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md](docs/governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md)
   — normative source for the accessibility target, target-versus-claim boundary,
   and inclusive design; entry point to the accessibility documents and the
@@ -753,11 +789,20 @@ assumed — and CDS-WP-020 created none.
   prompt.** Claude creates no visual token source file, manifest, resolver, schema,
   validator rule, test, or fixture, and **adopts, reserves, or recommends no
   identifier**, until **OD-4 and OD-5** are decided by the Human Maintainer.
+- **The value half is routed, not abandoned — and routing is not authorization.**
+  `FR-N-03` assigns the concrete machine-readable Visual Token Source and Value
+  Authoring work to **`CDS-WP-020A`**, which is **`Planned`, not active, and not
+  authorized**. **AUTHOR is not VALIDATE:** an authoring work package never acquires
+  validation or conformance authority because validators read what it wrote, and
+  **CDS-WP-024** never acquires authoring authority because it validates what
+  someone else wrote. Naming the destination creates no source, no value, and no
+  identifier.
 
-### CDS-WP-020 Decision Integration Pass (2026-08-27) — prepared, NOT YET EFFECTIVE
+### CDS-WP-020 Decision Integration Pass (2026-08-27) — EFFECTIVE
 
 Separately authorized by the Human Maintainer on **2026-08-27** after Nova
-adjudicated OD-1 … OD-7. It **prepared in the working tree, and committed nothing**:
+adjudicated OD-1 … OD-7. It **prepared, and committed nothing**; the Human
+Maintainer integrated the reviewed object at `42a568d823de3388e45af62967546f13ad67eff6`:
 
 - **DEC-S-128** — exactly **one** canonical normative visual colour representation:
   the pinned DTCG 2025.10 colour space keyed **`srgb`**, components as that report
@@ -795,11 +840,11 @@ adjudicated OD-1 … OD-7. It **prepared in the working tree, and committed noth
 - **ADR-0004** — architecture rationale for DEC-S-128, DEC-S-130 and DEC-S-131.
   **DEC-S-129 is deliberately not an architecture dependency of it.**
 
-**Effectivity.** All five are **`PROPOSED / AUTHORIZED FOR INTEGRATION` and NOT YET
-EFFECTIVE.** They become effective **only** at the Human-Maintainer exact-byte
-integration commit, after a Fresh Independent Review and Nova integration
-adjudication. Until then the **effective** registers remain **DEC-S-127** and
-**ADR-0003**; the **prepared** object holds **131** decisions and **4** ADRs.
+**Effectivity.** All five are **effective.** They became effective **only** at the
+Human-Maintainer exact-byte integration commit
+`42a568d823de3388e45af62967546f13ad67eff6`, which followed a Fresh Independent
+Review and Nova integration adjudication. The **effective** registers are therefore
+**DEC-S-131** and **ADR-0004**; the register holds **131** decisions and **4** ADRs.
 **A review PASS is not a commit, and a Nova recommendation is not an approval.**
 
 **The pass created no visual value and no identifier**, no token source file,
@@ -809,8 +854,9 @@ claim; and activated **no** work package — **CDS-WP-021 and CDS-WP-022 are not
 activated, and the roadmap is not reordered.** **`RISK-099` was assessed and is not
 required** — the normative OKLCH-to-sRGB accessibility-path conversion architecture
 that would have created the exposure was **rejected** — so the register stays at
-**98** with **no** risk accepted, closed, or re-scored. **CDS-WP-020 remains
-`DECISION_REQUIRED` and is not closed.**
+**98** with **no** risk accepted, closed, or re-scored. **The pass itself did not
+close CDS-WP-020**; closure is recorded separately by the CDS-WP-020 closure and
+routing pass and is effective only at its Human-Maintainer integration commit.
 
 ## Claim and release boundaries
 

@@ -10,9 +10,9 @@
   *The source set is the independently evaluable unit* subsection, under
   **DEC-S-131**
   ([ADR-0004](../decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md)).
-  **That subsection is `PROPOSED / AUTHORIZED FOR INTEGRATION` and NOT YET
-  EFFECTIVE** until the Human-Maintainer exact-byte integration commit; the rest of
-  this model is unchanged and remains in effect.
+  **That subsection is effective** at the Human-Maintainer exact-byte integration
+  commit `42a568d823de3388e45af62967546f13ad67eff6` (2026-08-27); the rest of this
+  model is unchanged and remains in effect.
 
 ## Purpose and authority
 
@@ -110,9 +110,10 @@ applicable) product profile and channel scope. Detail:
 
 *(Normative — **DEC-S-131**,
 [ADR-0004](../decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md),
-CDS-WP-020 Decision Integration Pass, 2026-08-27. **PROPOSED / AUTHORIZED FOR
-INTEGRATION — NOT YET EFFECTIVE** until the Human-Maintainer exact-byte integration
-commit. **No source set, manifest, resolver, or identifier is created.**)*
+CDS-WP-020 Decision Integration Pass, 2026-08-27. **Effective** at the
+Human-Maintainer exact-byte integration commit
+`42a568d823de3388e45af62967546f13ad67eff6`. **No source set, manifest, resolver, or
+identifier is created.**)*
 
 | # | Rule |
 | --- | --- |

@@ -68,10 +68,11 @@ approved.
   transition + 1 phase transition + 4 visual token representation, evaluation
   authority and source identity decisions ·
   **ADRs: 4 (ADR-0001, ADR-0002, ADR-0003, ADR-0004)**
-  - **Effectivity: DEC-S-128 … DEC-S-131 and ADR-0004 are `PROPOSED / AUTHORIZED FOR
-    INTEGRATION` and NOT YET EFFECTIVE.** Until the Human-Maintainer exact-byte
-    integration commit of the CDS-WP-020 Decision Integration Pass the **effective**
-    register is **DEC-S-001 … DEC-S-127 (127)** with **3 ADRs**.
+  - **Effectivity: DEC-S-128 … DEC-S-131 and ADR-0004 are effective**, at the
+    Human-Maintainer exact-byte integration commit
+    `42a568d823de3388e45af62967546f13ad67eff6` of the CDS-WP-020 Decision
+    Integration Pass. The **effective** register is **DEC-S-001 … DEC-S-131 (131)**
+    with **4 ADRs**.
 - Risks: RISK-001 … RISK-098 (98) — **89 Monitored; RISK-031, RISK-040, RISK-044,
   RISK-066, RISK-067, RISK-068, RISK-069, RISK-071, RISK-098 Mitigating**; **owner
   model finalized**; no risk accepted or closed
@@ -87,9 +88,13 @@ approved.
   risk; renamed no phase; registered no capability; and activated no later work
   package. Closure became effective with the Human-Maintainer commit
   `538fbccbf6f554de3b872e9fb75a70d13318feb6`.
-- Current work package: **CDS-WP-020 — Reference and Semantic Token Foundation**,
-  authorized separately by the Human Maintainer on 2026-08-26 and **executed with
-  result `DECISION_REQUIRED`; not closed.** **Contract only:** it defines what a
+- Current work package: **none.** **CDS-WP-020 — Reference and Semantic Token
+  Foundation** was authorized separately by the Human Maintainer on 2026-08-26,
+  **executed with result `DECISION_REQUIRED`**, and **integrated** by the
+  Human-Maintainer commit `42a568d823de3388e45af62967546f13ad67eff6`. It is recorded
+  as **`Completed`**; **closure is recorded in the working object of the CDS-WP-020
+  closure and routing pass and becomes effective only at that object's
+  Human-Maintainer integration commit.** **Contract only:** it defines what a
   visual reference primitive and a visual semantic role are, what each must declare,
   how a role aliases a primitive, and the discipline any future value must satisfy.
   It selects **no value**, creates **no identifier**, and creates no token source
@@ -98,10 +103,21 @@ approved.
   capability; and activated no later work package. Its value and machine-readable
   half is **gated** on **OD-1 … OD-7** — of which **OD-1, OD-2 and OD-3 were
   answered** by the separately authorized **Decision Integration Pass** of
-  2026-08-27 (**DEC-S-128 … DEC-S-131 + ADR-0004, prepared and NOT YET EFFECTIVE**),
-  while **OD-4 … OD-7 stay open** and **VP-3, VP-4 and VP-5 stay unsatisfied**. The **CDS Phase Transition Governance
+  2026-08-27 (**DEC-S-128 … DEC-S-131 + ADR-0004, effective at `42a568d8…`**),
+  while **OD-4 … OD-7 stay open** and **VP-3, VP-4 and VP-5 stay unsatisfied**.
+  **`DECISION_REQUIRED` stands as the executed result**: closure answers no open
+  decision and selects no value. The **CDS Phase Transition Governance
   Package** (**DEC-S-127**) ran between CDS-WP-019 closure and this authorization;
   it is **not** a numbered work package and activated nothing.
+- **`FR-N-03`: RESOLVED BY EXPLICIT AUTHORING-WP DESTINATION.** Nova adjudicated it
+  with Human-Maintainer approval — **Option 2**: **AUTHOR is not VALIDATE**, and the
+  concrete machine-readable Visual Token Source and Value Authoring work must not be
+  absorbed into **CDS-WP-024**. Its destination is **`CDS-WP-020A` — Visual Token
+  Source Authoring and Source Set Realization**, an **inserted** identifier on the
+  `CDS-WP-001A` precedent that renumbered nothing. **`CDS-WP-020A` is `Planned`, not
+  active, and not authorized**; **CDS-WP-024 keeps its validation, render-gate, and
+  conformance boundary unchanged.** **Routing is not repair; registration is not
+  activation; a dependency is not authority.**
 - Closed work package: **CDS-WP-016 — Semantic Status Foundation Independent Evidence
   Review and Candidate Gate.** Its review work was
   **executed** — **Independent Review PASS**, **Candidate Recommendation GO**;
@@ -138,7 +154,8 @@ approved.
 | **CDS-WP-017** | **Closed** — Post-WP-016 Roadmap, Authority and Scope Reconciliation, integrated by the Human-Maintainer commit `df9b8f21ff3bde4607b1c9ff7fdcbe3144366040` (governance/roadmap only; no design, evidence, maturity, claim, or publication effect) |
 | **CDS-WP-018** | **Closed** — Deferred Governance and Repository Hygiene Reconciliation, integrated by the Human-Maintainer commit `e5d5d492619071655ba956713980d1ee261d9213` (documentary current-state, mirror, and hygiene reconciliation only; no phase rename, no capability registration) |
 | **CDS-WP-019** | **Closed** — Core Visual Foundation Architecture (**architecture only; no visual value**; no token source, component, brand, profile, evidence, maturity change, Decision, ADR, risk, phase rename, or capability registration), integrated by the Human-Maintainer commit `538fbccbf6f554de3b872e9fb75a70d13318feb6` |
-| **CDS-WP-020** | **Active — executed, `DECISION_REQUIRED`, not closed.** Reference and Semantic Token Foundation (**contract only; no visual value, no identifier**; no token source, schema, validator rule, test, component, brand, profile, evidence, maturity change, Decision, ADR, risk, phase rename, or capability registration). **`AE1-CDS-WP016-SEMSTATUS-004` was not transferred to it.** |
+| **CDS-WP-020** | **Closed** — executed with result `DECISION_REQUIRED`; Reference and Semantic Token Foundation (**contract only; no visual value, no identifier**; no token source, schema, validator rule, test, component, brand, profile, evidence, maturity change, risk, phase rename, or capability registration), integrated by the Human-Maintainer commit `42a568d823de3388e45af62967546f13ad67eff6`. **Closure is proposed in the closure and routing object and effective at its Human-Maintainer integration commit.** **`AE1-CDS-WP016-SEMSTATUS-004` was not transferred to it.** |
+| **`CDS-WP-020A`** | **PLANNED / NOT ACTIVE / NOT AUTHORIZED** — Visual Token Source Authoring and Source Set Realization; the `FR-N-03` authoring destination; **inserted** identifier, nothing renumbered; owns authoring, never validation or conformance |
 | **CDS-WP-021 … CDS-WP-053** | **PLANNED / NOT ACTIVE / NOT AUTHORIZED** — work not started |
 
 **F-001 lifecycle-metadata resolution (Human Maintainer, 2026-08-19).** The five
@@ -997,15 +1014,20 @@ CDS-WP-019 closure and the CDS-WP-020 authorization. It changed the project-phas
 label and nothing else: no maturity, no evidence, no visual value, no capability, no
 Product Profile, no pilot, no release, and no activation.
 
-**CDS-WP-020 — Reference and Semantic Token Foundation is the current authorized
-work package**, authorized separately by the Human Maintainer on 2026-08-26 and
-**executed with result `DECISION_REQUIRED`; not closed** — see
+**CDS-WP-020 — Reference and Semantic Token Foundation is `Completed`**: authorized
+separately by the Human Maintainer on 2026-08-26, **executed with result
+`DECISION_REQUIRED`**, and **integrated** by the Human-Maintainer commit
+`42a568d823de3388e45af62967546f13ad67eff6` — see
 [Reference and Semantic Token Foundation (CDS-WP-020)](#reference-and-semantic-token-foundation-cds-wp-020)
-below.
+below. **Its closure is recorded in the working object of the closure and routing
+pass and becomes effective only at that object's Human-Maintainer integration
+commit.** **No work package is currently authorized.**
 
-**The next planned work package is CDS-WP-021 — Adaptive Layout and Responsive
-Foundation**, and it **remains inactive until separately authorized by the Human
-Maintainer**. Any further step begins only on an explicit Nova prompt and
+**The next planned work packages are `CDS-WP-020A` — Visual Token Source Authoring
+and Source Set Realization** (the `FR-N-03` authoring destination) **and CDS-WP-021 —
+Adaptive Layout and Responsive Foundation**. Both **remain inactive until separately
+authorized by the Human Maintainer**, and **the order between them is not decided**
+— **OD-7 is open**. Any further step begins only on an explicit Nova prompt and
 Human-Maintainer authorization.
 
 ## Core Visual Foundation Architecture (CDS-WP-019)
@@ -1164,11 +1186,15 @@ comparison; APCA and other methods informational only), **DEC-S-130** (an explic
 minimal, closed `$type` admission profile — `color`, `dimension`, `number`;
 explicit own typing; no composites; **`profileVersion` stays `1`**), **DEC-S-131**
 (the **Source Set** as the independently evaluable unit; **AGGREGATED is not
-MATURE**) and **ADR-0004**. **All five are `PROPOSED / AUTHORIZED FOR INTEGRATION`
-and NOT YET EFFECTIVE.** They answer **OD-1, OD-2 and OD-3** and **select no
+MATURE**) and **ADR-0004**. **All five are effective**, at the Human-Maintainer
+integration commit `42a568d8…`. They answer **OD-1, OD-2 and OD-3** and **select no
 value**; **OD-4 … OD-7 stay open**, **VP-3, VP-4 and VP-5 stay unsatisfied**, **a
-new risk entry is still not recommended and `RISK-099` is not required**, and
-**CDS-WP-020 stays `DECISION_REQUIRED` and not closed**.
+new risk entry is still not recommended and `RISK-099` is not required**, and the
+value half stays gated. *(The pass itself did not close CDS-WP-020; its
+effectivity qualification was not reconciled by the closure and routing pass, and
+has since been reconciled by the separately authorized post-integration
+effectiveness reconciliation — see `F-020C-01` in the
+[Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).)*
 
 ### What it did not do
 
@@ -1180,8 +1206,8 @@ brand, identity, or Product Profile; produced and admitted **no** evidence; chan
 Register stays at **98**, and **`RISK-099` is not required**. *(At the original
 milestone it also registered no Decision and no ADR, with the registers at **127**
 and the ADR range at **ADR-0001 … ADR-0003**; the separately authorized 2026-08-27
-Decision Integration Pass prepared **DEC-S-128 … DEC-S-131** and **ADR-0004**, which
-are **not yet effective**.)* It **renamed no phase**; registered **no** capability; made
+Decision Integration Pass registered **DEC-S-128 … DEC-S-131** and **ADR-0004**,
+which are **effective at `42a568d8…`**.)* It **renamed no phase**; registered **no** capability; made
 **no** claim; and activated **no** later work package. It touched **no** Semantic
 Status source, revision, maturity, approval, or evidence package, and
 **`AE1-CDS-WP016-SEMSTATUS-004` was not transferred to anything**. **CR-004's
@@ -1217,6 +1243,7 @@ and no fixture rewritten.**
 - [CDS-WP-017 Post-WP-016 Roadmap Reconciliation Notes](CDS_WP_017_POST_WP016_ROADMAP_RECONCILIATION_NOTES.md)
 - [CDS-WP-018 Deferred Governance Hygiene Notes](CDS_WP_018_DEFERRED_GOVERNANCE_HYGIENE_NOTES.md)
 - [CDS-WP-019 Core Visual Foundation Architecture Notes](CDS_WP_019_CORE_VISUAL_FOUNDATION_ARCHITECTURE_NOTES.md)
+- [CDS-WP-020 Closure and Authoring Routing Notes](CDS_WP_020_CLOSURE_AND_AUTHORING_ROUTING_NOTES.md)
 - [CDS-WP-020 Reference and Semantic Token Foundation Notes](CDS_WP_020_REFERENCE_AND_SEMANTIC_TOKEN_FOUNDATION_NOTES.md)
 - [Visual Foundation Architecture](../docs/architecture/VISUAL_FOUNDATION_ARCHITECTURE.md) — CDS-WP-019 entry point
 - [Visual Reference Token Foundation](../docs/architecture/VISUAL_REFERENCE_TOKEN_FOUNDATION.md) · [Visual Semantic Token Foundation](../docs/architecture/VISUAL_SEMANTIC_TOKEN_FOUNDATION.md) — CDS-WP-020 entry points
@@ -1228,4 +1255,4 @@ and no fixture rewritten.**
 - [ADR-0001 — Machine-Readable Token Source Format](../docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)
 - [ADR-0002 — Deterministic JSON Serialization](../docs/decisions/ADR-0002-DETERMINISTIC_JSON_SERIALIZATION.md)
 - [ADR-0003 — Offline Token Validator Implementation Stack](../docs/decisions/ADR-0003-OFFLINE_TOKEN_VALIDATOR_IMPLEMENTATION_STACK.md)
-- [ADR-0004 — Visual Token Representation and Source Identity Architecture](../docs/decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md) — **prepared, not yet effective**
+- [ADR-0004 — Visual Token Representation and Source Identity Architecture](../docs/decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md) — **`Accepted`, effective at commit `42a568d8…`**

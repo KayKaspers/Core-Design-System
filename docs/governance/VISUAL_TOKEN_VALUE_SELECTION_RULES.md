@@ -6,9 +6,9 @@
 - **Amended by:** CDS-WP-020 (Decision Integration Pass), 2026-08-27 — the
   prerequisite-state subsection under VP-1 … VP-7, and the **VE-1** evaluation
   authority, to apply **DEC-S-128**, **DEC-S-129**, **DEC-S-130** and
-  **DEC-S-131**. **Those amendments are `PROPOSED / AUTHORIZED FOR INTEGRATION` and
-  NOT YET EFFECTIVE** until the Human-Maintainer exact-byte integration commit.
-  **No threshold is restated or invented, no value is selected, and VP-1 … VP-7,
+  **DEC-S-131**. **Those amendments are effective** at the Human-Maintainer
+  exact-byte integration commit `42a568d823de3388e45af62967546f13ad67eff6`
+  (2026-08-27). **No threshold is restated or invented, no value is selected, and VP-1 … VP-7,
   VE-1 … VE-12, IG-1 … IG-10, VD-1 … VD-8, VA-1 … VA-10 and VS-1 … VS-6 are
   otherwise unchanged.**
 - **Artifact class:** **1 — Normative human-readable source** (DEC-S-022)
@@ -76,8 +76,8 @@ family.** A value proposed while any of them is open is a premature decision and
 
 ### Prerequisite state after the 2026-08-27 Decision Integration Pass
 
-*(**PROPOSED / AUTHORIZED FOR INTEGRATION — NOT YET EFFECTIVE** until the
-Human-Maintainer exact-byte integration commit)*
+*(**Effective** at the Human-Maintainer exact-byte integration commit
+`42a568d823de3388e45af62967546f13ad67eff6`)*
 
 | Prerequisite | State | Basis |
 | --- | --- | --- |
@@ -127,8 +127,8 @@ The obligation is whatever the cited WCAG criterion itself requires. **CDS
 restates no normative criterion text and invents no additional threshold**
 (Accessibility Requirements Baseline).
 
-**Evaluation authority** *(**DEC-S-129**, 2026-08-27 — **PROPOSED / AUTHORIZED FOR
-INTEGRATION, NOT YET EFFECTIVE**)*: the baseline is **WCAG 2.2** — not `WCAG 2.x`,
+**Evaluation authority** *(**DEC-S-129**, 2026-08-27 — **effective** at commit
+`42a568d823de3388e45af62967546f13ad67eff6`)*: the baseline is **WCAG 2.2** — not `WCAG 2.x`,
 not `latest` — and the method is the contrast-ratio method those criteria
 themselves require. **Pass and fail are compared at full available precision, with
 no rounding before comparison**; presentation rounding is a formatting artifact and

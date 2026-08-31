@@ -13,13 +13,16 @@ authorized work packages.
 
 - Decision range: DEC-S-001 … DEC-S-131
 - Number of decisions: 131
-- **Effectivity qualification.** **DEC-S-128 … DEC-S-131 are prepared and
-  authorized for integration but are NOT YET EFFECTIVE.** Until the
-  Human-Maintainer exact-byte integration commit of the CDS-WP-020 Decision
-  Integration Pass, the **effective** register is **DEC-S-001 … DEC-S-127 (127
-  decisions)** and the **effective** ADR range is **ADR-0001 … ADR-0003 (3 ADRs)**.
-  The counts above are the maintained forward carrier for the prepared object; each
-  of the four entries states its own effectivity.
+- **Effectivity.** **DEC-S-128 … DEC-S-131 are effective.** The condition their
+  entries stated — the Human-Maintainer exact-byte integration commit of the
+  CDS-WP-020 Decision Integration Pass, following a Fresh Independent Review and
+  Nova integration adjudication — occurred on 2026-08-27 at commit
+  `42a568d823de3388e45af62967546f13ad67eff6`, which integrated the reviewed object.
+  The **effective** register is therefore **DEC-S-001 … DEC-S-131 (131 decisions)**
+  and the **effective** ADR range is **ADR-0001 … ADR-0004 (4 ADRs)**. **No
+  decision beyond DEC-S-131 exists.** This section is the maintained current
+  carrier; a statement inside an individual decision entry is point-in-time and is
+  not edited when a later event occurs.
 - Decision record format: index entries, plus ADR files where a decision warrants an
   Architecture Decision Record. **ADR range: ADR-0001 … ADR-0004 (4 ADRs).**
 - [ADR-0001 — Machine-Readable Token Source Format](ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)
@@ -29,9 +32,10 @@ authorized work packages.
 - [ADR-0003 — Offline Token Validator Implementation Stack](ADR-0003-OFFLINE_TOKEN_VALIDATOR_IMPLEMENTATION_STACK.md)
   (accepted upon Human-Maintainer commit following Nova approval).
 - [ADR-0004 — Visual Token Representation and Source Identity Architecture](ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md)
-  — **PROPOSED / AUTHORIZED FOR INTEGRATION, not yet effective and not yet
-  accepted.** It records the rationale for DEC-S-128, DEC-S-130 and DEC-S-131, and
-  **DEC-S-129 is deliberately not an architecture dependency of it.**
+  (accepted upon the Human-Maintainer integration commit
+  `42a568d823de3388e45af62967546f13ad67eff6` following Nova approval). It records
+  the rationale for DEC-S-128, DEC-S-130 and DEC-S-131, and **DEC-S-129 is
+  deliberately not an architecture dependency of it.**
 
 ## Decision types
 
@@ -53,7 +57,7 @@ authorized work packages.
 | Accessibility / maturity / channel boundary decision | DEC-S-125 | CDS-WP-016 | Channel Accessibility Profiles gate channel artifacts, not channel-independent Layer-3 semantic sources and contracts; evidence transfers in neither direction; no waiver of any accessibility requirement and no Candidate award. |
 | Candidate finalization / maturity / evidence transition decision | DEC-S-126 | CDS-WP-016 | A named non-authoritative Proposed Candidate Revision, target metadata that grants nothing, revision-bound evidence that never transfers, exact-byte pre-commit evidence binding, the fixed admission-before-approval authority order, and the Promotion Commit as the actual maturity transition point. |
 | Phase transition decision | DEC-S-127 | — (CDS Phase Transition Governance Package) | The phase established by DEC-S-062 completed its operating purpose; for current and future state the project phase is `Post-Candidate Foundation & Design-System Enablement`. Prospective, partial supersession of the phase designation only — no maturity, no evidence, no activation, and no authority is granted. |
-| Visual token representation, evaluation authority and source identity decision | DEC-S-128 … DEC-S-131 | CDS-WP-020 (Decision Integration Pass) | One canonical `srgb` colour representation with perceptual spaces admitted as derivation only; WCAG 2.2 as the contrast evaluation authority with full-precision comparison and additional methods informational only; an explicit, minimal, closed CDS `$type` admission profile with explicit own typing; and the Source Set as the independently evaluable unit to which maturity binds, with aggregation conferring nothing (ADR-0004 for DEC-S-128, DEC-S-130, DEC-S-131). **Prepared and authorized for integration; NOT YET EFFECTIVE.** They select **no** value, create **no** identifier, and grant **no** maturity. |
+| Visual token representation, evaluation authority and source identity decision | DEC-S-128 … DEC-S-131 | CDS-WP-020 (Decision Integration Pass) | One canonical `srgb` colour representation with perceptual spaces admitted as derivation only; WCAG 2.2 as the contrast evaluation authority with full-precision comparison and additional methods informational only; an explicit, minimal, closed CDS `$type` admission profile with explicit own typing; and the Source Set as the independently evaluable unit to which maturity binds, with aggregation conferring nothing (ADR-0004 for DEC-S-128, DEC-S-130, DEC-S-131). **Effective at the Human-Maintainer integration commit `42a568d823de3388e45af62967546f13ad67eff6`.** They select **no** value, create **no** identifier, and grant **no** maturity. |
 
 None of these types is an implementation decision. Logical architecture decisions
 define structure, responsibility, and flow — they select no technology, format,
@@ -4477,13 +4481,12 @@ as admitted; VF-1 … VF-9 stay `Proposed`; publication stays
 
 ## DEC-S-128 — CDS authors visual colour in exactly one canonical sRGB representation
 
-- **Status:** **PROPOSED / AUTHORIZED FOR INTEGRATION — NOT YET EFFECTIVE.** This
-  entry is uncommitted executor output prepared under an explicit Human-Maintainer
-  authorization. It becomes `Accepted` and normative **only** at the
-  Human-Maintainer exact-byte integration commit of the CDS-WP-020 Decision
-  Integration Pass, following a Fresh Independent Review and Nova integration
-  adjudication. Until that commit it changes **no** authoritative CDS state, and no
-  earlier wording confers effectivity.
+- **Status:** Accepted — **effective at the Human-Maintainer exact-byte integration
+  commit `42a568d823de3388e45af62967546f13ad67eff6`** of the CDS-WP-020 Decision
+  Integration Pass, which followed a Fresh Independent Review and Nova integration
+  adjudication. Before that commit this entry was uncommitted executor output
+  prepared under an explicit Human-Maintainer authorization and changed **no**
+  authoritative CDS state; no earlier wording conferred effectivity.
 - **Date:** 2026-08-27
 - **Type:** Visual token representation, evaluation authority and source identity
   decision
@@ -4641,12 +4644,12 @@ and no publication authority, and it activates no work package.
 
 ## DEC-S-129 — WCAG 2.2 is the contrast evaluation authority; additional methods are informational only
 
-- **Status:** **PROPOSED / AUTHORIZED FOR INTEGRATION — NOT YET EFFECTIVE.** This
-  entry is uncommitted executor output prepared under an explicit Human-Maintainer
-  authorization. It becomes `Accepted` and normative **only** at the
-  Human-Maintainer exact-byte integration commit of the CDS-WP-020 Decision
-  Integration Pass, following a Fresh Independent Review and Nova integration
-  adjudication. Until that commit it changes **no** authoritative CDS state.
+- **Status:** Accepted — **effective at the Human-Maintainer exact-byte integration
+  commit `42a568d823de3388e45af62967546f13ad67eff6`** of the CDS-WP-020 Decision
+  Integration Pass, which followed a Fresh Independent Review and Nova integration
+  adjudication. Before that commit this entry was uncommitted executor output
+  prepared under an explicit Human-Maintainer authorization and changed **no**
+  authoritative CDS state.
 - **Date:** 2026-08-27
 - **Type:** Visual token representation, evaluation authority and source identity
   decision
@@ -4760,12 +4763,12 @@ no work package.
 
 ## DEC-S-130 — The CDS profile admits an explicit, minimal, closed visual token type set
 
-- **Status:** **PROPOSED / AUTHORIZED FOR INTEGRATION — NOT YET EFFECTIVE.** This
-  entry is uncommitted executor output prepared under an explicit Human-Maintainer
-  authorization. It becomes `Accepted` and normative **only** at the
-  Human-Maintainer exact-byte integration commit of the CDS-WP-020 Decision
-  Integration Pass, following a Fresh Independent Review and Nova integration
-  adjudication. Until that commit it changes **no** authoritative CDS state.
+- **Status:** Accepted — **effective at the Human-Maintainer exact-byte integration
+  commit `42a568d823de3388e45af62967546f13ad67eff6`** of the CDS-WP-020 Decision
+  Integration Pass, which followed a Fresh Independent Review and Nova integration
+  adjudication. Before that commit this entry was uncommitted executor output
+  prepared under an explicit Human-Maintainer authorization and changed **no**
+  authoritative CDS state.
 - **Date:** 2026-08-27
 - **Type:** Visual token representation, evaluation authority and source identity
   decision
@@ -4920,12 +4923,12 @@ authority, and it activates no work package.
 
 ## DEC-S-131 — The Source Set is the independently evaluable unit; aggregation confers no maturity
 
-- **Status:** **PROPOSED / AUTHORIZED FOR INTEGRATION — NOT YET EFFECTIVE.** This
-  entry is uncommitted executor output prepared under an explicit Human-Maintainer
-  authorization. It becomes `Accepted` and normative **only** at the
-  Human-Maintainer exact-byte integration commit of the CDS-WP-020 Decision
-  Integration Pass, following a Fresh Independent Review and Nova integration
-  adjudication. Until that commit it changes **no** authoritative CDS state.
+- **Status:** Accepted — **effective at the Human-Maintainer exact-byte integration
+  commit `42a568d823de3388e45af62967546f13ad67eff6`** of the CDS-WP-020 Decision
+  Integration Pass, which followed a Fresh Independent Review and Nova integration
+  adjudication. Before that commit this entry was uncommitted executor output
+  prepared under an explicit Human-Maintainer authorization and changed **no**
+  authoritative CDS state.
 - **Date:** 2026-08-27
 - **Type:** Visual token representation, evaluation authority and source identity
   decision

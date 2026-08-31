@@ -5,9 +5,9 @@
 - **Date:** 2026-08-26
 - **Amended by:** CDS-WP-020 (Decision Integration Pass), 2026-08-27 — the
   *Where maturity binds, and what aggregation confers* subsection, under
-  **DEC-S-131**. **That subsection is `PROPOSED / AUTHORIZED FOR INTEGRATION` and
-  NOT YET EFFECTIVE** until the Human-Maintainer exact-byte integration commit. It
-  **applies** AF-1 … AF-5 and adds **no** maturity rule, gate, or evidence
+  **DEC-S-131**. **That subsection is effective** at the Human-Maintainer
+  exact-byte integration commit `42a568d823de3388e45af62967546f13ad67eff6`
+  (2026-08-27). It **applies** AF-1 … AF-5 and adds **no** maturity rule, gate, or evidence
   requirement; AF-1 … AF-5 and VR-1 … VR-5 are unchanged.
 - **Artifact class:** **1 — Normative human-readable source** (DEC-S-022)
 - **Status:** **Normative for how visual foundation artifacts are owned, changed,
@@ -65,9 +65,9 @@ with its own maturity, evidence, gate, and compatibility statement.
 
 *(Normative — **DEC-S-131**,
 [ADR-0004](../decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md),
-CDS-WP-020 Decision Integration Pass, 2026-08-27. **PROPOSED / AUTHORIZED FOR
-INTEGRATION — NOT YET EFFECTIVE** until the Human-Maintainer exact-byte integration
-commit. It applies AF-1 … AF-5 and **adds no new maturity rule, gate, or evidence
+CDS-WP-020 Decision Integration Pass, 2026-08-27. **Effective** at the
+Human-Maintainer exact-byte integration commit
+`42a568d823de3388e45af62967546f13ad67eff6`. It applies AF-1 … AF-5 and **adds no new maturity rule, gate, or evidence
 requirement**.)*
 
 - **The Source Set is the independently evaluable unit**, and the visual topology

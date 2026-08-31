@@ -5,9 +5,9 @@
 - **Date:** 2026-08-26
 - **Amended by:** CDS-WP-020 (Decision Integration Pass), 2026-08-27 — the
   *Colour space and encoding* and *Contrast evaluation authority* sections, under
-  **DEC-S-128** and **DEC-S-129**. **Both are `PROPOSED / AUTHORIZED FOR
-  INTEGRATION` and NOT YET EFFECTIVE** until the Human-Maintainer exact-byte
-  integration commit; the rest of this document is unchanged. **No colour value is
+  **DEC-S-128** and **DEC-S-129**. **Both are effective** at the Human-Maintainer
+  exact-byte integration commit `42a568d823de3388e45af62967546f13ad67eff6`
+  (2026-08-27); the rest of this document is unchanged. **No colour value is
   selected.**
 - **Artifact class:** **1 — Normative human-readable source** (DEC-S-022)
 - **Status:** **Normative for the structure of CDS colour.** It defines the colour
@@ -188,8 +188,8 @@ Constraints any later data-visualization work inherits:
 ## Colour space and encoding
 
 *(Normative — **DEC-S-128**, ADR-0004, CDS-WP-020 Decision Integration Pass,
-2026-08-27. **PROPOSED / AUTHORIZED FOR INTEGRATION — NOT YET EFFECTIVE** until the
-Human-Maintainer exact-byte integration commit. **It selects no colour value.**)*
+2026-08-27. **Effective** at the Human-Maintainer exact-byte integration commit
+`42a568d823de3388e45af62967546f13ad67eff6`. **It selects no colour value.**)*
 
 The CDS Token Format Profile pins **DTCG 2025.10** and uses the Color Module's
 structure **as defined**. The colour space is **no longer open**:
@@ -225,8 +225,9 @@ representation is not a value.**
 ## Contrast evaluation authority
 
 *(Normative — **DEC-S-129**, CDS-WP-020 Decision Integration Pass, 2026-08-27.
-**PROPOSED / AUTHORIZED FOR INTEGRATION — NOT YET EFFECTIVE.** **No threshold is
-restated or invented, and no contrast is evaluated.**)*
+**Effective** at the Human-Maintainer exact-byte integration commit
+`42a568d823de3388e45af62967546f13ad67eff6`. **No threshold is restated or
+invented, and no contrast is evaluated.**)*
 
 | # | Rule |
 | --- | --- |

@@ -1,11 +1,11 @@
 # ADR-0004 — Visual Token Representation and Source Identity Architecture
 
-- **Status:** **PROPOSED / AUTHORIZED FOR INTEGRATION — NOT YET EFFECTIVE.** This
-  ADR is uncommitted executor output prepared under an explicit Human-Maintainer
-  authorization. It becomes **Accepted** only at the Human-Maintainer exact-byte
-  integration commit that follows a Fresh Independent Review and Nova integration
-  adjudication. Until that commit it confers **no** acceptance, and no earlier
-  wording confers it.
+- **Status:** **Accepted upon Human-Maintainer commit following Nova approval** —
+  accepted at the exact-byte integration commit
+  `42a568d823de3388e45af62967546f13ad67eff6` (2026-08-27), which followed a Fresh
+  Independent Review and Nova integration adjudication. Before that commit this ADR
+  was uncommitted executor output prepared under an explicit Human-Maintainer
+  authorization and conferred **no** acceptance; no earlier wording conferred it.
 - **Date:** 2026-08-27
 - **Project:** Core Design System (CDS)
 - **Registered by:** CDS-WP-020 — Reference and Semantic Token Foundation
@@ -369,8 +369,7 @@ evidence** (DEC-S-053).
 ## Authority boundary
 
 This ADR **records** architecture rationale. It grants **no** authority beyond
-DEC-S-128, DEC-S-130 and DEC-S-131, and it is **not yet effective** — see *Status*
-above.
+DEC-S-128, DEC-S-130 and DEC-S-131 — see *Status* above.
 
 It awards **no** maturity, **no** Candidate, **no** Stable, **no** evidence, **no**
 admission, **no** claim, **no** conformance, **no** capability registration, **no**

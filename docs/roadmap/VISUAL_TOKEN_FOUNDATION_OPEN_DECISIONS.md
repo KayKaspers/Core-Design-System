@@ -7,8 +7,8 @@
   OD-3 are answered by DEC-S-128, DEC-S-130 and DEC-S-131** (with
   [ADR-0004](../decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md)),
   and a fourth decision — **DEC-S-129**, the contrast evaluation authority — was
-  taken alongside them. **All four are `PROPOSED / AUTHORIZED FOR INTEGRATION` and
-  NOT YET EFFECTIVE** until the Human-Maintainer exact-byte integration commit.
+  taken alongside them. **All four are effective** at the Human-Maintainer
+  exact-byte integration commit `42a568d823de3388e45af62967546f13ad67eff6`.
   **OD-4, OD-5, OD-6 and OD-7 remain open**, and three residual items are recorded
   under the answered entries.
 - **Artifact class:** **8 — Example / planning artifact. NON-NORMATIVE.**
@@ -91,7 +91,7 @@ dependency of ADR-0004.
 
 ### OD-1 — Colour space and encoding for CDS colour reference tokens
 
-> **ANSWERED by DEC-S-128 (2026-08-27), not yet effective.** The recommendation
+> **ANSWERED by DEC-S-128 (2026-08-27), effective.** The recommendation
 > below — option **(a)** combined with **(d)** — was adopted: the pinned DTCG
 > 2025.10 colour space keyed **`srgb`** is the single canonical normative authored
 > representation, every other representation is a class-3 generated output, and a
@@ -158,7 +158,7 @@ accessibility obligations.
 
 ### OD-2 — The admitted DTCG `$type` set for the visual families
 
-> **ANSWERED by DEC-S-130 (2026-08-27), not yet effective.** The recommendation
+> **ANSWERED by DEC-S-130 (2026-08-27), effective.** The recommendation
 > below — option **(b)** — was adopted: the admitted set is exactly **`color`**,
 > **`dimension`** and **`number`**, each verified directly against the **Format
 > Module 2025.10 Final Community Group Report**; **no composite type is admitted**;
@@ -217,7 +217,7 @@ would decide the granularity question by implication.
 
 ### OD-3 — Visual source-set identity, granularity, and file topology
 
-> **ANSWERED by DEC-S-131 (2026-08-27), not yet effective**, for the **unit, the
+> **ANSWERED by DEC-S-131 (2026-08-27), effective**, for the **unit, the
 > topology and the maturity granularity.** The recommendation below — option
 > **(b)** — was adopted in substance: **one source set per independently evaluable
 > Family × Token-Flow-Layer unit**, each carrying its own `sourceSetId`,
@@ -483,17 +483,17 @@ these**, and this section authorizes nothing.)*
 
 | Instrument | Recommendation | Disposition — 2026-08-27 |
 | --- | --- | --- |
-| **A Decision block** covering OD-1 … OD-7 | **Recommended.** Each of the five work packages that made comparable first-of-their-kind normative choices registered one: **CDS-WP-011** (DEC-S-073 … DEC-S-082), **CDS-WP-012** (DEC-S-083 … DEC-S-092), **CDS-WP-013** (DEC-S-093 … DEC-S-104), **CDS-WP-014** (DEC-S-105 … DEC-S-114), and **CDS-WP-015** (DEC-S-115 … DEC-S-124) — see the *Decision types* table of the Decision Index. **CDS-WP-019 registered none, correctly, because it made no new normative choice.** Numbering would begin at **DEC-S-128**; the register held **127**. | **PREPARED, under explicit Human-Maintainer authorization** — but **four** entries, not seven: **DEC-S-128** (colour representation), **DEC-S-129** (contrast evaluation authority — an item this register had **not** raised), **DEC-S-130** (`$type` admission) and **DEC-S-131** (source-set unit and maturity granularity). **OD-4 … OD-7 were deliberately not decided.** The prepared register holds **131**; the **effective** register holds **127** until the Human-Maintainer exact-byte integration commit. |
-| **One ADR** covering the profile-facing choices — OD-1, OD-2, and OD-3 | **Recommended**, numbered **ADR-0004**. These are the same class as ADR-0001 (source format), ADR-0002 (serialization), and ADR-0003 (validator stack): each changes what the machine-readable profile admits and what the validator enforces. | **PREPARED** as [ADR-0004](../decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md), covering **DEC-S-128, DEC-S-130 and DEC-S-131**. **DEC-S-129 is deliberately not an architecture dependency of it.** The prepared ADR range is **ADR-0001 … ADR-0004**; the **effective** range stays **ADR-0001 … ADR-0003** until integration. |
+| **A Decision block** covering OD-1 … OD-7 | **Recommended.** Each of the five work packages that made comparable first-of-their-kind normative choices registered one: **CDS-WP-011** (DEC-S-073 … DEC-S-082), **CDS-WP-012** (DEC-S-083 … DEC-S-092), **CDS-WP-013** (DEC-S-093 … DEC-S-104), **CDS-WP-014** (DEC-S-105 … DEC-S-114), and **CDS-WP-015** (DEC-S-115 … DEC-S-124) — see the *Decision types* table of the Decision Index. **CDS-WP-019 registered none, correctly, because it made no new normative choice.** Numbering would begin at **DEC-S-128**; the register held **127**. | **PREPARED, under explicit Human-Maintainer authorization** — but **four** entries, not seven: **DEC-S-128** (colour representation), **DEC-S-129** (contrast evaluation authority — an item this register had **not** raised), **DEC-S-130** (`$type` admission) and **DEC-S-131** (source-set unit and maturity granularity). **OD-4 … OD-7 were deliberately not decided.** The prepared register held **131** against an effective **127**; that commit — `42a568d823de3388e45af62967546f13ad67eff6` — has since occurred, and the **effective** register holds **131**. |
+| **One ADR** covering the profile-facing choices — OD-1, OD-2, and OD-3 | **Recommended**, numbered **ADR-0004**. These are the same class as ADR-0001 (source format), ADR-0002 (serialization), and ADR-0003 (validator stack): each changes what the machine-readable profile admits and what the validator enforces. | **PREPARED** as [ADR-0004](../decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md), covering **DEC-S-128, DEC-S-130 and DEC-S-131**. **DEC-S-129 is deliberately not an architecture dependency of it.** The prepared ADR range was **ADR-0001 … ADR-0004** against an effective **ADR-0001 … ADR-0003**; since the integration commit `42a568d823de3388e45af62967546f13ad67eff6` the **effective** range is **ADR-0001 … ADR-0004**. |
 | **A new risk entry** | **Not recommended.** The risk surface of CDS-WP-020 as executed is already carried by **RISK-003**, **RISK-021**, **RISK-026**, **RISK-029**, **RISK-031**, **RISK-040**, **RISK-061**, **RISK-074**, **RISK-087**, and **RISK-091**. Registering a duplicate would add ceremony that produces no decision — which RISK-040 exists to prevent. | **NOT CREATED**, and the recommendation is upheld. **`RISK-099` was explicitly assessed and is not required**: the normative OKLCH-to-sRGB accessibility-path conversion architecture that would have created a new exposure was **rejected** by DEC-S-128, so the exposure does not arise. The register stays at **98**, and **no risk was accepted, closed, or re-scored**. |
 
 **No instrument above was created by Claude on its own authority.** Each was
 prepared only under an explicit, separate Human-Maintainer authorization, and **a
 Decision Index entry is a Human-Maintainer instrument**: the four Decisions and
-ADR-0004 are **`PROPOSED / AUTHORIZED FOR INTEGRATION`** and become effective only
-at the Human-Maintainer exact-byte integration commit, after a Fresh Independent
-Review and Nova integration adjudication. **A review PASS is not a commit, and a
-Nova recommendation is not an approval.**
+ADR-0004 became effective only at the Human-Maintainer exact-byte integration
+commit `42a568d823de3388e45af62967546f13ad67eff6`, which followed a Fresh
+Independent Review and Nova integration adjudication. **A review PASS is not a
+commit, and a Nova recommendation is not an approval.**
 
 ## Related documents
 

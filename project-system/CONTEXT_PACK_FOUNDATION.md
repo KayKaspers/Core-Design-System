@@ -79,10 +79,15 @@ closed by `e5d5d492619071655ba956713980d1ee261d9213`.
 
 **CDS-WP-019 is `Completed`**, closed by
 `538fbccbf6f554de3b872e9fb75a70d13318feb6`. **CDS-WP-020 — Reference and Semantic
-Token Foundation is the current authorized work package**, authorized separately on
-2026-08-26 and **executed with result `DECISION_REQUIRED`; not closed**. The **CDS
-Phase Transition Governance Package** (**DEC-S-127**) ran between them; it changed
-project-phase authority only and activated nothing.
+Token Foundation is `Completed`**: authorized separately on 2026-08-26, **executed
+with result `DECISION_REQUIRED`**, and **integrated** by the Human-Maintainer commit
+`42a568d823de3388e45af62967546f13ad67eff6`. **Its closure is recorded in the working
+object of the CDS-WP-020 closure and routing pass and becomes effective only at that
+object's Human-Maintainer integration commit** — an uncommitted edit changes no
+repository history. **No work package is currently authorized.** The **CDS
+Phase Transition Governance Package** (**DEC-S-127**) ran between CDS-WP-019 closure
+and the CDS-WP-020 authorization; it changed project-phase authority only and
+activated nothing.
 
 CDS-WP-019 was **architecture only.** It defines how the visual foundation is
 structured, governed, represented, extended, validated, and consumed — nine visual
@@ -116,15 +121,28 @@ A separately authorized **Decision Integration Pass** (2026-08-27) **prepared**
 comparison; APCA informational only), **DEC-S-130** (an explicit, minimal, closed
 `$type` admission profile — `color`, `dimension`, `number`; **`profileVersion` stays
 `1`**), **DEC-S-131** (the **Source Set** as the independently evaluable unit;
-**AGGREGATED is not MATURE**) and **ADR-0004**. **All five are
-`PROPOSED / AUTHORIZED FOR INTEGRATION` and NOT YET EFFECTIVE**, they select **no**
-value and create **no** identifier, and they answer **OD-1, OD-2 and OD-3** only —
-**OD-4 … OD-7 stay open**, **VP-3, VP-4 and VP-5 stay unsatisfied**, and
-**CDS-WP-020 stays `DECISION_REQUIRED` and not closed**. **`RISK-099` is not
-required**; the Risk Register stays at **98**.
+**AGGREGATED is not MATURE**) and **ADR-0004**. **All five are effective** at the
+Human-Maintainer integration commit `42a568d8…`, they select **no** value and
+create **no** identifier, and they answer **OD-1, OD-2 and OD-3** only —
+**OD-4 … OD-7 stay open** and **VP-3, VP-4 and VP-5 stay unsatisfied**, so the
+value half stays gated. **`RISK-099` is not required**; the Risk Register stays at
+**98**. *(The effectivity qualification of those five instruments was not
+reconciled by the closure and routing pass; the separately authorized
+post-integration effectiveness reconciliation has since done so — see `F-020C-01`
+in the roadmap. The decision register holds **131** entries and the ADR range
+**4**.)*
 
-**CDS-WP-021 … CDS-WP-053 are `Planned`, not active, and not authorized**; the
-single active forward roadmap is the
+**`FR-N-03` is RESOLVED BY EXPLICIT AUTHORING-WP DESTINATION.** Nova adjudicated it
+with Human-Maintainer approval — **Option 2**: **AUTHOR is not VALIDATE.** The
+concrete machine-readable Visual Token Source and Value Authoring work is routed to
+**`CDS-WP-020A` — Visual Token Source Authoring and Source Set Realization**, an
+**inserted** identifier on the `CDS-WP-001A` precedent that renumbered nothing.
+**CDS-WP-024 keeps its validation, render-gate, and conformance boundary
+unchanged**, and gains no authoring authority; `CDS-WP-020A` gains no validation or
+conformance authority.
+
+**`CDS-WP-020A` and CDS-WP-021 … CDS-WP-053 are `Planned`, not active, and not
+authorized**; the single active forward roadmap is the
 [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
 
 ## Completed work packages
@@ -151,7 +169,7 @@ single active forward roadmap is the
 | CDS-WP-017 | Post-WP-016 Roadmap, Authority and Scope Reconciliation | Governance, roadmap, context, and project-state reconciliation only. Recorded CDS-WP-016 as closed; registered **CDS-WP-018 … CDS-WP-053** as `Planned`, not active, not authorized; produced the single active [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md) (12 arcs, M1…M12, layer mapping, standing gates, requirement classification, PB001 disposition, deferred-finding routing). Closed by commit `df9b8f21…`. **No design, evidence, maturity, risk, ADR, Decision, claim, profile, pilot, release, or publication effect.** |
 | CDS-WP-018 | Deferred Governance and Repository Hygiene Reconciliation | Bounded documentary pass. Reconciled stale `pending commit` and mirror text (`NF-R4-OBS-001`, `NF-R3-OBS-001`, `NF-R5R-OBS-001`, `R3R-003`); corrected the already-decided *intentionally open decision areas* lists (`F-017-01`, `F-017-02`); repaired `.gitattributes` / `.gitignore` hygiene (`NF-R4-OBS-002`, `NF-R5R-OBS-003`); added additive dated notes to two Candidate-era records (`R1-F-01`). Closed by commit `e5d5d492…`. **No design, evidence, maturity, risk, ADR, Decision, claim, capability registration, phase rename, or publication effect.** |
 | CDS-WP-019 | Core Visual Foundation Architecture | **Completed**, closed by `538fbccbf6f554de3b872e9fb75a70d13318feb6`. Architecture only: the Layer-3 [Visual Foundation Architecture](../docs/architecture/VISUAL_FOUNDATION_ARCHITECTURE.md) entry point (**9 families VF-1…VF-9**, **14 invariants**, naming model, machine-readable boundary, motion boundary, A–D layer reconciliation), 6 specialised architectures (colour, typography, spatial, shape and surface, iconography and imagery, theme), and 4 governance documents (accessibility mapping — 14 Layer-3 WCAG criteria and **all 5 CDS-alone criteria**; channel mapping — 9 families x 9 channels; brand and Product Profile boundary — extension-point set **empty**; governance and lifecycle). **Selects no visual value; creates no token source, schema, validator rule, component, brand, or profile; registers no new Decision, ADR, or risk; grants no maturity — all 9 families `Proposed`; renames no phase; activates no later work package.** |
-| CDS-WP-020 | Reference and Semantic Token Foundation | **Current authorized work package; executed, `DECISION_REQUIRED`, not closed.** Contract only: the [Visual Reference Token Foundation](../docs/architecture/VISUAL_REFERENCE_TOKEN_FOUNDATION.md) (token-flow layer 1 — RP-1…RP-10, ST-1…ST-7, RN-1…RN-9, RV-1…RV-5, RB-1…RB-5, 10 validation requirements), the [Visual Semantic Token Foundation](../docs/architecture/VISUAL_SEMANTIC_TOKEN_FOUNDATION.md) (token-flow layer 2 — SR-1…SR-12, alias model AL-1…AL-8, SN-1…SN-9, PN-1…PN-5, TC-1…TC-7, SS-1…SS-8, IS-1…IS-5, the focus role set, 15 validation requirements), the [Visual Token Value Selection Rules](../docs/governance/VISUAL_TOKEN_VALUE_SELECTION_RULES.md) (VP, VE, IG, VD, VA, VS), and the **non-normative** [Open Decisions](../docs/roadmap/VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md) register (**OD-1…OD-7**). **Selects no value; creates no identifier, token source, schema, validator rule, or test; registers no new risk; grants no maturity — all 9 families `Proposed`, visual source sets 0; activates no later work package.** A separately authorized **Decision Integration Pass** (2026-08-27) prepared **DEC-S-128 … DEC-S-131 + ADR-0004** — **not yet effective**, answering **OD-1/OD-2/OD-3** only; **OD-4…OD-7 open**, VP-3/VP-4/VP-5 unsatisfied, `RISK-099` not required, WP not closed. |
+| CDS-WP-020 | Reference and Semantic Token Foundation | **`Completed`; executed with result `DECISION_REQUIRED`; integrated by `42a568d8…`; closure proposed in the closure and routing object and effective at its Human-Maintainer integration commit.** Contract only: the [Visual Reference Token Foundation](../docs/architecture/VISUAL_REFERENCE_TOKEN_FOUNDATION.md) (token-flow layer 1 — RP-1…RP-10, ST-1…ST-7, RN-1…RN-9, RV-1…RV-5, RB-1…RB-5, 10 validation requirements), the [Visual Semantic Token Foundation](../docs/architecture/VISUAL_SEMANTIC_TOKEN_FOUNDATION.md) (token-flow layer 2 — SR-1…SR-12, alias model AL-1…AL-8, SN-1…SN-9, PN-1…PN-5, TC-1…TC-7, SS-1…SS-8, IS-1…IS-5, the focus role set, 15 validation requirements), the [Visual Token Value Selection Rules](../docs/governance/VISUAL_TOKEN_VALUE_SELECTION_RULES.md) (VP, VE, IG, VD, VA, VS), and the **non-normative** [Open Decisions](../docs/roadmap/VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md) register (**OD-1…OD-7**). **Selects no value; creates no identifier, token source, schema, validator rule, or test; registers no new risk; grants no maturity — all 9 families `Proposed`, visual source sets 0; activates no later work package.** A separately authorized **Decision Integration Pass** (2026-08-27) registered **DEC-S-128 … DEC-S-131 + ADR-0004** — **effective at `42a568d8…`**, answering **OD-1/OD-2/OD-3** only; **OD-4…OD-7 open**, VP-3/VP-4/VP-5 unsatisfied, `RISK-099` not required. The value and machine-readable half is routed by **`FR-N-03`** to **`CDS-WP-020A`** — `Planned`, not active, not authorized. |
 
 ## Normative source map
 
@@ -247,10 +265,10 @@ and reference the normative policies; they do not replace them (DEC-S-063):
 
 - Range: DEC-S-001 … DEC-S-131 · Count: 131 · ADRs: 4 (ADR-0001, ADR-0002,
   ADR-0003, ADR-0004)
-- **Effective range: DEC-S-001 … DEC-S-127 · Count: 127 · All Accepted · ADRs: 3.**
-  **DEC-S-128 … DEC-S-131 and ADR-0004 are `PROPOSED / AUTHORIZED FOR INTEGRATION`
-  and NOT YET EFFECTIVE** until the Human-Maintainer exact-byte integration commit
-  of the CDS-WP-020 Decision Integration Pass.
+- **Effective range: DEC-S-001 … DEC-S-131 · Count: 131 · All Accepted · ADRs: 4.**
+  **DEC-S-128 … DEC-S-131 and ADR-0004 are effective** at the Human-Maintainer
+  exact-byte integration commit `42a568d823de3388e45af62967546f13ad67eff6` of the
+  CDS-WP-020 Decision Integration Pass.
 - DEC-S-001…006: strategic foundation decisions (CDS-WP-001)
 - DEC-S-007…012: strategic scope decisions (CDS-WP-002)
 - DEC-S-013…020: consumer and pilot scope decisions (CDS-WP-004)
@@ -281,12 +299,12 @@ and reference the normative policies; they do not replace them (DEC-S-063):
   DEC-S-001…126 unchanged
 - DEC-S-128…131: visual token representation, evaluation authority and source
   identity decisions (CDS-WP-020 Decision Integration Pass) — DEC-S-001…127
-  unchanged. **Prepared, NOT YET EFFECTIVE.**
+  unchanged. **Effective at commit `42a568d8…`.**
 - ADR-0001 (Machine-Readable Token Source Format), ADR-0002 (Deterministic JSON
   Serialization), and ADR-0003 (Offline Token Validator Implementation Stack)
-  exist and are effective — 3 effective ADRs. **ADR-0004 (Visual Token
-  Representation and Source Identity Architecture) is prepared and not yet
-  effective**, bringing the prepared range to 4.
+  exist and are effective. **ADR-0004 (Visual Token Representation and Source
+  Identity Architecture) is `Accepted` and effective** at commit `42a568d8…`,
+  bringing the effective range to 4.
 
 | ID | Summary |
 | --- | --- |
@@ -951,10 +969,13 @@ Human-Maintainer commit `df9b8f21ff3bde4607b1c9ff7fdcbe3144366040`, and
 **CDS-WP-019 — Core Visual Foundation Architecture** (architecture only; **no
 visual value**) **is closed**, by
 `538fbccbf6f554de3b872e9fb75a70d13318feb6`. **CDS-WP-020 — Reference and Semantic
-Token Foundation** (contract only; **no visual value, no identifier**) is the
-**current authorized work package**, **executed with result `DECISION_REQUIRED` and
-not closed**, and **CDS-WP-021 … CDS-WP-053 are `Planned`, not active, and not
-authorized**, with work on them not started. See the
+Token Foundation** (contract only; **no visual value, no identifier**) is
+**`Completed`** — **executed with result `DECISION_REQUIRED`** and **integrated** by
+`42a568d823de3388e45af62967546f13ad67eff6`, with **closure proposed in the closure
+and routing object and effective at its Human-Maintainer integration commit**.
+**No work package is currently authorized**, and **`CDS-WP-020A` and
+CDS-WP-021 … CDS-WP-053 are `Planned`, not active, and not authorized**, with work
+on them not started. See the
 [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md),
 the
 [Foundation Closure Record](../docs/governance/FOUNDATION_CLOSURE_RECORD.md) and the

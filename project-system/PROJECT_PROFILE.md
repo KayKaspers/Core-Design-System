@@ -31,9 +31,15 @@ release, or publication authority, and activates no work package.
 
 ## Work package status
 
-- **Current work package: CDS-WP-020 — Reference and Semantic Token Foundation**,
-  authorized separately by the Human Maintainer on 2026-08-26 and **executed with
-  result `DECISION_REQUIRED`; not closed.** **Contract only.** It defines what a
+- **Current work package: none.** **CDS-WP-020 — Reference and Semantic Token
+  Foundation** was authorized separately by the Human Maintainer on 2026-08-26,
+  **executed with result `DECISION_REQUIRED`**, and its reviewed object was
+  **integrated** by the Human-Maintainer commit
+  `42a568d823de3388e45af62967546f13ad67eff6`. It is recorded as **`Completed`**;
+  **closure is recorded in the working object of the CDS-WP-020 closure and routing
+  pass and becomes effective only at that object's Human-Maintainer integration
+  commit.** **No successor work package is active or authorized.** **Contract
+  only.** It defines what a
   visual **reference primitive** and a visual **semantic role** are, what each must
   declare, how a role aliases a primitive, and the discipline any future value must
   satisfy — across the
@@ -48,14 +54,25 @@ release, or publication authority, and activates no work package.
   and admitted **no** evidence; changed **no** maturity; added **no** risk entry;
   **renamed no phase**; **registered no capability**; and **activated no later work
   package**. A separately authorized **Decision Integration Pass** (2026-08-27) has
-  since **prepared DEC-S-128 … DEC-S-131 and ADR-0004**, answering **OD-1, OD-2 and
-  OD-3**; **they are not yet effective**, they select **no** value and create **no**
-  identifier, and **OD-4 … OD-7 stay open** — so the value half stays gated and
-  **CDS-WP-020 stays `DECISION_REQUIRED` and not closed**. A new risk entry is still
-  **not** recommended, and **`RISK-099` is not required**. **The CDS
+  since registered **DEC-S-128 … DEC-S-131 and ADR-0004**, answering **OD-1, OD-2
+  and OD-3**; **they are effective** at commit `42a568d8…`, they select **no** value
+  and create **no** identifier, and **OD-4 … OD-7 stay open** — so the value half stays gated.
+  **`DECISION_REQUIRED` stands as the executed result of the work package**: closing
+  it answers **no** open decision, satisfies **no** value prerequisite, and selects
+  **no** value. A new risk entry is still **not** recommended, and **`RISK-099` is
+  not required**. **The CDS
   Phase Transition Governance Package** (**DEC-S-127**) ran between CDS-WP-019
   closure and this authorization; it occupied no identifier in the
   CDS-WP-020 … CDS-WP-053 sequence and activated nothing.
+- **`FR-N-03`: RESOLVED BY EXPLICIT AUTHORING-WP DESTINATION.** Nova adjudicated it
+  with Human-Maintainer approval — **Option 2**: **source and value authoring is not
+  validation**, and the concrete machine-readable Visual Token Source and Value
+  Authoring work must not be absorbed into **CDS-WP-024**. Its destination is
+  **`CDS-WP-020A` — Visual Token Source Authoring and Source Set Realization**, an
+  **inserted** identifier on the `CDS-WP-001A` precedent that renumbered nothing.
+  **`CDS-WP-020A` is `Planned`, not active, and not authorized**, and **CDS-WP-024
+  keeps its validation and conformance boundary unchanged**. **AUTHOR is not
+  VALIDATE.** See [Work Packages](WORK_PACKAGES.md).
 - **Preceding work package: CDS-WP-019 — Core Visual Foundation Architecture**
   (**Completed**; closure became effective with the Human-Maintainer commit
   `538fbccbf6f554de3b872e9fb75a70d13318feb6`). **Architecture
@@ -123,7 +140,7 @@ release, or publication authority, and activates no work package.
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**,
-  **CDS-WP-017**, **CDS-WP-018**
+  **CDS-WP-017**, **CDS-WP-018**, **CDS-WP-019**, **CDS-WP-020**
 
 ## Operating enablement status
 
@@ -200,7 +217,7 @@ Documents:
 - Validation layers: **4** (V1 Syntax · V2 DTCG · V3 CDS Profile · V4 Semantic/
   Governance)
 - ADR count: **4** (ADR-0001, ADR-0002, ADR-0003, ADR-0004) — **ADR-0004 is
-  prepared and NOT YET EFFECTIVE**; the effective count is **3**
+  `Accepted` and effective** at commit `42a568d8…`; the effective count is **4**
 - **No visual or design token value is implemented** — the only implemented token
   source set is the non-visual `semantic/status` set (CDS-WP-015). **The schema and
   resolver contracts created by CDS-WP-012 are Experimental and carry no
@@ -494,7 +511,7 @@ Documents:
   role aliases a primitive. It returned **`DECISION_REQUIRED`**: every concrete
   value and every machine-readable visual source was gated on **OD-1 … OD-7**. The
   2026-08-27 Decision Integration Pass answered **OD-1, OD-2 and OD-3**
-  (DEC-S-128 … DEC-S-131, ADR-0004 — **prepared, not yet effective**) and **selected
+  (DEC-S-128 … DEC-S-131, ADR-0004 — **effective at `42a568d8…`**) and **selected
   no value**; **OD-4 … OD-7 stay open** and **VP-3, VP-4 and VP-5 stay unsatisfied**.
   **Visual values: 0. Visual source sets in existence: 0. Visual
   families at Candidate: 0. Visual families at Stable: 0.**
@@ -684,10 +701,10 @@ pilot contract is defined in CDS-WP-004.
   DEC-S-126 unchanged by the phase transition**; **DEC-S-001 … DEC-S-127 unchanged
   by the Decision Integration Pass**.
   **ADRs: 4 (ADR-0001, ADR-0002, ADR-0003, ADR-0004).**
-  **Effectivity: DEC-S-128 … DEC-S-131 and ADR-0004 are `PROPOSED / AUTHORIZED FOR
-  INTEGRATION` and NOT YET EFFECTIVE.** Until the Human-Maintainer exact-byte
-  integration commit the **effective** register is **DEC-S-001 … DEC-S-127 (127)**
-  with **3 ADRs**.
+  **Effectivity: DEC-S-128 … DEC-S-131 and ADR-0004 are effective**, at the
+  Human-Maintainer exact-byte integration commit
+  `42a568d823de3388e45af62967546f13ad67eff6`. The **effective** register is
+  **DEC-S-001 … DEC-S-131 (131)** with **4 ADRs**.
 - Risks: RISK-001 … RISK-098 (98) — **89 `Monitored`; RISK-031, RISK-040, RISK-044,
   RISK-066, RISK-067, RISK-068, RISK-069, RISK-071, and RISK-098 `Mitigating`**;
   **risk owner model finalized** by CDS-WP-006; RISK-082 … RISK-089 added by CDS-WP-014;
@@ -741,8 +758,8 @@ are held in the **non-normative**
 register. **Three have since been decided** — the colour space (**DEC-S-128**), the
 admitted `$type` set (**DEC-S-130**), and the source-set identity and topology
 (**DEC-S-131**), with **DEC-S-129** adding the contrast evaluation authority and
-**ADR-0004** the architecture rationale; **all five are prepared and not yet
-effective, and none of them selects a value**. **OD-4, OD-5, OD-6 and OD-7 remain
+**ADR-0004** the architecture rationale; **all five are effective at commit
+`42a568d8…`, and none of them selects a value**. **OD-4, OD-5, OD-6 and OD-7 remain
 undecided.**
 
 **Areas that are no longer open.** Four areas that this list previously carried

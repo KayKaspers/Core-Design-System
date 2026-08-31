@@ -4,6 +4,19 @@
 review.** They require an independent review by a reviewer who is not their
 executor before any closure claim is made.
 
+> **Additive supersession note (2026-08-27).** These notes are a **dated
+> point-in-time record of the CDS-WP-020 execution** and are **not rewritten**.
+> Where the body states that CDS-WP-020 is *not closed*, that was true when the
+> notes were written. The reviewed CDS-WP-020 object has since been **integrated**
+> by the Human-Maintainer commit `42a568d823de3388e45af62967546f13ad67eff6`, and a
+> separately authorized **closure and routing pass** records the work package as
+> **`Completed`** — closure effective only at that pass's Human-Maintainer
+> integration commit. The value and machine-readable half is routed by **`FR-N-03`**
+> to **`CDS-WP-020A`**, which is `Planned`, not active, and not authorized. See
+> [CDS-WP-020 Closure and Authoring Routing — Notes](CDS_WP_020_CLOSURE_AND_AUTHORING_ROUTING_NOTES.md).
+> **`DECISION_REQUIRED` remains the executed result of the work package**, and
+> **OD-4 … OD-7 remain open.**
+
 - **Work package:** CDS-WP-020
 - **Date:** 2026-08-26
 - **Executor:** Claude (scoped executor)
@@ -206,7 +219,8 @@ RISK-040 exists to prevent. **No risk was accepted, closed, or re-scored.**
 *(Recorded 2026-08-26. **Historical for its date and not rewritten.** For current
 state see *Decision Integration Pass — 2026-08-27* below: DEC-S-128 … DEC-S-131
 and ADR-0004 were later prepared under a separate Human-Maintainer
-authorization, and remain **not yet effective**.)*
+authorization, and are **effective** at the Human-Maintainer integration commit
+`42a568d823de3388e45af62967546f13ad67eff6`.)*
 
 | # | Finding | Disposition |
 | --- | --- | --- |
@@ -224,7 +238,8 @@ authorization, and remain **not yet effective**.)*
 *(Recorded 2026-08-26. **Historical for its date and not rewritten.** For current
 state see *Decision Integration Pass — 2026-08-27* below: DEC-S-128 … DEC-S-131
 and ADR-0004 were later prepared under a separate Human-Maintainer
-authorization, and remain **not yet effective**.)*
+authorization, and are **effective** at the Human-Maintainer integration commit
+`42a568d823de3388e45af62967546f13ad67eff6`.)*
 
 - **No token source file, manifest, or resolver** was created. `tokens/` is
   untouched.
@@ -320,6 +335,13 @@ INTEGRATION`**, and effectivity occurs **only** at the Human-Maintainer exact-by
 integration commit, after a Fresh Independent Review and Nova integration
 adjudication. The **effective** registers remain **DEC-S-127** and **ADR-0003**
 until then; the **prepared** object holds **131** decisions and **4** ADRs.
+
+> **Additive supersession note.** The paragraph above is **point-in-time, written
+> before integration, and not rewritten.** That integration commit has since
+> occurred — `42a568d823de3388e45af62967546f13ad67eff6` — so **DEC-S-128 …
+> DEC-S-131 are effective and ADR-0004 is `Accepted`**, and the **effective**
+> registers are **DEC-S-131** and **ADR-0004**, holding **131** decisions and **4**
+> ADRs. **The counts did not change; only the effectivity qualification did.**
 
 ### External authority verification
 
@@ -425,5 +447,5 @@ sources.**
 - [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md)
 - [Work Packages](../project-system/WORK_PACKAGES.md)
 - [CDS-WP-019 Notes](CDS_WP_019_CORE_VISUAL_FOUNDATION_ARCHITECTURE_NOTES.md)
-- [Decision Index](../docs/decisions/DECISION_INDEX.md) — DEC-S-128 … DEC-S-131, **prepared, not yet effective**
-- [ADR-0004 — Visual Token Representation and Source Identity Architecture](../docs/decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md) — **prepared, not yet effective**
+- [Decision Index](../docs/decisions/DECISION_INDEX.md) — DEC-S-128 … DEC-S-131, **effective at commit `42a568d8…`**
+- [ADR-0004 — Visual Token Representation and Source Identity Architecture](../docs/decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md) — **`Accepted`, effective at commit `42a568d8…`**

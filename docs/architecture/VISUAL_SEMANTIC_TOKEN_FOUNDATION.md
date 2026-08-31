@@ -5,9 +5,9 @@
 - **Date:** 2026-08-26
 - **Amended by:** CDS-WP-020 (Decision Integration Pass), 2026-08-27 — **SR-3**,
   **AL-3** and the *Deferred decisions* section, to apply **DEC-S-129** and
-  **DEC-S-130**. **Those amendments are `PROPOSED / AUTHORIZED FOR INTEGRATION` and
-  NOT YET EFFECTIVE** until the Human-Maintainer exact-byte integration commit.
-  **They create no role identifier and select no value**, and SR-1, SR-2,
+  **DEC-S-130**. **Those amendments are effective** at the Human-Maintainer
+  exact-byte integration commit `42a568d823de3388e45af62967546f13ad67eff6`
+  (2026-08-27). **They create no role identifier and select no value**, and SR-1, SR-2,
   SR-4 … SR-12, SN-1 … SN-9, PN-1 … PN-5, TC-1 … TC-7, SS-1 … SS-8, IS-1 … IS-5,
   the alias model's remaining rules, and the focus role set are unchanged.
 - **Artifact class:** **1 — Normative human-readable source** (DEC-S-022)
@@ -400,9 +400,10 @@ register or in the owning work package's architecture document. **Recording one
 defers it; it does not decide, schedule, or authorize it.**
 
 **Decided since this document was first written**, by the CDS-WP-020 Decision
-Integration Pass (2026-08-27) and **not yet effective** until the Human-Maintainer
-exact-byte integration commit: the **colour space and encoding** (DEC-S-128), the
-**contrast evaluation authority and precision rule** (DEC-S-129), the **admitted
+Integration Pass (2026-08-27) and **effective** at the Human-Maintainer exact-byte
+integration commit `42a568d823de3388e45af62967546f13ad67eff6`: the **colour space
+and encoding** (DEC-S-128), the **contrast evaluation authority and precision
+rule** (DEC-S-129), the **admitted
 `$type` set** (DEC-S-130), and the **visual source-set unit, topology and maturity
 granularity** (DEC-S-131). **None of the four creates a role, a role identifier, or
 a value**, and **no contrast has been evaluated** — there is nothing to evaluate.
