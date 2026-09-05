@@ -11,6 +11,18 @@
   exact-byte integration commit `42a568d823de3388e45af62967546f13ad67eff6`.
   **OD-4, OD-5, OD-6 and OD-7 remain open**, and three residual items are recorded
   under the answered entries.
+- **Updated:** 2026-09-05 — CDS Step-9 Decision Integration Pass. The Human
+  Maintainer decided **OD-4**, **OD-5**, **OD-6A** and **OD-7**, and dispositioned
+  **OD-6B** as answered by existing normative authority. **DEC-S-132**
+  (with [ADR-0005](../decisions/ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md)),
+  **DEC-S-133**, **DEC-S-134** and **DEC-S-135** are prepared as
+  **`PROPOSED / AUTHORIZED FOR INTEGRATION` and are NOT YET EFFECTIVE** — they
+  become effective only at the Human-Maintainer exact integration commit of the
+  reviewed object. **OD-4 is answered and the OD-3 concrete-root residual is
+  resolved; OD-5 is only partially answered; OD-6A is policy-answered with the
+  concrete vocabulary still open; OD-7 is answered.** **Four residuals remain open
+  and one is added.** **No value is selected, no Source Set is created, and no work
+  package is authorized.**
 - **Artifact class:** **8 — Example / planning artifact. NON-NORMATIVE.**
 - **Status:** **A decision-preparation register. It decides nothing.** The Decisions
   it prepared for are recorded in the
@@ -42,9 +54,14 @@ decisions, and treat any premature decision as a reportable deviation.*
 
 ## What is blocked, and what is not
 
-*(Updated 2026-08-27: OD-1, OD-2 and OD-3 have since been answered. **Every entry
-in the right-hand column below is still blocked**, because OD-4, OD-5, OD-6 and
-OD-7 remain open and **VP-3, VP-4 and VP-5 remain unsatisfied for every family**.)*
+*(Updated 2026-09-05. OD-1, OD-2 and OD-3 are answered and effective; **OD-4 and
+OD-7 are answered, OD-5 is partially answered, OD-6A is policy-answered and OD-6B is
+answered by existing authority** — all four `PROPOSED / AUTHORIZED FOR INTEGRATION`
+and **not yet effective**. **Every entry in the right-hand column below is still
+blocked**, because **VP-3, VP-5, VP-6 and VP-7 remain unsatisfied for every
+family** and VP-2 remains unsatisfied for typeface identity, weight identity and
+composites. **Only VP-4 has moved**, for VF-1, VF-2, VF-3, VF-5 and VF-6 — and an
+identifier grammar with fixed roots creates **no identifier instance**.)*
 
 | Delivered by CDS-WP-020 | Blocked pending the decisions below |
 | --- | --- |
@@ -60,10 +77,50 @@ the source-set classes, the reference semantics, the serialization contract, the
 committed schemas, and the offline validator are all sufficient. What is missing is
 **decisions**, not capability. That distinction is the substance of this register.
 
-## Register state — 2026-08-27
+## Register state — 2026-09-05
 
 *(Non-normative status view. The **Decisions** are the authority; this table is
-not.)*
+not. **DEC-S-132 … DEC-S-135 are `PROPOSED / AUTHORIZED FOR INTEGRATION` and NOT
+YET EFFECTIVE**; every disposition citing them is conditional on the
+Human-Maintainer exact integration commit. The 2026-08-27 view this table replaces
+is preserved as the *Register state — 2026-08-27* record below.)*
+
+| # | Proposition | State |
+| --- | --- | --- |
+| **OD-1** | Colour space and encoding | **ANSWERED — DEC-S-128**, effective. Residual **OPEN**: the CDS-specific disposition of the optional DTCG `hex` member. |
+| **OD-2** | The admitted DTCG `$type` set | **ANSWERED — DEC-S-130**, effective. Residuals **OPEN**: font-family identity representation, font-weight identity representation, and composite-type admission. |
+| **OD-3** | Visual source-set identity, granularity, topology | **ANSWERED — DEC-S-131**, effective, for unit, topology and maturity granularity. **Concrete-root residual: RESOLVED by DEC-S-132**, once effective. |
+| **OD-4** | The concrete identifier grammar | **ANSWERED — DEC-S-132** (ADR-0005), once effective. |
+| **OD-5** | Scale topology for the dimensional families | **PARTIALLY ANSWERED — DEC-S-133**, once effective: the **scale ownership model** and the **topology/value boundary** only. Residuals **OPEN**: **per-family topology parameters** for every family in scope, and **VF-1 tonal topology**. |
+| **OD-6A** | The concrete role vocabulary | **POLICY ANSWERED — DEC-S-134**, once effective: an **admission rule** only. **The concrete role vocabulary REMAINS OPEN**, and `CDS-WP-020A` may not invent it. |
+| **OD-6B** | How many families CDS matures separately | **ANSWERED BY EXISTING NORMATIVE AUTHORITY. No new Decision.** VF-1 … VF-9 remain separate artifact families under AF-1, AF-3 and AF-4. **BATCHED REVIEW ≠ SHARED MATURITY.** |
+| **OD-7** | Sequencing against CDS-WP-022 | **ANSWERED — DEC-S-135**, once effective. |
+
+> **Four answers still do not complete the value system.** **VP-3, VP-5, VP-6 and
+> VP-7 remain unsatisfied for every visual family**, and VP-2 remains unsatisfied
+> for typeface identity, weight identity and composites — so **no visual value may
+> be selected**. Visual values remain **0**, visual source sets remain **0**, visual
+> Candidate families remain **0**, and VF-1 … VF-9 remain **`Proposed`**.
+> **No work package is currently authorized.**
+
+### Residual register — 2026-09-05
+
+| Residual | Origin | State |
+| --- | --- | --- |
+| The CDS-specific disposition of the optional DTCG `hex` member | OD-1 | **OPEN** |
+| Font-family identity representation | OD-2 | **OPEN** — gated by Typography FP-1 … FP-8, **Elevated** |
+| Font-weight identity representation | OD-2 | **OPEN** — same gate |
+| Composite-type admission | OD-2 | **OPEN** — needs a demonstrated family need |
+| Concrete visual source-set root identifiers | OD-3 | **RESOLVED by DEC-S-132**, once effective |
+| Per-family scale topology parameters — anchor declaration, progression-rule kind, step count, extension behaviour, exclusions | OD-5 | **OPEN for every family in scope** |
+| VF-1 Colour tonal topology | OD-5 | **OPEN** — a distinct problem, coupled to CDS-WP-022 and the OD-1 `hex` residual |
+| The concrete role vocabulary | OD-6A | **OPEN** — admissible only under DEC-S-134's rule |
+| Any migration or deprecation compatibility mechanism outside the normative Semantic alias graph | **NEW, recorded by DEC-S-132** | **OPEN** — AL-2 is unchanged and prohibits a semantic-role alias edge; no committed source specifies any other mechanism |
+
+## Register state — 2026-08-27
+
+*(Preserved point-in-time record. It was true when written and is **not** rewritten
+because Step 9 has since been decided.)*
 
 | # | Proposition | State |
 | --- | --- | --- |
@@ -240,6 +297,14 @@ would decide the granularity question by implication.
 > recommends no concrete identifier**. That residual is coupled to **OD-4**, and
 > **repository topology remains an explicit DEC-S-032 deferral**.
 >
+> **That residual is RESOLVED by DEC-S-132 (2026-09-05)**, `PROPOSED / AUTHORIZED
+> FOR INTEGRATION` and **NOT YET EFFECTIVE**: the ten source-set identities
+> `reference/color` … `semantic/surface` are fixed in the flat `<layer>/<family>`
+> form, and the technical roots are `color`, `typography`, `space`, `shape` and
+> `surface`. **Identity is fixed; no Source Set instance, no `sourceRevision`, no
+> manifest and no resolver is created, and repository topology remains a DEC-S-032
+> deferral.**
+>
 > The alternatives, recommendation and impact statement below are preserved as the
 > **preparation record**. They are not the decision; **DEC-S-131 is.**
 
@@ -288,9 +353,32 @@ the Visual Foundation Governance and Lifecycle document · the Decision Index.
 
 ### OD-4 — The concrete identifier grammar for reference and semantic positions
 
-> **STILL OPEN as of 2026-08-27.** The CDS-WP-020 Decision Integration Pass
-> answered OD-1, OD-2 and OD-3 only. **This entry was deliberately not decided**,
-> and nothing below is adopted.
+> **ANSWERED by DEC-S-132 (2026-09-05), `PROPOSED / AUTHORIZED FOR INTEGRATION` and
+> NOT YET EFFECTIVE.** The recommendation below — option **(c)** — was adopted in
+> substance: **family-rooted paths with a declared, optional qualifier position**,
+> the reference grammar `<family>.<primitive-group>.<step>[.<qualifier>]` and the
+> semantic grammar `<family>.<role>[.<qualifier>]`. Three things were decided that
+> this entry did not anticipate: **the slot is named `qualifier`, not `modifier`**,
+> because *conditional modifier* is already bound to Resolver / Theme composition
+> semantics; **token-path identity and source-set identity are two separate spaces**
+> and a `sourceSetId` is **declared, never derived**; and **the concrete roots were
+> fixed** — `color`, `typography`, `space`, `shape`, `surface`, with the ten
+> source-set identities `reference/color` … `semantic/surface` in the flat
+> `<layer>/<family>` form. **The OD-3 concrete-root residual is resolved by it.**
+>
+> **A new residual, recorded rather than silently deferred:** any **migration or
+> deprecation compatibility mechanism outside the normative Semantic alias graph**.
+> AL-2 is unchanged and prohibits a semantic-role alias edge; no committed source
+> specifies any other mechanism, and DEC-S-132 specifies none.
+>
+> **VP-4 becomes satisfied for VF-1, VF-2, VF-3, VF-5 and VF-6** once effective —
+> and nothing more. **No identifier instance, no Source Set, and no
+> `sourceRevision` exists; VP-5 stays unsatisfied; visual source sets stay 0.**
+>
+> The alternatives, recommendation and impact statement below are preserved as the
+> **preparation record**. They are not the decision; **DEC-S-132 is**, with
+> [ADR-0005](../decisions/ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md)
+> as its architecture record.
 
 **Proposition to decide.** The concrete path grammar for visual reference and
 semantic identifiers, and the fixed set of root segments it admits.
@@ -327,9 +415,38 @@ migration event.
 
 ### OD-5 — Scale topology for the dimensional families
 
-> **STILL OPEN as of 2026-08-27.** The CDS-WP-020 Decision Integration Pass
-> answered OD-1, OD-2 and OD-3 only. **This entry was deliberately not decided**,
-> and nothing below is adopted.
+> **PARTIALLY ANSWERED by DEC-S-133 (2026-09-05), `PROPOSED / AUTHORIZED FOR
+> INTEGRATION` and NOT YET EFFECTIVE.** The recommendation below — option **(c)**,
+> *one declared base unit with per-family step sets derived from it* — was **not
+> adopted, and was rejected on the normative text.** **ST-5 is per-scale**:
+> *"computable offline and deterministically from **its** declared base and
+> rule"*, and the section carrying ST-1 … ST-7 is introduced as *"Normative as
+> requirements on a scale, not as a scale."* A universal cross-family base would
+> have created the coupling **AF-3** exists to prevent.
+>
+> **What was decided:** **independent per-family ordered scales under the common
+> ST-1 … ST-7 contract**, with **no universal cross-family base** and no family's
+> scale deriving base, rule, or value authority from another's; the invariant
+> **`SCALE TOPOLOGY ≠ SCALE VALUES`**; and the reading that **VP-3's "base" means
+> the anchor declaration, not a numeric anchor magnitude.**
+>
+> **What was NOT decided, and stays open:** **the per-family topology parameters** —
+> for every family in scope, the concrete anchor declaration, progression-rule kind,
+> step count, extension behaviour and exclusions. **VP-3 therefore remains
+> UNSATISFIED for every family and fails closed.** Deciding *who owns a scale* is
+> not deciding *what the scale is*.
+>
+> **VF-1 Colour tonal topology was split out and remains OPEN as a distinct
+> residual.** It is not among the ordered primitive sets the Visual Reference Token
+> Foundation enumerates; it would be ordered by a perceptual property while OKLCH is
+> derivation-only (DEC-S-128); and it is coupled to CDS-WP-022 and to the OD-1 `hex`
+> residual. **VF-4, VF-7, VF-8 and VF-9 are excluded** to their owning work
+> packages, and **opacity remains an attribute of VF-1 and VF-6** (DEC-S-128 clause
+> 11), never a family.
+>
+> The alternatives, recommendation and impact statement below are preserved as the
+> **preparation record**, including the recommendation that was rejected. They are
+> not the decision; **DEC-S-133 is.**
 
 **Proposition to decide.** For each family holding an ordered primitive set —
 VF-2 size and line height, VF-3 spacing and size, VF-5 radius and stroke, VF-6
@@ -367,9 +484,42 @@ text-resize and reflow behaviour.
 
 ### OD-6 — The concrete role vocabulary, and how many families CDS matures separately
 
-> **STILL OPEN as of 2026-08-27.** The CDS-WP-020 Decision Integration Pass
-> answered OD-1, OD-2 and OD-3 only. **This entry was deliberately not decided**,
-> and nothing below is adopted.
+> **SPLIT AND DISPOSITIONED (2026-09-05).** The two coupled questions were separated
+> because they are not one indivisible normative choice: they have different
+> authority families, different amendment triggers, and different risks.
+>
+> **OD-6A — the concrete role vocabulary: POLICY ANSWERED by DEC-S-134**,
+> `PROPOSED / AUTHORIZED FOR INTEGRATION` and **NOT YET EFFECTIVE**. Option **(b)**
+> below was adopted **as an admission rule only** — a role enters CDS Core only on
+> demonstrated **cross-consumer** need, classified before design, satisfying
+> **SR-1 … SR-12 from creation**, inside the **closed** role classification.
+> **The concrete role vocabulary REMAINS OPEN**, no role identifier is created, and
+> **`CDS-WP-020A` may not invent, adopt, reserve, or recommend one.** **VP-6 stays
+> UNSATISFIED** — a policy is not an authored role. **`selected`, `active` and
+> `current` are not CDS Core roles today** (answering **IS-5**); that is **not a
+> permanent prohibition**, IS-1 and IS-5 already bind whatever a consumer builds,
+> and their distinctness is answered with the vocabulary rather than before it.
+>
+> **OD-6B — how many families CDS matures separately: ANSWERED BY EXISTING
+> NORMATIVE AUTHORITY. No new Decision, and none should be created.** The
+> [Visual Foundation Governance and Lifecycle](../governance/VISUAL_FOUNDATION_GOVERNANCE_AND_LIFECYCLE.md)
+> already states normatively that **each of VF-1 … VF-9 is a separate artifact
+> family with its own maturity, evidence, gate, and compatibility statement**, under
+> **AF-1**, **AF-3** and **AF-4**. **The recommendation below — reducing the family
+> count by treating VF-3, VF-5 and VF-6 as one maturity group — was rejected**,
+> because it would have required amending that rule rather than answering an open
+> question, and would have created the inheritance AF-1 forbids. What was genuinely
+> open was **how many families CDS chooses to pursue to a gate, and how the review
+> effort is organised** — a scheduling matter settled at authorization time.
+> **Administrative batching may occur, and BATCHED REVIEW ≠ SHARED MATURITY;
+> BATCHED GATE PREPARATION ≠ MATURITY INHERITANCE.** No maturity group, cluster
+> maturity, roll-up maturity, inherited maturity, or aggregate gate exists or may be
+> created. `F-019-07` and `F-020-08` close with this disposition.
+>
+> The alternatives, recommendation and impact statement below are preserved as the
+> **preparation record**, including the family-count recommendation that was
+> rejected. They are not the decision; **DEC-S-134 and the existing artifact-family
+> authority are.**
 
 **Proposition to decide.** Two coupled questions: the concrete semantic role
 vocabulary per family, and **whether all nine visual families are worth maturing
@@ -418,9 +568,29 @@ Lifecycle document · the Decision Index.
 
 ### OD-7 — Sequencing against CDS-WP-022: may a role carry a binding before contexts exist?
 
-> **STILL OPEN as of 2026-08-27.** The CDS-WP-020 Decision Integration Pass
-> answered OD-1, OD-2 and OD-3 only. **This entry was deliberately not decided**,
-> and nothing below is adopted.
+> **ANSWERED by DEC-S-135 (2026-09-05), `PROPOSED / AUTHORIZED FOR INTEGRATION` and
+> NOT YET EFFECTIVE.** The recommendation below was adopted: **(d)** as the
+> sequencing answer with **(b)** as the substantive rule. **No semantic visual role
+> carries a default alias to a reference primitive before CDS-WP-022 decides the
+> Theme and Context Mechanism**, and **CDS-WP-022 precedes context-sensitive value
+> selection**. **(c)** was rejected: its re-evaluation obligation would need a named
+> enforcing owner, and the Consumer Maintainer role is **unstaffed (FM-F-006)**, so
+> it degrades to **(a)**.
+>
+> **One clarification this entry did not contain was added:** the rule gates
+> **values and bindings, not structure**. Identifier grammar, scale ownership,
+> role admission, family maturity governance and **source-set structural identity**
+> are context-independent by **TC-1**, **TC-2**, **T-8**, **N-6** and **RB-1**, and
+> are **not** blocked. **`CDS-WP-022 BEFORE VALUE SELECTION` does not mean
+> `CDS-WP-022 BEFORE EVERY SOURCE-STRUCTURE OR IDENTITY ACTIVITY`.**
+>
+> **CDS-WP-022 becomes the recommended and sequenced Step-10 candidate only.**
+> **SEQUENCED NEXT ≠ AUTHORIZED** — it remains `Planned`, not active, and not
+> authorized, as do `CDS-WP-020A` and CDS-WP-021 … CDS-WP-053, and **no work package
+> is currently authorized.**
+>
+> The alternatives, recommendation and impact statement below are preserved as the
+> **preparation record**. They are not the decision; **DEC-S-135 is.**
 
 **Proposition to decide.** Whether a semantic visual role may carry a **default**
 alias to a reference primitive before **CDS-WP-022** decides the theme mechanism
@@ -494,6 +664,27 @@ ADR-0004 became effective only at the Human-Maintainer exact-byte integration
 commit `42a568d823de3388e45af62967546f13ad67eff6`, which followed a Fresh
 Independent Review and Nova integration adjudication. **A review PASS is not a
 commit, and a Nova recommendation is not an approval.**
+
+### Instruments prepared by the CDS Step-9 Decision Integration Pass — 2026-09-05
+
+*(Prepared under an explicit Human-Maintainer authorization given on 2026-09-05.
+**All are `PROPOSED / AUTHORIZED FOR INTEGRATION` and NOT YET EFFECTIVE**, and
+become effective only at the Human-Maintainer exact integration commit of the
+reviewed object.)*
+
+| Instrument | Covers | Disposition |
+| --- | --- | --- |
+| **DEC-S-132** — Visual Identifier Grammar and the Two Identity Spaces | **OD-4**, and the **OD-3 concrete-root residual** | **PREPARED.** Architecture record: **ADR-0005**. |
+| **DEC-S-133** — Per-Scale Topology Under the Common Scale Contract | **OD-5**, partially | **PREPARED.** **No ADR** — it applies ST-1 … ST-7 and changes nothing the profile admits or the validator enforces. |
+| **DEC-S-134** — Visual Role Admission Rule | **OD-6A**, policy only | **PREPARED.** **No ADR** — a semantic and accessibility-obligation decision, on the DEC-S-129 precedent. |
+| **DEC-S-135** — Theme Sequencing Before Context-Sensitive Value Selection | **OD-7** | **PREPARED.** **No ADR** — a sequencing and authority decision. |
+| **ADR-0005** — Visual Identifier Grammar and Identity Spaces | **DEC-S-132 only** | **PREPARED.** **DEC-S-133, DEC-S-134 and DEC-S-135 are deliberately not architecture dependencies of it.** |
+| **A new Decision for OD-6B** | — | **NOT CREATED, and not required.** OD-6B is answered by the existing artifact-family model and AF-1, AF-3 and AF-4. Creating one would be ceremony that produces no decision (**RISK-040**) and a governance abstraction created to reduce maintainer load. |
+| **A new risk entry** | — | **NOT CREATED, and not required.** The surface is carried by **RISK-003**, **RISK-010**, **RISK-021**, **RISK-026**, **RISK-028**, **RISK-029**, **RISK-031**, **RISK-040**, **RISK-061** and **RISK-087**. **No `RISK-099`**; the register stays at **98**, with no risk accepted, closed, or re-scored. **RISK-092** is scoped to *status* token paths and its mechanism generalizes but its text does not — if explicit coverage is wanted, the instrument is **widening RISK-092**, a Human-Maintainer act, never a near-duplicate. |
+
+**The prepared target is 135 decisions and 5 ADRs; the committed authority remains
+131 decisions and 4 ADRs until the integration commit exists.** **No `DEC-S-136`,
+no `ADR-0006`, and no `RISK-099`.**
 
 ## Related documents
 

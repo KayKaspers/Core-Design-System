@@ -9,6 +9,13 @@
   exact-byte integration commit `42a568d823de3388e45af62967546f13ad67eff6`
   (2026-08-27). It **applies** AF-1 … AF-5 and adds **no** maturity rule, gate, or evidence
   requirement; AF-1 … AF-5 and VR-1 … VR-5 are unchanged.
+- **Amended by:** CDS Step-9 Decision Integration Pass, 2026-09-05 — the additive
+  *OD-6B disposition* note under *Governance capacity*. **That note is `PROPOSED /
+  AUTHORIZED FOR INTEGRATION` and NOT YET EFFECTIVE**; it becomes effective only at
+  the Human-Maintainer exact integration commit of the reviewed object. **It adds
+  no Decision, no rule, no gate, and no construct**, registers **no** maturity
+  group or aggregate gate, and grants **no** maturity; AF-1 … AF-5, VR-1 … VR-5 and
+  the artifact-family model are unchanged.
 - **Artifact class:** **1 — Normative human-readable source** (DEC-S-022)
 - **Status:** **Normative for how visual foundation artifacts are owned, changed,
   matured, validated, and retired.** It **grants no maturity**.
@@ -322,6 +329,34 @@ and gate, is **a substantial governance load that has never been run**.
   question stays open as **OD-6**, and the cost basis it rests on has been
   corrected — per-family, per-layer source sets do **not** multiply manifests,
   because one manifest may aggregate many source sets.
+
+### OD-6B disposition — 2026-09-05
+
+*(An additive dated note. **It changes no rule**, registers no new construct, and
+**adds no Decision** — AF-1 … AF-5 and the artifact-family model above are
+unchanged. `PROPOSED / AUTHORIZED FOR INTEGRATION`, not yet effective.)*
+
+The maturity-granularity half of **OD-6** — how many families mature separately — is
+**answered by the existing normative authority on this page**, and the Human
+Maintainer confirmed it on 2026-09-05 as requiring **no new Decision**:
+
+> **VF-1 … VF-9 remain separate artifact families**, each retaining **its own
+> maturity, its own evidence, its own gate, and its own compatibility statement**.
+> **AF-1**, **AF-3** and **AF-4** are unchanged and binding.
+
+**Administrative batching may occur.** Evidence preparation, independent review, and
+Human-Maintainer sessions may be scheduled together as a convenience. But:
+
+> **BATCHED REVIEW ≠ SHARED MATURITY.**
+> **BATCHED GATE PREPARATION ≠ MATURITY INHERITANCE.**
+
+**One family passing grants nothing to any other.** Each family passes its own gate
+on its own evidence, bound to its own (`sourceSetId`, `sourceRevision`). **No
+maturity group, no family-cluster maturity, no roll-up maturity, no inherited
+maturity, and no aggregate gate exists or may be created.** A family CDS does not
+pursue simply **stays `Proposed`**, which asserts nothing and costs nothing. **How
+many families CDS chooses to pursue, and in what order, is a scheduling and
+authorization matter settled work package by work package — never a maturity rule.**
 
 ## Risks this governance is answering
 

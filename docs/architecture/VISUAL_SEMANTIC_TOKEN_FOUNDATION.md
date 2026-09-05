@@ -10,6 +10,17 @@
   (2026-08-27). **They create no role identifier and select no value**, and SR-1, SR-2,
   SR-4 … SR-12, SN-1 … SN-9, PN-1 … PN-5, TC-1 … TC-7, SS-1 … SS-8, IS-1 … IS-5,
   the alias model's remaining rules, and the focus role set are unchanged.
+- **Amended by:** CDS Step-9 Decision Integration Pass, 2026-09-05 — the *Naming and
+  identity at the semantic position* section (identifier grammar and fixed family
+  roots), a new *Role admission* section, **IS-5**, and the *Deferred decisions*
+  section, to apply **DEC-S-132**
+  ([ADR-0005](../decisions/ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md)),
+  **DEC-S-134** and **DEC-S-135**. **Those amendments are `PROPOSED / AUTHORIZED
+  FOR INTEGRATION` and NOT YET EFFECTIVE**; they become effective only at the
+  Human-Maintainer exact integration commit of the reviewed object. **They create
+  no role, no role identifier, no binding and no value**, and SR-1 … SR-12,
+  SN-1 … SN-9, PN-1 … PN-5, TC-1 … TC-7, SS-1 … SS-8, IS-1 … IS-4, the alias model,
+  the closed role classification, and the focus role set are unchanged.
 - **Artifact class:** **1 — Normative human-readable source** (DEC-S-022)
 - **Status:** **Normative for what a CDS visual semantic role is and what it must
   declare** — token-flow layer **2 Semantic** inside the visual foundation. It
@@ -208,7 +219,68 @@ obligation is checked.
 ## Naming and identity at the semantic position
 
 *(Normative — an application of DEC-S-081 and the CDS-WP-019 naming model.
-**No identifier is created, adopted, reserved, recommended, or planned.**)*
+**No role identifier is created, adopted, reserved, recommended, or planned.** The
+**family roots** below are fixed by DEC-S-132; **no role name is.**)*
+
+### Grammar and roots
+
+*(Normative — **DEC-S-132**, 2026-09-05. **`PROPOSED / AUTHORIZED FOR INTEGRATION`
+and NOT YET EFFECTIVE.**
+[ADR-0005](../decisions/ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md)
+carries the rationale.)*
+
+A semantic position takes **`<family>.<role>[.<qualifier>]`**. The path is
+**family-rooted**; the **token-flow layer is never a segment** of it and remains the
+explicit `layer` field; the **qualifier** position is **declared and optional and no
+concrete qualifier is created** — the term is `qualifier` rather than `modifier`
+because *conditional modifier* is already bound to Resolver / Theme composition
+semantics, and **N-6** and **T-8** forbid a theme term inside a shared semantic
+identifier.
+
+The fixed technical roots are **`color`** (VF-1), **`typography`** (VF-2),
+**`space`** (VF-3), **`shape`** (VF-5) and **`surface`** (VF-6) — one per registered
+family. The Semantic Source Set identities are **`semantic/color`**,
+**`semantic/typography`**, **`semantic/space`**, **`semantic/shape`** and
+**`semantic/surface`**, in the flat **`<layer>/<family>`** form; a `sourceSetId` is
+**declared, never derived** (DEC-S-131 clause 3), and **token-path identity and
+source-set identity are separate spaces**.
+
+**The `<role>` position is empty.** No role name exists, and none may be invented —
+see *Role admission* below. **This creates no Source Set instance, no
+`sourceRevision`, no manifest, no resolver, no token, and no file.**
+
+### Role admission
+
+*(Normative — **DEC-S-134**, CDS Step-9 Decision Integration Pass, 2026-09-05.
+**`PROPOSED / AUTHORIZED FOR INTEGRATION` and NOT YET EFFECTIVE.** **No ADR** —
+DEC-S-134 is deliberately not an architecture dependency of ADR-0005.)*
+
+| # | Rule |
+| --- | --- |
+| **RA-1** | **A visual semantic role enters CDS Core only on demonstrated cross-consumer need.** A need evidenced by one consumer is a consumer-local concern until it is shown to be shared (PN-2, IG-3). |
+| **RA-2** | **Requirement classification precedes design.** A candidate role is classified before it is designed, named, or authored. |
+| **RA-3** | **Every admitted role satisfies SR-1 … SR-12 from the moment it exists.** A role whose obligations are undeclared is **inadmissible, not provisional** — an accessibility obligation attaches as soon as the role exists. |
+| **RA-4** | **The role classification is closed.** The registered classes in *Role classes by family* above stand as they are; **a future vocabulary populates them and adds none**, and DEC-S-134 adds no class. |
+| **RA-5** | **The concrete role vocabulary is OPEN**, and **`CDS-WP-020A` may not invent, adopt, reserve, or recommend a CDS Core role identifier.** A vocabulary requires its own separately authorized decision, taken under RA-1 … RA-4. |
+
+**VP-6 remains UNSATISFIED for every family.** A policy is not an authored role with
+SR-1 … SR-12 declarations, and no role exists to declare anything.
+
+### Sequencing against the theme mechanism
+
+*(Normative — **DEC-S-135**, 2026-09-05. **`PROPOSED / AUTHORIZED FOR INTEGRATION`
+and NOT YET EFFECTIVE.**)*
+
+**No semantic visual role carries a default alias to a reference primitive before
+CDS-WP-022 decides the Theme and Context Mechanism**, and **CDS-WP-022 precedes
+context-sensitive value selection**. This gates values and bindings, **not
+structure**: identifier grammar, scale ownership, role admission, family maturity
+governance and **source-set structural identity** are context-independent by
+**TC-1**, **TC-2**, **T-8**, **N-6** and **RB-1**, and are not blocked.
+**`CDS-WP-022 BEFORE VALUE SELECTION` does not mean `CDS-WP-022 BEFORE EVERY
+SOURCE-STRUCTURE OR IDENTITY ACTIVITY`.** **TC-6 continues to bind independently**,
+and **SEQUENCED NEXT ≠ AUTHORIZED** — CDS-WP-022 remains `Planned`, not active, and
+not authorized.
 
 | # | Rule |
 | --- | --- |
@@ -318,7 +390,7 @@ without naming a component.
 | **IS-2** | A **non-interactive or read-only** state must remain perceivable and **must not be communicated by reduced contrast alone** — that is precisely the encoding that fails for low-vision users, in greyscale, and under forced colours. |
 | **IS-3** | A **validation-feedback** role is an outcome, not a status axis value (VF-I-7). A form error is not a status `condition`. |
 | **IS-4** | A **destructive or far-reaching** action's risk tier is a Layer-4 contract concern (CR-010). The foundation may supply distinct Interaction roles for tiers; it decides no tier and permits **no colour-only** distinction of danger (baseline 10.5). |
-| **IS-5** | **Selected, active, and current** must be conveyed by an accessible state, never by colour or position alone. Which of these are distinct roles remains open (**OD-6**). |
+| **IS-5** | **Selected, active, and current** must be conveyed by an accessible state, never by colour or position alone. **Disposition (DEC-S-134, 2026-09-05, `PROPOSED / AUTHORIZED FOR INTEGRATION`, not yet effective): none of the three is a CDS Core role today** — no current cross-consumer authority supports admitting them under **RA-1**. **This is not a permanent prohibition**, and it removes no protection: **IS-1** and this rule already bind whatever a consumer builds. **Their distinctness remains open** and is answered with the concrete vocabulary, not before it — deciding the count now would decide the vocabulary by implication. |
 
 ## Validation requirements
 
@@ -387,10 +459,11 @@ is not evidence of success** (EV-4).
 
 ## Deferred decisions
 
-The concrete role vocabulary, per family · the concrete path grammar · the
-state-role vocabulary · the density model and its levels · every value a role
-would resolve to · the concrete visual source-set root identifiers · composite
-type admission · the theme mechanism and the token layering light and dark imply ·
+The concrete role vocabulary, per family · the state-role vocabulary · the density
+model and its levels · every value a role would resolve to · **per-family scale
+topology parameters** · **VF-1 tonal topology** · composite type admission · **any
+migration or deprecation compatibility mechanism outside the normative Semantic
+alias graph** · the theme mechanism and the token layering light and dark imply ·
 the status-to-visual binding · named extension points · the typeface, its weight
 identity, and its licensing, provenance and distribution model.
 
@@ -407,6 +480,15 @@ rule** (DEC-S-129), the **admitted
 `$type` set** (DEC-S-130), and the **visual source-set unit, topology and maturity
 granularity** (DEC-S-131). **None of the four creates a role, a role identifier, or
 a value**, and **no contrast has been evaluated** — there is nothing to evaluate.
+
+**Decided by the CDS Step-9 Decision Integration Pass (2026-09-05), and
+`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET EFFECTIVE:** the **identifier
+grammar, the two identity spaces, and the concrete family and source-set roots**
+(**DEC-S-132**, ADR-0005); the **per-scale ownership model and the topology/value
+boundary** (**DEC-S-133**); the **role admission rule** (**DEC-S-134**); and the
+**theme sequencing rule** (**DEC-S-135**). **None of the four creates a role, a
+role identifier, a binding, or a value.** **The concrete role vocabulary stays
+open, `CDS-WP-020A` may not invent it, and VP-6 stays UNSATISFIED.**
 
 ## Related documents
 

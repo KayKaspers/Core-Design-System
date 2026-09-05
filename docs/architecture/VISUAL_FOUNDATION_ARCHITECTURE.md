@@ -3,6 +3,15 @@
 - **Project:** Core Design System (CDS)
 - **Registered by:** CDS-WP-019 — Core Visual Foundation Architecture
 - **Date:** 2026-08-26
+- **Amended by:** CDS Step-9 Decision Integration Pass, 2026-09-05 — the **naming
+  model** (**N-6** reconciled to `qualifier`, and the fixed family roots recorded)
+  and **deferred decisions 2 and 3**, to apply **DEC-S-132**
+  ([ADR-0005](../decisions/ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md))
+  and **DEC-S-134**. **Those amendments are `PROPOSED / AUTHORIZED FOR
+  INTEGRATION` and NOT YET EFFECTIVE**; they become effective only at the
+  Human-Maintainer exact integration commit of the reviewed object. **They select
+  no value, create no token identifier, and create no role identifier**, and
+  VF-1 … VF-9, VF-I-1 … VF-I-14, N-1 … N-5 and N-7 … N-8 are unchanged.
 - **Artifact class:** **1 — Normative human-readable source** (DEC-S-022)
 - **Status:** **Normative for the structure of the CDS visual foundation** upon
   Human-Maintainer commit. It defines **how** visual foundations are structured,
@@ -262,22 +271,59 @@ The visual foundation adds the following **naming principles**:
 | **N-3** | **No channel term** appears in a shared semantic identifier. A channel is a scope, not a meaning. |
 | **N-4** | **No status axis or status value name** is reused as a visual role name (VF-I-6, VF-I-7). |
 | **N-5** | **No component name** appears in a Reference or Semantic identifier. |
-| **N-6** | **The path encodes family, role, and modifier** — not a value, a theme, or a profile. Theme and profile are **resolution inputs**, never path segments in a shared semantic identifier. |
+| **N-6** | **The path encodes family, role, and qualifier** — not a value, a theme, or a profile. Theme and profile are **resolution inputs**, never path segments in a shared semantic identifier. *(The slot was originally worded "modifier"; **DEC-S-132** renamed it to **`qualifier`** because *conditional modifier* is already bound to Resolver / Theme composition semantics. **The principle is unchanged** — only the term is.)* |
 | **N-7** | **A name states a purpose, not a rank**, wherever a rank would be read as an importance the system does not actually guarantee. |
 | **N-8** | **Deterministic and machine-checkable.** Any naming rule that cannot be expressed as a check is guidance, not a rule. |
 
+### Identifier grammar and family roots
+
+*(Normative — **DEC-S-132**, CDS Step-9 Decision Integration Pass, 2026-09-05.
+**`PROPOSED / AUTHORIZED FOR INTEGRATION` and NOT YET EFFECTIVE** until the
+Human-Maintainer exact integration commit of the reviewed object.
+[ADR-0005](../decisions/ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md)
+carries the rationale. **No token, role, source set, or value is created.**)*
+
+| # | Rule |
+| --- | --- |
+| **Family-rooted** | A visual token path begins with a **single segment naming a registered visual family**. |
+| **Reference grammar** | `<family>.<primitive-group>.<step>[.<qualifier>]` |
+| **Semantic grammar** | `<family>.<role>[.<qualifier>]` |
+| **Qualifier** | The qualifier position is **declared and optional**, and **no concrete qualifier is created**. Declaring the position is not permission to populate it. |
+| **Layer** | The token-flow layer is **never a token-path segment**. It remains the explicit `layer` field the committed schemas already enumerate and validate. |
+| **Two identity spaces** | **Token-path identity and Source Set identity are separate.** Neither is computable from the other; a `sourceSetId` is **declared, never derived** (DEC-S-131 clause 3). |
+| **Source-set form** | `<layer>/<family>`, flat — **no `visual`, `foundation`, `brand`, `product`, `channel`, `context`, or `theme` namespace segment.** |
+
+**Fixed technical roots — one per registered family in current scope:**
+
+| Family | Technical root | Reference source set | Semantic source set |
+| --- | --- | --- | --- |
+| **VF-1 Colour** | `color` | `reference/color` | `semantic/color` |
+| **VF-2 Typography** | `typography` | `reference/typography` | `semantic/typography` |
+| **VF-3 Space and Size** | `space` | `reference/space` | `semantic/space` |
+| **VF-5 Shape** | `shape` | `reference/shape` | `semantic/shape` |
+| **VF-6 Surface and Elevation** | `surface` | `reference/surface` | `semantic/surface` |
+
+**`color` is the technical identifier; `Colour` remains the display and prose term**
+(DEC-S-110). **A compound display name does not produce two roots** — VF-3 and VF-6
+each take one, and internal constructs are differentiated by the `<primitive-group>`
+position. **These are identifier-authority statements only: no Source Set instance,
+no `sourceRevision`, no manifest, no resolver, no token, and no file is created, and
+visual source sets remain 0.**
+
 ### Non-normative illustration
 
-> **The following illustrates *shape*, not *content*.** No identifier below is
-> adopted, reserved, recommended, or planned. It is an **example artifact**
-> (authority class 8) and is **never normative** (architecture invariant 3,
-> VF-I-13). The concrete vocabulary is **CDS-WP-020's** and requires its own
-> authorization.
+> **The following illustrates *content* against the normative shapes above.** No
+> identifier **content** below is adopted, reserved, recommended, or planned. It is
+> an **example artifact** (authority class 8) and is **never normative**
+> (architecture invariant 3, VF-I-13). **The concrete vocabulary below the root
+> remains open** and requires its own authorization: role vocabulary under
+> **DEC-S-134**'s admission rule, and scale steps under **DEC-S-133**'s per-family
+> topology, both of which are undecided.
 
 | Shape | Illustrative form | What the shape demonstrates |
 | --- | --- | --- |
 | Reference position | `<family>.<primitive-group>.<step>` | A primitive may be named for what it is |
-| Semantic position | `<family>.<role>.<modifier>` | A role is named for what it is *for* |
+| Semantic position | `<family>.<role>.<qualifier>` | A role is named for what it is *for* |
 | Prohibited | a rank or appearance term standing in a semantic position | N-1, VF-I-2 |
 | Prohibited | a product or consumer term in a shared foundation identifier | N-2 |
 | Prohibited | a status value name reused for a visual role | N-4, VF-I-6 |
@@ -383,7 +429,7 @@ decide, schedule, or authorize it.)*
 | --- | --- | --- |
 | 1 | Every concrete visual value — colour, palette, typeface, size, spacing, radius, stroke, shadow, opacity, icon, illustration, motion value, breakpoint | CDS-WP-020 and later, each separately authorized |
 | 2 | The admitted DTCG `$type` set for visual families — **CLOSED by DEC-S-130** (CDS-WP-020 Decision Integration Pass, 2026-08-27): `color`, `dimension`, `number`. Composite types and font-family / font-weight identity **stay deferred** | **Closed**; residual under **OD-2** |
-| 3 | The concrete shared vocabulary of families, roles, and modifiers | CDS-WP-020 successor work, **still open** as **OD-6** |
+| 3 | The concrete shared vocabulary of families, roles, and qualifiers — **partly closed 2026-09-05**, `PROPOSED / AUTHORIZED FOR INTEGRATION` and **not yet effective**. **Family roots are fixed by DEC-S-132** and the **qualifier position is declared but unpopulated**. **The concrete role vocabulary stays open:** DEC-S-134 decides an **admission rule only** — a role enters CDS Core only on demonstrated cross-consumer need, satisfying SR-1 … SR-12 from creation, inside the **closed** role classification — and **creates no role identifier**. | The role vocabulary is **still open** as **OD-6A**, for separately authorized successor work; **`CDS-WP-020A` may not invent it** |
 | 4 | The responsive-range model, and the Layer 3 / Layer 5 split for viewport strategy | CDS-WP-021 |
 | 5 | Whether a theme is a resolver context, a separate source set, or a Product Profile concern — and the token layering light and dark imply (CR-025) | **CDS-WP-022** |
 | 6 | Whether high contrast is a CDS context, a platform-honouring behaviour, or both | CDS-WP-022 |

@@ -3,6 +3,13 @@
 - **Project:** Core Design System (CDS)
 - **Registered by:** CDS-WP-019 — Core Visual Foundation Architecture
 - **Date:** 2026-08-26
+- **Amended by:** CDS Step-9 Decision Integration Pass, 2026-09-05 — a new *Theme
+  sequencing* section, to apply **DEC-S-135**. **That amendment is `PROPOSED /
+  AUTHORIZED FOR INTEGRATION` and NOT YET EFFECTIVE**; it becomes effective only at
+  the Human-Maintainer exact integration commit of the reviewed object. **It
+  decides no theme mechanism, creates no theme and no context, and authorizes no
+  work package**, and T-1 … T-10, the candidate contexts, and the Product Profile
+  boundary are unchanged.
 - **Artifact class:** **1 — Normative human-readable source** (DEC-S-022)
 - **Status:** **Normative for what a CDS theme is and what it may do.** It defines
   **VF-9** as a set of constraints and **creates no theme**.
@@ -112,6 +119,31 @@ does not escape its channel's profile requirement.
 | **T-8** | **Theme is a resolution input, not a path segment.** A theme name never appears inside a shared semantic identifier (N-6). |
 | **T-9** | **A theme carries provenance.** Any generated per-theme output identifies its source revision, transformation revision, and resolved context (DEC-S-031). |
 | **T-10** | **A theme is not a place to fix a core gap.** If a role only works in one context, the role is wrong — raise it, do not paper over it with a context (anti-fragmentation rule 3, applied). |
+
+## Theme sequencing
+
+*(Normative — **DEC-S-135**, CDS Step-9 Decision Integration Pass, 2026-09-05.
+**`PROPOSED / AUTHORIZED FOR INTEGRATION` and NOT YET EFFECTIVE.** It **decides no
+theme mechanism** — that remains CDS-WP-022's and is untouched. **No ADR** —
+DEC-S-135 is deliberately not an architecture dependency of ADR-0005.)*
+
+| # | Rule |
+| --- | --- |
+| **TS-1** | **No semantic visual role carries a default alias to a reference primitive before CDS-WP-022 decides the Theme and Context Mechanism.** |
+| **TS-2** | **CDS-WP-022 precedes context-sensitive value selection.** |
+| **TS-3** | **Context-independent work is not blocked.** Identifier grammar, scale ownership and topology rules, role admission policy, family maturity governance, and **source-set structural identity** are context-independent by **TC-1**, **TC-2**, **T-8**, **N-6** and **RB-1**. |
+| **TS-4** | **`CDS-WP-022 BEFORE VALUE SELECTION` does not mean `CDS-WP-022 BEFORE EVERY SOURCE-STRUCTURE OR IDENTITY ACTIVITY`.** Declaring a source set's identity is a structural act; what TS-2 gates is its **content**. |
+| **TS-5** | **A theme remains a Resolution Context and is not a sixth token-flow layer** (DEC-S-024), and **A THEME RE-BINDS; IT NEVER REDEFINES** (T-1, VF-I-9). **TC-6 continues to bind independently of this rule.** |
+| **TS-6** | **This authorizes no work package.** CDS-WP-022 is the recommended and sequenced Step-10 candidate only — **SEQUENCED NEXT ≠ AUTHORIZED** — and it remains `Planned`, not active, and not authorized, as do `CDS-WP-020A` and CDS-WP-021 … CDS-WP-053. |
+
+**Why the rule exists.** **T-2 is vacuously satisfiable today** — zero contexts are
+supported — so it cannot judge whether a single default binding is a legitimate
+starting state. A default binding taken now would silently become *the light theme*
+and hand CDS-WP-022 a decision it exists to make, satisfying **TC-6** in form while
+violating it in substance. The evidence cost is decisive: a value selected before
+the context model and re-selected after it produces a new source revision, and **a
+new revision inherits no evidence and no admission** (AF-2, RV-4, DEC-S-126,
+DEC-S-131 clause 10).
 
 ## Candidate contexts
 

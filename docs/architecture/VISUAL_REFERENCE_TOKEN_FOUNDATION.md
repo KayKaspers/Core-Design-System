@@ -11,6 +11,17 @@
   integration commit `42a568d823de3388e45af62967546f13ad67eff6` (2026-08-27).
   **They select no value and create no identifier**, and RP-1, RP-3 … RP-10, ST-1 … ST-7,
   RN-1 … RN-9, RV-1 … RV-5 and RB-1 … RB-5 are unchanged.
+- **Amended by:** CDS Step-9 Decision Integration Pass, 2026-09-05 — the *Naming at
+  the reference position* section (identifier grammar and fixed family roots), the
+  *What any future reference scale must satisfy* section (per-scale ownership and
+  the topology/value boundary), and the *Deferred decisions* section, to apply
+  **DEC-S-132**
+  ([ADR-0005](../decisions/ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md))
+  and **DEC-S-133**. **Those amendments are `PROPOSED / AUTHORIZED FOR
+  INTEGRATION` and NOT YET EFFECTIVE**; they become effective only at the
+  Human-Maintainer exact integration commit of the reviewed object. **They select
+  no value and create no token, source set, or file**, and RP-1 … RP-10,
+  ST-1 … ST-7, RN-1 … RN-9, RV-1 … RV-5 and RB-1 … RB-5 remain unchanged.
 - **Artifact class:** **1 — Normative human-readable source** (DEC-S-022)
 - **Status:** **Normative for what a CDS visual reference token is** — token-flow
   layer **1 Reference** inside the visual foundation. It **selects no value**.
@@ -180,6 +191,36 @@ surface change and inherits that family's obligations.
 count, base unit, progression rule, or value is selected here** — that is
 recorded as an open decision.)*
 
+### Scale ownership and the topology/value boundary
+
+*(Normative — **DEC-S-133**, CDS Step-9 Decision Integration Pass, 2026-09-05.
+**`PROPOSED / AUTHORIZED FOR INTEGRATION` and NOT YET EFFECTIVE.** It applies
+ST-1 … ST-7 and changes none of them. **No ADR** — DEC-S-133 is deliberately not an
+architecture dependency of ADR-0005.)*
+
+- **ST-1 … ST-7 are the common contract** binding every ordered primitive set.
+- **There is no universal cross-family scale base.** A single base shared across
+  heterogeneous families is rejected: **ST-5 is per-scale** — *"computable … from
+  **its** declared base and rule"* — and a shared base would create the
+  cross-family coupling **AF-3** exists to prevent.
+- **Each ordered primitive set independently owns** its anchor declaration, its
+  ordering, its progression-rule kind, its step-count decision, its extension
+  behaviour, and its exclusions and declared deviations. **No family's scale
+  derives base, rule, or value authority from another family's.**
+- **`SCALE TOPOLOGY ≠ SCALE VALUES`.** A topology states how a scale is structured
+  and states no magnitude.
+- **VP-3's "base" means the anchor declaration** — the structural anchor position —
+  **not a numeric anchor magnitude.** A magnitude is a value, governed by value
+  selection.
+- **Scope:** VF-2, VF-3, VF-5 and VF-6. **Opacity remains an attribute** of VF-1 and
+  VF-6 (DEC-S-128 clause 11); **no standalone opacity family exists.**
+  **Excluded:** VF-1 tonal topology, VF-4, VF-7, VF-8 and VF-9.
+- **The per-family topology parameters are not decided.** For every family in
+  scope, the concrete anchor declaration, progression-rule kind, step count,
+  extension behaviour and exclusions **remain open**, and **VF-1 tonal topology is a
+  separate open residual**. **VP-3 therefore remains UNSATISFIED for every
+  family**, and **no value may be selected.**
+
 Several visual families hold **ordered** primitive sets: a size scale, a spacing
 scale, a radius scale, a stroke set, an elevation set, an opacity set. CDS selects
 none of them. Any scale later proposed must satisfy the following, and a scale
@@ -208,7 +249,35 @@ evidenced need that would justify fixing it ahead of the decision.
 ## Naming at the reference position
 
 *(Normative — an application of DEC-S-081 and the CDS-WP-019 naming model.
-**No identifier is created, adopted, reserved, recommended, or planned.**)*
+**No token identifier is created, adopted, reserved, recommended, or planned.**
+The **family roots** below are fixed by DEC-S-132; nothing beneath a root is.)*
+
+### Grammar and roots
+
+*(Normative — **DEC-S-132**, 2026-09-05. **`PROPOSED / AUTHORIZED FOR INTEGRATION`
+and NOT YET EFFECTIVE.**
+[ADR-0005](../decisions/ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md)
+carries the rationale.)*
+
+A reference position takes **`<family>.<primitive-group>.<step>[.<qualifier>]`**.
+The path is **family-rooted**; the **token-flow layer is never a segment** of it and
+remains the explicit `layer` field; the **qualifier** position is **declared and
+optional and no concrete qualifier is created** — the term is `qualifier` rather
+than `modifier` because *conditional modifier* is already bound to Resolver / Theme
+composition semantics.
+
+The fixed technical roots are **`color`** (VF-1), **`typography`** (VF-2),
+**`space`** (VF-3), **`shape`** (VF-5) and **`surface`** (VF-6) — one root per
+registered family, with a compound display name producing **one** root and the
+`<primitive-group>` position differentiating internal constructs. The Reference
+Source Set identities are **`reference/color`**, **`reference/typography`**,
+**`reference/space`**, **`reference/shape`** and **`reference/surface`**, in the
+flat **`<layer>/<family>`** form; a `sourceSetId` is **declared, never derived**
+from a path (DEC-S-131 clause 3), and **token-path identity and source-set identity
+are separate spaces**.
+
+**This creates no Source Set instance, no `sourceRevision`, no manifest, no
+resolver, no token, and no file. Visual source sets remain 0.**
 
 | # | Rule |
 | --- | --- |
@@ -264,18 +333,23 @@ omission would be indistinguishable from an oversight:
 | Structural schema | **Sufficient without change.** The committed token-document schema constrains structure, the CDS payload, and segment naming; it places no visual-specific constraint and needs none to accept a structurally valid visual document. |
 | Colour space and encoding | **DECIDED — DEC-S-128** (OD-1 answered). One canonical space keyed `srgb`, perceptual spaces derivational only. The CDS-specific `hex` disposition stays a recorded residual. |
 | Admitted `$type` set | **DECIDED — DEC-S-130** (OD-2 answered). Exactly `color`, `dimension`, `number`, with explicit own typing required and composites unadmitted. The offline validator's bounded V2 type set remains a **validator scope boundary under DEC-S-098**, not a CDS profile admission, and must not be read as one (RISK-074). Font-family and font-weight identity stays a recorded residual. |
-| Source-set identity and topology | **DECIDED — DEC-S-131** (OD-3 answered) for the **unit, topology and maturity granularity**: one source set per independently evaluable Family × Token-Flow-Layer unit; maturity binds to (`sourceSetId`, `sourceRevision`); aggregation confers nothing. **The concrete root identifiers are not created** and stay a recorded residual coupled to OD-4. Repository topology remains an explicit DEC-S-032 deferral. |
-| Concrete identifiers | **Insufficient — OD-4.** The path grammar is an example artifact today. |
-| Concrete values | **Insufficient — OD-5, OD-6, OD-7.** |
+| Source-set identity and topology | **DECIDED — DEC-S-131** (OD-3 answered) for the **unit, topology and maturity granularity**: one source set per independently evaluable Family × Token-Flow-Layer unit; maturity binds to (`sourceSetId`, `sourceRevision`); aggregation confers nothing. **The concrete root identifiers are decided by DEC-S-132** (prepared, not yet effective), which creates **no instance**. Repository topology remains an explicit DEC-S-032 deferral. |
+| Concrete identifiers | **DECIDED — DEC-S-132** (OD-4 answered), prepared and **not yet effective**: the grammar, the two identity spaces, and the fixed family and source-set roots. **No identifier instance, Source Set, or `sourceRevision` exists.** |
+| Concrete values | **Insufficient.** **VP-3, VP-5, VP-6 and VP-7 are unsatisfied**, VP-2 is unsatisfied for typeface identity, weight identity and composites, and the per-family topology parameters, **VF-1 tonal topology** and the **concrete role vocabulary** stay open. |
 
 > **The machinery was always sufficient; the decisions were not.** Three of the
-> blocking choices are now made — **DEC-S-128, DEC-S-130 and DEC-S-131**, with
+> blocking choices are made and effective — **DEC-S-128, DEC-S-130 and DEC-S-131**,
+> with
 > [ADR-0004](../decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md)
-> recording the rationale — and **that still does not permit a source set to be
-> written.** OD-4, OD-5, OD-6 and OD-7 remain open, **VP-3, VP-4 and VP-5 remain
-> unsatisfied for every family**, and writing a file anyway would settle them by
-> implication — acquiring authority instead of receiving it, which DEC-S-033
-> prohibits. **Authority is granted, never acquired.**
+> recording the rationale — and the remaining four are decided by the CDS Step-9
+> Decision Integration Pass (**DEC-S-132 … DEC-S-135**, with **ADR-0005**),
+> **prepared and NOT YET EFFECTIVE**. **That still does not permit a source set to
+> be written.** **VP-3, VP-5, VP-6 and VP-7 remain unsatisfied for every family**,
+> VP-2 remains unsatisfied for typeface identity, weight identity and composites,
+> and **only VP-4 moves** — because **deciding an identifier is not creating one**.
+> Writing a file anyway would settle the remaining choices by implication —
+> acquiring authority instead of receiving it, which DEC-S-033 prohibits.
+> **Authority is granted, never acquired.**
 
 ## Validation requirements
 
@@ -330,12 +404,14 @@ sufficient accessibility evidence** (DEC-S-053).
 
 ## Deferred decisions
 
-Every concrete reference value · palette and hue set · scale topology, base unit,
-step count, and progression rule · the typeface, its weight identity, and its
-fallback chain · the concrete visual source-set root identifiers · the concrete
-path grammar and identifier vocabulary · the CDS-specific `hex` disposition ·
-composite type admission · icon dimensions · motion values · named extension
-points.
+Every concrete reference value · palette and hue set · **per-family scale topology
+parameters** — the concrete anchor declaration, progression-rule kind, step count,
+extension behaviour and exclusions, for each family in scope · **VF-1 tonal
+topology** · the typeface, its weight identity, and its fallback chain · the
+identifier vocabulary **beneath a fixed family root** · the CDS-specific `hex`
+disposition · composite type admission · **any migration or deprecation
+compatibility mechanism outside the normative Semantic alias graph** · icon
+dimensions · motion values · named extension points.
 
 Each is recorded, with alternatives and an impact statement, in the
 [Visual Token Foundation Open Decisions](../roadmap/VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md)
@@ -348,6 +424,15 @@ integration commit `42a568d823de3388e45af62967546f13ad67eff6`: the **colour spac
 and encoding** (DEC-S-128), the **admitted `$type` set** (DEC-S-130), and the **visual source-set unit, topology
 and maturity granularity** (DEC-S-131). **None of the three selects a value or
 creates an identifier.**
+
+**Decided by the CDS Step-9 Decision Integration Pass (2026-09-05), and
+`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET EFFECTIVE:** the **identifier
+grammar, the two identity spaces, and the concrete family and source-set roots**
+(**DEC-S-132**, ADR-0005), and the **per-scale ownership model and the
+topology/value boundary** (**DEC-S-133**). **Neither selects a value**, and
+DEC-S-132 creates **no Source Set instance and no token** — it fixes identity, not
+artifacts. **The per-family topology parameters above stay open, VF-1 tonal
+topology stays open, and VP-3 stays UNSATISFIED for every family.**
 
 ## Related documents
 

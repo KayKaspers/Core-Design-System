@@ -19,7 +19,10 @@
   Human-Maintainer integration commit `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.** **No successor work
   package is active or authorized.** The **CDS Phase Transition Governance Package**
   (**DEC-S-127**) ran between CDS-WP-019 closure and that authorization; it is
-  **not** a numbered work package and activated nothing.
+  **not** a numbered work package and activated nothing. The **CDS Step-9 Decision
+  Integration Pass** (2026-09-05) has since prepared **DEC-S-132 … DEC-S-135** and
+  **ADR-0005**; it is **not** a numbered work package, is **`PROPOSED / AUTHORIZED
+  FOR INTEGRATION` and not yet effective**, and **activates nothing**.
 - **Candidate promotion: COMPLETE.** The Semantic Status Foundation passed the
   Candidate gate and was promoted by the Human-Maintainer exact-byte **Promotion
   Commit `22fa0710e2b75df22e7b420c2f9d86bbe67b2777`** on 2026-08-19 — gate **PASS**,
@@ -62,8 +65,10 @@
   it was recorded in the closure and routing object and **became effective at that
   object's Human-Maintainer integration commit `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.**
   **`DECISION_REQUIRED` stands as the executed result**: closure answers **no** open
-  decision and selects **no** value. **OD-4 … OD-7 stay open**, and **VP-3, VP-4 and
-  VP-5 stay unsatisfied.**
+  decision and selects **no** value. **OD-4 and OD-7 are since answered, OD-5
+  partially answered, OD-6A policy-answered and OD-6B answered by existing
+  authority** — see the Step-9 entry below, **prepared and not yet effective** —
+  and **VP-3, VP-5, VP-6 and VP-7 stay unsatisfied.**
 - **`FR-N-03` state:** **RESOLVED BY EXPLICIT AUTHORING-WP DESTINATION.** Nova
   adjudicated it with Human-Maintainer approval — **Option 2**: **source and value
   authoring is not validation.** The concrete machine-readable Visual Token Source
@@ -78,7 +83,7 @@
 - **CDS-WP-020 Decision Integration Pass (2026-08-27):** separately authorized;
   registered **DEC-S-128 … DEC-S-131 and ADR-0004**, which are **effective** at the
   Human-Maintainer exact-byte integration commit
-  `42a568d823de3388e45af62967546f13ad67eff6`. They answer **OD-1, OD-2 and OD-3**; **OD-4 … OD-7 stay open** and **VP-3, VP-4 and VP-5 stay unsatisfied**.
+  `42a568d823de3388e45af62967546f13ad67eff6`. They answer **OD-1, OD-2 and OD-3**.
   The pass created **no** value, **no** identifier, **no** token source, schema,
   validator rule, test, or fixture; admitted **no** evidence; changed **no**
   maturity; added **no** risk entry (**`RISK-099` is not required**); activated
@@ -112,14 +117,23 @@ then authorized separately** and has been executed. The remaining sequence is:
 | 6 | **Nova adjudication** of that review | Nova — recommendation only, never approval | **Done** |
 | 7 | **Human-Maintainer integration commit** of the closure and routing object | Human Maintainer | **Done** — `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7` |
 | 8 | **CDS-WP-020 closure becomes effective** | Effective at step 7 | **Done** — effective at `3f37ecf…` |
-| 9 | **Decision on OD-4, OD-5, OD-6 and the OD-7 sequencing** | Human Maintainer | Pending |
-| 10 | **Authorization of the next work package** — a separate, explicit Human-Maintainer decision | Human Maintainer | Pending |
+| 9 | **Decision on OD-4, OD-5, OD-6 and the OD-7 sequencing** | Human Maintainer | **Done** — taken 2026-09-05. **OD-4 and OD-7 answered, OD-5 partially answered, OD-6A policy-answered, OD-6B answered by existing authority.** |
+| 9a | **CDS Step-9 Decision Integration Pass** — prepare `DEC-S-132 … DEC-S-135` and `ADR-0005` | Claude, under Human-Maintainer authorization | **Done** — object prepared; **`PROPOSED / AUTHORIZED FOR INTEGRATION`, not yet effective** |
+| 9b | **Fresh independent review** of the Step-9 Decision Integration object | Reviewer ≠ executor | **Next** |
+| 9c | **Nova adjudication** of that review | Nova — recommendation only, never approval | Pending |
+| 9d | **Human-Maintainer exact integration commit** of the Step-9 object | Human Maintainer | Pending |
+| 9e | **`DEC-S-132 … DEC-S-135` and `ADR-0005` become effective** | Effective at step 9d | Pending |
+| 10 | **Authorization of the next work package** — a separate, explicit Human-Maintainer decision. **Recommended candidate: CDS-WP-022**, which is **not authorized**. | Human Maintainer | Pending |
 
-**Step 8 is not reached before step 7**, and **step 10 is not implied by step 8 or
-step 9**. Uncommitted executor output changes no authoritative phase or
-work-package status, and a review PASS is not a commit. **No concrete visual value
-is created at any step above**, and **no value work is possible while OD-4 and
-OD-5 remain open** — **VP-3, VP-4 and VP-5 are unsatisfied for every family.**
+**Step 8 is not reached before step 7**, **step 9e is not reached before step 9d**,
+and **step 10 is not implied by step 9, 9e, or anything below it**. Uncommitted
+executor output changes no authoritative phase or work-package status, and a review
+PASS is not a commit. **No concrete visual value is created at any step above**, and
+**no value work is possible**: **VP-3, VP-5, VP-6 and VP-7 are unsatisfied for every
+family**, VP-2 is unsatisfied for typeface identity, weight identity and composites,
+and **only VP-4 moves** — for VF-1, VF-2, VF-3, VF-5 and VF-6 — once step 9e is
+reached. **Deciding an identifier is not creating one**, and
+**SEQUENCED NEXT ≠ AUTHORIZED**.
 **Registering `CDS-WP-020A` at step 5 activates nothing**: it stays `Planned`, not
 active, and not authorized until a separate Human-Maintainer authorization at
 step 10.
@@ -144,12 +158,42 @@ Human-Maintainer exact-byte integration commit
 `42a568d823de3388e45af62967546f13ad67eff6`, which followed a Fresh Independent
 Review and Nova integration adjudication.
 
-**OD-4, OD-5, OD-6 and OD-7 remain open**, with three residuals recorded under the
-answered entries. The propositions, alternatives, recommendations, and affected
-files are held in the **non-normative**
+**OD-4 and OD-7 are answered, OD-5 is partially answered, OD-6A is policy-answered,
+and OD-6B is answered by existing normative authority** — by the CDS Step-9
+Decision Integration Pass below, which is **prepared and NOT YET EFFECTIVE**. **What
+stays open:** the **concrete role vocabulary**, the **per-family scale topology
+parameters**, **VF-1 tonal topology**, the **OD-1 `hex`** residual, the **OD-2**
+font-identity and composite residuals, and **any migration compatibility mechanism
+outside the normative Semantic alias graph**. The propositions, alternatives,
+recommendations, and affected files are held in the **non-normative**
 [Visual Token Foundation Open Decisions](../docs/roadmap/VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md)
 register. **A new risk entry is still not recommended** and **`RISK-099` is not
 required**; the register stays at **98**.
+
+## CDS Step-9 Decision Integration Pass — 2026-09-05
+
+**`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET EFFECTIVE.** The Human
+Maintainer decided **OD-4, OD-5, OD-6A and OD-7** on 2026-09-05 and authorized this
+bounded pass to prepare the records. **DEC-S-132 … DEC-S-135** and **ADR-0005**
+become effective **only** at the Human-Maintainer exact integration commit of the
+exact reviewed Working Tree object. **The committed register stays at 131 decisions
+and 4 ADRs; the prepared target is 135 and 5.**
+
+| Decision | Records | Residual left open |
+| --- | --- | --- |
+| **DEC-S-132** (ADR-0005) | Family-rooted grammar `<family>.<primitive-group>.<step>[.<qualifier>]` and `<family>.<role>[.<qualifier>]`; **`qualifier`, not `modifier`**; **the layer is never a path segment**; **two separate identity spaces** with `sourceSetId` declared, never derived; flat `<layer>/<family>`; roots `color`, `typography`, `space`, `shape`, `surface`; the ten identities `reference/color` … `semantic/surface`. **OD-4 answered; the OD-3 concrete-root residual resolved.** | **Any migration compatibility mechanism outside the normative Semantic alias graph** — new, and OPEN. AL-2 is unchanged. |
+| **DEC-S-133** | **No universal cross-family base** — ST-5 is per-scale. Each ordered set independently owns its anchor declaration, ordering, progression-rule kind, step count, extension behaviour and exclusions, under the unchanged ST-1 … ST-7. **`SCALE TOPOLOGY ≠ SCALE VALUES`**, and VP-3's "base" is the **anchor declaration**, not a magnitude. **OD-5 only PARTIALLY answered.** | **Per-family topology parameters** for every family in scope, and **VF-1 tonal topology** — both OPEN. |
+| **DEC-S-134** | A **cross-consumer admission rule** only, inside the closed role classification, with SR-1 … SR-12 required from creation. **`CDS-WP-020A` may not invent a role identifier.** **`selected`, `active`, `current` are not Core roles today** (answering IS-5) — not a permanent prohibition. **OD-6A POLICY ANSWERED.** | **The concrete role vocabulary** — OPEN. |
+| **DEC-S-135** | **No default role alias before CDS-WP-022**, which **precedes context-sensitive value selection**. Context-independent work is not blocked. **OD-7 answered.** | — |
+| **OD-6B** | **Answered by existing normative authority; no new Decision.** VF-1 … VF-9 remain separate artifact families under AF-1, AF-3, AF-4. **BATCHED REVIEW ≠ SHARED MATURITY.** | — |
+
+**The pass creates no visual value, no identifier instance, no Source Set, and no
+role; admits no evidence; changes no maturity; adds no risk; and activates no work
+package.** **VP-4 becomes satisfied for VF-1, VF-2, VF-3, VF-5 and VF-6 once
+effective; VP-3, VP-5, VP-6 and VP-7 stay unsatisfied**, and VP-2 stays unsatisfied
+for typeface identity, weight identity and composites — so **no visual value may be
+selected.** **CDS-WP-022 is the recommended and sequenced Step-10 candidate and is
+NOT authorized** — **SEQUENCED NEXT ≠ AUTHORIZED.**
 
 ### Phase-transition note (resolved by DEC-S-127)
 

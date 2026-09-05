@@ -11,6 +11,16 @@
   (2026-08-27). **No threshold is restated or invented, no value is selected, and VP-1 … VP-7,
   VE-1 … VE-12, IG-1 … IG-10, VD-1 … VD-8, VA-1 … VA-10 and VS-1 … VS-6 are
   otherwise unchanged.**
+- **Amended by:** CDS Step-9 Decision Integration Pass, 2026-09-05 — a second,
+  additive prerequisite-state subsection under VP-1 … VP-7, to apply **DEC-S-132**
+  ([ADR-0005](../decisions/ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md)),
+  **DEC-S-133**, **DEC-S-134** and **DEC-S-135**. **That amendment is `PROPOSED /
+  AUTHORIZED FOR INTEGRATION` and NOT YET EFFECTIVE**; it becomes effective only at
+  the Human-Maintainer exact integration commit of the reviewed object. **No value
+  is selected, no prerequisite text is rewritten, and the 2026-08-27 table is
+  preserved as the record of the period it governed.** VP-1 … VP-7,
+  VE-1 … VE-12, IG-1 … IG-10, VD-1 … VD-8, VA-1 … VA-10 and VS-1 … VS-6 are
+  unchanged.
 - **Artifact class:** **1 — Normative human-readable source** (DEC-S-022)
 - **Status:** **Normative for how a visual value may be selected** — the discipline
   every future value must satisfy before it may enter CDS. It **selects no value**.
@@ -77,7 +87,9 @@ family.** A value proposed while any of them is open is a premature decision and
 ### Prerequisite state after the 2026-08-27 Decision Integration Pass
 
 *(**Effective** at the Human-Maintainer exact-byte integration commit
-`42a568d823de3388e45af62967546f13ad67eff6`)*
+`42a568d823de3388e45af62967546f13ad67eff6`. **Superseded in part by the 2026-09-05
+state below**, which is `PROPOSED / AUTHORIZED FOR INTEGRATION` and not yet
+effective. This table remains correct for the period it governed.)*
 
 | Prerequisite | State | Basis |
 | --- | --- | --- |
@@ -94,6 +106,36 @@ family.** A value proposed while any of them is open is a premature decision and
 > [Visual Token Foundation Open Decisions](../roadmap/VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md)
 > register — **OD-4, OD-5, OD-6 and OD-7 are open**, together with three recorded
 > residuals under OD-1, OD-2 and OD-3.
+
+### Prerequisite state after the CDS Step-9 Decision Integration Pass
+
+*(**`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET EFFECTIVE.** Approved by the
+Human Maintainer on 2026-09-05; it becomes effective only at the Human-Maintainer
+exact integration commit of the reviewed object. **DEC-S-132, DEC-S-133, DEC-S-134
+and DEC-S-135 select no value**, and **VP-1 … VP-7 themselves are unchanged.**)*
+
+| Prerequisite | State | Basis |
+| --- | --- | --- |
+| **VP-1** | **Satisfied** for every family. | CDS-WP-020 contract |
+| **VP-2** | **Unchanged.** **Satisfied** for the families expressible in `color`, `dimension` and `number`, and for colour representation. **Not satisfied** for typeface and weight identity, or for anything needing a composite type. | **DEC-S-128**, **DEC-S-130**; the OD-2 residuals stay open |
+| **VP-3** | **UNSATISFIED for every family — and it fails closed.** DEC-S-133 decides **who owns a scale and what kind of statement a topology is**; it decides **no family's** anchor declaration, progression-rule kind, step count, extension behaviour, or exclusions. VP-3 requires those. **VF-1 is additionally unsatisfied** because its tonal topology is excluded and deferred. | **DEC-S-133** — ownership model and topology/value boundary only; per-family topology parameters and VF-1 tonal topology remain open |
+| **VP-4** | **Satisfied for VF-1, VF-2, VF-3, VF-5 and VF-6.** The identifier grammar **and** the concrete family and source-set roots are decided, so a value would have somewhere to live that will not be renamed. **This states nothing more:** no identifier instance exists, no Source Set exists, and no `sourceRevision` exists. | **DEC-S-132**, ADR-0005; the OD-3 concrete-root residual is resolved |
+| **VP-5** | **UNSATISFIED for every family.** The unit, topology and maturity granularity are decided (DEC-S-131) and the **root identities** are decided (DEC-S-132), but **no Source Set instance and no `sourceRevision` exists**. **Visual source sets remain 0.** | The rule and the identity are decided; **the instance is not created**, and only a separately authorized authoring work package could create one |
+| **VP-6** | **UNSATISFIED for every family.** DEC-S-134 decides an **admission rule**; **a policy is not an authored role with SR-1 … SR-12 declarations**, and no role exists to declare anything. | **DEC-S-134** — the concrete role vocabulary remains open |
+| **VP-7** | **UNSATISFIED.** **No work package is currently authorized**, and none of the four decisions authorizes one. | Step 10 is a separate, explicit Human-Maintainer act |
+
+> **Four more decisions still do not complete the value system.** **VP-3, VP-5,
+> VP-6 and VP-7 fail for every visual family**, and **VP-2 fails for typeface
+> identity, weight identity and composites** — so **no visual value may be
+> selected**, and a value proposed while any prerequisite is open remains a
+> premature decision and a **reportable deviation**. **Deciding is not
+> implementing, implementing is not validating, and validating is not satisfying.**
+> The remaining choices are recorded in the **non-normative**
+> [Visual Token Foundation Open Decisions](../roadmap/VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md)
+> register: **per-family topology parameters**, **VF-1 tonal topology**, the
+> **concrete role vocabulary**, the **OD-1 `hex`** residual, the **OD-2** font and
+> composite residuals, and **any migration compatibility mechanism outside the
+> normative Semantic alias graph**.
 
 ## The evaluation
 

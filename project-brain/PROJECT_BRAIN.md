@@ -105,7 +105,11 @@ approved.
   half is **gated** on **OD-1 … OD-7** — of which **OD-1, OD-2 and OD-3 were
   answered** by the separately authorized **Decision Integration Pass** of
   2026-08-27 (**DEC-S-128 … DEC-S-131 + ADR-0004, effective at `42a568d8…`**),
-  while **OD-4 … OD-7 stay open** and **VP-3, VP-4 and VP-5 stay unsatisfied**.
+  while **OD-4 and OD-7 were answered, OD-5 partially answered, OD-6A
+  policy-answered and OD-6B answered by existing authority** by the **CDS Step-9
+  Decision Integration Pass** of 2026-09-05 (**DEC-S-132 … DEC-S-135 + ADR-0005,
+  prepared and NOT YET EFFECTIVE**), and **VP-3, VP-5, VP-6 and VP-7 stay
+  unsatisfied**.
   **`DECISION_REQUIRED` stands as the executed result**: closure answers no open
   decision and selects no value. The **CDS Phase Transition Governance
   Package** (**DEC-S-127**) ran between CDS-WP-019 closure and this authorization;
@@ -1028,8 +1032,10 @@ pass and became effective at that object's Human-Maintainer integration commit
 and Source Set Realization** (the `FR-N-03` authoring destination) **and CDS-WP-021 —
 Adaptive Layout and Responsive Foundation**. Both **remain inactive until separately
 authorized by the Human Maintainer**, and **the order between them is not decided**
-— **OD-7 is open**. Any further step begins only on an explicit Nova prompt and
-Human-Maintainer authorization.
+— **OD-7 is answered by the prepared `DEC-S-135`**, which makes **CDS-WP-022** the
+recommended and sequenced Step-10 candidate. **SEQUENCED NEXT ≠ AUTHORIZED**, and
+any further step begins only on an explicit Nova prompt and Human-Maintainer
+authorization.
 
 ## Core Visual Foundation Architecture (CDS-WP-019)
 
@@ -1163,9 +1169,12 @@ created either.**
 - **The machinery was always sufficient; the decisions were not.** Nothing in the
   format profile, the schemas, the validator, or the serialization contract blocks a
   visual source set. Writing one anyway would have settled OD-1 … OD-5 by
-  implication — **acquiring** authority rather than receiving it (DEC-S-033). **Three
-  of those choices are now made, and a source set still may not be written**: OD-4
-  and OD-5 are open, and **VP-3, VP-4 and VP-5 are unsatisfied for every family**.
+  implication — **acquiring** authority rather than receiving it (DEC-S-033). **All
+  seven choices are now made or dispositioned, and a source set still may not be
+  written**: **VP-3, VP-5, VP-6 and VP-7 are unsatisfied for every family**, VP-2 is
+  unsatisfied for typeface identity, weight identity and composites, and the four
+  Step-9 decisions are **prepared and not yet effective**. **Deciding an identifier
+  is not creating one.**
 
 ### Why it returned `DECISION_REQUIRED`
 
@@ -1189,9 +1198,17 @@ explicit own typing; no composites; **`profileVersion` stays `1`**), **DEC-S-131
 (the **Source Set** as the independently evaluable unit; **AGGREGATED is not
 MATURE**) and **ADR-0004**. **All five are effective**, at the Human-Maintainer
 integration commit `42a568d8…`. They answer **OD-1, OD-2 and OD-3** and **select no
-value**; **OD-4 … OD-7 stay open**, **VP-3, VP-4 and VP-5 stay unsatisfied**, **a
-new risk entry is still not recommended and `RISK-099` is not required**, and the
-value half stays gated. *(The pass itself did not close CDS-WP-020; its
+value**. **The remaining four were decided on 2026-09-05** by the **CDS Step-9
+Decision Integration Pass**, which prepared **DEC-S-132** (family-rooted identifier
+grammar, the `qualifier` position, the layer kept out of every path, two separate
+identity spaces, and the fixed roots and source-set identities), **DEC-S-133**
+(per-family scale ownership under the unchanged ST-1 … ST-7 contract, **no
+universal cross-family base**, `SCALE TOPOLOGY ≠ SCALE VALUES`), **DEC-S-134** (a
+cross-consumer role **admission rule** only), **DEC-S-135** (no default role alias
+before CDS-WP-022) and **ADR-0005** — **all `PROPOSED / AUTHORIZED FOR INTEGRATION`
+and NOT YET EFFECTIVE**; **OD-6B needed no Decision**. **VP-3, VP-5, VP-6 and VP-7
+stay unsatisfied**, **a new risk entry is still not recommended and `RISK-099` is
+not required**, and the value half stays gated. *(The pass itself did not close CDS-WP-020; its
 effectivity qualification was not reconciled by the closure and routing pass, and
 has since been reconciled by the separately authorized post-integration
 effectiveness reconciliation — see `F-020C-01` in the

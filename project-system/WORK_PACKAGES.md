@@ -63,8 +63,12 @@ Controlled work-package roadmap for the Core Design System (CDS).
   act**: it was recorded in the closure and routing object and became effective at
   that object's Human-Maintainer integration commit `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.
   **`DECISION_REQUIRED` stands as the executed result of the work package**;
-  closing the work package neither answers **OD-4 … OD-7** nor satisfies **VP-3,
-  VP-4 and VP-5**, and **no visual value may be selected.**
+  closing the work package neither answered **OD-4 … OD-7** nor satisfied any value
+  prerequisite. **OD-4 and OD-7 have since been answered, OD-5 partially answered,
+  OD-6A policy-answered and OD-6B answered by existing authority** — by the CDS
+  Step-9 Decision Integration Pass, **prepared and not yet effective** — and
+  **VP-3, VP-5, VP-6 and VP-7 remain unsatisfied**, so **no visual value may be
+  selected.**
 - **The value and machine-readable half is routed, not abandoned.** Nova adjudicated
   it as **`FR-N-03`** with Human-Maintainer approval: **source and value authoring
   is not validation**, and it must not be absorbed into **CDS-WP-024**. Its
@@ -83,7 +87,9 @@ Controlled work-package roadmap for the Core Design System (CDS).
   unit; **AGGREGATED is not MATURE**) and **ADR-0004**. **All five are effective**, at
   the Human-Maintainer exact-byte integration commit
   `42a568d823de3388e45af62967546f13ad67eff6`. They answer
-  **OD-1, OD-2 and OD-3**; **OD-4 … OD-7 stay open** and **VP-3, VP-4 and VP-5 stay
+  **OD-1, OD-2 and OD-3**; the remaining four were decided on 2026-09-05 and are
+  prepared as **DEC-S-132 … DEC-S-135** and **ADR-0005**, **not yet effective**.
+  **VP-3, VP-5, VP-6 and VP-7 stay
   unsatisfied**, so **no visual value may be selected**. The pass created **no**
   value, **no** identifier, and **no** token source, schema, validator rule, test,
   or fixture; admitted **no** evidence; changed **no** maturity; added **no** risk
@@ -97,7 +103,8 @@ Controlled work-package roadmap for the Core Design System (CDS).
   and Source Set Realization** and **CDS-WP-021 — Adaptive Layout and Responsive
   Foundation**. Both are **`Planned`, not active, and not authorized**; each starts
   only on separate Human-Maintainer authorization, one work package at a time.
-  **The order between them is not decided here.** **OD-7 recommends that CDS-WP-022
+  **The order between them is not decided here.** **DEC-S-135 (prepared, not yet
+  effective) rules that CDS-WP-022
   be considered before any value-selection work package** — a sequencing
   recommendation only, which authorizes nothing and which this registration neither
   accepts nor rejects.
@@ -142,7 +149,7 @@ review, and authority state are recorded per work package below.
 | CDS-WP-018 | Deferred Governance and Repository Hygiene Reconciliation | Completed | CDS-WP-017 |
 | CDS-WP-019 | Core Visual Foundation Architecture | Completed | CDS-WP-018 |
 | CDS-WP-020 | Reference and Semantic Token Foundation | Completed | CDS-WP-019 |
-| CDS-WP-020A | Visual Token Source Authoring and Source Set Realization | Planned | CDS-WP-020 + OD-4, OD-5, OD-6 decided |
+| CDS-WP-020A | Visual Token Source Authoring and Source Set Realization | Planned | CDS-WP-020 + OD-4, OD-5, OD-6 decided — **OD-4 answered, OD-5 only partially, OD-6A policy only**; **VP-3, VP-5, VP-6, VP-7 unsatisfied**; pinned validator stack absent |
 | CDS-WP-021 | Adaptive Layout and Responsive Foundation | Planned | CDS-WP-020 |
 | CDS-WP-022 | Theme and Environmental Presentation Model | Planned | CDS-WP-021 |
 | CDS-WP-023 | Semantic Status Visual Binding Contract | Planned | CDS-WP-022 |
@@ -770,8 +777,11 @@ the serialization contract blocks a visual source set.
 **Three of the seven are now answered**, by the 2026-08-27 Decision Integration
 Pass: **OD-1** (DEC-S-128), **OD-2** (DEC-S-130) and **OD-3** (DEC-S-131), with
 **DEC-S-129** adding the contrast evaluation authority and **ADR-0004** the
-architecture rationale — **all five effective at commit `42a568d8…`**. **OD-4, OD-5,
-OD-6 and OD-7 remain open**, **VP-3, VP-4 and VP-5 remain unsatisfied for every
+architecture rationale — **all five effective at commit `42a568d8…`**. **OD-4 and
+OD-7 have since been answered, OD-5 partially answered, OD-6A policy-answered and
+OD-6B answered by existing authority** by the CDS Step-9 Decision Integration Pass
+(2026-09-05), **prepared and not yet effective**. **VP-3, VP-5, VP-6 and VP-7
+remain unsatisfied for every
 family**, a new risk entry remains **not** recommended and **`RISK-099` is not
 required**, and the value half stays gated.
 
@@ -779,8 +789,10 @@ required**, and the value half stays gated.
 by the Human-Maintainer commit `42a568d823de3388e45af62967546f13ad67eff6`, and the
 work package is recorded as **`Completed`**. **`DECISION_REQUIRED` stands as its
 executed result**: closing the work package answers **no** open decision, satisfies
-**no** value prerequisite, and selects **no** value. **OD-4, OD-5, OD-6 and OD-7
-remain open**, and **VP-3, VP-4 and VP-5 remain unsatisfied for every family.**
+**no** value prerequisite, and selects **no** value. **OD-4 and OD-7 are since
+answered, OD-5 partially, OD-6A by policy and OD-6B by existing authority** —
+prepared, not yet effective — and **VP-3, VP-5, VP-6 and VP-7 remain unsatisfied
+for every family.**
 
 The value and machine-readable half is **routed, not abandoned**. Nova adjudicated
 this as **`FR-N-03`** with Human-Maintainer approval — **Option 2**: source and
@@ -863,11 +875,20 @@ the [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPM
 
 **Prerequisites before it may be authorized.**
 
-- **OD-4** and **OD-5** decided by the Human Maintainer — until then **no identifier
+- **OD-4** and **OD-5** decided by the Human Maintainer. **OD-4 is answered by the
+  prepared `DEC-S-132`; OD-5 is only PARTIALLY answered by the prepared
+  `DEC-S-133`** — the per-family topology parameters and VF-1 tonal topology stay
+  open, and **VP-3 remains UNSATISFIED for every family.** Until then **no identifier
   may be created, adopted, reserved, or recommended**.
-- **OD-6** decided, for the role vocabulary and family granularity.
-- **OD-7** dispositioned — it recommends that **CDS-WP-022** be considered first.
-  **This registration neither accepts nor rejects that recommendation.**
+- **OD-6** decided, for the role vocabulary and family granularity. **OD-6B is
+  answered by existing normative authority; OD-6A is POLICY ANSWERED only by the
+  prepared `DEC-S-134`** — the **concrete role vocabulary remains OPEN**,
+  **`CDS-WP-020A` may not invent it**, and **VP-6 remains UNSATISFIED.**
+- **OD-7** dispositioned — **answered by the prepared `DEC-S-135`**: CDS-WP-022
+  precedes context-sensitive value selection, and **no semantic role carries a
+  default alias before CDS-WP-022 decides the theme mechanism.** Context-independent
+  identity and governance work is **not** blocked. **This registration authorizes
+  nothing.**
 - The pinned validator stack available in the execution environment (`F-020-07`).
 - An explicit Nova prompt **and** separate Human-Maintainer authorization.
 

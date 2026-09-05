@@ -209,16 +209,19 @@ renumbered**, and the numeric range CDS-WP-017 … CDS-WP-053 is unchanged.
 
 **Its table position is registration, not sequencing.** Listing CDS-WP-020A before
 CDS-WP-021 and CDS-WP-022 does **not** decide that it runs before them. **OD-7 is
-open** — it recommends that **CDS-WP-022** be considered before any value-selection
-work package — and this registration neither accepts nor rejects that
-recommendation. Execution order is a Human-Maintainer decision, and **CDS-WP-020A is
-`Planned`, not active, and not authorized.**
+answered by the prepared `DEC-S-135`** — CDS-WP-022 precedes context-sensitive value
+selection, and no semantic role carries a default alias before it decides the theme
+mechanism — so **CDS-WP-022 is the recommended and sequenced Step-10 candidate.**
+**SEQUENCED NEXT ≠ AUTHORIZED.** Execution order remains a Human-Maintainer
+decision, and **CDS-WP-020A is `Planned`, not active, and not authorized.**
 
 **The milestone mapping is not re-derived here.** **M2 — Visual Foundation Ready**
 still reads *"reached after CDS-WP-022"*, unchanged. Whether CDS-WP-020A belongs
-before or inside that milestone depends on **OD-4 … OD-7**, which are open; deciding
-it here would be a sequencing decision this pass holds no authority to make. See
-**`F-020C-02`**.
+before or inside that milestone depends on **OD-4 … OD-7**; deciding it here would
+be a sequencing decision this pass holds no authority to make. **The Step-9
+decisions do not re-derive it either** — `DEC-S-135` sequences CDS-WP-022 before
+context-sensitive value selection and says nothing about M2's composition. See
+**`F-020C-02`**, which remains **deferred**.
 
 ### Phase S — Semantic Presentation
 
@@ -701,9 +704,18 @@ effectiveness reconciliation; **`F-020C-02` remains deferred.**
 
 ## Immediate next step
 
-**A Human-Maintainer decision on OD-4, OD-5, OD-6 and the OD-7 sequencing, and a
-separate explicit Human-Maintainer authorization of a next work package. Neither
-has occurred, and no work package is currently authorized.**
+**A fresh independent review of the CDS Step-9 Decision Integration object, Nova
+adjudication, and the Human-Maintainer exact integration commit that makes
+`DEC-S-132 … DEC-S-135` and `ADR-0005` effective — then a separate explicit
+Human-Maintainer authorization of a next work package. The authorization has not
+occurred, and no work package is currently authorized.**
+
+**The Human-Maintainer decision on OD-4, OD-5, OD-6 and the OD-7 sequencing has been
+taken** (2026-09-05): **OD-4 and OD-7 answered, OD-5 partially answered, OD-6A
+policy-answered, OD-6B answered by existing normative authority.** The records are
+**prepared and NOT YET EFFECTIVE**. **The recommended Step-10 candidate is
+`CDS-WP-022`**, which remains **`Planned`, not active, and not authorized** —
+**SEQUENCED NEXT ≠ AUTHORIZED**.
 
 The steps this section previously named — *independent review of the CDS-WP-020
 closure and routing object, Nova adjudication, and the Human-Maintainer exact-byte
@@ -752,6 +764,38 @@ it made **no** claim; it touched **no** Semantic Status byte; and it activated
 recorded separately by the CDS-WP-020 closure and routing pass and became effective
 at its Human-Maintainer integration commit `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.
 
+### CDS Step-9 Decision Integration Pass — 2026-09-05
+
+**Authorized separately by the Human Maintainer on 2026-09-05**, after Nova
+adjudicated the CDS Step-9 R1/R2 decision package. It **prepared, and did not
+commit**:
+
+| Instrument | Records | Left open |
+| --- | --- | --- |
+| **`DEC-S-132`** (with **`ADR-0005`**) | **Family-rooted** token paths — `<family>.<primitive-group>.<step>[.<qualifier>]` and `<family>.<role>[.<qualifier>]`; the slot is **`qualifier`, not `modifier`**, and **no concrete qualifier is created**; **the token-flow layer is never a path segment**; **token-path identity and Source Set identity are two separate spaces** with `sourceSetId` **declared, never derived**; the flat **`<layer>/<family>`** form; the roots **`color`, `typography`, `space`, `shape`, `surface`** — **one per family**, so VF-3 and VF-6 take one each; and the ten identities `reference/color` … `semantic/surface` as **identifier authority only**. **OD-4 answered; the OD-3 concrete-root residual resolved.** | **Any migration or deprecation compatibility mechanism outside the normative Semantic alias graph** — a **new** residual. **AL-2 is unchanged.** |
+| **`DEC-S-133`** | **No universal cross-family scale base** — ST-5 is per-scale. **Each ordered primitive set independently owns** its anchor declaration, ordering, progression-rule kind, step count, extension behaviour and exclusions, under the **unchanged** ST-1 … ST-7 contract. **`SCALE TOPOLOGY ≠ SCALE VALUES`**, and **VP-3's "base" is the anchor declaration, not a numeric magnitude**. Scope: VF-2, VF-3, VF-5, VF-6; **opacity stays an attribute** of VF-1 and VF-6. **OD-5 only PARTIALLY answered.** | **Per-family topology parameters** for every family in scope, and **VF-1 tonal topology**, split out as a distinct problem. **VP-3 stays UNSATISFIED for every family and fails closed.** |
+| **`DEC-S-134`** | **Model B** — a **cross-consumer admission rule** only, inside the **closed** role classification, with SR-1 … SR-12 required from creation. **`CDS-WP-020A` may not invent, adopt, reserve, or recommend a Core role identifier.** **`selected`, `active` and `current` are not Core roles today** (answering **IS-5**) — **not a permanent prohibition**. **OD-6A POLICY ANSWERED.** | **The concrete role vocabulary.** **VP-6 stays UNSATISFIED** — a policy is not an authored role. |
+| **`DEC-S-135`** | **No semantic visual role carries a default alias before CDS-WP-022 decides the theme mechanism**, and **CDS-WP-022 precedes context-sensitive value selection**. It gates **values and bindings, not structure**: identifier grammar, scale ownership, role admission, family maturity governance and source-set structural identity are context-independent by TC-1, TC-2, T-8, N-6 and RB-1. **OD-7 answered.** | — |
+| **`OD-6B`** | **Answered by existing normative authority — no new Decision, and none is required.** VF-1 … VF-9 remain **separate artifact families**, each with its own maturity, evidence, gate and compatibility statement, under **AF-1**, **AF-3** and **AF-4**. Administrative batching may occur: **BATCHED REVIEW ≠ SHARED MATURITY**, **BATCHED GATE PREPARATION ≠ MATURITY INHERITANCE**. **No maturity group, cluster maturity, roll-up, inherited maturity, or aggregate gate exists or may be created.** `F-019-07` and `F-020-08` close with this disposition. | — |
+
+**Effectivity.** All five instruments are **`PROPOSED / AUTHORIZED FOR INTEGRATION`
+and NOT YET EFFECTIVE.** They become effective **only** at the Human-Maintainer
+exact integration commit of the exact reviewed Working Tree object, following a
+Fresh Independent Review and Nova integration adjudication. **The committed
+registers stay at `DEC-S-131` and `ADR-0004` — 131 decisions and 4 ADRs — while the
+prepared target is 135 and 5.** **A review PASS is not a commit, and a Nova
+recommendation is not an approval.**
+
+**What the pass did not do:** it created **no** visual value, **no** identifier
+instance, **no** Source Set, **no** role, **no** token source file, manifest,
+resolver, schema, validator rule, test, or fixture; it admitted **no** evidence; it
+changed **no** maturity; it accepted, closed, or re-scored **no** risk — the
+register stays at **98** with **no `RISK-099`**; it registered **no** capability; it
+made **no** claim; it touched **no** Semantic Status byte; and it **activated no
+work package**. **`CDS-WP-022` is the recommended and sequenced Step-10 candidate
+and is NOT authorized**, and **`F-020C-02` remains deferred** — the Step-9 decisions
+do not re-derive the **M2** milestone mapping.
+
 ### Standing position
 
 **CDS-WP-020 was authorized separately by the Human Maintainer on 2026-08-26** —
@@ -777,19 +821,32 @@ anticipated.** Its contract half is delivered; its value half was **gated** on s
 normative choices no committed CDS source had made, recorded as **OD-1 … OD-7** in
 the **non-normative**
 [Visual Token Foundation Open Decisions](VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md)
-register. **Three of the seven are now answered** — OD-1, OD-2 and OD-3, by the
-Decision Integration Pass above — and **the value half stays gated all the same**:
-**OD-4, OD-5, OD-6 and OD-7 are open**, and **VP-3, VP-4 and VP-5 remain
-unsatisfied for every visual family**. **Visual values: 0. Visual source sets: 0.
-Visual Candidate families: 0. VF-1 … VF-9: `Proposed`.**
+register. **Three of the seven are answered and effective** — OD-1, OD-2 and OD-3,
+by the Decision Integration Pass above — and **the remaining four were decided on
+2026-09-05** by the **CDS Step-9 Decision Integration Pass**: **OD-4 answered and
+OD-7 answered** (`DEC-S-132` with `ADR-0005`, and `DEC-S-135`), **OD-5 only
+partially answered** (`DEC-S-133` — the scale ownership model and the
+topology/value boundary, **not** the per-family topology parameters, and **VF-1
+tonal topology is split out and stays open**), **OD-6A policy-answered** (`DEC-S-134`
+— an admission rule, **not** a vocabulary), and **OD-6B answered by existing
+normative authority with no new Decision.** **All four Decisions and ADR-0005 are
+`PROPOSED / AUTHORIZED FOR INTEGRATION` and NOT YET EFFECTIVE.**
 
-**OD-7 carries a sequencing recommendation this roadmap must not act on by
-itself:** that **CDS-WP-022 — Theme and Environmental Presentation Model** be
-considered before any value-selection work package, because colour values and the
-light/dark token layering are the same decision seen from two sides. **A roadmap
-entry is a plan, not permission** — reordering the sequence is a Human-Maintainer
-decision, and **CDS-WP-021 … CDS-WP-053 all remain `Planned`, not active, and not
-authorized.**
+**The value half stays gated all the same**: **VP-3, VP-5, VP-6 and VP-7 remain
+unsatisfied for every visual family**, VP-2 remains unsatisfied for typeface
+identity, weight identity and composites, and **only VP-4 moves** — for VF-1, VF-2,
+VF-3, VF-5 and VF-6 — because **deciding an identifier is not creating one**.
+**Visual values: 0. Visual source sets: 0. Visual Candidate families: 0.
+VF-1 … VF-9: `Proposed`.**
+
+**`DEC-S-135` settles the sequencing this roadmap could not act on by itself:**
+**CDS-WP-022 — Theme and Environmental Presentation Model precedes
+context-sensitive value selection**, because colour values and the light/dark token
+layering are the same decision seen from two sides — while identifier, topology,
+role-admission, maturity-governance and source-set structural identity work is
+**context-independent and not blocked**. **A roadmap entry is a plan, not
+permission**, **SEQUENCED NEXT ≠ AUTHORIZED**, and **`CDS-WP-020A` and
+CDS-WP-021 … CDS-WP-053 all remain `Planned`, not active, and not authorized.**
 
 ## Related documents
 
@@ -804,7 +861,7 @@ authorized.**
 - [Concept and Scope](../governance/CONCEPT_AND_SCOPE.md)
 - [Accessibility and Inclusive Design Policy](../governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md)
 - [Candidate Promotion Effectivity Record](../governance/SEMANTIC_STATUS_CANDIDATE_PROMOTION_EFFECTIVITY_RECORD.md)
-- [Visual Token Foundation Open Decisions](VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md) — **non-normative**; OD-1 … OD-7 (CDS-WP-020); OD-1 … OD-3 answered, OD-4 … OD-7 open
+- [Visual Token Foundation Open Decisions](VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md) — **non-normative**; OD-1 … OD-7 (CDS-WP-020); OD-1 … OD-3 answered and effective; OD-4 and OD-7 answered, OD-5 partially answered, OD-6A policy-answered and OD-6B answered by existing authority — prepared, **not yet effective**
 - [Visual Reference Token Foundation](../architecture/VISUAL_REFERENCE_TOKEN_FOUNDATION.md) · [Visual Semantic Token Foundation](../architecture/VISUAL_SEMANTIC_TOKEN_FOUNDATION.md) · [Visual Token Value Selection Rules](../governance/VISUAL_TOKEN_VALUE_SELECTION_RULES.md)
 - [ADR-0004 — Visual Token Representation and Source Identity Architecture](../decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md) — **`Accepted`, effective at commit `42a568d8…`**
 - [Decision Index](../decisions/DECISION_INDEX.md) · [Risk Register](../risks/RISK_REGISTER.md)

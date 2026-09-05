@@ -248,7 +248,10 @@ library, or a design project scoped exclusively to CoreOps.
   token-flow layers 1 and 2, source-set identity, revision, provenance, family ×
   layer topology, and — only once **OD-4** and **OD-5** are decided and
   **VP-1 … VP-7** are satisfied — identifier realization and concrete normative
-  values. It **never** acquires validator implementation, validation authority,
+  values. **OD-4 is now answered and OD-5 partially answered** by the prepared
+  Step-9 package below, but **VP-3, VP-5, VP-6 and VP-7 remain unsatisfied**, so its
+  authorization prerequisites are **not** met. It **never** acquires validator
+  implementation, validation authority,
   conformance determination, evidence admission, maturity promotion, Product Profile
   activation, pilot activation, release authority, `Stable` declaration, or runtime
   renderer implementation. **CDS-WP-024 keeps its validation, render-gate, and
@@ -259,10 +262,11 @@ library, or a design project scoped exclusively to CoreOps.
   them activates nothing** and work on them has not started. The immediate next
   planned work packages are **`CDS-WP-020A`** and **CDS-WP-021 — Adaptive Layout and
   Responsive Foundation**; both stay inactive until separately authorized, and **the
-  order between them is not decided here.** **OD-7 recommends
-  considering CDS-WP-022 before any value-selection work package** — a sequencing
-  recommendation that authorizes nothing. Each work package begins only on an
-  explicit Nova prompt and Human-Maintainer authorization, one at a time.
+  order between them is not decided here.** **OD-7 is answered by the prepared
+  `DEC-S-135`: CDS-WP-022 precedes context-sensitive value selection, and
+  CDS-WP-022 is the recommended and sequenced Step-10 candidate** — **SEQUENCED
+  NEXT ≠ AUTHORIZED**, and it authorizes nothing. Each work package begins only on
+  an explicit Nova prompt and Human-Maintainer authorization, one at a time.
 - **Phase-transition item: RESOLVED by DEC-S-127.** CDS-WP-019 raised
   **`PHASE_TRANSITION_RECOMMENDED`** (**F-019-08**) because the label set by
   DEC-S-062 stayed coherent for CDS-WP-019 but would be materially strained by
@@ -475,14 +479,23 @@ Before beginning a work package, inspect at minimum:
   [docs/governance/VISUAL_TOKEN_VALUE_SELECTION_RULES.md](docs/governance/VISUAL_TOKEN_VALUE_SELECTION_RULES.md),
   and the choices that gate every value are held **non-normatively** in
   [docs/roadmap/VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md](docs/roadmap/VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md)
-  (**OD-1 … OD-7** — **OD-1, OD-2 and OD-3 answered** by DEC-S-128, DEC-S-130 and
-  DEC-S-131; **OD-4 … OD-7 open**)
+  (**OD-1 … OD-7** — **OD-1, OD-2 and OD-3 answered and effective** by DEC-S-128,
+  DEC-S-130 and DEC-S-131; **OD-4 and OD-7 answered, OD-5 partially answered, OD-6A
+  policy-answered and OD-6B answered by existing authority** by the prepared
+  **DEC-S-132 … DEC-S-135**, which are **NOT YET EFFECTIVE**; **the concrete role
+  vocabulary, the per-family topology parameters and VF-1 tonal topology stay
+  open**)
 - [docs/decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md](docs/decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md)
   — architecture rationale for the colour representation, the `$type` admission
   profile, and the source-set identity model (DEC-S-128, DEC-S-130, DEC-S-131).
   **`Accepted` and effective** at the Human-Maintainer integration commit
   `42a568d823de3388e45af62967546f13ad67eff6`; DEC-S-129 is deliberately **not** an
   architecture dependency of it
+- [docs/decisions/ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md](docs/decisions/ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md)
+  — architecture rationale for the visual identifier grammar and the two identity
+  spaces (**DEC-S-132**). **`PROPOSED / AUTHORIZED FOR INTEGRATION` and NOT YET
+  EFFECTIVE**; DEC-S-133, DEC-S-134 and DEC-S-135 are deliberately **not**
+  architecture dependencies of it
 - [docs/governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md](docs/governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md)
   — normative source for the accessibility target, target-versus-claim boundary,
   and inclusive design; entry point to the accessibility documents and the
@@ -767,10 +780,14 @@ assumed — and CDS-WP-020 created none.
   validator, or the serialization contract blocks a visual source set. **Seven
   normative choices did** — **OD-1 … OD-7** in the **non-normative**
   [Visual Token Foundation Open Decisions](docs/roadmap/VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md)
-  register. **Three are now answered** by the CDS-WP-020 Decision Integration Pass
-  (below); **OD-4 (identifier grammar), OD-5 (scale topology), OD-6 (role vocabulary
-  and family granularity) and OD-7 (sequencing against CDS-WP-022) stay open**,
-  together with three recorded residuals.
+  register. **Three are answered and effective** by the CDS-WP-020 Decision
+  Integration Pass (below); the remaining four were decided by the Human Maintainer
+  on **2026-09-05** and are **prepared but NOT YET EFFECTIVE** — see *CDS Step-9
+  Decision Integration Pass* below. **What still stays open after them:** the
+  **concrete role vocabulary**, the **per-family scale topology parameters**,
+  **VF-1 tonal topology**, the **OD-1 `hex`** residual, the **OD-2** font-identity
+  and composite residuals, and **any migration compatibility mechanism outside the
+  normative Semantic alias graph**.
 - **The validator's bounded token-`$type` set is not a CDS profile admission.** It
   is a **DEC-S-098 V2 coverage boundary**; the committed token-document schema
   constrains `$type` not at all. Reading the former as the latter is **RISK-074**.
@@ -781,15 +798,23 @@ assumed — and CDS-WP-020 created none.
   taste, imitation of another design system, a consumer asking, a tool default, a
   generated artifact, an example or fixture, a validator pass, prior existence,
   schedule pressure, and making a failing check pass. **VP-2 is satisfied for the
-  families expressible in `color`, `dimension` and `number`; VP-3, VP-4 and VP-5
-  remain UNSATISFIED for every family**, so **no visual value may be selected.**
+  families expressible in `color`, `dimension` and `number`** — not for typeface
+  identity, weight identity, or composites. **VP-4 becomes satisfied for VF-1,
+  VF-2, VF-3, VF-5 and VF-6** once the prepared `DEC-S-132` is effective. **VP-3,
+  VP-5, VP-6 and VP-7 remain UNSATISFIED for every family**, so **no visual value
+  may be selected.** **Deciding is not implementing, implementing is not
+  validating, and validating is not satisfying.**
 - **Visual source sets: 0 · visual Candidate families: 0 · Stable: 0.** All nine
   families stay **`Proposed`**; every visual artifact is **AE-0**; and
   `AE1-CDS-WP016-SEMSTATUS-004` **does not transfer** to any of it.
 - **No value, no identifier, and no machine-readable source without an explicit
   prompt.** Claude creates no visual token source file, manifest, resolver, schema,
-  validator rule, test, or fixture, and **adopts, reserves, or recommends no
-  identifier**, until **OD-4 and OD-5** are decided by the Human Maintainer.
+  validator rule, test, or fixture. **The identifier grammar and the family and
+  source-set roots are now decided** by the prepared `DEC-S-132` — **but deciding an
+  identifier is not creating one.** No identifier instance, Source Set,
+  `sourceRevision`, or role name exists, **`CDS-WP-020A` may not invent a role
+  identifier**, and none may be created without a separately authorized work
+  package.
 - **The value half is routed, not abandoned — and routing is not authorization.**
   `FR-N-03` assigns the concrete machine-readable Visual Token Source and Value
   Authoring work to **`CDS-WP-020A`**, which is **`Planned`, not active, and not
@@ -859,6 +884,76 @@ that would have created the exposure was **rejected** — so the register stays 
 close CDS-WP-020**; closure was recorded separately by the CDS-WP-020 closure and
 routing pass and became effective at its Human-Maintainer integration commit
 `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.
+
+### CDS Step-9 Decision Integration Pass (2026-09-05) — PREPARED, NOT YET EFFECTIVE
+
+The Human Maintainer decided **OD-4, OD-5, OD-6A and OD-7** on **2026-09-05** and
+authorized this bounded pass to prepare the records. **Nothing here is effective.**
+`DEC-S-132 … DEC-S-135` and `ADR-0005` are **`PROPOSED / AUTHORIZED FOR
+INTEGRATION`** and become effective **only** at the Human-Maintainer exact
+integration commit of the exact reviewed Working Tree object, following a Fresh
+Independent Review and Nova integration adjudication. **The committed register
+remains 131 decisions and 4 ADRs; the prepared target is 135 and 5.**
+
+- **DEC-S-132 — Visual Identifier Grammar and the Two Identity Spaces**
+  (**ADR-0005**). Visual token paths are **family-rooted**:
+  `<family>.<primitive-group>.<step>[.<qualifier>]` at Reference,
+  `<family>.<role>[.<qualifier>]` at Semantic. The slot is **`qualifier`, not
+  `modifier`** — *conditional modifier* is already bound to Resolver / Theme
+  composition — and **no concrete qualifier is created**. **The token-flow layer is
+  never a path segment**; it stays the schema-validated `layer` field. **Token-path
+  identity and Source Set identity are two separate spaces**, and a `sourceSetId` is
+  **declared, never derived**. Source-set form is the flat **`<layer>/<family>`**.
+  Technical roots: **`color`, `typography`, `space`, `shape`, `surface`** — one per
+  family, so **VF-3 and VF-6 each take one root** and internal constructs are
+  differentiated by the `<primitive-group>` position. The ten identities
+  `reference/color` … `semantic/surface` are fixed as **identifier authority only**:
+  **no Source Set instance, no `sourceRevision`, no manifest, no resolver, no token,
+  and no file is created.** **AL-2 is unchanged**, and **any migration compatibility
+  mechanism outside the normative Semantic alias graph stays OPEN.** **The OD-3
+  concrete-root residual is resolved; OD-4 is answered.**
+- **DEC-S-133 — Per-Scale Topology Under the Common Scale Contract.** **There is no
+  universal cross-family base** — ST-5 is per-scale. **Each ordered primitive set
+  independently owns** its anchor declaration, ordering, progression-rule kind,
+  step count, extension behaviour and exclusions, under the unchanged ST-1 … ST-7
+  contract. **`SCALE TOPOLOGY ≠ SCALE VALUES`**, and **VP-3's "base" means the
+  anchor declaration, not a numeric magnitude**. Scope: VF-2, VF-3, VF-5, VF-6;
+  **opacity stays an attribute** of VF-1 and VF-6. **VF-1 tonal topology, VF-4,
+  VF-7, VF-8 and VF-9 are excluded.** **OD-5 is only PARTIALLY answered: the
+  per-family topology parameters are not decided, VF-1 tonal topology is a separate
+  open residual, and VP-3 remains UNSATISFIED for every family and fails closed.**
+- **DEC-S-134 — Visual Role Admission Rule.** **Model B:** an admission rule is
+  decided, **the concrete role vocabulary is not.** A role enters CDS Core only on
+  demonstrated **cross-consumer** need, classified before design, satisfying
+  **SR-1 … SR-12 from creation**, inside the **closed** role classification.
+  **`CDS-WP-020A` may not invent, adopt, reserve, or recommend a Core role
+  identifier.** **`selected`, `active` and `current` are not CDS Core roles today**
+  (answering **IS-5**) — **not a permanent prohibition**, and IS-1/IS-5 already bind
+  whatever a consumer builds. **OD-6A is POLICY ANSWERED with the vocabulary OPEN;
+  VP-6 stays UNSATISFIED.**
+- **OD-6B — ANSWERED BY EXISTING NORMATIVE AUTHORITY. No new Decision, and none is
+  required.** **VF-1 … VF-9 remain separate artifact families**, each with its own
+  maturity, evidence, gate and compatibility statement, under **AF-1**, **AF-3** and
+  **AF-4**. Administrative batching may occur, but **BATCHED REVIEW ≠ SHARED
+  MATURITY** and **BATCHED GATE PREPARATION ≠ MATURITY INHERITANCE**. **No maturity
+  group, cluster maturity, roll-up, inherited maturity, or aggregate gate exists or
+  may be created.**
+- **DEC-S-135 — Theme Sequencing Before Context-Sensitive Value Selection.** **No
+  semantic visual role carries a default alias before CDS-WP-022 decides the theme
+  mechanism**, and **CDS-WP-022 precedes context-sensitive value selection**. It
+  gates **values and bindings, not structure**: identifier grammar, scale ownership,
+  role admission, family maturity governance and source-set structural identity are
+  context-independent by TC-1, TC-2, T-8, N-6 and RB-1. **`CDS-WP-022 BEFORE VALUE
+  SELECTION` does not mean `CDS-WP-022 BEFORE EVERY SOURCE-STRUCTURE OR IDENTITY
+  ACTIVITY`.** **OD-7 is answered.**
+
+**The pass creates no visual value, no identifier instance, no role, no token
+source file, manifest, resolver, schema, validator rule, test, or fixture**; admits
+**no** evidence; changes **no** maturity; adds **no** risk — **the register stays at
+98 with no `RISK-099`**; touches **no** Semantic Status byte; makes **no** claim; and
+**activates no work package.** **CDS-WP-022 is the recommended and sequenced Step-10
+candidate and is NOT authorized** — **SEQUENCED NEXT ≠ AUTHORIZED**, and **no work
+package is currently authorized.**
 
 ## Claim and release boundaries
 

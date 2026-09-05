@@ -165,8 +165,12 @@ identifier**. A separately authorized **Decision Integration Pass** (2026-08-27)
 has since registered DEC-S-128 … DEC-S-131 and ADR-0004, answering **OD-1, OD-2
 and OD-3** — the canonical colour representation, the admitted `$type` set, the
 contrast evaluation authority, and the source-set identity model. **They are
-effective at commit `42a568d8…`, they select no value, and OD-4 … OD-7 remain
-open.**
+effective at commit `42a568d8…`, and they select no value.** A further
+Human-Maintainer decision on **2026-09-05** answered **OD-4** and **OD-7**,
+partially answered **OD-5**, policy-answered **OD-6A**, and dispositioned **OD-6B**
+as already covered by existing authority — prepared as **DEC-S-132 … DEC-S-135**
+and **ADR-0005**, which are **`PROPOSED / AUTHORIZED FOR INTEGRATION` and NOT YET
+EFFECTIVE**. **No value is selected, and no work package is authorized.**
 **CDS-WP-021 … CDS-WP-053 are planned only — not active, not authorized, work not
 started** — and are recorded in the
 [Post-Candidate Development Roadmap](docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
@@ -456,15 +460,19 @@ contrast evaluation authority and **ADR-0004** recording the architecture ration
 **All five are effective**, at the Human-Maintainer exact-byte integration commit
 `42a568d823de3388e45af62967546f13ad67eff6`.
 
-**And the value half is still gated.** OD-4, OD-5, OD-6 and OD-7 remain open, and
-**VP-3, VP-4 and VP-5 remain unsatisfied for every family** — so **no visual value
-may be selected**. **Visual values: 0 · visual source sets: 0 · visual Candidate
-families: 0 · Stable: 0.**
+**And the value half is still gated.** The prepared Step-9 package answers OD-4 and
+OD-7, partially answers OD-5, and policy-answers OD-6A — and **VP-3, VP-5, VP-6 and
+VP-7 remain unsatisfied for every family**, with VP-2 unsatisfied for typeface
+identity, weight identity and composites. **Only VP-4 moves**, for VF-1, VF-2,
+VF-3, VF-5 and VF-6, and an identifier grammar with fixed roots creates **no
+identifier instance**. So **no visual value may be selected**. **Visual values: 0 ·
+visual source sets: 0 · visual Candidate families: 0 · Stable: 0.**
 
 - [Visual Reference Token Foundation](docs/architecture/VISUAL_REFERENCE_TOKEN_FOUNDATION.md) · [Visual Semantic Token Foundation](docs/architecture/VISUAL_SEMANTIC_TOKEN_FOUNDATION.md)
 - [Visual Token Value Selection Rules](docs/governance/VISUAL_TOKEN_VALUE_SELECTION_RULES.md)
-- [Visual Token Foundation Open Decisions](docs/roadmap/VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md) — **non-normative**; OD-1 … OD-7 (OD-1 … OD-3 answered, OD-4 … OD-7 open)
+- [Visual Token Foundation Open Decisions](docs/roadmap/VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md) — **non-normative**; OD-1 … OD-7 (OD-1 … OD-3 answered and effective; OD-4 and OD-7 answered, OD-5 partially answered, OD-6A policy-answered, OD-6B answered by existing authority — all four prepared and **not yet effective**; the concrete role vocabulary, the per-family topology parameters and VF-1 tonal topology stay open)
 - [ADR-0004 — Visual Token Representation and Source Identity Architecture](docs/decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md) — **`Accepted`, effective at commit `42a568d8…`**
+- [ADR-0005 — Visual Identifier Grammar and Identity Spaces](docs/decisions/ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md) — **`PROPOSED / AUTHORIZED FOR INTEGRATION`, NOT YET EFFECTIVE**; covers **DEC-S-132** only
 
 ## Governance
 
@@ -748,7 +756,7 @@ maturity or approval it does not hold.
     `profileVersion` stays `1`), **DEC-S-131** (the **Source Set** as the
     independently evaluable unit; **AGGREGATED is not MATURE**), and
     [**ADR-0004**](docs/decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md).
-    They answer **OD-1, OD-2 and OD-3**; **OD-4 … OD-7 stay open**. They create
+    They answer **OD-1, OD-2 and OD-3**. They create
     **no** visual value and **no** identifier, admit **no** evidence, change **no**
     maturity, add **no** risk entry — **`RISK-099` is not required** — and **did not
     themselves close CDS-WP-020**. Effectivity occurred only at the Human-Maintainer
@@ -762,6 +770,26 @@ maturity or approval it does not hold.
     **Option 2**: **AUTHOR is not VALIDATE.** The concrete machine-readable Visual
     Token Source and Value Authoring work is routed to **`CDS-WP-020A`** and is
     **not** absorbed into CDS-WP-024.
+- **Decided, prepared, and NOT YET EFFECTIVE:** the **CDS Step-9 Decision
+  Integration Pass** (2026-09-05). The Human Maintainer decided **OD-4, OD-5, OD-6A
+  and OD-7**, and this pass prepared **DEC-S-132** (family-rooted identifier
+  grammar with a declared `qualifier` position, the layer kept out of every token
+  path, two separate identity spaces, and the fixed roots `color`, `typography`,
+  `space`, `shape`, `surface` with the ten source-set identities
+  `reference/color` … `semantic/surface`), **DEC-S-133** (per-family scale
+  ownership under the unchanged ST-1 … ST-7 contract, **no universal cross-family
+  base**, and `SCALE TOPOLOGY ≠ SCALE VALUES`), **DEC-S-134** (a cross-consumer role
+  **admission rule** only — the concrete vocabulary stays open), **DEC-S-135** (no
+  default role binding before CDS-WP-022, which precedes context-sensitive value
+  selection), and
+  [**ADR-0005**](docs/decisions/ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md)
+  for DEC-S-132 only. **OD-6B needed no Decision** — VF-1 … VF-9 remain separate
+  artifact families under AF-1, AF-3 and AF-4, and **BATCHED REVIEW ≠ SHARED
+  MATURITY**. All five are **`PROPOSED / AUTHORIZED FOR INTEGRATION`** and become
+  effective only at the Human-Maintainer exact integration commit. They create **no**
+  visual value, **no** identifier instance, **no** Source Set and **no** role, admit
+  **no** evidence, change **no** maturity, add **no** risk, and **activate no work
+  package.**
 - **Planned:** **`CDS-WP-020A` — Visual Token Source Authoring and Source Set
   Realization** — **not active, not authorized, work not started.** The `FR-N-03`
   destination for the value and machine-readable half of the visual token
@@ -770,7 +798,10 @@ maturity or approval it does not hold.
   machine-readable source authoring at token-flow layers 1 and 2, source-set
   identity, revision, provenance, and family × layer topology — and, only once
   **OD-4** and **OD-5** are decided and **VP-1 … VP-7** are satisfied, identifier
-  realization and concrete normative values. It **never** acquires validator
+  realization and concrete normative values. **OD-4 is now answered and OD-5
+  partially answered by the prepared Step-9 package, but VP-3, VP-5, VP-6 and VP-7
+  remain unsatisfied**, so its authorization prerequisites are **not** met. It
+  **never** acquires validator
   implementation, validation authority, conformance determination, evidence
   admission, maturity promotion, Product Profile activation, pilot activation,
   release authority, `Stable` declaration, or runtime renderer implementation.
@@ -780,9 +811,10 @@ maturity or approval it does not hold.
   started.** The immediate next planned work packages are **`CDS-WP-020A`** and
   **CDS-WP-021 — Adaptive Layout and Responsive Foundation**; both remain inactive
   until separately authorized by the Human Maintainer, and **the order between them
-  is not decided here.** **OD-7 recommends considering CDS-WP-022
-  before any value-selection work package**; that is a sequencing recommendation and
-  authorizes nothing.
+  is not decided here.** **OD-7 is answered by the prepared `DEC-S-135`:
+  CDS-WP-022 precedes context-sensitive value selection, and CDS-WP-022 is the
+  recommended and sequenced Step-10 candidate.** **SEQUENCED NEXT ≠ AUTHORIZED** —
+  it authorizes nothing.
 
 The full controlled roadmap is in
 [project-system/WORK_PACKAGES.md](project-system/WORK_PACKAGES.md); the forward

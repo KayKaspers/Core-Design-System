@@ -9,6 +9,95 @@ released and no release is announced.
 
 ### Added
 
+- **CDS Step-9 Decision Integration Pass — `DEC-S-132 … DEC-S-135` and `ADR-0005`,
+  PREPARED and NOT YET EFFECTIVE.** Authorized separately by the Human Maintainer on
+  **2026-09-05** after Nova adjudicated the CDS Step-9 R1/R2 decision package. All
+  five are prepared as **`PROPOSED / AUTHORIZED FOR INTEGRATION`** and become
+  effective **only** at the Human-Maintainer exact integration commit of the exact
+  reviewed Working Tree object, following a Fresh Independent Review and Nova
+  integration adjudication. **The committed registers remain `DEC-S-131` and
+  `ADR-0004` — 131 decisions and 4 ADRs; the prepared target is 135 and 5.**
+  **A review PASS is not a commit, and a Nova recommendation is not an approval.**
+  (CDS Step-9 Decision Integration Pass)
+- **`DEC-S-132` — visual identifier grammar and the two identity spaces.** Visual
+  token paths are **family-rooted**: `<family>.<primitive-group>.<step>[.<qualifier>]`
+  at Reference and `<family>.<role>[.<qualifier>]` at Semantic. The slot is
+  **`qualifier`, not `modifier`** — *conditional modifier* is already bound to
+  Resolver / Theme composition semantics, and **N-6** and **T-8** forbid a theme term
+  inside a path — and **no concrete qualifier is created**. **The token-flow layer is
+  never a path segment**; it stays the schema-validated `layer` field.
+  **Token-path identity and Source Set identity are two separate spaces**, and a
+  `sourceSetId` is **declared, never derived**. The source-set form is the flat
+  **`<layer>/<family>`**, with **no** `visual`, `foundation`, `brand`, `product`,
+  `channel`, `context` or `theme` segment. Technical roots: **`color`,
+  `typography`, `space`, `shape`, `surface`** — **one per registered family**, so a
+  compound display name produces one root and the `<primitive-group>` position
+  differentiates internal constructs. The ten identities `reference/color` …
+  `semantic/surface` are fixed as **identifier authority only**: **no Source Set
+  instance, no `sourceRevision`, no manifest, no resolver, no token, and no file is
+  created.** **AL-2 is unchanged**, and **any migration or deprecation compatibility
+  mechanism outside the normative Semantic alias graph stays OPEN**. **The OD-3
+  concrete-root residual is resolved and OD-4 is answered.**
+  (CDS Step-9 Decision Integration Pass)
+- **`ADR-0005` — Visual Identifier Grammar and Identity Spaces.** Architecture
+  rationale for **DEC-S-132 only**; **DEC-S-133, DEC-S-134 and DEC-S-135 are
+  deliberately not architecture dependencies of it**, on the ADR-0004 / DEC-S-129
+  precedent. It records why layer-rooted paths, a mechanically derived
+  `sourceSetId`, a `visual` namespace prefix, and multiple roots per compound family
+  were each rejected. **It is `PROPOSED / AUTHORIZED FOR INTEGRATION` and confers no
+  acceptance until the Human-Maintainer integration commit.**
+  (CDS Step-9 Decision Integration Pass)
+- **`DEC-S-133` — per-scale topology under the common scale contract.** **There is
+  no universal cross-family scale base** — **ST-5 is per-scale**, and a shared base
+  would create the coupling **AF-3** exists to prevent. **Each ordered primitive set
+  independently owns** its anchor declaration, ordering, progression-rule kind,
+  step count, extension behaviour, and exclusions, under the **unchanged**
+  ST-1 … ST-7 contract. It records **`SCALE TOPOLOGY ≠ SCALE VALUES`** and fixes
+  **VP-3's "base" as the anchor declaration, not a numeric magnitude** — under the
+  magnitude reading VP-3 would be circular and unsatisfiable. Scope: **VF-2, VF-3,
+  VF-5, VF-6**; **opacity remains an attribute** of VF-1 and VF-6 with **no
+  standalone opacity family**; **VF-1 tonal topology, VF-4, VF-7, VF-8 and VF-9 are
+  excluded**. **It selects no base, ratio, step, or value.** **OD-5 is only
+  PARTIALLY answered**: the per-family topology parameters are **not** decided,
+  **VF-1 tonal topology is a separate open residual**, and **VP-3 remains
+  UNSATISFIED for every family and fails closed.**
+  (CDS Step-9 Decision Integration Pass)
+- **`DEC-S-134` — visual role admission rule.** **Model B:** an admission rule is
+  decided and **the concrete role vocabulary is not**. A role enters CDS Core only
+  on demonstrated **cross-consumer** need, classified before design, satisfying
+  **SR-1 … SR-12 from the moment it exists**; the **role classification is closed**
+  and a future vocabulary populates it and adds none. **`CDS-WP-020A` may not
+  invent, adopt, reserve, or recommend a Core role identifier.** **`selected`,
+  `active` and `current` are not CDS Core roles today** — answering **IS-5** — which
+  is **not a permanent prohibition** and removes no protection, because IS-1 and
+  IS-5 already bind whatever a consumer builds. **It creates no role, no role
+  identifier, no binding, no extension point, and no value.** **OD-6A is POLICY
+  ANSWERED with the concrete vocabulary OPEN, and VP-6 stays UNSATISFIED.**
+  (CDS Step-9 Decision Integration Pass)
+- **`DEC-S-135` — theme sequencing before context-sensitive value selection.** **No
+  semantic visual role carries a default alias to a reference primitive before
+  CDS-WP-022 decides the Theme and Context Mechanism**, and **CDS-WP-022 precedes
+  context-sensitive value selection**. It gates **values and bindings, not
+  structure**: identifier grammar, scale ownership and topology rules, role
+  admission policy, family maturity governance, and **source-set structural
+  identity** are context-independent by **TC-1**, **TC-2**, **T-8**, **N-6** and
+  **RB-1**, and are not blocked — **`CDS-WP-022 BEFORE VALUE SELECTION` does not
+  mean `CDS-WP-022 BEFORE EVERY SOURCE-STRUCTURE OR IDENTITY ACTIVITY`.** A theme
+  remains a **Resolution Context, not a sixth token-flow layer**, and **A THEME
+  RE-BINDS; IT NEVER REDEFINES.** **It authorizes no work package**: CDS-WP-022 is
+  the recommended and sequenced Step-10 candidate only, and **SEQUENCED NEXT ≠
+  AUTHORIZED**. **OD-7 is answered.**
+  (CDS Step-9 Decision Integration Pass)
+- **`OD-6B` dispositioned — answered by existing normative authority, with no new
+  Decision.** **VF-1 … VF-9 remain separate artifact families**, each with **its own
+  maturity, evidence, gate, and compatibility statement**, under **AF-1**, **AF-3**
+  and **AF-4**. Administrative batching may occur, but **BATCHED REVIEW ≠ SHARED
+  MATURITY** and **BATCHED GATE PREPARATION ≠ MATURITY INHERITANCE**; **one family
+  passing grants nothing to another.** **No maturity group, cluster maturity,
+  roll-up maturity, inherited maturity, or aggregate gate exists or may be
+  created**, and creating a Decision for a rule that already binds would be ceremony
+  that produces no decision (**RISK-040**). `F-019-07` and `F-020-08` close with this
+  disposition. (CDS Step-9 Decision Integration Pass)
 - **`CDS-WP-020A` — Visual Token Source Authoring and Source Set Realization,
   registered as `Planned`, not active, not authorized.** The explicit destination
   for the concrete machine-readable **Visual Token Source and Value Authoring** work
@@ -228,6 +317,28 @@ released and no release is announced.
 
 ### Changed
 
+- **The Open Decisions register, the value-prerequisite state, and the live
+  current-state carriers reconciled to the prepared Step-9 decisions.** The
+  **non-normative** register now records **OD-4** and **OD-7** as answered, **OD-5**
+  as **partially** answered, **OD-6A** as policy-answered with the vocabulary open,
+  and **OD-6B** as answered by existing normative authority — each **conditional on
+  the Human-Maintainer integration commit** — together with a **residual register**
+  carrying nine entries, one of them new. The
+  [Visual Token Value Selection Rules](docs/governance/VISUAL_TOKEN_VALUE_SELECTION_RULES.md)
+  gain a **second, additive** prerequisite-state subsection: **VP-4 satisfied for
+  VF-1, VF-2, VF-3, VF-5 and VF-6**, **VP-3, VP-5, VP-6 and VP-7 UNSATISFIED**, VP-2
+  unchanged. **VP-3 fails closed and is not reported as satisfied** — the ownership
+  model is decided, the per-family topology parameters are not. **The 2026-08-27
+  prerequisite table is preserved**, not rewritten, as the record of the period it
+  governed, and **VP-1 … VP-7 themselves are unchanged**. **Point-in-time records
+  were preserved**: dated decision entries, execution notes, preparation records,
+  and event-time changelog statements remain as written, including the OD-5
+  recommendation that was **rejected** and the OD-6B family-count recommendation
+  that was **rejected**. **N-6's principle is unchanged** — only the slot term is
+  reconciled from *modifier* to **`qualifier`**. **No maturity changed, no evidence
+  was admitted, no risk was added, no value was selected, no identifier instance or
+  Source Set was created, and no work package was activated.**
+  (CDS Step-9 Decision Integration Pass)
 - **CDS-WP-020 closure recorded as effective — `F-020C-04` resolved.** The condition
   the closure and routing pass stated — a separate Human-Maintainer integration
   commit of its working object — was met by commit
