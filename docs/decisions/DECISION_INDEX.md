@@ -11,35 +11,33 @@ authorized work packages.
 
 ## Register scope
 
-- **Effective decision range: DEC-S-001 … DEC-S-131**
-- **Number of effective decisions: 131**
-- **Prepared and NOT YET EFFECTIVE: DEC-S-132 … DEC-S-135, and
-  [ADR-0005](ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md).** They were
-  approved by the Human Maintainer on **2026-09-05** as the CDS Step-9 decisions on
-  **OD-4, OD-5, OD-6A and OD-7**, and prepared under that authorization as
-  **`PROPOSED / AUTHORIZED FOR INTEGRATION`**. **They are uncommitted executor output
-  and change no authoritative CDS state.** They become effective **only** at the
-  Human-Maintainer exact integration commit of the exact reviewed Working Tree
-  object, following a Fresh Independent Review and Nova integration adjudication.
-  **A review PASS is not a commit, and a Nova recommendation is not an approval.**
-  The **prepared target** is **DEC-S-001 … DEC-S-135 (135 decisions)** and
-  **ADR-0001 … ADR-0005 (5 ADRs)**; the **committed authority remains 131 decisions
-  and 4 ADRs** until that commit exists. **No decision beyond DEC-S-135 is prepared,
-  and no `DEC-S-136` and no `ADR-0006` exists.**
+- **Effective decision range: DEC-S-001 … DEC-S-135**
+- **Number of effective decisions: 135**
 - **Effectivity.** **DEC-S-128 … DEC-S-131 are effective.** The condition their
   entries stated — the Human-Maintainer exact-byte integration commit of the
   CDS-WP-020 Decision Integration Pass, following a Fresh Independent Review and
   Nova integration adjudication — occurred on 2026-08-27 at commit
   `42a568d823de3388e45af62967546f13ad67eff6`, which integrated the reviewed object.
-  The **effective** register is therefore **DEC-S-001 … DEC-S-131 (131 decisions)**
-  and the **effective** ADR range is **ADR-0001 … ADR-0004 (4 ADRs)**. **No
-  decision beyond DEC-S-131 is effective**, and the prepared DEC-S-132 … DEC-S-135
-  entries below do not change that until they are integrated. This section is the
-  maintained current carrier; a statement inside an individual decision entry is
-  point-in-time and is not edited when a later event occurs.
+  **DEC-S-132 … DEC-S-135 and
+  [ADR-0005](ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md) are
+  effective.** They were approved by the Human Maintainer on **2026-09-05** as the
+  CDS Step-9 decisions on **OD-4, OD-5, OD-6A and OD-7**, prepared under that
+  authorization as **`PROPOSED / AUTHORIZED FOR INTEGRATION`**, and the condition
+  their entries stated — the Human-Maintainer exact integration commit of the exact
+  reviewed Working Tree object, following a Fresh Independent Review and Nova
+  integration adjudication — occurred on 2026-09-05 at commit
+  `2cb244e889c1a6b5a278afb233995a0379b5d9ef`, which integrated the reviewed object.
+  The **effective** register is therefore **DEC-S-001 … DEC-S-135 (135 decisions)**
+  and the **effective** ADR range is **ADR-0001 … ADR-0005 (5 ADRs)**. **No
+  decision beyond DEC-S-135 is effective and none is prepared, and no `DEC-S-136`
+  and no `ADR-0006` exists.** This section is the maintained current carrier; a
+  statement inside an individual decision entry is point-in-time and is not edited
+  when a later event occurs. **A review PASS is not a commit, and a Nova
+  recommendation is not an approval** — effectivity followed from the commit, and
+  no earlier wording conferred it.
 - Decision record format: index entries, plus ADR files where a decision warrants an
-  Architecture Decision Record. **Effective ADR range: ADR-0001 … ADR-0004
-  (4 ADRs).**
+  Architecture Decision Record. **Effective ADR range: ADR-0001 … ADR-0005
+  (5 ADRs).**
 - [ADR-0001 — Machine-Readable Token Source Format](ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)
   (accepted upon Human-Maintainer commit following Nova approval).
 - [ADR-0002 — Deterministic JSON Serialization](ADR-0002-DETERMINISTIC_JSON_SERIALIZATION.md)
@@ -52,10 +50,10 @@ authorized work packages.
   the rationale for DEC-S-128, DEC-S-130 and DEC-S-131, and **DEC-S-129 is
   deliberately not an architecture dependency of it.**
 - [ADR-0005 — Visual Identifier Grammar and Identity Spaces](ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md)
-  — **`PROPOSED / AUTHORIZED FOR INTEGRATION`, NOT YET EFFECTIVE.** It records the
-  rationale for **DEC-S-132 only**; **DEC-S-133, DEC-S-134 and DEC-S-135 are
-  deliberately not architecture dependencies of it.** It becomes `Accepted` only
-  upon the Human-Maintainer integration commit of the reviewed object.
+  (accepted upon the Human-Maintainer integration commit
+  `2cb244e889c1a6b5a278afb233995a0379b5d9ef` following Nova approval). It records
+  the rationale for **DEC-S-132 only**; **DEC-S-133, DEC-S-134 and DEC-S-135 are
+  deliberately not architecture dependencies of it.**
 
 ## Decision types
 
@@ -78,7 +76,7 @@ authorized work packages.
 | Candidate finalization / maturity / evidence transition decision | DEC-S-126 | CDS-WP-016 | A named non-authoritative Proposed Candidate Revision, target metadata that grants nothing, revision-bound evidence that never transfers, exact-byte pre-commit evidence binding, the fixed admission-before-approval authority order, and the Promotion Commit as the actual maturity transition point. |
 | Phase transition decision | DEC-S-127 | — (CDS Phase Transition Governance Package) | The phase established by DEC-S-062 completed its operating purpose; for current and future state the project phase is `Post-Candidate Foundation & Design-System Enablement`. Prospective, partial supersession of the phase designation only — no maturity, no evidence, no activation, and no authority is granted. |
 | Visual token representation, evaluation authority and source identity decision | DEC-S-128 … DEC-S-131 | CDS-WP-020 (Decision Integration Pass) | One canonical `srgb` colour representation with perceptual spaces admitted as derivation only; WCAG 2.2 as the contrast evaluation authority with full-precision comparison and additional methods informational only; an explicit, minimal, closed CDS `$type` admission profile with explicit own typing; and the Source Set as the independently evaluable unit to which maturity binds, with aggregation conferring nothing (ADR-0004 for DEC-S-128, DEC-S-130, DEC-S-131). **Effective at the Human-Maintainer integration commit `42a568d823de3388e45af62967546f13ad67eff6`.** They select **no** value, create **no** identifier, and grant **no** maturity. |
-| Visual identifier, scale ownership, role admission and theme sequencing decision | DEC-S-132 … DEC-S-135 | — (CDS Step-9 Decision Integration Pass) | A family-rooted visual identifier grammar with a declared `qualifier` position, the layer kept out of every token path, two separate identity spaces, and the concrete source-set root identities; per-family ownership of every ordered scale under the common ST-1 … ST-7 contract with no universal cross-family base and `SCALE TOPOLOGY ≠ SCALE VALUES`; a cross-consumer role admission rule with the concrete vocabulary left open; and the rule that no semantic role carries a default alias before CDS-WP-022 decides the theme mechanism (ADR-0005 for DEC-S-132 only). **`PROPOSED / AUTHORIZED FOR INTEGRATION`, NOT YET EFFECTIVE.** They select **no** value, create **no** token identifier, role identifier or source set, and grant **no** maturity. |
+| Visual identifier, scale ownership, role admission and theme sequencing decision | DEC-S-132 … DEC-S-135 | — (CDS Step-9 Decision Integration Pass) | A family-rooted visual identifier grammar with a declared `qualifier` position, the layer kept out of every token path, two separate identity spaces, and the concrete source-set root identities; per-family ownership of every ordered scale under the common ST-1 … ST-7 contract with no universal cross-family base and `SCALE TOPOLOGY ≠ SCALE VALUES`; a cross-consumer role admission rule with the concrete vocabulary left open; and the rule that no semantic role carries a default alias before CDS-WP-022 decides the theme mechanism (ADR-0005 for DEC-S-132 only). **Effective at the Human-Maintainer integration commit `2cb244e889c1a6b5a278afb233995a0379b5d9ef`.** They select **no** value, create **no** token identifier, role identifier or source set, and grant **no** maturity. |
 
 None of these types is an implementation decision. Logical architecture decisions
 define structure, responsibility, and flow — they select no technology, format,
@@ -5097,13 +5095,13 @@ release, no tag, and no publication authority, and it activates no work package.
 
 ## DEC-S-132 — Visual Identifier Grammar and the Two Identity Spaces
 
-- **Status:** **`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET EFFECTIVE.**
-  Approved by the Human Maintainer on 2026-09-05 and prepared under that
-  authorization. **This entry is uncommitted executor output and changes no
-  authoritative CDS state.** It becomes `Accepted` and effective **only** at the
-  Human-Maintainer exact integration commit of the exact reviewed Working Tree
-  object, following a Fresh Independent Review and Nova integration adjudication.
-  **A review PASS is not a commit.**
+- **Status:** Accepted — **effective at the Human-Maintainer exact integration
+  commit `2cb244e889c1a6b5a278afb233995a0379b5d9ef`** of the exact reviewed Working
+  Tree object of the CDS Step-9 Decision Integration Pass, which followed a Fresh
+  Independent Review and Nova integration adjudication. Before that commit this
+  entry was uncommitted executor output prepared under an explicit Human-Maintainer
+  authorization given on 2026-09-05 and changed **no** authoritative CDS state; no
+  earlier wording conferred effectivity. **A review PASS is not a commit.**
 - **Date:** 2026-09-05
 - **Type:** Visual identifier, scale ownership, role admission and theme sequencing
   decision
@@ -5309,12 +5307,13 @@ visual source sets stay 0; Stable stays `No`.**
 
 ## DEC-S-133 — Per-Scale Topology Under the Common Scale Contract
 
-- **Status:** **`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET EFFECTIVE.**
-  Approved by the Human Maintainer on 2026-09-05 and prepared under that
-  authorization. **This entry is uncommitted executor output and changes no
-  authoritative CDS state.** It becomes `Accepted` and effective **only** at the
-  Human-Maintainer exact integration commit of the exact reviewed Working Tree
-  object, following a Fresh Independent Review and Nova integration adjudication.
+- **Status:** Accepted — **effective at the Human-Maintainer exact integration
+  commit `2cb244e889c1a6b5a278afb233995a0379b5d9ef`** of the exact reviewed Working
+  Tree object of the CDS Step-9 Decision Integration Pass, which followed a Fresh
+  Independent Review and Nova integration adjudication. Before that commit this
+  entry was uncommitted executor output prepared under an explicit Human-Maintainer
+  authorization given on 2026-09-05 and changed **no** authoritative CDS state; no
+  earlier wording conferred effectivity.
 - **Date:** 2026-09-05
 - **Type:** Visual identifier, scale ownership, role admission and theme sequencing
   decision
@@ -5447,12 +5446,13 @@ no publication authority, and **it activates no work package**. **VF-1 … VF-9 
 
 ## DEC-S-134 — Visual Role Admission Rule
 
-- **Status:** **`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET EFFECTIVE.**
-  Approved by the Human Maintainer on 2026-09-05 and prepared under that
-  authorization. **This entry is uncommitted executor output and changes no
-  authoritative CDS state.** It becomes `Accepted` and effective **only** at the
-  Human-Maintainer exact integration commit of the exact reviewed Working Tree
-  object, following a Fresh Independent Review and Nova integration adjudication.
+- **Status:** Accepted — **effective at the Human-Maintainer exact integration
+  commit `2cb244e889c1a6b5a278afb233995a0379b5d9ef`** of the exact reviewed Working
+  Tree object of the CDS Step-9 Decision Integration Pass, which followed a Fresh
+  Independent Review and Nova integration adjudication. Before that commit this
+  entry was uncommitted executor output prepared under an explicit Human-Maintainer
+  authorization given on 2026-09-05 and changed **no** authoritative CDS state; no
+  earlier wording conferred effectivity.
 - **Date:** 2026-09-05
 - **Type:** Visual identifier, scale ownership, role admission and theme sequencing
   decision
@@ -5575,12 +5575,13 @@ visual source sets stay 0; Stable stays `No`.**
 
 ## DEC-S-135 — Theme Sequencing Before Context-Sensitive Value Selection
 
-- **Status:** **`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET EFFECTIVE.**
-  Approved by the Human Maintainer on 2026-09-05 and prepared under that
-  authorization. **This entry is uncommitted executor output and changes no
-  authoritative CDS state.** It becomes `Accepted` and effective **only** at the
-  Human-Maintainer exact integration commit of the exact reviewed Working Tree
-  object, following a Fresh Independent Review and Nova integration adjudication.
+- **Status:** Accepted — **effective at the Human-Maintainer exact integration
+  commit `2cb244e889c1a6b5a278afb233995a0379b5d9ef`** of the exact reviewed Working
+  Tree object of the CDS Step-9 Decision Integration Pass, which followed a Fresh
+  Independent Review and Nova integration adjudication. Before that commit this
+  entry was uncommitted executor output prepared under an explicit Human-Maintainer
+  authorization given on 2026-09-05 and changed **no** authoritative CDS state; no
+  earlier wording conferred effectivity.
 - **Date:** 2026-09-05
 - **Type:** Visual identifier, scale ownership, role admission and theme sequencing
   decision

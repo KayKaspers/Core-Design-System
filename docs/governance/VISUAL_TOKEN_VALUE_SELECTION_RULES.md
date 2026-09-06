@@ -14,9 +14,9 @@
 - **Amended by:** CDS Step-9 Decision Integration Pass, 2026-09-05 — a second,
   additive prerequisite-state subsection under VP-1 … VP-7, to apply **DEC-S-132**
   ([ADR-0005](../decisions/ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md)),
-  **DEC-S-133**, **DEC-S-134** and **DEC-S-135**. **That amendment is `PROPOSED /
-  AUTHORIZED FOR INTEGRATION` and NOT YET EFFECTIVE**; it becomes effective only at
-  the Human-Maintainer exact integration commit of the reviewed object. **No value
+  **DEC-S-133**, **DEC-S-134** and **DEC-S-135**. **That amendment is effective**
+  at the Human-Maintainer exact integration commit
+  `2cb244e889c1a6b5a278afb233995a0379b5d9ef` (2026-09-05). **No value
   is selected, no prerequisite text is rewritten, and the 2026-08-27 table is
   preserved as the record of the period it governed.** VP-1 … VP-7,
   VE-1 … VE-12, IG-1 … IG-10, VD-1 … VD-8, VA-1 … VA-10 and VS-1 … VS-6 are
@@ -88,8 +88,9 @@ family.** A value proposed while any of them is open is a premature decision and
 
 *(**Effective** at the Human-Maintainer exact-byte integration commit
 `42a568d823de3388e45af62967546f13ad67eff6`. **Superseded in part by the 2026-09-05
-state below**, which is `PROPOSED / AUTHORIZED FOR INTEGRATION` and not yet
-effective. This table remains correct for the period it governed.)*
+state below**, which is effective at the Human-Maintainer exact integration commit
+`2cb244e889c1a6b5a278afb233995a0379b5d9ef`. This table remains correct for the
+period it governed.)*
 
 | Prerequisite | State | Basis |
 | --- | --- | --- |
@@ -109,9 +110,9 @@ effective. This table remains correct for the period it governed.)*
 
 ### Prerequisite state after the CDS Step-9 Decision Integration Pass
 
-*(**`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET EFFECTIVE.** Approved by the
-Human Maintainer on 2026-09-05; it becomes effective only at the Human-Maintainer
-exact integration commit of the reviewed object. **DEC-S-132, DEC-S-133, DEC-S-134
+*(**Effective.** Approved by the Human Maintainer on 2026-09-05 and effective at
+the Human-Maintainer exact integration commit
+`2cb244e889c1a6b5a278afb233995a0379b5d9ef`. **DEC-S-132, DEC-S-133, DEC-S-134
 and DEC-S-135 select no value**, and **VP-1 … VP-7 themselves are unchanged.**)*
 
 | Prerequisite | State | Basis |

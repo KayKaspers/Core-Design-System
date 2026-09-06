@@ -58,7 +58,7 @@ areas today.
 Governance foundation established. No final design or technology decisions are
 approved.
 
-- Decisions: DEC-S-001 … DEC-S-131 (131) — 6 foundation + 6 scope + 8 consumer
+- Decisions: DEC-S-001 … DEC-S-135 (135) — 6 foundation + 6 scope + 8 consumer
   and pilot scope + 12 logical architecture + 16 governance + 12 accessibility +
   4 operating enablement and pre-candidate + 8 accessibility support baseline and
   evidence + 10 machine-readable source and token format + 10 machine-readable
@@ -66,13 +66,17 @@ approved.
   status foundation + 10 semantic status source and evidence + 1 accessibility /
   maturity / channel boundary + 1 candidate finalization / maturity / evidence
   transition + 1 phase transition + 4 visual token representation, evaluation
-  authority and source identity decisions ·
-  **ADRs: 4 (ADR-0001, ADR-0002, ADR-0003, ADR-0004)**
+  authority and source identity + 4 visual identifier, scale ownership, role
+  admission and theme sequencing decisions ·
+  **ADRs: 5 (ADR-0001, ADR-0002, ADR-0003, ADR-0004, ADR-0005)**
   - **Effectivity: DEC-S-128 … DEC-S-131 and ADR-0004 are effective**, at the
     Human-Maintainer exact-byte integration commit
     `42a568d823de3388e45af62967546f13ad67eff6` of the CDS-WP-020 Decision
-    Integration Pass. The **effective** register is **DEC-S-001 … DEC-S-131 (131)**
-    with **4 ADRs**.
+    Integration Pass; **DEC-S-132 … DEC-S-135 and ADR-0005 are effective**, at the
+    Human-Maintainer exact integration commit
+    `2cb244e889c1a6b5a278afb233995a0379b5d9ef` of the CDS Step-9 Decision
+    Integration Pass. The **effective** register is **DEC-S-001 … DEC-S-135 (135)**
+    with **5 ADRs**.
 - Risks: RISK-001 … RISK-098 (98) — **89 Monitored; RISK-031, RISK-040, RISK-044,
   RISK-066, RISK-067, RISK-068, RISK-069, RISK-071, RISK-098 Mitigating**; **owner
   model finalized**; no risk accepted or closed
@@ -108,7 +112,7 @@ approved.
   while **OD-4 and OD-7 were answered, OD-5 partially answered, OD-6A
   policy-answered and OD-6B answered by existing authority** by the **CDS Step-9
   Decision Integration Pass** of 2026-09-05 (**DEC-S-132 … DEC-S-135 + ADR-0005,
-  prepared and NOT YET EFFECTIVE**), and **VP-3, VP-5, VP-6 and VP-7 stay
+  effective at `2cb244e8…`**), and **VP-3, VP-5, VP-6 and VP-7 stay
   unsatisfied**.
   **`DECISION_REQUIRED` stands as the executed result**: closure answers no open
   decision and selects no value. The **CDS Phase Transition Governance
@@ -1032,7 +1036,7 @@ pass and became effective at that object's Human-Maintainer integration commit
 and Source Set Realization** (the `FR-N-03` authoring destination) **and CDS-WP-021 —
 Adaptive Layout and Responsive Foundation**. Both **remain inactive until separately
 authorized by the Human Maintainer**, and **the order between them is not decided**
-— **OD-7 is answered by the prepared `DEC-S-135`**, which makes **CDS-WP-022** the
+— **OD-7 is answered by the effective `DEC-S-135`**, which makes **CDS-WP-022** the
 recommended and sequenced Step-10 candidate. **SEQUENCED NEXT ≠ AUTHORIZED**, and
 any further step begins only on an explicit Nova prompt and Human-Maintainer
 authorization.
@@ -1173,7 +1177,7 @@ created either.**
   seven choices are now made or dispositioned, and a source set still may not be
   written**: **VP-3, VP-5, VP-6 and VP-7 are unsatisfied for every family**, VP-2 is
   unsatisfied for typeface identity, weight identity and composites, and the four
-  Step-9 decisions are **prepared and not yet effective**. **Deciding an identifier
+  Step-9 decisions are **effective at `2cb244e8…`**. **Deciding an identifier
   is not creating one.**
 
 ### Why it returned `DECISION_REQUIRED`
@@ -1205,8 +1209,9 @@ identity spaces, and the fixed roots and source-set identities), **DEC-S-133**
 (per-family scale ownership under the unchanged ST-1 … ST-7 contract, **no
 universal cross-family base**, `SCALE TOPOLOGY ≠ SCALE VALUES`), **DEC-S-134** (a
 cross-consumer role **admission rule** only), **DEC-S-135** (no default role alias
-before CDS-WP-022) and **ADR-0005** — **all `PROPOSED / AUTHORIZED FOR INTEGRATION`
-and NOT YET EFFECTIVE**; **OD-6B needed no Decision**. **VP-3, VP-5, VP-6 and VP-7
+before CDS-WP-022) and **ADR-0005** — **all effective**, at the Human-Maintainer
+integration commit `2cb244e889c1a6b5a278afb233995a0379b5d9ef`; **OD-6B needed no
+Decision**. **VP-3, VP-5, VP-6 and VP-7
 stay unsatisfied**, **a new risk entry is still not recommended and `RISK-099` is
 not required**, and the value half stays gated. *(The pass itself did not close CDS-WP-020; its
 effectivity qualification was not reconciled by the closure and routing pass, and

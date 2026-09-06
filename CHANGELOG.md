@@ -9,6 +9,34 @@ released and no release is announced.
 
 ### Added
 
+- **`DEC-S-132 … DEC-S-135` and `ADR-0005` reconciled to their effective state.**
+  The condition those entries themselves stated — the Human-Maintainer exact
+  integration commit of the exact reviewed Step-9 Working Tree object, following a
+  Fresh Independent Review and Nova integration adjudication — was met by commit
+  `2cb244e889c1a6b5a278afb233995a0379b5d9ef` (parent
+  `6fcf6e4041508ff7c641ed89ec45a0684d4152f4`), so the repository's live
+  current-state carriers no longer qualify them as
+  `PROPOSED / AUTHORIZED FOR INTEGRATION` or `NOT YET EFFECTIVE`, and no longer
+  name **DEC-S-131** and **ADR-0004** as the highest effective entries.
+  **DEC-S-132 … DEC-S-135 are effective and ADR-0005 is `Accepted`**; the effective
+  registers are **DEC-S-001 … DEC-S-135 (135)** and **ADR-0001 … ADR-0005 (5)**.
+  **This records a completed Human-Maintainer act and performs none** — an ADR is
+  accepted by the Human-Maintainer commit its own status text bound acceptance to,
+  never by an executor. **Point-in-time records were preserved**, not rewritten:
+  dated review, evidence, decision-time, and changelog statements that were true
+  before integration remain as written, including the Step-9 preparation entry
+  below. **No Decision, ADR, or risk was added, changed in substance, or removed** —
+  the registers stay at **135**, **5**, and **98**; **no `DEC-S-136`, no
+  `ADR-0006`, no `RISK-099`.** **No ADR rationale, alternative, consequence, or
+  Decision scope was altered**; no visual value, identifier, role, Source Set,
+  token source, schema, validator rule, test, or fixture was created; **no**
+  evidence was admitted, **no** maturity changed, **no** claim was made, and **no**
+  work package was activated. **OD-5 and OD-6A residuals, VF-1 tonal topology, and
+  the concrete role vocabulary stay open; VP-3, VP-5, VP-6 and VP-7 stay
+  unsatisfied; visual values and visual source sets stay 0.** **CDS-WP-022 remains
+  the recommended and sequenced Step-10 candidate and is not authorized; no work
+  package is currently authorized.**
+  (CDS Step-9 post-integration effectivity reconciliation)
 - **CDS Step-9 Decision Integration Pass — `DEC-S-132 … DEC-S-135` and `ADR-0005`,
   PREPARED and NOT YET EFFECTIVE.** Authorized separately by the Human Maintainer on
   **2026-09-05** after Nova adjudicated the CDS Step-9 R1/R2 decision package. All

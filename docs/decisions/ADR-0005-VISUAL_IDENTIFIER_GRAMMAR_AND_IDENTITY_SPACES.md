@@ -1,13 +1,14 @@
 # ADR-0005 — Visual Identifier Grammar and Identity Spaces
 
-- **Status:** **`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET EFFECTIVE.**
-  Prepared under an explicit Human-Maintainer authorization given on 2026-09-05.
-  **This document is uncommitted executor output and confers no acceptance and no
-  authority.** It becomes `Accepted` **only** upon the Human-Maintainer exact
-  integration commit of the exact reviewed Working Tree object, following a Fresh
-  Independent Review and Nova integration adjudication — the same acceptance rule
-  ADR-0001 … ADR-0004 carry. **A review PASS is not a commit, and a Nova
-  recommendation is not an approval.**
+- **Status:** **Accepted upon Human-Maintainer commit following Nova approval** —
+  accepted at the exact integration commit
+  `2cb244e889c1a6b5a278afb233995a0379b5d9ef` (2026-09-05) of the exact reviewed
+  Working Tree object, which followed a Fresh Independent Review and Nova
+  integration adjudication — the same acceptance rule ADR-0001 … ADR-0004 carry.
+  Before that commit this ADR was uncommitted executor output prepared under an
+  explicit Human-Maintainer authorization given on 2026-09-05 and conferred **no**
+  acceptance and **no** authority; no earlier wording conferred it. **A review PASS
+  is not a commit, and a Nova recommendation is not an approval.**
 - **Date:** 2026-09-05
 - **Project:** Core Design System (CDS)
 - **Registered by:** CDS Step-9 Decision Integration Pass — **no work package is
@@ -316,7 +317,7 @@ evidence** (DEC-S-053).
 ## Authority boundary
 
 This ADR **records** architecture rationale. It grants **no** authority beyond
-DEC-S-132 — see *Status* above, and note that this ADR is **not yet effective**.
+DEC-S-132 — see *Status* above.
 
 It **does not** change DEC-S-131, redefine the existing identifier profile, create a
 source set, create a token identifier beyond the root authority DEC-S-132 explicitly

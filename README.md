@@ -168,9 +168,10 @@ contrast evaluation authority, and the source-set identity model. **They are
 effective at commit `42a568d8…`, and they select no value.** A further
 Human-Maintainer decision on **2026-09-05** answered **OD-4** and **OD-7**,
 partially answered **OD-5**, policy-answered **OD-6A**, and dispositioned **OD-6B**
-as already covered by existing authority — prepared as **DEC-S-132 … DEC-S-135**
-and **ADR-0005**, which are **`PROPOSED / AUTHORIZED FOR INTEGRATION` and NOT YET
-EFFECTIVE**. **No value is selected, and no work package is authorized.**
+as already covered by existing authority — registered as **DEC-S-132 … DEC-S-135**
+and **ADR-0005** by a separately authorized **Step-9 Decision Integration Pass**.
+**They are effective at commit `2cb244e8…`, and they select no value.** **No value
+is selected, and no work package is authorized.**
 **CDS-WP-021 … CDS-WP-053 are planned only — not active, not authorized, work not
 started** — and are recorded in the
 [Post-Candidate Development Roadmap](docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
@@ -460,7 +461,7 @@ contrast evaluation authority and **ADR-0004** recording the architecture ration
 **All five are effective**, at the Human-Maintainer exact-byte integration commit
 `42a568d823de3388e45af62967546f13ad67eff6`.
 
-**And the value half is still gated.** The prepared Step-9 package answers OD-4 and
+**And the value half is still gated.** The Step-9 package answers OD-4 and
 OD-7, partially answers OD-5, and policy-answers OD-6A — and **VP-3, VP-5, VP-6 and
 VP-7 remain unsatisfied for every family**, with VP-2 unsatisfied for typeface
 identity, weight identity and composites. **Only VP-4 moves**, for VF-1, VF-2,
@@ -470,9 +471,9 @@ visual source sets: 0 · visual Candidate families: 0 · Stable: 0.**
 
 - [Visual Reference Token Foundation](docs/architecture/VISUAL_REFERENCE_TOKEN_FOUNDATION.md) · [Visual Semantic Token Foundation](docs/architecture/VISUAL_SEMANTIC_TOKEN_FOUNDATION.md)
 - [Visual Token Value Selection Rules](docs/governance/VISUAL_TOKEN_VALUE_SELECTION_RULES.md)
-- [Visual Token Foundation Open Decisions](docs/roadmap/VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md) — **non-normative**; OD-1 … OD-7 (OD-1 … OD-3 answered and effective; OD-4 and OD-7 answered, OD-5 partially answered, OD-6A policy-answered, OD-6B answered by existing authority — all four prepared and **not yet effective**; the concrete role vocabulary, the per-family topology parameters and VF-1 tonal topology stay open)
+- [Visual Token Foundation Open Decisions](docs/roadmap/VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md) — **non-normative**; OD-1 … OD-7 (OD-1 … OD-3 answered and effective; OD-4 and OD-7 answered, OD-5 partially answered, OD-6A policy-answered, OD-6B answered by existing authority — all four **effective**; the concrete role vocabulary, the per-family topology parameters and VF-1 tonal topology stay open)
 - [ADR-0004 — Visual Token Representation and Source Identity Architecture](docs/decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md) — **`Accepted`, effective at commit `42a568d8…`**
-- [ADR-0005 — Visual Identifier Grammar and Identity Spaces](docs/decisions/ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md) — **`PROPOSED / AUTHORIZED FOR INTEGRATION`, NOT YET EFFECTIVE**; covers **DEC-S-132** only
+- [ADR-0005 — Visual Identifier Grammar and Identity Spaces](docs/decisions/ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md) — **`Accepted`, effective at commit `2cb244e8…`**; covers **DEC-S-132** only
 
 ## Governance
 
@@ -770,7 +771,7 @@ maturity or approval it does not hold.
     **Option 2**: **AUTHOR is not VALIDATE.** The concrete machine-readable Visual
     Token Source and Value Authoring work is routed to **`CDS-WP-020A`** and is
     **not** absorbed into CDS-WP-024.
-- **Decided, prepared, and NOT YET EFFECTIVE:** the **CDS Step-9 Decision
+- **Decided and EFFECTIVE:** the **CDS Step-9 Decision
   Integration Pass** (2026-09-05). The Human Maintainer decided **OD-4, OD-5, OD-6A
   and OD-7**, and this pass prepared **DEC-S-132** (family-rooted identifier
   grammar with a declared `qualifier` position, the layer kept out of every token
@@ -785,8 +786,8 @@ maturity or approval it does not hold.
   [**ADR-0005**](docs/decisions/ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md)
   for DEC-S-132 only. **OD-6B needed no Decision** — VF-1 … VF-9 remain separate
   artifact families under AF-1, AF-3 and AF-4, and **BATCHED REVIEW ≠ SHARED
-  MATURITY**. All five are **`PROPOSED / AUTHORIZED FOR INTEGRATION`** and become
-  effective only at the Human-Maintainer exact integration commit. They create **no**
+  MATURITY**. All five are **effective**, at the Human-Maintainer exact integration
+  commit `2cb244e889c1a6b5a278afb233995a0379b5d9ef`. They create **no**
   visual value, **no** identifier instance, **no** Source Set and **no** role, admit
   **no** evidence, change **no** maturity, add **no** risk, and **activate no work
   package.**
@@ -799,7 +800,7 @@ maturity or approval it does not hold.
   identity, revision, provenance, and family × layer topology — and, only once
   **OD-4** and **OD-5** are decided and **VP-1 … VP-7** are satisfied, identifier
   realization and concrete normative values. **OD-4 is now answered and OD-5
-  partially answered by the prepared Step-9 package, but VP-3, VP-5, VP-6 and VP-7
+  partially answered by the Step-9 package, but VP-3, VP-5, VP-6 and VP-7
   remain unsatisfied**, so its authorization prerequisites are **not** met. It
   **never** acquires validator
   implementation, validation authority, conformance determination, evidence
@@ -811,7 +812,7 @@ maturity or approval it does not hold.
   started.** The immediate next planned work packages are **`CDS-WP-020A`** and
   **CDS-WP-021 — Adaptive Layout and Responsive Foundation**; both remain inactive
   until separately authorized by the Human Maintainer, and **the order between them
-  is not decided here.** **OD-7 is answered by the prepared `DEC-S-135`:
+  is not decided here.** **OD-7 is answered by `DEC-S-135`:
   CDS-WP-022 precedes context-sensitive value selection, and CDS-WP-022 is the
   recommended and sequenced Step-10 candidate.** **SEQUENCED NEXT ≠ AUTHORIZED** —
   it authorizes nothing.
@@ -856,7 +857,7 @@ phase.
 
 ## Registers
 
-- Decisions: DEC-S-001 … DEC-S-131 (131) — 6 strategic foundation decisions,
+- Decisions: DEC-S-001 … DEC-S-135 (135) — 6 strategic foundation decisions,
   6 strategic scope decisions, 8 consumer and pilot scope decisions,
   12 logical architecture decisions, 16 governance, lifecycle and publication
   decisions, 12 accessibility and inclusive design decisions, 4 operating
@@ -867,13 +868,17 @@ phase.
   status source and evidence decisions, 1 accessibility / maturity / channel
   boundary decision, 1 candidate finalization / maturity / evidence transition
   decision, 1 phase transition decision, 4 visual token representation, evaluation
-  authority and source identity decisions · ADRs: 4 (ADR-0001, ADR-0002, ADR-0003,
-  ADR-0004)
+  authority and source identity decisions, 4 visual identifier, scale ownership,
+  role admission and theme sequencing decisions · ADRs: 5 (ADR-0001, ADR-0002,
+  ADR-0003, ADR-0004, ADR-0005)
   - **Effectivity:** **DEC-S-128 … DEC-S-131 and ADR-0004 are effective**, at the
     Human-Maintainer exact-byte integration commit
     `42a568d823de3388e45af62967546f13ad67eff6` of the CDS-WP-020 Decision
-    Integration Pass. The **effective** register is **DEC-S-001 … DEC-S-131 (131)**
-    with **4 ADRs (ADR-0001, ADR-0002, ADR-0003, ADR-0004)**.
+    Integration Pass; **DEC-S-132 … DEC-S-135 and ADR-0005 are effective**, at the
+    Human-Maintainer exact integration commit
+    `2cb244e889c1a6b5a278afb233995a0379b5d9ef` of the CDS Step-9 Decision
+    Integration Pass. The **effective** register is **DEC-S-001 … DEC-S-135 (135)**
+    with **5 ADRs (ADR-0001, ADR-0002, ADR-0003, ADR-0004, ADR-0005)**.
 - Risks: RISK-001 … RISK-098 (98) — 89 Monitored; 9 Mitigating (RISK-031, RISK-040,
   RISK-044, RISK-066, RISK-067, RISK-068, RISK-069, RISK-071, RISK-098); owner
   model finalized; no risk accepted or closed

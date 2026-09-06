@@ -4,9 +4,9 @@
 - **Registered by:** CDS-WP-019 — Core Visual Foundation Architecture
 - **Date:** 2026-08-26
 - **Amended by:** CDS Step-9 Decision Integration Pass, 2026-09-05 — a new *Theme
-  sequencing* section, to apply **DEC-S-135**. **That amendment is `PROPOSED /
-  AUTHORIZED FOR INTEGRATION` and NOT YET EFFECTIVE**; it becomes effective only at
-  the Human-Maintainer exact integration commit of the reviewed object. **It
+  sequencing* section, to apply **DEC-S-135**. **That amendment is effective** at
+  the Human-Maintainer exact integration commit
+  `2cb244e889c1a6b5a278afb233995a0379b5d9ef` (2026-09-05). **It
   decides no theme mechanism, creates no theme and no context, and authorizes no
   work package**, and T-1 … T-10, the candidate contexts, and the Product Profile
   boundary are unchanged.
@@ -123,7 +123,8 @@ does not escape its channel's profile requirement.
 ## Theme sequencing
 
 *(Normative — **DEC-S-135**, CDS Step-9 Decision Integration Pass, 2026-09-05.
-**`PROPOSED / AUTHORIZED FOR INTEGRATION` and NOT YET EFFECTIVE.** It **decides no
+**Effective** at the Human-Maintainer exact integration commit
+`2cb244e889c1a6b5a278afb233995a0379b5d9ef`. It **decides no
 theme mechanism** — that remains CDS-WP-022's and is untouched. **No ADR** —
 DEC-S-135 is deliberately not an architecture dependency of ADR-0005.)*
 

@@ -248,7 +248,7 @@ library, or a design project scoped exclusively to CoreOps.
   token-flow layers 1 and 2, source-set identity, revision, provenance, family ×
   layer topology, and — only once **OD-4** and **OD-5** are decided and
   **VP-1 … VP-7** are satisfied — identifier realization and concrete normative
-  values. **OD-4 is now answered and OD-5 partially answered** by the prepared
+  values. **OD-4 is now answered and OD-5 partially answered** by the effective
   Step-9 package below, but **VP-3, VP-5, VP-6 and VP-7 remain unsatisfied**, so its
   authorization prerequisites are **not** met. It **never** acquires validator
   implementation, validation authority,
@@ -262,8 +262,8 @@ library, or a design project scoped exclusively to CoreOps.
   them activates nothing** and work on them has not started. The immediate next
   planned work packages are **`CDS-WP-020A`** and **CDS-WP-021 — Adaptive Layout and
   Responsive Foundation**; both stay inactive until separately authorized, and **the
-  order between them is not decided here.** **OD-7 is answered by the prepared
-  `DEC-S-135`: CDS-WP-022 precedes context-sensitive value selection, and
+  order between them is not decided here.** **OD-7 is answered by `DEC-S-135`:
+  CDS-WP-022 precedes context-sensitive value selection, and
   CDS-WP-022 is the recommended and sequenced Step-10 candidate** — **SEQUENCED
   NEXT ≠ AUTHORIZED**, and it authorizes nothing. Each work package begins only on
   an explicit Nova prompt and Human-Maintainer authorization, one at a time.
@@ -481,8 +481,8 @@ Before beginning a work package, inspect at minimum:
   [docs/roadmap/VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md](docs/roadmap/VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md)
   (**OD-1 … OD-7** — **OD-1, OD-2 and OD-3 answered and effective** by DEC-S-128,
   DEC-S-130 and DEC-S-131; **OD-4 and OD-7 answered, OD-5 partially answered, OD-6A
-  policy-answered and OD-6B answered by existing authority** by the prepared
-  **DEC-S-132 … DEC-S-135**, which are **NOT YET EFFECTIVE**; **the concrete role
+  policy-answered and OD-6B answered by existing authority** by
+  **DEC-S-132 … DEC-S-135**, which are **effective**; **the concrete role
   vocabulary, the per-family topology parameters and VF-1 tonal topology stay
   open**)
 - [docs/decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md](docs/decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md)
@@ -493,9 +493,9 @@ Before beginning a work package, inspect at minimum:
   architecture dependency of it
 - [docs/decisions/ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md](docs/decisions/ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md)
   — architecture rationale for the visual identifier grammar and the two identity
-  spaces (**DEC-S-132**). **`PROPOSED / AUTHORIZED FOR INTEGRATION` and NOT YET
-  EFFECTIVE**; DEC-S-133, DEC-S-134 and DEC-S-135 are deliberately **not**
-  architecture dependencies of it
+  spaces (**DEC-S-132**). **`Accepted` and effective** at the Human-Maintainer
+  integration commit `2cb244e889c1a6b5a278afb233995a0379b5d9ef`; DEC-S-133,
+  DEC-S-134 and DEC-S-135 are deliberately **not** architecture dependencies of it
 - [docs/governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md](docs/governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md)
   — normative source for the accessibility target, target-versus-claim boundary,
   and inclusive design; entry point to the accessibility documents and the
@@ -782,7 +782,7 @@ assumed — and CDS-WP-020 created none.
   [Visual Token Foundation Open Decisions](docs/roadmap/VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md)
   register. **Three are answered and effective** by the CDS-WP-020 Decision
   Integration Pass (below); the remaining four were decided by the Human Maintainer
-  on **2026-09-05** and are **prepared but NOT YET EFFECTIVE** — see *CDS Step-9
+  on **2026-09-05** and are **effective** — see *CDS Step-9
   Decision Integration Pass* below. **What still stays open after them:** the
   **concrete role vocabulary**, the **per-family scale topology parameters**,
   **VF-1 tonal topology**, the **OD-1 `hex`** residual, the **OD-2** font-identity
@@ -799,8 +799,8 @@ assumed — and CDS-WP-020 created none.
   generated artifact, an example or fixture, a validator pass, prior existence,
   schedule pressure, and making a failing check pass. **VP-2 is satisfied for the
   families expressible in `color`, `dimension` and `number`** — not for typeface
-  identity, weight identity, or composites. **VP-4 becomes satisfied for VF-1,
-  VF-2, VF-3, VF-5 and VF-6** once the prepared `DEC-S-132` is effective. **VP-3,
+  identity, weight identity, or composites. **VP-4 is satisfied for VF-1,
+  VF-2, VF-3, VF-5 and VF-6** under the effective `DEC-S-132`. **VP-3,
   VP-5, VP-6 and VP-7 remain UNSATISFIED for every family**, so **no visual value
   may be selected.** **Deciding is not implementing, implementing is not
   validating, and validating is not satisfying.**
@@ -810,7 +810,7 @@ assumed — and CDS-WP-020 created none.
 - **No value, no identifier, and no machine-readable source without an explicit
   prompt.** Claude creates no visual token source file, manifest, resolver, schema,
   validator rule, test, or fixture. **The identifier grammar and the family and
-  source-set roots are now decided** by the prepared `DEC-S-132` — **but deciding an
+  source-set roots are now decided** by the effective `DEC-S-132` — **but deciding an
   identifier is not creating one.** No identifier instance, Source Set,
   `sourceRevision`, or role name exists, **`CDS-WP-020A` may not invent a role
   identifier**, and none may be created without a separately authorized work
@@ -869,9 +869,11 @@ Maintainer integrated the reviewed object at `42a568d823de3388e45af62967546f13ad
 **Effectivity.** All five are **effective.** They became effective **only** at the
 Human-Maintainer exact-byte integration commit
 `42a568d823de3388e45af62967546f13ad67eff6`, which followed a Fresh Independent
-Review and Nova integration adjudication. The **effective** registers are therefore
-**DEC-S-131** and **ADR-0004**; the register holds **131** decisions and **4** ADRs.
-**A review PASS is not a commit, and a Nova recommendation is not an approval.**
+Review and Nova integration adjudication. The **effective** registers were therefore
+**DEC-S-131** and **ADR-0004** at that commit; they have since advanced to
+**DEC-S-135** and **ADR-0005** — see the *CDS Step-9 Decision Integration Pass*
+below. **A review PASS is not a commit, and a Nova recommendation is not an
+approval.**
 
 **The pass created no visual value and no identifier**, no token source file,
 manifest, resolver, schema, validator rule, test, or fixture; admitted **no**
@@ -885,15 +887,17 @@ close CDS-WP-020**; closure was recorded separately by the CDS-WP-020 closure an
 routing pass and became effective at its Human-Maintainer integration commit
 `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.
 
-### CDS Step-9 Decision Integration Pass (2026-09-05) — PREPARED, NOT YET EFFECTIVE
+### CDS Step-9 Decision Integration Pass (2026-09-05) — EFFECTIVE
 
 The Human Maintainer decided **OD-4, OD-5, OD-6A and OD-7** on **2026-09-05** and
-authorized this bounded pass to prepare the records. **Nothing here is effective.**
-`DEC-S-132 … DEC-S-135` and `ADR-0005` are **`PROPOSED / AUTHORIZED FOR
-INTEGRATION`** and become effective **only** at the Human-Maintainer exact
-integration commit of the exact reviewed Working Tree object, following a Fresh
-Independent Review and Nova integration adjudication. **The committed register
-remains 131 decisions and 4 ADRs; the prepared target is 135 and 5.**
+authorized this bounded pass to prepare the records. It **prepared, and committed
+nothing**; the Human Maintainer integrated the reviewed object at
+`2cb244e889c1a6b5a278afb233995a0379b5d9ef`. `DEC-S-132 … DEC-S-135` and `ADR-0005`
+are **effective** there — they became effective **only** at that Human-Maintainer
+exact integration commit of the exact reviewed Working Tree object, following a
+Fresh Independent Review and Nova integration adjudication. **The effective
+register holds 135 decisions and 5 ADRs.** **A review PASS is not a commit, and a
+Nova recommendation is not an approval.**
 
 - **DEC-S-132 — Visual Identifier Grammar and the Two Identity Spaces**
   (**ADR-0005**). Visual token paths are **family-rooted**:

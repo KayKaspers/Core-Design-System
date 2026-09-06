@@ -10,9 +10,9 @@
   (2026-08-27). It **applies** AF-1 … AF-5 and adds **no** maturity rule, gate, or evidence
   requirement; AF-1 … AF-5 and VR-1 … VR-5 are unchanged.
 - **Amended by:** CDS Step-9 Decision Integration Pass, 2026-09-05 — the additive
-  *OD-6B disposition* note under *Governance capacity*. **That note is `PROPOSED /
-  AUTHORIZED FOR INTEGRATION` and NOT YET EFFECTIVE**; it becomes effective only at
-  the Human-Maintainer exact integration commit of the reviewed object. **It adds
+  *OD-6B disposition* note under *Governance capacity*. **That note is effective**
+  at the Human-Maintainer exact integration commit
+  `2cb244e889c1a6b5a278afb233995a0379b5d9ef` (2026-09-05). **It adds
   no Decision, no rule, no gate, and no construct**, registers **no** maturity
   group or aggregate gate, and grants **no** maturity; AF-1 … AF-5, VR-1 … VR-5 and
   the artifact-family model are unchanged.
@@ -334,7 +334,8 @@ and gate, is **a substantial governance load that has never been run**.
 
 *(An additive dated note. **It changes no rule**, registers no new construct, and
 **adds no Decision** — AF-1 … AF-5 and the artifact-family model above are
-unchanged. `PROPOSED / AUTHORIZED FOR INTEGRATION`, not yet effective.)*
+unchanged. Effective at the Human-Maintainer exact integration commit
+`2cb244e889c1a6b5a278afb233995a0379b5d9ef`.)*
 
 The maturity-granularity half of **OD-6** — how many families mature separately — is
 **answered by the existing normative authority on this page**, and the Human

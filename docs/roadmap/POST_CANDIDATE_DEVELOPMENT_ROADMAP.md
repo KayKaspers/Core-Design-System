@@ -209,7 +209,7 @@ renumbered**, and the numeric range CDS-WP-017 … CDS-WP-053 is unchanged.
 
 **Its table position is registration, not sequencing.** Listing CDS-WP-020A before
 CDS-WP-021 and CDS-WP-022 does **not** decide that it runs before them. **OD-7 is
-answered by the prepared `DEC-S-135`** — CDS-WP-022 precedes context-sensitive value
+answered by the effective `DEC-S-135`** — CDS-WP-022 precedes context-sensitive value
 selection, and no semantic role carries a default alias before it decides the theme
 mechanism — so **CDS-WP-022 is the recommended and sequenced Step-10 candidate.**
 **SEQUENCED NEXT ≠ AUTHORIZED.** Execution order remains a Human-Maintainer
@@ -656,7 +656,7 @@ pass, and **routing is not repair**. None of them blocked CDS-WP-020.
 
 | ID | Observation | Disposition |
 | --- | --- | --- |
-| **F-020-01** | The **value half** of CDS-WP-020 is gated on **seven** normative choices that no committed CDS source has made. The five earlier work packages that made comparable first-of-their-kind normative choices — **CDS-WP-011 … CDS-WP-015** — each registered a Decision block, and three of them an ADR; CDS-WP-020 holds no authority to register either. | **`DECISION_REQUIRED`.** Recorded as **OD-1 … OD-7** in the **non-normative** [Visual Token Foundation Open Decisions](VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md) register. **Partially answered on 2026-08-27** by the Human-Maintainer-authorized **CDS-WP-020 Decision Integration Pass**: **DEC-S-128, DEC-S-129, DEC-S-130, DEC-S-131** and **ADR-0004** were **prepared and authorized for integration, and at that date NOT YET EFFECTIVE**. They answer **OD-1, OD-2 and OD-3** and add the contrast evaluation authority. **OD-4 … OD-7 stay open, the value half stays gated, and CDS-WP-020 stays `DECISION_REQUIRED` and not closed.** *(Stated as at 2026-08-27, before integration.)* **Superseded in part:** the CDS-WP-020 object was integrated by the Human-Maintainer commit `42a568d823de3388e45af62967546f13ad67eff6` — at which **DEC-S-128 … DEC-S-131 and ADR-0004 became effective** — and CDS-WP-020 is now **`Closed`**, closure effective at the Human-Maintainer commit `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`. **The `DECISION_REQUIRED` result stands as the executed result of the work package**, **OD-4 … OD-7 stay open**, and the value half stays gated; the value and machine-readable work is routed to **`CDS-WP-020A`** (`FR-N-03`), which is **`Planned`, not active, and not authorized**. |
+| **F-020-01** | The **value half** of CDS-WP-020 is gated on **seven** normative choices that no committed CDS source has made. The five earlier work packages that made comparable first-of-their-kind normative choices — **CDS-WP-011 … CDS-WP-015** — each registered a Decision block, and three of them an ADR; CDS-WP-020 holds no authority to register either. | **`DECISION_REQUIRED`.** Recorded as **OD-1 … OD-7** in the **non-normative** [Visual Token Foundation Open Decisions](VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md) register. **Partially answered on 2026-08-27** by the Human-Maintainer-authorized **CDS-WP-020 Decision Integration Pass**: **DEC-S-128, DEC-S-129, DEC-S-130, DEC-S-131** and **ADR-0004** were **prepared and authorized for integration, and at that date NOT YET EFFECTIVE**. They answer **OD-1, OD-2 and OD-3** and add the contrast evaluation authority. **OD-4 … OD-7 stay open, the value half stays gated, and CDS-WP-020 stays `DECISION_REQUIRED` and not closed.** *(Stated as at 2026-08-27, before integration.)* **Superseded in part:** the CDS-WP-020 object was integrated by the Human-Maintainer commit `42a568d823de3388e45af62967546f13ad67eff6` — at which **DEC-S-128 … DEC-S-131 and ADR-0004 became effective** — and CDS-WP-020 is now **`Closed`**, closure effective at the Human-Maintainer commit `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`. **The `DECISION_REQUIRED` result stands as the executed result of the work package**; **OD-4 … OD-7 have since been answered by the CDS Step-9 Decision Integration Pass — OD-4 and OD-7 answered, OD-5 partially answered, OD-6A policy-answered, OD-6B answered by existing authority, effective at the Human-Maintainer commit `2cb244e889c1a6b5a278afb233995a0379b5d9ef`, with the concrete role vocabulary, the per-family topology parameters and VF-1 tonal topology still open**; and the value half stays gated; the value and machine-readable work is routed to **`CDS-WP-020A`** (`FR-N-03`), which is **`Planned`, not active, and not authorized**. |
 | **F-020-02** | **AF-1 / AF-3 versus source-set metadata.** A source-set payload carries **one** `maturityState`, but the [Visual Foundation Governance and Lifecycle](../governance/VISUAL_FOUNDATION_GOVERNANCE_AND_LIFECYCLE.md) requires that maturity is never inherited (AF-1) and that a family may mature at its own pace (AF-3). A shared visual source set cannot express both. **Corrected 2026-08-27 — see the disposition.** | **ANSWERED by DEC-S-131**, with the finding corrected precisely: its **conclusion stands** — a shared visual source set cannot express per-family maturity, so the unit is **one source set per independently evaluable Family × Token-Flow-Layer unit**. Its **artifact-count mechanism was imprecise**: it implied that per-family, per-layer source sets multiply manifests and resolvers at the same rate. They do not — the committed manifest contract carries a **`sourceSets` array**, so **one manifest may aggregate many source sets**, each retaining its own maturity. **A source set is not a manifest**, and **AGGREGATED is not MATURE**. **Residual:** the concrete root identifiers are **not** created, coupled to **OD-4**; **OD-6 stays open and is not pre-answered**. |
 | **F-020-03** | **T-2 is vacuously satisfiable today.** *"Every semantic role must resolve in every supported context"* is trivially true when **zero** contexts are supported, so it cannot guide whether a default role binding is legitimate or a pre-emption of **CDS-WP-022**. | Recorded as **OD-7**. The [Visual Semantic Token Foundation](../architecture/VISUAL_SEMANTIC_TOKEN_FOUNDATION.md) adds **TC-6** so the gap is at least stated. **The theme mechanism remains CDS-WP-022's.** |
 | **F-020-04** | The offline validator's bounded token-`$type` set is routinely readable as a **CDS profile admission**. It is a **DEC-S-098 V2 coverage boundary**, and the committed token-document schema constrains `$type` **not at all**. | Stated explicitly in the [Visual Reference Token Foundation](../architecture/VISUAL_REFERENCE_TOKEN_FOUNDATION.md) machine-readable disposition and in **OD-2**, citing **RISK-074**. **CLOSED by DEC-S-130** (2026-08-27, effective at commit `42a568d823de3388e45af62967546f13ad67eff6`), which states the admission profile explicitly — `color`, `dimension`, `number` — and restates that **a tool accepting a type is not the profile admitting it**. **The DEC-S-098 coverage boundary is unchanged, and no schema, validator, test, or fixture was changed.** |
@@ -713,7 +713,8 @@ occurred, and no work package is currently authorized.**
 **The Human-Maintainer decision on OD-4, OD-5, OD-6 and the OD-7 sequencing has been
 taken** (2026-09-05): **OD-4 and OD-7 answered, OD-5 partially answered, OD-6A
 policy-answered, OD-6B answered by existing normative authority.** The records are
-**prepared and NOT YET EFFECTIVE**. **The recommended Step-10 candidate is
+**effective** at the Human-Maintainer exact integration commit
+`2cb244e889c1a6b5a278afb233995a0379b5d9ef`. **The recommended Step-10 candidate is
 `CDS-WP-022`**, which remains **`Planned`, not active, and not authorized** —
 **SEQUENCED NEXT ≠ AUTHORIZED**.
 
@@ -778,12 +779,12 @@ commit**:
 | **`DEC-S-135`** | **No semantic visual role carries a default alias before CDS-WP-022 decides the theme mechanism**, and **CDS-WP-022 precedes context-sensitive value selection**. It gates **values and bindings, not structure**: identifier grammar, scale ownership, role admission, family maturity governance and source-set structural identity are context-independent by TC-1, TC-2, T-8, N-6 and RB-1. **OD-7 answered.** | — |
 | **`OD-6B`** | **Answered by existing normative authority — no new Decision, and none is required.** VF-1 … VF-9 remain **separate artifact families**, each with its own maturity, evidence, gate and compatibility statement, under **AF-1**, **AF-3** and **AF-4**. Administrative batching may occur: **BATCHED REVIEW ≠ SHARED MATURITY**, **BATCHED GATE PREPARATION ≠ MATURITY INHERITANCE**. **No maturity group, cluster maturity, roll-up, inherited maturity, or aggregate gate exists or may be created.** `F-019-07` and `F-020-08` close with this disposition. | — |
 
-**Effectivity.** All five instruments are **`PROPOSED / AUTHORIZED FOR INTEGRATION`
-and NOT YET EFFECTIVE.** They become effective **only** at the Human-Maintainer
-exact integration commit of the exact reviewed Working Tree object, following a
-Fresh Independent Review and Nova integration adjudication. **The committed
-registers stay at `DEC-S-131` and `ADR-0004` — 131 decisions and 4 ADRs — while the
-prepared target is 135 and 5.** **A review PASS is not a commit, and a Nova
+**Effectivity.** All five instruments are **effective.** They became effective
+**only** at the Human-Maintainer exact integration commit
+`2cb244e889c1a6b5a278afb233995a0379b5d9ef` of the exact reviewed Working Tree
+object, following a Fresh Independent Review and Nova integration adjudication.
+**The effective registers are therefore `DEC-S-135` and `ADR-0005` — 135 decisions
+and 5 ADRs.** **A review PASS is not a commit, and a Nova
 recommendation is not an approval.**
 
 **What the pass did not do:** it created **no** visual value, **no** identifier
@@ -830,7 +831,8 @@ topology/value boundary, **not** the per-family topology parameters, and **VF-1
 tonal topology is split out and stays open**), **OD-6A policy-answered** (`DEC-S-134`
 — an admission rule, **not** a vocabulary), and **OD-6B answered by existing
 normative authority with no new Decision.** **All four Decisions and ADR-0005 are
-`PROPOSED / AUTHORIZED FOR INTEGRATION` and NOT YET EFFECTIVE.**
+effective** at the Human-Maintainer exact integration commit
+`2cb244e889c1a6b5a278afb233995a0379b5d9ef`.
 
 **The value half stays gated all the same**: **VP-3, VP-5, VP-6 and VP-7 remain
 unsatisfied for every visual family**, VP-2 remains unsatisfied for typeface
@@ -861,7 +863,7 @@ CDS-WP-021 … CDS-WP-053 all remain `Planned`, not active, and not authorized.*
 - [Concept and Scope](../governance/CONCEPT_AND_SCOPE.md)
 - [Accessibility and Inclusive Design Policy](../governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md)
 - [Candidate Promotion Effectivity Record](../governance/SEMANTIC_STATUS_CANDIDATE_PROMOTION_EFFECTIVITY_RECORD.md)
-- [Visual Token Foundation Open Decisions](VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md) — **non-normative**; OD-1 … OD-7 (CDS-WP-020); OD-1 … OD-3 answered and effective; OD-4 and OD-7 answered, OD-5 partially answered, OD-6A policy-answered and OD-6B answered by existing authority — prepared, **not yet effective**
+- [Visual Token Foundation Open Decisions](VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md) — **non-normative**; OD-1 … OD-7 (CDS-WP-020); OD-1 … OD-3 answered and effective; OD-4 and OD-7 answered, OD-5 partially answered, OD-6A policy-answered and OD-6B answered by existing authority — **effective**
 - [Visual Reference Token Foundation](../architecture/VISUAL_REFERENCE_TOKEN_FOUNDATION.md) · [Visual Semantic Token Foundation](../architecture/VISUAL_SEMANTIC_TOKEN_FOUNDATION.md) · [Visual Token Value Selection Rules](../governance/VISUAL_TOKEN_VALUE_SELECTION_RULES.md)
 - [ADR-0004 — Visual Token Representation and Source Identity Architecture](../decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md) — **`Accepted`, effective at commit `42a568d8…`**
 - [Decision Index](../decisions/DECISION_INDEX.md) · [Risk Register](../risks/RISK_REGISTER.md)

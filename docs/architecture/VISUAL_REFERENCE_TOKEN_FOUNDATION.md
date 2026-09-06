@@ -17,9 +17,9 @@
   the topology/value boundary), and the *Deferred decisions* section, to apply
   **DEC-S-132**
   ([ADR-0005](../decisions/ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md))
-  and **DEC-S-133**. **Those amendments are `PROPOSED / AUTHORIZED FOR
-  INTEGRATION` and NOT YET EFFECTIVE**; they become effective only at the
-  Human-Maintainer exact integration commit of the reviewed object. **They select
+  and **DEC-S-133**. **Those amendments are effective** at the Human-Maintainer
+  exact integration commit `2cb244e889c1a6b5a278afb233995a0379b5d9ef`
+  (2026-09-05). **They select
   no value and create no token, source set, or file**, and RP-1 … RP-10,
   ST-1 … ST-7, RN-1 … RN-9, RV-1 … RV-5 and RB-1 … RB-5 remain unchanged.
 - **Artifact class:** **1 — Normative human-readable source** (DEC-S-022)
@@ -194,7 +194,8 @@ recorded as an open decision.)*
 ### Scale ownership and the topology/value boundary
 
 *(Normative — **DEC-S-133**, CDS Step-9 Decision Integration Pass, 2026-09-05.
-**`PROPOSED / AUTHORIZED FOR INTEGRATION` and NOT YET EFFECTIVE.** It applies
+**Effective** at the Human-Maintainer exact integration commit
+`2cb244e889c1a6b5a278afb233995a0379b5d9ef`. It applies
 ST-1 … ST-7 and changes none of them. **No ADR** — DEC-S-133 is deliberately not an
 architecture dependency of ADR-0005.)*
 
@@ -254,8 +255,8 @@ The **family roots** below are fixed by DEC-S-132; nothing beneath a root is.)*
 
 ### Grammar and roots
 
-*(Normative — **DEC-S-132**, 2026-09-05. **`PROPOSED / AUTHORIZED FOR INTEGRATION`
-and NOT YET EFFECTIVE.**
+*(Normative — **DEC-S-132**, 2026-09-05. **Effective** at the Human-Maintainer
+exact integration commit `2cb244e889c1a6b5a278afb233995a0379b5d9ef`.
 [ADR-0005](../decisions/ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md)
 carries the rationale.)*
 
@@ -333,8 +334,8 @@ omission would be indistinguishable from an oversight:
 | Structural schema | **Sufficient without change.** The committed token-document schema constrains structure, the CDS payload, and segment naming; it places no visual-specific constraint and needs none to accept a structurally valid visual document. |
 | Colour space and encoding | **DECIDED — DEC-S-128** (OD-1 answered). One canonical space keyed `srgb`, perceptual spaces derivational only. The CDS-specific `hex` disposition stays a recorded residual. |
 | Admitted `$type` set | **DECIDED — DEC-S-130** (OD-2 answered). Exactly `color`, `dimension`, `number`, with explicit own typing required and composites unadmitted. The offline validator's bounded V2 type set remains a **validator scope boundary under DEC-S-098**, not a CDS profile admission, and must not be read as one (RISK-074). Font-family and font-weight identity stays a recorded residual. |
-| Source-set identity and topology | **DECIDED — DEC-S-131** (OD-3 answered) for the **unit, topology and maturity granularity**: one source set per independently evaluable Family × Token-Flow-Layer unit; maturity binds to (`sourceSetId`, `sourceRevision`); aggregation confers nothing. **The concrete root identifiers are decided by DEC-S-132** (prepared, not yet effective), which creates **no instance**. Repository topology remains an explicit DEC-S-032 deferral. |
-| Concrete identifiers | **DECIDED — DEC-S-132** (OD-4 answered), prepared and **not yet effective**: the grammar, the two identity spaces, and the fixed family and source-set roots. **No identifier instance, Source Set, or `sourceRevision` exists.** |
+| Source-set identity and topology | **DECIDED — DEC-S-131** (OD-3 answered) for the **unit, topology and maturity granularity**: one source set per independently evaluable Family × Token-Flow-Layer unit; maturity binds to (`sourceSetId`, `sourceRevision`); aggregation confers nothing. **The concrete root identifiers are decided by DEC-S-132** (effective at commit `2cb244e8…`), which creates **no instance**. Repository topology remains an explicit DEC-S-032 deferral. |
+| Concrete identifiers | **DECIDED — DEC-S-132** (OD-4 answered), **effective at commit `2cb244e8…`**: the grammar, the two identity spaces, and the fixed family and source-set roots. **No identifier instance, Source Set, or `sourceRevision` exists.** |
 | Concrete values | **Insufficient.** **VP-3, VP-5, VP-6 and VP-7 are unsatisfied**, VP-2 is unsatisfied for typeface identity, weight identity and composites, and the per-family topology parameters, **VF-1 tonal topology** and the **concrete role vocabulary** stay open. |
 
 > **The machinery was always sufficient; the decisions were not.** Three of the
@@ -342,8 +343,8 @@ omission would be indistinguishable from an oversight:
 > with
 > [ADR-0004](../decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md)
 > recording the rationale — and the remaining four are decided by the CDS Step-9
-> Decision Integration Pass (**DEC-S-132 … DEC-S-135**, with **ADR-0005**),
-> **prepared and NOT YET EFFECTIVE**. **That still does not permit a source set to
+> Decision Integration Pass (**DEC-S-132 … DEC-S-135**, with **ADR-0005**), **and
+> are effective**. **That still does not permit a source set to
 > be written.** **VP-3, VP-5, VP-6 and VP-7 remain unsatisfied for every family**,
 > VP-2 remains unsatisfied for typeface identity, weight identity and composites,
 > and **only VP-4 moves** — because **deciding an identifier is not creating one**.
@@ -425,8 +426,9 @@ and encoding** (DEC-S-128), the **admitted `$type` set** (DEC-S-130), and the **
 and maturity granularity** (DEC-S-131). **None of the three selects a value or
 creates an identifier.**
 
-**Decided by the CDS Step-9 Decision Integration Pass (2026-09-05), and
-`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET EFFECTIVE:** the **identifier
+**Decided by the CDS Step-9 Decision Integration Pass (2026-09-05), and effective
+at the Human-Maintainer exact integration commit
+`2cb244e889c1a6b5a278afb233995a0379b5d9ef`:** the **identifier
 grammar, the two identity spaces, and the concrete family and source-set roots**
 (**DEC-S-132**, ADR-0005), and the **per-scale ownership model and the
 topology/value boundary** (**DEC-S-133**). **Neither selects a value**, and

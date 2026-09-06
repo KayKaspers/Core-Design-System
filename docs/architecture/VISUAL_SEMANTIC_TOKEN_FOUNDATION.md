@@ -15,9 +15,9 @@
   roots), a new *Role admission* section, **IS-5**, and the *Deferred decisions*
   section, to apply **DEC-S-132**
   ([ADR-0005](../decisions/ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md)),
-  **DEC-S-134** and **DEC-S-135**. **Those amendments are `PROPOSED / AUTHORIZED
-  FOR INTEGRATION` and NOT YET EFFECTIVE**; they become effective only at the
-  Human-Maintainer exact integration commit of the reviewed object. **They create
+  **DEC-S-134** and **DEC-S-135**. **Those amendments are effective** at the
+  Human-Maintainer exact integration commit
+  `2cb244e889c1a6b5a278afb233995a0379b5d9ef` (2026-09-05). **They create
   no role, no role identifier, no binding and no value**, and SR-1 … SR-12,
   SN-1 … SN-9, PN-1 … PN-5, TC-1 … TC-7, SS-1 … SS-8, IS-1 … IS-4, the alias model,
   the closed role classification, and the focus role set are unchanged.
@@ -224,8 +224,8 @@ obligation is checked.
 
 ### Grammar and roots
 
-*(Normative — **DEC-S-132**, 2026-09-05. **`PROPOSED / AUTHORIZED FOR INTEGRATION`
-and NOT YET EFFECTIVE.**
+*(Normative — **DEC-S-132**, 2026-09-05. **Effective** at the Human-Maintainer
+exact integration commit `2cb244e889c1a6b5a278afb233995a0379b5d9ef`.
 [ADR-0005](../decisions/ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md)
 carries the rationale.)*
 
@@ -252,7 +252,8 @@ see *Role admission* below. **This creates no Source Set instance, no
 ### Role admission
 
 *(Normative — **DEC-S-134**, CDS Step-9 Decision Integration Pass, 2026-09-05.
-**`PROPOSED / AUTHORIZED FOR INTEGRATION` and NOT YET EFFECTIVE.** **No ADR** —
+**Effective** at the Human-Maintainer exact integration commit
+`2cb244e889c1a6b5a278afb233995a0379b5d9ef`. **No ADR** —
 DEC-S-134 is deliberately not an architecture dependency of ADR-0005.)*
 
 | # | Rule |
@@ -268,8 +269,8 @@ SR-1 … SR-12 declarations, and no role exists to declare anything.
 
 ### Sequencing against the theme mechanism
 
-*(Normative — **DEC-S-135**, 2026-09-05. **`PROPOSED / AUTHORIZED FOR INTEGRATION`
-and NOT YET EFFECTIVE.**)*
+*(Normative — **DEC-S-135**, 2026-09-05. **Effective** at the Human-Maintainer
+exact integration commit `2cb244e889c1a6b5a278afb233995a0379b5d9ef`.)*
 
 **No semantic visual role carries a default alias to a reference primitive before
 CDS-WP-022 decides the Theme and Context Mechanism**, and **CDS-WP-022 precedes
@@ -390,7 +391,7 @@ without naming a component.
 | **IS-2** | A **non-interactive or read-only** state must remain perceivable and **must not be communicated by reduced contrast alone** — that is precisely the encoding that fails for low-vision users, in greyscale, and under forced colours. |
 | **IS-3** | A **validation-feedback** role is an outcome, not a status axis value (VF-I-7). A form error is not a status `condition`. |
 | **IS-4** | A **destructive or far-reaching** action's risk tier is a Layer-4 contract concern (CR-010). The foundation may supply distinct Interaction roles for tiers; it decides no tier and permits **no colour-only** distinction of danger (baseline 10.5). |
-| **IS-5** | **Selected, active, and current** must be conveyed by an accessible state, never by colour or position alone. **Disposition (DEC-S-134, 2026-09-05, `PROPOSED / AUTHORIZED FOR INTEGRATION`, not yet effective): none of the three is a CDS Core role today** — no current cross-consumer authority supports admitting them under **RA-1**. **This is not a permanent prohibition**, and it removes no protection: **IS-1** and this rule already bind whatever a consumer builds. **Their distinctness remains open** and is answered with the concrete vocabulary, not before it — deciding the count now would decide the vocabulary by implication. |
+| **IS-5** | **Selected, active, and current** must be conveyed by an accessible state, never by colour or position alone. **Disposition (DEC-S-134, 2026-09-05, effective at commit `2cb244e8…`): none of the three is a CDS Core role today** — no current cross-consumer authority supports admitting them under **RA-1**. **This is not a permanent prohibition**, and it removes no protection: **IS-1** and this rule already bind whatever a consumer builds. **Their distinctness remains open** and is answered with the concrete vocabulary, not before it — deciding the count now would decide the vocabulary by implication. |
 
 ## Validation requirements
 
@@ -481,8 +482,9 @@ rule** (DEC-S-129), the **admitted
 granularity** (DEC-S-131). **None of the four creates a role, a role identifier, or
 a value**, and **no contrast has been evaluated** — there is nothing to evaluate.
 
-**Decided by the CDS Step-9 Decision Integration Pass (2026-09-05), and
-`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET EFFECTIVE:** the **identifier
+**Decided by the CDS Step-9 Decision Integration Pass (2026-09-05), and effective
+at the Human-Maintainer exact integration commit
+`2cb244e889c1a6b5a278afb233995a0379b5d9ef`:** the **identifier
 grammar, the two identity spaces, and the concrete family and source-set roots**
 (**DEC-S-132**, ADR-0005); the **per-scale ownership model and the topology/value
 boundary** (**DEC-S-133**); the **role admission rule** (**DEC-S-134**); and the

@@ -7,9 +7,9 @@
   model** (**N-6** reconciled to `qualifier`, and the fixed family roots recorded)
   and **deferred decisions 2 and 3**, to apply **DEC-S-132**
   ([ADR-0005](../decisions/ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md))
-  and **DEC-S-134**. **Those amendments are `PROPOSED / AUTHORIZED FOR
-  INTEGRATION` and NOT YET EFFECTIVE**; they become effective only at the
-  Human-Maintainer exact integration commit of the reviewed object. **They select
+  and **DEC-S-134**. **Those amendments are effective** at the Human-Maintainer
+  exact integration commit `2cb244e889c1a6b5a278afb233995a0379b5d9ef`
+  (2026-09-05). **They select
   no value, create no token identifier, and create no role identifier**, and
   VF-1 … VF-9, VF-I-1 … VF-I-14, N-1 … N-5 and N-7 … N-8 are unchanged.
 - **Artifact class:** **1 — Normative human-readable source** (DEC-S-022)
@@ -278,8 +278,8 @@ The visual foundation adds the following **naming principles**:
 ### Identifier grammar and family roots
 
 *(Normative — **DEC-S-132**, CDS Step-9 Decision Integration Pass, 2026-09-05.
-**`PROPOSED / AUTHORIZED FOR INTEGRATION` and NOT YET EFFECTIVE** until the
-Human-Maintainer exact integration commit of the reviewed object.
+**Effective** at the Human-Maintainer exact integration commit
+`2cb244e889c1a6b5a278afb233995a0379b5d9ef`.
 [ADR-0005](../decisions/ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md)
 carries the rationale. **No token, role, source set, or value is created.**)*
 
@@ -429,7 +429,7 @@ decide, schedule, or authorize it.)*
 | --- | --- | --- |
 | 1 | Every concrete visual value — colour, palette, typeface, size, spacing, radius, stroke, shadow, opacity, icon, illustration, motion value, breakpoint | CDS-WP-020 and later, each separately authorized |
 | 2 | The admitted DTCG `$type` set for visual families — **CLOSED by DEC-S-130** (CDS-WP-020 Decision Integration Pass, 2026-08-27): `color`, `dimension`, `number`. Composite types and font-family / font-weight identity **stay deferred** | **Closed**; residual under **OD-2** |
-| 3 | The concrete shared vocabulary of families, roles, and qualifiers — **partly closed 2026-09-05**, `PROPOSED / AUTHORIZED FOR INTEGRATION` and **not yet effective**. **Family roots are fixed by DEC-S-132** and the **qualifier position is declared but unpopulated**. **The concrete role vocabulary stays open:** DEC-S-134 decides an **admission rule only** — a role enters CDS Core only on demonstrated cross-consumer need, satisfying SR-1 … SR-12 from creation, inside the **closed** role classification — and **creates no role identifier**. | The role vocabulary is **still open** as **OD-6A**, for separately authorized successor work; **`CDS-WP-020A` may not invent it** |
+| 3 | The concrete shared vocabulary of families, roles, and qualifiers — **partly closed 2026-09-05**, effective at commit `2cb244e8…`. **Family roots are fixed by DEC-S-132** and the **qualifier position is declared but unpopulated**. **The concrete role vocabulary stays open:** DEC-S-134 decides an **admission rule only** — a role enters CDS Core only on demonstrated cross-consumer need, satisfying SR-1 … SR-12 from creation, inside the **closed** role classification — and **creates no role identifier**. | The role vocabulary is **still open** as **OD-6A**, for separately authorized successor work; **`CDS-WP-020A` may not invent it** |
 | 4 | The responsive-range model, and the Layer 3 / Layer 5 split for viewport strategy | CDS-WP-021 |
 | 5 | Whether a theme is a resolver context, a separate source set, or a Product Profile concern — and the token layering light and dark imply (CR-025) | **CDS-WP-022** |
 | 6 | Whether high contrast is a CDS context, a platform-honouring behaviour, or both | CDS-WP-022 |
