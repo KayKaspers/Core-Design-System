@@ -1,13 +1,18 @@
 # ADR-0006 — Adaptive Spatial Context and Named-Range Architecture
 
-- **Status:** **`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET EFFECTIVE.**
-  Prepared under an explicit Human-Maintainer authorization given on 2026-09-06.
-  **This document is uncommitted executor output and confers no acceptance and no
-  authority.** It becomes `Accepted` **only** upon the Human-Maintainer exact
-  integration commit of the exact reviewed Working Tree object, following a Fresh
-  Independent Review and Nova integration adjudication — the same acceptance rule
-  ADR-0001 … ADR-0005 carry. **A review PASS is not a commit, and a Nova
-  recommendation is not an approval.**
+- **Status:** **Accepted upon Human-Maintainer commit following Nova approval** —
+  accepted at the exact integration commit
+  `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` (2026-09-11) of the exact reviewed
+  Working Tree object, which followed independent review — a Fresh Independent
+  Review returning `REWORK REQUIRED` (**F-R21-01** material, **F-R21-02** minor),
+  a bounded two-file rework resolving both, and a confirmatory independent review
+  returning `PASS` — and Nova integration adjudication — the same acceptance rule
+  ADR-0001 … ADR-0005 carry. Before that commit this ADR was
+  `PROPOSED / AUTHORIZED FOR INTEGRATION`, uncommitted executor output prepared
+  under an explicit Human-Maintainer authorization given on 2026-09-06, and
+  conferred **no** acceptance and **no** authority; no earlier wording, review
+  verdict, or adjudication conferred it. **A review PASS is not a commit, and a
+  Nova recommendation is not an approval.**
 - **Date:** 2026-09-06
 - **Project:** Core Design System (CDS)
 - **Registered by:** CDS-WP-021 — Adaptive Layout and Responsive Foundation
@@ -297,8 +302,12 @@ changes **no** maturity, accepts or closes **no** risk, makes **no** claim, and
 **activates no work package** — **`CDS-WP-020A`, CDS-WP-022, CDS-WP-023 and
 CDS-WP-024 remain `Planned`, not active, and not authorized.**
 
-**It is `PROPOSED / AUTHORIZED FOR INTEGRATION` and NOT YET EFFECTIVE**, and confers
-no acceptance and no authority until the Human-Maintainer exact integration commit.
+**It is `Accepted` and effective**, at the Human-Maintainer exact integration commit
+`a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` (2026-09-11). Before that commit it was
+`PROPOSED / AUTHORIZED FOR INTEGRATION` and conferred no acceptance and no
+authority. **Acceptance changed nothing this ADR excludes:** it still creates no
+value, no range name, no identifier, no VF-4 technical root, and no Source Set, and
+it still activates no work package.
 
 ## Related documents
 

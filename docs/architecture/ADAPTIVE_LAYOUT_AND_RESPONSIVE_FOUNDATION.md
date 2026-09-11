@@ -4,13 +4,14 @@
 - **Registered by:** CDS-WP-021 — Adaptive Layout and Responsive Foundation
 - **Date:** 2026-09-06
 - **Artifact class:** **1 — Normative human-readable source** (DEC-S-022)
-- **Status:** **PREPARED, NOT EFFECTIVE.** This document becomes normative for the
-  Layer-3 adaptive-layout and responsive structure of **VF-4** **only** at the
-  Human-Maintainer exact integration commit of the exact reviewed Working Tree
-  object, following a Fresh Independent Review and Nova integration adjudication.
-  Before that commit it is uncommitted executor output and changes **no**
-  authoritative CDS state. **A review PASS is not a commit, and a Nova
-  recommendation is not an approval.**
+- **Status:** **Normative for the Layer-3 adaptive-layout and responsive structure
+  of VF-4**, effective at the Human-Maintainer exact-object integration commit
+  `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` (2026-09-11) of the exact reviewed
+  Working Tree object, which followed independent review and Nova integration
+  adjudication. Before that commit it was uncommitted executor output and changed
+  **no** authoritative CDS state. **A review PASS is not a commit, and a Nova
+  recommendation is not an approval.** It **selects no value** and **grants VF-4
+  no technical root**.
 - **Maturity of everything it positions:** **`Proposed`** — this document
   **promotes nothing** (DEC-S-036, *No retrospective maturity*; AF-5, *an
   architecture document is not the artifact*).
@@ -18,9 +19,9 @@
   derived from authority already in force. The one normative choice it could not
   derive — **`WP021-D1`**, the adaptive response mechanism and its reference frame —
   was **escalated by this work package and has since been decided by the Human
-  Maintainer**; it is recorded here and prepared as **`DEC-S-136`** with
+  Maintainer**; it is recorded here and registered as **`DEC-S-136`** with
   **[ADR-0006](../decisions/ADR-0006-ADAPTIVE_SPATIAL_CONTEXT_AND_NAMED_RANGE_ARCHITECTURE.md)**,
-  both **`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET EFFECTIVE**. The second
+  both **effective at that same integration commit**. The second
   escalation, **`WP021-D2`** (whether VF-4 acquires a technical root and source-set
   identity), is **DEFERRED by the Human Maintainer** — **not rejected**, and it does
   **not** block this work package. **No `DEC-S-137`, no `ADR-0007`, and no
@@ -90,7 +91,8 @@ at this revision, not assumed. CDS-WP-021 creates none of them.
 > architecture already in force, or of the Human-Maintainer decision this work
 > package escalated and did not make.** The one normative choice — the response
 > mechanism — was **decided by the Human Maintainer** and is recorded as
-> **`DEC-S-136`** (**ADR-0006**), **prepared and not yet effective**. **This work
+> **`DEC-S-136`** (**ADR-0006**), **both effective at the integration commit
+> `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`**. **This work
 > package invented no normative choice of its own, and registers no risk.**
 
 | This document's binding statements | Derive from |
@@ -115,7 +117,7 @@ at this revision, not assumed. CDS-WP-021 creates none of them.
 | A visual semantic role enters Core only on demonstrated cross-consumer need, and no role vocabulary exists | **DEC-S-134** |
 | The Source Set is the independently evaluable unit; maturity binds to (`sourceSetId`, `sourceRevision`) | **DEC-S-131**, [ADR-0004](../decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md) |
 | Maturity is granted by a gate, never by a document | DEC-S-035, DEC-S-036, DEC-S-126, VF-I-14, AF-1, AF-5 |
-| **The declared Adaptation Container, named discrete available-space ranges, downstream continuous behaviour, fixed-geometry channel authority, and `SPATIAL CONTEXT ≠ THEME RESOLUTION CONTEXT`** | **`DEC-S-136`** (**[ADR-0006](../decisions/ADR-0006-ADAPTIVE_SPATIAL_CONTEXT_AND_NAMED_RANGE_ARCHITECTURE.md)**) — Human-Maintainer decision of 2026-09-06, **prepared and NOT YET EFFECTIVE** |
+| **The declared Adaptation Container, named discrete available-space ranges, downstream continuous behaviour, fixed-geometry channel authority, and `SPATIAL CONTEXT ≠ THEME RESOLUTION CONTEXT`** | **`DEC-S-136`** (**[ADR-0006](../decisions/ADR-0006-ADAPTIVE_SPATIAL_CONTEXT_AND_NAMED_RANGE_ARCHITECTURE.md)**) — Human-Maintainer decision of 2026-09-06, **effective at the integration commit `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`** |
 
 Where a statement could only be reached by making a **new** normative choice, it is
 **not made** by this work package. The one such choice was escalated and has been
@@ -216,8 +218,9 @@ chosen.
 
 ## The Adaptation Container
 
-*(Normative — **DEC-S-136**, Human-Maintainer decision of 2026-09-06, **prepared and
-NOT YET EFFECTIVE**. **[ADR-0006](../decisions/ADR-0006-ADAPTIVE_SPATIAL_CONTEXT_AND_NAMED_RANGE_ARCHITECTURE.md)**
+*(Normative — **DEC-S-136**, Human-Maintainer decision of 2026-09-06, **effective at
+the integration commit `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`**.
+**[ADR-0006](../decisions/ADR-0006-ADAPTIVE_SPATIAL_CONTEXT_AND_NAMED_RANGE_ARCHITECTURE.md)**
 carries the rationale. **No container instance, no identifier, and no value is
 created.**)*
 
@@ -237,7 +240,8 @@ The primary adaptive reference frame for responsive Layer-3 classification is a
 
 *(Normative as constraints. **RR-1 … RR-6 are the standing contract; this section
 applies them and changes none.** The **Core range model** below is **DEC-S-136**'s,
-**prepared and NOT YET EFFECTIVE**. **No range, no range name, and no threshold is
+**effective at the integration commit `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`**.
+**No range, no range name, and no threshold is
 defined.**)*
 
 | # | Rule |
@@ -470,7 +474,8 @@ Development`.** **VF-1 … VF-9 remain `Proposed`.**
 
 *(**`WP021-D1`** and **`WP021-D2`** were **escalation keys for the CDS-WP-021
 execution report, not governance identifiers.** **`WP021-D1` is now decided** and is
-carried by **`DEC-S-136`** and **ADR-0006**, both **prepared and not yet effective**.
+carried by **`DEC-S-136`** and **ADR-0006**, both **effective at the integration
+commit `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`**.
 **`WP021-D2` is deferred** and has **no Decision and no ADR**. **No `DEC-S-137`, no
 `ADR-0007`, no `RISK-099`, and no new `OD` identifier is created.**)*
 
@@ -579,9 +584,10 @@ decide, schedule, or authorize it.)*
 9. **No evidence, no maturity change, no risk accepted or closed, no claim, no
    conformance, no release, no tag, and no publication.**
 10. **No risk entry** — the risk register stays at **98**, with **no `RISK-099`**.
-    **The effective Decision and ADR registers stay at 135 and 5**; **`DEC-S-136`
-    and `ADR-0006` are prepared and NOT YET EFFECTIVE**, and **no `DEC-S-137` and no
-    `ADR-0007` exists.**
+    **The effective Decision and ADR registers are 136 and 6**; **`DEC-S-136`
+    and `ADR-0006` are effective** at the integration commit
+    `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`, and **no `DEC-S-137` and no
+    `ADR-0007` exists.** **Their effectivity created no value and no identifier.**
 11. **No work package is activated** — **`CDS-WP-020A`**, **CDS-WP-022**,
     **CDS-WP-023** and **CDS-WP-024** all remain `Planned`, not active, and not
     authorized.
@@ -621,7 +627,7 @@ not by a generated artifact.
 | Requirement traceability — **CR-004 stays at Layer 5** | [Architecture Requirements Traceability](ARCHITECTURE_REQUIREMENTS_TRACEABILITY.md) |
 | Accessibility requirements | [Accessibility Requirements Baseline](../governance/ACCESSIBILITY_REQUIREMENTS_BASELINE.md) · [WCAG 2.2 AA Applicability Matrix](../governance/WCAG_2_2_AA_APPLICABILITY_MATRIX.md) |
 | Accessibility policy and evidence | [Accessibility and Inclusive Design Policy](../governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md) · [Accessibility Evidence and Claims Model](../governance/ACCESSIBILITY_EVIDENCE_AND_CLAIMS_MODEL.md) |
-| **Adaptive spatial context and named ranges** (DEC-S-136) | [ADR-0006](../decisions/ADR-0006-ADAPTIVE_SPATIAL_CONTEXT_AND_NAMED_RANGE_ARCHITECTURE.md) — **prepared, not yet accepted, not yet effective** |
+| **Adaptive spatial context and named ranges** (DEC-S-136) | [ADR-0006](../decisions/ADR-0006-ADAPTIVE_SPATIAL_CONTEXT_AND_NAMED_RANGE_ARCHITECTURE.md) — **`Accepted` and effective at `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`** |
 | Identifier grammar and identity spaces | [ADR-0005](../decisions/ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md) |
 | Representation and source identity | [ADR-0004](../decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md) |
 | Channels and distribution | [Artifact Distribution and Channel Model](ARTIFACT_DISTRIBUTION_AND_CHANNEL_MODEL.md) |

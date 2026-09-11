@@ -98,7 +98,8 @@ policy that does not exist must name the work package that will supply it.
 
 ### CR-004 clarifying note — CDS-WP-021, 2026-09-06
 
-*(**PREPARED, NOT EFFECTIVE** until the Human-Maintainer exact integration commit of
+*(**EFFECTIVE** at the Human-Maintainer exact-object integration commit
+`a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` (2026-09-11) of
 the CDS-WP-021 object. **Additive. The CR-004 row above is not edited, its
 architecture layer is not changed, and no count changes.**)*
 

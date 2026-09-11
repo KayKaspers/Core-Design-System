@@ -174,15 +174,17 @@ and **ADR-0005** by a separately authorized **Step-9 Decision Integration Pass**
 is selected.**
 **CDS-WP-021 — Adaptive Layout and Responsive Foundation** is the current authorized
 work package: **`AUTHORIZED / ACTIVE FOR EXECUTION`** by a separate, explicit
-Human-Maintainer decision, **executed with result `COMPLETE WITH NOTES`**, and **not
+Human-Maintainer decision, **executed with result `COMPLETE WITH NOTES`**,
+**integrated** at `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` (2026-09-11), and **not
 closed**. It confirms the **Layer 3 / Layer 5 / Layer 6** ownership split — **CR-004
 stays at Layer 5** — and records the spatial-context model, the **Adaptation
 Container**, the responsive-range
 obligations, and the grid, container and content-width contracts. It selects **no
 value** and creates **no identifier**, **no responsive-range name**, and **no VF-4
 technical root**. The **response mechanism is decided** by the Human Maintainer and
-prepared as **`DEC-S-136`** with **`ADR-0006`** — both **NOT YET EFFECTIVE**, so the
-effective registers stay at **135 decisions and 5 ADRs** — and **VF-4 identity is
+recorded as **`DEC-S-136`** with **`ADR-0006`** — both **effective at that
+integration commit**, so the
+effective registers are **136 decisions and 6 ADRs** — and **VF-4 identity is
 deferred**.
 **`CDS-WP-020A` and CDS-WP-022 … CDS-WP-053 are planned only — not active, not
 authorized, work not started** — and are recorded in the
@@ -541,15 +543,16 @@ DEC-S-130 in no way**; the closed `$type` profile is **not** the reason.
 **Fixed-geometry channels keep their own geometry**, and **`SPATIAL CONTEXT ≠ THEME
 RESOLUTION CONTEXT`**, with any composition reserved to **CDS-WP-022**.
 
-This is recorded as **`DEC-S-136`** with **`ADR-0006`**, both
-**`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET EFFECTIVE**. **The architecture
+This is recorded as **`DEC-S-136`** with **`ADR-0006`**, both **effective at the
+Human-Maintainer integration commit `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`**.
+**The architecture
 is decided; the vocabulary is not** — no range name, count, threshold or boundary is
 selected. **`WP021-D2` — whether VF-4 acquires a technical root and source-set
 identity — is DEFERRED, not rejected**, and has **no Decision and no ADR**: **no
 `DEC-S-137`, no `ADR-0007`, no `RISK-099`**, and **no work package is activated**.
 
 - [Adaptive Layout and Responsive Foundation](docs/architecture/ADAPTIVE_LAYOUT_AND_RESPONSIVE_FOUNDATION.md)
-- [ADR-0006 — Adaptive Spatial Context and Named-Range Architecture](docs/decisions/ADR-0006-ADAPTIVE_SPATIAL_CONTEXT_AND_NAMED_RANGE_ARCHITECTURE.md) — **prepared, not yet accepted, not yet effective**
+- [ADR-0006 — Adaptive Spatial Context and Named-Range Architecture](docs/decisions/ADR-0006-ADAPTIVE_SPATIAL_CONTEXT_AND_NAMED_RANGE_ARCHITECTURE.md) — **`Accepted` and effective at `a6bd7bf0…`**
 
 ## Governance
 
@@ -885,8 +888,8 @@ maturity or approval it does not hold.
   **CDS-WP-024 keeps its validation, render-gate, and conformance boundary
   unchanged.**
 - **Authorized and active:** **CDS-WP-021 — Adaptive Layout and Responsive
-  Foundation** — **executed with result `COMPLETE WITH NOTES`**, **not closed**,
-  working object **prepared and uncommitted**. **Contract only.** It confirms the
+  Foundation** — **executed with result `COMPLETE WITH NOTES`**, **integrated** at
+  `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`, **not closed**. **Contract only.** It confirms the
   **Layer 3 / Layer 5 / Layer 6** ownership split — **`F-019-03` answered** and
   **CR-004 unchanged at Layer 5** — and records the spatial-context model, the
   **Adaptation Container**, the
@@ -896,8 +899,9 @@ maturity or approval it does not hold.
   source set, token source,
   schema, validator rule, test, component, brand, or Product Profile; admits **no**
   evidence; changes **no** maturity; and adds **no** risk. **`WP021-D1` is
-  APPROVED** — the **Container-Relative Named-Range Foundation** — and prepared as
-  **`DEC-S-136`** with **`ADR-0006`**, both **NOT YET EFFECTIVE**; **`WP021-D2` is
+  APPROVED** — the **Container-Relative Named-Range Foundation** — and recorded as
+  **`DEC-S-136`** with **`ADR-0006`**, both **effective at that commit**;
+  **`WP021-D2` is
   DEFERRED**, leaving the **VF-4 technical root and Source Set identity OPEN** with
   **no Decision and no ADR**.
 - **Planned:** **`CDS-WP-020A`** and **CDS-WP-022 … CDS-WP-053** — **not active, not
@@ -948,7 +952,7 @@ phase.
 
 ## Registers
 
-- Decisions: DEC-S-001 … DEC-S-135 (135) — 6 strategic foundation decisions,
+- Decisions: DEC-S-001 … DEC-S-136 (136) — 6 strategic foundation decisions,
   6 strategic scope decisions, 8 consumer and pilot scope decisions,
   12 logical architecture decisions, 16 governance, lifecycle and publication
   decisions, 12 accessibility and inclusive design decisions, 4 operating
@@ -960,16 +964,20 @@ phase.
   boundary decision, 1 candidate finalization / maturity / evidence transition
   decision, 1 phase transition decision, 4 visual token representation, evaluation
   authority and source identity decisions, 4 visual identifier, scale ownership,
-  role admission and theme sequencing decisions · ADRs: 5 (ADR-0001, ADR-0002,
-  ADR-0003, ADR-0004, ADR-0005)
+  role admission and theme sequencing decisions, 1 adaptive spatial context and
+  responsive architecture decision · ADRs: 6 (ADR-0001, ADR-0002,
+  ADR-0003, ADR-0004, ADR-0005, ADR-0006)
   - **Effectivity:** **DEC-S-128 … DEC-S-131 and ADR-0004 are effective**, at the
     Human-Maintainer exact-byte integration commit
     `42a568d823de3388e45af62967546f13ad67eff6` of the CDS-WP-020 Decision
     Integration Pass; **DEC-S-132 … DEC-S-135 and ADR-0005 are effective**, at the
     Human-Maintainer exact integration commit
     `2cb244e889c1a6b5a278afb233995a0379b5d9ef` of the CDS Step-9 Decision
-    Integration Pass. The **effective** register is **DEC-S-001 … DEC-S-135 (135)**
-    with **5 ADRs (ADR-0001, ADR-0002, ADR-0003, ADR-0004, ADR-0005)**.
+    Integration Pass; **DEC-S-136 and ADR-0006 are effective**, at the
+    Human-Maintainer exact-object integration commit
+    `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` of the CDS-WP-021 object. The
+    **effective** register is **DEC-S-001 … DEC-S-136 (136)**
+    with **6 ADRs (ADR-0001, ADR-0002, ADR-0003, ADR-0004, ADR-0005, ADR-0006)**.
 - Risks: RISK-001 … RISK-098 (98) — 89 Monitored; 9 Mitigating (RISK-031, RISK-040,
   RISK-044, RISK-066, RISK-067, RISK-068, RISK-069, RISK-071, RISK-098); owner
   model finalized; no risk accepted or closed

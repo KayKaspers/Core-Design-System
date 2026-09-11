@@ -156,7 +156,8 @@ AE-2/AE-3/AE-4 **None**, **visual value None**, component **None**, pilot
 Only the work-package rows have advanced: **CDS-WP-021 — Adaptive Layout and
 Responsive Foundation was authorized separately and explicitly by the Human
 Maintainer and is `AUTHORIZED / ACTIVE FOR EXECUTION`** — **executed with result
-`COMPLETE WITH NOTES`, not closed**, working object **prepared and uncommitted** — and
+`COMPLETE WITH NOTES`, integrated at `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`, not
+closed** — and
 **`CDS-WP-020A` and CDS-WP-022 … CDS-WP-053** remain **`Planned` · not active · not
 authorized**. **The Nova-recommended Step-10 candidate was CDS-WP-022; the Human
 Maintainer authorized CDS-WP-021 instead**, which is their prerogative and which
@@ -164,11 +165,12 @@ activated no other work package — **a recommendation is not an authorization.*
 CDS-WP-021 delivered a **contract**, not values: it created **no** visual value,
 identifier, responsive-range name, range count or threshold, VF-4 technical root,
 source set, token source, schema, or validator rule, registered **no** risk, and
-advanced **no** maturity. **The effective registers stay at 135 decisions and
-5 ADRs, and the risk register at 98.** It first returned `DECISION_REQUIRED`; the
+advanced **no** maturity. **The effective registers are 136 decisions and
+6 ADRs, and the risk register stays at 98.** It first returned `DECISION_REQUIRED`;
+the
 Human Maintainer then **approved `WP021-D1`** — the **Container-Relative
-Named-Range Foundation**, prepared as **`DEC-S-136`** with **`ADR-0006`**, both
-**`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET EFFECTIVE** — and **deferred
+Named-Range Foundation**, recorded as **`DEC-S-136`** with **`ADR-0006`**, both
+**effective at that integration commit** — and **deferred
 `WP021-D2`**, leaving the **VF-4 technical root and Source Set identity OPEN** with
 **no Decision and no ADR**.
 
@@ -798,14 +800,17 @@ and not authorized.**
 **Both escalations have been answered by the Human Maintainer (2026-09-06).**
 **`WP021-D1` is APPROVED** — the **Container-Relative Named-Range Foundation**,
 which **RR-5** had assigned to CDS-WP-021 and which existing authority could not
-settle — and is prepared as **`DEC-S-136`** with **`ADR-0006`**, both
-**`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET EFFECTIVE**. **`WP021-D2` is
+settle — and is recorded as **`DEC-S-136`** with **`ADR-0006`**, both **effective at
+the Human-Maintainer integration commit
+`a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`**. **`WP021-D2` is
 DEFERRED, not rejected**: whether **VF-4** acquires a technical root and source-set
 identity stays **OPEN**, **DEC-S-132's root vocabulary stays closed at VF-1, VF-2,
 VF-3, VF-5 and VF-6**, and **no Decision and no ADR was created for it** — **no
 `DEC-S-137`, no `ADR-0007`, no `RISK-099`, and no new `OD` identifier.** **The
-effective registers stay at 135 decisions and 5 ADRs until the integration commit**
-— **`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION`.**
+effective registers are 136 decisions and 6 ADRs** —
+**`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION`** held until the
+integration commit, and **`EFFECTIVE ≠ CLOSED`** holds now: **CDS-WP-021 is not
+closed.**
 
 **The step this section previously named — a fresh independent review of the CDS
 Step-9 Decision Integration object, Nova adjudication, the Human-Maintainer exact
@@ -887,8 +892,11 @@ commit**:
 **only** at the Human-Maintainer exact integration commit
 `2cb244e889c1a6b5a278afb233995a0379b5d9ef` of the exact reviewed Working Tree
 object, following a Fresh Independent Review and Nova integration adjudication.
-**The effective registers are therefore `DEC-S-135` and `ADR-0005` — 135 decisions
-and 5 ADRs.** **A review PASS is not a commit, and a Nova
+**The effective registers were therefore `DEC-S-135` and `ADR-0005` — 135 decisions
+and 5 ADRs at that commit; they have since advanced to `DEC-S-136` and `ADR-0006` —
+136 decisions and 6 ADRs — effective at
+`a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`.** **A review PASS is not a commit, and
+a Nova
 recommendation is not an approval.**
 
 **What the pass did not do:** it created **no** visual value, **no** identifier
@@ -985,5 +993,5 @@ CDS-WP-022 … CDS-WP-053 all remain `Planned`, not active, and not authorized**
 - [Visual Token Foundation Open Decisions](VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md) — **non-normative**; OD-1 … OD-7 (CDS-WP-020); OD-1 … OD-3 answered and effective; OD-4 and OD-7 answered, OD-5 partially answered, OD-6A policy-answered and OD-6B answered by existing authority — **effective**
 - [Visual Reference Token Foundation](../architecture/VISUAL_REFERENCE_TOKEN_FOUNDATION.md) · [Visual Semantic Token Foundation](../architecture/VISUAL_SEMANTIC_TOKEN_FOUNDATION.md) · [Visual Token Value Selection Rules](../governance/VISUAL_TOKEN_VALUE_SELECTION_RULES.md)
 - [ADR-0004 — Visual Token Representation and Source Identity Architecture](../decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md) — **`Accepted`, effective at commit `42a568d8…`**
-- [Adaptive Layout and Responsive Foundation](../architecture/ADAPTIVE_LAYOUT_AND_RESPONSIVE_FOUNDATION.md) — CDS-WP-021; **prepared and uncommitted**, normative only at the Human-Maintainer integration commit
+- [Adaptive Layout and Responsive Foundation](../architecture/ADAPTIVE_LAYOUT_AND_RESPONSIVE_FOUNDATION.md) — CDS-WP-021; **normative**, effective at the Human-Maintainer integration commit `a6bd7bf0…`
 - [Decision Index](../decisions/DECISION_INDEX.md) · [Risk Register](../risks/RISK_REGISTER.md)

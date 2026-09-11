@@ -13,11 +13,12 @@
 - **Current work package:** **CDS-WP-021 — Adaptive Layout and Responsive
   Foundation** — **`AUTHORIZED / ACTIVE FOR EXECUTION`**, by a separate and explicit
   Human-Maintainer decision at **step 10** below. It is **executed with result
-  `COMPLETE WITH NOTES`** and is **NOT closed**; its working object is **prepared and
-  uncommitted**. It first returned `DECISION_REQUIRED`; the Human Maintainer then
-  **approved `WP021-D1`** and **deferred `WP021-D2`** (2026-09-06), and a bounded
-  rework applied both and prepared **`DEC-S-136`** with **`ADR-0006`**, which are
-  **`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET EFFECTIVE**.
+  `COMPLETE WITH NOTES`**, its object is **integrated** by the Human-Maintainer
+  exact-object commit `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` (2026-09-11), and
+  it is **NOT closed**. It first returned `DECISION_REQUIRED`; the Human Maintainer
+  then **approved `WP021-D1`** and **deferred `WP021-D2`** (2026-09-06), and a
+  bounded rework applied both and prepared **`DEC-S-136`** with **`ADR-0006`**,
+  which **became effective at that integration commit**.
   The authorization permits **execution of CDS-WP-021 only** — **no**
   closure, **no** successor work package, **no** value authoring, **no** theme
   mechanism, **no** token source creation, **no** Candidate promotion, **no**
@@ -111,7 +112,9 @@
   `F-020C-01` in the
   [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).)*
 - **CDS-WP-021 state:** **`AUTHORIZED / ACTIVE FOR EXECUTION`**, **executed with
-  result `COMPLETE WITH NOTES`**, **not closed**. Adaptive Layout and Responsive
+  result `COMPLETE WITH NOTES`**, **integrated** at the Human-Maintainer
+  exact-object commit `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` (2026-09-11),
+  **not closed**. Adaptive Layout and Responsive
   Foundation. **Contract only.** It confirms the **Layer 3 / Layer 5 / Layer 6**
   ownership split — **`F-019-03` answered, CR-004 unchanged at Layer 5** — and
   records the spatial-context model, the **Adaptation Container**, the
@@ -122,8 +125,9 @@
   no validator rule, no test, no evidence, no maturity change, no risk entry, no
   capability registration, no phase rename, and no publication effect.**
   **`WP021-D1` is APPROVED by the Human Maintainer** — the **Container-Relative
-  Named-Range Foundation** — and is prepared as **`DEC-S-136`** with **`ADR-0006`**,
-  both **`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET EFFECTIVE**.
+  Named-Range Foundation** — recorded as **`DEC-S-136`** with **`ADR-0006`**, both
+  **effective at that integration commit**. **`EFFECTIVE ≠ CLOSED`**, and
+  effectivity created no value and no identifier.
   **`WP021-D2` is DEFERRED** — **VF-4 technical root OPEN, VF-4 Source Set identity
   OPEN**, and **no Decision and no ADR is created for it**. **No `DEC-S-137`, no
   `ADR-0007`, and no `RISK-099`.**
@@ -162,22 +166,24 @@ then authorized separately** and has been executed. The remaining sequence is:
 | 11 | **Execution of CDS-WP-021** | Claude, under that authorization | **Done** — first result **`DECISION_REQUIRED`**, escalating `WP021-D1` and `WP021-D2` |
 | 12 | **Human-Maintainer decision on `WP021-D1` and `WP021-D2`** | Human Maintainer | **Done** — 2026-09-06. **`WP021-D1` APPROVED** (Container-Relative Named-Range Foundation); **`WP021-D2` DEFERRED** |
 | 13 | **Bounded decision rework of the CDS-WP-021 object** — apply `WP021-D1`, prepare `DEC-S-136` and `ADR-0006`, record `WP021-D2` as deferred | Claude, under Human-Maintainer authorization | **Done** — result **`COMPLETE WITH NOTES`**; object **prepared and uncommitted** |
-| 14 | **Fresh independent review** of the reworked CDS-WP-021 working-tree object, in a new session | Reviewer ≠ executor | **Pending** |
-| 15 | **Nova final adjudication** of that review | Nova — recommendation only, never approval | **Pending** |
-| 16 | **Human-Maintainer exact-object integration commit** of the CDS-WP-021 object | Human Maintainer | **Pending** |
-| 17 | **`DEC-S-136` and `ADR-0006` become effective** | Effective at step 16 | **Pending** |
+| 14 | **Fresh independent review** of the reworked CDS-WP-021 working-tree object, in a new session | Reviewer ≠ executor | **Done** — the fresh review returned **`REWORK REQUIRED`** (**F-R21-01** material, **F-R21-02** minor); a bounded two-file rework resolved both, and the **confirmatory independent review returned `PASS`** with **0** blocking and **0** unresolved material findings |
+| 15 | **Nova final adjudication** of that review | Nova — recommendation only, never approval | **Done** — **`GO — EXACT-OBJECT INTEGRATION AUTHORIZED`** |
+| 16 | **Human-Maintainer exact-object integration commit** of the CDS-WP-021 object | Human Maintainer | **Done** — `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` (2026-09-11); **16 / 16** committed blobs exact against the reviewed object |
+| 17 | **`DEC-S-136` and `ADR-0006` become effective** | Effective at step 16 | **Done** — effective at `a6bd7bf0…` |
 | 18 | **Closure of CDS-WP-021** — a **separate** Human-Maintainer act, not implied by step 16 | Human Maintainer | **Pending — not yet authorized** |
 
 **Step 8 is not reached before step 7**, **step 9e is not reached before step 9d**,
 **step 13 does not reach step 14**, **step 17 is not reached before step 16**,
-**step 16 does not reach step 18**, and **no
+**step 16 does not reach step 18 — and reaching step 17 does not reach it either**,
+and **no
 step below implies the one above it**. Uncommitted
 executor output changes no authoritative phase or work-package status, and a review
 PASS is not a commit. **No concrete visual value is created at any step above**, and
 **no value work is possible**: **VP-3, VP-5, VP-6 and VP-7 are unsatisfied for every
 family**, VP-2 is unsatisfied for typeface identity, weight identity and composites,
 and **only VP-4 moves** — for VF-1, VF-2, VF-3, VF-5 and VF-6 — once step 9e is
-reached. **Deciding an identifier is not creating one**, and
+reached. **Step 17 moved no value prerequisite**: `DEC-S-136` becoming effective
+makes an architecture normative and satisfies **no** VP gate. **Deciding an identifier is not creating one**, and
 **SEQUENCED NEXT ≠ AUTHORIZED**.
 **Registering `CDS-WP-020A` at step 5 activates nothing**: it stays `Planned`, not
 active, and not authorized until its own separate Human-Maintainer authorization,
@@ -225,8 +231,10 @@ Maintainer decided **OD-4, OD-5, OD-6A and OD-7** on 2026-09-05 and authorized t
 bounded pass to prepare the records. **DEC-S-132 … DEC-S-135** and **ADR-0005**
 became effective **only** at the Human-Maintainer exact integration commit
 `2cb244e889c1a6b5a278afb233995a0379b5d9ef` of the
-exact reviewed Working Tree object. **The effective register holds 135 decisions
-and 5 ADRs.**
+exact reviewed Working Tree object. **The effective register held 135 decisions
+and 5 ADRs at that commit; it has since advanced to 136 decisions and 6 ADRs** —
+**`DEC-S-136`** and **`ADR-0006`**, effective at
+`a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`.
 
 | Decision | Records | Residual left open |
 | --- | --- | --- |
@@ -958,10 +966,13 @@ executed, and integrated**, and is recorded as **`Completed`** with closure
 effective at the Human-Maintainer integration commit of the closure and routing
 object. **CDS-WP-021 was then authorized the same way** — a separate, explicit
 Human-Maintainer act at step 10 — and is **`AUTHORIZED / ACTIVE FOR EXECUTION`**,
-**executed with result `COMPLETE WITH NOTES`**, and **not closed**. **It is the only
-authorized work package.** **`DEC-S-136` and `ADR-0006` are prepared under that same
-authorization and are NOT YET EFFECTIVE** — **`PREPARED ≠ EFFECTIVE`**, and the
-effective registers stay at **135 decisions and 5 ADRs**.
+**executed with result `COMPLETE WITH NOTES`**, **integrated** at
+`a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`, and **not closed**. **It is the only
+authorized work package.** **`DEC-S-136` and `ADR-0006` were prepared under that
+same authorization and became effective at that integration commit** — the
+effective registers are now **136 decisions and 6 ADRs**. **`PREPARED ≠
+EFFECTIVE`** held until the commit, and **`EFFECTIVE ≠ CLOSED`** holds now:
+integration closed no work package.
 **Planning is not authorization:** recording `CDS-WP-020A` and CDS-WP-022 …
 CDS-WP-053 activates none of them, and each requires its own explicit Nova prompt
 and Human-Maintainer authorization. **Authorizing one work package authorizes no

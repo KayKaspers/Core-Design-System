@@ -39,12 +39,15 @@ Controlled work-package roadmap for the Core Design System (CDS).
   explicitly by the Human Maintainer as the next work package at **step 10** of the
   next-allowed-authority sequence. **It is executed with result `COMPLETE WITH
   NOTES`; it is NOT closed.** It first returned `DECISION_REQUIRED`; the Human
-  Maintainer then decided **`WP021-D1`** (prepared as **`DEC-S-136`** with
-  **ADR-0006**, **not yet effective**) and **deferred `WP021-D2`**, and a bounded
-  rework integrated both. Its working object is **prepared and
-  uncommitted**: **`WORKING TREE ≠ COMMITTED STATE`**, **`EXECUTION ≠ COMPLETION`**,
+  Maintainer then decided **`WP021-D1`** (recorded as **`DEC-S-136`** with
+  **ADR-0006**, both **effective**) and **deferred `WP021-D2`**, and a bounded
+  rework integrated both. Its object was **integrated** by the Human-Maintainer
+  exact-object commit `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` (2026-09-11), at
+  which `DEC-S-136` and `ADR-0006` **became effective**:
+  **`EXECUTION ≠ COMPLETION`**,
   **`COMPLETE REPORT ≠ CLOSURE`**, **`REVIEW PASS ≠ INTEGRATION`**, and
-  **`INTEGRATION ≠ CLOSURE`** unless separately authorized. The authorization
+  **`INTEGRATION ≠ CLOSURE`** unless separately authorized — **closure has not
+  occurred.** The authorization
   permits **execution of CDS-WP-021 only**: it authorizes **no** closure, **no**
   successor work package, **no** value authoring, **no** theme mechanism, **no**
   token source creation, **no** Candidate promotion, **no** evidence admission, and
@@ -931,10 +934,14 @@ maturity, and no claim.
 ### CDS-WP-021 — Adaptive Layout and Responsive Foundation
 
 **Status:** **`AUTHORIZED / ACTIVE FOR EXECUTION`** — **executed with result
-`COMPLETE WITH NOTES`**; **not closed**. Its working object is **prepared and
-uncommitted**. It first returned **`DECISION_REQUIRED`**; the Human Maintainer then
+`COMPLETE WITH NOTES`**, **integrated**, **not closed**. Its object was integrated
+by the Human-Maintainer exact-object commit
+`a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` (2026-09-11). It first returned
+**`DECISION_REQUIRED`**; the Human Maintainer then
 decided **`WP021-D1`** and **deferred `WP021-D2`**, and a **bounded rework**
-integrated both. **`EXECUTION COMPLETE ≠ WORK PACKAGE CLOSED`.**
+integrated both. **`EXECUTION COMPLETE ≠ WORK PACKAGE CLOSED`**, and
+**`INTEGRATED ≠ CLOSED`** — closure remains a separate Human-Maintainer act that
+has not occurred.
 
 **Authorization.** A separate, explicit Human-Maintainer decision taken at **step
 10** of the next-allowed-authority sequence. **It authorizes the execution of
@@ -967,10 +974,10 @@ recorded in the
 - **The density and adaptation interaction contract** (DA-1 … DA-6).
 - **Accessibility, channel, Product Profile, theme, validation, and evidence
   boundaries**, each derived from authority already in force.
-- **The prepared `DEC-S-136`** and
+- **`DEC-S-136`** and
   **[ADR-0006](../docs/decisions/ADR-0006-ADAPTIVE_SPATIAL_CONTEXT_AND_NAMED_RANGE_ARCHITECTURE.md)**,
-  recording the Human-Maintainer decision on **`WP021-D1`** — both
-  **`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET EFFECTIVE**.
+  recording the Human-Maintainer decision on **`WP021-D1`** — both **effective at
+  the integration commit `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`**.
 
 **What it did not do.** It created **no** visual value, **no** identifier, **no**
 responsive-range name, **no** range count or threshold, **no** VF-4 technical root,
@@ -979,8 +986,10 @@ resolver, schema, validator rule, test, fixture, component, brand, theme, patter
 or Product Profile; produced and admitted **no** evidence; changed **no** maturity;
 accepted or closed **no** risk; added **no** risk entry — the risk register stays at
 **98**; renamed **no** phase; registered **no** capability; made **no** claim; and
-activated **no** work package. **The effective Decision and ADR registers stay at
-135 and 5**; `DEC-S-136` and `ADR-0006` are **prepared, not effective**.
+activated **no** work package. **The effective Decision and ADR registers are
+136 and 6**, `DEC-S-136` and `ADR-0006` having become effective at the integration
+commit; **their effectivity changed none of the above** — it selected no value,
+created no identifier, and awarded no maturity.
 
 **Why it first returned `DECISION_REQUIRED`, and what the Human Maintainer then
 decided.** Two normative choices could not be derived from existing authority, and
@@ -989,14 +998,16 @@ them. **That result was correct and is not rewritten.**
 
 | Key | Question | Human-Maintainer outcome (2026-09-06) |
 | --- | --- | --- |
-| **`WP021-D1`** | **The adaptive response mechanism and its reference frame.** **RR-5** assigned the mechanism to CDS-WP-021 and left it open; discrete ranges, continuous functions, container-relative adaptation and hybrids were **each admissible** under RR-1 … RR-6. | **APPROVED — the Container-Relative Named-Range Foundation.** A declared **Adaptation Container** as the primary reference frame (technology-neutral; never a device class or viewport identity; satisfiable by a root or application context); **named discrete available-space ranges** as the Core Layer-3 response vocabulary; **continuous behaviour permitted downstream** where separately authorized but **not Core range identity**, requiring **no new `$type`** and altering **DEC-S-130 in no way**; **fixed-geometry channels governed by their own channel geometry**; and **`SPATIAL CONTEXT ≠ THEME RESOLUTION CONTEXT`**, with any composition reserved to **CDS-WP-022**. Prepared as **`DEC-S-136`** with **[ADR-0006](../docs/decisions/ADR-0006-ADAPTIVE_SPATIAL_CONTEXT_AND_NAMED_RANGE_ARCHITECTURE.md)**, both **`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET EFFECTIVE**. |
+| **`WP021-D1`** | **The adaptive response mechanism and its reference frame.** **RR-5** assigned the mechanism to CDS-WP-021 and left it open; discrete ranges, continuous functions, container-relative adaptation and hybrids were **each admissible** under RR-1 … RR-6. | **APPROVED — the Container-Relative Named-Range Foundation.** A declared **Adaptation Container** as the primary reference frame (technology-neutral; never a device class or viewport identity; satisfiable by a root or application context); **named discrete available-space ranges** as the Core Layer-3 response vocabulary; **continuous behaviour permitted downstream** where separately authorized but **not Core range identity**, requiring **no new `$type`** and altering **DEC-S-130 in no way**; **fixed-geometry channels governed by their own channel geometry**; and **`SPATIAL CONTEXT ≠ THEME RESOLUTION CONTEXT`**, with any composition reserved to **CDS-WP-022**. Recorded as **`DEC-S-136`** with **[ADR-0006](../docs/decisions/ADR-0006-ADAPTIVE_SPATIAL_CONTEXT_AND_NAMED_RANGE_ARCHITECTURE.md)**, both **effective at the Human-Maintainer integration commit `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`**. |
 | **`WP021-D2`** | **Whether VF-4 acquires a technical root and source-set identity.** **DEC-S-132 clause 9 fixes roots for the five registered families in current scope — VF-1, VF-2, VF-3, VF-5 and VF-6 — and VF-4 is not among them.** Extending that scope by implication is prohibited. | **DEFERRED.** **Deferral is not rejection**, and it approves **no** concrete VF-4 identity. **VF-4 technical root: OPEN. VF-4 Source Set identity: OPEN. `sourceSetId`: NONE. `sourceRevision`: NONE. Concrete VF-4 range identifiers: 0.** **No Decision and no ADR is created for it** — **no `DEC-S-137`, no `ADR-0007`.** The WP-021 structural contract completes without an identity-bearing machine-readable VF-4 Source Set. **VF-4 already exists as an artifact family**; a future root decision would **extend machine-readable identity coverage to an existing family, not create a sixth one.** |
 
 **`WP021-D1` and `WP021-D2` were escalation keys for the execution report, not
-governance identifiers.** **`DEC-S-136` and `ADR-0006` are prepared and not yet
-effective**; the **effective registers stay at 135 decisions and 5 ADRs**, the risk
+governance identifiers.** **`DEC-S-136` and `ADR-0006` are effective** at the
+Human-Maintainer integration commit `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`; the
+**effective registers are 136 decisions and 6 ADRs**, the risk
 register stays at **98**, and **no `RISK-099` and no new `OD` identifier was
-created.** **`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION.`**
+created.** **`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION`** held until
+that commit; **`EFFECTIVE ≠ CLOSED`** holds now.
 
 **Value prerequisites are unchanged and still fail closed.** **VP-3, VP-5, VP-6 and
 VP-7 remain `UNSATISFIED` for every visual family**, and **VP-4 is `UNSATISFIED` for

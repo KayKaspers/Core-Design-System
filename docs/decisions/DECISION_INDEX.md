@@ -11,8 +11,8 @@ authorized work packages.
 
 ## Register scope
 
-- **Effective decision range: DEC-S-001 … DEC-S-135**
-- **Number of effective decisions: 135**
+- **Effective decision range: DEC-S-001 … DEC-S-136**
+- **Number of effective decisions: 136**
 - **Effectivity.** **DEC-S-128 … DEC-S-131 are effective.** The condition their
   entries stated — the Human-Maintainer exact-byte integration commit of the
   CDS-WP-020 Decision Integration Pass, following a Fresh Independent Review and
@@ -27,32 +27,39 @@ authorized work packages.
   reviewed Working Tree object, following a Fresh Independent Review and Nova
   integration adjudication — occurred on 2026-09-05 at commit
   `2cb244e889c1a6b5a278afb233995a0379b5d9ef`, which integrated the reviewed object.
-  The **effective** register is therefore **DEC-S-001 … DEC-S-135 (135 decisions)**
-  and the **effective** ADR range is **ADR-0001 … ADR-0005 (5 ADRs)**. This section
+  **`DEC-S-136` and
+  [ADR-0006](ADR-0006-ADAPTIVE_SPATIAL_CONTEXT_AND_NAMED_RANGE_ARCHITECTURE.md) are
+  effective.** They were approved by the Human Maintainer on **2026-09-06** as the
+  resolution of **`WP021-D1`**, prepared under that authorization by **CDS-WP-021**
+  as **`PROPOSED / AUTHORIZED FOR INTEGRATION`**, and the condition their entries
+  stated — the Human-Maintainer exact integration commit of the exact reviewed
+  Working Tree object, following a Fresh Independent Review and Nova integration
+  adjudication — occurred on 2026-09-11 at commit
+  `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`, which integrated the reviewed object.
+  That review returned `REWORK REQUIRED`; a bounded two-file rework resolved
+  **F-R21-01** and **F-R21-02**, and the confirmatory independent review returned
+  `PASS`.
+  The **effective** register is therefore **DEC-S-001 … DEC-S-136 (136 decisions)**
+  and the **effective** ADR range is **ADR-0001 … ADR-0006 (6 ADRs)**. This section
   is the maintained current carrier; a
   statement inside an individual decision entry is point-in-time and is not edited
   when a later event occurs. **A review PASS is not a commit, and a Nova
   recommendation is not an approval** — effectivity followed from the commit, and
   no earlier wording conferred it.
-- **Prepared but NOT EFFECTIVE: `DEC-S-136` and
-  [ADR-0006](ADR-0006-ADAPTIVE_SPATIAL_CONTEXT_AND_NAMED_RANGE_ARCHITECTURE.md).**
-  Both were approved by the Human Maintainer on **2026-09-06** as the resolution of
-  **`WP021-D1`** and prepared under that authorization by **CDS-WP-021**, which is
-  `AUTHORIZED / ACTIVE FOR EXECUTION` and **not closed**. Both carry
-  **`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET EFFECTIVE** and are
-  **uncommitted executor output that changes no authoritative CDS state**. They
-  become `Accepted` and effective **only** at the Human-Maintainer exact
-  integration commit of the exact reviewed Working Tree object, following a Fresh
-  Independent Review and Nova integration adjudication. **The effective register is
-  unchanged at DEC-S-001 … DEC-S-135 (135) and ADR-0001 … ADR-0005 (5)**; the
-  **prepared** target is **136 decisions and 6 ADRs**. **`PREPARED ≠ EFFECTIVE`**,
-  and **`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION`**. **No decision
-  beyond DEC-S-136 and no ADR beyond ADR-0006 exists or is prepared — no
-  `DEC-S-137`, no `ADR-0007`.** **`WP021-D2` is deferred by the Human Maintainer
-  and has no Decision and no ADR.**
+- **`DEC-S-136` and `ADR-0006` are effective; CDS-WP-021 is not closed.**
+  **Effectivity is not closure.** The integration commit
+  `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` made both effective; **CDS-WP-021
+  remains `AUTHORIZED / ACTIVE FOR EXECUTION`, executed with result
+  `COMPLETE WITH NOTES`, integrated, and not closed** — closure is a separate
+  Human-Maintainer act that has not occurred. **No decision beyond DEC-S-136 and
+  no ADR beyond ADR-0006 exists or is prepared — no `DEC-S-137`, no `ADR-0007`.**
+  **`WP021-D2` is deferred by the Human Maintainer and has no Decision and no
+  ADR.** **`EFFECTIVE ≠ CLOSED`**, and **effectivity selects no value**: DEC-S-136
+  creates no range name, no range count, no threshold, no VF-4 technical root, and
+  no Source Set.
 - Decision record format: index entries, plus ADR files where a decision warrants an
-  Architecture Decision Record. **Effective ADR range: ADR-0001 … ADR-0005
-  (5 ADRs)**; **ADR-0006 is prepared and not yet accepted.**
+  Architecture Decision Record. **Effective ADR range: ADR-0001 … ADR-0006
+  (6 ADRs)**.
 - [ADR-0001 — Machine-Readable Token Source Format](ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)
   (accepted upon Human-Maintainer commit following Nova approval).
 - [ADR-0002 — Deterministic JSON Serialization](ADR-0002-DETERMINISTIC_JSON_SERIALIZATION.md)
@@ -70,11 +77,11 @@ authorized work packages.
   the rationale for **DEC-S-132 only**; **DEC-S-133, DEC-S-134 and DEC-S-135 are
   deliberately not architecture dependencies of it.**
 - [ADR-0006 — Adaptive Spatial Context and Named-Range Architecture](ADR-0006-ADAPTIVE_SPATIAL_CONTEXT_AND_NAMED_RANGE_ARCHITECTURE.md)
-  — **`PROPOSED / AUTHORIZED FOR INTEGRATION`, NOT YET ACCEPTED, NOT YET
-  EFFECTIVE.** It records the rationale for **DEC-S-136 only**; **DEC-S-132,
-  DEC-S-133 and DEC-S-135 are deliberately not architecture dependencies of it**,
-  and **`WP021-D2` is outside it.** It becomes `Accepted` only upon the
-  Human-Maintainer exact integration commit following Nova approval.
+  (accepted upon the Human-Maintainer integration commit
+  `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` following Nova approval). It records
+  the rationale for **DEC-S-136 only**; **DEC-S-132, DEC-S-133 and DEC-S-135 are
+  deliberately not architecture dependencies of it**, and **`WP021-D2` is outside
+  it.**
 
 ## Decision types
 
@@ -98,7 +105,7 @@ authorized work packages.
 | Phase transition decision | DEC-S-127 | — (CDS Phase Transition Governance Package) | The phase established by DEC-S-062 completed its operating purpose; for current and future state the project phase is `Post-Candidate Foundation & Design-System Enablement`. Prospective, partial supersession of the phase designation only — no maturity, no evidence, no activation, and no authority is granted. |
 | Visual token representation, evaluation authority and source identity decision | DEC-S-128 … DEC-S-131 | CDS-WP-020 (Decision Integration Pass) | One canonical `srgb` colour representation with perceptual spaces admitted as derivation only; WCAG 2.2 as the contrast evaluation authority with full-precision comparison and additional methods informational only; an explicit, minimal, closed CDS `$type` admission profile with explicit own typing; and the Source Set as the independently evaluable unit to which maturity binds, with aggregation conferring nothing (ADR-0004 for DEC-S-128, DEC-S-130, DEC-S-131). **Effective at the Human-Maintainer integration commit `42a568d823de3388e45af62967546f13ad67eff6`.** They select **no** value, create **no** identifier, and grant **no** maturity. |
 | Visual identifier, scale ownership, role admission and theme sequencing decision | DEC-S-132 … DEC-S-135 | — (CDS Step-9 Decision Integration Pass) | A family-rooted visual identifier grammar with a declared `qualifier` position, the layer kept out of every token path, two separate identity spaces, and the concrete source-set root identities; per-family ownership of every ordered scale under the common ST-1 … ST-7 contract with no universal cross-family base and `SCALE TOPOLOGY ≠ SCALE VALUES`; a cross-consumer role admission rule with the concrete vocabulary left open; and the rule that no semantic role carries a default alias before CDS-WP-022 decides the theme mechanism (ADR-0005 for DEC-S-132 only). **Effective at the Human-Maintainer integration commit `2cb244e889c1a6b5a278afb233995a0379b5d9ef`.** They select **no** value, create **no** token identifier, role identifier or source set, and grant **no** maturity. |
-| Adaptive spatial context and responsive architecture decision | DEC-S-136 | CDS-WP-021 | The declared **Adaptation Container** as the primary responsive Layer-3 reference frame — technology-neutral, never a device class or viewport identity, and satisfiable by a root or application context; **named discrete available-space ranges** as the Core Layer-3 response vocabulary, with `RANGE ≠ BEHAVIOUR`; continuous transformation **permitted downstream where separately authorized** but **not Core range identity**, requiring no new `$type` and altering DEC-S-130 in no way; fixed-geometry channels governed by **their own channel geometry** rather than forced responsive ranges; and **`SPATIAL CONTEXT ≠ THEME RESOLUTION CONTEXT`**, with any composition reserved to CDS-WP-022 (ADR-0006 for DEC-S-136 only). **`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET EFFECTIVE.** It selects **no** value, creates **no** range name, identifier, VF-4 root or source set, defers **`WP021-D2`**, and grants **no** maturity. |
+| Adaptive spatial context and responsive architecture decision | DEC-S-136 | CDS-WP-021 | The declared **Adaptation Container** as the primary responsive Layer-3 reference frame — technology-neutral, never a device class or viewport identity, and satisfiable by a root or application context; **named discrete available-space ranges** as the Core Layer-3 response vocabulary, with `RANGE ≠ BEHAVIOUR`; continuous transformation **permitted downstream where separately authorized** but **not Core range identity**, requiring no new `$type` and altering DEC-S-130 in no way; fixed-geometry channels governed by **their own channel geometry** rather than forced responsive ranges; and **`SPATIAL CONTEXT ≠ THEME RESOLUTION CONTEXT`**, with any composition reserved to CDS-WP-022 (ADR-0006 for DEC-S-136 only). **Effective at the Human-Maintainer integration commit `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`.** It selects **no** value, creates **no** range name, identifier, VF-4 root or source set, defers **`WP021-D2`**, and grants **no** maturity. |
 
 None of these types is an implementation decision. Logical architecture decisions
 define structure, responsibility, and flow — they select no technology, format,
@@ -5713,13 +5720,16 @@ Stable stays `No`.**
 
 ## DEC-S-136 — Adaptive Spatial Context and Named-Range Architecture
 
-- **Status:** **`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET EFFECTIVE.**
-  Approved by the Human Maintainer on 2026-09-06 and prepared under that
-  authorization. **This entry is uncommitted executor output and changes no
-  authoritative CDS state.** It becomes `Accepted` and effective **only** at the
-  Human-Maintainer exact integration commit of the exact reviewed Working Tree
-  object, following a Fresh Independent Review and Nova integration adjudication.
-  **A review PASS is not a commit.**
+- **Status:** Accepted — **effective at the Human-Maintainer exact integration
+  commit `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`** of the exact reviewed Working
+  Tree object of CDS-WP-021, which followed a Fresh Independent Review returning
+  `REWORK REQUIRED`, a bounded two-file rework resolving **F-R21-01** and
+  **F-R21-02**, a confirmatory independent review returning `PASS`, and Nova
+  integration adjudication. Before that commit this entry was uncommitted executor
+  output prepared under an explicit Human-Maintainer authorization given on
+  2026-09-06 and changed **no** authoritative CDS state; no earlier wording,
+  review verdict, or adjudication conferred effectivity. **A review PASS is not a
+  commit.** **Effectivity is not closure: CDS-WP-021 remains open.**
 - **Date:** 2026-09-06
 - **Type:** Adaptive spatial context and responsive architecture decision
 - **Work package:** **CDS-WP-021 — Adaptive Layout and Responsive Foundation**,

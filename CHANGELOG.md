@@ -9,6 +9,45 @@ released and no release is announced.
 
 ### Added
 
+- **`DEC-S-136` and `ADR-0006` reconciled to their effective state.**
+  The condition those entries themselves stated — the Human-Maintainer exact
+  integration commit of the exact reviewed CDS-WP-021 Working Tree object,
+  following a Fresh Independent Review and Nova integration adjudication — was met
+  on **2026-09-11** by commit `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` (parent
+  `2d1561807e5d2a8bb673603e3f36511546631205`), which committed **16 / 16** blobs
+  exact against the reviewed object. That review returned **`REWORK REQUIRED`**
+  (**F-R21-01** material, **F-R21-02** minor); a **bounded two-file rework**
+  resolved both, the **confirmatory independent review returned `PASS`** with **0**
+  blocking and **0** unresolved material findings, and Nova adjudicated
+  **`GO — EXACT-OBJECT INTEGRATION AUTHORIZED`**. The repository's live
+  current-state carriers therefore no longer qualify them as
+  `PROPOSED / AUTHORIZED FOR INTEGRATION` or `NOT YET EFFECTIVE`, and no longer
+  name **DEC-S-135** and **ADR-0005** as the highest effective entries.
+  **DEC-S-136 is effective and ADR-0006 is `Accepted`**; the effective registers
+  are **DEC-S-001 … DEC-S-136 (136)** and **ADR-0001 … ADR-0006 (6)**.
+  **This records a completed Human-Maintainer act and performs none** — an ADR is
+  accepted by the Human-Maintainer commit its own status text bound acceptance to,
+  never by an executor. **Point-in-time records were preserved**, not rewritten:
+  dated review, execution, decision-time, and changelog statements that were true
+  before integration remain as written, including the CDS-WP-021 preparation entry
+  below and its `DECISION_REQUIRED` execution history. **No Decision, ADR, or risk
+  was added, changed in substance, or removed** — the registers stay at **136**,
+  **6**, and **98**; **no `DEC-S-137`, no `ADR-0007`, no `RISK-099`.** **No ADR
+  rationale, alternative, consequence, or Decision scope was altered**; no visual
+  value, identifier, responsive-range name, range count, threshold, VF-4 technical
+  root, `sourceSetId`, `sourceRevision`, Source Set, token source, schema,
+  validator rule, test, or fixture was created; **no** evidence was admitted,
+  **no** maturity changed, **no** claim was made, and **no** work package was
+  activated. **`EFFECTIVE ≠ CLOSED`: CDS-WP-021 remains `AUTHORIZED / ACTIVE FOR
+  EXECUTION`, executed with result `COMPLETE WITH NOTES`, integrated, and NOT
+  closed** — closure is a separate Human-Maintainer act that has not occurred.
+  **`WP021-D2` stays DEFERRED**, with the **VF-4 technical root and Source Set
+  identity OPEN** and no Decision and no ADR for it. **`DEC-S-136` decides an
+  architecture, not a topology or a vocabulary**: **VP-3, VP-5, VP-6 and VP-7 stay
+  unsatisfied, VP-4 stays unsatisfied for VF-4, VF-1 … VF-9 stay `Proposed`, and
+  visual values and visual source sets stay 0.** **`CDS-WP-020A` and CDS-WP-022 …
+  CDS-WP-053 remain `Planned`, not active, and not authorized.**
+  (CDS-WP-021 post-integration effectivity reconciliation)
 - **CDS-WP-021 — Adaptive Layout and Responsive Foundation. Executed with result
   `COMPLETE WITH NOTES`. Prepared and uncommitted; NOT closed.** Authorized separately
   and explicitly by the Human Maintainer as the next work package, at **step 10** of

@@ -91,8 +91,10 @@ activated nothing.
 
 **CDS-WP-021 — Adaptive Layout and Responsive Foundation is the current authorized
 work package**: **`AUTHORIZED / ACTIVE FOR EXECUTION`** by a separate, explicit
-Human-Maintainer decision, **executed with result `COMPLETE WITH NOTES`**, and **not
-closed** — its working object is **prepared and uncommitted**. **Contract only.** It
+Human-Maintainer decision, **executed with result `COMPLETE WITH NOTES`**,
+**integrated** by the Human-Maintainer exact-object commit
+`a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` (2026-09-11), and **not
+closed** — **`INTEGRATED ≠ CLOSED`**. **Contract only.** It
 confirms the **Layer 3 / Layer 5 / Layer 6** ownership split — **`F-019-03`
 answered, CR-004 unchanged at Layer 5** — and records the spatial-context model, the
 **Adaptation Container**, the
@@ -107,12 +109,13 @@ resolved both escalations on **2026-09-06**. **`WP021-D1` is APPROVED** — the
 as the primary reference frame, **named discrete available-space ranges** as the
 Core Layer-3 vocabulary, continuous behaviour **permitted downstream but never Core
 range identity**, fixed-geometry channels governed by **their own geometry**, and
-**`SPATIAL CONTEXT ≠ THEME RESOLUTION CONTEXT`** — prepared as **`DEC-S-136`** with
-**`ADR-0006`**, both **`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET
-EFFECTIVE**. **`WP021-D2` is DEFERRED**: the **VF-4 technical root and Source Set
+**`SPATIAL CONTEXT ≠ THEME RESOLUTION CONTEXT`** — recorded as **`DEC-S-136`** with
+**`ADR-0006`**, both **effective at that integration commit**. **`WP021-D2` is
+DEFERRED**: the **VF-4 technical root and Source Set
 identity stay OPEN**, and **no Decision and no ADR is created for it** — no
-`DEC-S-137`, no `ADR-0007`. **The effective registers stay at 135 decisions and
-5 ADRs**, and the risk register at **98**. **`CDS-WP-020A` and CDS-WP-022 …
+`DEC-S-137`, no `ADR-0007`. **The effective registers are 136 decisions and
+6 ADRs**, and the risk register stays at **98**. **Effectivity selected no value,
+created no identifier, and closed no work package.** **`CDS-WP-020A` and CDS-WP-022 …
 CDS-WP-053 remain `Planned`, not active, and not authorized.**
 
 CDS-WP-019 was **architecture only.** It defines how the visual foundation is
@@ -294,15 +297,17 @@ and reference the normative policies; they do not replace them (DEC-S-063):
 
 ## Active decisions
 
-- Range: DEC-S-001 … DEC-S-135 · Count: 135 · ADRs: 5 (ADR-0001, ADR-0002,
-  ADR-0003, ADR-0004, ADR-0005)
-- **Effective range: DEC-S-001 … DEC-S-135 · Count: 135 · All Accepted · ADRs: 5.**
+- Range: DEC-S-001 … DEC-S-136 · Count: 136 · ADRs: 6 (ADR-0001, ADR-0002,
+  ADR-0003, ADR-0004, ADR-0005, ADR-0006)
+- **Effective range: DEC-S-001 … DEC-S-136 · Count: 136 · All Accepted · ADRs: 6.**
   **DEC-S-128 … DEC-S-131 and ADR-0004 are effective** at the Human-Maintainer
   exact-byte integration commit `42a568d823de3388e45af62967546f13ad67eff6` of the
   CDS-WP-020 Decision Integration Pass; **DEC-S-132 … DEC-S-135 and ADR-0005 are
   effective** at the Human-Maintainer exact integration commit
   `2cb244e889c1a6b5a278afb233995a0379b5d9ef` of the CDS Step-9 Decision Integration
-  Pass.
+  Pass; **DEC-S-136 and ADR-0006 are effective** at the Human-Maintainer
+  exact-object integration commit `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` of the
+  CDS-WP-021 object.
 - DEC-S-001…006: strategic foundation decisions (CDS-WP-001)
 - DEC-S-007…012: strategic scope decisions (CDS-WP-002)
 - DEC-S-013…020: consumer and pilot scope decisions (CDS-WP-004)

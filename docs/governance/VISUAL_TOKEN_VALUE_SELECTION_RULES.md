@@ -23,8 +23,9 @@
   unchanged.
 - **Amended by:** CDS-WP-021 — Adaptive Layout and Responsive Foundation,
   2026-09-06 — **one additive current-state note under VP-1 … VP-7, correcting the
-  VP-7 justification only.** **That amendment is PREPARED, NOT EFFECTIVE**: it
-  takes effect only at the Human-Maintainer exact integration commit of the exact
+  VP-7 justification only.** **That amendment is effective**
+  at the Human-Maintainer exact-object integration commit
+  `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` (2026-09-11) of the exact
   reviewed CDS-WP-021 Working Tree object. **The VP-7 verdict does not change —
   VP-7 remains `UNSATISFIED`** — and **no prerequisite text is rewritten**: the
   2026-08-27 and 2026-09-05 tables are **preserved as the record of the periods
@@ -149,7 +150,8 @@ and DEC-S-135 select no value**, and **VP-1 … VP-7 themselves are unchanged.**
 
 ### VP-7 current-state note — 2026-09-06
 
-*(**PREPARED, NOT EFFECTIVE** until the Human-Maintainer exact integration commit of
+*(**EFFECTIVE** at the Human-Maintainer exact-object integration commit
+`a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` (2026-09-11) of
 the CDS-WP-021 object. **Additive.** The dated tables above are **not rewritten**:
 each was true for the period it governed, and the 2026-09-05 row correctly recorded
 that no work package was authorized **at that date**.)*
