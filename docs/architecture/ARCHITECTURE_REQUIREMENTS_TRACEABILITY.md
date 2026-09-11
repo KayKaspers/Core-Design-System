@@ -96,6 +96,31 @@ policy that does not exist must name the work package that will supply it.
 | CR-039 | Deferred Requirement | 5 Patterns and Experiences | Layer 5 pattern; relates to degraded and restricted operation states. | [Architecture](DESIGN_SYSTEM_ARCHITECTURE.md) | Single-consumer need; pattern undefined. | CDS-WP-006 | Partially addressed - later design decision required |
 | CR-040 | Deferred Requirement | 1 Strategy and Governance | Layer 1 governance constraint: reference implementations may not extend a norm; contracts bind all consumers equally. | [Authority](SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md) | Parity enforcement mechanism. | CDS-WP-006 | Partially addressed - later design decision required |
 
+### CR-004 clarifying note — CDS-WP-021, 2026-09-06
+
+*(**PREPARED, NOT EFFECTIVE** until the Human-Maintainer exact integration commit of
+the CDS-WP-021 object. **Additive. The CR-004 row above is not edited, its
+architecture layer is not changed, and no count changes.**)*
+
+**CR-004 remains registered at `5 Patterns and Experiences`.** The deferred finding
+**`F-019-03`** recorded an apparent tension between that mapping and the placement of
+**CDS-WP-021 — Adaptive Layout and Responsive Foundation** at **Layer 3**.
+**CDS-WP-021 has confirmed the split**, and both records are correct at once:
+
+> **Layer-3 responsive vocabulary supports, but does not own, the Layer-5 viewport
+> and pattern strategy.**
+
+CDS-WP-021 owns the **VF-4 vocabulary** — the spatial-context model, the
+responsive-range obligations, and the grid, container and content-width contracts.
+**CR-004 asks for a strategy**, and *which* layout a screen uses, *when* it changes,
+and *what* it becomes remain **Layer 5**. See the
+[Adaptive Layout and Responsive Foundation](ADAPTIVE_LAYOUT_AND_RESPONSIVE_FOUNDATION.md)
+(LO-1 … LO-8) and the
+[Visual Foundation Spatial Architecture](VISUAL_FOUNDATION_SPATIAL_ARCHITECTURE.md).
+
+**This note re-owns nothing, moves no requirement, and changes no status.** `F-019-03`
+is answered by confirming a reading, not by re-mapping a row.
+
 ## Counts
 
 All counts are derived from the matrix above and were independently re-counted.

@@ -3,6 +3,16 @@
 - **Project:** Core Design System (CDS)
 - **Registered by:** CDS-WP-019 — Core Visual Foundation Architecture
 - **Date:** 2026-08-26
+- **Amended by:** CDS-WP-021 — Adaptive Layout and Responsive Foundation,
+  2026-09-06 — the **recorded discrepancy** below and the **deferred decisions**
+  list, to record that CDS-WP-021 has **confirmed the Layer 3 / Layer 5 split** and
+  that the **RR-5 mechanism question has been decided by the Human Maintainer**
+  (**`DEC-S-136`**, prepared). **These
+  amendments are PREPARED, NOT EFFECTIVE**: they take effect only at the
+  Human-Maintainer exact integration commit of the exact reviewed CDS-WP-021
+  Working Tree object. **They select no value, create no identifier, and change no
+  constraint** — **SP-1 … SP-5, RR-1 … RR-6, the proximity rule, the density
+  constraints, and the target-sizing obligation are unchanged.**
 - **Artifact class:** **1 — Normative human-readable source** (DEC-S-022)
 - **Status:** **Normative for the structure of CDS space, size, layout and grid.**
   It defines **VF-3** and **VF-4** and **selects no value**.
@@ -57,6 +67,18 @@ reconciles them:
 because the alternative reading — that viewport strategy is a foundation concern —
 would create exactly the component- and pattern-driven foundation that prohibited
 dependency 2 forbids.
+
+**Disposition — CDS-WP-021, 2026-09-06. PREPARED, NOT EFFECTIVE.** CDS-WP-021 has
+**confirmed the split** in the
+[Adaptive Layout and Responsive Foundation](ADAPTIVE_LAYOUT_AND_RESPONSIVE_FOUNDATION.md)
+(**LO-1 … LO-8**), from the same authority this table rests on: DEC-S-021, the
+allowed-dependency table, and prohibited dependencies 2 and 3. **`F-019-03` is
+answered.** **CR-004 remains registered at Layer 5 and its row is not edited** — the
+roadmap places CDS-WP-021 at Layer 3 because it owns the **VF-4 vocabulary**, while
+CR-004 asks for a **strategy**; both mappings are correct at once, and the
+discrepancy was a category confusion rather than a contradiction. **The confirmation
+re-owns no requirement and moves no mapping**, and it takes effect only at the
+Human-Maintainer exact integration commit of the CDS-WP-021 object.
 
 ## Spacing and sizing
 
@@ -128,6 +150,38 @@ Constraints:
 | **RR-4** | Adaptation must not defeat **user text resize, text spacing, or reflow**. |
 | **RR-5** | **The mechanism is open.** Whether ranges are discrete breakpoints, continuous functions, container-relative, or a combination is **CDS-WP-021's**, subject to the Layer 3 / Layer 5 split above. |
 | **RR-6** | The model must remain expressible in **non-web channels**, where "viewport" has no meaning and page or slide geometry replaces it. |
+
+**RR-5 disposition — CDS-WP-021, 2026-09-06. PREPARED, NOT EFFECTIVE. RR-1 … RR-6
+are unchanged.** CDS-WP-021 analysed the four admissible mechanisms and found that
+**existing authority excluded none of them**, so selecting one would have been a new
+normative choice it holds no authority to make. It therefore **escalated the
+mechanism to the Human Maintainer rather than answering it**, and returned
+**`DECISION_REQUIRED`**.
+
+**The Human Maintainer decided it on 2026-09-06: the Container-Relative Named-Range
+Foundation.** The primary adaptive reference frame is a **declared Adaptation
+Container** — a technology-neutral spatial reference boundary, never a device class
+or a viewport identity, and satisfiable by a root or application context. The Core
+Layer-3 response vocabulary is **named discrete available-space ranges**.
+**Continuous transformation remains permitted downstream where separately
+authorized** but is **not Core range identity**, and it **requires no new `$type`
+and alters DEC-S-130 in no way**. **Fixed-geometry channels use their own channel
+geometry** rather than forced responsive ranges. And **`SPATIAL CONTEXT ≠ THEME
+RESOLUTION CONTEXT`**, with any composition reserved to **CDS-WP-022**.
+
+This is recorded as **`DEC-S-136`** with
+[ADR-0006](../decisions/ADR-0006-ADAPTIVE_SPATIAL_CONTEXT_AND_NAMED_RANGE_ARCHITECTURE.md),
+both **`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET EFFECTIVE**; the
+architecture is held in the
+[Adaptive Layout and Responsive Foundation](ADAPTIVE_LAYOUT_AND_RESPONSIVE_FOUNDATION.md),
+together with the Layer 3 / Layer 5 / Layer 6 ownership model, the spatial-context
+model, the range obligations, and the grid, container and content-width contracts.
+
+**`RR-5`'s open question is disposed of; RR-5 itself is not rewritten**, and
+**RR-1 … RR-6 are unchanged**. **No range, no range name, no threshold, and no
+value is created**, **DEC-S-132 still grants VF-4 no technical root**, and
+**`WP021-D2` — whether VF-4 acquires one — is DEFERRED by the Human Maintainer**,
+with **no Decision and no ADR**.
 
 ## Density
 
@@ -218,8 +272,24 @@ values · document and presentation geometry standards · named extension points
 
 **Each requires its own explicitly authorized work package.**
 
+**Status after CDS-WP-021, 2026-09-06 — PREPARED, NOT EFFECTIVE.** Two of the items
+above have been addressed by the authorized CDS-WP-021 work package, and the rest are
+**unchanged**:
+
+| Item | Status |
+| --- | --- |
+| **The Layer 3 / Layer 5 split confirmation** | **DISCHARGED.** Confirmed by CDS-WP-021 (LO-1 … LO-8); **CR-004 stays at Layer 5**, and **`F-019-03` is answered.** |
+| **The responsive-range model and its mechanism** | **ADDRESSED.** The **model** — the spatial-context structure, the range obligations, and the grid, container and content-width contracts — is recorded by CDS-WP-021. **The mechanism is DECIDED by the Human Maintainer** as the Container-Relative Named-Range Foundation, prepared as **`DEC-S-136`** with **ADR-0006** and **not yet effective**. **The concrete range vocabulary is NOT decided** — no range name, count, threshold, or boundary — and **whether VF-4 acquires a technical root and source-set identity is DEFERRED** (`WP021-D2`); **DEC-S-132 still grants VF-4 no root.** |
+
+Every other item on the list — spacing and sizing scales, every value, gutters,
+container extents, content widths, density levels, target-size values, document and
+presentation geometry standards, and named extension points — **remains deferred and
+unchanged**, and **no value is selected**.
+
 ## Related documents
 
+- [Adaptive Layout and Responsive Foundation](ADAPTIVE_LAYOUT_AND_RESPONSIVE_FOUNDATION.md)
+  — CDS-WP-021
 - [Visual Foundation Architecture](VISUAL_FOUNDATION_ARCHITECTURE.md)
 - [Visual Foundation Typography Architecture](VISUAL_FOUNDATION_TYPOGRAPHY_ARCHITECTURE.md)
 - [Visual Foundation Shape and Surface Architecture](VISUAL_FOUNDATION_SHAPE_AND_SURFACE_ARCHITECTURE.md)

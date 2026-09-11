@@ -92,7 +92,33 @@ approved.
   risk; renamed no phase; registered no capability; and activated no later work
   package. Closure became effective with the Human-Maintainer commit
   `538fbccbf6f554de3b872e9fb75a70d13318feb6`.
-- Current work package: **none.** **CDS-WP-020 — Reference and Semantic Token
+- Current work package: **CDS-WP-021 — Adaptive Layout and Responsive Foundation**
+  — **`AUTHORIZED / ACTIVE FOR EXECUTION`** by a separate, explicit Human-Maintainer
+  decision; **executed with result `COMPLETE WITH NOTES`**; **not closed**; working
+  object **prepared and uncommitted**. **Contract only:** it confirms the
+  **Layer 3 / Layer 5 / Layer 6** ownership split — **`F-019-03` answered, CR-004
+  unchanged at Layer 5** — and records the spatial-context model (CX-1 … CX-9), the
+  **Adaptation Container** (AC-1 … AC-6), the
+  responsive-range obligations (AR-1 … AR-12), the grid, container and content-width
+  contracts (GC-1 … GC-9), and the density and adaptation interaction (DA-1 … DA-6).
+  It creates **no** visual value, **no** identifier, **no** responsive-range name,
+  **no** range count or threshold, **no** VF-4 technical root, and **no** source
+  set; admits **no** evidence; changes **no** maturity; and adds **no** risk — the
+  risk register stays at **98**.
+  **`WP021-D1` is APPROVED by the Human Maintainer** (2026-09-06) — the
+  **Container-Relative Named-Range Foundation**: a declared **Adaptation Container**
+  as primary reference frame, **named discrete available-space ranges** as Core
+  Layer-3 vocabulary, continuous behaviour **permitted downstream but not Core range
+  identity**, fixed-geometry channels governed by **their own geometry**, and
+  **`SPATIAL CONTEXT ≠ THEME RESOLUTION CONTEXT`** — prepared as **`DEC-S-136`**
+  with **`ADR-0006`**, both **`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET
+  EFFECTIVE**, so the **effective registers stay at 135 and 5**.
+  **`WP021-D2` is DEFERRED** — **VF-4 technical root OPEN, VF-4 Source Set identity
+  OPEN**, and **no Decision and no ADR is created for it**: no `DEC-S-137`, no
+  `ADR-0007`. **`CDS-WP-020A` and CDS-WP-022 … CDS-WP-053
+  remain `Planned`, not active, and not authorized**, and **`DEC-S-135` is
+  unchanged.**
+- Previous work package: **CDS-WP-020 — Reference and Semantic Token
   Foundation** was authorized separately by the Human Maintainer on 2026-08-26,
   **executed with result `DECISION_REQUIRED`**, and **integrated** by the
   Human-Maintainer commit `42a568d823de3388e45af62967546f13ad67eff6`. It is recorded
@@ -165,7 +191,8 @@ approved.
 | **CDS-WP-019** | **Closed** — Core Visual Foundation Architecture (**architecture only; no visual value**; no token source, component, brand, profile, evidence, maturity change, Decision, ADR, risk, phase rename, or capability registration), integrated by the Human-Maintainer commit `538fbccbf6f554de3b872e9fb75a70d13318feb6` |
 | **CDS-WP-020** | **Closed** — executed with result `DECISION_REQUIRED`; Reference and Semantic Token Foundation (**contract only; no visual value, no identifier**; no token source, schema, validator rule, test, component, brand, profile, evidence, maturity change, risk, phase rename, or capability registration), integrated by the Human-Maintainer commit `42a568d823de3388e45af62967546f13ad67eff6`. **Closure was recorded in the closure and routing object and became effective at the Human-Maintainer commit `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.** **`AE1-CDS-WP016-SEMSTATUS-004` was not transferred to it.** |
 | **`CDS-WP-020A`** | **PLANNED / NOT ACTIVE / NOT AUTHORIZED** — Visual Token Source Authoring and Source Set Realization; the `FR-N-03` authoring destination; **inserted** identifier, nothing renumbered; owns authoring, never validation or conformance |
-| **CDS-WP-021 … CDS-WP-053** | **PLANNED / NOT ACTIVE / NOT AUTHORIZED** — work not started |
+| **CDS-WP-021** | **AUTHORIZED / ACTIVE FOR EXECUTION** — Adaptive Layout and Responsive Foundation; **executed with result `COMPLETE WITH NOTES`**, **not closed**, working object **prepared and uncommitted**. **Contract only; no visual value, no identifier, no range name or count, no VF-4 technical root, no source set**; no token source, schema, validator rule, test, component, brand, profile, evidence, maturity change, risk, phase rename, or capability registration. **Layer 3 / Layer 5 / Layer 6 split CONFIRMED — `F-019-03` answered, CR-004 unchanged at Layer 5.** **`WP021-D1` APPROVED** — the Container-Relative Named-Range Foundation — prepared as **`DEC-S-136`** with **`ADR-0006`**, both **NOT YET EFFECTIVE**. **`WP021-D2` DEFERRED** — VF-4 root and Source Set identity **OPEN**, with **no Decision and no ADR** |
+| **CDS-WP-022 … CDS-WP-053** | **PLANNED / NOT ACTIVE / NOT AUTHORIZED** — work not started |
 
 **F-001 lifecycle-metadata resolution (Human Maintainer, 2026-08-19).** The five
 `AE1-CDS-WP016-SEMSTATUS-004`-bound normative Foundation documents remain
@@ -1030,16 +1057,26 @@ separately by the Human Maintainer on 2026-08-26, **executed with result
 [Reference and Semantic Token Foundation (CDS-WP-020)](#reference-and-semantic-token-foundation-cds-wp-020)
 below. **Its closure was recorded in the working object of the closure and routing
 pass and became effective at that object's Human-Maintainer integration commit
-`3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.** **No work package is currently authorized.**
+`3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.** **CDS-WP-020 activated no successor.**
+
+**CDS-WP-021 — Adaptive Layout and Responsive Foundation is the current authorized
+work package**, by a separate, later, explicit Human-Maintainer decision:
+**`AUTHORIZED / ACTIVE FOR EXECUTION`**, **executed with result
+`COMPLETE WITH NOTES`**, and **not closed**. **`WP021-D1` is APPROVED** and prepared
+as **`DEC-S-136`** with **`ADR-0006`** (**NOT YET EFFECTIVE**); **`WP021-D2` is
+DEFERRED**, with the **VF-4 technical root and Source Set identity OPEN** and **no
+Decision and no ADR** created for it.
 
 **The next planned work packages are `CDS-WP-020A` — Visual Token Source Authoring
-and Source Set Realization** (the `FR-N-03` authoring destination) **and CDS-WP-021 —
-Adaptive Layout and Responsive Foundation**. Both **remain inactive until separately
+and Source Set Realization** (the `FR-N-03` authoring destination) **and CDS-WP-022 —
+Theme and Environmental Presentation Model**. Both **remain inactive until separately
 authorized by the Human Maintainer**, and **the order between them is not decided**
 — **OD-7 is answered by the effective `DEC-S-135`**, which makes **CDS-WP-022** the
-recommended and sequenced Step-10 candidate. **SEQUENCED NEXT ≠ AUTHORIZED**, and
-any further step begins only on an explicit Nova prompt and Human-Maintainer
-authorization.
+recommended and sequenced Step-10 candidate. **The Human Maintainer authorized
+CDS-WP-021 instead, and that changed neither the recommendation nor any other work
+package's status** — **SEQUENCED NEXT ≠ AUTHORIZED**, a recommendation is not an
+authorization, and any further step begins only on an explicit Nova prompt and
+Human-Maintainer authorization.
 
 ## Core Visual Foundation Architecture (CDS-WP-019)
 

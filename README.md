@@ -171,9 +171,21 @@ partially answered **OD-5**, policy-answered **OD-6A**, and dispositioned **OD-6
 as already covered by existing authority — registered as **DEC-S-132 … DEC-S-135**
 and **ADR-0005** by a separately authorized **Step-9 Decision Integration Pass**.
 **They are effective at commit `2cb244e8…`, and they select no value.** **No value
-is selected, and no work package is authorized.**
-**CDS-WP-021 … CDS-WP-053 are planned only — not active, not authorized, work not
-started** — and are recorded in the
+is selected.**
+**CDS-WP-021 — Adaptive Layout and Responsive Foundation** is the current authorized
+work package: **`AUTHORIZED / ACTIVE FOR EXECUTION`** by a separate, explicit
+Human-Maintainer decision, **executed with result `COMPLETE WITH NOTES`**, and **not
+closed**. It confirms the **Layer 3 / Layer 5 / Layer 6** ownership split — **CR-004
+stays at Layer 5** — and records the spatial-context model, the **Adaptation
+Container**, the responsive-range
+obligations, and the grid, container and content-width contracts. It selects **no
+value** and creates **no identifier**, **no responsive-range name**, and **no VF-4
+technical root**. The **response mechanism is decided** by the Human Maintainer and
+prepared as **`DEC-S-136`** with **`ADR-0006`** — both **NOT YET EFFECTIVE**, so the
+effective registers stay at **135 decisions and 5 ADRs** — and **VF-4 identity is
+deferred**.
+**`CDS-WP-020A` and CDS-WP-022 … CDS-WP-053 are planned only — not active, not
+authorized, work not started** — and are recorded in the
 [Post-Candidate Development Roadmap](docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
 
 **The project does not yet produce visual design.** Defining the architecture of
@@ -474,6 +486,70 @@ visual source sets: 0 · visual Candidate families: 0 · Stable: 0.**
 - [Visual Token Foundation Open Decisions](docs/roadmap/VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md) — **non-normative**; OD-1 … OD-7 (OD-1 … OD-3 answered and effective; OD-4 and OD-7 answered, OD-5 partially answered, OD-6A policy-answered, OD-6B answered by existing authority — all four **effective**; the concrete role vocabulary, the per-family topology parameters and VF-1 tonal topology stay open)
 - [ADR-0004 — Visual Token Representation and Source Identity Architecture](docs/decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md) — **`Accepted`, effective at commit `42a568d8…`**
 - [ADR-0005 — Visual Identifier Grammar and Identity Spaces](docs/decisions/ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md) — **`Accepted`, effective at commit `2cb244e8…`**; covers **DEC-S-132** only
+
+### Adaptive layout and responsive foundation (CDS-WP-021)
+
+**Contract only. No visual value, and no identifier.** CDS-WP-021 defines the
+technology-neutral Layer-3 adaptive-layout and responsive foundation of **VF-4
+Layout and Grid** — the reusable spatial vocabulary and the structural context
+model — **without absorbing the Layer-5 pattern strategy**.
+
+**The layer split is confirmed**, discharging the obligation the Spatial
+Architecture placed on this work package and answering the deferred finding
+`F-019-03`:
+
+> **Layer 3 owns the spatial vocabulary and the structural context model.**
+> **Layer 5 owns the product or pattern response selected for a context.**
+> **Layer 6 owns channel-imposed geometry and degradation constraints.**
+
+**`RANGE ≠ BEHAVIOUR` · `CONTEXT ≠ PATTERN` · `FOUNDATION ≠ COMPOSITION`.**
+**CR-004 remains registered at Layer 5**, and no traceability row is re-mapped — the
+roadmap places CDS-WP-021 at Layer 3 because it owns the VF-4 **vocabulary**, while
+CR-004 asks for a **strategy**. Both are correct at once.
+
+**The model reconciles the two binding sources that pulled apart.** RR-6 requires
+the model to survive in non-web channels; the channel table says ranges do not
+apply in paginated ones. **Both hold only if the reference frame generalizes and
+the range construct does not** — so a spatial context declares a
+channel-determined frame, and **continuity decides whether a range applies at all.**
+Ranges apply in product UI and documentation; **page and slide geometry replace
+them** in PDF and presentations, as a **declared limitation, never a silent drop**.
+
+**Accessibility is incorporated structurally and claimed nowhere.** Orientation,
+reading order, reflow, resize, text spacing, target sizing, localization, and the
+rule that **no meaning may be carried by proximity or position alone** all bind —
+and the rows that need a renderer are routed to **CDS-WP-031**, not asserted.
+**`TARGET ≠ CLAIM` · `STRUCTURAL CONTRACT ≠ RENDERING EVIDENCE`.** Every VF-3 and
+VF-4 artifact remains **AE-0**.
+
+**It first returned `DECISION_REQUIRED`, and that was the honest result.** Existing
+authority excluded none of the four admissible response mechanisms, so CDS-WP-021
+escalated the choice rather than making it. **That result is execution history and
+is not rewritten.**
+
+**The Human Maintainer decided it on 2026-09-06: the Container-Relative Named-Range
+Foundation.** The primary reference frame is a **declared Adaptation Container** — a
+technology-neutral spatial reference boundary, never a device class or a viewport
+identity, and satisfiable by a root or application context, so that **`viewport`,
+`desktop`, `tablet` and `mobile` never become Core identifiers**. The Core Layer-3
+vocabulary is **named discrete available-space ranges**: a foundation needs a
+**term**, not a transition, and a named span is declarable, policeable, reviewable
+and migratable in a way a continuous relation is not. **Continuous transformation
+stays permitted downstream** where separately authorized — **`CORE RANGE IDENTITY ≠
+DOWNSTREAM RESPONSE BEHAVIOUR`** — and it **needs no new `$type` and alters
+DEC-S-130 in no way**; the closed `$type` profile is **not** the reason.
+**Fixed-geometry channels keep their own geometry**, and **`SPATIAL CONTEXT ≠ THEME
+RESOLUTION CONTEXT`**, with any composition reserved to **CDS-WP-022**.
+
+This is recorded as **`DEC-S-136`** with **`ADR-0006`**, both
+**`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET EFFECTIVE**. **The architecture
+is decided; the vocabulary is not** — no range name, count, threshold or boundary is
+selected. **`WP021-D2` — whether VF-4 acquires a technical root and source-set
+identity — is DEFERRED, not rejected**, and has **no Decision and no ADR**: **no
+`DEC-S-137`, no `ADR-0007`, no `RISK-099`**, and **no work package is activated**.
+
+- [Adaptive Layout and Responsive Foundation](docs/architecture/ADAPTIVE_LAYOUT_AND_RESPONSIVE_FOUNDATION.md)
+- [ADR-0006 — Adaptive Spatial Context and Named-Range Architecture](docs/decisions/ADR-0006-ADAPTIVE_SPATIAL_CONTEXT_AND_NAMED_RANGE_ARCHITECTURE.md) — **prepared, not yet accepted, not yet effective**
 
 ## Governance
 
@@ -808,14 +884,29 @@ maturity or approval it does not hold.
   release authority, `Stable` declaration, or runtime renderer implementation.
   **CDS-WP-024 keeps its validation, render-gate, and conformance boundary
   unchanged.**
-- **Planned:** **CDS-WP-021 … CDS-WP-053** — **not active, not authorized, work not
-  started.** The immediate next planned work packages are **`CDS-WP-020A`** and
-  **CDS-WP-021 — Adaptive Layout and Responsive Foundation**; both remain inactive
-  until separately authorized by the Human Maintainer, and **the order between them
-  is not decided here.** **OD-7 is answered by `DEC-S-135`:
-  CDS-WP-022 precedes context-sensitive value selection, and CDS-WP-022 is the
-  recommended and sequenced Step-10 candidate.** **SEQUENCED NEXT ≠ AUTHORIZED** —
-  it authorizes nothing.
+- **Authorized and active:** **CDS-WP-021 — Adaptive Layout and Responsive
+  Foundation** — **executed with result `COMPLETE WITH NOTES`**, **not closed**,
+  working object **prepared and uncommitted**. **Contract only.** It confirms the
+  **Layer 3 / Layer 5 / Layer 6** ownership split — **`F-019-03` answered** and
+  **CR-004 unchanged at Layer 5** — and records the spatial-context model, the
+  **Adaptation Container**, the
+  responsive-range obligations, the grid, container and content-width contracts, and
+  the density and adaptation interaction. It creates **no** visual value,
+  identifier, responsive-range name, range count or threshold, VF-4 technical root,
+  source set, token source,
+  schema, validator rule, test, component, brand, or Product Profile; admits **no**
+  evidence; changes **no** maturity; and adds **no** risk. **`WP021-D1` is
+  APPROVED** — the **Container-Relative Named-Range Foundation** — and prepared as
+  **`DEC-S-136`** with **`ADR-0006`**, both **NOT YET EFFECTIVE**; **`WP021-D2` is
+  DEFERRED**, leaving the **VF-4 technical root and Source Set identity OPEN** with
+  **no Decision and no ADR**.
+- **Planned:** **`CDS-WP-020A`** and **CDS-WP-022 … CDS-WP-053** — **not active, not
+  authorized, work not started.** They remain inactive until separately authorized
+  by the Human Maintainer, and **the order between them is not decided here.**
+  **OD-7 is answered by `DEC-S-135`: CDS-WP-022 precedes context-sensitive value
+  selection, and CDS-WP-022 is the recommended and sequenced Step-10 candidate.**
+  **SEQUENCED NEXT ≠ AUTHORIZED** — it authorizes nothing, and the Human-Maintainer
+  authorization of CDS-WP-021 activated no other work package.
 
 The full controlled roadmap is in
 [project-system/WORK_PACKAGES.md](project-system/WORK_PACKAGES.md); the forward

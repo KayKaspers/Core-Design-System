@@ -21,6 +21,15 @@
   preserved as the record of the period it governed.** VP-1 … VP-7,
   VE-1 … VE-12, IG-1 … IG-10, VD-1 … VD-8, VA-1 … VA-10 and VS-1 … VS-6 are
   unchanged.
+- **Amended by:** CDS-WP-021 — Adaptive Layout and Responsive Foundation,
+  2026-09-06 — **one additive current-state note under VP-1 … VP-7, correcting the
+  VP-7 justification only.** **That amendment is PREPARED, NOT EFFECTIVE**: it
+  takes effect only at the Human-Maintainer exact integration commit of the exact
+  reviewed CDS-WP-021 Working Tree object. **The VP-7 verdict does not change —
+  VP-7 remains `UNSATISFIED`** — and **no prerequisite text is rewritten**: the
+  2026-08-27 and 2026-09-05 tables are **preserved as the record of the periods
+  they governed**. **No value is selected**, and VP-1 … VP-7, VE-1 … VE-12,
+  IG-1 … IG-10, VD-1 … VD-8, VA-1 … VA-10 and VS-1 … VS-6 are unchanged.
 - **Artifact class:** **1 — Normative human-readable source** (DEC-S-022)
 - **Status:** **Normative for how a visual value may be selected** — the discipline
   every future value must satisfy before it may enter CDS. It **selects no value**.
@@ -137,6 +146,38 @@ and DEC-S-135 select no value**, and **VP-1 … VP-7 themselves are unchanged.**
 > **concrete role vocabulary**, the **OD-1 `hex`** residual, the **OD-2** font and
 > composite residuals, and **any migration compatibility mechanism outside the
 > normative Semantic alias graph**.
+
+### VP-7 current-state note — 2026-09-06
+
+*(**PREPARED, NOT EFFECTIVE** until the Human-Maintainer exact integration commit of
+the CDS-WP-021 object. **Additive.** The dated tables above are **not rewritten**:
+each was true for the period it governed, and the 2026-09-05 row correctly recorded
+that no work package was authorized **at that date**.)*
+
+**The VP-7 verdict is unchanged: `UNSATISFIED`.** Only its **justification** needs
+updating.
+
+The Human Maintainer has since authorized **CDS-WP-021 — Adaptive Layout and
+Responsive Foundation**, so *"no work package is currently authorized"* is no longer
+the reason. The correct reason is narrower and stricter:
+
+> **VP-7 — `UNSATISFIED`.** **CDS-WP-021 is currently authorized, but it is not
+> authorized to select visual values.** **No work package currently authorized to
+> select visual values exists.**
+
+**VP-7 requires the authorization of the work package that makes the value
+selection**, and CDS-WP-021 selects no value of any kind. **`CDS-WP-020A` and
+CDS-WP-022 remain `Planned`, not active, and not authorized**, and **value selection
+is not authorized.**
+
+**Nothing else moves.** **VP-3, VP-5 and VP-6 remain `UNSATISFIED` for every
+family**, **VP-2 remains unsatisfied for typeface identity, weight identity and
+composites**, and the **Step-9 VP-4 state for VF-1, VF-2, VF-3, VF-5 and VF-6 is
+unchanged**. **VP-4 is `UNSATISFIED` for VF-4**: `DEC-S-132`'s root vocabulary is
+closed at those five families, `WP021-D2` is **deferred**, and **no VF-4 technical
+root or source-set identity exists**. **`DEC-S-136` decides an architecture, not a
+topology or a vocabulary, and satisfies no prerequisite.** **No visual value may be
+selected**, and **visual values and visual source sets remain 0.**
 
 ## The evaluation
 

@@ -34,14 +34,32 @@ Controlled work-package roadmap for the Core Design System (CDS).
   activated **no** later work package. Its architecture was integrated by the
   Human-Maintainer commit **`538fbccbf6f554de3b872e9fb75a70d13318feb6`**, and
   closure became effective there.
-- **Current work package:** **none.** **CDS-WP-020 — Reference and Semantic Token
+- **Current work package:** **CDS-WP-021 — Adaptive Layout and Responsive
+  Foundation.** **`AUTHORIZED / ACTIVE FOR EXECUTION`** — authorized separately and
+  explicitly by the Human Maintainer as the next work package at **step 10** of the
+  next-allowed-authority sequence. **It is executed with result `COMPLETE WITH
+  NOTES`; it is NOT closed.** It first returned `DECISION_REQUIRED`; the Human
+  Maintainer then decided **`WP021-D1`** (prepared as **`DEC-S-136`** with
+  **ADR-0006**, **not yet effective**) and **deferred `WP021-D2`**, and a bounded
+  rework integrated both. Its working object is **prepared and
+  uncommitted**: **`WORKING TREE ≠ COMMITTED STATE`**, **`EXECUTION ≠ COMPLETION`**,
+  **`COMPLETE REPORT ≠ CLOSURE`**, **`REVIEW PASS ≠ INTEGRATION`**, and
+  **`INTEGRATION ≠ CLOSURE`** unless separately authorized. The authorization
+  permits **execution of CDS-WP-021 only**: it authorizes **no** closure, **no**
+  successor work package, **no** value authoring, **no** theme mechanism, **no**
+  token source creation, **no** Candidate promotion, **no** evidence admission, and
+  **no** release or publication. **`DEC-S-135` is unchanged** and
+  **context-sensitive value selection is not authorized.**
+- **Previous work package:** **CDS-WP-020 — Reference and Semantic Token
   Foundation** was authorized separately by the Human Maintainer on 2026-08-26,
   **executed**, and its reviewed object was **integrated** by the Human-Maintainer
   commit **`42a568d823de3388e45af62967546f13ad67eff6`**. It is recorded as
   **`Completed`** below. **That closure was recorded in the working object of the
   CDS-WP-020 closure and routing pass and became effective at the Human-Maintainer
-  integration commit of that object, `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.** **No successor
-  work package is active or authorized.** The
+  integration commit of that object, `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.**
+  **CDS-WP-020 activated no successor**; the successor now active,
+  **CDS-WP-021**, was authorized by a separate, later, explicit Human-Maintainer
+  decision. The
   **CDS Phase Transition Governance Package**
   (**DEC-S-127**) ran between CDS-WP-019 closure and that authorization; it is
   **not** a numbered work package, occupies no identifier in the
@@ -101,17 +119,20 @@ Controlled work-package roadmap for the Core Design System (CDS).
   [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
   The decision register holds **131** entries and the ADR range **4**.)*
 - **Next planned work packages:** **`CDS-WP-020A` — Visual Token Source Authoring
-  and Source Set Realization** and **CDS-WP-021 — Adaptive Layout and Responsive
-  Foundation**. Both are **`Planned`, not active, and not authorized**; each starts
-  only on separate Human-Maintainer authorization, one work package at a time.
-  **The order between them is not decided here.** **DEC-S-135 (effective at commit
-  `2cb244e8…`) rules that CDS-WP-022
-  be considered before any value-selection work package** — a sequencing
-  recommendation only, which authorizes nothing and which this registration neither
-  accepts nor rejects.
+  and Source Set Realization** and **CDS-WP-022 — Theme and Environmental
+  Presentation Model**. Both are **`Planned`, not active, and not authorized**; each
+  starts only on separate Human-Maintainer authorization, one work package at a
+  time. **The order between them is not decided here.** **DEC-S-135 (effective at
+  commit `2cb244e8…`) rules that CDS-WP-022 be considered before any
+  value-selection work package** — a sequencing recommendation only, which
+  authorizes nothing and which this registration neither accepts nor rejects.
+  **The Human-Maintainer authorization of CDS-WP-021 changed none of this**:
+  **`SEQUENCED NEXT ≠ AUTHORIZED`**, and authorizing one work package activates no
+  other.
 - **Forward roadmap:** CDS-WP-017 … CDS-WP-053 are recorded in the
   [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
-  **CDS-WP-021 … CDS-WP-053 are `Planned` only.**
+  **`CDS-WP-020A` and CDS-WP-022 … CDS-WP-053 are `Planned` only**; **CDS-WP-021 is
+  authorized and active**.
 
 ## Status values
 
@@ -151,7 +172,7 @@ review, and authority state are recorded per work package below.
 | CDS-WP-019 | Core Visual Foundation Architecture | Completed | CDS-WP-018 |
 | CDS-WP-020 | Reference and Semantic Token Foundation | Completed | CDS-WP-019 |
 | CDS-WP-020A | Visual Token Source Authoring and Source Set Realization | Planned | CDS-WP-020 + OD-4, OD-5, OD-6 decided — **OD-4 answered, OD-5 only partially, OD-6A policy only**; **VP-3, VP-5, VP-6, VP-7 unsatisfied**; pinned validator stack absent |
-| CDS-WP-021 | Adaptive Layout and Responsive Foundation | Planned | CDS-WP-020 |
+| CDS-WP-021 | Adaptive Layout and Responsive Foundation | **Next** — authorized, active, executed with `COMPLETE WITH NOTES`, **not closed** | CDS-WP-020 |
 | CDS-WP-022 | Theme and Environmental Presentation Model | Planned | CDS-WP-021 |
 | CDS-WP-023 | Semantic Status Visual Binding Contract | Planned | CDS-WP-022 |
 | CDS-WP-024 | Semantic Validation and Render-Gate Architecture | Planned | CDS-WP-023 |
@@ -187,28 +208,37 @@ review, and authority state are recorded per work package below.
 
 ### How to read this table
 
-**`Planned` is not `Active` and not authorization.** CDS-WP-021 … CDS-WP-053 are
-recorded so the direction is legible and so no competing roadmap can arise. Work on
-them has **not started**, and each is executable only on an explicit Nova prompt
-**and** Human-Maintainer authorization, one work package at a time. Listing
-CDS-WP-021 immediately after CDS-WP-020 activates nothing.
+**`Planned` is not `Active` and not authorization.** `CDS-WP-020A` and
+CDS-WP-022 … CDS-WP-053 are recorded so the direction is legible and so no competing
+roadmap can arise. Work on them has **not started**, and each is executable only on
+an explicit Nova prompt **and** Human-Maintainer authorization, one work package at
+a time. Listing one immediately after another activates nothing.
 
-**CDS-WP-019 and CDS-WP-020 both proved the rule rather than breaking it:** each
-left `Planned` only when the Human Maintainer authorized it separately — **not**
-because the roadmap listed it next. **The phase transition changed nothing here.**
-DEC-S-127 relabelled the project phase and granted no authority; CDS-WP-020's
-activation was an independent Human-Maintainer decision taken afterwards, and
-**CDS-WP-021 stays `Planned`, not active, and not authorized** until the Human
-Maintainer authorizes it the same way.
+**CDS-WP-019, CDS-WP-020 and CDS-WP-021 all proved the rule rather than breaking
+it:** each left `Planned` only when the Human Maintainer authorized it separately —
+**not** because the roadmap listed it next. **The phase transition changed nothing
+here.** DEC-S-127 relabelled the project phase and granted no authority; the
+CDS-WP-020 activation was an independent Human-Maintainer decision taken afterwards,
+and so was the **CDS-WP-021** activation. **Neither the Step-9 decisions nor the
+DEC-S-135 sequencing recommendation authorized CDS-WP-021** — `DEC-S-135` names
+**CDS-WP-022** as the recommended and sequenced Step-10 candidate, and the Human
+Maintainer authorized **CDS-WP-021** instead, by an explicit and separate act.
+**A recommendation is not an authorization, and an authorization is not a
+recommendation.** **`CDS-WP-020A` and CDS-WP-022 … CDS-WP-053 stay `Planned`, not
+active, and not authorized** until the Human Maintainer authorizes each the same
+way.
 
 **`CDS-WP-020A` is an inserted identifier, not a renumbering.** It follows the
 **`CDS-WP-001A`** precedent already in this table: a suffixed identifier placed
 between two numbered work packages, occupying no number. **No work package was
 renumbered**, and the numeric sequence CDS-WP-017 … CDS-WP-053 is unchanged. Its
 row position is **registration, not sequencing**: listing it before CDS-WP-021 does
-not decide that it runs before CDS-WP-021 or CDS-WP-022, and **OD-7 — whether
-CDS-WP-022 should be considered before any value-selection work package — stays
-open**. Execution order is a Human-Maintainer decision.
+not decide that it runs before CDS-WP-021 or CDS-WP-022. **`OD-7` — whether
+CDS-WP-022 should be considered before any value-selection work package — is
+ANSWERED by the effective `DEC-S-135`**: **CDS-WP-022 precedes context-sensitive
+value selection**, which makes it the **recommended and sequenced Step-10
+candidate**. **`CDS-WP-022` is nevertheless NOT AUTHORIZED** — **SEQUENCED NEXT ≠
+AUTHORIZED** — and execution order remains a Human-Maintainer decision.
 
 The `Depends on` column records **sequence intent**, not permission. Four entries
 additionally require a **prior extension of the registered CDS scope** through an
@@ -897,6 +927,85 @@ the [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPM
 visual value, no identifier, no token source file, no manifest, no resolver, no
 schema, no validator rule, no test, and no fixture; it holds no evidence, no
 maturity, and no claim.
+
+### CDS-WP-021 — Adaptive Layout and Responsive Foundation
+
+**Status:** **`AUTHORIZED / ACTIVE FOR EXECUTION`** — **executed with result
+`COMPLETE WITH NOTES`**; **not closed**. Its working object is **prepared and
+uncommitted**. It first returned **`DECISION_REQUIRED`**; the Human Maintainer then
+decided **`WP021-D1`** and **deferred `WP021-D2`**, and a **bounded rework**
+integrated both. **`EXECUTION COMPLETE ≠ WORK PACKAGE CLOSED`.**
+
+**Authorization.** A separate, explicit Human-Maintainer decision taken at **step
+10** of the next-allowed-authority sequence. **It authorizes the execution of
+CDS-WP-021 only** — not its closure, not a successor, not value authoring, not a
+theme mechanism, not token source creation, not Candidate promotion, not evidence
+admission, and not release or publication. **`DEC-S-135` is unchanged**, and
+**context-sensitive value selection is not authorized**. **`CDS-WP-020A` and
+CDS-WP-022 … CDS-WP-053 were not activated by it.**
+
+**Scope — what it owns.** The **technology-neutral Layer-3 adaptive-layout and
+responsive foundation** of **VF-4 Layout and Grid**: the reusable spatial vocabulary
+and the structural context model, without absorbing Layer-5 pattern strategy. It is
+recorded in the
+[Adaptive Layout and Responsive Foundation](../docs/architecture/ADAPTIVE_LAYOUT_AND_RESPONSIVE_FOUNDATION.md).
+
+**What it delivered.**
+
+- **The Layer 3 / Layer 5 / Layer 6 ownership model** (LO-1 … LO-8), **confirming**
+  the split the [Spatial Architecture](../docs/architecture/VISUAL_FOUNDATION_SPATIAL_ARCHITECTURE.md)
+  stated and the deferred finding **`F-019-03`** routed to it. **CR-004 remains
+  registered at Layer 5**, and no traceability row was re-mapped.
+- **The spatial-context model** (CX-1 … CX-9), reconciling **RR-6** with the
+  channel table: the reference frame generalizes across channels, the responsive
+  range construct does not.
+- **The Adaptation Container** (AC-1 … AC-6) and **the responsive-range
+  obligations** (AR-1 … AR-12), applying RR-1 … RR-6 unchanged and carrying the
+  Human-Maintainer-approved **`WP021-D1`** model.
+- **The grid, container and content-width contracts** (GC-1 … GC-9) and their
+  disposition.
+- **The density and adaptation interaction contract** (DA-1 … DA-6).
+- **Accessibility, channel, Product Profile, theme, validation, and evidence
+  boundaries**, each derived from authority already in force.
+- **The prepared `DEC-S-136`** and
+  **[ADR-0006](../docs/decisions/ADR-0006-ADAPTIVE_SPATIAL_CONTEXT_AND_NAMED_RANGE_ARCHITECTURE.md)**,
+  recording the Human-Maintainer decision on **`WP021-D1`** — both
+  **`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET EFFECTIVE**.
+
+**What it did not do.** It created **no** visual value, **no** identifier, **no**
+responsive-range name, **no** range count or threshold, **no** VF-4 technical root,
+**no** `sourceSetId`, **no** `sourceRevision`, **no** token source file, manifest,
+resolver, schema, validator rule, test, fixture, component, brand, theme, pattern,
+or Product Profile; produced and admitted **no** evidence; changed **no** maturity;
+accepted or closed **no** risk; added **no** risk entry — the risk register stays at
+**98**; renamed **no** phase; registered **no** capability; made **no** claim; and
+activated **no** work package. **The effective Decision and ADR registers stay at
+135 and 5**; `DEC-S-136` and `ADR-0006` are **prepared, not effective**.
+
+**Why it first returned `DECISION_REQUIRED`, and what the Human Maintainer then
+decided.** Two normative choices could not be derived from existing authority, and
+CDS-WP-021 held no authority to make either. It escalated both rather than deciding
+them. **That result was correct and is not rewritten.**
+
+| Key | Question | Human-Maintainer outcome (2026-09-06) |
+| --- | --- | --- |
+| **`WP021-D1`** | **The adaptive response mechanism and its reference frame.** **RR-5** assigned the mechanism to CDS-WP-021 and left it open; discrete ranges, continuous functions, container-relative adaptation and hybrids were **each admissible** under RR-1 … RR-6. | **APPROVED — the Container-Relative Named-Range Foundation.** A declared **Adaptation Container** as the primary reference frame (technology-neutral; never a device class or viewport identity; satisfiable by a root or application context); **named discrete available-space ranges** as the Core Layer-3 response vocabulary; **continuous behaviour permitted downstream** where separately authorized but **not Core range identity**, requiring **no new `$type`** and altering **DEC-S-130 in no way**; **fixed-geometry channels governed by their own channel geometry**; and **`SPATIAL CONTEXT ≠ THEME RESOLUTION CONTEXT`**, with any composition reserved to **CDS-WP-022**. Prepared as **`DEC-S-136`** with **[ADR-0006](../docs/decisions/ADR-0006-ADAPTIVE_SPATIAL_CONTEXT_AND_NAMED_RANGE_ARCHITECTURE.md)**, both **`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET EFFECTIVE**. |
+| **`WP021-D2`** | **Whether VF-4 acquires a technical root and source-set identity.** **DEC-S-132 clause 9 fixes roots for the five registered families in current scope — VF-1, VF-2, VF-3, VF-5 and VF-6 — and VF-4 is not among them.** Extending that scope by implication is prohibited. | **DEFERRED.** **Deferral is not rejection**, and it approves **no** concrete VF-4 identity. **VF-4 technical root: OPEN. VF-4 Source Set identity: OPEN. `sourceSetId`: NONE. `sourceRevision`: NONE. Concrete VF-4 range identifiers: 0.** **No Decision and no ADR is created for it** — **no `DEC-S-137`, no `ADR-0007`.** The WP-021 structural contract completes without an identity-bearing machine-readable VF-4 Source Set. **VF-4 already exists as an artifact family**; a future root decision would **extend machine-readable identity coverage to an existing family, not create a sixth one.** |
+
+**`WP021-D1` and `WP021-D2` were escalation keys for the execution report, not
+governance identifiers.** **`DEC-S-136` and `ADR-0006` are prepared and not yet
+effective**; the **effective registers stay at 135 decisions and 5 ADRs**, the risk
+register stays at **98**, and **no `RISK-099` and no new `OD` identifier was
+created.** **`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION.`**
+
+**Value prerequisites are unchanged and still fail closed.** **VP-3, VP-5, VP-6 and
+VP-7 remain `UNSATISFIED` for every visual family**, and **VP-4 is `UNSATISFIED` for
+VF-4**. **`DEC-S-136` decides an architecture, not a topology or a vocabulary**, and
+**no visual value may be selected.**
+
+**Not closed.** Closure is a separate Human-Maintainer act and has **not** occurred.
+**`EXECUTION ≠ COMPLETION`**, **`COMPLETE REPORT ≠ CLOSURE`**, **`REVIEW PASS ≠
+INTEGRATION`**, and **`INTEGRATION ≠ CLOSURE`** unless separately authorized.
 
 ## Roadmap evolution
 

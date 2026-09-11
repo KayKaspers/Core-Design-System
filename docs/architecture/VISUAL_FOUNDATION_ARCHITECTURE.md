@@ -12,6 +12,16 @@
   (2026-09-05). **They select
   no value, create no token identifier, and create no role identifier**, and
   VF-1 … VF-9, VF-I-1 … VF-I-14, N-1 … N-5 and N-7 … N-8 are unchanged.
+- **Amended by:** CDS-WP-021 — Adaptive Layout and Responsive Foundation,
+  2026-09-06 — **deferred decision 4 only**, and one *Related documents* row, to
+  record the Human-Maintainer decision on **`WP021-D1`** (**`DEC-S-136`**,
+  **ADR-0006**) and the deferral of **`WP021-D2`**.
+  **That amendment is PREPARED, NOT EFFECTIVE**: it takes effect only at the
+  Human-Maintainer exact integration commit of the exact reviewed CDS-WP-021
+  Working Tree object. **It selects no value, creates no identifier, and grants
+  VF-4 no technical root**, and **VF-1 … VF-9, VF-I-1 … VF-I-14, N-1 … N-8, the
+  family register, the maturity of every family, and the deferred decisions
+  1 … 3 and 5 … 15 are unchanged.**
 - **Artifact class:** **1 — Normative human-readable source** (DEC-S-022)
 - **Status:** **Normative for the structure of the CDS visual foundation** upon
   Human-Maintainer commit. It defines **how** visual foundations are structured,
@@ -430,7 +440,7 @@ decide, schedule, or authorize it.)*
 | 1 | Every concrete visual value — colour, palette, typeface, size, spacing, radius, stroke, shadow, opacity, icon, illustration, motion value, breakpoint | CDS-WP-020 and later, each separately authorized |
 | 2 | The admitted DTCG `$type` set for visual families — **CLOSED by DEC-S-130** (CDS-WP-020 Decision Integration Pass, 2026-08-27): `color`, `dimension`, `number`. Composite types and font-family / font-weight identity **stay deferred** | **Closed**; residual under **OD-2** |
 | 3 | The concrete shared vocabulary of families, roles, and qualifiers — **partly closed 2026-09-05**, effective at commit `2cb244e8…`. **Family roots are fixed by DEC-S-132** and the **qualifier position is declared but unpopulated**. **The concrete role vocabulary stays open:** DEC-S-134 decides an **admission rule only** — a role enters CDS Core only on demonstrated cross-consumer need, satisfying SR-1 … SR-12 from creation, inside the **closed** role classification — and **creates no role identifier**. | The role vocabulary is **still open** as **OD-6A**, for separately authorized successor work; **`CDS-WP-020A` may not invent it** |
-| 4 | The responsive-range model, and the Layer 3 / Layer 5 split for viewport strategy | CDS-WP-021 |
+| 4 | The responsive-range model, and the Layer 3 / Layer 5 split for viewport strategy — **closed 2026-09-06, PREPARED and NOT EFFECTIVE until the Human-Maintainer integration commit of the CDS-WP-021 object.** **The split is CONFIRMED** by CDS-WP-021 (LO-1 … LO-8), and **CR-004 remains registered at Layer 5** — `F-019-03` is answered. **The model** is recorded — the spatial-context structure (CX-1 … CX-9), the Adaptation Container (AC-1 … AC-6), the range obligations (AR-1 … AR-12), and the grid, container and content-width contracts (GC-1 … GC-9). **The mechanism is DECIDED by the Human Maintainer**: the **Container-Relative Named-Range Foundation** — a declared **Adaptation Container** as primary reference frame, **named discrete available-space ranges** as Core vocabulary, continuous behaviour **permitted downstream but not Core range identity**, fixed-geometry channels governed by **their own geometry**, and **`SPATIAL CONTEXT ≠ THEME RESOLUTION CONTEXT`** — prepared as **`DEC-S-136`** with **[ADR-0006](../decisions/ADR-0006-ADAPTIVE_SPATIAL_CONTEXT_AND_NAMED_RANGE_ARCHITECTURE.md)**, **not yet effective**. | **Closed.** Residuals: the **concrete range vocabulary** stays open, and **whether VF-4 acquires a technical root and source-set identity is DEFERRED** by the Human Maintainer (`WP021-D2`) — **DEC-S-132 grants VF-4 no root**, and **no Decision and no ADR exists for it** |
 | 5 | Whether a theme is a resolver context, a separate source set, or a Product Profile concern — and the token layering light and dark imply (CR-025) | **CDS-WP-022** |
 | 6 | Whether high contrast is a CDS context, a platform-honouring behaviour, or both | CDS-WP-022 |
 | 7 | How visual roles bind to the five status axes | **CDS-WP-023**, gated by CDS-WP-024 and CDS-WP-025 |
@@ -486,6 +496,7 @@ not by a generated artifact.
 | Colour | [Visual Foundation Colour Architecture](VISUAL_FOUNDATION_COLOR_ARCHITECTURE.md) |
 | Typography | [Visual Foundation Typography Architecture](VISUAL_FOUNDATION_TYPOGRAPHY_ARCHITECTURE.md) |
 | Spacing, sizing, layout, grid, responsive | [Visual Foundation Spatial Architecture](VISUAL_FOUNDATION_SPATIAL_ARCHITECTURE.md) |
+| **Adaptive layout and responsive foundation** (VF-4) | [Adaptive Layout and Responsive Foundation](ADAPTIVE_LAYOUT_AND_RESPONSIVE_FOUNDATION.md) — CDS-WP-021 |
 | Shape, surface, elevation, opacity, focus ring | [Visual Foundation Shape and Surface Architecture](VISUAL_FOUNDATION_SHAPE_AND_SURFACE_ARCHITECTURE.md) |
 | Icons, illustration, imagery, generated imagery | [Visual Foundation Iconography and Imagery Architecture](VISUAL_FOUNDATION_ICONOGRAPHY_AND_IMAGERY_ARCHITECTURE.md) |
 | Themes and presentation contexts | [Visual Foundation Theme Architecture](VISUAL_FOUNDATION_THEME_ARCHITECTURE.md) |

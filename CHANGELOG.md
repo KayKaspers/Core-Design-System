@@ -9,6 +9,109 @@ released and no release is announced.
 
 ### Added
 
+- **CDS-WP-021 — Adaptive Layout and Responsive Foundation. Executed with result
+  `COMPLETE WITH NOTES`. Prepared and uncommitted; NOT closed.** Authorized separately
+  and explicitly by the Human Maintainer as the next work package, at **step 10** of
+  the next-allowed-authority sequence — **not** by the roadmap, and **not** by the
+  `DEC-S-135` sequencing recommendation, which named **CDS-WP-022**. **A
+  recommendation is not an authorization.** The work package adds the normative
+  [Adaptive Layout and Responsive Foundation](docs/architecture/ADAPTIVE_LAYOUT_AND_RESPONSIVE_FOUNDATION.md)
+  — the technology-neutral **Layer-3** adaptive-layout and responsive foundation of
+  **VF-4 Layout and Grid**.
+  **The Layer 3 / Layer 5 / Layer 6 split is CONFIRMED** (LO-1 … LO-8), discharging
+  the obligation the Spatial Architecture placed on this work package by name and
+  answering the deferred finding **`F-019-03`**: **Layer 3 owns the spatial
+  vocabulary and the structural context model · Layer 5 owns the response · Layer 6
+  owns channel-imposed geometry.** **`RANGE ≠ BEHAVIOUR` · `CONTEXT ≠ PATTERN` ·
+  `FOUNDATION ≠ COMPOSITION`.** **`CR-004` remains registered at Layer 5**, its row
+  is not edited, and **no count changes** — an additive clarifying note was added
+  below the traceability matrix and **re-owns nothing**.
+  It records the **spatial-context model** (CX-1 … CX-9), reconciling **RR-6** with
+  the channel table — **the reference frame generalizes, the range construct does
+  not**, and **continuity decides whether a range applies at all**; the
+  **responsive-range obligations** (AR-1 … AR-12), applying **RR-1 … RR-6
+  unchanged**; the **grid, container and content-width contracts** (GC-1 … GC-9);
+  and the **density and adaptation interaction** (DA-1 … DA-6), where **obligations
+  do not weaken under composition**. Accessibility is incorporated **structurally
+  and claimed nowhere** — **`TARGET ≠ CLAIM` · `STRUCTURAL CONTRACT ≠ RENDERING
+  EVIDENCE`** — with every rendering-dependent obligation routed to **CDS-WP-031**.
+  **It first returned `DECISION_REQUIRED`, correctly**, escalating two normative
+  choices existing authority could not derive; **that result is execution history and
+  is not rewritten.** **The Human Maintainer answered both on 2026-09-06**, and a
+  **bounded decision rework** applied them.
+  **`WP021-D1` is APPROVED — the Container-Relative Named-Range Foundation**: the
+  primary adaptive reference frame is a **declared Adaptation Container**, a
+  technology-neutral spatial reference boundary that is **never a CSS container
+  query, DOM construct, framework component, device class, viewport identity,
+  product, screen type, or Layer-5 pattern**, and that a **root or application
+  context may serve** without making **`viewport`, `desktop`, `tablet`, `mobile`,
+  `phone` or `monitor`** Core responsive identifiers. The **Core Layer-3 response
+  vocabulary is named discrete available-space ranges**, preserving **`RANGE ≠
+  BEHAVIOUR`**. **Continuous transformation remains permitted downstream** where
+  separately authorized — **`CORE RANGE IDENTITY ≠ DOWNSTREAM RESPONSE BEHAVIOUR`**
+  — and it **requires no new `$type` and alters `DEC-S-130` in no way**: the closed
+  `color`/`dimension`/`number` profile is **not** the reason, and a governed,
+  extendable profile boundary is never a permanent architectural verdict.
+  **Fixed-geometry channels — PDF, reports, print, presentations — use their own
+  channel geometry** rather than forced responsive-range semantics. And **`SPATIAL
+  CONTEXT ≠ THEME RESOLUTION CONTEXT`**, with any composition reserved to
+  **CDS-WP-022**, which retains full authority over it.
+  It is prepared as **`DEC-S-136` — Adaptive Spatial Context and Named-Range
+  Architecture** with
+  **[ADR-0006](docs/decisions/ADR-0006-ADAPTIVE_SPATIAL_CONTEXT_AND_NAMED_RANGE_ARCHITECTURE.md)**,
+  covering **DEC-S-136 only**. **Both are `PROPOSED / AUTHORIZED FOR INTEGRATION` —
+  NOT YET EFFECTIVE**, are **uncommitted executor output**, and become `Accepted`
+  and effective **only** at the Human-Maintainer exact integration commit following
+  a Fresh Independent Review and Nova adjudication. **`APPROVED PROPOSITION ≠
+  EFFECTIVE REPOSITORY DECISION`**, and **`PREPARED ≠ EFFECTIVE`**: the **effective
+  registers stay at DEC-S-001 … DEC-S-135 (135) and ADR-0001 … ADR-0005 (5)**, with
+  a **prepared target of 136 and 6**.
+  **`WP021-D2` is DEFERRED by the Human Maintainer — not rejected**, and it approves
+  **no** concrete VF-4 identity: the **VF-4 technical root and Source Set identity
+  stay OPEN**, **`sourceSetId` and `sourceRevision` are NONE**, concrete VF-4 range
+  identifiers are **0**, and **no Decision and no ADR was created for it** — **no
+  `DEC-S-137`, no `ADR-0007`**. **`DEC-S-132`'s root vocabulary stays closed at
+  VF-1, VF-2, VF-3, VF-5 and VF-6**, and extending it by implication remains
+  prohibited — **silence is recorded as silence.** **VF-4 already exists as an
+  artifact family**; a future root decision would **extend machine-readable identity
+  coverage to an existing family, never create a sixth one.**
+  **No value prerequisite moved.** **VP-3, VP-5, VP-6 and VP-7 remain `UNSATISFIED`
+  for every visual family**, **VP-4 remains `UNSATISFIED` for VF-4**, and the
+  **Step-9 VP-4 state for VF-1, VF-2, VF-3, VF-5 and VF-6 is unchanged**.
+  **`DEC-S-136` decides an architecture, not a topology or a vocabulary.** The live
+  **VP-7 justification** was corrected additively — **CDS-WP-021 is authorized but
+  is not authorized to select visual values**, so **no work package currently
+  authorized to select visual values exists** — while **the VP-7 verdict, the
+  normative VP-1 … VP-7 prerequisites, and the dated 2026-08-27 and 2026-09-05
+  prerequisite tables are unchanged.** The live **`OD-7` stale assertion** in
+  [Work Packages](project-system/WORK_PACKAGES.md) was likewise corrected: **`OD-7`
+  is ANSWERED by the effective `DEC-S-135`**, and **CDS-WP-022 remains NOT
+  AUTHORIZED**. **`WP021-D1` and `WP021-D2` were execution-report escalation keys,
+  not governance identifiers.**
+  **It created no visual value, no identifier, no responsive-range name, no VF-4
+  technical root, no `sourceSetId`, no `sourceRevision`, no source set, and no token
+  source file, manifest, resolver, schema, validator rule, test, fixture, component,
+  brand, or Product Profile**; produced and admitted **no** evidence; changed **no**
+  maturity; accepted or closed **no** risk; renamed **no** phase; registered **no**
+  capability; made **no** claim; and **activated no work package** — **`CDS-WP-020A`
+  and CDS-WP-022 … CDS-WP-053 remain `Planned`, not active, and not authorized**,
+  and **`DEC-S-135` is unchanged.** **No risk was added** — the risk register stays
+  at **98**, with **no `RISK-099`**; **no `DEC-S-137` and no `ADR-0007` exists.** **Visual values 0 · visual source sets 0 · visual Candidate families
+  0 · VF-1 … VF-9 `Proposed` · Stable No · claims None · conformance None ·
+  publication `Private Development`.** **Point-in-time records were preserved**, not
+  rewritten: dated review, decision-entry, ADR-boundary, execution-note and
+  event-time changelog statements remain as written. Six findings were recorded in
+  the
+  [Post-Candidate Development Roadmap](docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md)
+  (`F-021-01` … `F-021-06`); the bounded rework **resolved `F-021-01` and the live
+  half of `F-021-05`**, **preserved the dated non-normative half of `F-021-05`**,
+  and left **`F-021-02`, `F-021-03`, `F-021-04` and `F-021-06` unchanged**. **No new
+  finding and no new risk was created.**
+  **`EXECUTION COMPLETE ≠ WORK PACKAGE CLOSED` · `REVIEW PASS ≠ INTEGRATION` ·
+  `INTEGRATION ≠ CLOSURE`** — the object is **prepared and uncommitted**, becomes
+  normative only at the Human-Maintainer exact integration commit, and **closure is
+  a separate Human-Maintainer act that has not occurred.**
+  (CDS-WP-021)
 - **`DEC-S-132 … DEC-S-135` and `ADR-0005` reconciled to their effective state.**
   The condition those entries themselves stated — the Human-Maintainer exact
   integration commit of the exact reviewed Step-9 Working Tree object, following a

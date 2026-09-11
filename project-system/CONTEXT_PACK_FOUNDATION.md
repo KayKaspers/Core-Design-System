@@ -84,10 +84,36 @@ with result `DECISION_REQUIRED`**, and **integrated** by the Human-Maintainer co
 `42a568d823de3388e45af62967546f13ad67eff6`. **Its closure was recorded in the
 working object of the CDS-WP-020 closure and routing pass and became effective at
 that object's Human-Maintainer integration commit
-`3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.** **No work package is currently authorized.** The **CDS
+`3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.** The **CDS
 Phase Transition Governance Package** (**DEC-S-127**) ran between CDS-WP-019 closure
 and the CDS-WP-020 authorization; it changed project-phase authority only and
 activated nothing.
+
+**CDS-WP-021 — Adaptive Layout and Responsive Foundation is the current authorized
+work package**: **`AUTHORIZED / ACTIVE FOR EXECUTION`** by a separate, explicit
+Human-Maintainer decision, **executed with result `COMPLETE WITH NOTES`**, and **not
+closed** — its working object is **prepared and uncommitted**. **Contract only.** It
+confirms the **Layer 3 / Layer 5 / Layer 6** ownership split — **`F-019-03`
+answered, CR-004 unchanged at Layer 5** — and records the spatial-context model, the
+**Adaptation Container**, the
+responsive-range obligations, the grid, container and content-width contracts, and
+the density and adaptation interaction. It creates **no** visual value, **no**
+identifier, **no** responsive-range name, **no** range count or threshold, **no**
+VF-4 technical root, and **no**
+source set; produces and admits **no** evidence; changes **no** maturity; and adds
+**no** risk. It first returned `DECISION_REQUIRED`; the Human Maintainer then
+resolved both escalations on **2026-09-06**. **`WP021-D1` is APPROVED** — the
+**Container-Relative Named-Range Foundation**: a declared **Adaptation Container**
+as the primary reference frame, **named discrete available-space ranges** as the
+Core Layer-3 vocabulary, continuous behaviour **permitted downstream but never Core
+range identity**, fixed-geometry channels governed by **their own geometry**, and
+**`SPATIAL CONTEXT ≠ THEME RESOLUTION CONTEXT`** — prepared as **`DEC-S-136`** with
+**`ADR-0006`**, both **`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET
+EFFECTIVE**. **`WP021-D2` is DEFERRED**: the **VF-4 technical root and Source Set
+identity stay OPEN**, and **no Decision and no ADR is created for it** — no
+`DEC-S-137`, no `ADR-0007`. **The effective registers stay at 135 decisions and
+5 ADRs**, and the risk register at **98**. **`CDS-WP-020A` and CDS-WP-022 …
+CDS-WP-053 remain `Planned`, not active, and not authorized.**
 
 CDS-WP-019 was **architecture only.** It defines how the visual foundation is
 structured, governed, represented, extended, validated, and consumed — nine visual
@@ -145,8 +171,9 @@ concrete machine-readable Visual Token Source and Value Authoring work is routed
 unchanged**, and gains no authoring authority; `CDS-WP-020A` gains no validation or
 conformance authority.
 
-**`CDS-WP-020A` and CDS-WP-021 … CDS-WP-053 are `Planned`, not active, and not
-authorized**; the single active forward roadmap is the
+**`CDS-WP-020A` and CDS-WP-022 … CDS-WP-053 are `Planned`, not active, and not
+authorized**; **CDS-WP-021 is authorized and active** — executed with result
+`COMPLETE WITH NOTES`, **not closed**. The single active forward roadmap is the
 [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
 
 ## Completed work packages
@@ -980,8 +1007,10 @@ Token Foundation** (contract only; **no visual value, no identifier**) is
 **`Completed`** — **executed with result `DECISION_REQUIRED`** and **integrated** by
 `42a568d823de3388e45af62967546f13ad67eff6`, with **closure effective at the
 Human-Maintainer commit `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`**.
-**No work package is currently authorized**, and **`CDS-WP-020A` and
-CDS-WP-021 … CDS-WP-053 are `Planned`, not active, and not authorized**, with work
+**CDS-WP-021 — Adaptive Layout and Responsive Foundation is the current authorized
+work package** — **`AUTHORIZED / ACTIVE FOR EXECUTION`**, **executed with result
+`DECISION_REQUIRED`**, **not closed** — and **`CDS-WP-020A` and
+CDS-WP-022 … CDS-WP-053 are `Planned`, not active, and not authorized**, with work
 on them not started. See the
 [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md),
 the

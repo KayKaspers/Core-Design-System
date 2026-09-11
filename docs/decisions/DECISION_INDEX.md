@@ -28,16 +28,31 @@ authorized work packages.
   integration adjudication — occurred on 2026-09-05 at commit
   `2cb244e889c1a6b5a278afb233995a0379b5d9ef`, which integrated the reviewed object.
   The **effective** register is therefore **DEC-S-001 … DEC-S-135 (135 decisions)**
-  and the **effective** ADR range is **ADR-0001 … ADR-0005 (5 ADRs)**. **No
-  decision beyond DEC-S-135 is effective and none is prepared, and no `DEC-S-136`
-  and no `ADR-0006` exists.** This section is the maintained current carrier; a
+  and the **effective** ADR range is **ADR-0001 … ADR-0005 (5 ADRs)**. This section
+  is the maintained current carrier; a
   statement inside an individual decision entry is point-in-time and is not edited
   when a later event occurs. **A review PASS is not a commit, and a Nova
   recommendation is not an approval** — effectivity followed from the commit, and
   no earlier wording conferred it.
+- **Prepared but NOT EFFECTIVE: `DEC-S-136` and
+  [ADR-0006](ADR-0006-ADAPTIVE_SPATIAL_CONTEXT_AND_NAMED_RANGE_ARCHITECTURE.md).**
+  Both were approved by the Human Maintainer on **2026-09-06** as the resolution of
+  **`WP021-D1`** and prepared under that authorization by **CDS-WP-021**, which is
+  `AUTHORIZED / ACTIVE FOR EXECUTION` and **not closed**. Both carry
+  **`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET EFFECTIVE** and are
+  **uncommitted executor output that changes no authoritative CDS state**. They
+  become `Accepted` and effective **only** at the Human-Maintainer exact
+  integration commit of the exact reviewed Working Tree object, following a Fresh
+  Independent Review and Nova integration adjudication. **The effective register is
+  unchanged at DEC-S-001 … DEC-S-135 (135) and ADR-0001 … ADR-0005 (5)**; the
+  **prepared** target is **136 decisions and 6 ADRs**. **`PREPARED ≠ EFFECTIVE`**,
+  and **`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION`**. **No decision
+  beyond DEC-S-136 and no ADR beyond ADR-0006 exists or is prepared — no
+  `DEC-S-137`, no `ADR-0007`.** **`WP021-D2` is deferred by the Human Maintainer
+  and has no Decision and no ADR.**
 - Decision record format: index entries, plus ADR files where a decision warrants an
   Architecture Decision Record. **Effective ADR range: ADR-0001 … ADR-0005
-  (5 ADRs).**
+  (5 ADRs)**; **ADR-0006 is prepared and not yet accepted.**
 - [ADR-0001 — Machine-Readable Token Source Format](ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)
   (accepted upon Human-Maintainer commit following Nova approval).
 - [ADR-0002 — Deterministic JSON Serialization](ADR-0002-DETERMINISTIC_JSON_SERIALIZATION.md)
@@ -54,6 +69,12 @@ authorized work packages.
   `2cb244e889c1a6b5a278afb233995a0379b5d9ef` following Nova approval). It records
   the rationale for **DEC-S-132 only**; **DEC-S-133, DEC-S-134 and DEC-S-135 are
   deliberately not architecture dependencies of it.**
+- [ADR-0006 — Adaptive Spatial Context and Named-Range Architecture](ADR-0006-ADAPTIVE_SPATIAL_CONTEXT_AND_NAMED_RANGE_ARCHITECTURE.md)
+  — **`PROPOSED / AUTHORIZED FOR INTEGRATION`, NOT YET ACCEPTED, NOT YET
+  EFFECTIVE.** It records the rationale for **DEC-S-136 only**; **DEC-S-132,
+  DEC-S-133 and DEC-S-135 are deliberately not architecture dependencies of it**,
+  and **`WP021-D2` is outside it.** It becomes `Accepted` only upon the
+  Human-Maintainer exact integration commit following Nova approval.
 
 ## Decision types
 
@@ -77,6 +98,7 @@ authorized work packages.
 | Phase transition decision | DEC-S-127 | — (CDS Phase Transition Governance Package) | The phase established by DEC-S-062 completed its operating purpose; for current and future state the project phase is `Post-Candidate Foundation & Design-System Enablement`. Prospective, partial supersession of the phase designation only — no maturity, no evidence, no activation, and no authority is granted. |
 | Visual token representation, evaluation authority and source identity decision | DEC-S-128 … DEC-S-131 | CDS-WP-020 (Decision Integration Pass) | One canonical `srgb` colour representation with perceptual spaces admitted as derivation only; WCAG 2.2 as the contrast evaluation authority with full-precision comparison and additional methods informational only; an explicit, minimal, closed CDS `$type` admission profile with explicit own typing; and the Source Set as the independently evaluable unit to which maturity binds, with aggregation conferring nothing (ADR-0004 for DEC-S-128, DEC-S-130, DEC-S-131). **Effective at the Human-Maintainer integration commit `42a568d823de3388e45af62967546f13ad67eff6`.** They select **no** value, create **no** identifier, and grant **no** maturity. |
 | Visual identifier, scale ownership, role admission and theme sequencing decision | DEC-S-132 … DEC-S-135 | — (CDS Step-9 Decision Integration Pass) | A family-rooted visual identifier grammar with a declared `qualifier` position, the layer kept out of every token path, two separate identity spaces, and the concrete source-set root identities; per-family ownership of every ordered scale under the common ST-1 … ST-7 contract with no universal cross-family base and `SCALE TOPOLOGY ≠ SCALE VALUES`; a cross-consumer role admission rule with the concrete vocabulary left open; and the rule that no semantic role carries a default alias before CDS-WP-022 decides the theme mechanism (ADR-0005 for DEC-S-132 only). **Effective at the Human-Maintainer integration commit `2cb244e889c1a6b5a278afb233995a0379b5d9ef`.** They select **no** value, create **no** token identifier, role identifier or source set, and grant **no** maturity. |
+| Adaptive spatial context and responsive architecture decision | DEC-S-136 | CDS-WP-021 | The declared **Adaptation Container** as the primary responsive Layer-3 reference frame — technology-neutral, never a device class or viewport identity, and satisfiable by a root or application context; **named discrete available-space ranges** as the Core Layer-3 response vocabulary, with `RANGE ≠ BEHAVIOUR`; continuous transformation **permitted downstream where separately authorized** but **not Core range identity**, requiring no new `$type` and altering DEC-S-130 in no way; fixed-geometry channels governed by **their own channel geometry** rather than forced responsive ranges; and **`SPATIAL CONTEXT ≠ THEME RESOLUTION CONTEXT`**, with any composition reserved to CDS-WP-022 (ADR-0006 for DEC-S-136 only). **`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET EFFECTIVE.** It selects **no** value, creates **no** range name, identifier, VF-4 root or source set, defers **`WP021-D2`**, and grants **no** maturity. |
 
 None of these types is an implementation decision. Logical architecture decisions
 define structure, responsibility, and flow — they select no technology, format,
@@ -5686,3 +5708,209 @@ claim, no conformance, no Product Profile, no pilot, no licence, no release, no
 tag, and no publication authority, and **it activates no work package**.
 **VF-1 … VF-9 stay `Proposed`; visual values stay 0; visual source sets stay 0;
 Stable stays `No`.**
+
+---
+
+## DEC-S-136 — Adaptive Spatial Context and Named-Range Architecture
+
+- **Status:** **`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET EFFECTIVE.**
+  Approved by the Human Maintainer on 2026-09-06 and prepared under that
+  authorization. **This entry is uncommitted executor output and changes no
+  authoritative CDS state.** It becomes `Accepted` and effective **only** at the
+  Human-Maintainer exact integration commit of the exact reviewed Working Tree
+  object, following a Fresh Independent Review and Nova integration adjudication.
+  **A review PASS is not a commit.**
+- **Date:** 2026-09-06
+- **Type:** Adaptive spatial context and responsive architecture decision
+- **Work package:** **CDS-WP-021 — Adaptive Layout and Responsive Foundation**,
+  which is `AUTHORIZED / ACTIVE FOR EXECUTION` and **not closed**. This decision
+  authorizes **no** further work package.
+- **Human-Maintainer authorization:** 2026-09-06, resolving **`WP021-D1`**, the
+  escalation CDS-WP-021 raised when it returned `DECISION_REQUIRED`
+- **Architecture record:**
+  [ADR-0006](ADR-0006-ADAPTIVE_SPATIAL_CONTEXT_AND_NAMED_RANGE_ARCHITECTURE.md),
+  which covers **DEC-S-136 only**. **DEC-S-132, DEC-S-133 and DEC-S-135 are
+  deliberately not architecture dependencies of it**, and **`WP021-D2` is outside
+  it.**
+
+### Decision
+
+1. **The primary adaptive reference frame for responsive Layer-3 classification is
+   a declared Adaptation Container.** An **Adaptation Container** is a
+   **technology-neutral spatial reference boundary** whose available space may be
+   classified by the responsive foundation.
+
+2. **An Adaptation Container is not** a CSS container query, a DOM construct, a
+   framework component, a device class, a viewport identity, a product, a screen
+   type, or a Layer-5 pattern. **It is a declared boundary, never an inferred one.**
+
+3. **A root or application context may serve as the declared Adaptation
+   Container.** Doing so creates **no** viewport or device identity: what is
+   declared is a boundary whose available space is classified, not the device that
+   produced it. **`viewport`, `desktop`, `tablet`, `mobile`, `phone` and `monitor`
+   are not CDS Core responsive identifiers**, and this decision creates none of
+   them.
+
+4. **The Core Layer-3 response vocabulary is named discrete available-space
+   ranges.** A **Responsive Range** remains **a named span of available space**
+   (**RR-1**, unchanged).
+
+5. **Range identity is semantic to spatial classification** and is
+   **technology-neutral, product-neutral, device-neutral, platform-neutral, and
+   independent of Layer-5 behaviour.**
+
+6. **Binding invariant: `RANGE ≠ BEHAVIOUR`.** A range names *where you are*; it
+   never names *what happens*. A construct that states what happens has left
+   Layer 3.
+
+7. **Continuous transformation and interpolation are permitted downstream where
+   separately authorized** — at Layer 5 as pattern behaviour, or in a channel or
+   runtime adapter. **They are not the Core Responsive Range identity model, and
+   CDS-WP-021 neither selects nor implements them.**
+
+8. **Continuous behaviour is not prohibited, and its mathematical representation is
+   not defined here.** **This decision requires no new `$type` and alters
+   DEC-S-130 in no way.** **The closed `color` / `dimension` / `number` admission
+   profile is not the reason for clause 7**: it is a fact about the current profile,
+   not a proof that continuous behaviour is architecturally impossible. The reason
+   is that **Core identity needs a name to bind obligations to**, which a relation
+   does not supply.
+
+9. **Binding invariant: `CORE RANGE IDENTITY ≠ DOWNSTREAM RESPONSE BEHAVIOUR`.**
+   Discrete identity and continuous behaviour are **complementary layers, not
+   competing options.**
+
+10. **Layer ownership is confirmed and unchanged.** **Layer 3** owns the Adaptation
+    Container concept, the spatial context structure, the named range vocabulary,
+    the range obligations, and the grid, container and content-width structural
+    relationships. **Layer 5** owns what changes, when a pattern changes behaviour,
+    what a layout becomes, component and pattern composition, and continuous or
+    discrete response behaviour where authorized. **Layer 6** owns channel-imposed
+    geometry, fixed-page and slide geometry, export and pagination constraints, and
+    host-controlled geometry.
+
+11. **`CR-004` remains registered at Layer 5. No ownership transfers**, and no
+    traceability row is re-mapped. **`FOUNDATION VOCABULARY ≠ PATTERN STRATEGY` ·
+    `CONTEXT ≠ PATTERN` · `FOUNDATION ≠ COMPOSITION`.**
+
+12. **Fixed-geometry channels do not receive forced responsive-range semantics.**
+    For PDF, reports, print, presentations and other fixed-geometry contexts, **the
+    channel's geometry is authoritative for that channel.** The broader spatial
+    context model may describe the geometric context, while **a Responsive Range
+    remains one form of spatial classification and not the universal form.**
+    **RR-6 is satisfied because the reference frame generalizes, not because the
+    range construct does.**
+
+13. **A Spatial Context is not automatically a Theme Resolution Context.**
+    **`SPATIAL CONTEXT ≠ THEME RESOLUTION CONTEXT`**, and
+    **`THEME = RESOLUTION CONTEXT`** and **`A THEME RE-BINDS; IT NEVER REDEFINES`**
+    (T-1, VF-I-9) are preserved unchanged.
+
+14. **CDS-WP-021 does not decide whether or how a Spatial Context and a Theme
+    Resolution Context compose.** That mapping belongs to **CDS-WP-022**, if and
+    when CDS-WP-022 is separately authorized. **This decision neither prejudges nor
+    forecloses it**, and it is a **boundary statement, not a theme decision.**
+
+15. **`DEC-S-135` is unchanged.** No semantic visual role carries a default alias
+    before CDS-WP-022 decides the Theme and Context Mechanism; CDS-WP-022 precedes
+    context-sensitive value selection; context-independent work remains possible.
+    **CDS-WP-021 does not satisfy, replace, or supersede CDS-WP-022.**
+
+16. **This decision selects no value.** No range name, no number of ranges, no
+    threshold, no breakpoint magnitude, no container magnitude, no range boundary
+    value, no spacing value, no grid value, no density value, no target-size
+    magnitude, and no device category. **No concrete range set may be inferred from
+    it**, and it contains no illustrative name that could become a de facto
+    identifier.
+
+17. **This decision creates no identifier and no source.** No VF-4 technical root,
+    no `sourceSetId`, no `sourceRevision`, no Source Set, no token source file, no
+    manifest, no resolver, no schema, no validator rule, no test, and no fixture.
+
+18. **`WP021-D2` is not decided here.** Whether **VF-4** acquires a technical token
+    root and a source-set identity is **deferred by the Human Maintainer**.
+    **DEC-S-132's root vocabulary stays closed at VF-1, VF-2, VF-3, VF-5 and
+    VF-6**, and **extending it by implication remains prohibited.**
+
+19. **No value prerequisite is satisfied by this decision.** **VP-3, VP-5, VP-6 and
+    VP-7 remain UNSATISFIED for every visual family**; **VP-4 remains UNSATISFIED
+    for VF-4** because no VF-4 identifier grammar root exists; and the **Step-9
+    VP-4 state for VF-1, VF-2, VF-3, VF-5 and VF-6 is unchanged.** **Establishing
+    an architecture is not completing a topology, and no visual value may be
+    selected.**
+
+20. **This decision authorizes no work package and grants no maturity.**
+
+### Rationale
+
+**RR-5** assigned the responsive mechanism to CDS-WP-021 and left it open. CDS-WP-021
+executed, established the derivable Layer-3 contract, and reported that **existing
+authority excluded none of the four admissible mechanisms** — discrete, continuous,
+container-relative, or hybrid. Selecting one was therefore a **new normative choice**
+that only the Human Maintainer could make, and the work package correctly returned
+`DECISION_REQUIRED` rather than deciding it.
+
+**The container frame is chosen because the viewport frame is too narrow to be the
+Core frame.** It has no referent in paginated and slide channels, which **RR-6**
+requires the model to survive; it is global where the hard problem — dense
+operational data — is local; and it invites exactly the device-derived identifiers
+**RR-2** forbids. A declared container is strictly more expressive and excludes
+nothing: **the root context may be the container.**
+
+**Named discrete ranges are chosen because a foundation needs a term, not a
+transition.** A named span is declarable rather than inferred, so a change to the
+set is detectable; each name is a foundation identifier that **RR-2** and
+**N-2 … N-6** can police; the vocabulary is reviewable by a person; and a rename is
+an identity event with a migration reference rather than a silent redefinition. A
+continuous relation supplies none of these.
+
+**Clause 8 exists because the easiest wrong inference here is a governance one.**
+Reading the closed `$type` profile as proof that continuous behaviour is impossible
+would convert a **current, governed, extendable profile boundary** into a permanent
+architectural verdict — the same category error **RISK-074** records for the
+validator's bounded V2 type set. The profile is not the reason, and the decision
+says so explicitly.
+
+**Clause 13 exists because the alternative decides something silently.** Read
+mechanically, the Theme Architecture's *"a context that varies within a channel is a
+theme"* would make a responsive range a theme, and CDS would thereby have decided
+that the resolver composes at least two context dimensions — a mechanism decision —
+while formally leaving the mechanism open to **CDS-WP-022**. That is the
+**form-versus-substance** failure **DEC-S-135** was written to prevent, and **TC-6**
+requires the semantic layer to presuppose no context set. Keeping them separate
+costs nothing and forecloses nothing.
+
+**Clauses 16 to 19 are the conservative consequence and are deliberate.** Deciding
+*what kind of vocabulary* Layer 3 uses is not deciding *what the vocabulary is*, and
+reporting a value prerequisite as satisfied because the architecture is settled would
+be exactly the overstatement the value selection rules exist to prevent. The gates
+**fail closed**.
+
+### Consequences
+
+- The
+  [Adaptive Layout and Responsive Foundation](../architecture/ADAPTIVE_LAYOUT_AND_RESPONSIVE_FOUNDATION.md)
+  records the architecture and its obligations; **LO, CX, AR, GC and DA are applied,
+  not replaced**.
+- The
+  [Visual Foundation Spatial Architecture](../architecture/VISUAL_FOUNDATION_SPATIAL_ARCHITECTURE.md)
+  records the **RR-5 disposition**; **RR-1 … RR-6 are unchanged**.
+- The
+  [Visual Foundation Architecture](../architecture/VISUAL_FOUNDATION_ARCHITECTURE.md)
+  records deferred decision 4 as **partly closed**, with **`WP021-D2` deferred**.
+- **`WP021-D1` is answered.** **`WP021-D2` remains deferred**, and **no Decision and
+  no ADR is created for it.**
+- **No schema, validator, test, or fixture is changed**, and the CDS-WP-024
+  detection requirements stay requirements.
+
+### Boundary
+
+This decision fixes an **architecture and a set of invariants**, not a vocabulary
+and not an authorization. It selects no value, creates no range name, no identifier,
+no root, no Source Set, no `sourceRevision`, no theme, no pattern, and no Product
+Profile. It awards no maturity, no Candidate, no Stable, no evidence, no admission,
+no claim, no conformance, no pilot, no licence, no release, no tag, and no
+publication authority, and **it activates no work package** — **`CDS-WP-020A`,
+CDS-WP-022, CDS-WP-023 and CDS-WP-024 remain `Planned`, not active, and not
+authorized.** **VF-1 … VF-9 stay `Proposed`; visual values stay 0; visual source
+sets stay 0; Stable stays `No`.**

@@ -31,14 +31,42 @@ release, or publication authority, and activates no work package.
 
 ## Work package status
 
-- **Current work package: none.** **CDS-WP-020 — Reference and Semantic Token
+- **Current work package: CDS-WP-021 — Adaptive Layout and Responsive Foundation.**
+  **`AUTHORIZED / ACTIVE FOR EXECUTION`** by a separate, explicit Human-Maintainer
+  decision; **executed with result `COMPLETE WITH NOTES`**; **not closed**; working
+  object **prepared and uncommitted**. **Contract only.** It confirms the
+  **Layer 3 / Layer 5 / Layer 6** ownership split — **`F-019-03` answered, and
+  CR-004 unchanged at Layer 5** — and records the spatial-context model, the
+  responsive-range obligations, the grid, container and content-width contracts, and
+  the density and adaptation interaction, in the
+  [Adaptive Layout and Responsive Foundation](../docs/architecture/ADAPTIVE_LAYOUT_AND_RESPONSIVE_FOUNDATION.md).
+  It created **no** visual value, **no** identifier, **no** responsive-range name,
+  **no** VF-4 technical root, **no** source set, and **no** token source file,
+  schema, validator rule, test, component, brand, or Product Profile; produced and
+  admitted **no** evidence; changed **no** maturity; added **no** risk entry;
+  **renamed no phase**; **registered no capability**; and **activated no
+  work package**. **`WP021-D1` is APPROVED by the Human Maintainer** — the
+  **Container-Relative Named-Range Foundation**: a declared **Adaptation Container**
+  as primary reference frame, **named discrete available-space ranges** as Core
+  vocabulary, continuous behaviour **permitted downstream but not Core range
+  identity**, fixed-geometry channels governed by **their own geometry**, and
+  **`SPATIAL CONTEXT ≠ THEME RESOLUTION CONTEXT`** — prepared as **`DEC-S-136`**
+  with **`ADR-0006`**, both **`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET
+  EFFECTIVE**. **`WP021-D2` is DEFERRED**: the **VF-4 technical root and Source Set
+  identity stay OPEN**, and **no Decision and no ADR is created for it.**
+  **`DEC-S-135` is unchanged**, **context-sensitive
+  value selection is not authorized**, and **`CDS-WP-020A` and CDS-WP-022 …
+  CDS-WP-053 remain `Planned`, not active, and not authorized.**
+- **Previous work package.** **CDS-WP-020 — Reference and Semantic Token
   Foundation** was authorized separately by the Human Maintainer on 2026-08-26,
   **executed with result `DECISION_REQUIRED`**, and its reviewed object was
   **integrated** by the Human-Maintainer commit
   `42a568d823de3388e45af62967546f13ad67eff6`. It is recorded as **`Completed`**;
   **closure was recorded in the CDS-WP-020 closure and routing object and became
   effective at that object's Human-Maintainer integration commit
-  `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.** **No successor work package is active or authorized.** **Contract
+  `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.** **CDS-WP-020 activated no
+  successor**; **CDS-WP-021** was authorized by a separate, later, explicit
+  Human-Maintainer decision. **Contract
   only.** It defines what a
   visual **reference primitive** and a visual **semantic role** are, what each must
   declare, how a role aliases a primitive, and the discipline any future value must
@@ -102,11 +130,14 @@ release, or publication authority, and activates no work package.
   CDS-WP-016 as closed, registered CDS-WP-018 … CDS-WP-053 as `Planned` and **not
   active**, and produced the single active
   [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
-- **Next planned work package: CDS-WP-021 — Adaptive Layout and Responsive
-  Foundation** — **`Planned`, not active, not authorized, work not started.**
+- **Next planned work packages: `CDS-WP-020A` and CDS-WP-022 — Theme and
+  Environmental Presentation Model** — both **`Planned`, not active, not authorized,
+  work not started**, as are CDS-WP-023 … CDS-WP-053.
   **The effective `DEC-S-135` rules that CDS-WP-022 precedes context-sensitive value
   selection and makes it the recommended and sequenced Step-10 candidate**;
-  **SEQUENCED NEXT ≠ AUTHORIZED**, and it authorizes nothing.
+  **SEQUENCED NEXT ≠ AUTHORIZED**, and it authorizes nothing. **The Human Maintainer
+  authorized CDS-WP-021 instead**, by a separate and explicit act that activated no
+  other work package — **a recommendation is not an authorization.**
 - Earlier work package: **CDS-WP-016 — Semantic Status Foundation
   Independent Evidence Review and Candidate Gate.** Its review work was
   **executed**: Independent Review **PASS**, Candidate Recommendation **GO**.
