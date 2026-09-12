@@ -96,20 +96,66 @@ approved.
   risk; renamed no phase; registered no capability; and activated no later work
   package. Closure became effective with the Human-Maintainer commit
   `538fbccbf6f554de3b872e9fb75a70d13318feb6`.
-- Current work package: **NONE — no work package is currently authorized after
-  CDS-WP-021 closure.** **`CLOSED ≠ SUCCESSOR AUTHORIZED`**, **`DEPENDENCY SATISFIED
-  ≠ AUTHORITY GRANTED`**, and **`SEQUENCED NEXT ≠ AUTHORIZED`**; the next one begins
-  only on an explicit Nova prompt **and** a separate Human-Maintainer authorization.
-- Most recently executed work package: **CDS-WP-021 — Adaptive Layout and Responsive
-  Foundation** — **`Completed`**. Authorized for execution by a separate, explicit
-  Human-Maintainer
+- **Current work package: `CDS-WP-022` — Theme and Environmental Presentation
+  Model.** **`AUTHORIZED` / `ACTIVE FOR EXECUTION`** by a separate, explicit
+  Human-Maintainer act taken after the CDS-WP-021 closure — **`CLOSED ≠ SUCCESSOR
+  AUTHORIZED`**, **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`**, and **`SEQUENCED
+  NEXT ≠ AUTHORIZED`**: the `DEC-S-135` recommendation that named it authorized
+  nothing. **Contract only**, and **executed with result `COMPLETE WITH NOTES`** after
+  first returning `DECISION_REQUIRED`: it
+  defines what a **Theme Resolution Context** is (**CA-1 … CA-13**), the **theme
+  resolution mechanism** (**TM-1 … TM-12**), how a context is
+  identified without becoming a path segment (**CI-1 … CI-6**), how a **requested**
+  context enters resolution (**CS-1 … CS-11**), what CDS may and may not do with an
+  environmental input (**CE-1 … CE-5**), where resolution **fails closed**
+  (**CF-1 … CF-11**), and how a context composes against channel, **Spatial
+  Context**, Product Profile, role identity, status, Source Set and token-flow layer
+  (**CB-1 … CB-7**) — and it **escalates five normative choices** as the
+  execution-local report keys **`WP022-D1`** the theme mechanism, **`WP022-D2`** the
+  initial supported context set, **`WP022-D3`** the forced-colours disposition,
+  **`WP022-D4`** context selection and environmental precedence, and **`WP022-D5`**
+  default / fallback / missing-context semantics. **`DERIVE ≠ DECLARE`**, and **an
+  authorized work package is not an executor authorized to invent normative choices.**
+  **The Human Maintainer decided all five on 2026-09-12**, and a bounded
+  rework applied them: the **execution result is now `COMPLETE WITH NOTES`**, and the
+  initial `DECISION_REQUIRED` **stands as execution history**. **`WP022-D1`** is the
+  **Resolver-Modifier Context** over the existing Source-Set graph, with the
+  **Resolver / Composition revision** and the **Theme Resolution Context** recorded as
+  **exact evidence inputs** of evidence that stays bound to (`sourceSetId`,
+  `sourceRevision`), **no per-context Source Set**, **no second maturity unit**, and
+  **Theme and Spatial Context orthogonal** — recorded as **`DEC-S-137`** with
+  **`ADR-0007`** (covering `DEC-S-137` **only**). **`WP022-D2` … `WP022-D5`** are
+  **`Light` and `Dark`** as equal peers with **no default**, **forced colours as an
+  environmental accessibility condition and not a Core context**, **explicit viewer
+  choice over inferred environment preference** with mandatory platform accessibility
+  conditions **outside** Theme precedence, and **no default or fallback Theme with
+  fail-closed resolution** and **`Not Applicable`** where Theme resolution genuinely
+  does not apply — recorded as **`DEC-S-138`**, which has **no ADR**. **All three are
+  `PREPARED / HUMAN-MAINTAINER APPROVED / NOT EFFECTIVE` until, and effective from, the
+  Human-Maintainer exact-object integration commit of the reviewed CDS-WP-022
+  object** — **`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION`**; **136
+  decisions and 6 ADRs until it, 138 and 7 from it**, with the risk register at **98**
+  throughout — **no `RISK-099`, no `DEC-S-139`, no `ADR-0008`**. **Supported Theme
+  Resolution Contexts: 0 before that commit, 2 from it, with no default**, and
+  **`Light` and `Dark` are human-readable architectural names, not machine-readable
+  identifiers.** **`DEC-S-131`, `DEC-S-132`, `DEC-S-135` and `DEC-S-136` are unchanged
+  in byte and in substance**; from the effectivity of the two new Decisions the
+  **DEC-S-135 theme-mechanism sequencing condition is satisfied**, and **`THEME GATE
+  SATISFIED ≠ VALUE SELECTION AUTHORIZED`** and **`THEME GATE SATISFIED ≠
+  CDS-WP-020A AUTHORIZED`**. **CDS-WP-022 is not closed**, and **closure is a separate
+  Human-Maintainer act.**
+  The next one begins only on an explicit Nova prompt **and** a separate
+  Human-Maintainer authorization.
+- Preceding work package: **CDS-WP-021 — Adaptive Layout and Responsive
+  Foundation** — **`Completed` / `Closed`**. Authorized for execution by a separate,
+  explicit Human-Maintainer
   decision; **executed with result `COMPLETE WITH NOTES`**, unchanged by closure and
   never rewritten to `COMPLETE`; **integrated** by the
   Human-Maintainer exact-object commit
   `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` (2026-09-11); and **closed by a
-  further, separate Human-Maintainer authorization whose closure becomes effective
-  only at the Human-Maintainer exact-object integration commit of this independently
-  reviewed closure object** — **`CLOSURE OBJECT PREPARED ≠ CLOSURE EFFECTIVE`**.
+  further, separate Human-Maintainer authorization, effective at the Human-Maintainer
+  exact-object integration commit `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`** —
+  **`CLOSURE OBJECT PREPARED ≠ CLOSURE EFFECTIVE`** held until that commit.
   **Contract only:** it confirms the
   **Layer 3 / Layer 5 / Layer 6** ownership split — **`F-019-03` answered, CR-004
   unchanged at Layer 5** — and records the spatial-context model (CX-1 … CX-9), the
@@ -130,8 +176,9 @@ approved.
   **effective registers are 136 and 6**. **`EFFECTIVE ≠ CLOSED`**, and effectivity
   selected no value and created no identifier.
   **`WP021-D2` is DEFERRED** — **VF-4 technical root OPEN, VF-4 Source Set identity
-  OPEN**, and **no Decision and no ADR is created for it**: no `DEC-S-137`, no
-  `ADR-0007`. **Closure does not resolve it** — **`DEFERRED OPEN QUESTION ≠
+  OPEN**, and **no Decision and no ADR exists for it** — **the prepared `DEC-S-137`
+  and `ADR-0007` record `WP022-D1`, not `WP021-D2`, and are unrelated to it**.
+  **Closure does not resolve it** — **`DEFERRED OPEN QUESTION ≠
   INCOMPLETE WORK PACKAGE`** — and closure satisfies no value prerequisite, admits
   no evidence, changes no maturity, and adds no Decision, ADR, or risk.
   **`CDS-WP-020A` and CDS-WP-022 … CDS-WP-053
@@ -210,8 +257,9 @@ approved.
 | **CDS-WP-019** | **Closed** — Core Visual Foundation Architecture (**architecture only; no visual value**; no token source, component, brand, profile, evidence, maturity change, Decision, ADR, risk, phase rename, or capability registration), integrated by the Human-Maintainer commit `538fbccbf6f554de3b872e9fb75a70d13318feb6` |
 | **CDS-WP-020** | **Closed** — executed with result `DECISION_REQUIRED`; Reference and Semantic Token Foundation (**contract only; no visual value, no identifier**; no token source, schema, validator rule, test, component, brand, profile, evidence, maturity change, risk, phase rename, or capability registration), integrated by the Human-Maintainer commit `42a568d823de3388e45af62967546f13ad67eff6`. **Closure was recorded in the closure and routing object and became effective at the Human-Maintainer commit `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.** **`AE1-CDS-WP016-SEMSTATUS-004` was not transferred to it.** |
 | **`CDS-WP-020A`** | **PLANNED / NOT ACTIVE / NOT AUTHORIZED** — Visual Token Source Authoring and Source Set Realization; the `FR-N-03` authoring destination; **inserted** identifier, nothing renumbered; owns authoring, never validation or conformance |
-| **CDS-WP-021** | **Completed** — Adaptive Layout and Responsive Foundation; **executed with result `COMPLETE WITH NOTES`**, **integrated** at `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`, and **closed effective only at the Human-Maintainer exact-object integration commit of this independently reviewed closure object**. **Contract only; no visual value, no identifier, no range name or count, no VF-4 technical root, no source set**; no token source, schema, validator rule, test, component, brand, profile, evidence, maturity change, risk, phase rename, or capability registration. **Layer 3 / Layer 5 / Layer 6 split CONFIRMED — `F-019-03` answered, CR-004 unchanged at Layer 5.** **`WP021-D1` APPROVED** — the Container-Relative Named-Range Foundation — recorded as **`DEC-S-136`** with **`ADR-0006`**, both **effective at that commit**. **`WP021-D2` DEFERRED** — VF-4 root and Source Set identity **OPEN**, with **no Decision and no ADR**; **closure resolves it in no way and authorizes no successor** |
-| **CDS-WP-022 … CDS-WP-053** | **PLANNED / NOT ACTIVE / NOT AUTHORIZED** — work not started |
+| **CDS-WP-021** | **Completed / Closed** — Adaptive Layout and Responsive Foundation; **executed with result `COMPLETE WITH NOTES`**, **integrated** at `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`, and **closed effective at the Human-Maintainer exact-object integration commit `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`**. **Contract only; no visual value, no identifier, no range name or count, no VF-4 technical root, no source set**; no token source, schema, validator rule, test, component, brand, profile, evidence, maturity change, risk, phase rename, or capability registration. **Layer 3 / Layer 5 / Layer 6 split CONFIRMED — `F-019-03` answered, CR-004 unchanged at Layer 5.** **`WP021-D1` APPROVED** — the Container-Relative Named-Range Foundation — recorded as **`DEC-S-136`** with **`ADR-0006`**, both **effective at that commit**. **`WP021-D2` DEFERRED** — VF-4 root and Source Set identity **OPEN**, with **no Decision and no ADR**; **closure resolves it in no way and authorizes no successor** |
+| **CDS-WP-022** | **`AUTHORIZED` / `ACTIVE FOR EXECUTION`** — Theme and Environmental Presentation Model; authorized by a **separate, explicit Human-Maintainer act** after the CDS-WP-021 closure, and **executed with result `COMPLETE WITH NOTES`** after first returning `DECISION_REQUIRED`. **Contract only; no theme instance, no machine-readable context identifier, no default alias, no visual value, no identifier, no role, no source set**; no schema, validator rule, test, fixture, component, brand, profile, evidence, maturity change, risk, phase rename, or capability registration. Derives **CA-1 … CA-13**, **CI-1 … CI-6**, **CS-1 … CS-11**, **CE-1 … CE-5**, **CF-1 … CF-11**, **CB-1 … CB-7**, and records the Human-Maintainer-decided mechanism as **TM-1 … TM-12**. **`WP022-D1` … `WP022-D5` decided 2026-09-12**, recorded as the **prepared** **`DEC-S-137`** (with **`ADR-0007`**, covering `DEC-S-137` only) and **`DEC-S-138`** — all **`PREPARED / HUMAN-MAINTAINER APPROVED / NOT EFFECTIVE` until, and effective from, the Human-Maintainer exact-object integration commit of the reviewed object**: **136/6 until it, 138/7 from it, risks 98 throughout**. **Supported Theme Resolution Contexts: 0 before that commit, 2 — `Light` and `Dark`, no default — from it.** **`DEC-S-131`, `DEC-S-132`, `DEC-S-135` and `DEC-S-136` untouched**; **TS-1 still binds**; **closure is a separate Human-Maintainer act and has not occurred** |
+| **CDS-WP-023 … CDS-WP-053** | **PLANNED / NOT ACTIVE / NOT AUTHORIZED** — work not started |
 
 **F-001 lifecycle-metadata resolution (Human Maintainer, 2026-08-19).** The five
 `AE1-CDS-WP016-SEMSTATUS-004`-bound normative Foundation documents remain
@@ -1083,26 +1131,28 @@ been authorized for execution by a separate, later, explicit Human-Maintainer
 decision: **executed with result
 `COMPLETE WITH NOTES`**, **integrated** at
 `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`, and **closed by a further, separate
-Human-Maintainer authorization whose closure becomes effective only at the
-Human-Maintainer exact-object integration commit of this independently reviewed
-closure object**. **`WP021-D1` is
+Human-Maintainer authorization, effective at the Human-Maintainer exact-object
+integration commit `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`**. **`WP021-D1` is
 APPROVED** and recorded
 as **`DEC-S-136`** with **`ADR-0006`** (**both effective at that integration
 commit**, which closure does not alter);
 **`WP021-D2` is
 DEFERRED**, with the **VF-4 technical root and Source Set identity OPEN** and **no
-Decision and no ADR** created for it. **No work package is currently authorized.**
+Decision and no ADR** created for it.
 
-**The next planned work packages are `CDS-WP-020A` — Visual Token Source Authoring
-and Source Set Realization** (the `FR-N-03` authoring destination) **and CDS-WP-022 —
-Theme and Environmental Presentation Model**. Both **remain inactive until separately
-authorized by the Human Maintainer**, and **the order between them is not decided**
-— **OD-7 is answered by the effective `DEC-S-135`**, which makes **CDS-WP-022** the
-recommended and sequenced Step-10 candidate. **The Human Maintainer authorized
-CDS-WP-021 instead, and that changed neither the recommendation nor any other work
-package's status** — **SEQUENCED NEXT ≠ AUTHORIZED**, a recommendation is not an
-authorization, and any further step begins only on an explicit Nova prompt and
-Human-Maintainer authorization.
+**`CDS-WP-022` — Theme and Environmental Presentation Model is the currently
+authorized work package**, **`AUTHORIZED` / `ACTIVE FOR EXECUTION`** by a separate,
+explicit Human-Maintainer act taken after that closure. **The next planned work
+package is `CDS-WP-020A` — Visual Token Source Authoring and Source Set
+Realization** (the `FR-N-03` authoring destination), which **remains inactive until
+separately authorized by the Human Maintainer**. **OD-7 is answered by the effective
+`DEC-S-135`**, which made **CDS-WP-022** the recommended and sequenced Step-10
+candidate. **The Human Maintainer authorized CDS-WP-021 first and CDS-WP-022
+afterwards, each by its own explicit act** — **SEQUENCED NEXT ≠ AUTHORIZED**, a
+recommendation is not an authorization, and any further step begins only on an
+explicit Nova prompt and Human-Maintainer authorization. **CDS-WP-022 decided no
+theme mechanism**, so the `DEC-S-135` gate is **not** cleared and **`CDS-WP-020A`
+gains no prerequisite**.
 
 ## Core Visual Foundation Architecture (CDS-WP-019)
 
@@ -1300,6 +1350,130 @@ Status source, revision, maturity, approval, or evidence package, and
 registered Layer-5 mapping is unchanged**, and **no test expectation was weakened
 and no fixture rewritten.**
 
+## Theme and Environmental Presentation Model (CDS-WP-022)
+
+**Contract only. No theme instance, machine-readable context identifier, default
+alias, or visual value exists in CDS, and CDS-WP-022 created none.** Verified by
+search at the baseline. Result: **`COMPLETE WITH NOTES`**, after first returning
+**`DECISION_REQUIRED`** — which **stands as execution history**. **Supported Theme
+Resolution Contexts: 0 until `DEC-S-138` is effective; `Light` and `Dark`, with no
+default, from then.**
+
+**Authority.** Authorized separately and explicitly by the Human Maintainer after
+the CDS-WP-021 closure. **`SEQUENCED NEXT ≠ AUTHORIZED`**, **`CLOSED ≠ SUCCESSOR
+AUTHORIZED`**, **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`** — the `DEC-S-135`
+recommendation that named CDS-WP-022 authorized nothing, and the authorization came
+from the Human Maintainer alone.
+
+### What it established
+
+- **The term.** A **Theme Resolution Context** is a **named presentation condition**
+  under which approved semantic roles resolve to approved primitives, with no change
+  to what a role means or whether it exists. **"Theme" and "Theme Resolution Context"
+  are the same construct.** **Environmental presentation** is the *category* of
+  condition arising from the circumstances of viewing — **a category name, not a
+  construct**.
+- **Context admission (CA-1 … CA-13).** A context is **declared, named and
+  enumerable**, admitted **only** by an explicit Human-Maintainer decision as an
+  **Elevated** change, must **vary within** a channel rather than **be** one, must
+  apply **across** products, carries **no meaning**, resolves every role or
+  **declares the limitation**, preserves **every** contrast obligation, pairing and
+  the focus indicator, resolves **deterministically and offline with provenance**, is
+  **never** a place to repair a Core gap, carries **its own non-transferring
+  evidence**, and **presupposes no context count**. **`CANDIDATE ≠ SUPPORTED
+  CONTEXT`**, and **CA-1 … CA-13 are satisfiable by zero contexts — which is the
+  current state.**
+- **Context identity (CI-1 … CI-6).** A context identifier lives in the resolution
+  declaration and **nowhere else**: never in a token path (T-8, N-6, TC-1), never in
+  a Source Set identifier (**DEC-S-132 clause 12** introduces **no `context` or
+  `theme` segment at any position**), and never as a token-flow layer. **No context
+  identifier was created, adopted, reserved, or recommended.**
+- **Selection and resolution entry (CS-1 … CS-11).** Resolution takes a **requested
+  context as an input**, and **CDS resolves for a context without performing the act
+  of selecting one** — it cannot, without naming technology or holding runtime state,
+  both prohibited. **`DETERMINISTIC RESOLUTION ≠ DETERMINISTIC SELECTION`**: **T-6**
+  conditions determinism on a context **already given**, so **CS-8's precedence rule
+  is a Human-Maintainer policy decision, not a derivation**.
+- **Environmental inputs (CE-1 … CE-5).** **No input kind is registered.** No CDS
+  artifact records, stores, transmits, or profiles an environmental input, and **an
+  environment is not a context** — it may cause one to be requested, and is never
+  itself the context.
+- **Fail-closed conditions (CF-1 … CF-11).** An unsupported requested context, an
+  unresolvable role, a broken obligation or pairing, a weakened focus role, a
+  non-deterministic or online resolution, a missing context provenance, a profile
+  reaching through a context, a context identifier in a path or Source Set
+  identifier, and a class-1 / class-2 conflict all **fail closed**. **`FAIL CLOSED ≠
+  DEGRADED OUTPUT`**, and **no automatic repair exists.**
+- **Composition boundaries (CB-1 … CB-7).** Channel, **Spatial Context**, Product
+  Profile, semantic role identity, Semantic Status, Source Set, and the five
+  token-flow layers. **`SPATIAL CONTEXT ≠ THEME RESOLUTION CONTEXT`** (**DEC-S-136**,
+  **CX-9**) and **CDS Core declares no composition** of the two — the conservative
+  reading CDS-WP-021 preserved, which **forecloses nothing**.
+- **The mechanism, decided.** A **Product Profile** mechanism and a **per-context
+  token path** are **excluded**; a **per-context Source Set** is **unavailable** under
+  **DEC-S-131 clause 5** and **DEC-S-132 clauses 10 and 12**; making the **Resolver a
+  second maturity unit** is excluded by `DEC-S-137` clauses 6 and 8. The Human
+  Maintainer chose the **Resolver-Modifier Context over the existing Source-Set
+  graph** — **`DEC-S-137`**, **TM-1 … TM-12** — **the only one of the five candidates
+  that amends nothing**. Context-specific evidence stays bound to (`sourceSetId`,
+  `sourceRevision`) and records the **Resolver / Composition revision** and the
+  **Theme Resolution Context** as **exact evidence inputs**: **`EVIDENCE INPUT ≠
+  MATURITY CARRIER`**, and **any change to either invalidates or supersedes the
+  affected evidence** (**TM-9**).
+- **Neutral / document — answered by existing authority, no new Decision required.**
+  Its named manifestations (documentation, paginated reports, slide decks) **are
+  channels**; **`SYMMETRY IS NOT EVIDENCE`**.
+- **A recorded machine-readable gap.** The committed resolver schema **cannot express
+  a context condition**, and the validator records **resolver modifier semantics as
+  not validated** (DEC-S-098). A **declared coverage boundary, not a DEC-S-034
+  conflict** — routed to **`CDS-WP-020A`** and **CDS-WP-024**.
+
+### The five decided questions
+
+**The `WP022-D*` keys were execution-local report keys, not governance identifiers.**
+CDS-WP-022 escalated them; **the Human Maintainer decided all five on 2026-09-12**,
+and a bounded rework applied them.
+
+| Key | Decision | Recorded as |
+| --- | --- | --- |
+| **`WP022-D1`** | **Resolver-Modifier Context** over the existing Source-Set graph; context evidence bound to (`sourceSetId`, `sourceRevision`) with the **Resolver / Composition revision** and **Theme Resolution Context** as exact inputs; **no per-context Source Set**; **no second maturity unit**; **Theme and Spatial Context orthogonal**, joint evaluation deferred | **`DEC-S-137`** · **`ADR-0007`** (covering `DEC-S-137` **only**) · **TM-1 … TM-12** |
+| **`WP022-D2`** | **`Light` and `Dark`**, equal peers, **neither the default**; **no machine-readable identifier authored** | **`DEC-S-138`** part A |
+| **`WP022-D3`** | **Platform condition; no CDS Core High-Contrast Theme at this stage**; binding independently of Theme selection; a future dedicated theme needs separate authorization | **`DEC-S-138`** part B |
+| **`WP022-D4`** | **Explicit viewer choice > inferred environment preference**; mandatory platform accessibility conditions **outside** Theme precedence and always binding; consumer or runtime owns sensing, persistence and transport; **no technology named** | **`DEC-S-138`** parts C and D · **CS-8 … CS-11** |
+| **`WP022-D5`** | **No default and no fallback Theme**; **fail closed** on missing, unsupported and unresolved conflict; **no silent substitution**; **`Not Applicable`** where genuinely inapplicable | **`DEC-S-138`** parts E, F and G · **CF-9**, **CF-11** |
+
+**Effectivity.** **All three records are `PREPARED / HUMAN-MAINTAINER APPROVED / NOT
+EFFECTIVE` until, and effective from, the Human-Maintainer exact-object integration
+commit of the reviewed CDS-WP-022 object** — **`APPROVED PROPOSITION ≠ EFFECTIVE
+REPOSITORY DECISION`**, and **a review PASS is not a commit**. **136 decisions and 6
+ADRs until it; 138 and 7 from it. Risks stay at 98 throughout — no `RISK-099`, no
+`DEC-S-139`, no `ADR-0008`.** **`ACCESSIBILITY OBLIGATION ⇏ CDS SHIPS A HIGH-CONTRAST
+THEME`**, and **`COULD` ≠ `MUST`** for CR-025 — admitting `Light` and `Dark` was a
+**priority decision, not new evidence**.
+
+### What CDS-WP-022 explicitly did not do### What CDS-WP-022 explicitly did not do
+
+Across both passes it created **no** theme instance, machine-readable context
+identifier, default alias, visual value, identifier, role, primitive, alias, source
+set, manifest, resolver instance, `sourceSetId`, `sourceRevision`, token source file,
+schema, validator rule, test, fixture, component, brand, or Product Profile —
+**`Light` and `Dark` are human-readable architectural names, not identifiers**. It
+produced and admitted **no** evidence — admitting two contexts adds **two evidence
+obligations and zero evidence**; changed **no** maturity — **VF-1 … VF-9 stay
+`Proposed`**, visual Candidate families stay **0**; accepted, closed, or re-scored
+**no** risk and added **no** risk entry — the register stays at **98** with **no
+`RISK-099`**; renamed **no** phase; registered **no** capability; made **no** claim;
+determined **no** conformance; and activated **no** work package. It **prepared** two
+Decisions and one ADR — **`DEC-S-137`**, **`DEC-S-138`** and **`ADR-0007`**, **not
+effective until the Human-Maintainer exact-object integration commit of the reviewed
+object** — and **created no `DEC-S-139` and no `ADR-0008`**. **`DEC-S-131`,
+`DEC-S-132`, `DEC-S-135` and `DEC-S-136` are untouched in byte and in substance**;
+**TS-1 still binds** because `DEC-S-138` part E creates no default alias; **`WP021-D2`
+stays deferred**; and **VP-3, VP-5, VP-6 and VP-7 stay `UNSATISFIED`** with **VP-4
+still `UNSATISFIED` for VF-4**. It touched **no** Semantic Status source, revision,
+maturity, approval, or evidence package, and **`AE1-CDS-WP016-SEMSTATUS-004` was not
+transferred to anything.** **CDS-WP-022 is not closed.**
+
 ## Related documents
 
 - [Concept and Scope](../docs/governance/CONCEPT_AND_SCOPE.md) — normative scope source
@@ -1307,6 +1481,7 @@ and no fixture rewritten.**
 - [Scope Boundary Matrix](../docs/governance/SCOPE_BOUNDARY_MATRIX.md)
 - [Foundation Context Pack](../project-system/CONTEXT_PACK_FOUNDATION.md)
 - [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md)
+- [Visual Foundation Theme Architecture](../docs/architecture/VISUAL_FOUNDATION_THEME_ARCHITECTURE.md) — VF-9; CDS-WP-019 and CDS-WP-022
 - [Project Charter](../docs/governance/PROJECT_CHARTER.md)
 - [Project Profile](../project-system/PROJECT_PROFILE.md)
 - [Work Packages](../project-system/WORK_PACKAGES.md)

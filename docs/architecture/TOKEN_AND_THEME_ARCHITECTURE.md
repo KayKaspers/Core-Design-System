@@ -186,9 +186,45 @@ Questions 1–3 and 7 are **CDS-WP-006 or later technology decisions**. Question
 can multiply faster than they can be governed (RISK-021). The architecture
 constrains direction; it does not by itself constrain volume.
 
+### Where questions 5 and 9 are now owned
+
+*(Added by **CDS-WP-022**, 2026-09-12, and reconciled by its bounded decision rework
+the same day. **Additive.** The nine questions above are **not rewritten**: each was
+accurate when written, and questions 1–4, 6, 7 and 8 are untouched. **No token flow,
+layer, alias rule, or prohibition in this document changes.**)*
+
+Questions **5** (*how theme selection is expressed, and whether a theme is a profile
+concern, a semantic concern, or both*) and **9** (*what token layering light and dark
+support imply*) are owned by the
+[Visual Foundation Theme Architecture](VISUAL_FOUNDATION_THEME_ARCHITECTURE.md),
+which is the single source for the theme concept. **One source owns the concept; this
+one cross-references it.**
+
+| Part of the question | State |
+| --- | --- |
+| *Is a theme a profile concern?* | **No.** A theme applies **across** products and a Product Profile applies to **one**, and **a Product Profile may never define a context**. This follows from the Theme Architecture's own classification and was already in force before CDS-WP-022. |
+| *How is theme selection expressed?* | **Resolution takes a requested context as an input**, and **CDS resolves for a context without performing the act of selecting one.** CDS constrains **precedence** and not mechanism: **an explicit viewer choice takes precedence over an inferred environment preference**, and **mandatory platform accessibility conditions sit outside Theme precedence and remain binding regardless of the selected Theme**. The consumer or runtime owns **sensing, persistence and transport**, and **no CSS feature, DOM construct, browser or OS API, JavaScript, framework, design tool, or product runtime is named** (**`DEC-S-138`** parts C and D). |
+| *What token layering does light/dark support imply?* | **Decided: none of its own.** Theme- and context-sensitive binding is represented through the existing **Resolver / Composition** architecture over the existing Source-Set graph — **no per-context Source Set, no context or theme segment in any identifier, and no second maturity unit**; context-specific evidence stays bound to (`sourceSetId`, `sourceRevision`) while recording the **Resolver / Composition revision** and the **Theme Resolution Context** as **exact evidence inputs** (**`DEC-S-137`**, **ADR-0007**). **The five layers are unaffected**, and **a per-context token path and a Product-Profile mechanism stay excluded.** |
+| *Which contexts, and is there a default?* | **`Light` and `Dark`**, as **equal peers with no default**; **forced colours and platform high contrast are an environmental accessibility condition, not a Core context**; and a **Theme-applicable resolution with no explicitly selected supported context fails closed** (**`DEC-S-138`** parts A, B, E and F). |
+
+**Effectivity.** **`DEC-S-137`, `DEC-S-138` and `ADR-0007` are `PREPARED /
+HUMAN-MAINTAINER APPROVED / NOT EFFECTIVE` until, and effective from, the
+Human-Maintainer exact-object integration commit of the reviewed CDS-WP-022 object.**
+**Until it the supported Theme Resolution Context set is empty; from it it is `Light`
+and `Dark`.** **`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION`.**
+
+**No theme instance, machine-readable context identifier, default alias, or value
+exists**, and **CDS-WP-022 created none** — `Light` and `Dark` are **human-readable
+architectural names, not identifiers**. **A theme remains a Resolution Context, never
+a sixth token-flow layer** — the five layers of this document are unchanged
+(DEC-S-024).
+
 ## Related documents
 
 - [Design System Architecture](DESIGN_SYSTEM_ARCHITECTURE.md)
 - [Source of Truth and Authority Model](SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md)
 - [Product Profile and Extension Model](PRODUCT_PROFILE_AND_EXTENSION_MODEL.md)
 - [Artifact Distribution and Channel Model](ARTIFACT_DISTRIBUTION_AND_CHANNEL_MODEL.md)
+- [Visual Foundation Theme Architecture](VISUAL_FOUNDATION_THEME_ARCHITECTURE.md) — the owning source for the theme concept (T-1 … T-10, TS-1 … TS-6, **TM-1 … TM-12**, CA, CI, CS, CE, CF, CB)
+- [ADR-0007 — Theme Resolution and Context-Evidence Architecture](../decisions/ADR-0007-THEME-RESOLUTION-AND-CONTEXT-EVIDENCE-ARCHITECTURE.md) — **DEC-S-137 only**; **prepared and not yet accepted**
+- [Token Reference, Resolution and Validation Model](TOKEN_REFERENCE_RESOLUTION_AND_VALIDATION_MODEL.md) — the resolver relationship and resolution order

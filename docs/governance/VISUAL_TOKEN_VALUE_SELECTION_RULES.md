@@ -31,6 +31,16 @@
   2026-08-27 and 2026-09-05 tables are **preserved as the record of the periods
   they governed**. **No value is selected**, and VP-1 … VP-7, VE-1 … VE-12,
   IG-1 … IG-10, VD-1 … VD-8, VA-1 … VA-10 and VS-1 … VS-6 are unchanged.
+- **Amended by:** CDS-WP-022 — Theme and Environmental Presentation Model,
+  2026-09-12, and by its bounded decision rework the same day — **two additive
+  current-state notes under VP-1 … VP-7, correcting the VP-7 justification only.** **The VP-7 verdict does not change — VP-7 remains
+  `UNSATISFIED`** — and **no prerequisite text is rewritten**: the 2026-08-27,
+  2026-09-05 and 2026-09-06 notes are **preserved as the record of the periods they
+  governed**. **No value is selected**, and VP-1 … VP-7, VE-1 … VE-12,
+  IG-1 … IG-10, VD-1 … VD-8, VA-1 … VA-10 and VS-1 … VS-6 are unchanged. Until the
+  Human-Maintainer exact-object integration commit of the reviewed CDS-WP-022
+  object, this amendment is **uncommitted executor output and changes no
+  authoritative CDS state**.
 - **Artifact class:** **1 — Normative human-readable source** (DEC-S-022)
 - **Status:** **Normative for how a visual value may be selected** — the discipline
   every future value must satisfy before it may enter CDS. It **selects no value**.
@@ -180,6 +190,89 @@ closed at those five families, `WP021-D2` is **deferred**, and **no VF-4 technic
 root or source-set identity exists**. **`DEC-S-136` decides an architecture, not a
 topology or a vocabulary, and satisfies no prerequisite.** **No visual value may be
 selected**, and **visual values and visual source sets remain 0.**
+
+### VP-7 current-state note — 2026-09-12
+
+*(**CDS-WP-022 — Theme and Environmental Presentation Model. Additive.** The dated
+notes and tables above are **not rewritten**: each was true for the period it
+governed, and the 2026-09-06 note correctly recorded that **CDS-WP-021** was the
+authorized work package **at that date**. Until the Human-Maintainer exact-object
+integration commit of the reviewed CDS-WP-022 object this note is **uncommitted
+executor output** and changes no authoritative CDS state.)*
+
+**The VP-7 verdict is unchanged: `UNSATISFIED`.** Only its **justification** needs
+updating.
+
+The Human Maintainer has since **closed CDS-WP-021** — closure effective at the
+Human-Maintainer integration commit `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15` — and
+**separately and explicitly authorized CDS-WP-022 — Theme and Environmental
+Presentation Model**, which is now **`AUTHORIZED` / `ACTIVE FOR EXECUTION`**. So
+*"CDS-WP-021 is currently authorized"* is no longer the reason. The correct reason is
+the same narrow one:
+
+> **VP-7 — `UNSATISFIED`.** **CDS-WP-022 is currently authorized, but it is not
+> authorized to select visual values.** **No work package currently authorized to
+> select visual values exists.**
+
+**VP-7 requires the authorization of the work package that makes the value
+selection**, and **CDS-WP-022 selects no value of any kind** — no colour,
+typography, spacing, shape, surface, breakpoint, context value, or default alias.
+**Authorizing a theme work package is not authorizing value selection**, and
+**`THEME GATE` work is not `VALUE SELECTION` authority**. **`CDS-WP-020A` remains
+`Planned`, not active, and not authorized**, as do CDS-WP-023 … CDS-WP-053.
+
+**Nothing else moves.** **VP-3, VP-5 and VP-6 remain `UNSATISFIED` for every
+family**, **VP-2 remains unsatisfied for typeface identity, weight identity and
+composites**, and the **Step-9 VP-4 state for VF-1, VF-2, VF-3, VF-5 and VF-6 is
+unchanged**. **VP-4 remains `UNSATISFIED` for VF-4**: `WP021-D2` is still
+**deferred**, and **no VF-4 technical root or source-set identity exists**.
+**CDS-WP-022 decides no theme mechanism** — five normative choices are escalated to
+the Human Maintainer as `WP022-D1` … `WP022-D5` — so **the DEC-S-135 sequencing gate
+is not cleared**, and **TS-1 is untouched: no semantic visual role carries a default
+alias.** **No visual value may be selected**, and **visual values and visual source
+sets remain 0.**
+
+### VP-7 note after the CDS-WP-022 decision package — 2026-09-12
+
+*(**CDS-WP-022 bounded decision rework. Additive.** The dated notes and tables above
+are **not rewritten**. Until the Human-Maintainer exact-object integration commit of
+the reviewed CDS-WP-022 object this note is **uncommitted executor output** and
+changes no authoritative CDS state.)*
+
+**The VP-7 verdict is unchanged: `UNSATISFIED`.** Nothing in the Human-Maintainer
+decision package touches it.
+
+The Human Maintainer decided **`WP022-D1` … `WP022-D5`**, recorded as the prepared
+**`DEC-S-137`** (with **ADR-0007**, covering `DEC-S-137` only) and **`DEC-S-138`**.
+From the effectivity of those decisions the **Theme and Context Mechanism is
+decided**, so the **`DEC-S-135` sequencing condition — *CDS-WP-022 precedes
+context-sensitive value selection* — is satisfied with respect to the
+theme-mechanism question.** That changes **no** prerequisite in this document:
+
+> **VP-7 — `UNSATISFIED`.** **CDS-WP-022 is currently authorized, but it is not
+> authorized to select visual values.** **No work package currently authorized to
+> select visual values exists.**
+
+**`THEME GATE SATISFIED ≠ VALUE SELECTION AUTHORIZED`.** **VP-7 requires the
+authorization of the work package that makes the value selection**, and **CDS-WP-022
+selects no value of any kind** — no colour, typography, spacing, shape, surface,
+breakpoint, context value, token binding, or default alias. **`DEC-S-138` part E
+creates no default reference alias**, so **`TS-1` is satisfied by compliance, not by
+exemption.** **`CDS-WP-020A` remains `Planned`, not active, and not authorized**, as
+do CDS-WP-023 … CDS-WP-053: **`THEME GATE SATISFIED ≠ CDS-WP-020A AUTHORIZED`**,
+**`ONE PREREQUISITE SATISFIED ≠ ALL PREREQUISITES SATISFIED`**, and **`ALL
+PREREQUISITES SATISFIED ≠ WORK PACKAGE AUTHORIZED`**.
+
+**Nothing else moves.** **VP-3, VP-5 and VP-6 remain `UNSATISFIED` for every
+family** — the OD-5 residuals, the per-family topology parameters, VF-1 tonal
+topology and the concrete role vocabulary are all untouched. **VP-2 remains
+unsatisfied** for typeface identity, weight identity and composites. **VP-4 is
+unchanged**, including **`UNSATISFIED` for VF-4**: **`WP021-D2` stays deferred**, and
+**no VF-4 technical root or source-set identity exists.** **`DEC-S-137` and
+`DEC-S-138` decide a mechanism, a context set and a policy — not a topology, not a
+vocabulary, and not a value** — and **satisfy no prerequisite in this document.**
+**No visual value may be selected**, and **visual values and visual source sets
+remain 0.**
 
 ## The evaluation
 
