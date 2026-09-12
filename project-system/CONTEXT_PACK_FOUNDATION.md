@@ -89,12 +89,16 @@ Phase Transition Governance Package** (**DEC-S-127**) ran between CDS-WP-019 clo
 and the CDS-WP-020 authorization; it changed project-phase authority only and
 activated nothing.
 
-**CDS-WP-021 — Adaptive Layout and Responsive Foundation is the current authorized
-work package**: **`AUTHORIZED / ACTIVE FOR EXECUTION`** by a separate, explicit
-Human-Maintainer decision, **executed with result `COMPLETE WITH NOTES`**,
+**No work package is currently authorized.** **CDS-WP-021 — Adaptive Layout and
+Responsive Foundation is `Completed`**: authorized for execution by a separate,
+explicit Human-Maintainer decision, **executed with result `COMPLETE WITH NOTES`**,
 **integrated** by the Human-Maintainer exact-object commit
-`a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` (2026-09-11), and **not
-closed** — **`INTEGRATED ≠ CLOSED`**. **Contract only.** It
+`a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` (2026-09-11), and **closed by a further,
+separate Human-Maintainer authorization whose closure becomes effective only at the
+Human-Maintainer exact-object integration commit of this independently reviewed
+closure object** — **`INTEGRATED ≠ CLOSED`** and **`CLOSURE OBJECT PREPARED ≠
+CLOSURE EFFECTIVE`**. The execution result is unchanged by closure and is not
+rewritten to `COMPLETE`. **Contract only.** It
 confirms the **Layer 3 / Layer 5 / Layer 6** ownership split — **`F-019-03`
 answered, CR-004 unchanged at Layer 5** — and records the spatial-context model, the
 **Adaptation Container**, the
@@ -175,8 +179,11 @@ unchanged**, and gains no authoring authority; `CDS-WP-020A` gains no validation
 conformance authority.
 
 **`CDS-WP-020A` and CDS-WP-022 … CDS-WP-053 are `Planned`, not active, and not
-authorized**; **CDS-WP-021 is authorized and active** — executed with result
-`COMPLETE WITH NOTES`, **not closed**. The single active forward roadmap is the
+authorized**, and **CDS-WP-021 is recorded as `Completed`** — executed with result
+`COMPLETE WITH NOTES`, closure effective only at the Human-Maintainer exact-object
+integration commit of this independently reviewed closure object — so **no work
+package is currently authorized**. **`CLOSED ≠ SUCCESSOR AUTHORIZED`** and **`DEPENDENCY
+SATISFIED ≠ AUTHORITY GRANTED`**. The single active forward roadmap is the
 [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
 
 ## Completed work packages
@@ -204,6 +211,7 @@ authorized**; **CDS-WP-021 is authorized and active** — executed with result
 | CDS-WP-018 | Deferred Governance and Repository Hygiene Reconciliation | Bounded documentary pass. Reconciled stale `pending commit` and mirror text (`NF-R4-OBS-001`, `NF-R3-OBS-001`, `NF-R5R-OBS-001`, `R3R-003`); corrected the already-decided *intentionally open decision areas* lists (`F-017-01`, `F-017-02`); repaired `.gitattributes` / `.gitignore` hygiene (`NF-R4-OBS-002`, `NF-R5R-OBS-003`); added additive dated notes to two Candidate-era records (`R1-F-01`). Closed by commit `e5d5d492…`. **No design, evidence, maturity, risk, ADR, Decision, claim, capability registration, phase rename, or publication effect.** |
 | CDS-WP-019 | Core Visual Foundation Architecture | **Completed**, closed by `538fbccbf6f554de3b872e9fb75a70d13318feb6`. Architecture only: the Layer-3 [Visual Foundation Architecture](../docs/architecture/VISUAL_FOUNDATION_ARCHITECTURE.md) entry point (**9 families VF-1…VF-9**, **14 invariants**, naming model, machine-readable boundary, motion boundary, A–D layer reconciliation), 6 specialised architectures (colour, typography, spatial, shape and surface, iconography and imagery, theme), and 4 governance documents (accessibility mapping — 14 Layer-3 WCAG criteria and **all 5 CDS-alone criteria**; channel mapping — 9 families x 9 channels; brand and Product Profile boundary — extension-point set **empty**; governance and lifecycle). **Selects no visual value; creates no token source, schema, validator rule, component, brand, or profile; registers no new Decision, ADR, or risk; grants no maturity — all 9 families `Proposed`; renames no phase; activates no later work package.** |
 | CDS-WP-020 | Reference and Semantic Token Foundation | **`Closed`; executed with result `DECISION_REQUIRED`; integrated by `42a568d8…`; closure effective at the Human-Maintainer commit `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.** Contract only: the [Visual Reference Token Foundation](../docs/architecture/VISUAL_REFERENCE_TOKEN_FOUNDATION.md) (token-flow layer 1 — RP-1…RP-10, ST-1…ST-7, RN-1…RN-9, RV-1…RV-5, RB-1…RB-5, 10 validation requirements), the [Visual Semantic Token Foundation](../docs/architecture/VISUAL_SEMANTIC_TOKEN_FOUNDATION.md) (token-flow layer 2 — SR-1…SR-12, alias model AL-1…AL-8, SN-1…SN-9, PN-1…PN-5, TC-1…TC-7, SS-1…SS-8, IS-1…IS-5, the focus role set, 15 validation requirements), the [Visual Token Value Selection Rules](../docs/governance/VISUAL_TOKEN_VALUE_SELECTION_RULES.md) (VP, VE, IG, VD, VA, VS), and the **non-normative** [Open Decisions](../docs/roadmap/VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md) register (**OD-1…OD-7**). **Selects no value; creates no identifier, token source, schema, validator rule, or test; registers no new risk; grants no maturity — all 9 families `Proposed`, visual source sets 0; activates no later work package.** A separately authorized **Decision Integration Pass** (2026-08-27) registered **DEC-S-128 … DEC-S-131 + ADR-0004** — **effective at `42a568d8…`**, answering **OD-1/OD-2/OD-3** only. The **CDS Step-9 Decision Integration Pass** (2026-09-05) then registered **DEC-S-132 … DEC-S-135 + ADR-0005** — **effective at `2cb244e8…`** — answering **OD-4** and **OD-7**, partially answering **OD-5**, policy-answering **OD-6A**, and dispositioning **OD-6B** as answered by existing authority; **the concrete role vocabulary, the per-family topology parameters and VF-1 tonal topology stay open**, **VP-3/VP-5/VP-6/VP-7 unsatisfied**, `RISK-099` not required. The value and machine-readable half is routed by **`FR-N-03`** to **`CDS-WP-020A`** — `Planned`, not active, not authorized. |
+| CDS-WP-021 | Adaptive Layout and Responsive Foundation | **`Completed`; executed with result `COMPLETE WITH NOTES`; integrated by `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`; closure separately authorized and effective only at the Human-Maintainer exact-object integration commit of this independently reviewed closure object.** Contract only: the Layer-3 [Adaptive Layout and Responsive Foundation](../docs/architecture/ADAPTIVE_LAYOUT_AND_RESPONSIVE_FOUNDATION.md) of **VF-4** — the **Layer 3 / Layer 5 / Layer 6** ownership split **CONFIRMED** (LO-1…LO-8, answering **`F-019-03`** with **CR-004 unchanged at Layer 5**), the spatial-context model (CX-1…CX-9), the **Adaptation Container** (AC-1…AC-6), the responsive-range obligations (AR-1…AR-12), the grid, container and content-width contracts (GC-1…GC-9), and the density and adaptation interaction (DA-1…DA-6). **It first returned `DECISION_REQUIRED`**, correctly, escalating two normative choices; **that execution history stands.** The Human Maintainer **approved `WP021-D1`** — the Container-Relative Named-Range Foundation, recorded as **`DEC-S-136`** with **`ADR-0006`**, both **effective at `a6bd7bf0…`** — and **deferred `WP021-D2`**, leaving the **VF-4 technical root and Source Set identity OPEN** with **no `DEC-S-137`, no `ADR-0007`, and no `RISK-099`**. **Selects no value; creates no identifier, responsive-range name, range count, threshold, VF-4 root, source set, token source, schema, validator rule, test, or fixture; admits no evidence; grants no maturity — all 9 families `Proposed`, visual source sets 0; activates no later work package.** **`DEFERRED OPEN QUESTION ≠ INCOMPLETE WORK PACKAGE`**, and **closure authorizes no successor.** |
 
 ## Normative source map
 
@@ -1012,9 +1020,13 @@ Token Foundation** (contract only; **no visual value, no identifier**) is
 **`Completed`** — **executed with result `DECISION_REQUIRED`** and **integrated** by
 `42a568d823de3388e45af62967546f13ad67eff6`, with **closure effective at the
 Human-Maintainer commit `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`**.
-**CDS-WP-021 — Adaptive Layout and Responsive Foundation is the current authorized
-work package** — **`AUTHORIZED / ACTIVE FOR EXECUTION`**, **executed with result
-`DECISION_REQUIRED`**, **not closed** — and **`CDS-WP-020A` and
+**CDS-WP-021 — Adaptive Layout and Responsive Foundation is `Completed`** —
+**executed with result `COMPLETE WITH NOTES`** after first returning
+**`DECISION_REQUIRED`**, **integrated** at
+`a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`, and **closed effective only at the
+Human-Maintainer exact-object integration commit of this independently reviewed
+closure object**.
+**No work package is currently authorized**, and **`CDS-WP-020A` and
 CDS-WP-022 … CDS-WP-053 are `Planned`, not active, and not authorized**, with work
 on them not started. See the
 [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md),

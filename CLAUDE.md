@@ -34,7 +34,13 @@ library, or a design project scoped exclusively to CoreOps.
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**,
-  **CDS-WP-017**, **CDS-WP-018**, **CDS-WP-019**, **CDS-WP-020**
+  **CDS-WP-017**, **CDS-WP-018**, **CDS-WP-019**, **CDS-WP-020**, **CDS-WP-021** —
+  the last of these being the closure target of this independently reviewed
+  closure object, whose closure becomes authoritative only at its Human-Maintainer
+  exact-object integration commit
+- **Currently authorized work package: NONE.** No work package is authorized after
+  the CDS-WP-021 closure recorded here. **`CLOSED ≠ SUCCESSOR AUTHORIZED`**,
+  **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`**, **`SEQUENCED NEXT ≠ AUTHORIZED`**
 - Accessibility support baseline: **A11Y-BL-001 declared and committed**
   (CDS-WP-010) — a **test contract, not evidence**; **no test has been run in any
   baseline environment**, and every artifact is AE-0 except the channel-independent
@@ -220,8 +226,8 @@ library, or a design project scoped exclusively to CoreOps.
   Human-Maintainer integration commit `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.**
   **`DECISION_REQUIRED` stands as the executed result**: closing the work
   package answers **no** open decision, satisfies **no** value prerequisite, and
-  selects **no** value. **CDS-WP-020 activated no successor**; the current
-  authorized work package, **CDS-WP-021**, was authorized by a separate, later,
+  selects **no** value. **CDS-WP-020 activated no successor**; its successor,
+  **CDS-WP-021**, was authorized by a separate, later,
   explicit Human-Maintainer decision. The **CDS Phase Transition Governance Package**
   (**DEC-S-127**) ran between CDS-WP-019 closure and this authorization; it occupied
   no identifier in the CDS-WP-020 … CDS-WP-053 sequence and activated nothing.
@@ -259,12 +265,19 @@ library, or a design project scoped exclusively to CoreOps.
   renderer implementation. **CDS-WP-024 keeps its validation, render-gate, and
   conformance boundary unchanged** and gains **no** authoring authority.
   **Registration is not activation, and a dependency is not authority.**
-- **CDS-WP-021 state: AUTHORIZED / ACTIVE FOR EXECUTION — executed with result
-  `COMPLETE WITH NOTES`, NOT closed.** Adaptive Layout and Responsive Foundation,
-  authorized separately and explicitly by the Human Maintainer as the next work
+- **CDS-WP-021 state: COMPLETED / CLOSED — executed with result
+  `COMPLETE WITH NOTES`.** Adaptive Layout and Responsive Foundation,
+  authorized for execution separately and explicitly by the Human Maintainer as the
+  then-next work
   package. Its object was **integrated** by the Human-Maintainer exact-object commit
   `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` (2026-09-11) — **`EXECUTION COMPLETE ≠
-  WORK PACKAGE CLOSED`** and **`INTEGRATED ≠ CLOSED`**. **Contract
+  WORK PACKAGE CLOSED`** and **`INTEGRATED ≠ CLOSED`**, so closure required its own,
+  separate Human-Maintainer authorization, which was given. **That closure becomes
+  effective only at the Human-Maintainer exact-object integration commit of this
+  independently reviewed closure object** — **`CLOSURE OBJECT PREPARED ≠ CLOSURE
+  EFFECTIVE`**. **The lifecycle status and the execution result are separate axes**:
+  the result stays `COMPLETE WITH NOTES` and is never rewritten to `COMPLETE`.
+  **Contract
   only:** it confirms
   the **Layer 3 / Layer 5 / Layer 6** ownership split (**LO-1 … LO-8**) and records
   the spatial-context model (**CX-1 … CX-9**), the **Adaptation Container**
@@ -287,10 +300,15 @@ library, or a design project scoped exclusively to CoreOps.
   registers are 136 decisions and 6 ADRs**. **`WP021-D2` is DEFERRED** — **not
   rejected** — so the **VF-4 technical root and Source Set identity stay OPEN**, and
   **no Decision and no ADR is created for it**: **no `DEC-S-137`, no `ADR-0007`.**
-  The authorization permits
+  The execution authorization permitted
   **execution only** — **no** closure, **no** successor, **no** value authoring,
   **no** theme mechanism, **no** Candidate promotion, **no** evidence admission,
-  **no** release or publication.
+  **no** release or publication — and **the closure authorization adds none of
+  them.** **Closure records that the authorized scope was executed, reviewed,
+  integrated and reconciled**; it answers **no** open decision, satisfies **no**
+  value prerequisite, selects **no** value, admits **no** evidence, changes **no**
+  maturity, adds **no** Decision, ADR, or risk, and **authorizes no successor**.
+  **`DEFERRED OPEN QUESTION ≠ INCOMPLETE WORK PACKAGE`.**
 - **`CDS-WP-020A` and CDS-WP-022 … CDS-WP-053: PLANNED / NOT ACTIVE / NOT
   AUTHORIZED.** They are recorded as a planning sequence so no competing roadmap can
   arise; **recording them activates nothing** and work on them has not started. The
@@ -1033,7 +1051,11 @@ The **technology-neutral Layer-3 adaptive-layout and responsive foundation** of
 verified by search, not assumed — and CDS-WP-021 created none. Its object was
 **integrated** by the Human-Maintainer exact-object commit
 `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` (2026-09-11), at which it became
-normative — as did **`DEC-S-136`** and **`ADR-0006`**. **CDS-WP-021 is not closed.**
+normative — as did **`DEC-S-136`** and **`ADR-0006`**. **CDS-WP-021 is `Completed`**:
+closure was separately authorized by the Human Maintainer and becomes effective only
+at the Human-Maintainer exact-object integration commit of this independently
+reviewed closure object. **Closure changed no architecture, no Decision, and no
+ADR**, and the effectivity commit above is **not** the closure commit.
 
 - **The layer split is CONFIRMED, and confirming it re-owns nothing.**
   **Layer 3 owns the spatial vocabulary and the structural context model** · **Layer
@@ -1110,8 +1132,14 @@ normative — as did **`DEC-S-136`** and **`ADR-0006`**. **CDS-WP-021 is not clo
 - **No value prerequisite moved.** **VP-3, VP-5, VP-6 and VP-7 stay `UNSATISFIED`
   for every family**, and **VP-4 is `UNSATISFIED` for VF-4**. **`DEC-S-136` decides
   an architecture, not a topology or a vocabulary.** **VP-7's verdict is unchanged**
-  — CDS-WP-021 is authorized but **is not authorized to select visual values**, and
-  **no work package currently authorized to select visual values exists.**
+  — **`UNSATISFIED`**: **no work package is currently authorized at all**, so **no
+  work package currently authorized to select visual values exists**, and
+  CDS-WP-021, while it was authorized, **was never authorized to select visual
+  values**. *(The normative [Visual Token Value Selection
+  Rules](docs/governance/VISUAL_TOKEN_VALUE_SELECTION_RULES.md)
+  carry the same verdict with a supporting clause written while CDS-WP-021 was the
+  authorized work package; that clause is point-in-time and **the VP-7 verdict it
+  supports is unchanged**.)*
 - **No value, no identifier, and no machine-readable source without an explicit
   prompt.** Claude creates no breakpoint, width, gutter, column count, extent,
   measure, density level, or target dimension; no responsive-range name, range
@@ -1119,7 +1147,8 @@ normative — as did **`DEC-S-136`** and **`ADR-0006`**. **CDS-WP-021 is not clo
   root, `sourceSetId`, or `sourceRevision`; and no token source file, manifest,
   resolver, schema, validator rule, test, or fixture. **The keys
   `WP021-D1` and `WP021-D2` are report keys, not governance identifiers**, and
-  **no `RISK-099` and no new `OD` identifier exists.**
+  **no `RISK-099` and no new `OD` identifier exists.** **Closing the work package
+  lifts none of this**, and **no work package is currently authorized.**
 
 ## Claim and release boundaries
 

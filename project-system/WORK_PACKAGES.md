@@ -10,7 +10,13 @@ Controlled work-package roadmap for the Core Design System (CDS).
 - **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**,
-  **CDS-WP-017**, **CDS-WP-018**, **CDS-WP-019**, **CDS-WP-020**
+  **CDS-WP-017**, **CDS-WP-018**, **CDS-WP-019**, **CDS-WP-020**, **CDS-WP-021**
+- **CDS-WP-021 is the closure target of this independently reviewed closure
+  object.** It is
+  recorded as **`Completed`** throughout this document, and **that closure becomes
+  authoritative only at the Human-Maintainer exact-object integration commit of this
+  independently reviewed closure object.** **`CLOSURE OBJECT PREPARED ≠ CLOSURE
+  EFFECTIVE`**, and an uncommitted working tree closes no work package.
 - **CDS-WP-016 is `Completed`.** Its Candidate authority sequence completed
   (`AE1-CDS-WP016-SEMSTATUS-004` admitted at AE-1, Human-Maintainer Candidate
   approval granted, exact-byte **Promotion Commit
@@ -34,24 +40,34 @@ Controlled work-package roadmap for the Core Design System (CDS).
   activated **no** later work package. Its architecture was integrated by the
   Human-Maintainer commit **`538fbccbf6f554de3b872e9fb75a70d13318feb6`**, and
   closure became effective there.
-- **Current work package:** **CDS-WP-021 — Adaptive Layout and Responsive
-  Foundation.** **`AUTHORIZED / ACTIVE FOR EXECUTION`** — authorized separately and
-  explicitly by the Human Maintainer as the next work package at **step 10** of the
-  next-allowed-authority sequence. **It is executed with result `COMPLETE WITH
-  NOTES`; it is NOT closed.** It first returned `DECISION_REQUIRED`; the Human
+- **Current work package: NONE — no work package is currently authorized after
+  CDS-WP-021 closure.** No row in the roadmap table below holds `Next`. **Closing
+  the current work package authorizes no other**, and a satisfied dependency grants
+  no authority: **`CLOSED ≠ SUCCESSOR AUTHORIZED`**, **`DEPENDENCY SATISFIED ≠
+  AUTHORITY GRANTED`**, and **`SEQUENCED NEXT ≠ AUTHORIZED`**. The next work package
+  begins only on an explicit Nova prompt **and** a separate Human-Maintainer
+  authorization.
+- **Most recent work package:** **CDS-WP-021 — Adaptive Layout and Responsive
+  Foundation** — **`Completed`**. Authorized separately and explicitly by the Human
+  Maintainer as the then-next work package at **step 10** of the
+  next-allowed-authority sequence, and **executed with result `COMPLETE WITH
+  NOTES`** — the execution result is unchanged by closure and is **not** rewritten
+  to `COMPLETE`. It first returned `DECISION_REQUIRED`; the Human
   Maintainer then decided **`WP021-D1`** (recorded as **`DEC-S-136`** with
   **ADR-0006**, both **effective**) and **deferred `WP021-D2`**, and a bounded
   rework integrated both. Its object was **integrated** by the Human-Maintainer
   exact-object commit `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` (2026-09-11), at
-  which `DEC-S-136` and `ADR-0006` **became effective**:
-  **`EXECUTION ≠ COMPLETION`**,
+  which `DEC-S-136` and `ADR-0006` **became effective**. **Closure was then
+  separately authorized by the Human Maintainer as a distinct act, and becomes
+  effective only at the Human-Maintainer exact-object integration commit of this
+  independently reviewed closure object** — **`EXECUTION ≠ COMPLETION`**,
   **`COMPLETE REPORT ≠ CLOSURE`**, **`REVIEW PASS ≠ INTEGRATION`**, and
-  **`INTEGRATION ≠ CLOSURE`** unless separately authorized — **closure has not
-  occurred.** The authorization
-  permits **execution of CDS-WP-021 only**: it authorizes **no** closure, **no**
-  successor work package, **no** value authoring, **no** theme mechanism, **no**
+  **`INTEGRATION ≠ CLOSURE`**. The execution authorization
+  permitted **execution of CDS-WP-021 only**: it authorized **no** successor work
+  package, **no** value authoring, **no** theme mechanism, **no**
   token source creation, **no** Candidate promotion, **no** evidence admission, and
-  **no** release or publication. **`DEC-S-135` is unchanged** and
+  **no** release or publication, and **the closure authorization adds none of
+  them.** **`DEC-S-135` is unchanged** and
   **context-sensitive value selection is not authorized.**
 - **Previous work package:** **CDS-WP-020 — Reference and Semantic Token
   Foundation** was authorized separately by the Human Maintainer on 2026-08-26,
@@ -60,9 +76,8 @@ Controlled work-package roadmap for the Core Design System (CDS).
   **`Completed`** below. **That closure was recorded in the working object of the
   CDS-WP-020 closure and routing pass and became effective at the Human-Maintainer
   integration commit of that object, `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.**
-  **CDS-WP-020 activated no successor**; the successor now active,
-  **CDS-WP-021**, was authorized by a separate, later, explicit Human-Maintainer
-  decision. The
+  **CDS-WP-020 activated no successor**; **CDS-WP-021** was authorized by a
+  separate, later, explicit Human-Maintainer decision. The
   **CDS Phase Transition Governance Package**
   (**DEC-S-127**) ran between CDS-WP-019 closure and that authorization; it is
   **not** a numbered work package, occupies no identifier in the
@@ -134,8 +149,9 @@ Controlled work-package roadmap for the Core Design System (CDS).
   other.
 - **Forward roadmap:** CDS-WP-017 … CDS-WP-053 are recorded in the
   [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
-  **`CDS-WP-020A` and CDS-WP-022 … CDS-WP-053 are `Planned` only**; **CDS-WP-021 is
-  authorized and active**.
+  **`CDS-WP-020A` and CDS-WP-022 … CDS-WP-053 are `Planned` only**, and
+  **CDS-WP-021 is the closure target recorded as `Completed`** — so **no work
+  package is currently authorized**.
 
 ## Status values
 
@@ -148,6 +164,10 @@ Controlled work-package roadmap for the Core Design System (CDS).
 `Next` records **roadmap authorization only**. It states which work package is the
 current authorized one — never that its execution has or has not started. Execution,
 review, and authority state are recorded per work package below.
+
+**No work package currently holds `Next`.** After the CDS-WP-021 closure recorded
+here becomes effective, **no work package is authorized**, and none may be given
+`Next` except by a separate, explicit Human-Maintainer authorization.
 
 ## Roadmap
 
@@ -175,7 +195,7 @@ review, and authority state are recorded per work package below.
 | CDS-WP-019 | Core Visual Foundation Architecture | Completed | CDS-WP-018 |
 | CDS-WP-020 | Reference and Semantic Token Foundation | Completed | CDS-WP-019 |
 | CDS-WP-020A | Visual Token Source Authoring and Source Set Realization | Planned | CDS-WP-020 + OD-4, OD-5, OD-6 decided — **OD-4 answered, OD-5 only partially, OD-6A policy only**; **VP-3, VP-5, VP-6, VP-7 unsatisfied**; pinned validator stack absent |
-| CDS-WP-021 | Adaptive Layout and Responsive Foundation | **Next** — authorized, active, executed with `COMPLETE WITH NOTES`, **not closed** | CDS-WP-020 |
+| CDS-WP-021 | Adaptive Layout and Responsive Foundation | **Completed** — executed with `COMPLETE WITH NOTES`; **closure effective only at the Human-Maintainer exact-object integration commit of this independently reviewed closure object** | CDS-WP-020 |
 | CDS-WP-022 | Theme and Environmental Presentation Model | Planned | CDS-WP-021 |
 | CDS-WP-023 | Semantic Status Visual Binding Contract | Planned | CDS-WP-022 |
 | CDS-WP-024 | Semantic Validation and Render-Gate Architecture | Planned | CDS-WP-023 |
@@ -933,23 +953,32 @@ maturity, and no claim.
 
 ### CDS-WP-021 — Adaptive Layout and Responsive Foundation
 
-**Status:** **`AUTHORIZED / ACTIVE FOR EXECUTION`** — **executed with result
-`COMPLETE WITH NOTES`**, **integrated**, **not closed**. Its object was integrated
+**Status:** **`Completed`** — **executed with result
+`COMPLETE WITH NOTES`**, **integrated**, and **closed as recorded by this closure
+object**. Its object was integrated
 by the Human-Maintainer exact-object commit
 `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` (2026-09-11). It first returned
 **`DECISION_REQUIRED`**; the Human Maintainer then
 decided **`WP021-D1`** and **deferred `WP021-D2`**, and a **bounded rework**
-integrated both. **`EXECUTION COMPLETE ≠ WORK PACKAGE CLOSED`**, and
-**`INTEGRATED ≠ CLOSED`** — closure remains a separate Human-Maintainer act that
-has not occurred.
+integrated both. **`EXECUTION COMPLETE ≠ WORK PACKAGE CLOSED`** and
+**`INTEGRATED ≠ CLOSED`** held throughout: closure is a **separate**
+Human-Maintainer act, separately authorized, and **becomes effective only at the
+Human-Maintainer exact-object integration commit of this independently reviewed
+closure object.** The lifecycle status and the execution result are **separate
+axes**: closure does not rewrite `COMPLETE WITH NOTES` to `COMPLETE`, and the
+initial `DECISION_REQUIRED` execution history stands.
 
-**Authorization.** A separate, explicit Human-Maintainer decision taken at **step
-10** of the next-allowed-authority sequence. **It authorizes the execution of
+**Authorization.** Execution was authorized by a separate, explicit
+Human-Maintainer decision taken at **step
+10** of the next-allowed-authority sequence. **It authorized the execution of
 CDS-WP-021 only** — not its closure, not a successor, not value authoring, not a
 theme mechanism, not token source creation, not Candidate promotion, not evidence
-admission, and not release or publication. **`DEC-S-135` is unchanged**, and
+admission, and not release or publication. **Closure was authorized separately
+afterwards**, and **that closure authorization adds none of those either**:
+**`CLOSED ≠ SUCCESSOR AUTHORIZED`** and **`DEPENDENCY SATISFIED ≠ AUTHORITY
+GRANTED`**. **`DEC-S-135` is unchanged**, and
 **context-sensitive value selection is not authorized**. **`CDS-WP-020A` and
-CDS-WP-022 … CDS-WP-053 were not activated by it.**
+CDS-WP-022 … CDS-WP-053 were activated by neither act.**
 
 **Scope — what it owns.** The **technology-neutral Layer-3 adaptive-layout and
 responsive foundation** of **VF-4 Layout and Grid**: the reusable spatial vocabulary
@@ -1014,9 +1043,20 @@ VP-7 remain `UNSATISFIED` for every visual family**, and **VP-4 is `UNSATISFIED`
 VF-4**. **`DEC-S-136` decides an architecture, not a topology or a vocabulary**, and
 **no visual value may be selected.**
 
-**Not closed.** Closure is a separate Human-Maintainer act and has **not** occurred.
+**Closed, and what closure does not do.** Closure is a separate Human-Maintainer
+act, separately authorized, and **effective only at the Human-Maintainer
+exact-object integration commit of this independently reviewed closure object** —
 **`EXECUTION ≠ COMPLETION`**, **`COMPLETE REPORT ≠ CLOSURE`**, **`REVIEW PASS ≠
-INTEGRATION`**, and **`INTEGRATION ≠ CLOSURE`** unless separately authorized.
+INTEGRATION`**, and **`INTEGRATION ≠ CLOSURE`** each held until that act. Closure
+records that the **authorized scope was executed, reviewed, integrated and
+reconciled**. It does **not** mean every VF-4 design question is answered:
+**`WP021-D2` stays DEFERRED by Human-Maintainer authority**, and **`DEFERRED OPEN
+QUESTION ≠ INCOMPLETE WORK PACKAGE`**. Closure answers **no** open decision,
+satisfies **no** value prerequisite, selects **no** value, creates **no**
+identifier, admits **no** evidence, changes **no** maturity, adds **no** Decision,
+ADR, or risk — the registers stay at **136**, **6** and **98** — and **authorizes
+no successor**: **`CDS-WP-020A` and CDS-WP-022 … CDS-WP-053 remain `Planned`, not
+active, and not authorized**, and **no work package is currently authorized.**
 
 ## Roadmap evolution
 

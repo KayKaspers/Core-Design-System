@@ -9,6 +9,48 @@ released and no release is announced.
 
 ### Added
 
+- **CDS-WP-021 bounded closure — Step 18 separately authorized by the Human
+  Maintainer; closure object prepared, NOT effective.** Step 18 of the
+  next-allowed-authority sequence — **the closure of CDS-WP-021** — is a **separate**
+  Human-Maintainer act that neither the exact-object integration commit
+  `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` nor the effectivity of `DEC-S-136` and
+  `ADR-0006` implied. The Human Maintainer has now authorized it, and this object
+  records the resulting lifecycle state in the live current-authority carriers only.
+  **The closure target is `CDS-WP-021` → `Completed` / `Closed`.** **The execution
+  result remains `COMPLETE WITH NOTES`** — the lifecycle status and the execution
+  result are **separate axes**, and the result is **not** rewritten to `COMPLETE`;
+  the initial **`DECISION_REQUIRED`** execution history stands. **The integration
+  commits remain historical facts**: `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`
+  (CDS-WP-021 object, 2026-09-11) and
+  `1174228bf046a75af095e585d165c330cf194f47` (post-integration effectivity
+  reconciliation), and **the closure commit is neither of them** — it is **not** the
+  `DEC-S-136` effectivity commit and **not** the `ADR-0006` acceptance commit, both
+  of which stay bound to `a6bd7bf0…`. **`WP021-D2` remains DEFERRED**: the **VF-4
+  technical root and Source Set identity stay OPEN**, `sourceSetId` and
+  `sourceRevision` remain **NONE**, and **`DEFERRED OPEN QUESTION ≠ INCOMPLETE WORK
+  PACKAGE`** — closure records that the **authorized scope** was executed, reviewed,
+  integrated and reconciled, never that every VF-4 design question is answered.
+  **No successor is authorized**: **`CLOSED ≠ SUCCESSOR AUTHORIZED`**, **`DEPENDENCY
+  SATISFIED ≠ AUTHORITY GRANTED`**, and **`SEQUENCED NEXT ≠ AUTHORIZED`**;
+  **`CDS-WP-020A`, CDS-WP-022, CDS-WP-023, CDS-WP-024 and every other identifier
+  remain `Planned`, not active, and not authorized**, no roadmap row was reordered,
+  **`DEC-S-135` is untouched**, and **no work package is currently authorized.**
+  **Closure becomes effective only at the Human-Maintainer exact-object integration
+  commit of this independently reviewed closure object**, after a **fresh
+  independent review** (reviewer ≠ executor) and **Nova final adjudication** —
+  **`CLOSURE OBJECT PREPARED ≠ CLOSURE EFFECTIVE`**, and an uncommitted working tree
+  closes no work package. **No Decision, ADR, risk, work package, evidence package,
+  or evidence identifier was created or changed** — the registers stay at **136**,
+  **6** and **98**; **no `DEC-S-137`, no `ADR-0007`, no `RISK-099`**;
+  `docs/architecture/**`, `docs/governance/**` and `docs/risks/**` are untouched,
+  and within `docs/decisions/**` **only the maintained Register Scope
+  current-state carrier in `DECISION_INDEX.md` changed** — **no individual
+  Decision entry, proposition, status, range or count changed, and `ADR-0006` is
+  unchanged**. **No maturity changed**, **no claim was made**,
+  **no conformance was stated**, publication stays **`Private Development`**, and
+  **visual values and visual Source Sets stay 0** with **VF-1 … VF-9 `Proposed`**
+  and **VP-3, VP-5, VP-6 and VP-7 unsatisfied** (**VP-4 unsatisfied for VF-4**).
+  (CDS-WP-021 Step-18 bounded closure preparation)
 - **`DEC-S-136` and `ADR-0006` reconciled to their effective state.**
   The condition those entries themselves stated — the Human-Maintainer exact
   integration commit of the exact reviewed CDS-WP-021 Working Tree object,

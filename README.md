@@ -172,11 +172,14 @@ as already covered by existing authority — registered as **DEC-S-132 … DEC-S
 and **ADR-0005** by a separately authorized **Step-9 Decision Integration Pass**.
 **They are effective at commit `2cb244e8…`, and they select no value.** **No value
 is selected.**
-**CDS-WP-021 — Adaptive Layout and Responsive Foundation** is the current authorized
-work package: **`AUTHORIZED / ACTIVE FOR EXECUTION`** by a separate, explicit
+**CDS-WP-021 — Adaptive Layout and Responsive Foundation** is **`Completed`**:
+authorized for execution by a separate, explicit
 Human-Maintainer decision, **executed with result `COMPLETE WITH NOTES`**,
-**integrated** at `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` (2026-09-11), and **not
-closed**. It confirms the **Layer 3 / Layer 5 / Layer 6** ownership split — **CR-004
+**integrated** at `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` (2026-09-11), and
+**closed by a further, separate Human-Maintainer authorization whose closure becomes
+effective only at the Human-Maintainer exact-object integration commit of this
+independently reviewed closure object**. It confirms the
+**Layer 3 / Layer 5 / Layer 6** ownership split — **CR-004
 stays at Layer 5** — and records the spatial-context model, the **Adaptation
 Container**, the responsive-range
 obligations, and the grid, container and content-width contracts. It selects **no
@@ -185,7 +188,9 @@ technical root**. The **response mechanism is decided** by the Human Maintainer 
 recorded as **`DEC-S-136`** with **`ADR-0006`** — both **effective at that
 integration commit**, so the
 effective registers are **136 decisions and 6 ADRs** — and **VF-4 identity is
-deferred**.
+deferred**. **Closure resolves no deferred question, satisfies no value
+prerequisite, and authorizes no successor.**
+**No work package is currently authorized**, and
 **`CDS-WP-020A` and CDS-WP-022 … CDS-WP-053 are planned only — not active, not
 authorized, work not started** — and are recorded in the
 [Post-Candidate Development Roadmap](docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
@@ -887,9 +892,11 @@ maturity or approval it does not hold.
   release authority, `Stable` declaration, or runtime renderer implementation.
   **CDS-WP-024 keeps its validation, render-gate, and conformance boundary
   unchanged.**
-- **Authorized and active:** **CDS-WP-021 — Adaptive Layout and Responsive
+- **Completed:** **CDS-WP-021 — Adaptive Layout and Responsive
   Foundation** — **executed with result `COMPLETE WITH NOTES`**, **integrated** at
-  `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`, **not closed**. **Contract only.** It confirms the
+  `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`, and **closed effective only at the
+  Human-Maintainer exact-object integration commit of this independently reviewed
+  closure object**. **Contract only.** It confirms the
   **Layer 3 / Layer 5 / Layer 6** ownership split — **`F-019-03` answered** and
   **CR-004 unchanged at Layer 5** — and records the spatial-context model, the
   **Adaptation Container**, the
@@ -903,7 +910,11 @@ maturity or approval it does not hold.
   **`DEC-S-136`** with **`ADR-0006`**, both **effective at that commit**;
   **`WP021-D2` is
   DEFERRED**, leaving the **VF-4 technical root and Source Set identity OPEN** with
-  **no Decision and no ADR**.
+  **no Decision and no ADR** — **closure resolves it in no way**, and **`DEFERRED
+  OPEN QUESTION ≠ INCOMPLETE WORK PACKAGE`**.
+- **Currently authorized:** **NONE.** Closing CDS-WP-021 authorized no successor —
+  **`CLOSED ≠ SUCCESSOR AUTHORIZED`** and **`DEPENDENCY SATISFIED ≠ AUTHORITY
+  GRANTED`**.
 - **Planned:** **`CDS-WP-020A`** and **CDS-WP-022 … CDS-WP-053** — **not active, not
   authorized, work not started.** They remain inactive until separately authorized
   by the Human Maintainer, and **the order between them is not decided here.**
