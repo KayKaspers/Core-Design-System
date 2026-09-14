@@ -24,10 +24,10 @@
   Human-Maintainer act. **This amendment decided no theme mechanism, admitted no
   context, created no theme, no context identifier, no default alias and no
   value, and authorized no work package.** **T-1 … T-10 and TS-1 … TS-6 are
-  unchanged**, as are **TC-1 … TC-7**, **DEC-S-135** and **DEC-S-136**. Until the
-  Human-Maintainer exact-object integration commit of the reviewed CDS-WP-022
-  object, this amendment is **uncommitted executor output and changes no
-  authoritative CDS state**.
+  unchanged**, as are **TC-1 … TC-7**, **DEC-S-135** and **DEC-S-136**. **That
+  amendment is effective** at the Human-Maintainer exact-object integration commit
+  `23914ecc48c1fb3cba5e3dab97a505589e821b6b` (2026-09-12); **before that commit it
+  was uncommitted executor output and changed no authoritative CDS state**.
 - **Amended by:** CDS-WP-022 bounded decision rework, 2026-09-12 — applying the
   **Human-Maintainer decisions on `WP022-D1` … `WP022-D5`**: the new *Theme
   resolution mechanism* section (**TM-1 … TM-12**), the reconciled *Context
@@ -40,11 +40,13 @@
   package* section that replaces the open-decision section. **The decisions are
   recorded as `DEC-S-137` (with
   [ADR-0007](../decisions/ADR-0007-THEME-RESOLUTION-AND-CONTEXT-EVIDENCE-ARCHITECTURE.md),
-  covering `DEC-S-137` only) and `DEC-S-138`.** All three are **`PREPARED /
-  HUMAN-MAINTAINER APPROVED / NOT EFFECTIVE` until, and effective from, the
-  Human-Maintainer exact-object integration commit of the reviewed CDS-WP-022
-  object**, which requires a Fresh Independent Review and Nova adjudication first —
-  **`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION`**. **The rework decides
+  covering `DEC-S-137` only) and `DEC-S-138`.** All three are **`Accepted` and
+  effective at the Human-Maintainer exact-object integration commit
+  `23914ecc48c1fb3cba5e3dab97a505589e821b6b`**, which integrated the reviewed
+  CDS-WP-022 object after a Fresh Independent Review, a bounded corrective rework, a
+  confirmatory independent review and Nova final integration adjudication —
+  **`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION`** held until that
+  commit. **The rework decides
   nothing of its own, creates no theme, no context identifier, no default alias and
   no value, and authorizes no work package**; **T-1 … T-10, TS-1 … TS-6,
   TC-1 … TC-7, DEC-S-131, DEC-S-132, DEC-S-135 and DEC-S-136 are unchanged.**
@@ -55,8 +57,8 @@
   contract and **creates no theme instance, no machine-readable context identifier,
   and no value**. **The theme mechanism is decided** by **`DEC-S-137`**, and the
   **context set, forced-colours disposition, selection precedence and fail-closed
-  policy** by **`DEC-S-138`** — each **normative repository authority only from its
-  own effectivity**, and **not before**.
+  policy** by **`DEC-S-138`** — both **effective at the Human-Maintainer exact-object
+  integration commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b`**, and **not before**.
 - **Maturity:** **`Proposed`** — this document promotes nothing.
 
 ## Purpose and boundary
@@ -78,12 +80,13 @@ DECLARE`**, and an authorized work package is **not** an executor authorized to
 invent normative choices.
 
 **Each recorded decision is normative repository authority only from its own
-effectivity.** **`DEC-S-137`, `DEC-S-138` and `ADR-0007` are `PREPARED /
-HUMAN-MAINTAINER APPROVED / NOT EFFECTIVE` until, and effective from, the
-Human-Maintainer exact-object integration commit of the reviewed CDS-WP-022 object.**
-**The effective register holds 136 decisions and 6 ADRs until that commit and 138 and
-7 from it.** Until it, **the supported Theme Resolution Context set is empty**; from
-it, **it is `Light` and `Dark`, with no default**.
+effectivity.** **`DEC-S-137`, `DEC-S-138` and `ADR-0007` are `Accepted` and effective
+at the Human-Maintainer exact-object integration commit
+`23914ecc48c1fb3cba5e3dab97a505589e821b6b`**, which integrated the reviewed CDS-WP-022
+object.
+**The effective register held 136 decisions and 6 ADRs until that commit and holds 138
+and 7 from it.** Until it, **the supported Theme Resolution Context set was empty**;
+from it, **it is `Light` and `Dark`, with no default**.
 
 Frame: [Visual Foundation Architecture](VISUAL_FOUNDATION_ARCHITECTURE.md) ·
 [Token and Theme Architecture](TOKEN_AND_THEME_ARCHITECTURE.md).
@@ -279,9 +282,9 @@ DEC-S-131 clause 10).
 *(Normative — **`DEC-S-137` — Theme Resolution and Context-Evidence Architecture**,
 Human-Maintainer decision of 2026-09-12 resolving **`WP022-D1`**.
 **[ADR-0007](../decisions/ADR-0007-THEME-RESOLUTION-AND-CONTEXT-EVIDENCE-ARCHITECTURE.md)**
-carries the rationale and covers **`DEC-S-137` only**. **`PREPARED /
-HUMAN-MAINTAINER APPROVED / NOT EFFECTIVE` until, and effective from, the
-Human-Maintainer exact-object integration commit of the reviewed CDS-WP-022 object.**
+carries the rationale and covers **`DEC-S-137` only**. **`Accepted` and effective at
+the Human-Maintainer exact-object integration commit
+`23914ecc48c1fb3cba5e3dab97a505589e821b6b`.**
 **No source, schema, validator, resolver instance, context identifier, or value is
 created.**)*
 
@@ -493,9 +496,8 @@ force; **none re-owns anything, and none activates anything.**)*
 ## The context set
 
 *(Normative — **`DEC-S-138`** part A, Human-Maintainer decision of 2026-09-12
-resolving **`WP022-D2`**. **`PREPARED / HUMAN-MAINTAINER APPROVED / NOT EFFECTIVE`
-until, and effective from, the Human-Maintainer exact-object integration commit of the
-reviewed CDS-WP-022 object.** The table was previously a register of **candidates for
+resolving **`WP022-D2`**. **`Accepted` and effective at the Human-Maintainer
+exact-object integration commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b`.** The table was previously a register of **candidates for
 evaluation**; it now records the decided disposition of each. **No value, token
 binding, Source Set, resolver instance, evidence, maturity, claim, or conformance is
 created.**)*
@@ -680,14 +682,15 @@ executor authorized to invent normative choices — which is why these are recor
 | **`WP022-D4`** | Context selection and environmental precedence | **APPROVED — abstract Core selection contract with bounded precedence: explicit viewer choice > inferred environment preference**; mandatory platform accessibility conditions **outside** Theme precedence and always binding; consumer or runtime owns sensing, persistence and transport; **no technology named**; unresolved equal-authority conflict **fails closed** | **`DEC-S-138`** parts C and D · **CS-8 … CS-11**, **CE-5**, **CF-11** |
 | **`WP022-D5`** | Default, fallback and missing-context semantics | **APPROVED — no Core default Theme, no resolver-level default Theme, no semantic default reference alias; fail closed** on missing, unsupported and unresolved-conflict; **no silent substitution**; **`Not Applicable`** where Theme resolution genuinely does not apply | **`DEC-S-138`** parts E, F and G · **CF-9**, **CF-11**, *Not Applicable* |
 
-**Effectivity.** **`DEC-S-137`, `DEC-S-138` and `ADR-0007` are `PREPARED /
-HUMAN-MAINTAINER APPROVED / NOT EFFECTIVE` until, and effective from, the
-Human-Maintainer exact-object integration commit of the exact reviewed Working Tree
-object of CDS-WP-022**, which requires a **Fresh Independent Review** (reviewer ≠
-executor) and **Nova integration adjudication** first. **The effective register holds
-136 decisions and 6 ADRs until that commit and 138 and 7 from it.** **`APPROVED
-PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION`**, **a review PASS is not a commit**,
-and **a Nova recommendation is not an approval**. **The `WP022-D*` keys are
+**Effectivity.** **`DEC-S-137`, `DEC-S-138` and `ADR-0007` are `Accepted` and
+effective at the Human-Maintainer exact-object integration commit
+`23914ecc48c1fb3cba5e3dab97a505589e821b6b`** of the exact reviewed Working Tree
+object of CDS-WP-022, which followed a **Fresh Independent Review** (reviewer ≠
+executor), a **bounded corrective rework**, a **confirmatory independent review** and
+**Nova final integration adjudication**. **The effective register held
+136 decisions and 6 ADRs until that commit and holds 138 and 7 from it.** **`APPROVED
+PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION`** held until it, **a review PASS is not a
+commit**, and **a Nova recommendation is not an approval**. **The `WP022-D*` keys are
 execution-local report keys, not Decisions, ADRs, risks, requirements, or stable
 governance identifiers**, and **no `DEC-S-139`, no `ADR-0008` and no `RISK-099`
 exists or is prepared** — the risk register stays at **98**.
@@ -876,7 +879,9 @@ listed here as *not done*, and everything that genuinely remains not done still 
 8. **It adds no risk entry** — the register stays at **98**, with **no `RISK-099`**
    — and **no `DEC-S-139` and no `ADR-0008`** exists or is prepared. **Claude does
    not mark an ADR `Accepted`; that is a Human-Maintainer act**, which is why
-   **ADR-0007 is prepared and not accepted.**
+   **ADR-0007 became `Accepted` only through the Human-Maintainer exact-object
+   integration commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b`**, at which it is
+   effective — **not through this document.**
 9. **It satisfies no value prerequisite.** **VP-3, VP-5, VP-6 and VP-7 stay
    `UNSATISFIED`**, **VP-4 stays `UNSATISFIED` for VF-4**, and **`WP021-D2` stays
    `DEFERRED`** with **no VF-4 technical root, no VF-4 Source Set identity, and no
@@ -912,5 +917,5 @@ listed here as *not done*, and everything that genuinely remains not done still 
 - [Visual Token Value Selection Rules](../governance/VISUAL_TOKEN_VALUE_SELECTION_RULES.md) — VP-1 … VP-7, VE-1 … VE-12
 - [Adaptive Layout and Responsive Foundation](ADAPTIVE_LAYOUT_AND_RESPONSIVE_FOUNDATION.md) — CX-1 … CX-9, AC-1 … AC-6
 - [ADR-0006 — Adaptive Spatial Context and Named-Range Architecture](../decisions/ADR-0006-ADAPTIVE_SPATIAL_CONTEXT_AND_NAMED_RANGE_ARCHITECTURE.md) — **DEC-S-136**
-- [ADR-0007 — Theme Resolution and Context-Evidence Architecture](../decisions/ADR-0007-THEME-RESOLUTION-AND-CONTEXT-EVIDENCE-ARCHITECTURE.md) — **DEC-S-137 only**; **prepared and not yet accepted**
-- [Decision Index](../decisions/DECISION_INDEX.md) — **DEC-S-024**, **DEC-S-131**, **DEC-S-132**, **DEC-S-135**, **DEC-S-136**, and the prepared **DEC-S-137** and **DEC-S-138**
+- [ADR-0007 — Theme Resolution and Context-Evidence Architecture](../decisions/ADR-0007-THEME-RESOLUTION-AND-CONTEXT-EVIDENCE-ARCHITECTURE.md) — **DEC-S-137 only**; **`Accepted` and effective at `23914ecc…`**
+- [Decision Index](../decisions/DECISION_INDEX.md) — **DEC-S-024**, **DEC-S-131**, **DEC-S-132**, **DEC-S-135**, **DEC-S-136**, **DEC-S-137** and **DEC-S-138**

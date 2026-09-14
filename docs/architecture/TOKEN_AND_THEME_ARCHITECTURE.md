@@ -207,11 +207,12 @@ one cross-references it.**
 | *What token layering does light/dark support imply?* | **Decided: none of its own.** Theme- and context-sensitive binding is represented through the existing **Resolver / Composition** architecture over the existing Source-Set graph — **no per-context Source Set, no context or theme segment in any identifier, and no second maturity unit**; context-specific evidence stays bound to (`sourceSetId`, `sourceRevision`) while recording the **Resolver / Composition revision** and the **Theme Resolution Context** as **exact evidence inputs** (**`DEC-S-137`**, **ADR-0007**). **The five layers are unaffected**, and **a per-context token path and a Product-Profile mechanism stay excluded.** |
 | *Which contexts, and is there a default?* | **`Light` and `Dark`**, as **equal peers with no default**; **forced colours and platform high contrast are an environmental accessibility condition, not a Core context**; and a **Theme-applicable resolution with no explicitly selected supported context fails closed** (**`DEC-S-138`** parts A, B, E and F). |
 
-**Effectivity.** **`DEC-S-137`, `DEC-S-138` and `ADR-0007` are `PREPARED /
-HUMAN-MAINTAINER APPROVED / NOT EFFECTIVE` until, and effective from, the
-Human-Maintainer exact-object integration commit of the reviewed CDS-WP-022 object.**
-**Until it the supported Theme Resolution Context set is empty; from it it is `Light`
-and `Dark`.** **`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION`.**
+**Effectivity.** **`DEC-S-137`, `DEC-S-138` and `ADR-0007` are `Accepted` and
+effective at the Human-Maintainer exact-object integration commit
+`23914ecc48c1fb3cba5e3dab97a505589e821b6b`**, which integrated the reviewed CDS-WP-022
+object. **Until it the supported Theme Resolution Context set was empty; from it it is
+`Light` and `Dark`, with no default.** **`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY
+DECISION`** held until that commit.
 
 **No theme instance, machine-readable context identifier, default alias, or value
 exists**, and **CDS-WP-022 created none** — `Light` and `Dark` are **human-readable
@@ -226,5 +227,5 @@ a sixth token-flow layer** — the five layers of this document are unchanged
 - [Product Profile and Extension Model](PRODUCT_PROFILE_AND_EXTENSION_MODEL.md)
 - [Artifact Distribution and Channel Model](ARTIFACT_DISTRIBUTION_AND_CHANNEL_MODEL.md)
 - [Visual Foundation Theme Architecture](VISUAL_FOUNDATION_THEME_ARCHITECTURE.md) — the owning source for the theme concept (T-1 … T-10, TS-1 … TS-6, **TM-1 … TM-12**, CA, CI, CS, CE, CF, CB)
-- [ADR-0007 — Theme Resolution and Context-Evidence Architecture](../decisions/ADR-0007-THEME-RESOLUTION-AND-CONTEXT-EVIDENCE-ARCHITECTURE.md) — **DEC-S-137 only**; **prepared and not yet accepted**
+- [ADR-0007 — Theme Resolution and Context-Evidence Architecture](../decisions/ADR-0007-THEME-RESOLUTION-AND-CONTEXT-EVIDENCE-ARCHITECTURE.md) — **DEC-S-137 only**; **`Accepted` and effective at `23914ecc…`**
 - [Token Reference, Resolution and Validation Model](TOKEN_REFERENCE_RESOLUTION_AND_VALIDATION_MODEL.md) — the resolver relationship and resolution order

@@ -186,7 +186,8 @@ value** and creates **no identifier**, **no responsive-range name**, and **no VF
 technical root**. The **response mechanism is decided** by the Human Maintainer and
 recorded as **`DEC-S-136`** with **`ADR-0006`** — both **effective at that
 integration commit**, so the
-effective registers are **136 decisions and 6 ADRs** — and **VF-4 identity is
+effective registers are now **138 decisions and 7 ADRs** — `DEC-S-137`, `DEC-S-138`
+and `ADR-0007` having become effective at `23914ecc…` — and **VF-4 identity is
 deferred**. **Closure resolves no deferred question, satisfies no value
 prerequisite, and authorizes no successor.**
 
@@ -217,12 +218,13 @@ accessibility conditions **outside** Theme precedence and always binding; and th
 resolution **fails closed**, with **`Not Applicable`** where Theme resolution genuinely
 does not apply — recorded as **`DEC-S-138`**.
 
-**All three records are `PREPARED / HUMAN-MAINTAINER APPROVED / NOT EFFECTIVE` until,
-and effective from, the Human-Maintainer exact-object integration commit of the
-reviewed CDS-WP-022 object** — **`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY
-DECISION`**. **The registers hold 136 decisions and 6 ADRs until that commit and 138
-and 7 from it; the risk register stays at 98 throughout.** **Supported Theme
-Resolution Contexts: 0 before it and 2 from it**, and **`Light` and `Dark` are
+**All three records are `Accepted` and effective at the Human-Maintainer exact-object
+integration commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b`**, which integrated the
+reviewed CDS-WP-022 object — **`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY
+DECISION`** held until that commit. **The registers held 136 decisions and 6 ADRs
+until it and hold 138 and 7 from it; the risk register stays at 98 throughout.**
+**Supported Core Theme Resolution Contexts: 0 before it and 2 — `Light` and `Dark` —
+from it**, and **`Light` and `Dark` are
 human-readable architectural names, not machine-readable identifiers**. It creates
 **no theme instance, no machine-readable context identifier, no default alias, and no
 value**, and **`TS-1` still binds** — no semantic role carries a default alias.
@@ -596,13 +598,13 @@ Human-Maintainer integration commit `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`**
 is decided; the vocabulary is not** — no range name, count, threshold or boundary is
 selected. **`WP021-D2` — whether VF-4 acquires a technical root and source-set
 identity — is DEFERRED, not rejected**, and has **no Decision and no ADR of its own** —
-**the prepared `DEC-S-137` and `ADR-0007` record `WP022-D1`, not `WP021-D2`, and are
+**`DEC-S-137` and `ADR-0007` record `WP022-D1`, not `WP021-D2`, and are
 unrelated to it** — with **no `RISK-099`**, and **no work package is activated**.
 
 - [Adaptive Layout and Responsive Foundation](docs/architecture/ADAPTIVE_LAYOUT_AND_RESPONSIVE_FOUNDATION.md)
 - [ADR-0006 — Adaptive Spatial Context and Named-Range Architecture](docs/decisions/ADR-0006-ADAPTIVE_SPATIAL_CONTEXT_AND_NAMED_RANGE_ARCHITECTURE.md) — **`Accepted` and effective at `a6bd7bf0…`**
 - [Visual Foundation Theme Architecture](docs/architecture/VISUAL_FOUNDATION_THEME_ARCHITECTURE.md) — VF-9; T-1 … T-10, TM-1 … TM-12, CA, CI, CS, CE, CF, CB
-- [ADR-0007 — Theme Resolution and Context-Evidence Architecture](docs/decisions/ADR-0007-THEME-RESOLUTION-AND-CONTEXT-EVIDENCE-ARCHITECTURE.md) — **DEC-S-137 only**; **prepared, not yet accepted**
+- [ADR-0007 — Theme Resolution and Context-Evidence Architecture](docs/decisions/ADR-0007-THEME-RESOLUTION-AND-CONTEXT-EVIDENCE-ARCHITECTURE.md) — **DEC-S-137 only**; **`Accepted` and effective at `23914ecc…`**
 
 ## Governance
 
@@ -965,10 +967,11 @@ maturity or approval it does not hold.
   AUTHORIZED`**. It is **executed with result `COMPLETE WITH NOTES`**, after first
   returning `DECISION_REQUIRED` and escalating **`WP022-D1` … `WP022-D5`** — **report
   keys, not governance identifiers** — which the **Human Maintainer decided on
-  2026-09-12**. The decisions are recorded as the **prepared** **`DEC-S-137`** (with
-  **`ADR-0007`**, covering `DEC-S-137` only) and **`DEC-S-138`**, all **not effective
-  until the Human-Maintainer exact-object integration commit of the reviewed object**
-  — **136/6 until it, 138/7 from it, risks 98 throughout**. It **created no theme
+  2026-09-12**. The decisions are recorded as **`DEC-S-137`** (with
+  **`ADR-0007`**, covering `DEC-S-137` only) and **`DEC-S-138`**, all **`Accepted` and
+  effective at the Human-Maintainer exact-object integration commit
+  `23914ecc48c1fb3cba5e3dab97a505589e821b6b`** — **136/6 until it, 138/7 from it,
+  risks 98 throughout**. It **created no theme
   instance, no machine-readable context identifier, no default alias, and no value,
   identifier, role, Source Set, schema, validator rule, test, or fixture**; **closure
   would be a separate Human-Maintainer act**; and **it authorizes no successor and
@@ -1021,7 +1024,7 @@ phase.
 
 ## Registers
 
-- Decisions: DEC-S-001 … DEC-S-136 (136) — 6 strategic foundation decisions,
+- Decisions: DEC-S-001 … DEC-S-138 (138) — 6 strategic foundation decisions,
   6 strategic scope decisions, 8 consumer and pilot scope decisions,
   12 logical architecture decisions, 16 governance, lifecycle and publication
   decisions, 12 accessibility and inclusive design decisions, 4 operating
@@ -1034,8 +1037,9 @@ phase.
   decision, 1 phase transition decision, 4 visual token representation, evaluation
   authority and source identity decisions, 4 visual identifier, scale ownership,
   role admission and theme sequencing decisions, 1 adaptive spatial context and
-  responsive architecture decision · ADRs: 6 (ADR-0001, ADR-0002,
-  ADR-0003, ADR-0004, ADR-0005, ADR-0006)
+  responsive architecture decision, 2 theme resolution, context-evidence and
+  environmental selection decisions · ADRs: 7 (ADR-0001, ADR-0002,
+  ADR-0003, ADR-0004, ADR-0005, ADR-0006, ADR-0007)
   - **Effectivity:** **DEC-S-128 … DEC-S-131 and ADR-0004 are effective**, at the
     Human-Maintainer exact-byte integration commit
     `42a568d823de3388e45af62967546f13ad67eff6` of the CDS-WP-020 Decision
@@ -1044,9 +1048,13 @@ phase.
     `2cb244e889c1a6b5a278afb233995a0379b5d9ef` of the CDS Step-9 Decision
     Integration Pass; **DEC-S-136 and ADR-0006 are effective**, at the
     Human-Maintainer exact-object integration commit
-    `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` of the CDS-WP-021 object. The
-    **effective** register is **DEC-S-001 … DEC-S-136 (136)**
-    with **6 ADRs (ADR-0001, ADR-0002, ADR-0003, ADR-0004, ADR-0005, ADR-0006)**.
+    `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` of the CDS-WP-021 object;
+    **DEC-S-137, DEC-S-138 and ADR-0007 are effective**, at the Human-Maintainer
+    exact-object integration commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b` of the
+    CDS-WP-022 object. The
+    **effective** register is **DEC-S-001 … DEC-S-138 (138)**
+    with **7 ADRs (ADR-0001, ADR-0002, ADR-0003, ADR-0004, ADR-0005, ADR-0006,
+    ADR-0007)**.
 - Risks: RISK-001 … RISK-098 (98) — 89 Monitored; 9 Mitigating (RISK-031, RISK-040,
   RISK-044, RISK-066, RISK-067, RISK-068, RISK-069, RISK-071, RISK-098); owner
   model finalized; no risk accepted or closed

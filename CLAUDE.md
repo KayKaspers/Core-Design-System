@@ -52,13 +52,14 @@ library, or a design project scoped exclusively to CoreOps.
   activation. **It first executed with result `DECISION_REQUIRED`**, escalating five
   normative choices as the execution-local report keys **`WP022-D1` … `WP022-D5`**;
   the **Human Maintainer decided all five on 2026-09-12**, a bounded rework applied
-  them, and the **execution result is now `COMPLETE WITH NOTES`** — the initial
+  them, and the **execution result is `COMPLETE WITH NOTES`** — the initial
   `DECISION_REQUIRED` **stands as execution history**. The decisions are recorded as
-  the **prepared** **`DEC-S-137`** (with **`ADR-0007`**, covering `DEC-S-137` **only**)
-  and **`DEC-S-138`**, all **`PREPARED / HUMAN-MAINTAINER APPROVED / NOT EFFECTIVE`
-  until, and effective from, the Human-Maintainer exact-object integration commit of
-  the reviewed CDS-WP-022 object** — **136 decisions and 6 ADRs until it, 138 and 7
-  from it**; the risk register stays at **98** throughout. **CDS-WP-022 is not
+  **`DEC-S-137`** (with **`ADR-0007`**, covering `DEC-S-137` **only**)
+  and **`DEC-S-138`**, all **`Accepted` and effective at the Human-Maintainer
+  exact-object integration commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b`**, which
+  integrated the reviewed CDS-WP-022 object — **136 decisions and 6 ADRs until that
+  commit, 138 and 7 from it**; the risk register stays at **98** throughout.
+  **Effectivity is not closure: CDS-WP-022 is integrated and not
   closed**, and **closure is a separate Human-Maintainer act.** See *Theme and
   environmental presentation model (CDS-WP-022)* below.
 - Accessibility support baseline: **A11Y-BL-001 declared and committed**
@@ -318,9 +319,11 @@ library, or a design project scoped exclusively to CoreOps.
   **`WP021-D1` is APPROVED** — the **Container-Relative Named-Range Foundation** —
   and is recorded as **`DEC-S-136`** with **`ADR-0006`**, both **effective at that
   integration commit**; the **effective
-  registers are 136 decisions and 6 ADRs**. **`WP021-D2` is DEFERRED** — **not
+  registers are now 138 decisions and 7 ADRs**, `DEC-S-137`, `DEC-S-138` and
+  `ADR-0007` having become effective at `23914ecc48c1fb3cba5e3dab97a505589e821b6b`.
+  **`WP021-D2` is DEFERRED** — **not
   rejected** — so the **VF-4 technical root and Source Set identity stay OPEN**, and
-  **no Decision and no ADR exists for it** — **the prepared `DEC-S-137` and `ADR-0007` record `WP022-D1`, not `WP021-D2`, and are unrelated to it** — and **no `RISK-099` exists.**
+  **no Decision and no ADR exists for it** — **`DEC-S-137` and `ADR-0007` record `WP022-D1`, not `WP021-D2`, and are unrelated to it** — and **no `RISK-099` exists.**
   The execution authorization permitted
   **execution only** — **no** closure, **no** successor, **no** value authoring,
   **no** theme mechanism, **no** Candidate promotion, **no** evidence admission,
@@ -358,13 +361,14 @@ library, or a design project scoped exclusively to CoreOps.
   preference** with mandatory platform accessibility conditions **outside** Theme
   precedence, and **no default or fallback Theme with fail-closed resolution** and
   **`Not Applicable`** where Theme resolution genuinely does not apply. **All three
-  records are `PREPARED / HUMAN-MAINTAINER APPROVED / NOT EFFECTIVE` until, and
-  effective from, the Human-Maintainer exact-object integration commit of the
-  reviewed CDS-WP-022 object** — **`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY
-  DECISION`**, and **a review PASS is not a commit**. **The effective registers hold
-  136 decisions and 6 ADRs until that commit and 138 and 7 from it; the risk register
+  records are `Accepted` and effective at the Human-Maintainer exact-object
+  integration commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b`** — **`APPROVED
+  PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION`** held until that commit, and **a
+  review PASS is not a commit**. **The effective registers held
+  136 decisions and 6 ADRs until it and hold 138 and 7 from it; the risk register
   stays at 98 throughout — no `RISK-099`, no `DEC-S-139`, no `ADR-0008`.**
-  **Supported Theme Resolution Contexts: 0 before that commit, 2 from it, with no
+  **Supported Core Theme Resolution Contexts: 0 before that commit, 2 — `Light` and
+  `Dark` — from it, with no
   default.** Across both passes it created **no** theme instance, machine-readable
   context identifier, default alias, visual value, identifier, role, source set, token
   source file, manifest, resolver instance, schema, validator rule, test, or fixture;
@@ -649,18 +653,20 @@ Before beginning a work package, inspect at minimum:
   Maintainer** — all five escalations `WP022-D1` … `WP022-D5` are answered, and the
   propositions are recorded as **`DEC-S-137`** (with
   [ADR-0007](docs/decisions/ADR-0007-THEME-RESOLUTION-AND-CONTEXT-EVIDENCE-ARCHITECTURE.md),
-  covering `DEC-S-137` **only**) and **`DEC-S-138`**. **Those instruments remain
-  prepared and become effective only from the Human-Maintainer exact-object
-  integration commit of the reviewed CDS-WP-022 object** — **136 decisions and 6 ADRs
-  until it, 138 and 7 from it**. **The document creates no theme instance, no
+  covering `DEC-S-137` **only**) and **`DEC-S-138`**. **Those instruments are
+  `Accepted` and effective at the Human-Maintainer exact-object
+  integration commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b`** — **136 decisions
+  and 6 ADRs until it, 138 and 7 from it**. **The document creates no theme instance,
+  no
   machine-readable context identifier, no default alias, and no value**
 - [docs/decisions/ADR-0007-THEME-RESOLUTION-AND-CONTEXT-EVIDENCE-ARCHITECTURE.md](docs/decisions/ADR-0007-THEME-RESOLUTION-AND-CONTEXT-EVIDENCE-ARCHITECTURE.md)
   — architecture rationale for the **Resolver-Modifier Context** mechanism and the
-  context-evidence input binding (**DEC-S-137**). **`PREPARED / HUMAN-MAINTAINER
-  APPROVED / NOT EFFECTIVE` until, and `Accepted` from, the Human-Maintainer
-  exact-object integration commit of the reviewed CDS-WP-022 object**; it covers
+  context-evidence input binding (**DEC-S-137**). **`Accepted` and effective** at the
+  Human-Maintainer exact-object integration commit
+  `23914ecc48c1fb3cba5e3dab97a505589e821b6b`; it covers
   **DEC-S-137 only**, and **DEC-S-138 is deliberately not an architecture dependency
-  of it**. **Claude does not mark an ADR `Accepted`**
+  of it**. **Claude does not mark an ADR `Accepted`** — acceptance followed from that
+  Human-Maintainer commit
 - [docs/decisions/ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md](docs/decisions/ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md)
   — architecture rationale for the visual identifier grammar and the two identity
   spaces (**DEC-S-132**). **`Accepted` and effective** at the Human-Maintainer
@@ -907,8 +913,11 @@ CDS-WP-019 created none.
   concrete vocabulary (CDS-WP-020) · **the responsive model and the Layer 3 / Layer 5
   split — closed by CDS-WP-021: the split is CONFIRMED, the model is recorded, and
   the response mechanism is DECIDED by `DEC-S-136` (effective at `a6bd7bf0…`),
-  while the concrete range vocabulary and VF-4 identity stay OPEN** · the **theme
-  mechanism** (CDS-WP-022) · the status-to-visual
+  while the concrete range vocabulary and VF-4 identity stay OPEN** · **the theme
+  mechanism (CDS-WP-022) — open in the CDS-WP-019 state, and since resolved by
+  `DEC-S-137` and `DEC-S-138`, effective at
+  `23914ecc48c1fb3cba5e3dab97a505589e821b6b`, while machine-readable context
+  identifiers and joint Theme × Spatial evaluation stay OPEN** · the status-to-visual
   binding (CDS-WP-023) · the named extension-point set (CDS-WP-032) · motion values
   (CDS-WP-035) · the icon system (CDS-WP-037) · data-visualization encoding
   (CDS-WP-039).
@@ -1072,9 +1081,10 @@ nothing**; the Human Maintainer integrated the reviewed object at
 are **effective** there — they became effective **only** at that Human-Maintainer
 exact integration commit of the exact reviewed Working Tree object, following a
 Fresh Independent Review and Nova integration adjudication. **The effective
-register held 135 decisions and 5 ADRs at that commit; it has since advanced to 136
-decisions and 6 ADRs** — **`DEC-S-136`** and **`ADR-0006`**, effective at
-`a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`. **A review PASS is not a commit, and a
+register held 135 decisions and 5 ADRs at that commit; it has since advanced to 138
+decisions and 7 ADRs** — **`DEC-S-136`** and **`ADR-0006`**, effective at
+`a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`, and **`DEC-S-137`**, **`DEC-S-138`** and
+**`ADR-0007`**, effective at `23914ecc48c1fb3cba5e3dab97a505589e821b6b`. **A review PASS is not a commit, and a
 Nova recommendation is not an approval.**
 
 - **DEC-S-132 — Visual Identifier Grammar and the Two Identity Spaces**
@@ -1219,14 +1229,15 @@ ADR**, and the effectivity commit above is **not** the closure commit.
   `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`**.
   **`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION`** held until that commit;
   **`EFFECTIVE ≠ CLOSED`** holds now. The **effective
-  registers are 136 decisions and 6 ADRs.**
+  registers are 138 decisions and 7 ADRs**, `DEC-S-137`, `DEC-S-138` and `ADR-0007`
+  having become effective at `23914ecc48c1fb3cba5e3dab97a505589e821b6b`.
 - **`WP021-D2` is DEFERRED — not rejected.** Whether VF-4 acquires a technical root
   and source-set identity is **OPEN**: **DEC-S-132 fixed roots for VF-1, VF-2, VF-3,
   VF-5 and VF-6 and for no other family**, and **extending it by implication is
   prohibited — silence is recorded as silence.** **VF-4 already exists as an
   artifact family**; a future root decision would **extend machine-readable identity
   coverage to an existing family, never create a sixth one.** **No Decision and no
-  ADR exists for `WP021-D2`** — **the prepared `DEC-S-137` and `ADR-0007` record
+  ADR exists for `WP021-D2`** — **`DEC-S-137` and `ADR-0007` record
   `WP022-D1` and are unrelated to it**, and **no relation exists between approving
   `WP022-D1` and resolving `WP021-D2`.**
 - **No value prerequisite moved.** **VP-3, VP-5, VP-6 and VP-7 stay `UNSATISFIED`
@@ -1265,18 +1276,18 @@ CDS-WP-022 created none.
   architecture.** **The Human Maintainer decided all five on 2026-09-12**, a bounded
   rework applied them, and the **result is now `COMPLETE WITH NOTES`** — the initial
   `DECISION_REQUIRED` **stands as execution history**.
-- **Two prepared Decisions and one prepared ADR.** **`DEC-S-137` — Theme Resolution
+- **Two Decisions and one ADR, all effective.** **`DEC-S-137` — Theme Resolution
   and Context-Evidence Architecture** records **`WP022-D1`**; **`ADR-0007`** carries
   its rationale and covers **`DEC-S-137` only**; **`DEC-S-138` — Core Theme Context,
   Environmental Selection and Fail-Closed Policy** records
-  **`WP022-D2` … `WP022-D5`** and **has no ADR**. **All three are `PREPARED /
-  HUMAN-MAINTAINER APPROVED / NOT EFFECTIVE` until, and effective from, the
-  Human-Maintainer exact-object integration commit of the reviewed CDS-WP-022
-  object** — **`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION`**, and **a
-  review PASS is not a commit**. **136 decisions and 6 ADRs until that commit; 138
-  and 7 from it. The risk register stays at 98 throughout — no `RISK-099`, no
-  `DEC-S-139`, no `ADR-0008`.** **The `WP022-D*` keys are report keys, not governance
-  identifiers.**
+  **`WP022-D2` … `WP022-D5`** and **has no ADR**. **All three are `Accepted` and
+  effective at the Human-Maintainer exact-object integration commit
+  `23914ecc48c1fb3cba5e3dab97a505589e821b6b`**, which integrated the reviewed
+  CDS-WP-022 object — **`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION`** held
+  until it, and **a review PASS is not a commit**. **136 decisions and 6 ADRs until
+  that commit; 138 and 7 from it. The risk register stays at 98 throughout — no
+  `RISK-099`, no `DEC-S-139`, no `ADR-0008`.** **The `WP022-D*` keys are report keys,
+  not governance identifiers.**
 - **A theme is a Theme Resolution Context** — a **named presentation condition**
   under which approved semantic roles resolve to approved primitives. **`CANDIDATE ≠
   SUPPORTED CONTEXT`**, and a context is supported **only** by an explicit

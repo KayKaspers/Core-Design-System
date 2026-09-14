@@ -93,9 +93,11 @@ activated nothing.
 authorized work package**, **`AUTHORIZED` / `ACTIVE FOR EXECUTION`** by a separate,
 explicit Human-Maintainer act taken after the CDS-WP-021 closure, and **executed with
 result `COMPLETE WITH NOTES`** after first returning `DECISION_REQUIRED`; the
-**Human Maintainer decided `WP022-D1` … `WP022-D5` on 2026-09-12**, and the prepared
-**`DEC-S-137`**, **`DEC-S-138`** and **`ADR-0007`** are **not effective until the
-Human-Maintainer exact-object integration commit of the reviewed object** — see
+**Human Maintainer decided `WP022-D1` … `WP022-D5` on 2026-09-12**, and
+**`DEC-S-137`**, **`DEC-S-138`** and **`ADR-0007`** are **`Accepted` and effective at the
+Human-Maintainer exact-object integration commit
+`23914ecc48c1fb3cba5e3dab97a505589e821b6b`** of the reviewed object — **integrated
+and not closed** — see
 *Theme and environmental presentation model (CDS-WP-022)* below. **CDS-WP-021 — Adaptive Layout and
 Responsive Foundation is `Completed` / `Closed`**: authorized for execution by a
 separate, explicit Human-Maintainer decision, **executed with result `COMPLETE WITH
@@ -123,10 +125,11 @@ range identity**, fixed-geometry channels governed by **their own geometry**, an
 **`SPATIAL CONTEXT ≠ THEME RESOLUTION CONTEXT`** — recorded as **`DEC-S-136`** with
 **`ADR-0006`**, both **effective at that integration commit**. **`WP021-D2` is
 DEFERRED**: the **VF-4 technical root and Source Set
-identity stay OPEN**, and **no Decision and no ADR exists for it** — **the prepared
-`DEC-S-137` and `ADR-0007` record `WP022-D1`, not `WP021-D2`, and are unrelated to
-it**. **The effective registers are 136 decisions and
-6 ADRs**, and the risk register stays at **98**. **Effectivity selected no value,
+identity stay OPEN**, and **no Decision and no ADR exists for it** — **`DEC-S-137`
+and `ADR-0007` record `WP022-D1`, not `WP021-D2`, and are unrelated to
+it**. **The effective registers are now 138 decisions and
+7 ADRs** — `DEC-S-137`, `DEC-S-138` and `ADR-0007` having become effective at
+`23914ecc…` — and the risk register stays at **98**. **Effectivity selected no value,
 created no identifier, and closed no work package.** **`CDS-WP-020A` and
 CDS-WP-023 … CDS-WP-053 remain `Planned`, not active, and not authorized**; **CDS-WP-022
 was authorized afterwards by a separate, explicit Human-Maintainer act.**
@@ -244,11 +247,11 @@ this is a **summary, never a normative source**.)*
 - **`SPATIAL CONTEXT ≠ THEME RESOLUTION CONTEXT`** (DEC-S-136, CX-9, **TM-11**):
   **orthogonal**, with **joint Theme × Spatial rendering and evidence evaluation
   deferred** to separately authorized scope (**TM-12**).
-- **Two prepared Decisions and one prepared ADR**: **`DEC-S-137`** (with **`ADR-0007`**,
-  covering `DEC-S-137` **only**) and **`DEC-S-138`** — all **`PREPARED /
-  HUMAN-MAINTAINER APPROVED / NOT EFFECTIVE` until, and effective from, the
-  Human-Maintainer exact-object integration commit of the reviewed object**.
-  **`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION`.**
+- **Two Decisions and one ADR, all effective**: **`DEC-S-137`** (with **`ADR-0007`**,
+  covering `DEC-S-137` **only**) and **`DEC-S-138`** — all **`Accepted` and effective
+  at the Human-Maintainer exact-object integration commit
+  `23914ecc48c1fb3cba5e3dab97a505589e821b6b`** of the reviewed object.
+  **`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION`** held until that commit.
 - **Registers: 136 decisions · 6 ADRs until that commit; 138 · 7 from it; 98 risks
   throughout** — **no `RISK-099`, no `DEC-S-139`, no `ADR-0008`**. **VF-1 … VF-9
   `Proposed`**; **visual values 0 · visual source sets 0**; every theme artifact
@@ -376,9 +379,9 @@ and reference the normative policies; they do not replace them (DEC-S-063):
 
 ## Active decisions
 
-- Range: DEC-S-001 … DEC-S-136 · Count: 136 · ADRs: 6 (ADR-0001, ADR-0002,
-  ADR-0003, ADR-0004, ADR-0005, ADR-0006)
-- **Effective range: DEC-S-001 … DEC-S-136 · Count: 136 · All Accepted · ADRs: 6.**
+- Range: DEC-S-001 … DEC-S-138 · Count: 138 · ADRs: 7 (ADR-0001, ADR-0002,
+  ADR-0003, ADR-0004, ADR-0005, ADR-0006, ADR-0007)
+- **Effective range: DEC-S-001 … DEC-S-138 · Count: 138 · All Accepted · ADRs: 7.**
   **DEC-S-128 … DEC-S-131 and ADR-0004 are effective** at the Human-Maintainer
   exact-byte integration commit `42a568d823de3388e45af62967546f13ad67eff6` of the
   CDS-WP-020 Decision Integration Pass; **DEC-S-132 … DEC-S-135 and ADR-0005 are
@@ -386,7 +389,9 @@ and reference the normative policies; they do not replace them (DEC-S-063):
   `2cb244e889c1a6b5a278afb233995a0379b5d9ef` of the CDS Step-9 Decision Integration
   Pass; **DEC-S-136 and ADR-0006 are effective** at the Human-Maintainer
   exact-object integration commit `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` of the
-  CDS-WP-021 object.
+  CDS-WP-021 object; **DEC-S-137, DEC-S-138 and ADR-0007 are effective** at the
+  Human-Maintainer exact-object integration commit
+  `23914ecc48c1fb3cba5e3dab97a505589e821b6b` of the CDS-WP-022 object.
 - DEC-S-001…006: strategic foundation decisions (CDS-WP-001)
 - DEC-S-007…012: strategic scope decisions (CDS-WP-002)
 - DEC-S-013…020: consumer and pilot scope decisions (CDS-WP-004)
@@ -1100,8 +1105,9 @@ Human-Maintainer exact-object integration commit
 **`CDS-WP-022` — Theme and Environmental Presentation Model is the currently
 authorized work package** — **contract only**, **executed with result `COMPLETE WITH
 NOTES`**, creating **no theme instance, no machine-readable context identifier, and no
-value**, with **`DEC-S-137`**, **`DEC-S-138`** and **`ADR-0007`** **prepared and not
-yet effective** — and
+value**, with **`DEC-S-137`**, **`DEC-S-138`** and **`ADR-0007`** **`Accepted` and
+effective at `23914ecc48c1fb3cba5e3dab97a505589e821b6b`**, **integrated and not
+closed** — and
 **`CDS-WP-020A` and CDS-WP-023 … CDS-WP-053 are `Planned`, not active, and not
 authorized**, with work on them not started. See the
 [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md),

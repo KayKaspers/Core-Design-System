@@ -1,19 +1,25 @@
 # ADR-0007 — Theme Resolution and Context-Evidence Architecture
 
-- **Status:** **`PROPOSED / HUMAN-MAINTAINER-APPROVED PROPOSITION, PENDING
-  EXACT-OBJECT INTEGRATION`** until, and **`Accepted`** from, the Human-Maintainer
-  exact-object integration commit of the exact reviewed Working Tree object of
-  CDS-WP-022 — which requires a Fresh Independent Review (reviewer ≠ executor) and
-  Nova integration adjudication first, the same acceptance rule
-  ADR-0001 … ADR-0006 carry. Until that commit this ADR is **uncommitted executor
-  output** prepared under an explicit Human-Maintainer authorization, and it confers
-  **no** acceptance and **no** authority; **no earlier wording, review verdict, or
-  adjudication confers it.** **A review PASS is not a commit, and a Nova
-  recommendation is not an approval.** **`APPROVED PROPOSITION ≠ EFFECTIVE
-  REPOSITORY DECISION`.**
+- **Status:** **Accepted upon Human-Maintainer commit following Nova approval** —
+  accepted at the exact-object integration commit
+  `23914ecc48c1fb3cba5e3dab97a505589e821b6b` (2026-09-12) of the exact reviewed
+  Working Tree object of CDS-WP-022, which followed independent review — a Fresh
+  Independent Review returning `REWORK REQUIRED` with **0 blocking** findings, a
+  bounded corrective rework resolving the material and authorized minor findings, and
+  a confirmatory independent review — and Nova final integration adjudication, the
+  same acceptance rule ADR-0001 … ADR-0006 carry. Before that commit this ADR was
+  **`PROPOSED / HUMAN-MAINTAINER-APPROVED PROPOSITION, PENDING EXACT-OBJECT
+  INTEGRATION`**, uncommitted executor output prepared under an explicit
+  Human-Maintainer authorization, and conferred **no** acceptance and **no**
+  authority; **no earlier wording, review verdict, or adjudication conferred it.**
+  **A review PASS is not a commit, and a Nova recommendation is not an approval.**
+  **`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION`** held until that commit.
+  **Effectivity is not closure: CDS-WP-022 remains `AUTHORIZED` / `ACTIVE FOR
+  EXECUTION`, integrated, and not closed.**
 - **Date:** 2026-09-12
 - **Project:** Core Design System (CDS)
 - **Registered by:** CDS-WP-022 — Theme and Environmental Presentation Model
+- **Effectivity commit:** `23914ecc48c1fb3cba5e3dab97a505589e821b6b`
 - **Related:** [ADR-0001](ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md) ·
   [ADR-0002](ADR-0002-DETERMINISTIC_JSON_SERIALIZATION.md) ·
   [ADR-0003](ADR-0003-OFFLINE_TOKEN_VALIDATOR_IMPLEMENTATION_STACK.md) ·
