@@ -930,6 +930,28 @@ resolved as to representation with its evaluation half deferred**; **`F-022-08` 
 repaired inside the allow-list and deferred outside it**; and the rest are
 **unchanged**.
 
+**Disposition after the final pre-closure current-state reconciliation
+(2026-09-15).** The findings table and the 2026-09-12 disposition above are **not
+rewritten**: each correctly records what was observed or dispositioned at its own
+date. In the light of the separately authorized current-state reconciliations
+integrated since `23914ecc48c1fb3cba5e3dab97a505589e821b6b` — at
+`6f5408b1a6863e52560d8884fb9202f1cdfb85c9`,
+`61ee2f3c67d5dd2da4443f782c56d770eaa80074` and
+`4714f892a2780afd6425885ccc28a75533fca3df` — and of this final pre-closure
+reconciliation, three dispositions advance **additively**:
+
+| ID | Status |
+| --- | --- |
+| **`F-022-05`** | **NOT A DEFECT for its class — unchanged; ONE carrier reclassified and reconciled.** The 2026-09-12 treatment **remains valid** for individual Decision entries, ADR point-in-time boundaries, the dated `DEC-S-135` application text, and every other explicitly point-in-time carrier the repository's own rule covers. **One carrier was later independently reclassified:** the **unqualified theme-boundary statement** of the normative [Adaptive Layout and Responsive Foundation](../architecture/ADAPTIVE_LAYOUT_AND_RESPONSIVE_FOUNDATION.md), which stated without temporal qualification that CDS-WP-022 **is** `Planned`, not active, and not authorized. It functioned as an **undated maintained architecture boundary**, not as a point-in-time Decision record, and was therefore classified **`LIVE_STALE_PREEXISTING`** and **closure-blocking**. It was **reconciled** by the later residual current-state sequence, **culminating in `4714f892a2780afd6425885ccc28a75533fca3df`**, which dates the state at the CDS-WP-021 milestones and records CDS-WP-022's later authorization as a **lifecycle update, not an architecture change**. **This does not reopen `F-022-05` globally** — **`CARRIER-SPECIFIC RECLASSIFICATION ≠ GLOBAL FINDING REVERSAL`**. Neither that reconciliation nor this disposition edited any Decision entry, proposition, status or effectivity commit, and **`DEC-S-135` is unchanged in byte and in substance.** |
+| **`F-022-07`** | **RESOLVED AS LIVE CURRENT-STATE DRIFT.** The remaining live CDS-WP-021 closure-effectivity carriers — in [Work Packages](../../project-system/WORK_PACKAGES.md), `CLAUDE.md` and the [Foundation Context Pack](../../project-system/CONTEXT_PACK_FOUNDATION.md) — still described that closure as becoming effective only at the integration commit of *"this independently reviewed closure object"*; each now records it as **separately authorized and effective at `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`**. **Historical and dated pre-closure statements are preserved, not deleted** — including the event-time CDS-WP-021 Step-18 changelog entry and the Step-18 supersession note in the current-state section above, whose condition the later 2026-09-12 note already records as met. **CDS-WP-021 remains `Completed` / `Closed`, with result `COMPLETE WITH NOTES`.** |
+| **`F-022-08`** | **RESOLVED FOR LIVE CURRENT-STATE CARRIERS.** The live identifier-idiom residuals are reconciled: **`WP021-D2` still has no Decision of its own, no ADR of its own, no VF-4 technical root and no VF-4 Source Set identity**, while **`DEC-S-137` and `ADR-0007` exist, belong to `WP022-D1`, not `WP021-D2`, and are unrelated to it**. **Occurrences that state what CDS-WP-021 itself created, and dated or point-in-time records, remain historical and act-scoped and are not defects** — **`ACT CREATED NOTHING ≠ IDENTIFIER DOES NOT EXIST TODAY`**. **Historical records are preserved.** |
+
+**No new finding identifier was created, no F-022 finding was deleted, and no new
+risk was created — the register stays at 98, with no `RISK-099`.** **None of this
+closes CDS-WP-022**: it remains **`AUTHORIZED` / `ACTIVE FOR EXECUTION`, integrated,
+and not closed**, **closure is a separate Human-Maintainer act that has not
+occurred**, and **no successor is authorized**.
+
 ## Immediate next step
 
 **Closure of CDS-WP-022 is the next governance requirement — and it is not

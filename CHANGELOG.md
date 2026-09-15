@@ -9,6 +9,38 @@ released and no release is announced.
 
 ### Added
 
+- **CDS-WP-022 effectivity — `DEC-S-137` and `DEC-S-138` effective, `ADR-0007`
+  `Accepted` and effective; CDS-WP-022 integrated, NOT closed.** The condition the
+  CDS-WP-022 decision package stated for itself — the Human-Maintainer exact-object
+  integration commit of the exact reviewed CDS-WP-022 object — was met on
+  **2026-09-12** by commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b` (parent
+  `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`), which followed a Fresh Independent
+  Review, a bounded corrective rework, a confirmatory independent review, and Nova
+  final integration adjudication. At that commit **`DEC-S-137` and `DEC-S-138` became
+  effective** and **`ADR-0007` became `Accepted` and effective**, advancing the
+  effective registers from **136 decisions and 6 ADRs** to **138 decisions and
+  7 ADRs** with **the risk register unchanged at 98** — **no `RISK-099`, no
+  `DEC-S-139`, no `ADR-0008`** — and the supported Core Theme Resolution Contexts
+  from **0** to **2**, **`Light` and `Dark`, with no default**. **This records
+  completed Human-Maintainer acts and performs none.** The live current-state
+  carriers were then reconciled by the already-integrated reconciliation commits
+  `6f5408b1a6863e52560d8884fb9202f1cdfb85c9` (post-integration effectivity),
+  `61ee2f3c67d5dd2da4443f782c56d770eaa80074` (pre-closure current state) and
+  `4714f892a2780afd6425885ccc28a75533fca3df` (final residual current state), none of
+  which closed CDS-WP-022. **Point-in-time records are preserved**: the event-time
+  CDS-WP-022 execution and bounded-decision-rework entries below truthfully recorded
+  the decision package as prepared and not effective at their own time, and remain
+  as written. **The effectivity created 0 visual values and 0 visual Source Sets**;
+  it **did not close CDS-WP-022**, **authorized neither `CDS-WP-020A` nor
+  CDS-WP-023 … CDS-WP-053**, **authorized no successor**, **granted no maturity**,
+  and **admitted no evidence** — **`EFFECTIVE ≠ CLOSED`**: **CDS-WP-022 remains
+  `AUTHORIZED` / `ACTIVE FOR EXECUTION`, integrated, and not closed**, and closure is
+  a separate Human-Maintainer act that has not occurred. **VP-3, VP-5, VP-6 and VP-7
+  stay `UNSATISFIED`**, **VP-4 stays `UNSATISFIED` for VF-4**, **`WP021-D2` stays
+  DEFERRED**, and **`DEC-S-135` is unchanged** — its theme-mechanism sequencing
+  condition is satisfied from that commit, and **`THEME GATE SATISFIED ≠ VALUE
+  SELECTION AUTHORIZED`**.
+  (CDS-WP-022 final pre-closure reconciliation)
 - **CDS-WP-022 — Theme and Environmental Presentation Model: separately authorized
   by the Human Maintainer, executed with result `DECISION_REQUIRED`.** The Human
   Maintainer **separately and explicitly authorized CDS-WP-022** after the CDS-WP-021
@@ -43,10 +75,14 @@ released and no release is announced.
   WORK PACKAGE ≠ EXECUTOR AUTHORIZED TO INVENT NORMATIVE CHOICES`**; the
   **`WP022-D*` keys are execution-local report keys, not Decisions, ADRs, risks,
   requirements, or stable governance identifiers.** *(**Superseded as live current
-  state by the bounded decision rework below**: the Human Maintainer decided all five
-  on 2026-09-12, the execution result is now **`COMPLETE WITH NOTES`**, and
-  **`DEC-S-137`**, **`DEC-S-138`** and **`ADR-0007`** are **prepared and not yet
-  effective**. The statements above remain accurate for the initial execution.)*
+  state by the bounded decision rework below and by the effectivity entry above**:
+  the Human Maintainer decided all five on 2026-09-12, the execution result is now
+  **`COMPLETE WITH NOTES`**, **`DEC-S-137`** and **`DEC-S-138`** are **effective**
+  and **`ADR-0007`** is **`Accepted` and effective** from the Human-Maintainer
+  exact-object integration commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b`, the
+  current registers hold **138 decisions, 7 ADRs and 98 risks**, and **CDS-WP-022 is
+  `AUTHORIZED` / `ACTIVE FOR EXECUTION`, integrated, and not closed**. The statements
+  above remain accurate for the initial execution.)*
   **No theme, no context, and no value.** **Supported Theme Resolution Contexts: 0 at
   this milestone.**
   It created **no** theme, context, context identifier, default alias, colour,

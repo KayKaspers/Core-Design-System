@@ -33,14 +33,16 @@
   IG-1 … IG-10, VD-1 … VD-8, VA-1 … VA-10 and VS-1 … VS-6 are unchanged.
 - **Amended by:** CDS-WP-022 — Theme and Environmental Presentation Model,
   2026-09-12, and by its bounded decision rework the same day — **two additive
-  current-state notes under VP-1 … VP-7, correcting the VP-7 justification only.** **The VP-7 verdict does not change — VP-7 remains
-  `UNSATISFIED`** — and **no prerequisite text is rewritten**: the 2026-08-27,
-  2026-09-05 and 2026-09-06 notes are **preserved as the record of the periods they
-  governed**. **No value is selected**, and VP-1 … VP-7, VE-1 … VE-12,
-  IG-1 … IG-10, VD-1 … VD-8, VA-1 … VA-10 and VS-1 … VS-6 are unchanged. Until the
-  Human-Maintainer exact-object integration commit of the reviewed CDS-WP-022
-  object, this amendment is **uncommitted executor output and changes no
-  authoritative CDS state**.
+  current-state notes under VP-1 … VP-7, correcting the VP-7 justification only.**
+  **That amendment is effective** at the Human-Maintainer exact-object integration
+  commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b` (2026-09-12) of the exact
+  reviewed CDS-WP-022 object, at which **`DEC-S-137`** and **`DEC-S-138`** became
+  effective and **ADR-0007** became `Accepted` and effective. **The VP-7 verdict
+  does not change — VP-7 remains `UNSATISFIED`** — and **no prerequisite text is
+  rewritten**: the 2026-08-27, 2026-09-05 and 2026-09-06 notes are **preserved as
+  the record of the periods they governed**. **No value is selected**, and
+  VP-1 … VP-7, VE-1 … VE-12, IG-1 … IG-10, VD-1 … VD-8, VA-1 … VA-10 and
+  VS-1 … VS-6 are unchanged.
 - **Artifact class:** **1 — Normative human-readable source** (DEC-S-022)
 - **Status:** **Normative for how a visual value may be selected** — the discipline
   every future value must satisfy before it may enter CDS. It **selects no value**.
@@ -193,12 +195,15 @@ selected**, and **visual values and visual source sets remain 0.**
 
 ### VP-7 current-state note — 2026-09-12
 
-*(**CDS-WP-022 — Theme and Environmental Presentation Model. Additive.** The dated
-notes and tables above are **not rewritten**: each was true for the period it
+*(**EFFECTIVE** at the Human-Maintainer exact-object integration commit
+`23914ecc48c1fb3cba5e3dab97a505589e821b6b` (2026-09-12) of the reviewed CDS-WP-022
+object. **CDS-WP-022 — Theme and Environmental Presentation Model. Additive.** The
+dated notes and tables above are **not rewritten**: each was true for the period it
 governed, and the 2026-09-06 note correctly recorded that **CDS-WP-021** was the
-authorized work package **at that date**. Until the Human-Maintainer exact-object
-integration commit of the reviewed CDS-WP-022 object this note is **uncommitted
-executor output** and changes no authoritative CDS state.)*
+authorized work package **at that date**. **This note records the initial CDS-WP-022
+execution stage, before the Human-Maintainer decision package**: its theme-mechanism
+and sequencing statements are **dual-state**, and their later current state is
+marked below and recorded in the next note.)*
 
 **The VP-7 verdict is unchanged: `UNSATISFIED`.** Only its **justification** needs
 updating.
@@ -226,28 +231,38 @@ family**, **VP-2 remains unsatisfied for typeface identity, weight identity and
 composites**, and the **Step-9 VP-4 state for VF-1, VF-2, VF-3, VF-5 and VF-6 is
 unchanged**. **VP-4 remains `UNSATISFIED` for VF-4**: `WP021-D2` is still
 **deferred**, and **no VF-4 technical root or source-set identity exists**.
-**CDS-WP-022 decides no theme mechanism** — five normative choices are escalated to
-the Human Maintainer as `WP022-D1` … `WP022-D5` — so **the DEC-S-135 sequencing gate
-is not cleared**, and **TS-1 is untouched: no semantic visual role carries a default
-alias.** **No visual value may be selected**, and **visual values and visual source
-sets remain 0.**
+**At that initial execution stage CDS-WP-022 had not yet decided the theme
+mechanism** — five normative choices were escalated to the Human Maintainer as
+`WP022-D1` … `WP022-D5` — so **the `DEC-S-135` theme-mechanism sequencing condition
+was not yet satisfied**, and **TS-1 was untouched: no semantic visual role carried a
+default alias.** *(**Superseded for current state:** the Human Maintainer
+subsequently decided `WP022-D1` … `WP022-D5`; **`DEC-S-137`** and **`DEC-S-138`**
+became effective, and **ADR-0007** `Accepted` and effective, at
+`23914ecc48c1fb3cba5e3dab97a505589e821b6b`; the **Theme and Context Mechanism is now
+decided**, and the **`DEC-S-135` theme-mechanism sequencing condition is satisfied
+with respect to the theme-mechanism question** — see the next note. **`THEME
+SEQUENCING CONDITION SATISFIED ≠ VISUAL VALUE SELECTION AUTHORIZED`**, and **no
+semantic visual role carries a default alias.**)* **No visual value may be
+selected**, and **visual values and visual source sets remain 0.**
 
 ### VP-7 note after the CDS-WP-022 decision package — 2026-09-12
 
-*(**CDS-WP-022 bounded decision rework. Additive.** The dated notes and tables above
-are **not rewritten**. Until the Human-Maintainer exact-object integration commit of
-the reviewed CDS-WP-022 object this note is **uncommitted executor output** and
-changes no authoritative CDS state.)*
+*(**EFFECTIVE** at the Human-Maintainer exact-object integration commit
+`23914ecc48c1fb3cba5e3dab97a505589e821b6b` (2026-09-12) of the reviewed CDS-WP-022
+object. **CDS-WP-022 bounded decision rework. Additive.** The dated notes and tables
+above are **not rewritten**.)*
 
 **The VP-7 verdict is unchanged: `UNSATISFIED`.** Nothing in the Human-Maintainer
 decision package touches it.
 
-The Human Maintainer decided **`WP022-D1` … `WP022-D5`**, recorded as the prepared
-**`DEC-S-137`** (with **ADR-0007**, covering `DEC-S-137` only) and **`DEC-S-138`**.
-From the effectivity of those decisions the **Theme and Context Mechanism is
-decided**, so the **`DEC-S-135` sequencing condition — *CDS-WP-022 precedes
-context-sensitive value selection* — is satisfied with respect to the
-theme-mechanism question.** That changes **no** prerequisite in this document:
+The Human Maintainer decided **`WP022-D1` … `WP022-D5`**, recorded as **`DEC-S-137`**
+(with **ADR-0007**, covering `DEC-S-137` only) and **`DEC-S-138`** — prepared by the
+bounded rework and **effective**, with **ADR-0007** `Accepted` and effective, at
+`23914ecc48c1fb3cba5e3dab97a505589e821b6b`. From the effectivity of those decisions
+the **Theme and Context Mechanism is decided**, so the **`DEC-S-135` sequencing
+condition — *CDS-WP-022 precedes context-sensitive value selection* — is satisfied
+with respect to the theme-mechanism question.** That changes **no** prerequisite in
+this document:
 
 > **VP-7 — `UNSATISFIED`.** **CDS-WP-022 is currently authorized, but it is not
 > authorized to select visual values.** **No work package currently authorized to

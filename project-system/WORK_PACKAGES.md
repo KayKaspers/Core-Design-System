@@ -995,20 +995,19 @@ maturity, and no claim.
 
 ### CDS-WP-021 — Adaptive Layout and Responsive Foundation
 
-**Status:** **`Completed`** — **executed with result
-`COMPLETE WITH NOTES`**, **integrated**, and **closed as recorded by this closure
-object**. Its object was integrated
+**Status:** **`Completed` / `Closed`** — **executed with result
+`COMPLETE WITH NOTES`**, **integrated**, and **closed**. Its object was integrated
 by the Human-Maintainer exact-object commit
 `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` (2026-09-11). It first returned
 **`DECISION_REQUIRED`**; the Human Maintainer then
 decided **`WP021-D1`** and **deferred `WP021-D2`**, and a **bounded rework**
 integrated both. **`EXECUTION COMPLETE ≠ WORK PACKAGE CLOSED`** and
-**`INTEGRATED ≠ CLOSED`** held throughout: closure is a **separate**
-Human-Maintainer act, separately authorized, and **becomes effective only at the
-Human-Maintainer exact-object integration commit of this independently reviewed
-closure object.** The lifecycle status and the execution result are **separate
-axes**: closure does not rewrite `COMPLETE WITH NOTES` to `COMPLETE`, and the
-initial `DECISION_REQUIRED` execution history stands.
+**`INTEGRATED ≠ CLOSED`** held throughout: closure was a **separate**
+Human-Maintainer act, separately authorized, and **became effective at the
+Human-Maintainer exact-object integration commit
+`01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`.** The lifecycle status and the execution
+result are **separate axes**: closure does not rewrite `COMPLETE WITH NOTES` to
+`COMPLETE`, and the initial `DECISION_REQUIRED` execution history stands.
 
 **Authorization.** Execution was authorized by a separate, explicit
 Human-Maintainer decision taken at **step

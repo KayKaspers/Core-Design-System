@@ -1167,11 +1167,12 @@ The **technology-neutral Layer-3 adaptive-layout and responsive foundation** of
 verified by search, not assumed — and CDS-WP-021 created none. Its object was
 **integrated** by the Human-Maintainer exact-object commit
 `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` (2026-09-11), at which it became
-normative — as did **`DEC-S-136`** and **`ADR-0006`**. **CDS-WP-021 is `Completed`**:
-closure was separately authorized by the Human Maintainer and becomes effective only
-at the Human-Maintainer exact-object integration commit of this independently
-reviewed closure object. **Closure changed no architecture, no Decision, and no
-ADR**, and the effectivity commit above is **not** the closure commit.
+normative — as did **`DEC-S-136`** and **`ADR-0006`**. **CDS-WP-021 is `Completed` /
+`Closed`**: closure was separately authorized by the Human Maintainer and **became
+effective at the Human-Maintainer exact-object integration commit
+`01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`**. **Closure changed no architecture, no
+Decision, and no ADR**, and the effectivity commit above is **not** the closure
+commit.
 
 - **The layer split is CONFIRMED, and confirming it re-owns nothing.**
   **Layer 3 owns the spatial vocabulary and the structural context model** · **Layer
@@ -1190,7 +1191,8 @@ ADR**, and the effectivity commit above is **not** the closure commit.
   **continuity decides whether a range applies at all**. Where it does not, that is a
   **declared limitation, never a silent drop**.
 - **The primary reference frame is a declared Adaptation Container** (`DEC-S-136`,
-  prepared) — a **technology-neutral spatial reference boundary** whose available
+  effective at `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`) — a
+  **technology-neutral spatial reference boundary** whose available
   space may be classified. It is **not** a CSS container query, a DOM construct, a
   framework component, a device class, a viewport identity, a product, a screen
   type, or a Layer-5 pattern. **A root or application context may serve as the
