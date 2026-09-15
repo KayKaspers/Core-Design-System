@@ -157,7 +157,9 @@ Controlled work-package roadmap for the Core Design System (CDS).
   closure and routing pass; the separately authorized post-integration
   effectiveness reconciliation has since done so — see `F-020C-01` in the
   [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
-  The decision register holds **131** entries and the ADR range **4**.)*
+  The decision register held **131** entries and the ADR range **4** at that
+  reconciliation (2026-08-31); **the effective registers now hold 138 decisions and
+  7 ADRs**.)*
 - **Next planned work package:** **`CDS-WP-020A` — Visual Token Source Authoring
   and Source Set Realization**. It is **`Planned`, not active, and not authorized**,
   and starts only on separate Human-Maintainer authorization, one work package at a

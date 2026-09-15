@@ -178,8 +178,11 @@ and VF-6, so the value half stays gated. **`RISK-099` is not required**; the Ris
 **98**. *(The effectivity qualification of those five instruments was not
 reconciled by the closure and routing pass; the separately authorized
 post-integration effectiveness reconciliation has since done so — see `F-020C-01`
-in the roadmap. The **effective** decision register holds **135** entries and the
-effective ADR range is **5**.)*
+in the roadmap. The **effective** decision register held **135** entries and the
+effective ADR range was **5** at the Step-9 integration commit `2cb244e8…`; **the
+effective registers now hold 138 decisions and 7 ADRs** — `DEC-S-136` and
+`ADR-0006` having become effective at `a6bd7bf0…`, and `DEC-S-137`, `DEC-S-138` and
+`ADR-0007` at `23914ecc…`.)*
 
 **`FR-N-03` is RESOLVED BY EXPLICIT AUTHORING-WP DESTINATION.** Nova adjudicated it
 with Human-Maintainer approval — **Option 2**: **AUTHOR is not VALIDATE.** The

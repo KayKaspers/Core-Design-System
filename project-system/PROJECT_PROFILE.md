@@ -898,9 +898,12 @@ admitted `$type` set (**DEC-S-130**), and the source-set identity and topology
 **ADR-0004** the architecture rationale; **all five are effective at commit
 `42a568d8…`, and none of them selects a value**. **OD-4 and OD-7 are answered, OD-5
 partially answered, OD-6A policy-answered and OD-6B answered by existing authority**
-by the CDS Step-9 Decision Integration Pass (2026-09-05), **prepared and not yet
-effective**. **What remains undecided:** the concrete role vocabulary, the
-per-family scale topology parameters, VF-1 tonal topology, the OD-1 `hex` residual,
+by the CDS Step-9 Decision Integration Pass (2026-09-05). Its records —
+**DEC-S-132 … DEC-S-135 and ADR-0005** — were prepared before integration and
+**became effective at the Human-Maintainer exact integration commit
+`2cb244e889c1a6b5a278afb233995a0379b5d9ef`**. **What remains undecided:** the
+concrete role vocabulary, the per-family scale topology parameters, VF-1 tonal
+topology, the OD-1 `hex` residual,
 the OD-2 font-identity and composite residuals, and any migration compatibility
 mechanism outside the normative Semantic alias graph.
 

@@ -998,8 +998,12 @@ effective registers are now 138 decisions and 7 ADRs**, `DEC-S-137` and `DEC-S-1
 having become effective and `ADR-0007` `Accepted` and effective at
 `23914ecc48c1fb3cba5e3dab97a505589e821b6b` —
 **`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION`** held until the
-integration commit, and **`EFFECTIVE ≠ CLOSED`** holds now: **CDS-WP-021 is not
-closed.**
+integration commit, and **`EFFECTIVE ≠ CLOSED`** holds: `DEC-S-136` and `ADR-0006`
+became effective at `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` before CDS-WP-021
+was closed, and that effectivity did not itself close it. **CDS-WP-021 became
+`Completed` / `Closed` only at the later Human-Maintainer exact-object integration
+commit `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`** — the CDS-WP-021 effectivity
+commit is **not** the CDS-WP-021 closure commit.
 
 **The step this section previously named — a fresh independent review of the CDS
 Step-9 Decision Integration object, Nova adjudication, the Human-Maintainer exact

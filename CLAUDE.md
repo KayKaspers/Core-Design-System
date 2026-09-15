@@ -1062,9 +1062,13 @@ manifest, resolver, schema, validator rule, test, or fixture; admitted **no**
 evidence; changed **no** maturity; touched **no** Semantic Status byte; made **no**
 claim; and activated **no** work package — **it activated neither CDS-WP-021 nor
 CDS-WP-022, and it reordered no roadmap.** *(**CDS-WP-021 has since been authorized
-and activated** by a separate, explicit Human-Maintainer act; that act is not this
-pass, and this pass still activated nothing. **CDS-WP-022 remains not
-authorized.**)* **`RISK-099` was assessed and is not
+and activated** by a separate, explicit Human-Maintainer act and has since been
+**closed**, closure effective at `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`.
+**CDS-WP-022 has since been authorized as well**, by a further separate, explicit
+Human-Maintainer act; it is **integrated** at
+`23914ecc48c1fb3cba5e3dab97a505589e821b6b`,
+**`AUTHORIZED` / `ACTIVE FOR EXECUTION`**, and **not closed**. Neither act is this
+pass, and this pass still activated nothing.)* **`RISK-099` was assessed and is not
 required** — the normative OKLCH-to-sRGB accessibility-path conversion architecture
 that would have created the exposure was **rejected** — so the register stays at
 **98** with **no** risk accepted, closed, or re-scored. **The pass itself did not
@@ -1147,8 +1151,12 @@ source file, manifest, resolver, schema, validator rule, test, or fixture**; adm
 candidate and is NOT authorized** — **SEQUENCED NEXT ≠ AUTHORIZED**. *(Stated as at
 2026-09-05. **Superseded as live current state only in respect of which work package
 is authorized**: the Human Maintainer subsequently authorized **CDS-WP-021** by a
-separate, explicit act. **CDS-WP-022 remains the recommended candidate and remains
-NOT authorized**, and this pass still activated nothing.)*
+separate, explicit act, and later still authorized **CDS-WP-022** by a further
+separate, explicit act — **CDS-WP-022** is **integrated** at
+`23914ecc48c1fb3cba5e3dab97a505589e821b6b`, **`AUTHORIZED` / `ACTIVE FOR EXECUTION`**,
+and **not closed**. Neither authorization came from this pass or from its
+recommendation — **SEQUENCED NEXT ≠ AUTHORIZED** still holds — and this pass still
+activated nothing.)*
 
 ## Adaptive layout and responsive foundation (CDS-WP-021)
 

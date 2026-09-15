@@ -188,9 +188,11 @@ approved.
   **Closure does not resolve it** — **`DEFERRED OPEN QUESTION ≠
   INCOMPLETE WORK PACKAGE`** — and closure satisfies no value prerequisite, admits
   no evidence, changes no maturity, and adds no Decision, ADR, or risk.
-  **`CDS-WP-020A` and CDS-WP-022 … CDS-WP-053
-  remain `Planned`, not active, and not authorized**, and **`DEC-S-135` is
-  unchanged.**
+  **CDS-WP-022 was later authorized by a separate, explicit Human-Maintainer act**,
+  not by this closure, and is **integrated** at `23914ecc…`, **`AUTHORIZED` /
+  `ACTIVE FOR EXECUTION`**, and **not closed**; **`CDS-WP-020A` and CDS-WP-023 …
+  CDS-WP-053 remain `Planned`, not active, and not authorized**, and **`DEC-S-135`
+  is unchanged.**
 - Previous work package: **CDS-WP-020 — Reference and Semantic Token
   Foundation** was authorized separately by the Human Maintainer on 2026-08-26,
   **executed with result `DECISION_REQUIRED`**, and **integrated** by the

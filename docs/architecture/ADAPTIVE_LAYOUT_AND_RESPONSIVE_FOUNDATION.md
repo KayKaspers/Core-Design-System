@@ -584,13 +584,26 @@ decide, schedule, or authorize it.)*
 9. **No evidence, no maturity change, no risk accepted or closed, no claim, no
    conformance, no release, no tag, and no publication.**
 10. **No risk entry** — the risk register stays at **98**, with **no `RISK-099`**.
-    **The effective Decision and ADR registers are 136 and 6**; **`DEC-S-136`
-    and `ADR-0006` are effective** at the integration commit
+    **At the CDS-WP-021 effectivity and closure milestones the effective Decision
+    and ADR registers were 136 and 6**; **`DEC-S-136` and `ADR-0006` are
+    effective** at the integration commit
     `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`, and **no `DEC-S-137` and no
-    `ADR-0007` exists.** **Their effectivity created no value and no identifier.**
-11. **No work package is activated** — **`CDS-WP-020A`**, **CDS-WP-022**,
-    **CDS-WP-023** and **CDS-WP-024** all remain `Planned`, not active, and not
-    authorized.
+    `ADR-0007` existed then — CDS-WP-021 created neither.** **The effectivity of
+    `DEC-S-136` and `ADR-0006` created no value and no identifier.** **`DEC-S-137`
+    and `DEC-S-138` later became effective, and `ADR-0007` `Accepted` and
+    effective, at the Human-Maintainer exact-object integration commit
+    `23914ecc48c1fb3cba5e3dab97a505589e821b6b`** of the reviewed CDS-WP-022 object,
+    and are unrelated to `WP021-D2`; **the current effective Decision and ADR
+    registers are 138 and 7.**
+11. **No work package is activated** — **CDS-WP-021 itself activated no later work
+    package**, and at its effectivity and closure milestones **`CDS-WP-020A`**,
+    **CDS-WP-022**, **CDS-WP-023** and **CDS-WP-024** all remained `Planned`, not
+    active, and not authorized. **CDS-WP-022 was later authorized by a separate,
+    explicit Human-Maintainer act**, not by CDS-WP-021, and is **`AUTHORIZED` /
+    `ACTIVE FOR EXECUTION`**, **integrated** at
+    `23914ecc48c1fb3cba5e3dab97a505589e821b6b`, and **not closed** —
+    **`CLOSED ≠ SUCCESSOR AUTHORIZED`**. **`CDS-WP-020A`**, **CDS-WP-023** and
+    **CDS-WP-024** remain `Planned`, not active, and not authorized.
 
 ## Change control
 
