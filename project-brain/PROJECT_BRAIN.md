@@ -91,7 +91,7 @@ approved.
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**,
-  **CDS-WP-017**, **CDS-WP-018**, **CDS-WP-019**
+  **CDS-WP-017**, **CDS-WP-018**, **CDS-WP-019**, **CDS-WP-020**, **CDS-WP-021**
 - Closed work package: **CDS-WP-019 — Core Visual Foundation Architecture** —
   **architecture only**: it defines how the visual foundation is structured,
   governed, represented, extended, validated, and consumed. It created **no visual
@@ -995,11 +995,14 @@ minimal additive validation-case-schema correction):
   **Executor-produced, independently unreviewed (DEC-S-121); Not Candidate
   (DEC-S-124).**
 
-## Next step
+## Historical next-step progression
 
-**CDS-WP-018 — Deferred Governance and Repository Hygiene Reconciliation** is the
+**This section records progression and carries no work-package authority**; the
+current work-package authority statement is carried by
+[Current state](#current-state) above. At the milestone recorded here,
+**CDS-WP-018 — Deferred Governance and Repository Hygiene Reconciliation** was the
 authorized work package. The sections below record how the repository reached that
-point.
+point and how it progressed from it.
 
 **CDS-WP-016 — Semantic Status Foundation Independent Evidence Review and
 Candidate Gate** is closed, and its review work was **executed**:

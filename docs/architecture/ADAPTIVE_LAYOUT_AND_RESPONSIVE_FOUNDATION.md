@@ -411,7 +411,7 @@ Mechanism.**)*
 
 | # | Statement |
 | --- | --- |
-| 1 | **This document defines no theme ID, no theme context vocabulary, no environmental presentation mode, no semantic-to-reference theme binding, no default theme alias, and no light, dark, or high-contrast mechanics.** All of it belongs to **CDS-WP-022**, which is **`Planned`, not active, and not authorized**. |
+| 1 | **This document defines no theme ID, no theme context vocabulary, no environmental presentation mode, no semantic-to-reference theme binding, no default theme alias, and no light, dark, or high-contrast mechanics.** All of it belongs to **CDS-WP-022**, which at the CDS-WP-021 execution and effectivity milestones was **`Planned`, not active, and not authorized** — and **CDS-WP-021 did not authorize it**. **CDS-WP-022 was later authorized by a separate, explicit Human-Maintainer act**, is **integrated** at `23914ecc48c1fb3cba5e3dab97a505589e821b6b`, and is currently **`AUTHORIZED` / `ACTIVE FOR EXECUTION`** and **not closed**. **`LATER AUTHORIZATION ≠ CDS-WP-021 AUTHORIZATION`**, and recording that later state is a lifecycle update, not an architecture change. |
 | 2 | **TS-1 holds unchanged:** no semantic visual role carries a default alias to a reference primitive before CDS-WP-022 decides the mechanism. **This document creates no alias, no role, and no binding.** |
 | 3 | **TS-2 holds unchanged:** CDS-WP-022 precedes **context-sensitive value selection**. **This document selects no value of any kind**, so it does not reach that gate. |
 | 4 | **TS-3 and TS-4 apply:** the structural work above — the layer split, the shape of the context model, the range obligations, and the grid, container and content-width contracts — is **context-independent** by **TC-1**, **TC-2**, **T-8**, **N-6** and **RB-1**, and is therefore not blocked. **`CDS-WP-022 BEFORE VALUE SELECTION` does not mean `CDS-WP-022 BEFORE EVERY STRUCTURAL ACTIVITY`.** |
@@ -497,9 +497,12 @@ THEME RESOLUTION CONTEXT`** (**CX-9**).
 
 It is recorded as **`DEC-S-136`**, with
 **[ADR-0006](../decisions/ADR-0006-ADAPTIVE_SPATIAL_CONTEXT_AND_NAMED_RANGE_ARCHITECTURE.md)**
-carrying the rationale. Both are **`PROPOSED / AUTHORIZED FOR INTEGRATION` — NOT YET
-EFFECTIVE**, and become effective only at the Human-Maintainer exact integration
-commit. **`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION`.**
+carrying the rationale. Both were **`PROPOSED / AUTHORIZED FOR INTEGRATION`** before
+the exact-object integration, and
+**`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION`** held until then. Both
+became effective only at the Human-Maintainer exact-object integration commit
+`a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`: **`DEC-S-136` is effective there**, and
+**ADR-0006 is `Accepted` and effective at the same commit**.
 
 **The architecture is decided; the vocabulary is not.** No range name, no number of
 ranges, no threshold, and no boundary value is selected, and none may be inferred.
