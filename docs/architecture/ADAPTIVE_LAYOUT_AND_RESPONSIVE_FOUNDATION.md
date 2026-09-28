@@ -216,6 +216,34 @@ chosen.
 > exists to prevent, and **TC-6** requires the semantic layer to presuppose no
 > context set. Keeping the two separate costs nothing and forecloses nothing.
 
+**CX-9 current-state note — CDS-WP-022 closure object, 2026-09-28.** *(Effective
+only at the Human-Maintainer exact-object integration commit of that independently
+reviewed closure object; until then it changes no authoritative CDS state.
+**Additive: CX-9 and the note above are not edited, and `DEC-S-136` is
+unchanged.**)* CX-9 restates `DEC-S-136` clauses 13 and 14, and the note above gives
+its rationale, **as they stood at the CDS-WP-021 execution and effectivity
+milestones**; **their reservation of the mapping to CDS-WP-022 must not be read as a
+live allocation.** That reservation is **discharged by Human-Maintainer decision**:
+on an escalation raised by CDS-WP-022, the Human Maintainer decided the question as
+orthogonality on 2026-09-12, recorded as **`DEC-S-137`** and effective at the
+Human-Maintainer exact-object integration commit
+`23914ecc48c1fb3cba5e3dab97a505589e821b6b` — **Theme Resolution Context and Spatial
+Context remain orthogonal**, **no Spatial Context is a Theme modifier, a Theme
+selector, or a Theme-resolution input**, and **no Theme Resolution Context classifies
+spatial geometry**, changes an Adaptation Container, changes a responsive range, or
+creates a threshold (clauses 11 and 12, **TM-11**, **CB-2**). **That settles the
+representation, not the evaluation:** **only joint Theme × Spatial rendering and
+evidence evaluation remains, DEFERRED to separately authorized future scope**
+(clause 13, **TM-12**,
+[ADR-0007](../decisions/ADR-0007-THEME-RESOLUTION-AND-CONTEXT-EVIDENCE-ARCHITECTURE.md)).
+**No residual authority remains with CDS-WP-022**: the deferred evaluation is **not
+routed to CDS-WP-022**, its destination is **not a reopening or re-authorization of
+CDS-WP-022**, and **no currently authorized work package owns it** (*Deferred
+decisions*, row 7). **This note creates no successor and authorizes no realization,
+no value selection, and no implementation** —
+**`CDS-WP-021 DID NOT DECIDE ≠ DEC-S-137 NEVER DECIDED`** and
+**`DEFERRED ≠ CDS-WP-022 RETAINS AUTHORITY`**.
+
 ## The Adaptation Container
 
 *(Normative — **DEC-S-136**, Human-Maintainer decision of 2026-09-06, **effective at
@@ -411,13 +439,13 @@ Mechanism.**)*
 
 | # | Statement |
 | --- | --- |
-| 1 | **This document defines no theme ID, no theme context vocabulary, no environmental presentation mode, no semantic-to-reference theme binding, no default theme alias, and no light, dark, or high-contrast mechanics.** All of it belongs to **CDS-WP-022**, which at the CDS-WP-021 execution and effectivity milestones was **`Planned`, not active, and not authorized** — and **CDS-WP-021 did not authorize it**. **CDS-WP-022 was later authorized by a separate, explicit Human-Maintainer act**, is **integrated** at `23914ecc48c1fb3cba5e3dab97a505589e821b6b`, and is currently **`AUTHORIZED` / `ACTIVE FOR EXECUTION`** and **not closed**. **`LATER AUTHORIZATION ≠ CDS-WP-021 AUTHORIZATION`**, and recording that later state is a lifecycle update, not an architecture change. |
+| 1 | **This document defines no theme ID, no theme context vocabulary, no environmental presentation mode, no semantic-to-reference theme binding, no default theme alias, and no light, dark, or high-contrast mechanics.** All of it belongs to **CDS-WP-022**, which at the CDS-WP-021 execution and effectivity milestones was **`Planned`, not active, and not authorized** — and **CDS-WP-021 did not authorize it**. **CDS-WP-022 was later authorized by a separate, explicit Human-Maintainer act**, was **executed** and **integrated** at `23914ecc48c1fb3cba5e3dab97a505589e821b6b`, and was subsequently **`Completed` / `Closed`** through its own separate closure act, whose closure state is effective only at the Human-Maintainer exact-object integration commit of the independently reviewed CDS-WP-022 closure object. **`LATER AUTHORIZATION ≠ CDS-WP-021 AUTHORIZATION`**, and recording that later state is a lifecycle update, not an architecture change. |
 | 2 | **TS-1 holds unchanged:** no semantic visual role carries a default alias to a reference primitive before CDS-WP-022 decides the mechanism. **This document creates no alias, no role, and no binding.** |
 | 3 | **TS-2 holds unchanged:** CDS-WP-022 precedes **context-sensitive value selection**. **This document selects no value of any kind**, so it does not reach that gate. |
 | 4 | **TS-3 and TS-4 apply:** the structural work above — the layer split, the shape of the context model, the range obligations, and the grid, container and content-width contracts — is **context-independent** by **TC-1**, **TC-2**, **T-8**, **N-6** and **RB-1**, and is therefore not blocked. **`CDS-WP-022 BEFORE VALUE SELECTION` does not mean `CDS-WP-022 BEFORE EVERY STRUCTURAL ACTIVITY`.** |
 | 5 | **What CDS-WP-022 may consume from this document:** that a spatial context has a **declared, channel-determined reference frame** (CX-2, AC-1); that **continuity decides applicability** (CX-3); that a spatial context **carries no meaning** (CX-4); and that **a spatial context is not a theme resolution context** (CX-9). |
-| 6 | **`SPATIAL CONTEXT ≠ THEME RESOLUTION CONTEXT`** (**DEC-S-136**). The two are **separate authority dimensions**. **CDS-WP-021 does not decide whether or how they compose**, and **CDS-WP-022 retains full authority** to define a mapping or composition later. **This is a boundary, not a theme decision**, and it neither prejudges nor forecloses that mapping. |
-| 7 | **Rejecting the implicit reading is the point.** Treating a spatial context as a theme by implication would decide — silently, and in passing — that a resolver composes at least two context dimensions, which is a **mechanism decision reserved to CDS-WP-022** (DEC-S-135, TC-6). The conservative reading holds until CDS-WP-022 says otherwise. |
+| 6 | **`SPATIAL CONTEXT ≠ THEME RESOLUTION CONTEXT`** (**DEC-S-136**). The two are **separate authority dimensions**. **At the CDS-WP-021 execution and effectivity milestones, CDS-WP-021 decided neither the Theme and Context Mechanism nor whether or how a Spatial Context composes with a Theme Resolution Context, and it did not authorize CDS-WP-022** — **this is a boundary, not a theme decision.** **`DEC-S-137` later decided that question as orthogonality**, and it is **effective at the Human-Maintainer exact-object integration commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b`**: **Theme Resolution Context and Spatial Context remain orthogonal**; **no Spatial Context is a Theme modifier, a Theme selector, or a Theme-resolution input**; and **no Theme Resolution Context classifies spatial geometry**, changes an Adaptation Container, changes a responsive range, or creates a threshold (clauses 11 and 12, **TM-11**). **The only residual is joint Theme × Spatial rendering and evidence evaluation**, which stays **DEFERRED** to separately authorized future scope (clause 13, **TM-12**). **`CDS-WP-021 DID NOT DECIDE ≠ DEC-S-137 NEVER DECIDED`.** |
+| 7 | **Rejecting the implicit reading is the point.** Treating a spatial context as a theme by implication would decide — silently, and in passing — that a resolver composes at least two context dimensions, which was a **mechanism decision outside CDS-WP-021's authority** (DEC-S-135, TC-6); **implicit conflation was therefore forbidden.** **`DEC-S-137` confirms that conservative anti-conflation rule** (clauses 11 and 12, **TM-11**): **no Spatial Context composes implicitly into Theme resolution** — none is a Theme modifier, a Theme selector, or a Theme-resolution input. **Only joint Theme × Spatial rendering and evidence evaluation remains deferred** (clause 13, **TM-12**), and **no residual authority remains with CDS-WP-022** — **`DEFERRED ≠ CDS-WP-022 RETAINS AUTHORITY`**. |
 
 ## Validation requirements
 
@@ -561,7 +589,7 @@ decide, schedule, or authorize it.)*
 | 4 | Every **concrete value** — threshold, width, gutter, margin, column count, extent, measure, target dimension | A separately authorized value-authoring work package, under **VP-1 … VP-7**; **VP-3, VP-5, VP-6 and VP-7 are UNSATISFIED** |
 | 5 | **Density levels and their number** | **VF-3**; values route to a separately authorized authoring work package |
 | 6 | The **density, reflow and target-size interaction** | **CDS-WP-031** — it requires rendering evidence (**DA-6**) |
-| 7 | The **Theme and Context Mechanism**, and **whether and how a Spatial Context composes with a Theme Resolution Context**. **`DEC-S-136` fixes only that they are separate** (CX-9) | **CDS-WP-022**, which **retains full authority** over that mapping |
+| 7 | **Joint Theme × Spatial rendering and evidence evaluation** — the only residual left once the **Theme and Context Mechanism** was **CLOSED by `DEC-S-137` and `DEC-S-138`**, both **effective at the Human-Maintainer exact-object integration commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b`**. The current architecture is decided: **Theme Resolution Context is orthogonal to Spatial Context**, **no Spatial Context is a Theme modifier, a Theme selector, or a Theme-resolution input**, and **no Theme Resolution Context classifies spatial geometry** (`DEC-S-137` clauses 11 and 12, **TM-11**). **`DEC-S-136` fixed that they are separate** (CX-9), and it is **unchanged** | **DEFERRED** to **separately authorized future scope** — **`DEC-S-137` clause 13**, **TM-12**. **No currently authorized work package owns this residual**, and it is **not routed to CDS-WP-022** |
 | 8 | The **pattern strategy** — which layout a screen uses and what it becomes | **Layer 5**, pattern work; **CR-004 stays there** |
 | 9 | **Named extension points** for a Product Profile — the set is **empty** | **CDS-WP-032** |
 | 10 | **Document, page and presentation geometry standards** | Per-channel, with the accessibility profile each channel needs first (DEC-S-058) |
@@ -602,11 +630,14 @@ decide, schedule, or authorize it.)*
     package**, and at its effectivity and closure milestones **`CDS-WP-020A`**,
     **CDS-WP-022**, **CDS-WP-023** and **CDS-WP-024** all remained `Planned`, not
     active, and not authorized. **CDS-WP-022 was later authorized by a separate,
-    explicit Human-Maintainer act**, not by CDS-WP-021, and is **`AUTHORIZED` /
-    `ACTIVE FOR EXECUTION`**, **integrated** at
-    `23914ecc48c1fb3cba5e3dab97a505589e821b6b`, and **not closed** —
-    **`CLOSED ≠ SUCCESSOR AUTHORIZED`**. **`CDS-WP-020A`**, **CDS-WP-023** and
-    **CDS-WP-024** remain `Planned`, not active, and not authorized.
+    explicit Human-Maintainer act**, not by CDS-WP-021; it was **executed**,
+    **integrated** at `23914ecc48c1fb3cba5e3dab97a505589e821b6b`, and subsequently
+    **`Completed` / `Closed`** through its own separate closure act, whose closure
+    state is effective only at the Human-Maintainer exact-object integration commit
+    of the independently reviewed CDS-WP-022 closure object — **`LATER AUTHORIZATION
+    ≠ CDS-WP-021 AUTHORIZATION`** and **`CLOSED ≠ SUCCESSOR AUTHORIZED`**.
+    **`CDS-WP-020A`**, **CDS-WP-023** and **CDS-WP-024** remain `Planned`, not active,
+    and not authorized.
 
 ## Change control
 

@@ -191,9 +191,12 @@ and `ADR-0007` having become effective at `23914ecc…` — and **VF-4 identity 
 deferred**. **Closure resolves no deferred question, satisfies no value
 prerequisite, and authorizes no successor.**
 
-**CDS-WP-022 — Theme and Environmental Presentation Model** is **`AUTHORIZED` /
-`ACTIVE FOR EXECUTION`**, by a separate, explicit Human-Maintainer act — not by the
-closure and not by the roadmap. It is **contract only**: it defines what a **Theme
+**CDS-WP-022 — Theme and Environmental Presentation Model** is **`Completed` /
+`Closed`**: authorized for execution by a separate, explicit Human-Maintainer act —
+not by the CDS-WP-021 closure and not by the roadmap — and closed by a further,
+separate Human-Maintainer authorization whose **closure state is effective only at
+the Human-Maintainer exact-object integration commit of this independently reviewed
+closure object**. It is **contract only**: it defines what a **Theme
 Resolution Context** is, what a decision to support one must affirm, how a context is
 identified without becoming a path segment, how a **requested** context enters
 resolution, where resolution **fails closed**, and how a context relates to a channel,
@@ -228,6 +231,9 @@ from it**, and **`Light` and `Dark` are
 human-readable architectural names, not machine-readable identifiers**. It creates
 **no theme instance, no machine-readable context identifier, no default alias, and no
 value**, and **`TS-1` still binds** — no semantic role carries a default alias.
+**Closure resolves no deferred question, satisfies no value prerequisite, and
+authorizes no successor: no work package is currently authorized** from the closure
+object's integration onward — **`CLOSED ≠ SUCCESSOR AUTHORIZED`** — and
 **`CDS-WP-020A` and CDS-WP-023 … CDS-WP-053 are planned only — not active, not
 authorized, work not started** — and are recorded in the
 [Post-Candidate Development Roadmap](docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
@@ -959,30 +965,40 @@ maturity or approval it does not hold.
   DEFERRED**, leaving the **VF-4 technical root and Source Set identity OPEN** with
   **no Decision and no ADR** — **closure resolves it in no way**, and **`DEFERRED
   OPEN QUESTION ≠ INCOMPLETE WORK PACKAGE`**.
-- **Currently authorized:** **`CDS-WP-022` — Theme and Environmental Presentation
-  Model**, **`AUTHORIZED` / `ACTIVE FOR EXECUTION`** by a separate, explicit
-  Human-Maintainer act. Closing CDS-WP-021 authorized no successor — **`CLOSED ≠
-  SUCCESSOR AUTHORIZED`** and **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`** — and
-  neither did the `DEC-S-135` recommendation that named it: **`SEQUENCED NEXT ≠
-  AUTHORIZED`**. It is **executed with result `COMPLETE WITH NOTES`**, after first
-  returning `DECISION_REQUIRED` and escalating **`WP022-D1` … `WP022-D5`** — **report
-  keys, not governance identifiers** — which the **Human Maintainer decided on
-  2026-09-12**. The decisions are recorded as **`DEC-S-137`** (with
-  **`ADR-0007`**, covering `DEC-S-137` only) and **`DEC-S-138`**, all **`Accepted` and
-  effective at the Human-Maintainer exact-object integration commit
-  `23914ecc48c1fb3cba5e3dab97a505589e821b6b`** — **136/6 until it, 138/7 from it,
-  risks 98 throughout**. It **created no theme
+- **Completed:** **`CDS-WP-022` — Theme and Environmental Presentation Model** —
+  authorized for execution by a separate, explicit Human-Maintainer act. Closing
+  CDS-WP-021 authorized no successor — **`CLOSED ≠ SUCCESSOR AUTHORIZED`** and
+  **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`** — and neither did the `DEC-S-135`
+  recommendation that named it: **`SEQUENCED NEXT ≠ AUTHORIZED`**. It was **executed
+  with result `COMPLETE WITH NOTES`**, after first returning `DECISION_REQUIRED` and
+  escalating **`WP022-D1` … `WP022-D5`** — **report keys, not governance
+  identifiers** — which the **Human Maintainer decided on 2026-09-12**. The decisions
+  are recorded as **`DEC-S-137`** (with **`ADR-0007`**, covering `DEC-S-137` only)
+  and **`DEC-S-138`**, all **`Accepted` and effective at the Human-Maintainer
+  exact-object integration commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b`** —
+  **136/6 until it, 138/7 from it, risks 98 throughout**. It **created no theme
   instance, no machine-readable context identifier, no default alias, and no value,
-  identifier, role, Source Set, schema, validator rule, test, or fixture**; **closure
-  would be a separate Human-Maintainer act**; and **it authorizes no successor and
-  satisfies no `CDS-WP-020A` prerequisite beyond the `DEC-S-135` theme-mechanism
-  sequencing condition** — **`THEME GATE SATISFIED ≠ CDS-WP-020A AUTHORIZED`**.
+  identifier, role, Source Set, schema, validator rule, test, or fixture**. **It is
+  `Completed` / `Closed`**, closed by a further, separate Human-Maintainer
+  authorization whose **closure state is effective only at the Human-Maintainer
+  exact-object integration commit of this independently reviewed closure object**;
+  **closure changes neither the effectivity of `DEC-S-137` and `DEC-S-138` nor the
+  status of `ADR-0007`**, and **it authorizes no successor and satisfies no
+  `CDS-WP-020A` prerequisite beyond the `DEC-S-135` theme-mechanism sequencing
+  condition** — **`THEME GATE SATISFIED ≠ CDS-WP-020A AUTHORIZED`**.
+- **Currently authorized:** **NONE** — from the Human-Maintainer exact-object
+  integration commit of this independently reviewed closure object. Closing
+  CDS-WP-022 authorizes no successor — **`CLOSED ≠ SUCCESSOR AUTHORIZED`** and
+  **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`**.
 - **Planned:** **`CDS-WP-020A`** and **CDS-WP-023 … CDS-WP-053** — **not active, not
   authorized, work not started.** They remain inactive until separately authorized
   by the Human Maintainer. **OD-7 is answered by `DEC-S-135`: CDS-WP-022 precedes
-  context-sensitive value selection**, and **CDS-WP-022 has since been authorized by
-  a separate act** — **SEQUENCED NEXT ≠ AUTHORIZED**, then and now. **Value selection
-  remains unauthorized**, because **CDS-WP-022 is not authorized to select values.**
+  context-sensitive value selection**, and **CDS-WP-022 was authorized by a separate
+  act and is recorded as `Completed` / `Closed`** — **SEQUENCED NEXT ≠ AUTHORIZED**,
+  then and now. **Value selection remains unauthorized — VP-7 stays `UNSATISFIED`** —
+  because **no currently authorized work package may select visual values**:
+  CDS-WP-022 never carried value-selection authority, and **its closure creates
+  none** — **`CLOSED ≠ VALUE SELECTION AUTHORIZED`**.
 
 The full controlled roadmap is in
 [project-system/WORK_PACKAGES.md](project-system/WORK_PACKAGES.md); the forward

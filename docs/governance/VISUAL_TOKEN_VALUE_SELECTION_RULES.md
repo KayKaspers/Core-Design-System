@@ -43,6 +43,16 @@
   the record of the periods they governed**. **No value is selected**, and
   VP-1 … VP-7, VE-1 … VE-12, IG-1 … IG-10, VD-1 … VD-8, VA-1 … VA-10 and
   VS-1 … VS-6 are unchanged.
+- **Amended by:** CDS-WP-022 closure object, 2026-09-15 — **one additive
+  current-state note under VP-1 … VP-7, advancing the VP-7 justification only.**
+  **This prepared Working Tree has no authority**, and **that amendment is effective
+  only at the Human-Maintainer exact-object integration commit of this independently
+  reviewed closure object**, at which the CDS-WP-022 closure state is effective. **The
+  VP-7 verdict does not change — VP-7 remains `UNSATISFIED`** — and **no prerequisite
+  text is rewritten**: the 2026-08-27, 2026-09-05, 2026-09-06 and 2026-09-12 notes
+  are **preserved as the record of the periods they governed**. **No value is
+  selected**, and VP-1 … VP-7, VE-1 … VE-12, IG-1 … IG-10, VD-1 … VD-8,
+  VA-1 … VA-10 and VS-1 … VS-6 are unchanged.
 - **Artifact class:** **1 — Normative human-readable source** (DEC-S-022)
 - **Status:** **Normative for how a visual value may be selected** — the discipline
   every future value must satisfy before it may enter CDS. It **selects no value**.
@@ -250,7 +260,9 @@ selected**, and **visual values and visual source sets remain 0.**
 *(**EFFECTIVE** at the Human-Maintainer exact-object integration commit
 `23914ecc48c1fb3cba5e3dab97a505589e821b6b` (2026-09-12) of the reviewed CDS-WP-022
 object. **CDS-WP-022 bounded decision rework. Additive.** The dated notes and tables
-above are **not rewritten**.)*
+above are **not rewritten**. **From the effectivity of the closure note below, this
+note's VP-7 justification — *"CDS-WP-022 is currently authorized"* — is superseded
+for current state**; the verdict is unchanged.)*
 
 **The VP-7 verdict is unchanged: `UNSATISFIED`.** Nothing in the Human-Maintainer
 decision package touches it.
@@ -288,6 +300,42 @@ unchanged**, including **`UNSATISFIED` for VF-4**: **`WP021-D2` stays deferred**
 vocabulary, and not a value** — and **satisfy no prerequisite in this document.**
 **No visual value may be selected**, and **visual values and visual source sets
 remain 0.**
+
+### VP-7 current-state note after the CDS-WP-022 closure — 2026-09-15
+
+*(**Additive. CDS-WP-022 closure object.** This prepared Working Tree has no
+authority: **this note is effective only at the Human-Maintainer exact-object
+integration commit of this independently reviewed closure object**, at which the
+CDS-WP-022 closure state is effective. The dated notes and tables above are **not
+rewritten**: each was true for the period it governed, and the two 2026-09-12 notes
+correctly recorded that **CDS-WP-022** was the authorized work package **at that
+date**.)*
+
+**The VP-7 verdict is unchanged: `UNSATISFIED`.** Only its **justification**
+advances.
+
+**CDS-WP-022 — Theme and Environmental Presentation Model is `Completed` /
+`Closed`**, with its execution result unchanged at **`COMPLETE WITH NOTES`**. So
+*"CDS-WP-022 is currently authorized"* is no longer the reason. The correct reason
+is:
+
+> **VP-7 — `UNSATISFIED`.** **CDS-WP-022 is `Completed` / `Closed` and never carried
+> value-selection authority.** **No work package is currently authorized to select
+> visual values.**
+
+**VP-7 requires the authorization of the work package that makes the value
+selection**, and **closing a work package creates no such authority** — **`CLOSED ≠
+VALUE SELECTION AUTHORIZED`** and **`CLOSED ≠ SUCCESSOR AUTHORIZED`**. **`THEME GATE
+SATISFIED ≠ VALUE SELECTION AUTHORIZED`** and **`THEME GATE SATISFIED ≠ CDS-WP-020A
+AUTHORIZED`** both still hold. **`CDS-WP-020A` remains `Planned`, not active, and not
+authorized**, as do CDS-WP-023 … CDS-WP-053.
+
+**Nothing else moves.** **VP-3, VP-5 and VP-6 remain `UNSATISFIED` for every
+family**, **VP-2 remains unsatisfied** for typeface identity, weight identity and
+composites, and **VP-4 is unchanged**, including **`UNSATISFIED` for VF-4**:
+**`WP021-D2` stays deferred**, and **no VF-4 technical root or source-set identity
+exists.** **The closure satisfies no prerequisite in this document.** **No visual
+value may be selected**, and **visual values and visual source sets remain 0.**
 
 ## The evaluation
 

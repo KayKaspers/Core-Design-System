@@ -181,7 +181,7 @@ Constraints any later data-visualization work inherits:
 | Condition | Obligation |
 | --- | --- |
 | **Greyscale and monochrome print** | Every distinction that conveys meaning survives, through a non-colour carrier. |
-| **Forced colours and platform high contrast** | The artifact **remains usable** (Accessibility Requirements Baseline 3.5). Whether CDS additionally ships a high-contrast context is **open** and is CDS-WP-022's. |
+| **Forced colours and platform high contrast** | The artifact **remains usable** (Accessibility Requirements Baseline 3.5). **This is an environmental accessibility condition, not a Core Theme Resolution Context** (**`DEC-S-138`** part B, effective at `23914ecc48c1fb3cba5e3dab97a505589e821b6b`), and the obligation **binds independently of the selected Theme**. **CDS introduces no separate Core High-Contrast Theme Resolution Context at this stage**; a **future dedicated CDS High-Contrast Theme is DEFERRED, not permanently rejected**, and requires **separate Human-Maintainer authorization and its own governance**. |
 | **Colour-vision differences** | No meaning depends on distinguishing hues. Pairs that differ only in hue must not be the sole distinction between two meanings. |
 | **Reduced or degraded rendering** | A role that cannot be rendered must degrade to a state that loses no meaning, and the limitation must be **declared** (VF-I-11). |
 

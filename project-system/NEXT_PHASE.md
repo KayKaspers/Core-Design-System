@@ -9,37 +9,27 @@
 - **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**,
-  **CDS-WP-017**, **CDS-WP-018**, **CDS-WP-019**, **CDS-WP-020**, **CDS-WP-021**.
-  **CDS-WP-021 is `Completed` / `Closed`**, closure effective at the
-  Human-Maintainer exact-object integration commit
+  **CDS-WP-017**, **CDS-WP-018**, **CDS-WP-019**, **CDS-WP-020**, **CDS-WP-021**,
+  **CDS-WP-022**. **CDS-WP-022 is recorded by this closure object with target
+  lifecycle `Completed` / `Closed`**: this prepared Working Tree has no authority, and
+  **the closure state is effective only at the Human-Maintainer exact-object
+  integration commit of this independently reviewed closure object**, with its
+  execution result unchanged at **`COMPLETE WITH NOTES`**. **`CLOSURE OBJECT PREPARED
+  ≠ CLOSURE EFFECTIVE`.** **CDS-WP-021 is `Completed` / `Closed`**, closure effective
+  at the Human-Maintainer exact-object integration commit
   `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`, with its execution result unchanged at
   **`COMPLETE WITH NOTES`**. **`CLOSURE OBJECT PREPARED ≠ CLOSURE EFFECTIVE`** held
   until that commit.
-- **Current work package: `CDS-WP-022` — Theme and Environmental Presentation
-  Model**, **`AUTHORIZED` / `ACTIVE FOR EXECUTION`** by a separate, explicit
-  Human-Maintainer act taken after the CDS-WP-021 closure. **Closing a work package
-  authorized no other**: **`CLOSED ≠ SUCCESSOR AUTHORIZED`**, **`DEPENDENCY
-  SATISFIED ≠ AUTHORITY GRANTED`**, and **`SEQUENCED NEXT ≠ AUTHORIZED`** — the
-  authorization came from the Human Maintainer alone, not from the closure and not
-  from the `DEC-S-135` recommendation that had named CDS-WP-022 as the Step-10
-  candidate. It authorizes **execution only**: **no** closure, **no** successor,
-  **no** value selection, **no** Source Set, **no** Product Profile, **no** maturity
-  promotion, **no** evidence admission, **no** claim, **no** conformance
-  determination, **no** release, and **no** publication transition. **It executed
-  first with result `DECISION_REQUIRED`**, escalating five normative choices as the
-  execution-local report keys **`WP022-D1` … `WP022-D5`**. **The Human Maintainer
-  decided all five on 2026-09-12**, and a bounded rework applied them: the **execution
-  result is now `COMPLETE WITH NOTES`**, and the initial `DECISION_REQUIRED` **stands
-  as execution history**. The decisions are recorded as **`DEC-S-137`**
-  (with **`ADR-0007`**, covering `DEC-S-137` **only**) and **`DEC-S-138`**, all
-  **`Accepted` and effective at the Human-Maintainer exact-object integration commit
-  `23914ecc48c1fb3cba5e3dab97a505589e821b6b`**, which integrated the reviewed
-  CDS-WP-022 object — **136 decisions and 6 ADRs until it, 138 and 7 from it**, with
-  the risk register at **98** throughout. **Supported Core Theme Resolution Contexts:
-  0 before that commit, 2 — `Light` and `Dark`, with no default — from it.**
-  **Effectivity is not closure: CDS-WP-022 is integrated and not
-  closed.** **`CDS-WP-020A` and CDS-WP-023 … CDS-WP-053 remain `Planned`, not
-  active, and not authorized**, and each begins only on an explicit Nova prompt
+- **Current work package: NONE.** **No work package is currently authorized** from
+  the Human-Maintainer exact-object integration commit of this independently reviewed
+  closure object, at which the CDS-WP-022 closure state is effective. **Next
+  authorized work package: NONE** — this document names none. The most recently
+  executed work package is **CDS-WP-022 — Theme and Environmental Presentation
+  Model**; its state is recorded below. **Closing a work package authorizes no
+  other**: **`CLOSED ≠ SUCCESSOR AUTHORIZED`**, **`CLOSED ≠ VALUE SELECTION
+  AUTHORIZED`**, **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`**, and **`SEQUENCED
+  NEXT ≠ AUTHORIZED`**. **`CDS-WP-020A` and CDS-WP-023 … CDS-WP-053 remain `Planned`,
+  not active, and not authorized**, and each begins only on an explicit Nova prompt
   **and** a separate Human-Maintainer authorization.
   **`WORKING TREE ≠ COMMITTED STATE`** and **`EXECUTION ≠ CLOSURE`.**
 - **Previous work package:** **CDS-WP-020 — Reference and Semantic Token
@@ -157,13 +147,19 @@
   QUESTION ≠ INCOMPLETE WORK PACKAGE`**. Closure answers **no** open decision,
   satisfies **no** value prerequisite, selects **no** value, admits **no** evidence,
   changes **no** maturity, and **authorizes no successor**.
-- **CDS-WP-022:** **`AUTHORIZED` / `ACTIVE FOR EXECUTION`** — Theme and
-  Environmental Presentation Model, authorized by a **separate, explicit
-  Human-Maintainer act** after the CDS-WP-021 closure, and **executed with result
-  `COMPLETE WITH NOTES`** after first returning `DECISION_REQUIRED` with five
-  escalations as **`WP022-D1` … `WP022-D5`**. **The Human Maintainer decided all five on 2026-09-12**, and a bounded rework applied
-  them: the **execution result is now `COMPLETE WITH NOTES`**, and the initial
-  `DECISION_REQUIRED` **stands as execution history**. The decisions are recorded as
+- **CDS-WP-022 state:** **`Completed` / `Closed`** — Theme and Environmental
+  Presentation Model, authorized by a **separate, explicit Human-Maintainer act**
+  after the CDS-WP-021 closure, **executed with result `COMPLETE WITH NOTES`** after
+  first returning `DECISION_REQUIRED` with five escalations as **`WP022-D1` …
+  `WP022-D5`**, **integrated** at `23914ecc48c1fb3cba5e3dab97a505589e821b6b`
+  (2026-09-12), and **closed by a separate, separately authorized Human-Maintainer
+  act** whose **closure state is effective only at the Human-Maintainer exact-object
+  integration commit of this independently reviewed closure object**. **The lifecycle
+  status and the execution result are separate axes**: the result stays **`COMPLETE
+  WITH NOTES`** and is not rewritten to `COMPLETE`. **The Human Maintainer decided all
+  five on 2026-09-12**, and a bounded rework applied them: the **execution result is
+  now `COMPLETE WITH NOTES`**, and the initial `DECISION_REQUIRED` **stands as
+  execution history**. The decisions are recorded as
   **`DEC-S-137` — Theme Resolution and Context-Evidence Architecture**
   (the **Resolver-Modifier Context** over the existing Source-Set graph; **no
   per-context Source Set**; **no context or theme segment in any identifier**; the
@@ -190,8 +186,14 @@
   in byte and in substance**; from the effectivity of the two new Decisions the
   **DEC-S-135 theme-mechanism sequencing condition is satisfied**, and **`THEME GATE
   SATISFIED ≠ VALUE SELECTION AUTHORIZED`** and **`THEME GATE SATISFIED ≠ CDS-WP-020A
-  AUTHORIZED`**. **CDS-WP-022 is not closed**, and **closure is a separate
-  Human-Maintainer act.**
+  AUTHORIZED`**. **Closure records that the authorized scope was executed, decided,
+  reviewed, integrated and reconciled to closure readiness `READY`** at
+  `d8b5857e1eda2066e61fda47b694afbc466aa6d8`; it answers **no** open decision,
+  satisfies **no** value prerequisite, selects **no** value, admits **no** evidence,
+  changes **no** maturity, leaves the effectivity of `DEC-S-137` and `DEC-S-138` and
+  the `Accepted` status of `ADR-0007` unchanged, and **authorizes no successor**.
+  **`OPEN / ROUTED FINDING ≠ INCOMPLETE AUTHORIZED WP SCOPE`**: `F-022-01`,
+  `F-022-04` and `F-022-06` stay routed.
   **Contract only**: **no theme instance, no machine-readable context identifier, no
   default alias, no value, no identifier, no role, no source set, no schema, no
   validator rule, no test and no fixture.**
@@ -248,7 +250,12 @@ then authorized separately** and has been executed. The remaining sequence is:
 | 23 | **Nova adjudication** of that review | Nova — recommendation only, never approval | **Done** |
 | 24 | **Human-Maintainer exact-object integration commit** of the CDS-WP-022 object | Human Maintainer | **Done** — `23914ecc48c1fb3cba5e3dab97a505589e821b6b` (2026-09-12) |
 | 25 | **`DEC-S-137`, `DEC-S-138` and `ADR-0007` become effective** | Effective at step 24 | **Done** — effective at `23914ecc…`; the registers moved from 136/6 to **138/7** there, and the risk register stays at **98** |
-| 26 | **Closure of CDS-WP-022** — a **separate** Human-Maintainer act, not implied by step 24 or step 25 | Human Maintainer | **Required — pending** |
+| 26 | **Closure of CDS-WP-022** — a **separate** Human-Maintainer act, not implied by step 24 or step 25 | Human Maintainer | **Separately authorized** — after the post-integration effectivity reconciliation `6f5408b1…` and the pre-closure reconciliations `61ee2f3c…`, `4714f892…` and `d8b5857e…` brought closure readiness to **`READY`**; **authorizing a closure is not closing** |
+| 26a | **Bounded closure preparation** — record the completed / closed CDS-WP-022 lifecycle state in the live current-state carriers | Claude, under that authorization | **Prepared** — this closure object; **the prepared Working Tree has no authority** |
+| 26b | **Fresh independent review** of the closure object, in a new session | Reviewer ≠ executor | **Precondition of step 26d** |
+| 26c | **Nova final adjudication** of that review | Nova — recommendation only, never approval | **Precondition of step 26d** |
+| 26d | **Human-Maintainer exact-object integration commit** of this independently reviewed closure object | Human Maintainer | **The closure effectivity point** — its commit hash cannot be recorded inside the object it integrates |
+| 26e | **CDS-WP-022 closure is effective** | Effective at step 26d | **Effective only at step 26d**; execution result unchanged at **`COMPLETE WITH NOTES`**; **no successor** |
 
 **Step 8 is not reached before step 7**, **step 9e is not reached before step 9d**,
 **step 13 does not reach step 14**, **step 17 is not reached before step 16**,
@@ -259,6 +266,8 @@ independent Human-Maintainer act**, **step 20 does not reach step 21**, **step 2
 does not reach step 21a — deciding is not applying**, **step 21a does not reach step
 22 — preparing is not reviewing**, **step 24 did not reach step 26 — integration is
 not closure**, **step 25 was reached only at step 24 and by nothing earlier**,
+**step 26 does not reach step 26e — authorizing and preparing a closure is not
+closing**, **step 26e authorizes no successor**,
 and **no
 step below implies the one above it**. Uncommitted
 executor output changes no authoritative phase or work-package status, and a review
@@ -1073,17 +1082,19 @@ further separate Human-Maintainer authorization at step 18**, whose closure is
 effective at the Human-Maintainer exact-object integration commit
 `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`. **From that commit no work package was
 authorized — until the Human Maintainer authorized `CDS-WP-022` by a separate,
-explicit act at step 19.** **CDS-WP-022 is `AUTHORIZED` / `ACTIVE FOR EXECUTION`**
-and **executed with result `COMPLETE WITH NOTES`**, after first returning
-`DECISION_REQUIRED` and escalating **`WP022-D1` … `WP022-D5`** — which the **Human
-Maintainer decided on 2026-09-12**, and a bounded rework applied. It **created no
-theme instance, machine-readable context identifier, value, identifier, role, Source
-Set, or risk**; it **prepared** **`DEC-S-137`**, **`DEC-S-138`** and **`ADR-0007`**,
-which were **not effective until the Human-Maintainer exact-object integration commit
-of the reviewed object** and are **`Accepted` and effective at
-`23914ecc48c1fb3cba5e3dab97a505589e821b6b`** — **136/6 until it, 138/7 from it, risks
-98 throughout**; and **its
-closure is a separate Human-Maintainer act that has not occurred.**
+explicit act at step 19.** **CDS-WP-022 was then executed with result `COMPLETE WITH
+NOTES`**, after first returning `DECISION_REQUIRED` and escalating **`WP022-D1` …
+`WP022-D5`** — which the **Human Maintainer decided on 2026-09-12**, and a bounded
+rework applied. It **created no theme instance, machine-readable context identifier,
+value, identifier, role, Source Set, or risk**; it **prepared** **`DEC-S-137`**,
+**`DEC-S-138`** and **`ADR-0007`**, which were **not effective until the
+Human-Maintainer exact-object integration commit of the reviewed object** and are
+**`Accepted` and effective at `23914ecc48c1fb3cba5e3dab97a505589e821b6b`** —
+**136/6 until it, 138/7 from it, risks 98 throughout**; and **its closure, separately
+authorized at step 26, is recorded by this closure object with target lifecycle
+`Completed` / `Closed` and is effective only at the Human-Maintainer exact-object
+integration commit of this independently reviewed closure object** (step 26d).
+**From that commit, no work package is authorized.**
 **`DEC-S-136` and `ADR-0006` were prepared under the CDS-WP-021 execution
 authorization and became effective at its integration commit
 `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`** — the

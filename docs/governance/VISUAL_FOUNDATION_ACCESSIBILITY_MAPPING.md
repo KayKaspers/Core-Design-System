@@ -127,7 +127,7 @@ Requirements 2.1, 2.2, 2.5, 2.6, 2.7 are **component and pattern** obligations
 | 3.2 | Reflow (1.4.10) | Implementation-dependent | **VF-3**, **VF-4** |
 | 3.3 | Resize and magnification (1.4.4) | Implementation-dependent | **VF-2**, VF-3, VF-4 |
 | 3.4 | Text spacing tolerance (1.4.12) | Implementation-dependent | **VF-2**, VF-3 |
-| 3.5 | Forced-colors and high contrast remain usable | Implementation-dependent | **VF-9**, VF-1 — mechanism **open** |
+| 3.5 | Forced-colors and high contrast remain usable | Implementation-dependent | **VF-9**, VF-1 — forced-colours disposition **decided by `DEC-S-138` part B** (effective at `23914ecc48c1fb3cba5e3dab97a505589e821b6b`): an **environmental accessibility condition, not a Core Theme Resolution Context**, binding **independently of the selected Theme**, with **no separate Core High-Contrast Theme at this stage**; a future dedicated CDS High-Contrast Theme remains **DEFERRED, not permanently rejected**, and would require **separate Human-Maintainer authorization and its own governance** |
 | 3.6 | **Meaning without colour** (1.4.1) | **Normative** | **VF-1 — owned** |
 | 3.7 | **No information by proximity or position alone** (1.3.3) | **Normative** | **VF-3, VF-4 — owned** |
 

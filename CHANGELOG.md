@@ -9,6 +9,46 @@ released and no release is announced.
 
 ### Added
 
+- **CDS-WP-022 closure — closure object prepared; target lifecycle `Completed` /
+  `Closed`.** The closure of **CDS-WP-022 — Theme and Environmental Presentation
+  Model** was separately authorized for preparation, and this entry is part of the
+  exact closure object. **The prepared Working Tree has no authority: the closure
+  state is effective only through the later Human-Maintainer exact-object integration
+  commit of this independently reviewed closure object**, after a fresh independent
+  review (reviewer ≠ executor) and Nova final adjudication. **Closure records only
+  that** the authorized scope was **executed**; the Human-Maintainer decisions on
+  `WP022-D1` … `WP022-D5` were **applied**; the object was **independently
+  reviewed** and **integrated** by the Human-Maintainer exact-object commit
+  `23914ecc48c1fb3cba5e3dab97a505589e821b6b`; its **effectivity was reconciled** at
+  `6f5408b1a6863e52560d8884fb9202f1cdfb85c9`; the **pre-closure current state was
+  reconciled** at `61ee2f3c67d5dd2da4443f782c56d770eaa80074`,
+  `4714f892a2780afd6425885ccc28a75533fca3df` and
+  `d8b5857e1eda2066e61fda47b694afbc466aa6d8`; and **closure readiness reached
+  `READY`** after a final pre-closure independent review returning **PASS WITH NOTES**
+  with **0 blocking** and **0 material** findings. **The target lifecycle is
+  `Completed` / `Closed`**, **the execution result stays `COMPLETE WITH NOTES`**, and
+  **the initial `DECISION_REQUIRED` is preserved as execution history** —
+  **`EXECUTION ≠ CLOSURE`**, **`COMPLETE WITH NOTES ≠ CLOSED`**, **`INTEGRATED ≠
+  CLOSED`** and **`READY ≠ CLOSED`**. **The registers stay at 138 decisions, 7 ADRs
+  and 98 risks**; **the effectivity of `DEC-S-137` and `DEC-S-138` and the `Accepted`
+  status of `ADR-0007` are unchanged**; **no Decision entry or ADR was edited**; and
+  **`DEC-S-135` is unchanged in byte and in substance**. **Visual values: 0. Visual
+  Source Sets: 0.** **No evidence was admitted**, **no maturity changed**, **no claim
+  was made**, and **no conformance was determined**; publication stays **`Private
+  Development`**. **Closure authorizes nothing further**: **`CLOSED ≠ SUCCESSOR
+  AUTHORIZED`**, **`CLOSED ≠ VALUE SELECTION AUTHORIZED`**, **`CLOSED ≠ MATURITY
+  AWARDED`** and **`CLOSED ≠ EVIDENCE ADMITTED`** — **`CDS-WP-020A` is not
+  authorized**, **CDS-WP-023 … CDS-WP-053 are not authorized**, **no successor is
+  authorized**, and **the phase is unchanged** at **Post-Candidate Foundation &
+  Design-System Enablement**. **`WP021-D2` stays DEFERRED**, and **VP-3, VP-5, VP-6
+  and VP-7 stay `UNSATISFIED`** with **VP-4 `UNSATISFIED` for VF-4** — **VP-7 because
+  no currently authorized work package may select visual values**. **M2 — Visual
+  Foundation Ready** grants nothing; the closure satisfies only its temporal trigger
+  *"after CDS-WP-022"*, and **`F-020C-02` stays deferred** — **`MILESTONE TEMPORAL
+  TRIGGER SATISFIED ≠ MILESTONE COMPOSITION ADJUDICATED`**. **`F-022-01`,
+  `F-022-04` and `F-022-06` remain open and routed** — **`OPEN / ROUTED FINDING ≠
+  INCOMPLETE AUTHORIZED WP SCOPE`**. **Historical changelog entries are unchanged.**
+  (CDS-WP-022 closure object)
 - **CDS-WP-022 effectivity — `DEC-S-137` and `DEC-S-138` effective, `ADR-0007`
   `Accepted` and effective; CDS-WP-022 integrated, NOT closed.** The condition the
   CDS-WP-022 decision package stated for itself — the Human-Maintainer exact-object

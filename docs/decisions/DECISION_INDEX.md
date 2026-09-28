@@ -48,10 +48,10 @@ authorized work packages.
   when a later event occurs. **A review PASS is not a commit, and a Nova
   recommendation is not an approval** — effectivity followed from the commit, and
   no earlier wording conferred it.
-- **`DEC-S-136` and `ADR-0006` are effective; the closure of CDS-WP-021 is
-  separately authorized and becomes effective only at its own integration
-  commit.** **Effectivity is not closure, and authorizing a closure is not
-  closing.** The integration commit
+- **`DEC-S-136` and `ADR-0006` are effective; the closure of CDS-WP-021 was
+  separately authorized and is effective at its own integration commit
+  `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`.** **Effectivity is not closure, and
+  authorizing a closure is not closing.** The integration commit
   `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` made both effective, and the Step-17
   post-integration effectivity reconciliation was integrated at
   `1174228bf046a75af095e585d165c330cf194f47`; **neither commit closed CDS-WP-021,
@@ -73,10 +73,11 @@ authorized work packages.
   CDS-WP-022 instruments exists or is prepared — no `DEC-S-139`, no `ADR-0008`.**
   *(At the CDS-WP-021 closure milestone this clause read “no decision beyond
   DEC-S-136 and no ADR beyond ADR-0006 exists or is prepared — no `DEC-S-137`, no
-  `ADR-0007`”, which was accurate then. **`DEC-S-137`, `DEC-S-138` and `ADR-0007` are
-  since prepared** — see the CDS-WP-022 bullets below — and the **effective** register
-  is nonetheless unchanged at **136 decisions and 6 ADRs** until the CDS-WP-022
-  integration commit, and **138 and 7** from it.)*
+  `ADR-0007`”, which was accurate then. **`DEC-S-137`, `DEC-S-138` and `ADR-0007` have
+  since become effective** at the Human-Maintainer exact-object integration commit
+  `23914ecc48c1fb3cba5e3dab97a505589e821b6b` — see the CDS-WP-022 bullets below — so
+  the **effective** register held **136 decisions and 6 ADRs** until that commit and
+  holds **138 and 7** from it.)*
   **`WP021-D2` is deferred by the Human Maintainer and has no Decision, no ADR,
   no VF-4 technical root, and no VF-4 Source Set identity** — **`CDS-WP-021
   CLOSED ≠ WP021-D2 RESOLVED`**. **`EFFECTIVE ≠ CLOSED`** and **`CLOSED ≠
@@ -84,14 +85,15 @@ authorized work packages.
   DEC-S-136 creates no range name, no range count, no threshold, no VF-4
   technical root, and no Source Set, and **visual values and visual Source Sets
   stay 0**.
-- **CDS-WP-021 is closed, and CDS-WP-022 is authorized — and neither event touches
+- **CDS-WP-021 is closed, and CDS-WP-022 was authorized — and neither event touches
   this register.** *(Maintained current carrier, updated 2026-09-12 by CDS-WP-022.)*
   The CDS-WP-021 closure object was integrated by the Human-Maintainer commit
   `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`, at which **closure became effective**;
   the execution result stays **`COMPLETE WITH NOTES`** and is never rewritten to
   `COMPLETE`. The Human Maintainer has since **separately and explicitly authorized
-  CDS-WP-022 — Theme and Environmental Presentation Model**, which is
-  **`AUTHORIZED` / `ACTIVE FOR EXECUTION`**. That authorization is a
+  CDS-WP-022 — Theme and Environmental Presentation Model**, which was
+  **`AUTHORIZED` / `ACTIVE FOR EXECUTION`** until its own separately authorized
+  closure — see the CDS-WP-022 closure bullet below. That authorization is a
   **Human-Maintainer act, not a consequence of the closure**: **`CLOSED ≠ SUCCESSOR
   AUTHORIZED`**, **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`** and **`SEQUENCED NEXT
   ≠ AUTHORIZED`** all still hold, and it neither fulfils nor discharges the
@@ -144,12 +146,39 @@ authorized work packages.
   prepared.** **DEC-S-131, DEC-S-132, DEC-S-135 and DEC-S-136 are unchanged in byte
   and in substance**; **`WP021-D2` stays deferred** with no VF-4 technical root and no
   VF-4 Source Set identity; and **VP-3, VP-5, VP-6 and VP-7 stay `UNSATISFIED`**.
-  **Effectivity is not closure:** **CDS-WP-022 is `AUTHORIZED` / `ACTIVE FOR
-  EXECUTION`, integrated, and not closed**, its execution result is **`COMPLETE WITH
-  NOTES`**, and **no successor is authorized** — **`CDS-WP-020A` and
-  CDS-WP-023 … CDS-WP-053 remain `Planned`, not active, and not authorized.**
+  **Effectivity is not closure:** that effectivity **did not close CDS-WP-022**, whose
+  execution result is **`COMPLETE WITH NOTES`**; its closure is a separate
+  Human-Maintainer act — see the CDS-WP-022 closure bullet below — and **no successor
+  is authorized** — **`CDS-WP-020A` and CDS-WP-023 … CDS-WP-053 remain `Planned`, not
+  active, and not authorized.**
   **Supported Core Theme Resolution Contexts are `Light` and `Dark`, neither the
   default**; **visual values stay 0** and **visual Source Sets stay 0**.
+- **CDS-WP-022 closure — recorded by this closure object; this register is
+  unchanged.** *(Maintained current carrier, updated 2026-09-15 by the CDS-WP-022
+  closure object.)* **CDS-WP-022 is recorded with target lifecycle `Completed` /
+  `Closed`**, its execution result unchanged at **`COMPLETE WITH NOTES`** and its
+  initial **`DECISION_REQUIRED`** preserved as execution history. This prepared
+  Working Tree has no authority: **the closure state is effective only at the
+  Human-Maintainer exact-object integration commit of this independently reviewed
+  closure object**, taken after closure readiness reached **`READY`** at
+  `d8b5857e1eda2066e61fda47b694afbc466aa6d8`, a fresh independent review of the
+  closure object, and Nova final adjudication. **Decision effectivity and
+  work-package closure are separate axes:** closure changes **neither** the
+  effectivity of `DEC-S-137` and `DEC-S-138` **nor** the `Accepted` status and
+  effectivity of `ADR-0007`, all bound to `23914ecc48c1fb3cba5e3dab97a505589e821b6b`,
+  and **the registers stay at 138 decisions, 7 ADRs and 98 risks** — **no
+  `DEC-S-139`, no `ADR-0008`, no `RISK-099`**. **No individual Decision entry,
+  proposition, status, range or count is edited, `DEC-S-135` is unchanged in byte and
+  in substance, and no ADR is modified.** The statements inside the individual
+  `DEC-S-137` and `DEC-S-138` entries, and in the `ADR-0007` status block, that
+  CDS-WP-022 *"remains `AUTHORIZED` / `ACTIVE FOR EXECUTION`, integrated, and not
+  closed"* record the effectivity event at `23914ecc…`; they are **point-in-time and
+  not edited**, and **this section is the maintained current carrier** for the
+  closure state. **Closure authorizes no successor**: **`CLOSED ≠ SUCCESSOR
+  AUTHORIZED`** and **`CLOSED ≠ VALUE SELECTION AUTHORIZED`** — from that integration
+  **no work package is currently authorized**, and **`CDS-WP-020A` and
+  CDS-WP-023 … CDS-WP-053 remain `Planned`, not active, and not authorized**.
+  **`WP021-D2` stays deferred**, and **visual values and visual Source Sets stay 0**.
 - Decision record format: index entries, plus ADR files where a decision warrants an
   Architecture Decision Record. **Effective ADR range: ADR-0001 … ADR-0007
   (7 ADRs)**.

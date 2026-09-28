@@ -334,6 +334,26 @@ free to choose.)*
 > given role, the role is not yet writable — which is a finding for CDS-WP-022,
 > not a reason to guess. See **OD-7**.
 
+**Current-state routing note — CDS-WP-022 closure object, 2026-09-28.** *(Effective
+only at the Human-Maintainer exact-object integration commit of that independently
+reviewed closure object; until then it changes no authoritative CDS state.
+**Additive: the note above is not edited.**)* The routing to CDS-WP-022 in the note
+above records the state when this document was first written, before **OD-7** was
+answered by **DEC-S-135** and before CDS-WP-022 was authorized. **CDS-WP-022 —
+`Completed` / `Closed` — is not the destination of such a finding:** the Theme and
+Context Mechanism is decided (**`DEC-S-137`**, **`DEC-S-138`**; see *Deferred
+decisions* below), and concrete roles were never CDS-WP-022's scope
+(**`THEME MECHANISM ≠ ROLE VOCABULARY`**, **CB-4**). **The finding is still not a
+reason to guess:** the role stays not yet writable (**TC-6**, **CA-13**), the finding
+is **raised** (**T-10**, **CA-10**), and it is **escalated — not resolved locally —
+through the *Escalation* path of the
+[Governance Operating Model](../governance/GOVERNANCE_OPERATING_MODEL.md#escalation),
+in which the Human Maintainer decides.** Admitting a context — including a future
+dedicated CDS High-Contrast Theme (`DEC-S-138` part B) — needs an explicit
+Human-Maintainer decision (**CA-2**) and is an **Elevated** change (**CA-12**). **No
+currently authorized work package owns such a finding, and this note creates no
+successor and no new authority.**
+
 ## The Semantic Status boundary
 
 *(Normative — the sharpest boundary in this document)*
@@ -464,9 +484,8 @@ The concrete role vocabulary, per family · the state-role vocabulary · the den
 model and its levels · every value a role would resolve to · **per-family scale
 topology parameters** · **VF-1 tonal topology** · composite type admission · **any
 migration or deprecation compatibility mechanism outside the normative Semantic
-alias graph** · the theme mechanism and the token layering light and dark imply ·
-the status-to-visual binding · named extension points · the typeface, its weight
-identity, and its licensing, provenance and distribution model.
+alias graph** · the status-to-visual binding · named extension points · the
+typeface, its weight identity, and its licensing, provenance and distribution model.
 
 Each is recorded in the
 [Visual Token Foundation Open Decisions](../roadmap/VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md)
@@ -491,6 +510,33 @@ boundary** (**DEC-S-133**); the **role admission rule** (**DEC-S-134**); and the
 **theme sequencing rule** (**DEC-S-135**). **None of the four creates a role, a
 role identifier, a binding, or a value.** **The concrete role vocabulary stays
 open, `CDS-WP-020A` may not invent it, and VP-6 stays UNSATISFIED.**
+
+**Decided since this document was first written, by the Human Maintainer on
+2026-09-12** on escalations raised by **CDS-WP-022 — Theme and Environmental
+Presentation Model**, and **effective** at the Human-Maintainer exact-object
+integration commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b`: the **Theme and
+Context Mechanism**. **`DEC-S-137`** records a **Resolver-Modifier Context over the
+existing Source-Set graph** — **no per-context Source Set**, **no Product Profile as
+the Theme mechanism**, **Theme Resolution Context orthogonal to Spatial Context**, and
+**no Spatial Context as a Theme modifier, a Theme selector, or a Theme-resolution
+input** — with **joint Theme × Spatial rendering and evidence evaluation deferred**
+to separately authorized future scope;
+**[ADR-0007](../decisions/ADR-0007-THEME-RESOLUTION-AND-CONTEXT-EVIDENCE-ARCHITECTURE.md)**,
+**`Accepted` and effective at the same commit**, carries the architecture rationale
+for **`DEC-S-137` only**. **`DEC-S-138`**, effective at the same commit, records
+**`Light`** and **`Dark`** as the supported Core Theme Resolution Contexts — equal
+peers, with **no default** — and classifies **forced colours and platform high
+contrast** as an **environmental accessibility condition, not a Theme Resolution
+Context**; **CDS introduces no dedicated High-Contrast Theme at this stage.**
+**TC-1 … TC-7 are applied, not replaced**, and **none of the three creates a role, a
+role identifier, a binding, a context identifier, or a value.** **No
+machine-readable Theme or context identifier instance exists**, and any future
+machine-readable realization requires separate authorization — **`CDS-WP-020A`
+remains `Planned`, not active, and not authorized.** **`F-022-01` stays open and
+routed**, schema and validator coverage are unchanged, **value selection is not
+authorized**, and **VP-7 stays UNSATISFIED**:
+**`THEME MECHANISM DECIDED ≠ ALL THEME WORK COMPLETE`** and
+**`THEME MECHANISM DECIDED ≠ VALUE SELECTION AUTHORIZED`**.
 
 ## Related documents
 

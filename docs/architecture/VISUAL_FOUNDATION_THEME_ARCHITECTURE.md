@@ -19,9 +19,13 @@
   contexts*, *open mechanism*, *Validation requirements*, *Evidence and claim
   boundary* and *Deferred decisions* sections, and the
   bounded *Open — Human-Maintainer decision required* section — **since replaced by
-  *The Human-Maintainer decision package***. **CDS-WP-022 is
-  `AUTHORIZED` / `ACTIVE FOR EXECUTION`** by a separate, explicit
-  Human-Maintainer act. **This amendment decided no theme mechanism, admitted no
+  *The Human-Maintainer decision package***. **CDS-WP-022 was `AUTHORIZED` / `ACTIVE
+  FOR EXECUTION`** at that amendment, by a separate, explicit Human-Maintainer act,
+  and is recorded as **`Completed` / `Closed`** by its separately authorized closure
+  object, whose closure state is effective only at the Human-Maintainer exact-object
+  integration commit of that independently reviewed closure object — **a lifecycle
+  update, not an architecture change**.
+  **This amendment decided no theme mechanism, admitted no
   context, created no theme, no context identifier, no default alias and no
   value, and authorized no work package.** **T-1 … T-10 and TS-1 … TS-6 are
   unchanged**, as are **TC-1 … TC-7**, **DEC-S-135** and **DEC-S-136**. **That
@@ -224,7 +228,7 @@ they produce similar output.
 | Case | Classification |
 | --- | --- |
 | Light and dark within the product UI | **Theme** |
-| High contrast within the product UI | **Theme** *(mechanism open — see below)* |
+| Platform forced colours and high contrast within the product UI | **Environmental accessibility condition — not a Core Theme Resolution Context** (**`DEC-S-138`** part B, effective at `23914ecc48c1fb3cba5e3dab97a505589e821b6b`); it **binds independently of the selected Theme**. A **dedicated CDS High-Contrast Theme** would be a separate **Theme** concern: it **does not exist**, is **DEFERRED, not permanently rejected**, and requires **separate Human-Maintainer authorization and its own governance**. |
 | A paginated report | **Channel** — PDF and reports |
 | A slide deck | **Channel** — presentations |
 | Long-form web documentation | **Channel** — documentation |
@@ -340,8 +344,13 @@ range name, range count, or threshold is created.**
 ## Context admission contract
 
 *(Normative — **CDS-WP-022**, 2026-09-12. It states **what a decision to support a
-context must be able to affirm**. **It admits no context**, and **zero contexts are
-supported.**)*
+context must be able to affirm**. **The contract itself admits no context**: a
+context is supported **only** by an explicit Human-Maintainer decision (**CA-2**),
+taken as an **Elevated** change (**CA-12**). **`DEC-S-138` part A is that decision
+for the initial set**: **`Light` and `Dark` are supported — two contexts, neither
+the default — from the Human-Maintainer exact-object integration commit
+`23914ecc48c1fb3cba5e3dab97a505589e821b6b`**. **This contract creates no context and
+no machine-readable context identifier.**)*
 
 | # | Rule |
 | --- | --- |
@@ -359,9 +368,15 @@ supported.**)*
 | **CA-12** | **Admitting a context is an Elevated change** (DEC-S-033). It bears on accessibility obligations and on what a consumer may rely on, and **ceremony scales while obligations do not**. |
 | **CA-13** | **A context count is never presupposed.** No CDS artifact may be written so that it only works if exactly one, exactly two, or exactly three contexts exist (**TC-6**). A contract that requires a count **has decided the context set by implication**. |
 
-> **CA-1 … CA-13 are satisfiable by zero contexts, and that is the current state.**
-> The contract exists so that a future admission can be judged against something,
-> exactly as T-1 … T-10 exist so that a future mechanism can be.
+> **CA-1 … CA-13 presuppose no supported-context count and remain satisfiable by
+> zero contexts** (**CA-13**, **TC-6**). The contract exists so that an admission can
+> be judged against something, exactly as T-1 … T-10 exist so that a mechanism can be.
+>
+> **Currently two contexts are supported — `Light` and `Dark`, neither the
+> default — from the effectivity of `DEC-S-138` at
+> `23914ecc48c1fb3cba5e3dab97a505589e821b6b`.** **`ZERO-CONTEXT SATISFIABILITY ≠
+> ZERO SUPPORTED CONTEXTS TODAY`**, and **`NO CONTEXT IDENTIFIER ≠ NO SUPPORTED
+> CONTEXT`**: **no concrete machine-readable context identifier exists.**
 
 ## Context identity
 
@@ -719,9 +734,12 @@ exists or is prepared** — the risk register stays at **98**.
   visual artifact AE-0**, **claims None**, **conformance None**, **Stable No**,
   publication **`Private Development`**, and the Semantic Status Candidate family
   **untouched**.
-- **CDS-WP-022 `AUTHORIZED` / `ACTIVE FOR EXECUTION` and not closed**;
-  **`CDS-WP-020A` and CDS-WP-023 … CDS-WP-053 `Planned`, not active, not
-  authorized.**
+- **The CDS-WP-022 lifecycle** — the five decisions closed nothing: CDS-WP-022 stayed
+  `AUTHORIZED` / `ACTIVE FOR EXECUTION` through them and through their effectivity,
+  and is **`Completed` / `Closed`** only through its own separate closure act, whose
+  closure state is effective only at the Human-Maintainer exact-object integration
+  commit of the independently reviewed CDS-WP-022 closure object; **`CDS-WP-020A` and
+  CDS-WP-023 … CDS-WP-053 `Planned`, not active, not authorized.**
 
 ## What a Product Profile may do with themes
 
@@ -894,12 +912,20 @@ listed here as *not done*, and everything that genuinely remains not done still 
     AUTHORIZED`**, **`ONE PREREQUISITE SATISFIED ≠ ALL PREREQUISITES SATISFIED`**, and
     **`ALL PREREQUISITES SATISFIED ≠ WORK PACKAGE AUTHORIZED`**. **`CDS-WP-020A` and
     CDS-WP-023 … CDS-WP-053 remain `Planned`, not active, and not authorized.**
-11. **It closes nothing.** **CDS-WP-022 remains `AUTHORIZED` / `ACTIVE FOR
-    EXECUTION`**; **closure is a separate Human-Maintainer act and has not occurred**;
-    and **`EXECUTION ≠ CLOSURE`**, **`REVIEW PASS ≠ INTEGRATION`** and **`INTEGRATION
-    ≠ CLOSURE`** all hold.
+11. **It closed nothing by itself.** Neither its execution, nor its bounded decision
+    rework, nor its integration closed it — **`EXECUTION ≠ CLOSURE`**, **`REVIEW PASS
+    ≠ INTEGRATION`** and **`INTEGRATION ≠ CLOSURE`** all held. **Closure was a
+    separate Human-Maintainer act, separately authorized:** CDS-WP-022 is recorded by
+    its closure object with target lifecycle **`Completed` / `Closed`**, the closure
+    state is effective only at the Human-Maintainer exact-object integration commit of
+    that independently reviewed closure object, and **closure changes no rule in this
+    document** — **`CLOSED ≠ SUCCESSOR AUTHORIZED`** and **`CLOSED ≠ VALUE SELECTION
+    AUTHORIZED`**.
 12. **It reaches no milestone by itself.** **`MILESTONE REACHED ≠ MATURITY AWARDED`**,
-    and **M2 — Visual Foundation Ready** is a roadmap state granting **nothing**.
+    and **M2 — Visual Foundation Ready** is a roadmap state granting **nothing**. Its
+    closure satisfies only M2's temporal trigger *"after CDS-WP-022"* —
+    **`MILESTONE TEMPORAL TRIGGER SATISFIED ≠ MILESTONE COMPOSITION ADJUDICATED`**,
+    and **`F-020C-02` stays deferred**.
 
 ## Related documents
 

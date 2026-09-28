@@ -31,13 +31,24 @@ release, or publication authority, and activates no work package.
 
 ## Work package status
 
-- **Current work package: `CDS-WP-022` — Theme and Environmental Presentation
-  Model.** **`AUTHORIZED` / `ACTIVE FOR EXECUTION`** by a separate, explicit
-  Human-Maintainer act taken after the CDS-WP-021 closure — **`CLOSED ≠ SUCCESSOR
-  AUTHORIZED`**, **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`**, and **`SEQUENCED
-  NEXT ≠ AUTHORIZED`**: the `DEC-S-135` recommendation that named it authorized
-  nothing. **Contract only**, and **executed with result `COMPLETE WITH NOTES`** after
-  first returning `DECISION_REQUIRED`: it
+- **Current work package: NONE — no work package is currently authorized** from the
+  Human-Maintainer exact-object integration commit of this independently reviewed
+  closure object, at which the CDS-WP-022 closure state is effective.
+  **`CLOSED ≠ SUCCESSOR AUTHORIZED`**, **`CLOSED ≠ VALUE SELECTION AUTHORIZED`**,
+  **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`**, and **`SEQUENCED NEXT ≠
+  AUTHORIZED`**: the next work package begins only on an explicit Nova prompt **and**
+  a separate Human-Maintainer authorization.
+- **Most recently executed work package: `CDS-WP-022` — Theme and Environmental
+  Presentation Model.** **`Completed` / `Closed`** — authorized for execution by a
+  separate, explicit Human-Maintainer act taken after the CDS-WP-021 closure, and
+  **closed by a further, separate Human-Maintainer authorization whose closure state
+  is effective only at the Human-Maintainer exact-object integration commit of this
+  independently reviewed closure object**. **`CLOSED ≠ SUCCESSOR AUTHORIZED`**,
+  **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`**, and **`SEQUENCED NEXT ≠
+  AUTHORIZED`**: the `DEC-S-135` recommendation that named it authorized nothing.
+  **Contract only**, and **executed with result `COMPLETE WITH NOTES`** after
+  first returning `DECISION_REQUIRED` — closure leaves that result unchanged and does
+  not rewrite it to `COMPLETE`: it
   defines what a **Theme Resolution Context** is (**CA-1 … CA-13**), the **theme
   resolution mechanism** (**TM-1 … TM-12**), how a context is
   identified without becoming a path segment (**CI-1 … CI-6**), how a **requested**
@@ -79,10 +90,11 @@ release, or publication authority, and activates no work package.
   in byte and in substance**; from the effectivity of the two new Decisions the
   **DEC-S-135 theme-mechanism sequencing condition is satisfied**, and **`THEME GATE
   SATISFIED ≠ VALUE SELECTION AUTHORIZED`** and **`THEME GATE SATISFIED ≠
-  CDS-WP-020A AUTHORIZED`**. **CDS-WP-022 is not closed**, and **closure is a separate
-  Human-Maintainer act.**
-  The next work package after it begins only on an explicit Nova prompt **and** a
-  separate Human-Maintainer authorization.
+  CDS-WP-020A AUTHORIZED`**. **Closure resolves no open decision, satisfies no value
+  prerequisite, admits no evidence, changes no maturity and authorizes no
+  successor**: the authorized scope was executed, decided, reviewed, integrated and
+  reconciled to closure readiness **`READY`**, and **`OPEN / ROUTED FINDING ≠
+  INCOMPLETE AUTHORIZED WP SCOPE`**.
 - **Preceding work package: CDS-WP-021 — Adaptive Layout and Responsive
   Foundation.** **`Completed` / `Closed`** — authorized for execution by a separate,
   explicit Human-Maintainer decision; **executed with result `COMPLETE WITH NOTES`**,
@@ -249,11 +261,14 @@ release, or publication authority, and activates no work package.
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**,
-  **CDS-WP-017**, **CDS-WP-018**, **CDS-WP-019**, **CDS-WP-020**, **CDS-WP-021**
-  — **CDS-WP-021 is `Completed` / `Closed`**, its closure authoritative at the
-  Human-Maintainer exact-object integration commit
-  `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`, with its execution result unchanged at
-  **`COMPLETE WITH NOTES`**
+  **CDS-WP-017**, **CDS-WP-018**, **CDS-WP-019**, **CDS-WP-020**, **CDS-WP-021**,
+  **CDS-WP-022** — **CDS-WP-021 is `Completed` / `Closed`**, its closure authoritative
+  at the Human-Maintainer exact-object integration commit
+  `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`, and **CDS-WP-022 is recorded by this
+  closure object with target lifecycle `Completed` / `Closed`**, its closure state
+  effective only at the Human-Maintainer exact-object integration commit of this
+  independently reviewed closure object; **both execution results are unchanged at
+  `COMPLETE WITH NOTES`**
 
 ## Operating enablement status
 

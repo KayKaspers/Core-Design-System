@@ -122,6 +122,61 @@ and *what* it becomes remain **Layer 5**. See the
 **This note re-owns nothing, moves no requirement, and changes no status.** `F-019-03`
 is answered by confirming a reading, not by re-mapping a row.
 
+### CR-025 disposition note — CDS-WP-022 closure object, 2026-09-28
+
+*(Part of the CDS-WP-022 closure object. **Effective only at the Human-Maintainer
+exact-object integration commit of that independently reviewed closure object**;
+before it, this note is uncommitted executor output and changes no authoritative CDS
+state. **Additive. The CR-025 row above is not edited, its architecture status is not
+changed, and no count changes.**)*
+
+**This note supplies the current disposition of the mechanism question in CR-025's
+*Remaining decision* cell.** The row above is preserved as the earlier architectural
+mapping; **its mechanism question — whether theme is a profile or a semantic concern,
+and the token layering it implies — must not be read as currently open.**
+
+**The Theme / Context Mechanism portion of CR-025 is decided by `DEC-S-137`**
+([Decision Index](../decisions/DECISION_INDEX.md)), effective at the
+Human-Maintainer exact-object integration commit
+`23914ecc48c1fb3cba5e3dab97a505589e821b6b`. Its representation is a
+**Resolver-Modifier Context over the existing Source-Set graph**:
+
+- **no per-context Source Set**;
+- **no Product Profile as the Theme mechanism** — excluded by the theme
+  classification (*Theme ≠ Brand ≠ Product Profile*);
+- **no additional token-flow layer** — a Theme is never a token-flow layer, and the
+  five layers of DEC-S-024 are unchanged.
+
+**`DEC-S-138`**, effective at the same commit, records **`Light` and `Dark`** as the
+supported Core Theme Resolution Contexts, as **equal peers with no default**;
+**forced colours and platform high contrast** as an **environmental accessibility
+condition, not a Theme Resolution Context**; and **no separate Core High-Contrast
+Theme Resolution Context at this stage** (deferred, not permanently rejected).
+**[ADR-0007](../decisions/ADR-0007-THEME-RESOLUTION-AND-CONTEXT-EVIDENCE-ARCHITECTURE.md)
+is `Accepted` and effective at the same commit**, as the architecture rationale for
+`DEC-S-137` **only**. The owning source is the
+[Visual Foundation Theme Architecture](VISUAL_FOUNDATION_THEME_ARCHITECTURE.md)
+(**TM-1 … TM-12**), and the
+[Token and Theme Architecture](TOKEN_AND_THEME_ARCHITECTURE.md) records the same
+disposition for its questions 5 and 9.
+
+**CR-025 is not fulfilled and not fully implemented.** Its status stays
+`Partially addressed - later design decision required`, and every count below is
+unchanged. What remains includes **concrete realization and values**: **no
+machine-readable Theme or context identifier instance exists**, **any future
+realization needs separate authorization**, **value selection is not authorized**,
+and **no Source Set or visual value is created** by this note or by the decisions it
+cites.
+
+**Theme Resolution Context and Spatial Context remain orthogonal**, and **joint
+Theme × Spatial rendering and evidence evaluation remains DEFERRED** to separately
+authorized future scope. **No residual authority is assigned to CDS-WP-022**, and
+**no currently authorized work package owns that deferred joint evaluation.**
+
+**`MECHANISM DECIDED ≠ ALL THEME WORK COMPLETE`**,
+**`MECHANISM DECIDED ≠ VALUE SELECTION AUTHORIZED`**, and
+**`ARCHITECTURE COVERAGE ≠ IMPLEMENTATION OR EVIDENCE`**.
+
 ## Counts
 
 All counts are derived from the matrix above and were independently re-counted.

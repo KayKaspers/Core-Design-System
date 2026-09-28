@@ -91,7 +91,8 @@ approved.
 - Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**,
-  **CDS-WP-017**, **CDS-WP-018**, **CDS-WP-019**, **CDS-WP-020**, **CDS-WP-021**
+  **CDS-WP-017**, **CDS-WP-018**, **CDS-WP-019**, **CDS-WP-020**, **CDS-WP-021**,
+  **CDS-WP-022**
 - Closed work package: **CDS-WP-019 — Core Visual Foundation Architecture** —
   **architecture only**: it defines how the visual foundation is structured,
   governed, represented, extended, validated, and consumed. It created **no visual
@@ -100,13 +101,24 @@ approved.
   risk; renamed no phase; registered no capability; and activated no later work
   package. Closure became effective with the Human-Maintainer commit
   `538fbccbf6f554de3b872e9fb75a70d13318feb6`.
-- **Current work package: `CDS-WP-022` — Theme and Environmental Presentation
-  Model.** **`AUTHORIZED` / `ACTIVE FOR EXECUTION`** by a separate, explicit
-  Human-Maintainer act taken after the CDS-WP-021 closure — **`CLOSED ≠ SUCCESSOR
-  AUTHORIZED`**, **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`**, and **`SEQUENCED
-  NEXT ≠ AUTHORIZED`**: the `DEC-S-135` recommendation that named it authorized
-  nothing. **Contract only**, and **executed with result `COMPLETE WITH NOTES`** after
-  first returning `DECISION_REQUIRED`: it
+- **Current work package: NONE — no work package is currently authorized** from the
+  Human-Maintainer exact-object integration commit of this independently reviewed
+  closure object, at which the CDS-WP-022 closure state is effective.
+  **`CLOSED ≠ SUCCESSOR AUTHORIZED`**, **`CLOSED ≠ VALUE SELECTION AUTHORIZED`**,
+  **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`**, and **`SEQUENCED NEXT ≠
+  AUTHORIZED`**; the next one begins only on an explicit Nova prompt **and** a separate
+  Human-Maintainer authorization.
+- Most recently executed work package: **`CDS-WP-022` — Theme and Environmental
+  Presentation Model** — **`Completed` / `Closed`**. Authorized for execution by a
+  separate, explicit Human-Maintainer act taken after the CDS-WP-021 closure, and
+  **closed by a further, separate Human-Maintainer authorization whose closure state
+  is effective only at the Human-Maintainer exact-object integration commit of this
+  independently reviewed closure object** — **`CLOSURE OBJECT PREPARED ≠ CLOSURE
+  EFFECTIVE`**. **`CLOSED ≠ SUCCESSOR AUTHORIZED`**, **`DEPENDENCY SATISFIED ≠
+  AUTHORITY GRANTED`**, and **`SEQUENCED NEXT ≠ AUTHORIZED`**: the `DEC-S-135`
+  recommendation that named it authorized nothing. **Contract only**, and **executed
+  with result `COMPLETE WITH NOTES`** after first returning `DECISION_REQUIRED` —
+  unchanged by closure and never rewritten to `COMPLETE`: it
   defines what a **Theme Resolution Context** is (**CA-1 … CA-13**), the **theme
   resolution mechanism** (**TM-1 … TM-12**), how a context is
   identified without becoming a path segment (**CI-1 … CI-6**), how a **requested**
@@ -148,10 +160,11 @@ approved.
   in byte and in substance**; from the effectivity of the two new Decisions the
   **DEC-S-135 theme-mechanism sequencing condition is satisfied**, and **`THEME GATE
   SATISFIED ≠ VALUE SELECTION AUTHORIZED`** and **`THEME GATE SATISFIED ≠
-  CDS-WP-020A AUTHORIZED`**. **CDS-WP-022 is not closed**, and **closure is a separate
-  Human-Maintainer act.**
-  The next one begins only on an explicit Nova prompt **and** a separate
-  Human-Maintainer authorization.
+  CDS-WP-020A AUTHORIZED`**. **Closure resolves no open decision, satisfies no value
+  prerequisite, admits no evidence, changes no maturity, and adds no Decision, ADR, or
+  risk** — the authorized scope was executed, decided, reviewed, integrated and
+  reconciled to closure readiness **`READY`**, and **`OPEN / ROUTED FINDING ≠
+  INCOMPLETE AUTHORIZED WP SCOPE`**.
 - Preceding work package: **CDS-WP-021 — Adaptive Layout and Responsive
   Foundation** — **`Completed` / `Closed`**. Authorized for execution by a separate,
   explicit Human-Maintainer
@@ -189,10 +202,11 @@ approved.
   INCOMPLETE WORK PACKAGE`** — and closure satisfies no value prerequisite, admits
   no evidence, changes no maturity, and adds no Decision, ADR, or risk.
   **CDS-WP-022 was later authorized by a separate, explicit Human-Maintainer act**,
-  not by this closure, and is **integrated** at `23914ecc…`, **`AUTHORIZED` /
-  `ACTIVE FOR EXECUTION`**, and **not closed**; **`CDS-WP-020A` and CDS-WP-023 …
-  CDS-WP-053 remain `Planned`, not active, and not authorized**, and **`DEC-S-135`
-  is unchanged.**
+  not by this closure, and is **integrated** at `23914ecc…` and recorded as
+  **`Completed` / `Closed`**, its closure state effective only at the
+  Human-Maintainer exact-object integration commit of this independently reviewed
+  closure object; **`CDS-WP-020A` and CDS-WP-023 … CDS-WP-053 remain `Planned`, not
+  active, and not authorized**, and **`DEC-S-135` is unchanged.**
 - Previous work package: **CDS-WP-020 — Reference and Semantic Token
   Foundation** was authorized separately by the Human Maintainer on 2026-08-26,
   **executed with result `DECISION_REQUIRED`**, and **integrated** by the
@@ -267,7 +281,7 @@ approved.
 | **CDS-WP-020** | **Closed** — executed with result `DECISION_REQUIRED`; Reference and Semantic Token Foundation (**contract only; no visual value, no identifier**; no token source, schema, validator rule, test, component, brand, profile, evidence, maturity change, risk, phase rename, or capability registration), integrated by the Human-Maintainer commit `42a568d823de3388e45af62967546f13ad67eff6`. **Closure was recorded in the closure and routing object and became effective at the Human-Maintainer commit `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.** **`AE1-CDS-WP016-SEMSTATUS-004` was not transferred to it.** |
 | **`CDS-WP-020A`** | **PLANNED / NOT ACTIVE / NOT AUTHORIZED** — Visual Token Source Authoring and Source Set Realization; the `FR-N-03` authoring destination; **inserted** identifier, nothing renumbered; owns authoring, never validation or conformance |
 | **CDS-WP-021** | **Completed / Closed** — Adaptive Layout and Responsive Foundation; **executed with result `COMPLETE WITH NOTES`**, **integrated** at `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`, and **closed effective at the Human-Maintainer exact-object integration commit `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`**. **Contract only; no visual value, no identifier, no range name or count, no VF-4 technical root, no source set**; no token source, schema, validator rule, test, component, brand, profile, evidence, maturity change, risk, phase rename, or capability registration. **Layer 3 / Layer 5 / Layer 6 split CONFIRMED — `F-019-03` answered, CR-004 unchanged at Layer 5.** **`WP021-D1` APPROVED** — the Container-Relative Named-Range Foundation — recorded as **`DEC-S-136`** with **`ADR-0006`**, both **effective at that commit**. **`WP021-D2` DEFERRED** — VF-4 root and Source Set identity **OPEN**, with **no Decision and no ADR**; **closure resolves it in no way and authorizes no successor** |
-| **CDS-WP-022** | **`AUTHORIZED` / `ACTIVE FOR EXECUTION`** — Theme and Environmental Presentation Model; authorized by a **separate, explicit Human-Maintainer act** after the CDS-WP-021 closure, and **executed with result `COMPLETE WITH NOTES`** after first returning `DECISION_REQUIRED`. **Contract only; no theme instance, no machine-readable context identifier, no default alias, no visual value, no identifier, no role, no source set**; no schema, validator rule, test, fixture, component, brand, profile, evidence, maturity change, risk, phase rename, or capability registration. Derives **CA-1 … CA-13**, **CI-1 … CI-6**, **CS-1 … CS-11**, **CE-1 … CE-5**, **CF-1 … CF-11**, **CB-1 … CB-7**, and records the Human-Maintainer-decided mechanism as **TM-1 … TM-12**. **`WP022-D1` … `WP022-D5` decided 2026-09-12**, recorded as **`DEC-S-137`** (with **`ADR-0007`**, covering `DEC-S-137` only) and **`DEC-S-138`** — all **`Accepted` and effective at the Human-Maintainer exact-object integration commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b`**: **136/6 until it, 138/7 from it, risks 98 throughout**. **Supported Core Theme Resolution Contexts: 0 before that commit, 2 — `Light` and `Dark`, no default — from it.** **`DEC-S-131`, `DEC-S-132`, `DEC-S-135` and `DEC-S-136` untouched**; **TS-1 still binds**; **closure is a separate Human-Maintainer act and has not occurred** |
+| **CDS-WP-022** | **Completed / Closed** — Theme and Environmental Presentation Model; authorized by a **separate, explicit Human-Maintainer act** after the CDS-WP-021 closure, **executed with result `COMPLETE WITH NOTES`** after first returning `DECISION_REQUIRED`, and **closed by a further, separate authorization whose closure state is effective only at the Human-Maintainer exact-object integration commit of this independently reviewed closure object**. **Contract only; no theme instance, no machine-readable context identifier, no default alias, no visual value, no identifier, no role, no source set**; no schema, validator rule, test, fixture, component, brand, profile, evidence, maturity change, risk, phase rename, or capability registration. Derives **CA-1 … CA-13**, **CI-1 … CI-6**, **CS-1 … CS-11**, **CE-1 … CE-5**, **CF-1 … CF-11**, **CB-1 … CB-7**, and records the Human-Maintainer-decided mechanism as **TM-1 … TM-12**. **`WP022-D1` … `WP022-D5` decided 2026-09-12**, recorded as **`DEC-S-137`** (with **`ADR-0007`**, covering `DEC-S-137` only) and **`DEC-S-138`** — all **`Accepted` and effective at the Human-Maintainer exact-object integration commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b`**: **136/6 until it, 138/7 from it, risks 98 throughout**. **Supported Core Theme Resolution Contexts: 0 before that commit, 2 — `Light` and `Dark`, no default — from it.** **`DEC-S-131`, `DEC-S-132`, `DEC-S-135` and `DEC-S-136` untouched**; **TS-1 still binds**; **closure changes neither that effectivity nor the `ADR-0007` status, and authorizes no successor** |
 | **CDS-WP-023 … CDS-WP-053** | **PLANNED / NOT ACTIVE / NOT AUTHORIZED** — work not started |
 
 **F-001 lifecycle-metadata resolution (Human Maintainer, 2026-08-19).** The five
@@ -1152,9 +1166,13 @@ commit**, which closure does not alter);
 DEFERRED**, with the **VF-4 technical root and Source Set identity OPEN** and **no
 Decision and no ADR** created for it.
 
-**`CDS-WP-022` — Theme and Environmental Presentation Model is the currently
-authorized work package**, **`AUTHORIZED` / `ACTIVE FOR EXECUTION`** by a separate,
-explicit Human-Maintainer act taken after that closure. **The next planned work
+**`CDS-WP-022` — Theme and Environmental Presentation Model is `Completed` /
+`Closed`**, having been authorized by a separate, explicit Human-Maintainer act taken
+after that closure, **executed with result `COMPLETE WITH NOTES`**, and closed by a
+further, separate authorization whose closure state is effective only at the
+Human-Maintainer exact-object integration commit of this independently reviewed
+closure object. **No work package is currently authorized** from that integration
+onward. **The next planned work
 package is `CDS-WP-020A` — Visual Token Source Authoring and Source Set
 Realization** (the `FR-N-03` authoring destination), which **remains inactive until
 separately authorized by the Human Maintainer**. **OD-7 is answered by the effective
@@ -1400,8 +1418,11 @@ from the Human Maintainer alone.
   the focus indicator, resolves **deterministically and offline with provenance**, is
   **never** a place to repair a Core gap, carries **its own non-transferring
   evidence**, and **presupposes no context count**. **`CANDIDATE ≠ SUPPORTED
-  CONTEXT`**, and **CA-1 … CA-13 are satisfiable by zero contexts — which is the
-  current state.**
+  CONTEXT`**, and **CA-1 … CA-13 presuppose no supported-context count and remain
+  satisfiable by zero contexts** — **and two are supported from the effectivity of
+  `DEC-S-138` at `23914ecc48c1fb3cba5e3dab97a505589e821b6b`: `Light` and `Dark`,
+  neither the default**, with **no concrete machine-readable context identifier in
+  existence** — **`ZERO-CONTEXT SATISFIABILITY ≠ ZERO SUPPORTED CONTEXTS TODAY`**.
 - **Context identity (CI-1 … CI-6).** A context identifier lives in the resolution
   declaration and **nowhere else**: never in a token path (T-8, N-6, TC-1), never in
   a Source Set identifier (**DEC-S-132 clause 12** introduces **no `context` or
@@ -1493,7 +1514,10 @@ reviewed object** and are **`Accepted` and effective at
 stays deferred**; and **VP-3, VP-5, VP-6 and VP-7 stay `UNSATISFIED`** with **VP-4
 still `UNSATISFIED` for VF-4**. It touched **no** Semantic Status source, revision,
 maturity, approval, or evidence package, and **`AE1-CDS-WP016-SEMSTATUS-004` was not
-transferred to anything.** **CDS-WP-022 is not closed.**
+transferred to anything.** **CDS-WP-022 is `Completed` / `Closed`**, closure state
+effective only at the Human-Maintainer exact-object integration commit of this
+independently reviewed closure object; **closure authorizes no successor, admits no
+evidence, and awards no maturity.**
 
 ## Related documents
 
