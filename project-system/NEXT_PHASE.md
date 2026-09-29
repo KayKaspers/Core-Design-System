@@ -201,19 +201,19 @@
   changes **no** maturity, leaves the effectivity of `DEC-S-137` and `DEC-S-138` and
   the `Accepted` status of `ADR-0007` unchanged, and **authorizes no successor**.
   **`OPEN / ROUTED FINDING ≠ INCOMPLETE AUTHORIZED WP SCOPE`**: `F-022-01`,
-  `F-022-04` and `F-022-06` stay routed.
+  `F-022-04` and `F-022-06` stay routed. *(Point-in-time at the CDS-WP-022 closure: `F-022-06` has since been resolved by disposition P1, effective at `e87ff702f8d96a8850b18b93454028a094c6b80a`; `F-022-01` and `F-022-04` stay open / routed.)*
   **Contract only**: **no theme instance, no machine-readable context identifier, no
   default alias, no value, no identifier, no role, no source set, no schema, no
   validator rule, no test and no fixture.**
 - **CDS-WP-023 … CDS-WP-053 and `CDS-WP-020A`:** **`Planned`, not active, not
   authorized, work not started** — see the
   [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
-  *(2026-09-29, **prepared, not effective** until the Human-Maintainer exact-object
-  integration commit of the Post-WP-022 Decision & Contract Integration Pass:
+  *(2026-09-29, **effective** from the Human-Maintainer exact-object integration commit
+  `e87ff702f8d96a8850b18b93454028a094c6b80a` of the Post-WP-022 Decision & Contract Integration Pass:
   `CDS-WP-020A` is **staged S1 · S2 · S3** with **no stage authorized**, and
   **CDS-WP-023 is bounded as contract only** and **may be considered as the next
-  design-work-package authorization candidate** after that pass is reviewed and
-  integrated — **it is not authorized**. See steps 27 … 29 below.)*
+  design-work-package authorization candidate** — **it is not authorized, not current,
+  not the successor, and has not started**. See steps 27 … 29 below.)*
 
 ## Next allowed authority sequence
 
@@ -272,11 +272,11 @@ then authorized separately** and has been executed. The remaining sequence is:
 | 26e | **CDS-WP-022 closure becomes effective** | Effective at step 26d | **Done** — effective at `ab81e197…`; execution result unchanged at **`COMPLETE WITH NOTES`**; **no successor** |
 | 27 | **Post-WP-022 Sequence & WP-020A Readiness Reconciliation** | Executor | **Done** — result **`DECISION_REQUIRED`**; no integration commit |
 | 28 | **Human-Maintainer decision on the reconciliation** — Nova's adjudicated recommendation authorized as dispositions **P1 … P5** | Human Maintainer | **Done** — 2026-09-29 |
-| 28a | **Post-WP-022 Decision & Contract Integration Pass** — M2A / M2B split, prepare **`DEC-S-140`**, stage `CDS-WP-020A` (S1 · S2 · S3), route Routes A … D, record arc semantics and the CDS-WP-023 boundary | Claude, under that authorization | **Done** — object **prepared and uncommitted**; **preparation is not effectivity** |
-| 28b | **Fresh independent review** of that object, in a new session | Reviewer ≠ executor | **Open** |
-| 28c | **Nova adjudication** of that review | Nova — recommendation only, never approval | **Open** |
-| 28d | **Human-Maintainer exact-object integration commit** of that object | Human Maintainer | **Open** |
-| 28e | **`DEC-S-140` and the P1 … P5 carriers become effective**; M2A recorded as reached; `F-020C-02` and `F-022-06` resolved | Effective at step 28d | **Open** |
+| 28a | **Post-WP-022 Decision & Contract Integration Pass** — M2A / M2B split, prepare **`DEC-S-140`**, stage `CDS-WP-020A` (S1 · S2 · S3), route Routes A … D, record arc semantics and the CDS-WP-023 boundary | Claude, under that authorization | **Done** — object prepared; **preparation is not effectivity** (it became effective at step 28d) |
+| 28b | **Fresh independent review** of that object, in a new session | Reviewer ≠ executor | **Done** — `GO WITH NOTES` |
+| 28c | **Nova adjudication** of that review | Nova — recommendation only, never approval | **Done** — preceded step 28d |
+| 28d | **Human-Maintainer exact-object integration commit** of that object | Human Maintainer | **Done** — `e87ff702f8d96a8850b18b93454028a094c6b80a` (2026-09-29) |
+| 28e | **`DEC-S-140` and the P1 … P5 carriers become effective**; M2A recorded as reached; `F-020C-02` and `F-022-06` resolved | Effective at step 28d | **Done** — effective at `e87ff702…`; **140 · 7 · 98**; **M2B not reached**; **no work package authorized** |
 | 29 | **Authorization of a next design work package** — a separate, explicit Human-Maintainer decision, **not** implied by step 28e. **CDS-WP-023 (contract only) may be considered as the candidate** | Human Maintainer | **Not taken** — **nothing is authorized** |
 
 **Step 8 is not reached before step 7**, **step 9e is not reached before step 9d**,
@@ -315,8 +315,9 @@ CDS-WP-022 effectivity event. **It became satisfied at step 25**, when `DEC-S-13
 ≠ VALUE SELECTION AUTHORIZED`** and **`THEME GATE SATISFIED ≠ CDS-WP-020A
 AUTHORIZED`**. **TS-1 still binds**, and **VP-3, VP-5, VP-6 and VP-7 stay
 unsatisfied.**
-**Step 28 does not reach step 28e — `DECISION AUTHORIZED ≠ DESIGN WP AUTHORIZED`**, and
-**`PREPARED DECISION ≠ EFFECTIVE DECISION`** holds for `DEC-S-140` until step 28d.
+**Step 28 did not reach step 28e by itself — `DECISION AUTHORIZED ≠ DESIGN WP
+AUTHORIZED`**, and **`PREPARED DECISION ≠ EFFECTIVE DECISION`** held for `DEC-S-140`
+until step 28d.
 **Step 28e does not reach step 29**: **`CONTRACT UPDATED ≠ WP ACTIVE`**, **`SEQUENCE
 ESTABLISHED ≠ SUCCESSOR AUTHORIZED`**, **`STAGE DEFINED ≠ STAGE AUTHORIZED`**, and
 **`ROUTED ≠ DECIDED`** — Routes A … D name destinations for separately authorized future

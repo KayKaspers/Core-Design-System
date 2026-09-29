@@ -825,6 +825,23 @@ released and no release is announced.
 
 ### Changed
 
+- **Post-WP-022 Decision & Contract Integration Pass effectivity recorded — `DEC-S-140`
+  effective, M2A reached.** The condition the pass's entry above stated — the
+  Human-Maintainer exact-object integration commit — was met by commit
+  **`e87ff702f8d96a8850b18b93454028a094c6b80a`** (`docs(cds): integrate post-WP-022 governance decisions`), which integrated
+  the object after an independent review returning **GO WITH NOTES**. **That commit is the
+  authority event**; the Working Tree object carried no authority before it. **From it
+  `DEC-S-140` is `Accepted` and effective, the dispositions P1 … P5 are effective, M2 is
+  split into M2A (reached) and M2B (not reached), and `F-020C-02` and `F-022-06` are
+  resolved.** **The effective registers held 139 decisions, 7 ADRs and 98 risks until that
+  commit and hold 140 · 7 · 98 from it.** This entry reconciles effectivity wording only:
+  it records no new Decision, no ADR, no risk and no finding, and creates no value, role,
+  Source Set or evidence. **`CDS-WP-020A` stays `Planned` with no stage authorized;
+  CDS-WP-023 stays `Planned` and not authorized** and may be considered as the next
+  contract-only authorization candidate; **no work package is current, no successor is
+  named, and no release or publication is implied** — publication stays `Private
+  Development`. **`INTEGRATED ≠ FULLY RECONCILED`**, **`EFFECTIVE DECISION ≠ AUTHORIZED
+  WP`**.
 - **CDS-WP-001B effectivity recorded and closure object prepared — `DEC-S-139` effective, NDF
   v1.1.0 process baseline effective, lock `lock-enforced`, target lifecycle `Completed` /
   `Closed`.** The condition the CDS-WP-001B execution object stated — the

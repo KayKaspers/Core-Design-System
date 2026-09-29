@@ -1060,9 +1060,11 @@ phase.
 
 ## Registers
 
-- Decisions: DEC-S-001 … DEC-S-139 (139 effective; **`DEC-S-139` was prepared by
-  CDS-WP-001B and became effective at its integration commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`**; 138
-  until then) — 6
+- Decisions: DEC-S-001 … DEC-S-140 (140 effective; **`DEC-S-140` became effective
+  at the Human-Maintainer exact-object integration commit
+  `e87ff702f8d96a8850b18b93454028a094c6b80a`**; 139 until then; **`DEC-S-139` was
+  prepared by CDS-WP-001B and became effective at its integration commit
+  `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`**; 138 until that commit) — 6
   strategic foundation decisions,
   6 strategic scope decisions, 8 consumer and pilot scope decisions,
   12 logical architecture decisions, 16 governance, lifecycle and publication
@@ -1078,7 +1080,8 @@ phase.
   role admission and theme sequencing decisions, 1 adaptive spatial context and
   responsive architecture decision, 2 theme resolution, context-evidence and
   environmental selection decisions, 1 framework process-baseline and Skill
-  supply-chain decision · ADRs: 7 (ADR-0001, ADR-0002,
+  supply-chain decision, 1 visual role vocabulary and materialization-boundary
+  decision · ADRs: 7 (ADR-0001, ADR-0002,
   ADR-0003, ADR-0004, ADR-0005, ADR-0006, ADR-0007)
   - **Effectivity:** **DEC-S-128 … DEC-S-131 and ADR-0004 are effective**, at the
     Human-Maintainer exact-byte integration commit
@@ -1092,7 +1095,9 @@ phase.
     **DEC-S-137, DEC-S-138 and ADR-0007 are effective**, at the Human-Maintainer
     exact-object integration commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b` of the
     CDS-WP-022 object. The
-    **effective** register is **DEC-S-001 … DEC-S-139 (139)** — **DEC-S-139, a
+    **effective** register is **DEC-S-001 … DEC-S-140 (140)** — **DEC-S-140 is
+    effective** at the Human-Maintainer exact-object integration commit
+    `e87ff702f8d96a8850b18b93454028a094c6b80a`; **DEC-S-139, a
     process-baseline decision prepared by CDS-WP-001B, is effective** at the
     Human-Maintainer exact-object integration commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d` —
     with **7 ADRs (ADR-0001, ADR-0002, ADR-0003, ADR-0004, ADR-0005, ADR-0006,

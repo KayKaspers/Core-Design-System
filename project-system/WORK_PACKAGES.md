@@ -200,9 +200,10 @@ Controlled work-package roadmap for the Core Design System (CDS).
   effectiveness reconciliation has since done so — see `F-020C-01` in the
   [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
   The decision register held **131** entries and the ADR range **4** at that
-  reconciliation (2026-08-31); **the effective registers now hold 139 decisions and
+  reconciliation (2026-08-31); **the effective registers now hold 140 decisions and
   7 ADRs** — `DEC-S-139`, a process-baseline decision, having become effective at
-  `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`).)*
+  `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`, and `DEC-S-140`, a role-vocabulary
+  declaration / materialization decision, at `e87ff702f8d96a8850b18b93454028a094c6b80a`).)*
 - **Next planned work package:** **`CDS-WP-020A` — Visual Token Source Authoring
   and Source Set Realization**. It is **`Planned`, not active, and not authorized**,
   and starts only on separate Human-Maintainer authorization, one work package at a
@@ -219,14 +220,14 @@ Controlled work-package roadmap for the Core Design System (CDS).
   unsatisfied**: the OD-5 residuals, the per-family topology parameters, VF-1 tonal
   topology, the concrete role vocabulary, **VP-3, VP-5, VP-6 and VP-7**, and the
   pinned validator stack. **Authorizing one work package activates no other.**
-  **Sequence update (2026-09-29, Human-Maintainer dispositions P3 and P5; prepared, not
-  effective until the Human-Maintainer exact-object integration commit of the
+  **Sequence update (2026-09-29, Human-Maintainer dispositions P3 and P5; effective from
+  the Human-Maintainer exact-object integration commit `e87ff702f8d96a8850b18b93454028a094c6b80a` of the
   Post-WP-022 Decision & Contract Integration Pass).** `CDS-WP-020A` is now a **staged**
   work package — **S1 · S2 · S3**, each separately authorized — whose stages follow the
   prerequisite Decision Passes (**Routes A … D**). The roadmap arcs are read as a
   **dependency architecture, not a universal phase lock**, so **CDS-WP-023 — contract
-  only — may be considered as the next design-work-package authorization candidate
-  after successful integration and review of that pass**. **It is not authorized**:
+  only — may be considered as the next design-work-package authorization candidate**
+  (it is not current, not the successor, and has not started). **It is not authorized**:
   **`SEQUENCE ESTABLISHED ≠ SUCCESSOR AUTHORIZED`**, **`NO DEPENDENCY ≠ AUTOMATIC
   AUTHORIZATION`**, and **`READY ≠ AUTHORIZED`**.
 - **Forward roadmap:** CDS-WP-017 … CDS-WP-053 are recorded in the
@@ -1076,8 +1077,8 @@ the [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPM
 - An explicit Nova prompt **and** separate Human-Maintainer authorization.
 
 **Staged execution contract — Human-Maintainer disposition P3 (2026-09-29).**
-*(Integrated by the Post-WP-022 Decision & Contract Integration Pass; **prepared, not
-effective** until that pass's Human-Maintainer exact-object integration commit.)*
+*(Integrated by the Post-WP-022 Decision & Contract Integration Pass; **effective** from
+that pass's Human-Maintainer exact-object integration commit `e87ff702f8d96a8850b18b93454028a094c6b80a`.)*
 **`CDS-WP-020A` stays one work package with one identifier** — **no `CDS-WP-020B`** and
 no replacement work package is created. Its execution is divided into **three stages**,
 which are **logical authorization boundaries inside CDS-WP-020A, not separate work
@@ -1334,7 +1335,7 @@ decisions were applied**, and that the object was **independently reviewed**,
 closure readiness was reached. It does **not** mean that all Theme work is complete,
 that every visual-foundation question is answered, or that every routed finding is
 closed: **`F-022-01`**, **`F-022-04`** and **`F-022-06`** remain **open and
-routed**, and **`OPEN / ROUTED FINDING ≠ INCOMPLETE AUTHORIZED WP SCOPE`**. Closure
+routed**, and **`OPEN / ROUTED FINDING ≠ INCOMPLETE AUTHORIZED WP SCOPE`**. *(Point-in-time at the CDS-WP-022 closure: `F-022-06` has since been resolved by disposition P1, effective at `e87ff702f8d96a8850b18b93454028a094c6b80a`; `F-022-01` and `F-022-04` stay open / routed.)* Closure
 answers **no** open decision, satisfies **no** value prerequisite, selects **no**
 value, creates **no** Source Set or identifier, admits **no** evidence, awards **no**
 maturity, adds **no** Decision, ADR, or risk — the registers stay at **138**, **7**
@@ -1350,17 +1351,18 @@ Foundation Ready** grants **nothing**: the closure satisfies its temporal trigge
 [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md)).
 *(Point-in-time at the CDS-WP-022 closure. **Superseded in part** by Human-Maintainer
 disposition **P1**, integrated by the Post-WP-022 Decision & Contract Integration Pass
-and **prepared, not effective** until that pass's integration commit: M2 is split into
-**M2A — Visual Foundation Architecture Ready** and **M2B — Visual Sources Ready**, and
-**`F-020C-02` and `F-022-06` are resolved** by that split.)*
+and **effective** from that pass's integration commit `e87ff702f8d96a8850b18b93454028a094c6b80a`: M2 is split into
+**M2A — Visual Foundation Architecture Ready** (**reached**) and **M2B — Visual Sources
+Ready** (**not reached**), and **`F-020C-02` and `F-022-06` are resolved** by that
+split.)*
 
 ### CDS-WP-023 — Semantic Status Visual Binding Contract
 
 **Status:** Planned *(not active, not authorized, work not started)*
 
 **Boundary — contract only** *(recorded 2026-09-29 by the Post-WP-022 Decision &
-Contract Integration Pass; **prepared, not effective** until that pass's
-Human-Maintainer exact-object integration commit)*. CDS-WP-023 is eligible **only** as
+Contract Integration Pass; **effective** from that pass's
+Human-Maintainer exact-object integration commit `e87ff702f8d96a8850b18b93454028a094c6b80a`)*. CDS-WP-023 is eligible **only** as
 the **Semantic Status Visual Binding Contract**, at the level of **role classes**,
 **semantic obligations**, **binding rules**, **redundancy requirements**, **fail-closed
 constraints**, and **validation and rendering preconditions** for CDS-WP-024 and
@@ -1374,8 +1376,8 @@ STATUS`**.
 
 **Sequence.** Under the dependency reading of the roadmap arcs (**P5**) CDS-WP-023 does
 not depend on `CDS-WP-020A`, and its `Depends on` entry — CDS-WP-022 — is satisfied. **It
-may therefore be considered as the next design-work-package authorization candidate
-after successful integration and review of that pass — and nothing more.**
+may therefore be considered as the next design-work-package authorization candidate —
+and nothing more.**
 **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`**, **`CONTRACT READY ≠ WORK AUTHORIZED`**,
 and its execution requires a **separate, explicit Human-Maintainer authorization**,
 which **has not occurred**. The missing pinned validator stack does **not** block its
@@ -1398,8 +1400,8 @@ occupied **no** number, activated **no** work package, and granted **no** author
 (2026-09-29).** A controlled refinement under this section, integrating the
 Human-Maintainer dispositions **P1 … P5**: `CDS-WP-020A` keeps its single identifier and
 gains **stages S1 · S2 · S3**; **no work package is added, renumbered, or activated**,
-**no stage is authorized**, and the refinement is **prepared, not effective** until that
-pass's Human-Maintainer exact-object integration commit.
+**no stage is authorized**, and the refinement is **effective** from that
+pass's Human-Maintainer exact-object integration commit `e87ff702f8d96a8850b18b93454028a094c6b80a`.
 
 **CDS-WP-017 extended the sequence to CDS-WP-053 as a planning record only.** The
 extension activated nothing: exactly one work package is authorized at a time, and

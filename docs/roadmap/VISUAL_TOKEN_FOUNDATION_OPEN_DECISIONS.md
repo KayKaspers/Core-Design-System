@@ -25,9 +25,9 @@
   package is authorized.**
 - **Updated:** 2026-09-29 — Post-WP-022 Decision & Contract Integration Pass. **Routes
   A, B and C** are recorded for the per-family topology, VF-1 tonal topology and
-  concrete role-vocabulary residuals, and **`DEC-S-140`** is prepared (declaration is
-  not materialization). **Prepared, not effective** until that pass's Human-Maintainer
-  exact-object integration commit. **No residual is answered, no value is selected, and
+  concrete role-vocabulary residuals, and **`DEC-S-140`** is effective (declaration is
+  not materialization). **Effective** from that pass's Human-Maintainer
+  exact-object integration commit `e87ff702f8d96a8850b18b93454028a094c6b80a`. **No residual is answered, no value is selected, and
   no work package or stage is authorized.**
 - **Artifact class:** **8 — Example / planning artifact. NON-NORMATIVE.**
 - **Status:** **A decision-preparation register. It decides nothing.** The Decisions
@@ -126,8 +126,8 @@ below.)*
 ### Residual routing — 2026-09-29
 
 *(Non-normative status view, added by the Post-WP-022 Decision & Contract Integration
-Pass under Human-Maintainer disposition **P4**; **prepared, not effective** until that
-pass's Human-Maintainer exact-object integration commit. The 2026-09-05 residual
+Pass under Human-Maintainer disposition **P4**; **effective** from that
+pass's Human-Maintainer exact-object integration commit `e87ff702f8d96a8850b18b93454028a094c6b80a`. The 2026-09-05 residual
 register above is **not rewritten** — every residual it lists stays **OPEN**.
 **`ROUTED ≠ DECIDED`.**)*
 
@@ -135,7 +135,7 @@ register above is **not rewritten** — every residual it lists stays **OPEN**.
 | --- | --- | --- |
 | Per-family scale topology parameters | **A** | A separately authorized topology Decision Pass under `DEC-S-133` — gates **VP-3** and **`CDS-WP-020A` S2** per family |
 | VF-1 Colour tonal topology | **B** | A separately authorized VF-1 tonal-topology Decision Pass — gates **VP-3 for VF-1** |
-| The concrete role vocabulary | **C** | A separately authorized role-vocabulary Decision Pass under `DEC-S-134` and the prepared **`DEC-S-140`** (declaration is not materialization) — gates **VP-6** and **`CDS-WP-020A` S3**; **`CDS-WP-020A` may still not invent it**, and **RA-1 is not redefined** |
+| The concrete role vocabulary | **C** | A separately authorized role-vocabulary Decision Pass under `DEC-S-134` and the effective **`DEC-S-140`** (declaration is not materialization) — gates **VP-6** and **`CDS-WP-020A` S3**; **`CDS-WP-020A` may still not invent it**, and **RA-1 is not redefined** |
 
 **Route D** — the `F-022-01` representation and schema-ownership question — is routed in
 the [Post-Candidate Development Roadmap](POST_CANDIDATE_DEVELOPMENT_ROADMAP.md) beside

@@ -337,8 +337,8 @@ grants no maturity to anything inside it.
 
 **Arc semantics — a dependency architecture, not a universal phase lock.**
 *(Human-Maintainer disposition **P5**, integrated by the Post-WP-022 Decision &
-Contract Integration Pass, 2026-09-29; **prepared, not effective** until that pass's
-Human-Maintainer exact-object integration commit.)* The arc sequence records **which
+Contract Integration Pass, 2026-09-29; **effective** from that pass's Human-Maintainer
+exact-object integration commit `e87ff702f8d96a8850b18b93454028a094c6b80a`.)* The arc sequence records **which
 work depends on which**; it does **not** require every work package of an earlier arc
 to be complete before any work package of a later arc may start. **A later-arc work
 package may proceed before every earlier-arc work package is complete only when all
@@ -451,8 +451,8 @@ context-sensitive value selection and says nothing about M2's composition. See
 re-derive it either**: it satisfies only the temporal trigger *"reached after
 CDS-WP-022"*, and M2's composition stays unadjudicated — see *Milestones*.
 
-**Superseded in part — M2 split and staged CDS-WP-020A (2026-09-29).** *(Prepared,
-not effective until the Human-Maintainer exact-object integration commit of the
+**Superseded in part — M2 split and staged CDS-WP-020A (2026-09-29).** *(Effective from
+the Human-Maintainer exact-object integration commit `e87ff702f8d96a8850b18b93454028a094c6b80a` of the
 Post-WP-022 Decision & Contract Integration Pass.)* The paragraph above was true at
 its date and is **not rewritten**. The Human Maintainer has since **decided M2's
 composition** (**P1**): M2 is split, without renumbering, into **M2A — Visual
@@ -475,8 +475,9 @@ family, **S3** semantic source and alias authoring — held in
 | CDS-WP-025 | Semantic Validation Negative-Fixture Expansion | 8 | Planned · not active |
 
 **CDS-WP-023 boundary — contract only.** *(Recorded 2026-09-29 by the Post-WP-022
-Decision & Contract Integration Pass; **prepared, not effective** until that pass's
-Human-Maintainer exact-object integration commit.)* **CDS-WP-023 is `Planned`, not
+Decision & Contract Integration Pass; **effective** from that pass's
+Human-Maintainer exact-object integration commit `e87ff702f8d96a8850b18b93454028a094c6b80a`.)*
+**CDS-WP-023 is `Planned`, not
 active, and not authorized.** It is eligible **only** as the **Semantic Status Visual
 Binding Contract**, at the level of:
 
@@ -653,8 +654,8 @@ ADJUDICATED`**, **`MILESTONE REACHED ≠ MATURITY AWARDED`**, and **`M2 ≠ CDS-
 AUTHORIZED`**.
 
 **M2 split into M2A and M2B — Human-Maintainer disposition P1 (2026-09-29).**
-*(Integrated by the Post-WP-022 Decision & Contract Integration Pass; **prepared, not
-effective** until that pass's Human-Maintainer exact-object integration commit.)* The
+*(Integrated by the Post-WP-022 Decision & Contract Integration Pass; **effective** from
+that pass's Human-Maintainer exact-object integration commit `e87ff702f8d96a8850b18b93454028a094c6b80a`.)* The
 paragraph above was true at its date — including that the table was not then rewritten
 — and is **preserved as that record**. The Human Maintainer has since decided M2's
 composition and **chose to split the former single milestone** rather than treat it as
@@ -662,7 +663,7 @@ one. The table above now carries the split; **no later milestone is renumbered**
 
 | Milestone | Meaning | Condition | State |
 | --- | --- | --- | --- |
-| **M2A — Visual Foundation Architecture Ready** | The architecture and governance foundation required through **CDS-WP-022** is complete. | Reached after the **effective closure of CDS-WP-022**. | **Condition met** at the Human-Maintainer exact-object integration commit `ab81e197374bb9f9479105b4261cb4485a491b2a`; **M2A is recorded as reached from the integration commit of this pass**. **Grants nothing.** |
+| **M2A — Visual Foundation Architecture Ready** | The architecture and governance foundation required through **CDS-WP-022** is complete. | Reached after the **effective closure of CDS-WP-022**. | **Reached.** Condition met at the Human-Maintainer exact-object integration commit `ab81e197374bb9f9479105b4261cb4485a491b2a`; **M2A is recorded as reached from the integration commit of this pass, `e87ff702f8d96a8850b18b93454028a094c6b80a`**. **Grants nothing.** |
 | **M2B — Visual Sources Ready** | The required concrete Visual Source Set and reference-source realization has been completed through the **applicable CDS-WP-020A stages**. | Reached after those stages complete. | **Not reached** — no CDS-WP-020A stage is authorized, and **visual Source Sets are 0**. **Grants nothing.** |
 
 **`ARCHITECTURE READY ≠ VISUAL SOURCES READY`**, **`M2A ≠ M2B`**, and **`MILESTONE
@@ -1180,8 +1181,8 @@ authorized** from that integration onward.
 **`DECISION_REQUIRED`**; the Human Maintainer then authorized Nova's adjudicated
 recommendation as the dispositions **P1 … P5**, and this bounded pass integrates them.
 It is **not** a work package and occupies no work-package identifier. **Everything in
-this section is prepared, not effective, until the Human-Maintainer exact-object
-integration commit of this pass** — **`HUMAN DECISION INTEGRATED ≠ DESIGN EXECUTION
+this section became effective at the Human-Maintainer exact-object integration commit
+of this pass, `e87ff702f8d96a8850b18b93454028a094c6b80a`** — **`HUMAN DECISION INTEGRATED ≠ DESIGN EXECUTION
 AUTHORIZED`**. The findings tables above are **not rewritten**. **No new finding
 identifier is created** — **`OBSERVATION ≠ FINDING ID REQUIRED`**.)*
 
@@ -1195,8 +1196,8 @@ identifier is created** — **`OBSERVATION ≠ FINDING ID REQUIRED`**.)*
 
 | Finding | Disposition |
 | --- | --- |
-| **`F-020C-02`** | **RESOLVED BY HUMAN-MAINTAINER DISPOSITION P1** — **effective only at the Human-Maintainer exact-object integration commit of this pass**; until then it remains deferred. The question it deferred — whether `CDS-WP-020A` belongs before or inside M2 — is answered by the split: **`CDS-WP-020A` belongs to M2B**, and **M2A** records the architecture foundation through CDS-WP-022. |
-| **`F-022-06`** | **RESOLVED WITH `F-020C-02`**, on the same effectivity condition. It recorded only that `F-020C-02` had not been opportunistically closed; the Human Maintainer has now dispositioned it deliberately. |
+| **`F-020C-02`** | **RESOLVED BY HUMAN-MAINTAINER DISPOSITION P1** — **effective from the Human-Maintainer exact-object integration commit of this pass, `e87ff702f8d96a8850b18b93454028a094c6b80a`**; it remained deferred until that commit. The question it deferred — whether `CDS-WP-020A` belongs before or inside M2 — is answered by the split: **`CDS-WP-020A` belongs to M2B**, and **M2A** records the architecture foundation through CDS-WP-022. |
+| **`F-022-06`** | **RESOLVED WITH `F-020C-02`**, effective at the same commit `e87ff702f8d96a8850b18b93454028a094c6b80a`. It recorded only that `F-020C-02` had not been opportunistically closed; the Human Maintainer has now dispositioned it deliberately. |
 | **`F-022-01`** | **REMAINS OPEN / ROUTED — not decided.** Its routing is **sharpened** to **Route D** below; **no schema, validator, test, or fixture changes**, and **`MECHANISM DECIDED ≠ REPRESENTATION AVAILABLE`** still holds. |
 | **`F-022-04`** | **REMAINS OPEN / ROUTED — unchanged.** An evidence-honesty limitation that does not block this pass and **is not evidence for maturity**; **`COULD` ≠ `MUST`**. |
 
@@ -1245,17 +1246,17 @@ NEXT ≠ AUTHORIZED`** and **`THEME GATE SATISFIED ≠ CDS-WP-020A AUTHORIZED`**
 any next work package begins only on an explicit Nova prompt **and** a separate
 Human-Maintainer authorization.
 
-**Next step (2026-09-29): review and integration of the Post-WP-022 Decision &
-Contract Integration Pass.** Its Working Tree object — the M2A / M2B split, the prepared
-`DEC-S-140`, the staged `CDS-WP-020A` contract, Routes A … D, the arc semantics and the
-CDS-WP-023 boundary — needs a **fresh independent review** (reviewer ≠ executor), **Nova
-adjudication**, and the **Human-Maintainer exact-object integration commit**, at which
-`DEC-S-140` and the dispositions become effective. **After successful integration and
-review, CDS-WP-023 may be considered as the next design-work-package authorization
-candidate** — **contract only**, and **only by a separate, explicit Human-Maintainer
-authorization**. **`CONTRACT READY ≠ WORK AUTHORIZED`** and **`SEQUENCE ESTABLISHED ≠
-SUCCESSOR AUTHORIZED`**; until that authorization, **no design work package is
-authorized**, and **no CDS-WP-020A stage is authorized**.
+**Post-WP-022 Decision & Contract Integration Pass — integrated and effective
+(2026-09-29).** Its object — the M2A / M2B split, `DEC-S-140`, the staged
+`CDS-WP-020A` contract, Routes A … D, the arc semantics and the CDS-WP-023 boundary —
+was reviewed independently (reviewer ≠ executor; `GO WITH NOTES`) and integrated by the
+**Human-Maintainer exact-object integration commit `e87ff702f8d96a8850b18b93454028a094c6b80a`**, at which
+`DEC-S-140` and the dispositions **became effective**. **CDS-WP-023 may now be
+considered as the next design-work-package authorization candidate** — **contract
+only**, and **only by a separate, explicit Human-Maintainer authorization**, which
+**has not occurred**. **`NEXT CANDIDATE ≠ AUTHORIZED`**, **`CONTRACT READY ≠ WORK
+AUTHORIZED`** and **`SEQUENCE ESTABLISHED ≠ SUCCESSOR AUTHORIZED`**; **no design work
+package is authorized**, and **no CDS-WP-020A stage is authorized**.
 
 **The step this section previously named has been completed:** the **closure of
 CDS-WP-022** — a separate, explicit Human-Maintainer act not implied by the

@@ -11,15 +11,16 @@ authorized work packages.
 
 ## Register scope
 
-- **Effective decision range: DEC-S-001 … DEC-S-139**
-- **Number of effective decisions: 139** — **`DEC-S-139` became effective at the
-  Human-Maintainer exact-object integration commit of CDS-WP-001B,
-  `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`** (the effective count was **138** until that commit) — see the
-  CDS-WP-001B bullet below. **`PREPARED DECISION ≠ EFFECTIVE DECISION`** held until
-  that commit. **`DEC-S-140` is prepared by the Post-WP-022 Decision & Contract
-  Integration Pass and is NOT yet effective**: the effective count becomes **140**
-  only at that pass's Human-Maintainer exact-object integration commit — see the
-  `DEC-S-140` bullet below.
+- **Effective decision range: DEC-S-001 … DEC-S-140**
+- **Number of effective decisions: 140** — **`DEC-S-140` became effective at the
+  Human-Maintainer exact-object integration commit of the Post-WP-022 Decision &
+  Contract Integration Pass, `e87ff702f8d96a8850b18b93454028a094c6b80a`**
+  (the effective count was **139** until that commit) — see the `DEC-S-140` bullet
+  below. **`DEC-S-139` became effective at the Human-Maintainer exact-object
+  integration commit of CDS-WP-001B,
+  `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`** (the effective count was **138** until
+  that commit) — see the CDS-WP-001B bullet below. **`PREPARED DECISION ≠ EFFECTIVE
+  DECISION`** held for each until its own commit.
 - **Effectivity.** **DEC-S-128 … DEC-S-131 are effective.** The condition their
   entries stated — the Human-Maintainer exact-byte integration commit of the
   CDS-WP-020 Decision Integration Pass, following a Fresh Independent Review and
@@ -46,10 +47,10 @@ authorized work packages.
   That review returned `REWORK REQUIRED`; a bounded two-file rework resolved
   **F-R21-01** and **F-R21-02**, and the confirmatory independent review returned
   `PASS`.
-  The **effective** register is therefore **DEC-S-001 … DEC-S-139 (139 decisions)**
+  The **effective** register is therefore **DEC-S-001 … DEC-S-140 (140 decisions)**
   and the **effective** ADR range is **ADR-0001 … ADR-0007 (7 ADRs)** — see the
-  CDS-WP-022 effectivity bullet below for `DEC-S-137`, `DEC-S-138` and `ADR-0007`, and
-  the CDS-WP-001B bullet below for `DEC-S-139`. This
+  CDS-WP-022 effectivity bullet below for `DEC-S-137`, `DEC-S-138` and `ADR-0007`, the
+  CDS-WP-001B bullet below for `DEC-S-139`, and the `DEC-S-140` bullet below. This
   section
   is the maintained current carrier; a
   statement inside an individual decision entry is point-in-time and is not edited
@@ -219,19 +220,20 @@ authorized work packages.
   not edited**, and statements that "no work package is currently authorized" refer to
   the **design-work-package** sequence as at the CDS-WP-022 closure — CDS-WP-001B owns
   no design scope.
-- **`DEC-S-140` is prepared and is NOT yet effective.** *(Maintained current carrier,
-  added 2026-09-29 by the **Post-WP-022 Decision & Contract Integration Pass** — a
-  bounded governance integration of the Human-Maintainer dispositions **P1 … P5**; it
-  is **not** a work package and occupies no work-package identifier.)* **DEC-S-140 —
-  Role Vocabulary Declaration Is Not Role Token Materialization** records **P2** only:
-  a normative vocabulary decision may declare and admit a visual role without creating
-  a machine-readable role token instance, and **SR-11** and the concrete source-bound
+- **`DEC-S-140` is `Accepted` and effective at the Human-Maintainer exact-object
+  integration commit `e87ff702f8d96a8850b18b93454028a094c6b80a`** of the Post-WP-022 Decision & Contract Integration Pass.
+  *(Maintained current carrier, added 2026-09-29 by that pass — a bounded governance
+  integration of the Human-Maintainer dispositions **P1 … P5**; it is **not** a work
+  package and occupies no work-package identifier.)* **DEC-S-140 — Role Vocabulary
+  Declaration Is Not Role Token Materialization** records **P2** only: a normative
+  vocabulary decision may declare and admit a visual role without creating a
+  machine-readable role token instance, and **SR-11** and the concrete source-bound
   realization of **VP-6** are fulfilled at the **Source-Set materialization boundary**.
-  It becomes effective **only** at the Human-Maintainer exact-object integration commit
-  of that pass, following an independent review (reviewer ≠ executor) and Nova
-  adjudication; **until then the uncommitted Working Tree creates no authority** —
-  **`PREPARED DECISION ≠ EFFECTIVE DECISION`**. **The effective register holds
-  `DEC-S-001 … DEC-S-139` (139 decisions) until that commit and
+  It was prepared by that pass and became effective **only** at that Human-Maintainer
+  exact-object integration commit, following an independent review (reviewer ≠
+  executor; `GO WITH NOTES`); **the uncommitted Working Tree created no authority
+  before it** — **`PREPARED DECISION ≠ EFFECTIVE DECISION`**. **The effective register
+  held `DEC-S-001 … DEC-S-139` (139 decisions) until that commit and holds
   `DEC-S-001 … DEC-S-140` (140 decisions) from it; the ADR register stays at 7 and the
   risk register at 98 throughout — no `ADR-0008`, no `RISK-099`.** **No existing
   Decision entry is edited**: **`DEC-S-133` and `DEC-S-134` are unchanged in byte and
@@ -303,7 +305,7 @@ authorized work packages.
 | Adaptive spatial context and responsive architecture decision | DEC-S-136 | CDS-WP-021 | The declared **Adaptation Container** as the primary responsive Layer-3 reference frame — technology-neutral, never a device class or viewport identity, and satisfiable by a root or application context; **named discrete available-space ranges** as the Core Layer-3 response vocabulary, with `RANGE ≠ BEHAVIOUR`; continuous transformation **permitted downstream where separately authorized** but **not Core range identity**, requiring no new `$type` and altering DEC-S-130 in no way; fixed-geometry channels governed by **their own channel geometry** rather than forced responsive ranges; and **`SPATIAL CONTEXT ≠ THEME RESOLUTION CONTEXT`**, with any composition reserved to CDS-WP-022 (ADR-0006 for DEC-S-136 only). **Effective at the Human-Maintainer integration commit `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`.** It selects **no** value, creates **no** range name, identifier, VF-4 root or source set, defers **`WP021-D2`**, and grants **no** maturity. |
 | Theme resolution, context-evidence and environmental selection decision | DEC-S-137 … DEC-S-138 | CDS-WP-022 | Theme/context-sensitive binding represented through the existing **Resolver / Composition** architecture over the existing Source-Set graph, with **no per-context Source Set**, **no context or theme segment in any identifier**, the **Source Set remaining the sole independently evaluable maturity unit**, and context-specific evidence staying bound to `(sourceSetId, sourceRevision)` while recording the **Resolver / Composition revision** and the **Theme Resolution Context** as exact evidence inputs; **Light and Dark** as the initial supported Core Theme Resolution Contexts, **equal peers with no default**; **forced colours and platform high contrast as an environmental accessibility condition and not a Core context**; **explicit viewer choice over inferred environment preference**, with mandatory platform accessibility conditions outside Theme precedence and always binding; and **no default or fallback Theme, with missing, unsupported and unresolved-conflict resolution failing closed** (**ADR-0007** for **DEC-S-137 only**). **Accepted and effective at the Human-Maintainer exact-object integration commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b`.** They select **no** value, create **no** identifier, Source Set, or resolver instance, and grant **no** maturity. |
 | Framework process-baseline and Skill supply-chain decision | DEC-S-139 | CDS-WP-001B | NDF v1.1.0 as the CDS **development-process** baseline only — execution contracts, work-package execution, process verification and evidence, session and handoff rules, Skill routing and Human-Maintainer gates — with **no** authority over CDS product or domain authority; NDF normative process rules as a **floor** that CDS may tighten and never silently relax; exactly four support files imported byte-identically and **not** independent CDS policy or architecture; one integrity lock (SHA-256, raw committed bytes, lowercase hex) binding the pack and snapshot to one source release and commit; and NDF release/version language that is **NDF-only** and cannot satisfy or alter DEC-S-037. **Prepared; effective only at the Human-Maintainer exact-object integration commit of CDS-WP-001B.** It selects **no** value, creates **no** identifier, and grants **no** maturity, evidence, claim, conformance, release, or publication authority. |
-| Visual role vocabulary and materialization-boundary decision | DEC-S-140 | — (Post-WP-022 Decision & Contract Integration Pass) | A normative **vocabulary decision** may declare and admit a visual role — identifier, purpose, obligations, **SR-1 … SR-10 and SR-12**, and evidence and admission conditions — **without** creating a machine-readable role token instance: **`ROLE VOCABULARY DECLARED ≠ ROLE TOKEN INSTANCE CREATED`**, **`DECISION ≠ SOURCE-SET MATERIALIZATION`**; a concrete visual-role artifact is materially instantiated **only** when authored into an authorized Visual Source Set revision, where **SR-11** and the concrete source-bound realization of **VP-6** are fulfilled; no prerequisite is read to require its own output (the `DEC-S-133` precedent); **RA-1, RA-3, SR-11, VP-6, evidence binding, Source Set authority and fail-closed behaviour are not weakened**, and **`WCAG OBLIGATION ≠ CROSS-CONSUMER EVIDENCE`**. **Prepared; effective only at the Human-Maintainer exact-object integration commit of that pass.** It selects **no** value, creates **no** role, role identifier, vocabulary or Source Set, and grants **no** maturity. |
+| Visual role vocabulary and materialization-boundary decision | DEC-S-140 | — (Post-WP-022 Decision & Contract Integration Pass) | A normative **vocabulary decision** may declare and admit a visual role — identifier, purpose, obligations, **SR-1 … SR-10 and SR-12**, and evidence and admission conditions — **without** creating a machine-readable role token instance: **`ROLE VOCABULARY DECLARED ≠ ROLE TOKEN INSTANCE CREATED`**, **`DECISION ≠ SOURCE-SET MATERIALIZATION`**; a concrete visual-role artifact is materially instantiated **only** when authored into an authorized Visual Source Set revision, where **SR-11** and the concrete source-bound realization of **VP-6** are fulfilled; no prerequisite is read to require its own output (the `DEC-S-133` precedent); **RA-1, RA-3, SR-11, VP-6, evidence binding, Source Set authority and fail-closed behaviour are not weakened**, and **`WCAG OBLIGATION ≠ CROSS-CONSUMER EVIDENCE`**. **Effective at the Human-Maintainer exact-object integration commit `e87ff702f8d96a8850b18b93454028a094c6b80a` of that pass.** It selects **no** value, creates **no** role, role identifier, vocabulary or Source Set, and grants **no** maturity. |
 
 None of these types is an implementation decision. Logical architecture decisions
 define structure, responsibility, and flow — they select no technology, format,
@@ -6686,15 +6688,16 @@ Sets stay 0; Stable stays `No`; publication stays `Private Development`.**
 
 ## DEC-S-140 — Role Vocabulary Declaration Is Not Role Token Materialization; SR-11 and VP-6 Are Fulfilled at the Source-Set Materialization Boundary
 
-- **Status:** **Prepared — not effective.** **DEC-S-140 becomes effective only at the
+- **Status:** **`Accepted` — effective.** **DEC-S-140 became effective at the
   Human-Maintainer exact-object integration commit of the Post-WP-022 Decision &
-  Contract Integration Pass**, which must follow an independent review (reviewer ≠
-  executor, a fresh session) and Nova adjudication. Until that commit this entry is
-  **uncommitted executor output** prepared under an explicit Human-Maintainer
-  authorization and it changes **no** authoritative CDS state.
+  Contract Integration Pass, `e87ff702f8d96a8850b18b93454028a094c6b80a`**,
+  following an independent review (reviewer ≠ executor, a fresh session; `GO WITH
+  NOTES`). It was prepared on 2026-09-29 as **uncommitted executor output** under an
+  explicit Human-Maintainer authorization and changed **no** authoritative CDS state
+  until that commit — the integration commit is the authority event.
   **`PREPARED DECISION ≠ EFFECTIVE DECISION`**, **`EXECUTED ≠ ACCEPTED`**, **`PASS ≠
   INTEGRATED`**, and **a Nova recommendation is not an approval.** **The effective
-  register holds 139 decisions until that commit and holds 140 from it**; ADRs stay at
+  register held 139 decisions until that commit and holds 140 from it**; ADRs stay at
   7 and risks at 98.
 - **Date:** 2026-09-29
 - **Type:** Visual role vocabulary and materialization-boundary decision

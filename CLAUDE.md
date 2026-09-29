@@ -61,11 +61,12 @@ library, or a design project scoped exclusively to CoreOps.
   the adopted NDF Execution Contract**. It is **process-only**: no value, Source Set,
   maturity, evidence, claim, release, publication, ADR, or risk. **The effective
   registers held 138 decisions, 7 ADRs and 98 risks until that commit and hold
-  139 · 7 · 98 from it.** *(Prepared, not effective: the Post-WP-022 Decision &
-  Contract Integration Pass prepares **`DEC-S-140`**, which stays **`PREPARED / NOT
-  EFFECTIVE`** until that pass's Human-Maintainer exact-object integration commit. The
-  registers hold **139 · 7 · 98 until that commit and 140 · 7 · 98 from it** —
-  **`PREPARED ≠ EFFECTIVE`**.)* **Closure is a separate act:** CDS-WP-001B is recorded by its
+  139 · 7 · 98 from it.** *(Point-in-time at that commit. **`DEC-S-140`**, prepared by the
+  Post-WP-022 Decision & Contract Integration Pass, **became effective** at that pass's
+  Human-Maintainer exact-object integration commit
+  **`e87ff702f8d96a8850b18b93454028a094c6b80a`**: the **current effective registers are
+  140 · 7 · 98** — **`PREPARED ≠ EFFECTIVE`** held until that commit.)* **Closure is a
+  separate act:** CDS-WP-001B is recorded by its
   closure object with target lifecycle **`Completed` / `Closed`**, effective only at
   that object's Human-Maintainer exact-object integration commit
   (**`INTEGRATED ≠ CLOSED`**, **`CLOSURE OBJECT PREPARED ≠ CLOSURE EFFECTIVE`**), and
@@ -441,24 +442,26 @@ library, or a design project scoped exclusively to CoreOps.
   `F-022-01`, `F-022-04` and `F-022-06` stay routed, and **`F-020C-02` stays
   deferred**. *(Point-in-time at the CDS-WP-022 closure. **Superseded in part** by
   Human-Maintainer disposition **P1**, integrated by the Post-WP-022 Decision &
-  Contract Integration Pass and **prepared, not effective** until that pass's
-  Human-Maintainer exact-object integration commit: M2 is split into **M2A — Visual
-  Foundation Architecture Ready** and **M2B — Visual Sources Ready**, which resolves
-  **`F-020C-02`**, and **`F-022-06`** is resolved with it. Until that commit the
-  wording above stays the effective state; `F-022-01` and `F-022-04` are unaffected.)*
+  Contract Integration Pass and **effective** from that pass's Human-Maintainer
+  exact-object integration commit **`e87ff702f8d96a8850b18b93454028a094c6b80a`**: M2 is split into **M2A — Visual
+  Foundation Architecture Ready** — **reached** from that commit — and **M2B — Visual
+  Sources Ready** — **not reached** — which resolves **`F-020C-02`**, and
+  **`F-022-06`** is resolved with it. `F-022-01` and `F-022-04` are unaffected and
+  stay open / routed.)*
 - **`CDS-WP-020A` and CDS-WP-023 … CDS-WP-053: PLANNED / NOT ACTIVE / NOT
   AUTHORIZED.** They are recorded as a planning sequence so no competing roadmap can
   arise; **recording them activates nothing** and work on them has not started. The
   immediate next planned work package is **`CDS-WP-020A`**; it stays inactive until
-  separately authorized. *(Point-in-time sequencing. **Prepared, not effective** until
-  the Human-Maintainer exact-object integration commit of the Post-WP-022 Decision &
-  Contract Integration Pass, under dispositions **P3** and **P5**: **`CDS-WP-020A`
-  stays `Planned`** and is **staged S1 · S2 · S3**, with **no stage authorized**; and
-  **CDS-WP-023 stays `Planned` and not authorized**, but **may be considered as the
-  next design-work-package authorization candidate, as a contract-only work package**,
-  after that pass is reviewed and integrated. **`NEXT CANDIDATE ≠ AUTHORIZED`**,
-  **`PLANNED ≠ ACTIVE`**, **`STAGE DEFINED ≠ STAGE AUTHORIZED`** and **`PREPARED ≠
-  EFFECTIVE`** — see [Work Packages](project-system/WORK_PACKAGES.md).)* **OD-7 is answered by `DEC-S-135`: CDS-WP-022 precedes
+  separately authorized. *(Point-in-time sequencing. **Effective** from the
+  Human-Maintainer exact-object integration commit **`e87ff702f8d96a8850b18b93454028a094c6b80a`** of the Post-WP-022
+  Decision & Contract Integration Pass, under dispositions **P3** and **P5**:
+  **`CDS-WP-020A` stays `Planned`** and its **S1 · S2 · S3** staged contract is
+  **effective**, with **no stage authorized**; and **CDS-WP-023 stays `Planned` and not
+  authorized**, but **may be considered as the next design-work-package authorization
+  candidate, as a contract-only work package** — it is **not current, not the
+  successor, and has not started**. **`NEXT CANDIDATE ≠ AUTHORIZED`**, **`PLANNED ≠
+  ACTIVE`**, **`STAGE DEFINED ≠ STAGE AUTHORIZED`** and **`PREPARED ≠ EFFECTIVE`** —
+  see [Work Packages](project-system/WORK_PACKAGES.md).)* **OD-7 is answered by `DEC-S-135`: CDS-WP-022 precedes
   context-sensitive value selection**, and **CDS-WP-022 has since been authorized by
   a separate, explicit Human-Maintainer act** — **SEQUENCED NEXT ≠ AUTHORIZED**, and
   the recommendation authorized nothing then and authorizes nothing now. **The Human

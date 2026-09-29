@@ -238,16 +238,16 @@ release, or publication authority, and activates no work package.
   AUTHORIZED`**. **`CDS-WP-020A` remains `Planned`, not active, and not authorized**;
   **VP-3, VP-5, VP-6 and VP-7 stay `UNSATISFIED`**, and **VP-4 stays `UNSATISFIED` for
   VF-4**.
-  **Sequence update (2026-09-29; prepared, not effective until the Human-Maintainer
-  exact-object integration commit of the Post-WP-022 Decision & Contract Integration
+  **Sequence update (2026-09-29; effective from the Human-Maintainer exact-object
+  integration commit `e87ff702f8d96a8850b18b93454028a094c6b80a` of the Post-WP-022 Decision & Contract Integration
   Pass).** Under Human-Maintainer dispositions **P1 … P5**: M2 is split into **M2A —
-  Visual Foundation Architecture Ready** and **M2B — Visual Sources Ready**;
-  **`DEC-S-140`** is prepared (role vocabulary declared ≠ role token instance created);
+  Visual Foundation Architecture Ready** (**reached**) and **M2B — Visual Sources
+  Ready** (**not reached**); `F-020C-02` and `F-022-06` are resolved;
+  **`DEC-S-140`** is effective (role vocabulary declared ≠ role token instance created);
   `CDS-WP-020A` is **staged S1 · S2 · S3** behind **Routes A … D**, with **no stage
   authorized**; and the arcs are read as a **dependency architecture, not a universal
   phase lock**, so **CDS-WP-023 — contract only — may be considered as the next
-  design-work-package authorization candidate** after that pass is reviewed and
-  integrated. **Nothing is authorized** — see
+  design-work-package authorization candidate**. **Nothing is authorized** — see
   [Work Packages](WORK_PACKAGES.md).
 - Earlier work package: **CDS-WP-016 — Semantic Status Foundation
   Independent Evidence Review and Candidate Gate.** Its review work was
@@ -837,9 +837,11 @@ pilot contract is defined in CDS-WP-004.
 
 ## Register scope
 
-- Decisions: DEC-S-001 … DEC-S-139 (139 effective; **DEC-S-139 was prepared by
-  CDS-WP-001B and became effective at its integration commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`**; 138
-  until then) — 6
+- Decisions: DEC-S-001 … DEC-S-140 (140 effective; **DEC-S-140 was prepared by the
+  Post-WP-022 Decision & Contract Integration Pass and became effective at its
+  integration commit `e87ff702f8d96a8850b18b93454028a094c6b80a`**; 139 until then; **DEC-S-139 was
+  prepared by CDS-WP-001B and became effective at its integration commit
+  `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`**; 138 until then) — 6
   strategic foundation decisions
   (CDS-WP-001), 6 strategic scope decisions (CDS-WP-002), 8 consumer and pilot
   scope decisions (CDS-WP-004), 12 logical architecture decisions (CDS-WP-005),
@@ -864,7 +866,9 @@ pilot contract is defined in CDS-WP-004.
   architecture decision (CDS-WP-021, DEC-S-136)**, and **2 theme resolution,
   context-evidence and environmental selection decisions (CDS-WP-022, DEC-S-137 …
   DEC-S-138)**, and **1 framework process-baseline and Skill supply-chain decision
-  (CDS-WP-001B, DEC-S-139)**. DEC-S-001 … DEC-S-114 unchanged
+  (CDS-WP-001B, DEC-S-139)**, and **1 visual role vocabulary and
+  materialization-boundary decision (Post-WP-022 Decision & Contract Integration Pass,
+  DEC-S-140)**. DEC-S-001 … DEC-S-114 unchanged
   by
   CDS-WP-015; DEC-S-001 … DEC-S-125 unchanged by the rework; **DEC-S-001 …
   DEC-S-126 unchanged by the phase transition**; **DEC-S-001 … DEC-S-127 unchanged
@@ -881,8 +885,10 @@ pilot contract is defined in CDS-WP-004.
   `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`; **DEC-S-137, DEC-S-138 and ADR-0007
   are effective**, at the Human-Maintainer exact-object integration commit
   `23914ecc48c1fb3cba5e3dab97a505589e821b6b`. The **effective** register is
-  **DEC-S-001 … DEC-S-139 (139)** with **7 ADRs** — **DEC-S-139 is effective** at the
-  Human-Maintainer exact-object integration commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`.
+  **DEC-S-001 … DEC-S-140 (140)** with **7 ADRs** — **DEC-S-139 is effective** at the
+  Human-Maintainer exact-object integration commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`,
+  and **DEC-S-140 is effective** at the Human-Maintainer exact-object integration
+  commit `e87ff702f8d96a8850b18b93454028a094c6b80a`.
 - Risks: RISK-001 … RISK-098 (98) — **89 `Monitored`; RISK-031, RISK-040, RISK-044,
   RISK-066, RISK-067, RISK-068, RISK-069, RISK-071, and RISK-098 `Mitigating`**;
   **risk owner model finalized** by CDS-WP-006; RISK-082 … RISK-089 added by CDS-WP-014;

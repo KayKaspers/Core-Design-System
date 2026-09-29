@@ -60,8 +60,11 @@ areas today.
 Governance foundation established. No final design or technology decisions are
 approved.
 
-- Decisions: DEC-S-001 … DEC-S-139 (139 effective; DEC-S-139 was prepared by
-  CDS-WP-001B and became effective at its integration commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`; 138
+- Decisions: DEC-S-001 … DEC-S-140 (140 effective; DEC-S-140 was prepared by the
+  Post-WP-022 Decision & Contract Integration Pass and became effective at its
+  integration commit `e87ff702f8d96a8850b18b93454028a094c6b80a`; 139 until then; DEC-S-139
+  was prepared by CDS-WP-001B and became effective at its integration commit
+  `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`; 138
   until then) — 6 foundation + 6 scope + 8 consumer
   and pilot scope + 12 logical architecture + 16 governance + 12 accessibility +
   4 operating enablement and pre-candidate + 8 accessibility support baseline and
@@ -88,9 +91,10 @@ approved.
     **DEC-S-137, DEC-S-138 and ADR-0007 are effective**, at the Human-Maintainer
     exact-object integration commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b` of the
     CDS-WP-022 object. The
-    **effective** register is **DEC-S-001 … DEC-S-139 (139)** — **DEC-S-139 is
+    **effective** register is **DEC-S-001 … DEC-S-140 (140)** — **DEC-S-139 is
     effective** at the Human-Maintainer exact-object integration commit
-    `daa5f114c1b9c02afcfc0205149ca00dc4801d8d` —
+    `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`, and **DEC-S-140 is effective** at the
+    Human-Maintainer exact-object integration commit `e87ff702f8d96a8850b18b93454028a094c6b80a` —
     with **7 ADRs**.
 - Risks: RISK-001 … RISK-098 (98) — **89 Monitored; RISK-031, RISK-040, RISK-044,
   RISK-066, RISK-067, RISK-068, RISK-069, RISK-071, RISK-098 Mitigating**; **owner
@@ -1212,12 +1216,13 @@ and not authorized**; **VP-3, VP-5, VP-6 and VP-7 stay `UNSATISFIED`**, and **VP
 stays `UNSATISFIED` for VF-4**.
 
 **Sequence update — Post-WP-022 Decision & Contract Integration Pass (2026-09-29;
-prepared, not effective until its Human-Maintainer exact-object integration
-commit).** The Post-WP-022 Sequence & WP-020A Readiness Reconciliation ended
+effective from its Human-Maintainer exact-object integration commit
+`e87ff702f8d96a8850b18b93454028a094c6b80a`).** The Post-WP-022 Sequence & WP-020A Readiness Reconciliation ended
 `DECISION_REQUIRED`, and the Human Maintainer authorized Nova's adjudicated
 dispositions **P1 … P5**: **M2 split** into **M2A — Visual Foundation Architecture
-Ready** (condition met by the CDS-WP-022 closure) and **M2B — Visual Sources Ready**
-(not reached), resolving **`F-020C-02`** and **`F-022-06`**; **`DEC-S-140`** prepared —
+Ready** (condition met by the CDS-WP-022 closure; **reached** from the integration
+commit) and **M2B — Visual Sources Ready** (**not reached**), resolving
+**`F-020C-02`** and **`F-022-06`**; **`DEC-S-140`** effective —
 **`ROLE VOCABULARY DECLARED ≠ ROLE TOKEN INSTANCE CREATED`**, SR-11 and the
 source-bound realization of VP-6 fulfilled at the Source-Set materialization boundary,
 **RA-1 not redefined** (**`WCAG OBLIGATION ≠ CROSS-CONSUMER EVIDENCE`**);
@@ -1225,8 +1230,8 @@ source-bound realization of VP-6 fulfilled at the Source-Set materialization bou
 A … D** for per-family topology, VF-1 tonal topology, the concrete role vocabulary and
 `F-022-01` — **`ROUTED ≠ DECIDED`**; and the arcs read as a **dependency architecture,
 not a universal phase lock**, so **CDS-WP-023 — contract only — may be considered as
-the next design-work-package authorization candidate** after the pass is reviewed and
-integrated. **It is not authorized**, `F-022-04` stays open, `WP021-D2` stays deferred,
+the next design-work-package authorization candidate**. **It is not authorized**,
+`F-022-04` stays open, `WP021-D2` stays deferred,
 and **visual values and visual Source Sets stay 0.**
 
 ## Core Visual Foundation Architecture (CDS-WP-019)

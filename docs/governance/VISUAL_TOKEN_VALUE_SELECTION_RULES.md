@@ -54,8 +54,8 @@
   selected**, and VP-1 … VP-7, VE-1 … VE-12, IG-1 … IG-10, VD-1 … VD-8,
   VA-1 … VA-10 and VS-1 … VS-6 are unchanged.
 - **Amended by:** Post-WP-022 Decision & Contract Integration Pass, 2026-09-29 — **one
-  additive VP-6 reading note**, recording **DEC-S-140**. **Prepared, not effective**
-  until the Human-Maintainer exact-object integration commit of that pass. **The VP-6
+  additive VP-6 reading note**, recording **DEC-S-140**. **Effective** from
+  the Human-Maintainer exact-object integration commit `e87ff702f8d96a8850b18b93454028a094c6b80a` of that pass. **The VP-6
   verdict does not change — VP-6 remains `UNSATISFIED`** — **no prerequisite text is
   rewritten**, **no value is selected**, and VP-1 … VP-7, VE-1 … VE-12, IG-1 … IG-10,
   VD-1 … VD-8, VA-1 … VA-10 and VS-1 … VS-6 are unchanged.
@@ -345,9 +345,9 @@ value may be selected**, and **visual values and visual source sets remain 0.**
 
 ### VP-6 reading note — DEC-S-140 — 2026-09-29
 
-*(**Additive — PREPARED, NOT EFFECTIVE.** Added by the Post-WP-022 Decision & Contract
-Integration Pass to record **DEC-S-140**; it becomes effective **only** at the
-Human-Maintainer exact-object integration commit of that pass. The dated notes and
+*(**Additive — EFFECTIVE.** Added by the Post-WP-022 Decision & Contract
+Integration Pass to record **DEC-S-140**; it became effective **only** at the
+Human-Maintainer exact-object integration commit of that pass, `e87ff702f8d96a8850b18b93454028a094c6b80a`. The dated notes and
 tables above are **not rewritten**, and **VP-1 … VP-7 are unchanged in text**.)*
 
 **The VP-6 verdict is unchanged: `UNSATISFIED` for every family.** Only the reading of

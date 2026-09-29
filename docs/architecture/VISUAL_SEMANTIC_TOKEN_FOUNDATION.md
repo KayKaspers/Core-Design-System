@@ -23,8 +23,8 @@
   the closed role classification, and the focus role set are unchanged.
 - **Amended by:** Post-WP-022 Decision & Contract Integration Pass, 2026-09-29 — **one
   additive note** under *Role admission*, recording **DEC-S-140** (declaration versus
-  materialization). **Prepared, not effective** until the Human-Maintainer exact-object
-  integration commit of that pass. **It creates no role, no role identifier, no binding
+  materialization). **Effective** from the Human-Maintainer exact-object
+  integration commit `e87ff702f8d96a8850b18b93454028a094c6b80a` of that pass. **It creates no role, no role identifier, no binding
   and no value**, and RA-1 … RA-5, SR-1 … SR-12 and every other rule are unchanged in
   text.
 - **Artifact class:** **1 — Normative human-readable source** (DEC-S-022)
@@ -275,9 +275,9 @@ SR-1 … SR-12 declarations, and no role exists to declare anything.
 
 #### Declaration and materialization — DEC-S-140
 
-*(**Additive note — PREPARED, NOT EFFECTIVE.** Added 2026-09-29 by the Post-WP-022
-Decision & Contract Integration Pass to record **DEC-S-140**; it becomes effective
-**only** at the Human-Maintainer exact-object integration commit of that pass. **RA-1 …
+*(**Additive note — EFFECTIVE.** Added 2026-09-29 by the Post-WP-022 Decision &
+Contract Integration Pass to record **DEC-S-140**; it became effective **only** at the
+Human-Maintainer exact-object integration commit of that pass, `e87ff702f8d96a8850b18b93454028a094c6b80a`. **RA-1 …
 RA-5 and SR-1 … SR-12 above are unchanged in text.**)*
 
 **Declaring a role and materializing a role are two acts:
