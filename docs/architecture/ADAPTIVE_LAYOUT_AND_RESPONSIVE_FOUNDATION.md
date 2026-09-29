@@ -240,8 +240,9 @@ evidence evaluation remains, DEFERRED to separately authorized future scope**
 [ADR-0007](../decisions/ADR-0007-THEME-RESOLUTION-AND-CONTEXT-EVIDENCE-ARCHITECTURE.md)).
 **No residual authority remains with CDS-WP-022**: the deferred evaluation is **not
 routed to CDS-WP-022**, its destination is **not a reopening or re-authorization of
-CDS-WP-022**, and **no currently authorized work package owns it** (*Deferred
-decisions*, row 7). **This note creates no successor and authorizes no realization,
+CDS-WP-022**, and **no currently authorized work package owns it** *(the currently
+authorized CDS-WP-001B is a process-baseline Skill-maintenance package and owns no
+design-system evaluation)* (*Deferred decisions*, row 7). **This note creates no successor and authorizes no realization,
 no value selection, and no implementation** —
 **`CDS-WP-021 DID NOT DECIDE ≠ DEC-S-137 NEVER DECIDED`** and
 **`DEFERRED ≠ CDS-WP-022 RETAINS AUTHORITY`**.

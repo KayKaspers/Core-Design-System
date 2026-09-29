@@ -6,7 +6,9 @@ summarizes; it does not duplicate the normative documents it points to.
 - **Project:** Core Design System (CDS)
 - **Repository:** KayKaspers/Core-Design-System
 - **Local path:** `D:\Projects\Core-Design-System`
-- **Framework:** Nova Development Framework v1.0.0
+- **Framework:** Nova Development Framework v1.1.0 — development-process layer
+  only (DEC-S-139, prepared by CDS-WP-001B; effective only at its Human-Maintainer
+  exact-object integration commit)
 - **Phase:** Post-Candidate Foundation & Design-System Enablement — **Foundation /
   Pre-Design: Closed with Notes** (**DEC-S-127**, 2026-08-26, effective at its
   Human-Maintainer integration commit). It supersedes `Pre-Candidate Operating
@@ -58,7 +60,8 @@ areas today.
 Governance foundation established. No final design or technology decisions are
 approved.
 
-- Decisions: DEC-S-001 … DEC-S-138 (138) — 6 foundation + 6 scope + 8 consumer
+- Decisions: DEC-S-001 … DEC-S-138 (138 effective; DEC-S-139 is prepared by
+  CDS-WP-001B and effective only at its integration commit) — 6 foundation + 6 scope + 8 consumer
   and pilot scope + 12 logical architecture + 16 governance + 12 accessibility +
   4 operating enablement and pre-candidate + 8 accessibility support baseline and
   evidence + 10 machine-readable source and token format + 10 machine-readable
@@ -83,7 +86,8 @@ approved.
     **DEC-S-137, DEC-S-138 and ADR-0007 are effective**, at the Human-Maintainer
     exact-object integration commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b` of the
     CDS-WP-022 object. The
-    **effective** register is **DEC-S-001 … DEC-S-138 (138)**
+    **effective** register is **DEC-S-001 … DEC-S-138 (138)** — **DEC-S-139 is
+    not yet effective** —
     with **7 ADRs**.
 - Risks: RISK-001 … RISK-098 (98) — **89 Monitored; RISK-031, RISK-040, RISK-044,
   RISK-066, RISK-067, RISK-068, RISK-069, RISK-071, RISK-098 Mitigating**; **owner
@@ -101,7 +105,14 @@ approved.
   risk; renamed no phase; registered no capability; and activated no later work
   package. Closure became effective with the Human-Maintainer commit
   `538fbccbf6f554de3b872e9fb75a70d13318feb6`.
-- **Current work package: NONE — no work package is currently authorized** from the
+- **Current work package: CDS-WP-001B — NDF v1.1.0 Skills and Framework Baseline
+  Maintenance** (Elevated; a lettered Skill-Maintenance insertion following the
+  CDS-WP-001A precedent; process-only). Execution object **`COMPLETE — READY FOR
+  INDEPENDENT REVIEW`**; **`EXECUTED ≠ ACCEPTED`**. It prepares `DEC-S-139`, effective
+  only at its own Human-Maintainer exact-object integration commit, and authorizes no
+  successor.
+- **Design work package currently authorized: NONE — no design work package is
+  currently authorized** from the
   Human-Maintainer exact-object integration commit
   `ab81e197374bb9f9479105b4261cb4485a491b2a` (2026-09-28), at which the CDS-WP-022
   closure became effective.
@@ -154,7 +165,7 @@ approved.
   CDS-WP-022 object — **`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION`** held
   until it; **136 decisions and 6 ADRs until that commit, 138 and 7 from it**, with the
   risk register at **98**
-  throughout — **no `RISK-099`, no `DEC-S-139`, no `ADR-0008`**. **Supported Core Theme
+  throughout — **no `RISK-099`, no `DEC-S-139`, no `ADR-0008`** *(point-in-time at the CDS-WP-022 milestone; `DEC-S-139` is since prepared by CDS-WP-001B — process-scoped, and not effective before that package's integration commit)*. **Supported Core Theme
   Resolution Contexts: 0 before that commit, 2 — `Light` and `Dark` — from it, with no
   default**, and
   **`Light` and `Dark` are human-readable architectural names, not machine-readable
@@ -349,9 +360,12 @@ via a CDS work package, and documentable, testable, and versionable
 
 ## NDF Skills
 
-The released NDF v1.0.0 Claude Skills are adopted locally under
+The released NDF v1.1.0 Claude Skills are adopted locally under
 `.claude/skills/`, pinned to commit
-`9dcadc12fb960914b9a5baeff2ab1aee75912b57`.
+`948c91dc940362f7565e28f697d0528b812797a3` (CDS-WP-001B; the earlier v1.0.0 pin of
+CDS-WP-001A is historical). A four-file NDF support snapshot from the same tag is
+held beside them; it is NDF process material, not CDS policy, and `Framework: NDF
+v1.1.0` binds the development-process layer only (DEC-S-139).
 
 - 38 docs-only Skills, all verified byte-identical against the released tag.
 - Provenance and a machine-readable hash manifest exist.
@@ -1171,8 +1185,8 @@ Decision and no ADR** created for it.
 `Closed`**, having been authorized by a separate, explicit Human-Maintainer act taken
 after that closure, **executed with result `COMPLETE WITH NOTES`**, and **closed by a
 further, separate authorization, effective at the Human-Maintainer exact-object
-integration commit `ab81e197374bb9f9479105b4261cb4485a491b2a`**. **No work package
-is currently authorized** from that commit onward. **The next planned work
+integration commit `ab81e197374bb9f9479105b4261cb4485a491b2a`**. **No design work
+package is currently authorized** from that commit onward. **The next planned work
 package is `CDS-WP-020A` — Visual Token Source Authoring and Source Set
 Realization** (the `FR-N-03` authoring destination), which **remains inactive until
 separately authorized by the Human Maintainer**. **OD-7 is answered by the effective
@@ -1487,7 +1501,7 @@ Human-Maintainer exact-object integration commit
 `23914ecc48c1fb3cba5e3dab97a505589e821b6b`** of the reviewed CDS-WP-022 object —
 **`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION`** held until it, and **a
 review PASS is not a commit**. **136 decisions and 6 ADRs until it; 138 and 7 from it. Risks stay at 98 throughout — no `RISK-099`, no
-`DEC-S-139`, no `ADR-0008`.** **`ACCESSIBILITY OBLIGATION ⇏ CDS SHIPS A HIGH-CONTRAST
+`DEC-S-139`, no `ADR-0008` *(point-in-time at the CDS-WP-022 milestone; `DEC-S-139` is since prepared by CDS-WP-001B — process-scoped, and not effective before that package's integration commit)*.** **`ACCESSIBILITY OBLIGATION ⇏ CDS SHIPS A HIGH-CONTRAST
 THEME`**, and **`COULD` ≠ `MUST`** for CR-025 — admitting `Light` and `Dark` was a
 **priority decision, not new evidence**.
 
@@ -1508,7 +1522,7 @@ Decisions and one ADR — **`DEC-S-137`**, **`DEC-S-138`** and **`ADR-0007`**, w
 **not effective until the Human-Maintainer exact-object integration commit of the
 reviewed object** and are **`Accepted` and effective at
 `23914ecc48c1fb3cba5e3dab97a505589e821b6b`** — and **created no `DEC-S-139` and no
-`ADR-0008`**. **`DEC-S-131`,
+`ADR-0008`** *(point-in-time at the CDS-WP-022 milestone; `DEC-S-139` is since prepared by CDS-WP-001B — process-scoped, and not effective before that package's integration commit)*. **`DEC-S-131`,
 `DEC-S-132`, `DEC-S-135` and `DEC-S-136` are untouched in byte and in substance**;
 **TS-1 still binds** because `DEC-S-138` part E creates no default alias; **`WP021-D2`
 stays deferred**; and **VP-3, VP-5, VP-6 and VP-7 stay `UNSATISFIED`** with **VP-4

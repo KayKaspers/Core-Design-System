@@ -48,11 +48,20 @@ Controlled work-package roadmap for the Core Design System (CDS).
   activated **no** later work package. Its architecture was integrated by the
   Human-Maintainer commit **`538fbccbf6f554de3b872e9fb75a70d13318feb6`**, and
   closure became effective there.
-- **Current work package: NONE — no work package is currently authorized** from the
+- **Current work package: CDS-WP-001B — NDF v1.1.0 Skills and Framework Baseline
+  Maintenance** — holds `Next` (roadmap authorization only). An **Elevated**, lettered
+  Skill-Maintenance insertion following the `CDS-WP-001A` precedent; **no work package
+  is renumbered**. Execution object: **`COMPLETE — READY FOR INDEPENDENT REVIEW`**;
+  **`EXECUTED ≠ ACCEPTED`**, **`PASS ≠ INTEGRATED`**, **`PREPARED DECISION ≠ EFFECTIVE
+  DECISION`**. It prepares `DEC-S-139`, effective only at its own Human-Maintainer
+  exact-object integration commit, and **authorizes no successor**.
+- **Design work package currently authorized: NONE — no design work package is
+  currently authorized** from the
   Human-Maintainer exact-object integration commit
   `ab81e197374bb9f9479105b4261cb4485a491b2a` (2026-09-28), at which the CDS-WP-022
-  closure became effective. **No row in the
-  roadmap table below holds `Next`.** **Closing a work package authorizes no other**:
+  closure became effective. **No design row in the
+  roadmap table below holds `Next`** — only the process-maintenance insertion
+  `CDS-WP-001B` does. **Closing a work package authorizes no other**:
   **`CLOSED ≠ SUCCESSOR AUTHORIZED`**, **`CLOSED ≠ VALUE SELECTION AUTHORIZED`**,
   **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`**, and **`SEQUENCED NEXT ≠
   AUTHORIZED`**. **`CDS-WP-020A` and CDS-WP-023 … CDS-WP-053 remain `Planned`, not
@@ -219,7 +228,7 @@ Controlled work-package roadmap for the Core Design System (CDS).
 current authorized one — never that its execution has or has not started. Execution,
 review, and authority state are recorded per work package below.
 
-**No work package holds `Next`.** **CDS-WP-022** held `Next` from its separate,
+**Only `CDS-WP-001B` — a process-maintenance insertion — holds `Next`; no design work package does.** **CDS-WP-022** held `Next` from its separate,
 explicit Human-Maintainer authorization after the CDS-WP-021 closure until its own
 closure, effective at the Human-Maintainer exact-object integration commit
 `ab81e197374bb9f9479105b4261cb4485a491b2a` (2026-09-28). **The CDS-WP-022 closure
@@ -232,6 +241,7 @@ separate, explicit Human-Maintainer authorization**.
 | --- | --- | --- | --- |
 | CDS-WP-001 | Project Governance and NDF Bootstrap | Completed | — |
 | CDS-WP-001A | NDF Skills Bootstrap | Completed | CDS-WP-001 |
+| CDS-WP-001B | NDF v1.1.0 Skills and Framework Baseline Maintenance | **`Next`** — authorized; execution object `COMPLETE — READY FOR INDEPENDENT REVIEW`, not accepted, not integrated | CDS-WP-001A |
 | CDS-WP-002 | Concept and Scope Registration | Completed | CDS-WP-001A |
 | CDS-WP-003 | Benchmark and Differentiation Research | Completed | CDS-WP-002 |
 | CDS-WP-004 | Consumer Requirements and CoreOps Pilot Contract | Completed | CDS-WP-002 |
@@ -409,6 +419,24 @@ verified docs-only Skills pinned to NDF v1.0.0 and activated the Skills-first
 operating mode. See
 [NDF Skills Provenance](../docs/governance/NDF_SKILLS_PROVENANCE.md) and
 [NDF Skills Inventory](NDF_SKILLS_INVENTORY.md).
+
+### CDS-WP-001B — NDF v1.1.0 Skills and Framework Baseline Maintenance
+
+**Status:** `Next` (authorized) — execution object **`COMPLETE — READY FOR
+INDEPENDENT REVIEW`**; not accepted, not integrated.
+
+An **Elevated**, lettered Skill-Maintenance insertion following the
+`CDS-WP-001A` precedent. **No work package is renumbered**, `CDS-WP-020A` stays
+`Planned`, and CDS-WP-023 … CDS-WP-053 stay `Planned`, not active, and not
+authorized. It re-pins the local NDF Skills pack to NDF v1.1.0 (7 changed, 32
+unchanged pack files), adds a four-file NDF support snapshot, migrates the
+integrity lock, provenance and inventory, updates the maintained framework
+carriers, and **prepares `DEC-S-139`** — effective only at the Human-Maintainer
+exact-object integration commit, after an independent review (reviewer ≠ executor)
+and Nova adjudication. **Process-only:** no value, Source Set, maturity, evidence,
+claim, release, publication, ADR or risk. See
+[NDF Skills Provenance](../docs/governance/NDF_SKILLS_PROVENANCE.md) and the
+[work-package notes](../project-brain/CDS_WP_001B_NDF_SKILLS_AND_FRAMEWORK_BASELINE_MAINTENANCE_NOTES.md).
 
 ### CDS-WP-002 — Concept and Scope Registration
 
@@ -1208,7 +1236,7 @@ independent review and Nova final integration adjudication. **`APPROVED
 PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION`** held until that commit, and **a review
 PASS is not a commit**. **136 decisions and 6 ADRs until that commit; 138 and 7 from
 it. The risk register stays at 98 throughout — no `RISK-099`, no `DEC-S-139`, no
-`ADR-0008`.**
+`ADR-0008` *(point-in-time at the CDS-WP-022 milestone; `DEC-S-139` is since prepared by CDS-WP-001B — process-scoped, and not effective before that package's integration commit)*.**
 **Supported Core Theme Resolution Contexts: 0 before it, 2 — `Light` and `Dark` —
 from it, with no default.**
 

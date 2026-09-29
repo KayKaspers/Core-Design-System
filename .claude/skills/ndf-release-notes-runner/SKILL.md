@@ -1,6 +1,6 @@
 ---
 name: ndf-release-notes-runner
-description: Create or review NDF release notes — distinguish RC / Foundation / final, keep known notes visible, keep changelog consistency. Docs-only, fail-closed; never asserts publication or performs tag/release actions.
+description: Create or review NDF release notes for any version — pre-release vs final label, compatibility statement and migration notes where relevant, visible known notes and accepted limitations, changelog consistency, and release-body checks (flags, known notes, compatibility claims, neutrality). USE WHEN drafting or checking release notes in authorised release prep or post-release reconciliation. Docs-only, fail-closed; never asserts publication or performs tag/release actions.
 ---
 
 # ndf-release-notes-runner
@@ -11,31 +11,42 @@ NDF Release Notes Runner (docs-only, ADR-0032-compliant).
 
 ## Purpose
 
-Create or review release notes in the NDF style, distinguishing RC / Foundation / final, without asserting publication or triggering a release.
+Create or review release notes in the NDF style for any version — labelling pre-release vs final correctly and stating compatibility honestly — without asserting publication or triggering a release.
 
 ## When to use
 
-During release-prep to draft or check release notes.
+- **USE WHEN** drafting or reviewing release notes during authorised release prep or post-release reconciliation.
+- **DO NOT USE** for readiness decisions → `ndf-release-safety`; for CHANGELOG entries → `ndf-changelog-writer`.
+- `ndf-public-release-body-reviewer` stays available for a dedicated release-body review.
 
 ## Required inputs
 
-- The release type (RC/Foundation/final), the WP results, known notes, and the changelog.
+- Target version and release type (pre-release / final).
+- The WP results, known notes and accepted limitations, the changelog, and compatibility-relevant changes — from authoritative records.
 
 ## Expected outputs
 
-- Structured release notes with the correct release-type label, visible known notes, and changelog-consistent phrasing.
+- Release notes with the correct release-type label (pre-release vs final).
+- A compatibility statement where relevant (ADR-0031; the v1.x promise is active since `v1.0.0`): non-breaking changes, deprecations with a named successor, breaking changes only on the major-version path.
+- Migration notes wherever covered behavior changes.
+- Known notes and accepted limitations kept visible.
+- Changelog-consistent phrasing.
+- Release-body review points: flags (pre-release / latest) match the release type; known notes visible; compatibility claims accurate; public neutrality.
 
 ## Allowed actions
 
-- Draft/structure release notes; keep known notes visible; check changelog consistency.
+- Draft/structure release notes; keep known notes and limitations visible; check changelog consistency and compatibility claims.
 
 ## Forbidden actions
 
-- Assert that a release is published; perform tag/release actions; activate v1.0/full v1.x promise; run scripts; access the network; read/document secrets.
+- Claim a release is published, tagged, or live without authoritative evidence; perform tag/release actions; set release flags.
+- Activate, extend, or withdraw a compatibility promise; overstate compatibility.
+- Drop known notes or accepted limitations.
+- Run scripts; access the network; read/document secrets.
 
 ## Fail-closed behavior
 
-If publication status is uncertain, phrase as "prepared/pending" rather than "published"; anything not explicitly allowed is forbidden.
+If publication status is uncertain, phrase as "prepared / pending Human-Maintainer release" rather than "published"; mark unproven compatibility or migration claims as notes instead of asserting them; anything not explicitly allowed is forbidden.
 
 ## Public-neutrality requirements
 
@@ -47,7 +58,7 @@ Docs-only, fail-closed; no scripts; no network; no secrets; no private data; no 
 
 ## Human-maintainer-only boundaries
 
-Publishing the release stays with the Human Maintainer.
+Publishing the release and setting its flags stay with the Human Maintainer.
 
 ## Output contract
 
@@ -55,8 +66,8 @@ A release-notes draft/review — never a publication or a tag/release.
 
 ## Interaction with existing NDF skills
 
-Pairs with `ndf-changelog-writer` and `ndf-release-safety`; frame via `ndf-work-package-runner`; neutrality via `ndf-public-neutrality-guard`.
+Pairs with `ndf-release-safety` (readiness, command guidance) and, when the CHANGELOG is in scope, `ndf-changelog-writer`; `ndf-public-release-body-reviewer` remains the dedicated release-body reviewer; frame via `ndf-work-package-runner`; neutrality via `ndf-public-neutrality-guard`.
 
 ## Release/governance limitations
 
-Never claims a release is live; the RC is labeled as a candidate, not final; the full v1.x promise is a final-v1.0 human-maintainer step (ADR-0031).
+Never claims a release occurred unless authoritative evidence (e.g. a Human-Maintainer-confirmed tag and release) says so; a pre-release is labelled as a pre-release, never as final; release notes describe the v1.x compatibility promise (active since `v1.0.0`, ADR-0031) and never activate or change it.

@@ -9,6 +9,39 @@ released and no release is announced.
 
 ### Added
 
+- **CDS-WP-001B — NDF v1.1.0 Skills and Framework Baseline Maintenance — execution
+  object prepared; integration and effectivity pending.** An **Elevated**, lettered
+  Skill-Maintenance insertion following the `CDS-WP-001A` precedent; **no work package
+  is renumbered**. **The prepared Working Tree has no authority: the framework
+  baseline migration, `DEC-S-139` and the lock state `lock-enforced` become effective
+  only through the later Human-Maintainer exact-object integration commit**, after an
+  independent review (reviewer ≠ executor) and Nova adjudication — **`EXECUTED ≠
+  ACCEPTED`**, **`PASS ≠ INTEGRATED`**, **`PREPARED DECISION ≠ EFFECTIVE DECISION`**
+  and **`SKILL IMPORTED ≠ SKILL APPROVED`**. **Adoption target: NDF `v1.1.0`** (tag
+  object `d4409492498cf4ed989f9ee47d4ad8b2f5f6868d`, commit
+  `948c91dc940362f7565e28f697d0528b812797a3`), extracted byte-identically from the
+  tag's Git objects. **Pinned pack: 39 → 39 files, 38 Skills, 7 changed** (the pack
+  `README.md` and six `SKILL.md` files) **and 32 unchanged**, none added, deleted or
+  renamed. **Four NDF support-snapshot files** (execution contract, work-package
+  lifecycle, token-efficiency and context-budget baseline, session-handoff template)
+  are held byte-identically so the pinned Skills resolve offline; they are NDF process
+  material, not CDS policy or architecture. **The integrity lock** (`schemaVersion` 2;
+  SHA-256, raw committed bytes, lowercase hexadecimal; 43 records under one source tag
+  and one source commit; `migration-pending` until integration, then `lock-enforced`;
+  no exception active), **the provenance record and the inventory were migrated**, and
+  **43 / 43 files verified**. **`DEC-S-139` is prepared** — NDF v1.1.0 as the CDS
+  development-process baseline with **process-scoped authority**; **the effective
+  registers stay at 138 decisions, 7 ADRs and 98 risks until integration** and become
+  139 · 7 · 98 from it; no ADR and no risk is added. **`Framework: NDF v1.1.0` binds the
+  development-process layer only; NDF release, version and compatibility statements are
+  NDF-only** and state no CDS release. **No CDS product, release, maturity, evidence,
+  claim, or conformance authority is created**, `PROJECT_CHARTER.md` is intentionally
+  preserved as a historical carrier, and **no successor is authorized**: `CDS-WP-020A`
+  and CDS-WP-023 … CDS-WP-053 remain `Planned`, not active, and not authorized; visual
+  values and visual Source Sets stay 0; publication stays `Private Development`.
+  **Known provenance limitations are recorded, not fixed**, including six
+  informational pack-`README.md` links that do not resolve in CDS.
+
 - **CDS-WP-022 closure — closure object prepared; target lifecycle `Completed` /
   `Closed`.** The closure of **CDS-WP-022 — Theme and Environmental Presentation
   Model** was separately authorized for preparation, and this entry is part of the

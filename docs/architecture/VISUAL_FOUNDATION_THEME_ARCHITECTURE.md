@@ -708,7 +708,10 @@ PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION`** held until it, **a review PASS 
 commit**, and **a Nova recommendation is not an approval**. **The `WP022-D*` keys are
 execution-local report keys, not Decisions, ADRs, risks, requirements, or stable
 governance identifiers**, and **no `DEC-S-139`, no `ADR-0008` and no `RISK-099`
-exists or is prepared** — the risk register stays at **98**.
+exists or is prepared** *(point-in-time at the CDS-WP-022 milestone; `DEC-S-139`, a
+process-baseline decision unrelated to VF-9, has since been prepared by CDS-WP-001B
+and is not effective before that package's integration commit — it changes no rule in
+this document)* — the risk register stays at **98**.
 
 **What remains open, and is not a decision this package withheld:**
 
@@ -895,7 +898,10 @@ listed here as *not done*, and everything that genuinely remains not done still 
    publication stays **`Private Development`**, and the Semantic Status Candidate
    family is **untouched**.
 8. **It adds no risk entry** — the register stays at **98**, with **no `RISK-099`**
-   — and **no `DEC-S-139` and no `ADR-0008`** exists or is prepared. **Claude does
+   — and **no `DEC-S-139` and no `ADR-0008`** exists or is prepared *(point-in-time at
+   the CDS-WP-022 milestone; `DEC-S-139`, a process-baseline decision unrelated to
+   VF-9, has since been prepared by CDS-WP-001B and is not effective before that
+   package's integration commit — it changes no rule in this document)*. **Claude does
    not mark an ADR `Accepted`; that is a Human-Maintainer act**, which is why
    **ADR-0007 became `Accepted` only through the Human-Maintainer exact-object
    integration commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b`**, at which it is

@@ -12,7 +12,10 @@ authorized work packages.
 ## Register scope
 
 - **Effective decision range: DEC-S-001 … DEC-S-138**
-- **Number of effective decisions: 138**
+- **Number of effective decisions: 138** — **`DEC-S-139` is prepared by CDS-WP-001B
+  and is not yet effective**: the effective count becomes **139** only at the
+  Human-Maintainer exact-object integration commit of CDS-WP-001B — see the
+  CDS-WP-001B bullet below. **`PREPARED DECISION ≠ EFFECTIVE DECISION`.**
 - **Effectivity.** **DEC-S-128 … DEC-S-131 are effective.** The condition their
   entries stated — the Human-Maintainer exact-byte integration commit of the
   CDS-WP-020 Decision Integration Pass, following a Fresh Independent Review and
@@ -181,6 +184,31 @@ authorized work packages.
   **no work package is currently authorized**, and **`CDS-WP-020A` and
   CDS-WP-023 … CDS-WP-053 remain `Planned`, not active, and not authorized**.
   **`WP021-D2` stays deferred**, and **visual values and visual Source Sets stay 0**.
+- **`DEC-S-139` is prepared by CDS-WP-001B and is NOT yet effective.** *(Maintained
+  current carrier, added 2026-09-29 by CDS-WP-001B — NDF v1.1.0 Skills and Framework
+  Baseline Maintenance, an Elevated, lettered Skill-Maintenance insertion following
+  the `CDS-WP-001A` precedent; no work package is renumbered.)* **DEC-S-139 — NDF
+  v1.1.0 is the CDS development-process baseline; its authority is process-scoped;
+  pinned Skills resolve through an exact support snapshot** is a **process-baseline
+  and Skill supply-chain decision**. It becomes effective **only** at the
+  Human-Maintainer exact-object integration commit of CDS-WP-001B, following an
+  independent review (reviewer ≠ executor) and Nova adjudication; **the uncommitted
+  Working Tree creates no authority.** **The effective register holds
+  `DEC-S-001 … DEC-S-138` (138 decisions) until that commit and holds
+  `DEC-S-001 … DEC-S-139` (139 decisions) from it; the ADR register stays at 7
+  (`ADR-0001 … ADR-0007`) and the risk register at 98 throughout** — **no ADR is
+  authorized, no risk is authorized, no `ADR-0008`, no `RISK-099`, and no
+  `DEC-S-140`.** **No existing Decision entry is edited or semantically modified,**
+  and `DEC-S-037` (versioning) is unchanged. DEC-S-139 is **process-scoped**: it
+  selects no value, creates no identifier or Source Set, changes no maturity,
+  admits no evidence, makes no claim, and **authorizes no successor** —
+  **`MAINTENANCE COMPLETE ≠ SUCCESSOR AUTHORIZED`**, and `CDS-WP-020A` and
+  CDS-WP-023 … CDS-WP-053 remain `Planned`, not active, and not authorized.
+  **Statements above and inside earlier entries that "no `DEC-S-139` exists or is
+  prepared" are point-in-time statements about the milestones they describe and are
+  not edited**, and statements that "no work package is currently authorized" refer to
+  the **design-work-package** sequence as at the CDS-WP-022 closure — CDS-WP-001B owns
+  no design scope.
 - Decision record format: index entries, plus ADR files where a decision warrants an
   Architecture Decision Record. **Effective ADR range: ADR-0001 … ADR-0007
   (7 ADRs)**.
@@ -240,6 +268,7 @@ authorized work packages.
 | Visual identifier, scale ownership, role admission and theme sequencing decision | DEC-S-132 … DEC-S-135 | — (CDS Step-9 Decision Integration Pass) | A family-rooted visual identifier grammar with a declared `qualifier` position, the layer kept out of every token path, two separate identity spaces, and the concrete source-set root identities; per-family ownership of every ordered scale under the common ST-1 … ST-7 contract with no universal cross-family base and `SCALE TOPOLOGY ≠ SCALE VALUES`; a cross-consumer role admission rule with the concrete vocabulary left open; and the rule that no semantic role carries a default alias before CDS-WP-022 decides the theme mechanism (ADR-0005 for DEC-S-132 only). **Effective at the Human-Maintainer integration commit `2cb244e889c1a6b5a278afb233995a0379b5d9ef`.** They select **no** value, create **no** token identifier, role identifier or source set, and grant **no** maturity. |
 | Adaptive spatial context and responsive architecture decision | DEC-S-136 | CDS-WP-021 | The declared **Adaptation Container** as the primary responsive Layer-3 reference frame — technology-neutral, never a device class or viewport identity, and satisfiable by a root or application context; **named discrete available-space ranges** as the Core Layer-3 response vocabulary, with `RANGE ≠ BEHAVIOUR`; continuous transformation **permitted downstream where separately authorized** but **not Core range identity**, requiring no new `$type` and altering DEC-S-130 in no way; fixed-geometry channels governed by **their own channel geometry** rather than forced responsive ranges; and **`SPATIAL CONTEXT ≠ THEME RESOLUTION CONTEXT`**, with any composition reserved to CDS-WP-022 (ADR-0006 for DEC-S-136 only). **Effective at the Human-Maintainer integration commit `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`.** It selects **no** value, creates **no** range name, identifier, VF-4 root or source set, defers **`WP021-D2`**, and grants **no** maturity. |
 | Theme resolution, context-evidence and environmental selection decision | DEC-S-137 … DEC-S-138 | CDS-WP-022 | Theme/context-sensitive binding represented through the existing **Resolver / Composition** architecture over the existing Source-Set graph, with **no per-context Source Set**, **no context or theme segment in any identifier**, the **Source Set remaining the sole independently evaluable maturity unit**, and context-specific evidence staying bound to `(sourceSetId, sourceRevision)` while recording the **Resolver / Composition revision** and the **Theme Resolution Context** as exact evidence inputs; **Light and Dark** as the initial supported Core Theme Resolution Contexts, **equal peers with no default**; **forced colours and platform high contrast as an environmental accessibility condition and not a Core context**; **explicit viewer choice over inferred environment preference**, with mandatory platform accessibility conditions outside Theme precedence and always binding; and **no default or fallback Theme, with missing, unsupported and unresolved-conflict resolution failing closed** (**ADR-0007** for **DEC-S-137 only**). **Accepted and effective at the Human-Maintainer exact-object integration commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b`.** They select **no** value, create **no** identifier, Source Set, or resolver instance, and grant **no** maturity. |
+| Framework process-baseline and Skill supply-chain decision | DEC-S-139 | CDS-WP-001B | NDF v1.1.0 as the CDS **development-process** baseline only — execution contracts, work-package execution, process verification and evidence, session and handoff rules, Skill routing and Human-Maintainer gates — with **no** authority over CDS product or domain authority; NDF normative process rules as a **floor** that CDS may tighten and never silently relax; exactly four support files imported byte-identically and **not** independent CDS policy or architecture; one integrity lock (SHA-256, raw committed bytes, lowercase hex) binding the pack and snapshot to one source release and commit; and NDF release/version language that is **NDF-only** and cannot satisfy or alter DEC-S-037. **Prepared; effective only at the Human-Maintainer exact-object integration commit of CDS-WP-001B.** It selects **no** value, creates **no** identifier, and grants **no** maturity, evidence, claim, conformance, release, or publication authority. |
 
 None of these types is an implementation decision. Logical architecture decisions
 define structure, responsibility, and flow — they select no technology, format,
@@ -6455,3 +6484,163 @@ not active, and not authorized.** It adds **no** risk entry: the register stays 
 **98**, with **no `RISK-099`**. **VF-1 … VF-9 stay `Proposed`; visual values stay 0;
 visual source sets stay 0; Stable stays `No`.** **VP-3, VP-5, VP-6 and VP-7 stay
 `UNSATISFIED`**, and **VP-4 stays `UNSATISFIED` for VF-4.**
+
+---
+
+## DEC-S-139 — NDF v1.1.0 is the CDS development-process baseline; its authority is process-scoped; pinned Skills resolve through an exact support snapshot
+
+- **Status:** **Prepared — not effective.** **DEC-S-139 becomes effective only at the
+  Human-Maintainer exact-object integration commit of CDS-WP-001B**, which must
+  follow an independent review (reviewer ≠ executor, a fresh session) and Nova
+  adjudication. Until that commit this entry is **uncommitted executor output**
+  prepared under an explicit Human-Maintainer authorization and it changes **no**
+  authoritative CDS state. **`PREPARED DECISION ≠ EFFECTIVE DECISION`**,
+  **`EXECUTED ≠ ACCEPTED`**, **`PASS ≠ INTEGRATED`**, and **a Nova recommendation is
+  not an approval.** **The effective register holds 138 decisions until that commit
+  and holds 139 from it**; ADRs stay at 7 and risks at 98.
+- **Date:** 2026-09-29
+- **Type:** Framework process-baseline and Skill supply-chain decision
+- **Work package:** **CDS-WP-001B — NDF v1.1.0 Skills and Framework Baseline
+  Maintenance**, an **Elevated**, lettered Skill-Maintenance insertion following the
+  `CDS-WP-001A` precedent. It renumbers **no** work package. This decision authorizes
+  **no** further work package.
+- **Human-Maintainer authorization:** 2026-09-29, authorizing execution of exactly
+  CDS-WP-001B and the preparation of exactly this Decision
+- **Architecture record:** **none.** **No ADR is created for this decision.**
+
+### Decision
+
+#### A — Purpose and self-containment
+
+1. **The purpose is repository-contained, offline, reproducible and byte-verifiable
+   use of the pinned NDF v1.1.0 Skills.**
+
+2. **Normal Skill execution requires no external NDF checkout.** The direct
+   rule/document dependencies of the pinned Skills are held in this repository at the
+   exact repository-relative paths the unmodified Skills expect — no symlink, no
+   submodule, no absolute runtime path, and no modification of any Skill byte to
+   change a link.
+
+#### B — Authority scope
+
+3. **`Framework: NDF v1.1.0` binds the development-process layer only:** execution
+   contracts, work-package execution, process verification, process evidence, session
+   and handoff rules, Skill routing, and Human-Maintainer gates.
+
+4. **NDF gains no authority over CDS product or domain authority:** CDS architecture,
+   Decisions, ADRs, risks, design-system semantics, visual values, Visual Source
+   Sets, maturity, CDS evidence admission or AE grading, CDS V1–V4 validation,
+   conformance, claims, publication, or CDS release and version state. **Outside the
+   process layer CDS governance remains the sole CDS authority.**
+
+5. **Inside the process layer, NDF normative process requirements are a floor.** A CDS
+   rule may be stricter or more specific and **must not silently relax** an NDF
+   normative process requirement. **A relaxing conflict fails closed** (DEC-S-023)
+   and is escalated to the Human Maintainer.
+
+#### C — The support snapshot
+
+6. **Exactly four support files are imported byte-identically from NDF v1.1.0:**
+   `framework/prompts/blocks/BLOCK_EXECUTION_CONTRACT.md`,
+   `framework/standards/WORK_PACKAGE_LIFECYCLE.md`,
+   `docs/guides/TOKEN_EFFICIENCY_AND_CONTEXT_BUDGET_BASELINE.md`, and
+   `docs/templates/SESSION_HANDOFF_TEMPLATE.md`. **No fifth document and no
+   onward-linked document is authorized.**
+
+7. **Their repository location does not make them independent CDS policy or CDS
+   architecture.** They are not CDS-authored, are not counted as Skills, and are not
+   a CDS normative source of design-system authority.
+
+8. **Source authority remains NDF v1.1.0. The snapshot is not a fork.** It is
+   byte-verified against the source tag and is never edited locally.
+
+9. **Mixed-tag Skill/support content is forbidden.**
+
+#### D — The integrity lock
+
+10. **One integrity lock binds the pack and the support snapshot to one source release
+    and one source commit** — 39 pack records and 4 support records, with a single
+    source tag, tag object and commit — so that a mixed-tag state is structurally
+    detectable. **No automated enforcement is claimed**, and no drift gate exists.
+
+11. **The approved lock semantics are:** digest algorithm **SHA-256**; digest basis
+    **raw committed bytes**; digest encoding **lowercase hexadecimal**; verification
+    status **`verified`**; migration state **`lock-enforced` from the Human-Maintainer
+    exact-object integration commit** (**`migration-pending`** while the object is
+    uncommitted); approval-state wording *"Human-Maintainer approval becomes effective
+    only at the exact-object integration commit carrying this record"*; and exception
+    state **`no exception active`**. **These are a CDS-local vocabulary**, not an NDF
+    normative vocabulary, and **no alternate vocabulary may be introduced without a
+    stop and an escalation.** A digest is an integrity aid — **not authenticity, not
+    approval, not a release statement** (DEC-S-090).
+
+12. **Updating the pack or the support snapshot requires a separately authorized
+    Skill-Maintenance work package**, a byte-exact import, full re-verification of all
+    locked files, an independent review, and Human-Maintainer integration. It is never
+    a side effect of product work.
+
+#### E — Namespace, cut-over and non-claims
+
+13. **NDF release, version and compatibility language is NDF-only.** Statements inside
+    the pinned Skills and the support snapshot describe the NDF project and the NDF
+    release family; they **do not state, imply or activate** a CDS `v1.0.0`, a CDS
+    release, a CDS maturity transition or a CDS compatibility commitment, and **they
+    cannot satisfy or alter DEC-S-037.** NDF identifiers stay NDF-namespaced; where the
+    NDF guide specifies disambiguated forms, CDS uses `NDF-B0` … `NDF-B4` and
+    `NDF-Lean`.
+
+14. **Execution Contract legacy cut-over.** Instructions authored **before** the
+    Human-Maintainer exact-object integration commit of CDS-WP-001B are **legacy** for
+    the purpose of the adopted NDF Execution Contract. Historical prompts and
+    work-package records are **not** retroactively rewritten.
+
+15. **CDS makes no claim that unresolved upstream questions are settled** — in
+    particular the NDF ADR-0032 private-consumer-project question, which remains open
+    upstream.
+
+16. **No maturity, evidence, conformance, claim, value, release, publication, ADR or
+    risk authority is created.**
+
+### Rationale
+
+The Skills-first operating mode already depends on a pinned copy of the NDF Skills. At
+v1.1.0 six of them changed and now reference four NDF documents directly; without
+those documents a Skill instructs the executor to follow rules it cannot read. Two
+alternatives were rejected: a runtime dependency on an external NDF checkout (breaks
+offline and reproducible use, and lets the source move under the pin) and a
+paraphrase inside CDS (creates a fork whose bytes nobody can verify). A byte-identical
+snapshot under one lock is the smallest arrangement that keeps the rules readable and
+the provenance checkable. Scoping the authority to the process layer, with NDF as a
+floor, prevents a process framework from acquiring product authority by proximity —
+the same form-versus-substance failure DEC-S-135 was written to prevent.
+
+### Consequences
+
+- The pinned pack moves from NDF v1.0.0 to v1.1.0 (7 changed, 32 unchanged pack
+  files); the lock, provenance record and inventory are migrated with it; the
+  maintained live carriers declare NDF v1.1.0. **`PROJECT_CHARTER.md` is
+  intentionally not modified**: its `Framework: NDF v1.0.0` wording is a charter-era
+  historical carrier.
+- **The Skills stay procedural aids** (CLAUDE.md *Skills-first operating mode*): a
+  Skill never grants authority, extends scope, or replaces a Human-Maintainer gate.
+- **Known provenance limitations are recorded, not fixed**: six informational README
+  links do not resolve; NDF terms collide with CDS terms (Lean, Standard, Candidate,
+  ADR numbering); Skill auto-trigger behaviour changes with the new descriptions; and
+  no automated drift gate exists.
+- **No existing Decision entry is edited**, and DEC-S-037 is unchanged.
+
+### Boundary
+
+This decision fixes a **process baseline, an authority scope and an integrity
+arrangement** — not values, not identifiers, and not authorization. It selects no
+colour, typography, spacing, shape, surface, breakpoint, or theme value; creates no
+identifier, role, primitive, alias, Source Set, `sourceSetId`, `sourceRevision`,
+token manifest, resolver instance, schema, validator rule, test, fixture, generated
+output, Product Profile, or extension point; and awards no maturity, Candidate,
+Stable, evidence, admission, claim, conformance, pilot, licence, release, tag, or
+publication authority. **It activates no design work package** — **`CDS-WP-020A`,
+CDS-WP-023 and every later identifier remain `Planned`, not active, and not
+authorized** — and it adds **no** ADR and **no** risk entry: ADRs stay at **7**, the
+risk register stays at **98**, with **no `ADR-0008`, no `RISK-099` and no
+`DEC-S-140`.** **VF-1 … VF-9 stay `Proposed`; visual values stay 0; visual Source
+Sets stay 0; Stable stays `No`; publication stays `Private Development`.**

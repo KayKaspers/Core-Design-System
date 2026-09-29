@@ -45,8 +45,10 @@ authorized by a separate, explicit Human-Maintainer act, **not** by this documen
 integration commit `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`; **CDS-WP-022 — Theme
 and Environmental Presentation Model is `Completed` / `Closed`**, closure effective
 at the Human-Maintainer exact-object integration commit
-`ab81e197374bb9f9479105b4261cb4485a491b2a`. **No work package
-is currently authorized** from that commit onward, and **closing one authorizes
+`ab81e197374bb9f9479105b4261cb4485a491b2a`. **No design work package
+is currently authorized** from that commit onward (**CDS-WP-001B**, a lettered
+Skill-Maintenance insertion, is separately authorized — see *Out-of-sequence
+maintenance insertion*), and **closing one authorizes
 no other** — **`CLOSED ≠ SUCCESSOR AUTHORIZED`**. The CDS-WP-022 authorization and
 closure are Human-Maintainer acts that this document records rather than makes.
 
@@ -254,7 +256,7 @@ independent review, and Nova final integration adjudication.
 **a review PASS is not a commit**, and **a Nova recommendation is not an approval**.
 **The effective registers
 held 136 decisions and 6 ADRs until it and hold 138 and 7 from it; the risk
-register stays at 98 throughout** — **no `RISK-099`, no `DEC-S-139`, no `ADR-0008`**.
+register stays at 98 throughout** — **no `RISK-099`, no `DEC-S-139`, no `ADR-0008`** *(point-in-time at the CDS-WP-022 milestone; `DEC-S-139` is since prepared by CDS-WP-001B — process-scoped, and not effective before that package's integration commit)*.
 **Supported Core Theme Resolution Contexts: 0 until that commit, 2 — `Light` and
 `Dark` — from it, with no
 default.** The rework created **no** visual value, machine-readable context
@@ -506,6 +508,25 @@ Human-Maintainer exact-object integration commit
 this range is currently authorized** from that commit onward; **being recorded here authorizes
 nothing.** The **CDS Phase Transition Governance Package** occupies **no** identifier
 in this range.
+
+## Out-of-sequence maintenance insertion — CDS-WP-001B
+
+**CDS-WP-001B — NDF v1.1.0 Skills and Framework Baseline Maintenance** is a
+**lettered Skill-Maintenance insertion following the `CDS-WP-001A` precedent**.
+
+- It **does not renumber the main sequence**: no work package is renumbered, and the
+  numeric range CDS-WP-017 … CDS-WP-053 is unchanged.
+- It **does not make `CDS-WP-020A` active**, and it **does not authorize
+  CDS-WP-023 or any later work package**. **The next design work package remains only
+  `Planned` unless separately authorized** — **`MAINTENANCE COMPLETE ≠ SUCCESSOR
+  AUTHORIZED`**.
+- **Its purpose is NDF process-baseline and Skill-supply-chain maintenance**: it re-pins
+  the local NDF Skills to v1.1.0, adds a four-file byte-identical NDF support
+  snapshot, migrates the integrity lock, and prepares `DEC-S-139` (effective only at
+  its Human-Maintainer exact-object integration commit). It selects no visual value,
+  creates no Source Set, and changes no maturity, evidence, claim, or release state.
+- **Its table position is registration, not sequencing** — it sits outside the design
+  arcs and blocks nothing on the forward path.
 
 ## Milestones
 
@@ -1049,7 +1070,8 @@ authorized** from that integration onward.
 **CDS-WP-022 is `Completed` / `Closed`**, closure effective at the Human-Maintainer
 exact-object integration commit `ab81e197374bb9f9479105b4261cb4485a491b2a`
 (2026-09-28), with the execution result unchanged at **`COMPLETE WITH NOTES`**.
-**No work package is currently authorized.** **No successor is
+**No design work package is currently authorized** (CDS-WP-001B is a process-baseline
+maintenance insertion, not a next design step). **No successor is
 authorized**: **`CDS-WP-020A` and CDS-WP-023 … CDS-WP-053 remain `Planned`, not
 active, and not authorized** — **`CLOSED ≠ SUCCESSOR AUTHORIZED`**, **`SEQUENCED
 NEXT ≠ AUTHORIZED`** and **`THEME GATE SATISFIED ≠ CDS-WP-020A AUTHORIZED`** — and

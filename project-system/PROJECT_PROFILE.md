@@ -7,7 +7,9 @@
 - Repository: KayKaspers/Core-Design-System
 - Local path: `D:\Projects\Core-Design-System`
 - Primary pilot consumer: CoreOps
-- Framework: Nova Development Framework v1.0.0
+- Framework: Nova Development Framework v1.1.0 — development-process layer only
+  (DEC-S-139, prepared by CDS-WP-001B; effective only at its Human-Maintainer
+  exact-object integration commit)
 
 ## Project type
 
@@ -31,7 +33,16 @@ release, or publication authority, and activates no work package.
 
 ## Work package status
 
-- **Current work package: NONE — no work package is currently authorized** from the
+- **Current work package: CDS-WP-001B — NDF v1.1.0 Skills and Framework Baseline
+  Maintenance** (Elevated; a lettered Skill-Maintenance insertion following the
+  CDS-WP-001A precedent, no renumbering; process-only). Execution object:
+  **`COMPLETE — READY FOR INDEPENDENT REVIEW`**; **`EXECUTED ≠ ACCEPTED`**,
+  **`PASS ≠ INTEGRATED`**, **`PREPARED DECISION ≠ EFFECTIVE DECISION`**. It prepares
+  `DEC-S-139`, effective only at its own Human-Maintainer exact-object integration
+  commit, and authorizes **no** successor (**`MAINTENANCE COMPLETE ≠ SUCCESSOR
+  AUTHORIZED`**).
+- **Design work package currently authorized: NONE — no design work package is
+  currently authorized** from the
   Human-Maintainer exact-object integration commit
   `ab81e197374bb9f9479105b4261cb4485a491b2a` (2026-09-28), at which the CDS-WP-022
   closure became effective.
@@ -83,7 +94,7 @@ release, or publication authority, and activates no work package.
   CDS-WP-022 object — **`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION`** held
   until it; **136 decisions and 6 ADRs until that commit, 138 and 7 from it**, with the
   risk register at **98**
-  throughout — **no `RISK-099`, no `DEC-S-139`, no `ADR-0008`**. **Supported Core Theme
+  throughout — **no `RISK-099`, no `DEC-S-139`, no `ADR-0008`** *(point-in-time at the CDS-WP-022 milestone; `DEC-S-139` is since prepared by CDS-WP-001B — process-scoped, and not effective before that package's integration commit)*. **Supported Core Theme
   Resolution Contexts: 0 before that commit, 2 — `Light` and `Dark` — from it, with no
   default**, and
   **`Light` and `Dark` are human-readable architectural names, not machine-readable
@@ -759,10 +770,14 @@ Normative source:
 
 ## NDF Skills
 
-- NDF Skills Version: v1.0.0
+- NDF Skills Version: v1.1.0 (adopted by CDS-WP-001B; lock state `migration-pending`
+  until its integration commit, then `lock-enforced`)
 - Skills Count: 38
-- Skills Status: Verified and locally available
-- Skills Source Commit: `9dcadc12fb960914b9a5baeff2ab1aee75912b57`
+- Skills Status: verified (byte-identity with the source tag) and locally available
+- Skills Source Commit: `948c91dc940362f7565e28f697d0528b812797a3` (tag object
+  `d4409492498cf4ed989f9ee47d4ad8b2f5f6868d`)
+- NDF Support Snapshot: 4 files, byte-identical to the same tag; NDF process
+  material, not CDS policy
 - Skills-first Operating Mode: Active
 
 Details: [NDF Skills Inventory](NDF_SKILLS_INVENTORY.md),
@@ -808,7 +823,9 @@ pilot contract is defined in CDS-WP-004.
 
 ## Register scope
 
-- Decisions: DEC-S-001 … DEC-S-138 (138) — 6 strategic foundation decisions
+- Decisions: DEC-S-001 … DEC-S-138 (138 effective; **DEC-S-139 is prepared by
+  CDS-WP-001B and effective only at its integration commit, making it 139**) — 6
+  strategic foundation decisions
   (CDS-WP-001), 6 strategic scope decisions (CDS-WP-002), 8 consumer and pilot
   scope decisions (CDS-WP-004), 12 logical architecture decisions (CDS-WP-005),
   16 governance, lifecycle and publication decisions (CDS-WP-006), 12
@@ -848,7 +865,8 @@ pilot contract is defined in CDS-WP-004.
   `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`; **DEC-S-137, DEC-S-138 and ADR-0007
   are effective**, at the Human-Maintainer exact-object integration commit
   `23914ecc48c1fb3cba5e3dab97a505589e821b6b`. The **effective** register is
-  **DEC-S-001 … DEC-S-138 (138)** with **7 ADRs**.
+  **DEC-S-001 … DEC-S-138 (138)** with **7 ADRs** — **DEC-S-139 is not yet
+  effective**.
 - Risks: RISK-001 … RISK-098 (98) — **89 `Monitored`; RISK-031, RISK-040, RISK-044,
   RISK-066, RISK-067, RISK-068, RISK-069, RISK-071, and RISK-098 `Mitigating`**;
   **risk owner model finalized** by CDS-WP-006; RISK-082 … RISK-089 added by CDS-WP-014;

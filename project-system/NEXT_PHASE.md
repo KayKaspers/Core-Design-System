@@ -19,7 +19,12 @@
   `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`, with its execution result unchanged at
   **`COMPLETE WITH NOTES`**. **`CLOSURE OBJECT PREPARED ≠ CLOSURE EFFECTIVE`** held
   until that commit.
-- **Current work package: NONE.** **No work package is currently authorized** from
+- **Current work package: CDS-WP-001B — NDF v1.1.0 Skills and Framework Baseline
+  Maintenance** (Elevated; a lettered Skill-Maintenance insertion following the
+  CDS-WP-001A precedent; process-only; execution object **`COMPLETE — READY FOR
+  INDEPENDENT REVIEW`**, not accepted, not integrated; prepares `DEC-S-139`,
+  effective only at its own integration commit). **Design work package currently
+  authorized: NONE.** **No design work package is currently authorized** from
   the Human-Maintainer exact-object integration commit
   `ab81e197374bb9f9479105b4261cb4485a491b2a` (2026-09-28), at which the CDS-WP-022
   closure became effective. **Next authorized work package: NONE** — this document
@@ -179,7 +184,7 @@
   reviewed CDS-WP-022 object — **`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY
   DECISION`** held until it. **136 decisions and 6 ADRs until that commit; 138 and 7
   from it; the risk
-  register stays at 98 throughout — no `RISK-099`, no `DEC-S-139`, no `ADR-0008`.**
+  register stays at 98 throughout — no `RISK-099`, no `DEC-S-139`, no `ADR-0008` *(point-in-time at the CDS-WP-022 milestone; `DEC-S-139` is since prepared by CDS-WP-001B — process-scoped, and not effective before that package's integration commit)*.**
   **Supported Theme Resolution Contexts: 0 before it, 2 from it, with no default**, and
   **`Light` and `Dark` are human-readable architectural names, not machine-readable
   identifiers.** **`DEC-S-131`, `DEC-S-132`, `DEC-S-135` and `DEC-S-136` are unchanged
@@ -385,7 +390,15 @@ controlled roadmap.
 ### CDS-WP-001A — NDF Skills Bootstrap — Completed
 
 38 verified docs-only NDF v1.0.0 Skills pinned to commit
-`9dcadc12fb960914b9a5baeff2ab1aee75912b57`; Skills-first mode active.
+`9dcadc12fb960914b9a5baeff2ab1aee75912b57` (historical; superseded as the live pin by
+CDS-WP-001B → NDF v1.1.0); Skills-first mode active.
+
+### CDS-WP-001B — NDF v1.1.0 Skills and Framework Baseline Maintenance — Authorized (`Next`); execution object ready for independent review
+
+Re-pins the local NDF Skills to v1.1.0 (7 changed, 32 unchanged pack files), adds
+a four-file NDF support snapshot, migrates the lock, provenance and inventory, and
+prepares `DEC-S-139` (effective only at its integration commit). Process-only; no
+successor authorized.
 
 ### CDS-WP-002 — Concept and Scope Registration — Completed
 

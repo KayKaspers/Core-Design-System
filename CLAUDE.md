@@ -15,7 +15,9 @@ library, or a design project scoped exclusively to CoreOps.
 
 - Repository: KayKaspers/Core-Design-System
 - Local path: `D:\Projects\Core-Design-System`
-- Framework: Nova Development Framework v1.0.0
+- Framework: Nova Development Framework v1.1.0 — **development-process layer only**
+  (**DEC-S-139**, prepared by CDS-WP-001B; effective only at that package's
+  Human-Maintainer exact-object integration commit)
 - Phase: **Post-Candidate Foundation & Design-System Enablement** — set by
   **DEC-S-127** and effective at its Human-Maintainer integration commit. It
   supersedes `Pre-Candidate Operating Enablement` (**DEC-S-062**) **for current and
@@ -41,9 +43,28 @@ library, or a design project scoped exclusively to CoreOps.
   `ab81e197374bb9f9479105b4261cb4485a491b2a`** (2026-09-28), which integrated its
   independently reviewed closure object; **both execution results are unchanged at
   `COMPLETE WITH NOTES`**
-- **Currently authorized work package: NONE** — from the Human-Maintainer exact-object
-  integration commit `ab81e197374bb9f9479105b4261cb4485a491b2a` (2026-09-28), at which
-  the CDS-WP-022 closure became effective. **Successor: NONE.** **`CLOSURE OBJECT
+- **Currently authorized work package: CDS-WP-001B — NDF v1.1.0 Skills and Framework
+  Baseline Maintenance** — an **Elevated**, lettered Skill-Maintenance insertion
+  following the `CDS-WP-001A` precedent (**no work package is renumbered**),
+  authorized by the Human Maintainer for governed Skill-maintenance execution
+  **only**. Its execution object is **`COMPLETE — READY FOR INDEPENDENT REVIEW`**: it
+  re-pins the local NDF Skills pack to **NDF v1.1.0** (7 changed, 32 unchanged pack
+  files), adds a four-file NDF support snapshot, migrates the integrity lock, and
+  **prepares `DEC-S-139`**. **`EXECUTED ≠ ACCEPTED`**, **`PASS ≠ INTEGRATED`**,
+  **`PREPARED DECISION ≠ EFFECTIVE DECISION`**, **`SKILL IMPORTED ≠ SKILL APPROVED`**
+  and **`MAINTENANCE COMPLETE ≠ SUCCESSOR AUTHORIZED`**: `DEC-S-139` becomes effective
+  — and the lock state `lock-enforced` — only at the Human-Maintainer exact-object
+  integration commit of CDS-WP-001B, **and instructions authored before that commit
+  are legacy for the adopted NDF Execution Contract**. It is **process-only**: no
+  value, Source Set, maturity, evidence, claim, release, publication, ADR, or risk.
+  **The effective registers stay at 138 decisions, 7 ADRs and 98 risks until that
+  commit; `DEC-S-139` makes it 139 · 7 · 98.**
+- **Design work package currently authorized: NONE** — from the Human-Maintainer
+  exact-object integration commit `ab81e197374bb9f9479105b4261cb4485a491b2a`
+  (2026-09-28), at which the CDS-WP-022 closure became effective; **the statements
+  in this file and elsewhere that "no work package is currently authorized" describe
+  the design-work-package sequence as of that commit**, and CDS-WP-001B owns no design
+  scope. **Successor: NONE.** **`CLOSURE OBJECT
   PREPARED ≠ CLOSURE EFFECTIVE`** held until that commit. **`CLOSED ≠ SUCCESSOR
   AUTHORIZED`**, **`CLOSED ≠ VALUE
   SELECTION AUTHORIZED`**, **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`**,
@@ -386,7 +407,9 @@ library, or a design project scoped exclusively to CoreOps.
   review PASS is not a commit**. **The effective registers held
   136 decisions and 6 ADRs until it and hold 138 and 7 from it; the risk register
   stays at 98 throughout — no `RISK-099`, no `DEC-S-139`, no `ADR-0008`.**
-  **Supported Core Theme Resolution Contexts: 0 before that commit, 2 — `Light` and
+  *(Point-in-time at the CDS-WP-022 milestone: `DEC-S-139` has since been prepared by
+  CDS-WP-001B — process-scoped, unrelated to the theme model, and not effective
+  before that package's integration commit.)* **Supported Core Theme Resolution Contexts: 0 before that commit, 2 — `Light` and
   `Dark` — from it, with no
   default.** Across both passes it created **no** theme instance, machine-readable
   context identifier, default alias, visual value, identifier, role, source set, token
@@ -556,7 +579,7 @@ build systems, fonts, or icons.
 
 **Status: Active** (activated in CDS-WP-001A).
 
-The 38 verified docs-only NDF v1.0.0 Skills are available locally under
+The 38 verified docs-only NDF v1.1.0 Skills are available locally under
 `.claude/skills/`. They are a controlled procedural aid — they never grant
 authority.
 
@@ -576,6 +599,13 @@ authority.
 8. On any conflict between prompt, project control, and Skill: **fail closed**
    and report to Nova.
 
+**Framework and release namespace** (**DEC-S-139**; see the
+[provenance record](docs/governance/NDF_SKILLS_PROVENANCE.md)): NDF release, version
+and compatibility statements in the pinned Skills and support snapshot are
+**NDF-only** — they never state or activate a CDS release, version, or compatibility
+commitment. The NDF support snapshot is byte-verified NDF process material and
+**never becomes CDS product authority or independent CDS policy**; never edit it.
+
 ### Skill maintenance
 
 9. Never modify a Skill file during normal product work.
@@ -585,7 +615,7 @@ authority.
     [docs/governance/NDF_SKILLS_PROVENANCE.md](docs/governance/NDF_SKILLS_PROVENANCE.md)
     and
     [project-system/NDF_SKILLS_MANIFEST.json](project-system/NDF_SKILLS_MANIFEST.json).
-    The local copy is pinned to NDF v1.0.0 and is not an independent fork.
+    The local copy is pinned to NDF v1.1.0 and is not an independent fork.
 
 ### Reporting
 
@@ -1336,7 +1366,9 @@ architecture, no Decision, and no ADR**, and the effectivity commit
   CDS-WP-022 object — **`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION`** held
   until it, and **a review PASS is not a commit**. **136 decisions and 6 ADRs until
   that commit; 138 and 7 from it. The risk register stays at 98 throughout — no
-  `RISK-099`, no `DEC-S-139`, no `ADR-0008`.** **The `WP022-D*` keys are report keys,
+  `RISK-099`, no `DEC-S-139`, no `ADR-0008`** *(point-in-time at the CDS-WP-022
+  milestone; `DEC-S-139` is since prepared by CDS-WP-001B, process-scoped)*.
+  **The `WP022-D*` keys are report keys,
   not governance identifiers.**
 - **A theme is a Theme Resolution Context** — a **named presentation condition**
   under which approved semantic roles resolve to approved primitives. **`CANDIDATE ≠

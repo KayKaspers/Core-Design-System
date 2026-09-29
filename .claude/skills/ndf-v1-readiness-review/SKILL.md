@@ -1,41 +1,50 @@
 ---
 name: ndf-v1-readiness-review
-description: Support v1.0 / RC / final readiness reviews — distinguish RC vs final, check G-13 and final criteria visibly, activate the v1.x promise only at final. Docs-only, fail-closed; never invents v1.0 claims or performs release actions.
+description: Historical / specialist skill for the completed v1.0.0 readiness path (RC vs final, G-13, final criteria). USE WHEN reviewing or citing historical v1.0 readiness evidence. DO NOT USE for readiness, release prep, or post-release work after v1.0.0 — use ndf-release-safety instead. Docs-only, fail-closed; never invents claims, re-opens v1.0, or performs release actions.
 ---
 
 # ndf-v1-readiness-review
 
 ## Title
 
-NDF v1.0 Readiness Review (docs-only, ADR-0032-compliant).
+NDF v1.0 Readiness Review — historical / specialist (docs-only, ADR-0032-compliant).
+
+## Status
+
+**Historical / specialist.** The v1.0 readiness path this skill supported is complete: `v1.0.0` is the final release, and the ADR-0031 v1.x compatibility promise is active since `v1.0.0`. The skill stays available under its name for compatibility and is **not** deprecated; any formal deprecation would follow the ADR-0031 deprecation process in a later, separately authorised decision. **For readiness work after `v1.0.0`, use `ndf-release-safety`.**
 
 ## Purpose
 
-Support v1.0 / RC / final readiness reviews by structuring an honest check against the release criteria without claiming v1.0 maturity or activating anything.
+Support honest reviews of the historical v1.0 readiness evidence (RC vs final, G-13, final criteria) without re-opening or re-deciding the completed v1.0 release.
 
 ## When to use
 
-During RC or final readiness reviews on the v1.0 path.
+- **USE WHEN** reviewing, citing, or reconciling historical v1.0 RC/final readiness evidence.
+- **DO NOT USE** for readiness, release-prep, or post-release work after `v1.0.0` → **use `ndf-release-safety` instead** (release notes → `ndf-release-notes-runner`).
 
 ## Required inputs
 
-- The v1.0 release criteria (RC vs final), the gap/evidence reviews, and the current status.
+- The historical v1.0 release criteria (RC vs final), the gap/evidence reviews, and the recorded v1.0 outcome.
 
 ## Expected outputs
 
-- An RC-vs-final distinction; a visible check of G-13 and the final criteria; a met/met-with-notes/gap/blocker assessment; a go/no-go recommendation with notes.
+- An honest historical assessment: RC-vs-final distinction; G-13 and final-criteria status as recorded (met / met with notes / gap / accepted boundary); pointers to the authoritative v1.0 records.
+- A redirect to `ndf-release-safety` for any current readiness question.
 
 ## Allowed actions
 
-- Read the criteria and status; structure the readiness check honestly.
+- Read the historical criteria, status, and records; structure the historical check honestly.
 
 ## Forbidden actions
 
-- Invent v1.0 claims; activate the full v1.x promise; perform any release/tag action; run scripts; access the network; read/document secrets.
+- Invent or re-decide v1.0 claims; re-open the completed v1.0 release.
+- Present `v1.0.0` as not yet released or the v1.x promise as awaiting activation.
+- Use its RC/final process as the general readiness process for later versions.
+- Perform any release/tag action; run scripts; access the network; read/document secrets.
 
 ## Fail-closed behavior
 
-If a criterion is unproven, mark it honestly (not met/tracked) rather than claiming it; anything not explicitly allowed is forbidden.
+If a historical outcome is unclear, cite the authoritative record or mark it unverified — never claim it; route any current readiness question to `ndf-release-safety`. Anything not explicitly allowed is forbidden.
 
 ## Public-neutrality requirements
 
@@ -47,16 +56,16 @@ Docs-only, fail-closed; no scripts; no network; no secrets; no private data; no 
 
 ## Human-maintainer-only boundaries
 
-The go/no-go decision and any v1.0/v1.x activation stay with the Human Maintainer.
+Release decisions stay with the Human Maintainer; this skill decides nothing.
 
 ## Output contract
 
-An advisory readiness assessment — never a release or an activation.
+An advisory historical assessment — never a release, an activation, or a current readiness verdict.
 
 ## Interaction with existing NDF skills
 
-Uses the `ndf-work-package-runner` frame; pairs with `ndf-release-safety`; results via `ndf-compact-context-summary-runner`.
+Post-v1.0 readiness successor: `ndf-release-safety`; frame via `ndf-work-package-runner`; evidence depth via `ndf-validation-evidence-reviewer`; results via `ndf-compact-context-summary-runner`.
 
 ## Release/governance limitations
 
-The full v1.x compatibility promise is activated only at final v1.0 by the Human Maintainer (ADR-0031); the RC is a candidate, not final; G-13 stays tracked until deepened or documented as an accepted boundary.
+Historical record: the v1.x compatibility promise is active since `v1.0.0` (ADR-0031; not retroactive for Foundation `v0.x` releases or the RC `v1.0.0-rc.1`); the RC was a candidate, not final; G-13 was reconciled for final via path C (path B accepted boundary, path A a future improvement). This skill neither re-activates nor changes any of it.
