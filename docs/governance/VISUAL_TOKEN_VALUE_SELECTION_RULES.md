@@ -45,9 +45,9 @@
   VS-1 … VS-6 are unchanged.
 - **Amended by:** CDS-WP-022 closure object, 2026-09-15 — **one additive
   current-state note under VP-1 … VP-7, advancing the VP-7 justification only.**
-  **This prepared Working Tree has no authority**, and **that amendment is effective
-  only at the Human-Maintainer exact-object integration commit of this independently
-  reviewed closure object**, at which the CDS-WP-022 closure state is effective. **The
+  **That amendment is effective** at the Human-Maintainer exact-object integration
+  commit `ab81e197374bb9f9479105b4261cb4485a491b2a` (2026-09-28) of the independently
+  reviewed closure object, at which the CDS-WP-022 closure state became effective. **The
   VP-7 verdict does not change — VP-7 remains `UNSATISFIED`** — and **no prerequisite
   text is rewritten**: the 2026-08-27, 2026-09-05, 2026-09-06 and 2026-09-12 notes
   are **preserved as the record of the periods they governed**. **No value is
@@ -303,10 +303,10 @@ remain 0.**
 
 ### VP-7 current-state note after the CDS-WP-022 closure — 2026-09-15
 
-*(**Additive. CDS-WP-022 closure object.** This prepared Working Tree has no
-authority: **this note is effective only at the Human-Maintainer exact-object
-integration commit of this independently reviewed closure object**, at which the
-CDS-WP-022 closure state is effective. The dated notes and tables above are **not
+*(**EFFECTIVE** at the Human-Maintainer exact-object integration commit
+`ab81e197374bb9f9479105b4261cb4485a491b2a` (2026-09-28) of the independently reviewed
+CDS-WP-022 closure object, at which the CDS-WP-022 closure state became effective.
+**Additive. CDS-WP-022 closure object.** The dated notes and tables above are **not
 rewritten**: each was true for the period it governed, and the two 2026-09-12 notes
 correctly recorded that **CDS-WP-022** was the authorized work package **at that
 date**.)*

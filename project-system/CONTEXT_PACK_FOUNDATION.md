@@ -90,7 +90,8 @@ and the CDS-WP-020 authorization; it changed project-phase authority only and
 activated nothing.
 
 **No work package is currently authorized** from the Human-Maintainer exact-object
-integration commit of this independently reviewed closure object. **`CDS-WP-022` —
+integration commit `ab81e197374bb9f9479105b4261cb4485a491b2a` (2026-09-28), at which
+the CDS-WP-022 closure became effective. **`CDS-WP-022` —
 Theme and Environmental Presentation Model is `Completed` / `Closed`**: authorized
 for execution by a separate, explicit Human-Maintainer act taken after the
 CDS-WP-021 closure, and **executed with result `COMPLETE WITH NOTES`** after first
@@ -98,9 +99,9 @@ returning `DECISION_REQUIRED`; the **Human Maintainer decided `WP022-D1` …
 `WP022-D5` on 2026-09-12**, and **`DEC-S-137`**, **`DEC-S-138`** and **`ADR-0007`**
 are **`Accepted` and effective at the Human-Maintainer exact-object integration
 commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b`** of the reviewed object; its
-**closure state is effective only at the Human-Maintainer exact-object integration
-commit of this independently reviewed closure object** — **`INTEGRATED ≠ CLOSED`**
-and **`READY ≠ CLOSED`** — see
+**closure is effective at the closure commit `ab81e197…`** — **`INTEGRATED ≠
+CLOSED`**, **`READY ≠ CLOSED`** and **`CLOSURE OBJECT PREPARED ≠ CLOSURE
+EFFECTIVE`** each held until that commit — see
 *Theme and environmental presentation model (CDS-WP-022)* below. **CDS-WP-021 — Adaptive Layout and
 Responsive Foundation is `Completed` / `Closed`**: authorized for execution by a
 separate, explicit Human-Maintainer decision, **executed with result `COMPLETE WITH
@@ -200,10 +201,10 @@ conformance authority.
 authorized**; **CDS-WP-021 is `Completed` / `Closed`** — executed with result
 `COMPLETE WITH NOTES`, closure effective at the Human-Maintainer exact-object
 integration commit `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15` — and **CDS-WP-022 is
-recorded as `Completed` / `Closed`** — executed with result `COMPLETE WITH NOTES`,
-closure state effective only at the Human-Maintainer exact-object integration commit
-of this independently reviewed closure object — so **no work package is currently
-authorized** from that integration onward. **`CLOSED ≠ SUCCESSOR AUTHORIZED`** and
+`Completed` / `Closed`** — executed with result `COMPLETE WITH NOTES`, closure
+effective at the Human-Maintainer exact-object integration commit
+`ab81e197374bb9f9479105b4261cb4485a491b2a` — so **no work package is currently
+authorized** from that commit onward. **`CLOSED ≠ SUCCESSOR AUTHORIZED`** and
 **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`**: the CDS-WP-022 authorization was a
 separate, explicit Human-Maintainer act, **neither it nor the CDS-WP-022 closure
 authorizes anything further**, and **`CDS-WP-020A` gains no authority from either.**
@@ -268,8 +269,8 @@ this is a **summary, never a normative source**.)*
   **AE-0**; **claims None · conformance None · Stable No**; publication **`Private
   Development`**. **TS-1 still binds — no semantic role carries a default alias** —
   and **`THEME GATE SATISFIED ≠ VALUE SELECTION AUTHORIZED`**. **CDS-WP-022 is
-  `Completed` / `Closed`**, closure state effective only at the Human-Maintainer
-  exact-object integration commit of this independently reviewed closure object, with
+  `Completed` / `Closed`**, closure effective at the Human-Maintainer exact-object
+  integration commit `ab81e197374bb9f9479105b4261cb4485a491b2a`, with
   **no successor** — **`CLOSED ≠ SUCCESSOR AUTHORIZED`**.
 
 ## Completed work packages
@@ -298,7 +299,7 @@ this is a **summary, never a normative source**.)*
 | CDS-WP-019 | Core Visual Foundation Architecture | **Completed**, closed by `538fbccbf6f554de3b872e9fb75a70d13318feb6`. Architecture only: the Layer-3 [Visual Foundation Architecture](../docs/architecture/VISUAL_FOUNDATION_ARCHITECTURE.md) entry point (**9 families VF-1…VF-9**, **14 invariants**, naming model, machine-readable boundary, motion boundary, A–D layer reconciliation), 6 specialised architectures (colour, typography, spatial, shape and surface, iconography and imagery, theme), and 4 governance documents (accessibility mapping — 14 Layer-3 WCAG criteria and **all 5 CDS-alone criteria**; channel mapping — 9 families x 9 channels; brand and Product Profile boundary — extension-point set **empty**; governance and lifecycle). **Selects no visual value; creates no token source, schema, validator rule, component, brand, or profile; registers no new Decision, ADR, or risk; grants no maturity — all 9 families `Proposed`; renames no phase; activates no later work package.** |
 | CDS-WP-020 | Reference and Semantic Token Foundation | **`Closed`; executed with result `DECISION_REQUIRED`; integrated by `42a568d8…`; closure effective at the Human-Maintainer commit `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.** Contract only: the [Visual Reference Token Foundation](../docs/architecture/VISUAL_REFERENCE_TOKEN_FOUNDATION.md) (token-flow layer 1 — RP-1…RP-10, ST-1…ST-7, RN-1…RN-9, RV-1…RV-5, RB-1…RB-5, 10 validation requirements), the [Visual Semantic Token Foundation](../docs/architecture/VISUAL_SEMANTIC_TOKEN_FOUNDATION.md) (token-flow layer 2 — SR-1…SR-12, alias model AL-1…AL-8, SN-1…SN-9, PN-1…PN-5, TC-1…TC-7, SS-1…SS-8, IS-1…IS-5, the focus role set, 15 validation requirements), the [Visual Token Value Selection Rules](../docs/governance/VISUAL_TOKEN_VALUE_SELECTION_RULES.md) (VP, VE, IG, VD, VA, VS), and the **non-normative** [Open Decisions](../docs/roadmap/VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md) register (**OD-1…OD-7**). **Selects no value; creates no identifier, token source, schema, validator rule, or test; registers no new risk; grants no maturity — all 9 families `Proposed`, visual source sets 0; activates no later work package.** A separately authorized **Decision Integration Pass** (2026-08-27) registered **DEC-S-128 … DEC-S-131 + ADR-0004** — **effective at `42a568d8…`**, answering **OD-1/OD-2/OD-3** only. The **CDS Step-9 Decision Integration Pass** (2026-09-05) then registered **DEC-S-132 … DEC-S-135 + ADR-0005** — **effective at `2cb244e8…`** — answering **OD-4** and **OD-7**, partially answering **OD-5**, policy-answering **OD-6A**, and dispositioning **OD-6B** as answered by existing authority; **the concrete role vocabulary, the per-family topology parameters and VF-1 tonal topology stay open**, **VP-3/VP-5/VP-6/VP-7 unsatisfied**, `RISK-099` not required. The value and machine-readable half is routed by **`FR-N-03`** to **`CDS-WP-020A`** — `Planned`, not active, not authorized. |
 | CDS-WP-021 | Adaptive Layout and Responsive Foundation | **`Completed` / `Closed`; executed with result `COMPLETE WITH NOTES`; integrated by `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`; closure separately authorized and effective at the Human-Maintainer exact-object integration commit `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`.** Contract only: the Layer-3 [Adaptive Layout and Responsive Foundation](../docs/architecture/ADAPTIVE_LAYOUT_AND_RESPONSIVE_FOUNDATION.md) of **VF-4** — the **Layer 3 / Layer 5 / Layer 6** ownership split **CONFIRMED** (LO-1…LO-8, answering **`F-019-03`** with **CR-004 unchanged at Layer 5**), the spatial-context model (CX-1…CX-9), the **Adaptation Container** (AC-1…AC-6), the responsive-range obligations (AR-1…AR-12), the grid, container and content-width contracts (GC-1…GC-9), and the density and adaptation interaction (DA-1…DA-6). **It first returned `DECISION_REQUIRED`**, correctly, escalating two normative choices; **that execution history stands.** The Human Maintainer **approved `WP021-D1`** — the Container-Relative Named-Range Foundation, recorded as **`DEC-S-136`** with **`ADR-0006`**, both **effective at `a6bd7bf0…`** — and **deferred `WP021-D2`**, leaving the **VF-4 technical root and Source Set identity OPEN**: **`WP021-D2` remains DEFERRED** with **no Decision and no ADR of its own, no VF-4 technical root, and no VF-4 Source Set identity**, and **no `RISK-099` exists** — **`DEC-S-137` and `ADR-0007` exist, but they record `WP022-D1`, not `WP021-D2`, and are unrelated to it**. **Selects no value; creates no identifier, responsive-range name, range count, threshold, VF-4 root, source set, token source, schema, validator rule, test, or fixture; admits no evidence; grants no maturity — all 9 families `Proposed`, visual source sets 0; activates no later work package.** **`DEFERRED OPEN QUESTION ≠ INCOMPLETE WORK PACKAGE`**, and **closure authorizes no successor.** |
-| CDS-WP-022 | Theme and Environmental Presentation Model | **`Completed` / `Closed`; executed with result `COMPLETE WITH NOTES`; integrated by `23914ecc48c1fb3cba5e3dab97a505589e821b6b`; closure separately authorized, closure state effective only at the Human-Maintainer exact-object integration commit of this independently reviewed closure object.** Contract only: the Layer-3 Theme and Environmental Presentation contract of **VF-9** in the [Visual Foundation Theme Architecture](../docs/architecture/VISUAL_FOUNDATION_THEME_ARCHITECTURE.md) — context admission (CA-1…CA-13), context identity (CI-1…CI-6), selection and resolution entry (CS-1…CS-11), environmental-input boundary (CE-1…CE-5), fail-closed conditions (CF-1…CF-11), composition boundaries (CB-1…CB-7), and the Human-Maintainer-decided theme resolution mechanism (TM-1…TM-12). **It first returned `DECISION_REQUIRED`**, correctly, escalating `WP022-D1` … `WP022-D5`; **that execution history stands.** The Human Maintainer **approved all five** — recorded as **`DEC-S-137`** (with **`ADR-0007`**, covering `DEC-S-137` only) and **`DEC-S-138`**, all **`Accepted` and effective at `23914ecc…`**: the **Resolver-Modifier Context**, **`Light` and `Dark`** as equal peers with **no default**, **forced colours as an environmental accessibility condition and not a Core context**, **explicit viewer choice over inferred environment preference**, and **no default or fallback Theme, failing closed**. **Registers 138 · 7 · 98 — no `RISK-099`, no `DEC-S-139`, no `ADR-0008`.** **Selects no value; creates no theme instance, machine-readable context identifier, default alias, identifier, role, source set, token source, schema, validator rule, test, or fixture; admits no evidence; grants no maturity — all 9 families `Proposed`, visual source sets 0; activates no later work package.** **`WP021-D2` stays deferred**; **`F-022-01`, `F-022-04` and `F-022-06` stay routed** — **`OPEN / ROUTED FINDING ≠ INCOMPLETE AUTHORIZED WP SCOPE`** — and **closure authorizes no successor.** |
+| CDS-WP-022 | Theme and Environmental Presentation Model | **`Completed` / `Closed`; executed with result `COMPLETE WITH NOTES`; integrated by `23914ecc48c1fb3cba5e3dab97a505589e821b6b`; closure separately authorized and effective at the Human-Maintainer exact-object integration commit `ab81e197374bb9f9479105b4261cb4485a491b2a`.** Contract only: the Layer-3 Theme and Environmental Presentation contract of **VF-9** in the [Visual Foundation Theme Architecture](../docs/architecture/VISUAL_FOUNDATION_THEME_ARCHITECTURE.md) — context admission (CA-1…CA-13), context identity (CI-1…CI-6), selection and resolution entry (CS-1…CS-11), environmental-input boundary (CE-1…CE-5), fail-closed conditions (CF-1…CF-11), composition boundaries (CB-1…CB-7), and the Human-Maintainer-decided theme resolution mechanism (TM-1…TM-12). **It first returned `DECISION_REQUIRED`**, correctly, escalating `WP022-D1` … `WP022-D5`; **that execution history stands.** The Human Maintainer **approved all five** — recorded as **`DEC-S-137`** (with **`ADR-0007`**, covering `DEC-S-137` only) and **`DEC-S-138`**, all **`Accepted` and effective at `23914ecc…`**: the **Resolver-Modifier Context**, **`Light` and `Dark`** as equal peers with **no default**, **forced colours as an environmental accessibility condition and not a Core context**, **explicit viewer choice over inferred environment preference**, and **no default or fallback Theme, failing closed**. **Registers 138 · 7 · 98 — no `RISK-099`, no `DEC-S-139`, no `ADR-0008`.** **Selects no value; creates no theme instance, machine-readable context identifier, default alias, identifier, role, source set, token source, schema, validator rule, test, or fixture; admits no evidence; grants no maturity — all 9 families `Proposed`, visual source sets 0; activates no later work package.** **`WP021-D2` stays deferred**; **`F-022-01`, `F-022-04` and `F-022-06` stay routed** — **`OPEN / ROUTED FINDING ≠ INCOMPLETE AUTHORIZED WP SCOPE`** — and **closure authorizes no successor.** |
 
 ## Normative source map
 
@@ -1119,10 +1120,10 @@ Human-Maintainer exact-object integration commit
 `Closed`** — **contract only**, **executed with result `COMPLETE WITH NOTES`**,
 creating **no theme instance, no machine-readable context identifier, and no
 value**, with **`DEC-S-137`**, **`DEC-S-138`** and **`ADR-0007`** **`Accepted` and
-effective at `23914ecc48c1fb3cba5e3dab97a505589e821b6b`**, **integrated**, and its
-**closure state effective only at the Human-Maintainer exact-object integration
-commit of this independently reviewed closure object**.
-**No work package is currently authorized** from that integration onward, and
+effective at `23914ecc48c1fb3cba5e3dab97a505589e821b6b`**, **integrated**, and
+**closed effective at the Human-Maintainer exact-object integration commit
+`ab81e197374bb9f9479105b4261cb4485a491b2a`**.
+**No work package is currently authorized** from that commit onward, and
 **`CDS-WP-020A` and CDS-WP-023 … CDS-WP-053 are `Planned`, not active, and not
 authorized**, with work on them not started. See the
 [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md),

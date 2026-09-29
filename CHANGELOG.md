@@ -771,6 +771,39 @@ released and no release is announced.
 
 ### Changed
 
+- **CDS-WP-022 closure recorded as effective — `F-022C-01` resolved.** The condition
+  the CDS-WP-022 closure object stated — the Human-Maintainer exact-object
+  integration commit of that independently reviewed closure object — was met on
+  **2026-09-28** by commit `ab81e197374bb9f9479105b4261cb4485a491b2a` (parent
+  `d8b5857e1eda2066e61fda47b694afbc466aa6d8`), which integrated the closure object
+  after an independent review returning **PASS WITH NOTES** and Nova final
+  adjudication **ACCEPTED** with **0 material blockers**. **CDS-WP-022 is `Completed`
+  / `Closed`, closure effective at that commit**, its execution result unchanged at
+  **`COMPLETE WITH NOTES`**, and **no work package is currently authorized**. The
+  maintained current-state carriers no longer describe that closure as *recorded by
+  this closure object with target lifecycle*, as held by a *prepared Working Tree*
+  that *has no authority*, or as *effective only at the Human-Maintainer exact-object
+  integration commit of this independently reviewed closure object*; in three
+  normative architecture documents only the effectivity qualifier of a closure-time
+  note changed, and the Visual Foundation Theme Architecture needed no change. **This
+  records a completed Human-Maintainer act and performs none.** **Point-in-time and
+  historical records were preserved**, not rewritten: the CDS-WP-022 closure-object
+  entry and the earlier event-time CDS-WP-022 entries, the *integrated, NOT closed*
+  history, the CDS-WP-021, `DEC-S-137`, `DEC-S-138` and `ADR-0007` histories, and the
+  dated pre-closure and closure-time dispositions remain as written —
+  **`CURRENT STATE CHANGED ≠ HISTORICAL RECORD WAS WRONG`**. **No successor was
+  authorized** — **`CLOSED ≠ SUCCESSOR AUTHORIZED`**: **`CDS-WP-020A`** and
+  **CDS-WP-023 … CDS-WP-053** all remain `Planned`, not active, not authorized. **No
+  architecture, Decision, ADR, risk, value-selection, implementation, or release
+  authority changed** — the registers stay at **138**, **7** and **98**; **no
+  `DEC-S-139`, no `ADR-0008`, no `RISK-099`**. **`F-022-01`, `F-022-04` and
+  `F-022-06` stay open and routed**; **`F-020C-02` and `WP021-D2` stay deferred**;
+  **VP-3, VP-5, VP-6 and VP-7 stay `UNSATISFIED`**, with **VP-4 `UNSATISFIED` for
+  VF-4**; visual values **0** and visual Source Sets **0**. **No evidence was
+  admitted, no maturity changed, no claim was made, no conformance was determined,
+  no phase was renamed, and no release, tag, or publication occurred** — publication
+  stays **`Private Development`**.
+  (CDS-WP-022 post-closure current-state reconciliation)
 - **The Open Decisions register, the value-prerequisite state, and the live
   current-state carriers reconciled to the prepared Step-9 decisions.** The
   **non-normative** register now records **OD-4** and **OD-7** as answered, **OD-5**

@@ -193,10 +193,10 @@ prerequisite, and authorizes no successor.**
 
 **CDS-WP-022 — Theme and Environmental Presentation Model** is **`Completed` /
 `Closed`**: authorized for execution by a separate, explicit Human-Maintainer act —
-not by the CDS-WP-021 closure and not by the roadmap — and closed by a further,
-separate Human-Maintainer authorization whose **closure state is effective only at
-the Human-Maintainer exact-object integration commit of this independently reviewed
-closure object**. It is **contract only**: it defines what a **Theme
+not by the CDS-WP-021 closure and not by the roadmap — and **closed by a further,
+separate Human-Maintainer authorization, effective at the Human-Maintainer
+exact-object integration commit `ab81e197374bb9f9479105b4261cb4485a491b2a`**
+(2026-09-28). It is **contract only**: it defines what a **Theme
 Resolution Context** is, what a decision to support one must affirm, how a context is
 identified without becoming a path segment, how a **requested** context enters
 resolution, where resolution **fails closed**, and how a context relates to a channel,
@@ -980,14 +980,15 @@ maturity or approval it does not hold.
   instance, no machine-readable context identifier, no default alias, and no value,
   identifier, role, Source Set, schema, validator rule, test, or fixture**. **It is
   `Completed` / `Closed`**, closed by a further, separate Human-Maintainer
-  authorization whose **closure state is effective only at the Human-Maintainer
-  exact-object integration commit of this independently reviewed closure object**;
+  authorization, **effective at the Human-Maintainer exact-object integration commit
+  `ab81e197374bb9f9479105b4261cb4485a491b2a`** (2026-09-28);
   **closure changes neither the effectivity of `DEC-S-137` and `DEC-S-138` nor the
   status of `ADR-0007`**, and **it authorizes no successor and satisfies no
   `CDS-WP-020A` prerequisite beyond the `DEC-S-135` theme-mechanism sequencing
   condition** — **`THEME GATE SATISFIED ≠ CDS-WP-020A AUTHORIZED`**.
 - **Currently authorized:** **NONE** — from the Human-Maintainer exact-object
-  integration commit of this independently reviewed closure object. Closing
+  integration commit `ab81e197374bb9f9479105b4261cb4485a491b2a` (2026-09-28), at which
+  the CDS-WP-022 closure became effective. Closing
   CDS-WP-022 authorizes no successor — **`CLOSED ≠ SUCCESSOR AUTHORIZED`** and
   **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`**.
 - **Planned:** **`CDS-WP-020A`** and **CDS-WP-023 … CDS-WP-053** — **not active, not

@@ -153,16 +153,18 @@ authorized work packages.
   active, and not authorized.**
   **Supported Core Theme Resolution Contexts are `Light` and `Dark`, neither the
   default**; **visual values stay 0** and **visual Source Sets stay 0**.
-- **CDS-WP-022 closure — recorded by this closure object; this register is
-  unchanged.** *(Maintained current carrier, updated 2026-09-15 by the CDS-WP-022
-  closure object.)* **CDS-WP-022 is recorded with target lifecycle `Completed` /
-  `Closed`**, its execution result unchanged at **`COMPLETE WITH NOTES`** and its
-  initial **`DECISION_REQUIRED`** preserved as execution history. This prepared
-  Working Tree has no authority: **the closure state is effective only at the
-  Human-Maintainer exact-object integration commit of this independently reviewed
-  closure object**, taken after closure readiness reached **`READY`** at
+- **CDS-WP-022 is closed — and the closure does not touch this register.**
+  *(Maintained current carrier, updated 2026-09-15 by the CDS-WP-022 closure object
+  and advanced by its post-closure current-state reconciliation, `F-022C-01`.)*
+  **CDS-WP-022 is `Completed` / `Closed`**, its execution result unchanged at
+  **`COMPLETE WITH NOTES`** and its initial **`DECISION_REQUIRED`** preserved as
+  execution history. **The closure state is effective at the Human-Maintainer
+  exact-object integration commit `ab81e197374bb9f9479105b4261cb4485a491b2a`**
+  (2026-09-28), which integrated the independently reviewed closure object after
+  closure readiness reached **`READY`** at
   `d8b5857e1eda2066e61fda47b694afbc466aa6d8`, a fresh independent review of the
-  closure object, and Nova final adjudication. **Decision effectivity and
+  closure object, and Nova final adjudication — **`CLOSURE OBJECT PREPARED ≠ CLOSURE
+  EFFECTIVE`** held until that commit. **Decision effectivity and
   work-package closure are separate axes:** closure changes **neither** the
   effectivity of `DEC-S-137` and `DEC-S-138` **nor** the `Accepted` status and
   effectivity of `ADR-0007`, all bound to `23914ecc48c1fb3cba5e3dab97a505589e821b6b`,
@@ -175,7 +177,7 @@ authorized work packages.
   closed"* record the effectivity event at `23914ecc…`; they are **point-in-time and
   not edited**, and **this section is the maintained current carrier** for the
   closure state. **Closure authorizes no successor**: **`CLOSED ≠ SUCCESSOR
-  AUTHORIZED`** and **`CLOSED ≠ VALUE SELECTION AUTHORIZED`** — from that integration
+  AUTHORIZED`** and **`CLOSED ≠ VALUE SELECTION AUTHORIZED`** — from that commit
   **no work package is currently authorized**, and **`CDS-WP-020A` and
   CDS-WP-023 … CDS-WP-053 remain `Planned`, not active, and not authorized**.
   **`WP021-D2` stays deferred**, and **visual values and visual Source Sets stay 0**.

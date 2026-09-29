@@ -12,15 +12,14 @@ Controlled work-package roadmap for the Core Design System (CDS).
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**,
   **CDS-WP-017**, **CDS-WP-018**, **CDS-WP-019**, **CDS-WP-020**, **CDS-WP-021**,
   **CDS-WP-022**
-- **CDS-WP-022 is recorded by this closure object with target lifecycle `Completed` /
-  `Closed`.** This prepared Working Tree has no authority: **the closure state is
-  effective only at the Human-Maintainer exact-object integration commit of this
-  independently reviewed closure object**, and from that integration onward
-  **CDS-WP-022 is `Completed` / `Closed`**. Its execution result is unchanged at
-  **`COMPLETE WITH NOTES`**, and the initial **`DECISION_REQUIRED`** stands as
-  execution history. **`EXECUTION ≠ CLOSURE`**, **`COMPLETE WITH NOTES ≠ CLOSED`**,
-  **`INTEGRATED ≠ CLOSED`** and **`READY ≠ CLOSED`**: an uncommitted working tree
-  closes no work package.
+- **CDS-WP-022 is `Completed` / `Closed`.** Its closure became authoritative at the
+  Human-Maintainer exact-object integration commit
+  `ab81e197374bb9f9479105b4261cb4485a491b2a` (2026-09-28), and its execution result
+  is unchanged at **`COMPLETE WITH NOTES`**; the initial **`DECISION_REQUIRED`**
+  stands as execution history. **`EXECUTION ≠ CLOSURE`**, **`COMPLETE WITH NOTES ≠
+  CLOSED`**, **`INTEGRATED ≠ CLOSED`** and **`READY ≠ CLOSED`**, and **`CLOSURE
+  OBJECT PREPARED ≠ CLOSURE EFFECTIVE`** held until that commit: an uncommitted
+  working tree closes no work package.
 - **CDS-WP-021 is `Completed` / `Closed`.** Its closure became authoritative at the
   Human-Maintainer exact-object integration commit
   `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`, and its execution result is unchanged
@@ -50,8 +49,9 @@ Controlled work-package roadmap for the Core Design System (CDS).
   Human-Maintainer commit **`538fbccbf6f554de3b872e9fb75a70d13318feb6`**, and
   closure became effective there.
 - **Current work package: NONE — no work package is currently authorized** from the
-  Human-Maintainer exact-object integration commit of this independently reviewed
-  closure object, at which the CDS-WP-022 closure state is effective. **No row in the
+  Human-Maintainer exact-object integration commit
+  `ab81e197374bb9f9479105b4261cb4485a491b2a` (2026-09-28), at which the CDS-WP-022
+  closure became effective. **No row in the
   roadmap table below holds `Next`.** **Closing a work package authorizes no other**:
   **`CLOSED ≠ SUCCESSOR AUTHORIZED`**, **`CLOSED ≠ VALUE SELECTION AUTHORIZED`**,
   **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`**, and **`SEQUENCED NEXT ≠
@@ -59,9 +59,9 @@ Controlled work-package roadmap for the Core Design System (CDS).
   active, and not authorized**, and the next work package begins only on an explicit
   Nova prompt **and** a separate Human-Maintainer authorization.
 - **Most recent work package: `CDS-WP-022` — Theme and Environmental Presentation
-  Model** — **`Completed` / `Closed`**, closure state effective only at the
-  Human-Maintainer exact-object integration commit of this independently reviewed
-  closure object. It was authorized separately and explicitly by the Human Maintainer
+  Model** — **`Completed` / `Closed`**, closure effective at the Human-Maintainer
+  exact-object integration commit `ab81e197374bb9f9479105b4261cb4485a491b2a`
+  (2026-09-28). It was authorized separately and explicitly by the Human Maintainer
   after the CDS-WP-021 closure. **The authorization was the authority, and nothing
   else was:** closing CDS-WP-021 authorized no successor and the `DEC-S-135`
   recommendation authorized nothing — **`CLOSED ≠ SUCCESSOR AUTHORIZED`**,
@@ -200,10 +200,10 @@ Controlled work-package roadmap for the Core Design System (CDS).
 - **Forward roadmap:** CDS-WP-017 … CDS-WP-053 are recorded in the
   [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
   **`CDS-WP-020A` and CDS-WP-023 … CDS-WP-053 are `Planned` only**, **CDS-WP-021 is
-  `Completed` / `Closed`**, and **CDS-WP-022 is recorded as `Completed` / `Closed`** —
-  closure state effective only at the Human-Maintainer exact-object integration commit
-  of this independently reviewed closure object. From that integration onward, of the
-  **38** identifiers CDS-WP-017 … CDS-WP-053 and `CDS-WP-020A`, **six** —
+  `Completed` / `Closed`**, and **CDS-WP-022 is `Completed` / `Closed`** — closure
+  effective at the Human-Maintainer exact-object integration commit
+  `ab81e197374bb9f9479105b4261cb4485a491b2a` (2026-09-28). From that commit onward, of
+  the **38** identifiers CDS-WP-017 … CDS-WP-053 and `CDS-WP-020A`, **six** —
   CDS-WP-017 … CDS-WP-022 — are closed, **none** is active, **32** are `Planned`, not
   active, and not authorized, and **no work package is currently authorized**.
 
@@ -221,11 +221,10 @@ review, and authority state are recorded per work package below.
 
 **No work package holds `Next`.** **CDS-WP-022** held `Next` from its separate,
 explicit Human-Maintainer authorization after the CDS-WP-021 closure until its own
-closure, which this closure object records and which is effective only at the
-Human-Maintainer exact-object integration commit of this independently reviewed
-closure object. **The CDS-WP-022 closure authorizes no successor**, and **no work
-package may be given `Next` except by a separate, explicit Human-Maintainer
-authorization**.
+closure, effective at the Human-Maintainer exact-object integration commit
+`ab81e197374bb9f9479105b4261cb4485a491b2a` (2026-09-28). **The CDS-WP-022 closure
+authorizes no successor**, and **no work package may be given `Next` except by a
+separate, explicit Human-Maintainer authorization**.
 
 ## Roadmap
 
@@ -254,7 +253,7 @@ authorization**.
 | CDS-WP-020 | Reference and Semantic Token Foundation | Completed | CDS-WP-019 |
 | CDS-WP-020A | Visual Token Source Authoring and Source Set Realization | Planned | CDS-WP-020 + OD-4, OD-5, OD-6 decided — **OD-4 answered, OD-5 only partially, OD-6A policy only**; **VP-3, VP-5, VP-6, VP-7 unsatisfied**; pinned validator stack absent |
 | CDS-WP-021 | Adaptive Layout and Responsive Foundation | **Completed / Closed** — executed with `COMPLETE WITH NOTES`; **closure effective at the Human-Maintainer exact-object integration commit `01145b8a…`** | CDS-WP-020 |
-| CDS-WP-022 | Theme and Environmental Presentation Model | **Completed / Closed** — executed with `COMPLETE WITH NOTES` after first returning `DECISION_REQUIRED`; **`WP022-D1` … `WP022-D5` decided**, recorded as **`DEC-S-137`**, **`DEC-S-138`** and **`ADR-0007`**, all **`Accepted` and effective at `23914ecc…`**; integrated; **closure state effective only at the Human-Maintainer exact-object integration commit of this independently reviewed closure object** | CDS-WP-021 |
+| CDS-WP-022 | Theme and Environmental Presentation Model | **Completed / Closed** — executed with `COMPLETE WITH NOTES` after first returning `DECISION_REQUIRED`; **`WP022-D1` … `WP022-D5` decided**, recorded as **`DEC-S-137`**, **`DEC-S-138`** and **`ADR-0007`**, all **`Accepted` and effective at `23914ecc…`**; integrated; **closure effective at the Human-Maintainer exact-object integration commit `ab81e197…`** | CDS-WP-021 |
 | CDS-WP-023 | Semantic Status Visual Binding Contract | Planned | CDS-WP-022 |
 | CDS-WP-024 | Semantic Validation and Render-Gate Architecture | Planned | CDS-WP-023 |
 | CDS-WP-025 | Semantic Validation Negative-Fixture Expansion | Planned | CDS-WP-024 |
@@ -1135,16 +1134,16 @@ act taken afterwards**, and **`CDS-WP-020A` and CDS-WP-023 … CDS-WP-053 remain
 ### CDS-WP-022 — Theme and Environmental Presentation Model
 
 **Status:** **`Completed` / `Closed`** — **executed with result
-`COMPLETE WITH NOTES`**, **integrated**, and recorded by this closure object with
-target lifecycle **`Completed` / `Closed`**. This prepared Working Tree has no
-authority: **the closure state is effective only at the Human-Maintainer exact-object
-integration commit of this independently reviewed closure object.** Its object was
+`COMPLETE WITH NOTES`**, **integrated**, and **closed**. Its object was
 integrated by the Human-Maintainer exact-object commit
 `23914ecc48c1fb3cba5e3dab97a505589e821b6b` (2026-09-12). It first returned
 **`DECISION_REQUIRED`**; the Human Maintainer then decided **`WP022-D1` …
 `WP022-D5`**, and a **bounded rework** applied them. **`EXECUTION COMPLETE ≠ WORK
-PACKAGE CLOSED`** and **`INTEGRATED ≠ CLOSED`** held throughout: closure is a
-**separate** Human-Maintainer act, separately authorized. The lifecycle status and the
+PACKAGE CLOSED`** and **`INTEGRATED ≠ CLOSED`** held throughout: closure was a
+**separate** Human-Maintainer act, separately authorized, and **became effective at
+the Human-Maintainer exact-object integration commit
+`ab81e197374bb9f9479105b4261cb4485a491b2a`** (2026-09-28), which integrated the
+independently reviewed closure object. The lifecycle status and the
 execution result are **separate axes**: closure does not rewrite `COMPLETE WITH NOTES`
 to `COMPLETE`, and the initial `DECISION_REQUIRED` execution history stands.
 
@@ -1230,9 +1229,9 @@ VP-7 stay `UNSATISFIED`** with **VP-4 still `UNSATISFIED` for VF-4**.
 
 **Closed, and what closure does not do.** Closure is a separate Human-Maintainer
 act, separately authorized after closure readiness reached **`READY`** at
-`d8b5857e1eda2066e61fda47b694afbc466aa6d8`, and **effective only at the
-Human-Maintainer exact-object integration commit of this independently reviewed
-closure object** — **`EXECUTION ≠ CLOSURE`**, **`COMPLETE WITH NOTES ≠ CLOSED`**,
+`d8b5857e1eda2066e61fda47b694afbc466aa6d8`, and **effective at the Human-Maintainer
+exact-object integration commit `ab81e197374bb9f9479105b4261cb4485a491b2a`**
+(2026-09-28) — **`EXECUTION ≠ CLOSURE`**, **`COMPLETE WITH NOTES ≠ CLOSED`**,
 **`INTEGRATED ≠ CLOSED`** and **`READY ≠ CLOSED`** each held until that act. Closure
 records only that the **authorized scope was executed**, that the **Human-Maintainer
 decisions were applied**, and that the object was **independently reviewed**,

@@ -32,8 +32,9 @@ release, or publication authority, and activates no work package.
 ## Work package status
 
 - **Current work package: NONE — no work package is currently authorized** from the
-  Human-Maintainer exact-object integration commit of this independently reviewed
-  closure object, at which the CDS-WP-022 closure state is effective.
+  Human-Maintainer exact-object integration commit
+  `ab81e197374bb9f9479105b4261cb4485a491b2a` (2026-09-28), at which the CDS-WP-022
+  closure became effective.
   **`CLOSED ≠ SUCCESSOR AUTHORIZED`**, **`CLOSED ≠ VALUE SELECTION AUTHORIZED`**,
   **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`**, and **`SEQUENCED NEXT ≠
   AUTHORIZED`**: the next work package begins only on an explicit Nova prompt **and**
@@ -41,9 +42,9 @@ release, or publication authority, and activates no work package.
 - **Most recently executed work package: `CDS-WP-022` — Theme and Environmental
   Presentation Model.** **`Completed` / `Closed`** — authorized for execution by a
   separate, explicit Human-Maintainer act taken after the CDS-WP-021 closure, and
-  **closed by a further, separate Human-Maintainer authorization whose closure state
-  is effective only at the Human-Maintainer exact-object integration commit of this
-  independently reviewed closure object**. **`CLOSED ≠ SUCCESSOR AUTHORIZED`**,
+  **closed by a further, separate Human-Maintainer authorization, effective at the
+  Human-Maintainer exact-object integration commit
+  `ab81e197374bb9f9479105b4261cb4485a491b2a`**. **`CLOSED ≠ SUCCESSOR AUTHORIZED`**,
   **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`**, and **`SEQUENCED NEXT ≠
   AUTHORIZED`**: the `DEC-S-135` recommendation that named it authorized nothing.
   **Contract only**, and **executed with result `COMPLETE WITH NOTES`** after
@@ -264,11 +265,10 @@ release, or publication authority, and activates no work package.
   **CDS-WP-017**, **CDS-WP-018**, **CDS-WP-019**, **CDS-WP-020**, **CDS-WP-021**,
   **CDS-WP-022** — **CDS-WP-021 is `Completed` / `Closed`**, its closure authoritative
   at the Human-Maintainer exact-object integration commit
-  `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`, and **CDS-WP-022 is recorded by this
-  closure object with target lifecycle `Completed` / `Closed`**, its closure state
-  effective only at the Human-Maintainer exact-object integration commit of this
-  independently reviewed closure object; **both execution results are unchanged at
-  `COMPLETE WITH NOTES`**
+  `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`, and **CDS-WP-022 is `Completed` /
+  `Closed`**, its closure authoritative at the Human-Maintainer exact-object
+  integration commit `ab81e197374bb9f9479105b4261cb4485a491b2a`; **both execution
+  results are unchanged at `COMPLETE WITH NOTES`**
 
 ## Operating enablement status
 

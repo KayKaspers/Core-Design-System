@@ -216,9 +216,11 @@ chosen.
 > exists to prevent, and **TC-6** requires the semantic layer to presuppose no
 > context set. Keeping the two separate costs nothing and forecloses nothing.
 
-**CX-9 current-state note — CDS-WP-022 closure object, 2026-09-28.** *(Effective
-only at the Human-Maintainer exact-object integration commit of that independently
-reviewed closure object; until then it changes no authoritative CDS state.
+**CX-9 current-state note — CDS-WP-022 closure object, 2026-09-28.** *(**EFFECTIVE**
+at the Human-Maintainer exact-object integration commit
+`ab81e197374bb9f9479105b4261cb4485a491b2a` (2026-09-28) of that independently
+reviewed closure object; before that commit it was uncommitted executor output and
+changed no authoritative CDS state.
 **Additive: CX-9 and the note above are not edited, and `DEC-S-136` is
 unchanged.**)* CX-9 restates `DEC-S-136` clauses 13 and 14, and the note above gives
 its rationale, **as they stood at the CDS-WP-021 execution and effectivity

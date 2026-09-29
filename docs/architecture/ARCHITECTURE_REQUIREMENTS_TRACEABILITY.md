@@ -124,9 +124,10 @@ is answered by confirming a reading, not by re-mapping a row.
 
 ### CR-025 disposition note — CDS-WP-022 closure object, 2026-09-28
 
-*(Part of the CDS-WP-022 closure object. **Effective only at the Human-Maintainer
-exact-object integration commit of that independently reviewed closure object**;
-before it, this note is uncommitted executor output and changes no authoritative CDS
+*(Part of the CDS-WP-022 closure object. **EFFECTIVE** at the Human-Maintainer
+exact-object integration commit `ab81e197374bb9f9479105b4261cb4485a491b2a`
+(2026-09-28) of that independently reviewed closure object; before that commit, this
+note was uncommitted executor output and changed no authoritative CDS
 state. **Additive. The CR-025 row above is not edited, its architecture status is not
 changed, and no count changes.**)*
 

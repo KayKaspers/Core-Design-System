@@ -36,15 +36,16 @@ library, or a design project scoped exclusively to CoreOps.
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**,
   **CDS-WP-017**, **CDS-WP-018**, **CDS-WP-019**, **CDS-WP-020**, **CDS-WP-021**,
   **CDS-WP-022** — CDS-WP-021 closed at the Human-Maintainer exact-object integration
-  commit `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`, and **CDS-WP-022 is recorded by
-  this closure object with target lifecycle `Completed` / `Closed`**, its closure state
-  effective only at the Human-Maintainer exact-object integration commit of this
+  commit `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`, and **CDS-WP-022 closed at the
+  Human-Maintainer exact-object integration commit
+  `ab81e197374bb9f9479105b4261cb4485a491b2a`** (2026-09-28), which integrated its
   independently reviewed closure object; **both execution results are unchanged at
   `COMPLETE WITH NOTES`**
 - **Currently authorized work package: NONE** — from the Human-Maintainer exact-object
-  integration commit of this independently reviewed closure object, at which the
-  CDS-WP-022 closure state is effective. **Successor: NONE.** This prepared Working
-  Tree has no authority. **`CLOSED ≠ SUCCESSOR AUTHORIZED`**, **`CLOSED ≠ VALUE
+  integration commit `ab81e197374bb9f9479105b4261cb4485a491b2a` (2026-09-28), at which
+  the CDS-WP-022 closure became effective. **Successor: NONE.** **`CLOSURE OBJECT
+  PREPARED ≠ CLOSURE EFFECTIVE`** held until that commit. **`CLOSED ≠ SUCCESSOR
+  AUTHORIZED`**, **`CLOSED ≠ VALUE
   SELECTION AUTHORIZED`**, **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`**,
   **`SEQUENCED NEXT ≠ AUTHORIZED`**, and **a recommendation is not an
   authorization**. **`CDS-WP-020A` and CDS-WP-023 … CDS-WP-053 remain `Planned`, not
@@ -65,10 +66,11 @@ library, or a design project scoped exclusively to CoreOps.
   exact-object integration commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b`**, which
   integrated the reviewed CDS-WP-022 object — **136 decisions and 6 ADRs until that
   commit, 138 and 7 from it**; the risk register stays at **98** throughout.
-  **Effectivity was not closure**, and **the closure state is effective only at the
-  Human-Maintainer exact-object integration commit of this independently reviewed
-  closure object**, which changes neither that effectivity nor the `Accepted` status
-  of `ADR-0007`. See *Theme and environmental presentation model (CDS-WP-022)* below.
+  **Effectivity was not closure**, and **the closure state is effective at the
+  Human-Maintainer exact-object integration commit
+  `ab81e197374bb9f9479105b4261cb4485a491b2a`** (2026-09-28), which changes neither
+  that effectivity nor the `Accepted` status of `ADR-0007`. See *Theme and
+  environmental presentation model (CDS-WP-022)* below.
 - Accessibility support baseline: **A11Y-BL-001 declared and committed**
   (CDS-WP-010) — a **test contract, not evidence**; **no test has been run in any
   baseline environment**, and every artifact is AE-0 except the channel-independent
@@ -346,15 +348,16 @@ library, or a design project scoped exclusively to CoreOps.
   package after the CDS-WP-021 closure. **The authorization was the authority, not the
   sequence:** it was the Nova-recommended and `DEC-S-135`-sequenced Step-10 candidate,
   and **`SEQUENCED NEXT ≠ AUTHORIZED`**, **`CLOSED ≠ SUCCESSOR AUTHORIZED`** and
-  **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`** all still hold. **CDS-WP-022 is
-  recorded by this closure object with target lifecycle `Completed` / `Closed`.** This
-  prepared Working Tree has no authority: **the closure state is effective only at the
-  Human-Maintainer exact-object integration commit of this independently reviewed
-  closure object**, and closure was separately authorized after closure readiness
-  reached **`READY`** at `d8b5857e1eda2066e61fda47b694afbc466aa6d8` — **`EXECUTION ≠
-  CLOSURE`**, **`COMPLETE WITH NOTES ≠ CLOSED`**, **`INTEGRATED ≠ CLOSED`** and
-  **`READY ≠ CLOSED`**. **The lifecycle status and the execution result are separate
-  axes**: the result stays `COMPLETE WITH NOTES` and is never rewritten to `COMPLETE`.
+  **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`** all still hold. Closure was
+  separately authorized after closure readiness reached **`READY`** at
+  `d8b5857e1eda2066e61fda47b694afbc466aa6d8` — **`EXECUTION ≠ CLOSURE`**, **`COMPLETE
+  WITH NOTES ≠ CLOSED`**, **`INTEGRATED ≠ CLOSED`** and **`READY ≠ CLOSED`** — and
+  **that closure is effective at the Human-Maintainer exact-object integration commit
+  `ab81e197374bb9f9479105b4261cb4485a491b2a`** (2026-09-28), which integrated the
+  independently reviewed closure object; **`CLOSURE OBJECT PREPARED ≠ CLOSURE
+  EFFECTIVE`** held until that commit. **The lifecycle status and the execution result
+  are separate axes**: the result stays `COMPLETE WITH NOTES` and is never rewritten to
+  `COMPLETE`.
   **Contract only:**
   it derives the **Theme Resolution Context** term, the **context admission
   contract** (**CA-1 … CA-13**), **context identity** (**CI-1 … CI-6**), **context
@@ -1089,9 +1092,8 @@ and activated** by a separate, explicit Human-Maintainer act and has since been
 **closed**, closure effective at `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`.
 **CDS-WP-022 has since been authorized as well**, by a further separate, explicit
 Human-Maintainer act; it is **integrated** at
-`23914ecc48c1fb3cba5e3dab97a505589e821b6b` and recorded as **`Completed` /
-`Closed`**, its closure state effective only at the Human-Maintainer exact-object
-integration commit of this independently reviewed closure object. Neither act is
+`23914ecc48c1fb3cba5e3dab97a505589e821b6b` and has since been **closed**, closure
+effective at `ab81e197374bb9f9479105b4261cb4485a491b2a`. Neither act is
 this pass, and this pass still activated nothing.)* **`RISK-099` was assessed and is not
 required** — the normative OKLCH-to-sRGB accessibility-path conversion architecture
 that would have created the exposure was **rejected** — so the register stays at
@@ -1177,9 +1179,9 @@ candidate and is NOT authorized** — **SEQUENCED NEXT ≠ AUTHORIZED**. *(State
 is authorized**: the Human Maintainer subsequently authorized **CDS-WP-021** by a
 separate, explicit act, and later still authorized **CDS-WP-022** by a further
 separate, explicit act — **CDS-WP-022** is **integrated** at
-`23914ecc48c1fb3cba5e3dab97a505589e821b6b` and recorded as **`Completed` / `Closed`**,
-its closure state effective only at the Human-Maintainer exact-object integration
-commit of this independently reviewed closure object. Neither authorization came
+`23914ecc48c1fb3cba5e3dab97a505589e821b6b` and **`Completed` / `Closed`**, closure
+effective at the Human-Maintainer exact-object integration commit
+`ab81e197374bb9f9479105b4261cb4485a491b2a`. Neither authorization came
 from this pass or from its
 recommendation — **SEQUENCED NEXT ≠ AUTHORIZED** still holds — and this pass still
 activated nothing.)*
@@ -1310,11 +1312,11 @@ The **Layer-3 Theme and Environmental Presentation contract** of **VF-9** is def
 ([Visual Foundation Theme Architecture](docs/architecture/VISUAL_FOUNDATION_THEME_ARCHITECTURE.md)).
 **Still no theme instance, no machine-readable context identifier, no default alias,
 and no visual value exists in CDS** — verified by search, not assumed — and
-CDS-WP-022 created none. **CDS-WP-022 is `Completed` / `Closed`**, as recorded by
-this closure object: its closure was separately authorized by the Human Maintainer,
-and **its closure state is effective only at the Human-Maintainer exact-object
-integration commit of this independently reviewed closure object**. **Closure changed
-no architecture, no Decision, and no ADR**, and the effectivity commit
+CDS-WP-022 created none. **CDS-WP-022 is `Completed` / `Closed`**: its closure was
+separately authorized by the Human Maintainer and **became effective at the
+Human-Maintainer exact-object integration commit
+`ab81e197374bb9f9479105b4261cb4485a491b2a`** (2026-09-28). **Closure changed no
+architecture, no Decision, and no ADR**, and the effectivity commit
 `23914ecc48c1fb3cba5e3dab97a505589e821b6b` is **not** the closure commit.
 
 - **`DERIVE ≠ DECLARE`, and the first result was `DECISION_REQUIRED`.** CDS-WP-022

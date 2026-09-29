@@ -334,9 +334,11 @@ free to choose.)*
 > given role, the role is not yet writable — which is a finding for CDS-WP-022,
 > not a reason to guess. See **OD-7**.
 
-**Current-state routing note — CDS-WP-022 closure object, 2026-09-28.** *(Effective
-only at the Human-Maintainer exact-object integration commit of that independently
-reviewed closure object; until then it changes no authoritative CDS state.
+**Current-state routing note — CDS-WP-022 closure object, 2026-09-28.** *(**EFFECTIVE**
+at the Human-Maintainer exact-object integration commit
+`ab81e197374bb9f9479105b4261cb4485a491b2a` (2026-09-28) of that independently
+reviewed closure object; before that commit it was uncommitted executor output and
+changed no authoritative CDS state.
 **Additive: the note above is not edited.**)* The routing to CDS-WP-022 in the note
 above records the state when this document was first written, before **OD-7** was
 answered by **DEC-S-135** and before CDS-WP-022 was authorized. **CDS-WP-022 —
