@@ -6,11 +6,11 @@ locally in this repository.
 - **Current pin:** NDF **v1.1.0** — adopted by **CDS-WP-001B** (Elevated
   Skill-Maintenance package, a lettered insertion following the CDS-WP-001A
   precedent) under **DEC-S-139**.
-- **Effectivity:** this record describes an object that is `migration-pending`
-  until the Human-Maintainer exact-object integration commit of CDS-WP-001B, from
-  which the lock state is `lock-enforced`. **`EXECUTED ≠ ACCEPTED`,
-  `PASS ≠ INTEGRATED`, `PREPARED DECISION ≠ EFFECTIVE DECISION`, and
-  `SKILL IMPORTED ≠ SKILL APPROVED`.**
+- **Effectivity:** this pin, **DEC-S-139** and the lock state `lock-enforced` became
+  effective at the Human-Maintainer exact-object integration commit of CDS-WP-001B,
+  `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`; before that commit the object was `migration-pending`
+  (historical). **`EXECUTED ≠ ACCEPTED`, `PASS ≠ INTEGRATED`,
+  `PREPARED DECISION ≠ EFFECTIVE DECISION`, and `SKILL IMPORTED ≠ SKILL APPROVED`.**
 - **Previous pin:** NDF v1.0.0 (source commit
   `9dcadc12fb960914b9a5baeff2ab1aee75912b57`), adopted by CDS-WP-001A on
   2026-07-15. That record is historical and is superseded as the live pin only.
@@ -147,8 +147,8 @@ The machine-readable lock is
 | Ordering | deterministic, byte-order by path within each record set |
 | Records | 39 pack + 4 support snapshot = 43, **one** source tag and **one** source commit |
 | Verification status | `verified` |
-| Approval state | Human-Maintainer approval becomes effective only at the exact-object integration commit carrying this record |
-| Migration state | `migration-pending` while this object is uncommitted; **target `lock-enforced` from the Human-Maintainer exact-object integration commit** |
+| Approval state | Human-Maintainer approval became effective at the exact-object integration commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d` |
+| Migration state | **`lock-enforced`** — effective from the Human-Maintainer exact-object integration commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d` (`migration-pending` was the pre-integration state of the candidate object) |
 | Exception state | no exception active |
 
 Every record repeats its source tag and source commit, so **mixed-tag content is
@@ -206,6 +206,11 @@ redesign.
 6. The six changed Skill descriptions change Skill **auto-trigger behaviour**.
 7. **No automated CDS drift gate exists**; verification is by documented manual
    procedure.
+8. **Seven onward links inside the support-snapshot documents themselves do not
+   resolve in CDS** (six in `TOKEN_EFFICIENCY_AND_CONTEXT_BUDGET_BASELINE.md`, one in
+   `WORK_PACKAGE_LIFECYCLE.md`). They are informational and non-rule-bearing for the
+   directly adopted Skill execution path; **no onward NDF document was imported**, and
+   this does not weaken the 10/10 direct-dependency result.
 
 ## Historical carriers
 

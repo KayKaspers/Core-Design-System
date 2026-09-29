@@ -240,9 +240,9 @@ evidence evaluation remains, DEFERRED to separately authorized future scope**
 [ADR-0007](../decisions/ADR-0007-THEME-RESOLUTION-AND-CONTEXT-EVIDENCE-ARCHITECTURE.md)).
 **No residual authority remains with CDS-WP-022**: the deferred evaluation is **not
 routed to CDS-WP-022**, its destination is **not a reopening or re-authorization of
-CDS-WP-022**, and **no currently authorized work package owns it** *(the currently
-authorized CDS-WP-001B is a process-baseline Skill-maintenance package and owns no
-design-system evaluation)* (*Deferred decisions*, row 7). **This note creates no successor and authorizes no realization,
+CDS-WP-022**, and **no currently authorized work package owns it** *(CDS-WP-001B, the process-baseline
+Skill-maintenance package, owned no design-system evaluation and is recorded as
+`Completed` / `Closed`)* (*Deferred decisions*, row 7). **This note creates no successor and authorizes no realization,
 no value selection, and no implementation** —
 **`CDS-WP-021 DID NOT DECIDE ≠ DEC-S-137 NEVER DECIDED`** and
 **`DEFERRED ≠ CDS-WP-022 RETAINS AUTHORITY`**.
@@ -627,8 +627,8 @@ decide, schedule, or authorize it.)*
     and `DEC-S-138` later became effective, and `ADR-0007` `Accepted` and
     effective, at the Human-Maintainer exact-object integration commit
     `23914ecc48c1fb3cba5e3dab97a505589e821b6b`** of the reviewed CDS-WP-022 object,
-    and are unrelated to `WP021-D2`; **the current effective Decision and ADR
-    registers are 138 and 7.**
+    and are unrelated to `WP021-D2`; **as of that commit, the effective Decision and ADR
+    registers were 138 and 7.**
 11. **No work package is activated** — **CDS-WP-021 itself activated no later work
     package**, and at its effectivity and closure milestones **`CDS-WP-020A`**,
     **CDS-WP-022**, **CDS-WP-023** and **CDS-WP-024** all remained `Planned`, not

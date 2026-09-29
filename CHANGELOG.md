@@ -804,6 +804,38 @@ released and no release is announced.
 
 ### Changed
 
+- **CDS-WP-001B effectivity recorded and closure object prepared — `DEC-S-139` effective, NDF
+  v1.1.0 process baseline effective, lock `lock-enforced`, target lifecycle `Completed` /
+  `Closed`.** The condition the CDS-WP-001B execution object stated — the
+  Human-Maintainer exact-object integration commit — was met by commit
+  **`daa5f114c1b9c02afcfc0205149ca00dc4801d8d`** (`chore(cds): adopt NDF v1.1.0 process baseline`; parent
+  `a8efb61e07c73cc6622873c35a088ef89d5c4345`; 27 paths, 22 modified and 5 added, exact-object
+  manifest SHA-256 `87580c00f231da528384018f56c4c95a3318407749838ff24e351ccea914c7ce`), which
+  integrated the object after an independent review returning **PASS WITH NOTES** and Nova
+  adjudication **ACCEPTED** (0 blockers, 0 material findings). **That commit is the authority
+  event**; the Working Tree candidate carried no authority before it. **From it `DEC-S-139` is
+  `Accepted` and effective, NDF v1.1.0 is the effective CDS development-process baseline
+  (process layer only), and the integrity lock state is `lock-enforced`** — `migration-pending`
+  was the pre-integration state — with no exception active and all 43 lock records unchanged.
+  **The effective registers held 138 decisions, 7 ADRs and 98 risks until that commit and hold
+  139 · 7 · 98 from it**; no ADR, risk, or `DEC-S-140` was added. **This entry is part of an
+  exact closure object**: CDS-WP-001B is recorded with target lifecycle `Completed` / `Closed`,
+  and **that closure is effective only at the later Human-Maintainer exact-object integration
+  commit of this independently reviewed closure object** — **`INTEGRATED ≠ CLOSED`**, **`CLOSURE
+  OBJECT PREPARED ≠ CLOSURE EFFECTIVE`**, **`EXECUTED ≠ ACCEPTED`**, **`PASS ≠ INTEGRATED`**.
+  Review note **N-1** is resolved: the ambiguous live statement in `WORK_PACKAGES.md` now says
+  *no design work package is currently authorized*. Review note **N-2** is resolved: the
+  provenance record adds one limitation — **seven onward links inside the four support-snapshot
+  documents do not resolve in CDS**; they are informational and non-rule-bearing for the directly
+  adopted Skill execution path, **no onward NDF document was imported**, and the 10/10 direct
+  dependency result is unaffected. Notes N-3 … N-6 stay informational and deferred. **Current
+  work package: none; design work package: none; successor: none** — **`CLOSED ≠ SUCCESSOR
+  AUTHORIZED`**; `CDS-WP-020A` and CDS-WP-023 … CDS-WP-053 remain `Planned`, not active, and
+  not authorized. **All 11 imported NDF files remain byte-identical to NDF v1.1.0**; historical
+  and point-in-time records were preserved, not rewritten. **No architecture, value, Source Set,
+  maturity, evidence, claim, conformance, release, version, or publication authority changed**;
+  publication stays `Private Development`.
+  (CDS-WP-001B post-integration effectivity and closure reconciliation)
 - **CDS-WP-022 closure recorded as effective — `F-022C-01` resolved.** The condition
   the CDS-WP-022 closure object stated — the Human-Maintainer exact-object
   integration commit of that independently reviewed closure object — was met on

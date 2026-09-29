@@ -16,8 +16,9 @@ library, or a design project scoped exclusively to CoreOps.
 - Repository: KayKaspers/Core-Design-System
 - Local path: `D:\Projects\Core-Design-System`
 - Framework: Nova Development Framework v1.1.0 — **development-process layer only**
-  (**DEC-S-139**, prepared by CDS-WP-001B; effective only at that package's
-  Human-Maintainer exact-object integration commit)
+  (**DEC-S-139**, prepared by CDS-WP-001B and **effective** at that package's
+  Human-Maintainer exact-object integration commit
+  `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`)
 - Phase: **Post-Candidate Foundation & Design-System Enablement** — set by
   **DEC-S-127** and effective at its Human-Maintainer integration commit. It
   supersedes `Pre-Candidate Operating Enablement` (**DEC-S-062**) **for current and
@@ -33,7 +34,7 @@ library, or a design project scoped exclusively to CoreOps.
   Closure grants **no** Candidate, Stable, adoption, conformance, release, or
   publication status.
 - First reference consumer: CoreOps (not the sole design target)
-- Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
+- Completed work packages: CDS-WP-001, CDS-WP-001A, **CDS-WP-001B**, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**,
   **CDS-WP-017**, **CDS-WP-018**, **CDS-WP-019**, **CDS-WP-020**, **CDS-WP-021**,
@@ -43,28 +44,35 @@ library, or a design project scoped exclusively to CoreOps.
   `ab81e197374bb9f9479105b4261cb4485a491b2a`** (2026-09-28), which integrated its
   independently reviewed closure object; **both execution results are unchanged at
   `COMPLETE WITH NOTES`**
-- **Currently authorized work package: CDS-WP-001B — NDF v1.1.0 Skills and Framework
+- **Last authorized work package: CDS-WP-001B — NDF v1.1.0 Skills and Framework
   Baseline Maintenance** — an **Elevated**, lettered Skill-Maintenance insertion
   following the `CDS-WP-001A` precedent (**no work package is renumbered**),
   authorized by the Human Maintainer for governed Skill-maintenance execution
-  **only**. Its execution object is **`COMPLETE — READY FOR INDEPENDENT REVIEW`**: it
-  re-pins the local NDF Skills pack to **NDF v1.1.0** (7 changed, 32 unchanged pack
-  files), adds a four-file NDF support snapshot, migrates the integrity lock, and
-  **prepares `DEC-S-139`**. **`EXECUTED ≠ ACCEPTED`**, **`PASS ≠ INTEGRATED`**,
-  **`PREPARED DECISION ≠ EFFECTIVE DECISION`**, **`SKILL IMPORTED ≠ SKILL APPROVED`**
-  and **`MAINTENANCE COMPLETE ≠ SUCCESSOR AUTHORIZED`**: `DEC-S-139` becomes effective
-  — and the lock state `lock-enforced` — only at the Human-Maintainer exact-object
-  integration commit of CDS-WP-001B, **and instructions authored before that commit
-  are legacy for the adopted NDF Execution Contract**. It is **process-only**: no
-  value, Source Set, maturity, evidence, claim, release, publication, ADR, or risk.
-  **The effective registers stay at 138 decisions, 7 ADRs and 98 risks until that
-  commit; `DEC-S-139` makes it 139 · 7 · 98.**
+  **only**. It re-pinned the local NDF Skills pack to **NDF v1.1.0** (7 changed, 32
+  unchanged pack files), added a four-file NDF support snapshot, migrated the
+  integrity lock, and prepared `DEC-S-139`. Its execution object was independently
+  reviewed (`PASS WITH NOTES`), Nova-accepted and integrated by the Human-Maintainer
+  exact-object commit **`daa5f114c1b9c02afcfc0205149ca00dc4801d8d`** — **the authority event**: at that commit
+  **`DEC-S-139` became effective, NDF v1.1.0 became the effective development-process
+  baseline, and the lock state became `lock-enforced`** (no exception active).
+  **`EXECUTED ≠ ACCEPTED`**, **`PASS ≠ INTEGRATED`**, **`PREPARED DECISION ≠ EFFECTIVE
+  DECISION`**, **`SKILL IMPORTED ≠ SKILL APPROVED`** and **`MAINTENANCE COMPLETE ≠
+  SUCCESSOR AUTHORIZED`**; **instructions authored before that commit are legacy for
+  the adopted NDF Execution Contract**. It is **process-only**: no value, Source Set,
+  maturity, evidence, claim, release, publication, ADR, or risk. **The effective
+  registers held 138 decisions, 7 ADRs and 98 risks until that commit and hold
+  139 · 7 · 98 from it.** **Closure is a separate act:** CDS-WP-001B is recorded by its
+  closure object with target lifecycle **`Completed` / `Closed`**, effective only at
+  that object's Human-Maintainer exact-object integration commit
+  (**`INTEGRATED ≠ CLOSED`**, **`CLOSURE OBJECT PREPARED ≠ CLOSURE EFFECTIVE`**), and
+  **closing it authorizes no successor**.
 - **Design work package currently authorized: NONE** — from the Human-Maintainer
   exact-object integration commit `ab81e197374bb9f9479105b4261cb4485a491b2a`
   (2026-09-28), at which the CDS-WP-022 closure became effective; **the statements
   in this file and elsewhere that "no work package is currently authorized" describe
-  the design-work-package sequence as of that commit**, and CDS-WP-001B owns no design
-  scope. **Successor: NONE.** **`CLOSURE OBJECT
+  the design-work-package sequence as of that commit**, and CDS-WP-001B owned no design
+  scope. **Current work package: NONE** (from the effectivity of the CDS-WP-001B
+  closure object). **Successor: NONE.** **`CLOSURE OBJECT
   PREPARED ≠ CLOSURE EFFECTIVE`** held until that commit. **`CLOSED ≠ SUCCESSOR
   AUTHORIZED`**, **`CLOSED ≠ VALUE
   SELECTION AUTHORIZED`**, **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`**,
@@ -349,8 +357,8 @@ library, or a design project scoped exclusively to CoreOps.
   **`WP021-D1` is APPROVED** — the **Container-Relative Named-Range Foundation** —
   and is recorded as **`DEC-S-136`** with **`ADR-0006`**, both **effective at that
   integration commit**; the **effective
-  registers are now 138 decisions and 7 ADRs**, `DEC-S-137`, `DEC-S-138` and
-  `ADR-0007` having become effective at `23914ecc48c1fb3cba5e3dab97a505589e821b6b`.
+  registers were, as of `23914ecc48c1fb3cba5e3dab97a505589e821b6b`, 138 decisions and 7 ADRs**, `DEC-S-137`, `DEC-S-138` and
+  `ADR-0007` having become effective at that commit.
   **`WP021-D2` is DEFERRED** — **not
   rejected** — so the **VF-4 technical root and Source Set identity stay OPEN**, and
   **no Decision and no ADR exists for it** — **`DEC-S-137` and `ADR-0007` record `WP022-D1`, not `WP021-D2`, and are unrelated to it** — and **no `RISK-099` exists.**
@@ -1301,9 +1309,9 @@ commit.
   the Human-Maintainer integration commit
   `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`**.
   **`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION`** held until that commit;
-  **`EFFECTIVE ≠ CLOSED`** holds now. The **effective
-  registers are 138 decisions and 7 ADRs**, `DEC-S-137`, `DEC-S-138` and `ADR-0007`
-  having become effective at `23914ecc48c1fb3cba5e3dab97a505589e821b6b`.
+  **`EFFECTIVE ≠ CLOSED`** holds now. **As of `23914ecc48c1fb3cba5e3dab97a505589e821b6b`, the effective
+  registers were 138 decisions and 7 ADRs**, `DEC-S-137`, `DEC-S-138` and `ADR-0007`
+  having become effective at that commit.
 - **`WP021-D2` is DEFERRED — not rejected.** Whether VF-4 acquires a technical root
   and source-set identity is **OPEN**: **DEC-S-132 fixed roots for VF-1, VF-2, VF-3,
   VF-5 and VF-6 and for no other family**, and **extending it by implication is

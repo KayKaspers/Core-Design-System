@@ -15,8 +15,8 @@
 - Repository: KayKaspers/Core-Design-System
 - Local path: `D:\Projects\Core-Design-System`
 - Framework: Nova Development Framework v1.1.0 — development-process layer only
-  (DEC-S-139, prepared by CDS-WP-001B; effective only at its Human-Maintainer
-  exact-object integration commit)
+  (DEC-S-139, prepared by CDS-WP-001B and effective at its Human-Maintainer
+  exact-object integration commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`)
 - Type: versioned platform product and normative design foundation (DEC-S-001)
 
 ## Current phase
@@ -91,14 +91,18 @@ Phase Transition Governance Package** (**DEC-S-127**) ran between CDS-WP-019 clo
 and the CDS-WP-020 authorization; it changed project-phase authority only and
 activated nothing.
 
-**CDS-WP-001B — NDF v1.1.0 Skills and Framework Baseline Maintenance** is the
-currently authorized work package: an **Elevated**, lettered Skill-Maintenance
-insertion following the `CDS-WP-001A` precedent, **process-only**, authorized by the
-Human Maintainer separately and explicitly. Its execution object is **`COMPLETE —
-READY FOR INDEPENDENT REVIEW`**; **`EXECUTED ≠ ACCEPTED`**, **`PASS ≠ INTEGRATED`**
-and **`PREPARED DECISION ≠ EFFECTIVE DECISION`**. It prepares **`DEC-S-139`**,
-effective only at its own Human-Maintainer exact-object integration commit, and
-authorizes **no** successor.
+**CDS-WP-001B — NDF v1.1.0 Skills and Framework Baseline Maintenance** is the last
+authorized work package: an **Elevated**, lettered Skill-Maintenance insertion
+following the `CDS-WP-001A` precedent, **process-only**, authorized by the Human
+Maintainer separately and explicitly. Independently reviewed (`PASS WITH NOTES`) and
+Nova-accepted, it was integrated by the Human-Maintainer exact-object commit
+**`daa5f114c1b9c02afcfc0205149ca00dc4801d8d`**, at which **`DEC-S-139`**, the NDF v1.1.0 process baseline and the
+`lock-enforced` state **became effective**; **`EXECUTED ≠ ACCEPTED`**, **`PASS ≠
+INTEGRATED`** and **`PREPARED DECISION ≠ EFFECTIVE DECISION`** held until that commit.
+It is recorded by its closure object with target lifecycle **`Completed` /
+`Closed`**, effective only at that object's Human-Maintainer exact-object integration
+commit (**`INTEGRATED ≠ CLOSED`**), and authorizes **no** successor. **Current work
+package: NONE.**
 
 **No design work package is currently authorized** from the Human-Maintainer exact-object
 integration commit `ab81e197374bb9f9479105b4261cb4485a491b2a` (2026-09-28), at which
@@ -142,7 +146,7 @@ range identity**, fixed-geometry channels governed by **their own geometry**, an
 DEFERRED**: the **VF-4 technical root and Source Set
 identity stay OPEN**, and **no Decision and no ADR exists for it** — **`DEC-S-137`
 and `ADR-0007` record `WP022-D1`, not `WP021-D2`, and are unrelated to
-it**. **The effective registers are now 138 decisions and
+it**. **As of `23914ecc…`, the effective registers were 138 decisions and
 7 ADRs** — `DEC-S-137`, `DEC-S-138` and `ADR-0007` having become effective at
 `23914ecc…` — and the risk register stays at **98**. **Effectivity selected no value,
 created no identifier, and closed no work package.** **`CDS-WP-020A` and
@@ -194,8 +198,8 @@ and VF-6, so the value half stays gated. **`RISK-099` is not required**; the Ris
 reconciled by the closure and routing pass; the separately authorized
 post-integration effectiveness reconciliation has since done so — see `F-020C-01`
 in the roadmap. The **effective** decision register held **135** entries and the
-effective ADR range was **5** at the Step-9 integration commit `2cb244e8…`; **the
-effective registers now hold 138 decisions and 7 ADRs** — `DEC-S-136` and
+effective ADR range was **5** at the Step-9 integration commit `2cb244e8…`; **at
+`23914ecc…`, the effective registers held 138 decisions and 7 ADRs** — `DEC-S-136` and
 `ADR-0006` having become effective at `a6bd7bf0…`, and `DEC-S-137`, `DEC-S-138` and
 `ADR-0007` at `23914ecc…`.)*
 
@@ -290,6 +294,7 @@ this is a **summary, never a normative source**.)*
 | --- | --- | --- |
 | CDS-WP-001 | Project Governance and NDF Bootstrap | Charter, authority model, DEC-S-001…006, RISK-001…005, initial roadmap. |
 | CDS-WP-001A | NDF Skills Bootstrap | 38 verified docs-only NDF v1.0.0 Skills (the pin at that time; the live pin is v1.1.0 — see CDS-WP-001B); provenance, manifest, inventory; Skills-first mode active. |
+| CDS-WP-001B | NDF v1.1.0 Skills and Framework Baseline Maintenance | Pin re-based to NDF v1.1.0 (7 changed / 32 unchanged pack files), four-file NDF support snapshot, lock migrated (43 records, `lock-enforced`), DEC-S-139 effective at `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`; process-only. Closure recorded by its closure object, effective at that object's integration commit. |
 | CDS-WP-002 | Concept and Scope Registration | Concept and scope, consumer model, boundary matrix, DEC-S-007…012, RISK-006…009, this pack. |
 | CDS-WP-003 | Benchmark and Differentiation Research | Ten systems reviewed against 14 dimensions from official sources; HYP-001…008 assessed; RISK-010…013. **Non-normative.** No decision changed. |
 | CDS-WP-004 | Consumer Requirements and CoreOps Pilot Contract | 3 consumers analyzed at committed revisions; CR-001…040 registered and traced; CoreOps pilot Groups A–E with 9 scenarios; pilot contract; HYP consumer layer; DEC-S-013…020; RISK-014…019. |
@@ -404,11 +409,11 @@ and reference the normative policies; they do not replace them (DEC-S-063):
 
 ## Active decisions
 
-- Range: DEC-S-001 … DEC-S-138 · Count: 138 · ADRs: 7 (ADR-0001, ADR-0002,
-  ADR-0003, ADR-0004, ADR-0005, ADR-0006, ADR-0007) — **DEC-S-139 is prepared by
-  CDS-WP-001B and not yet effective** (effective count 139 only from that package's
-  integration commit)
-- **Effective range: DEC-S-001 … DEC-S-138 · Count: 138 · All Accepted · ADRs: 7.**
+- Range: DEC-S-001 … DEC-S-139 · Count: 139 · ADRs: 7 (ADR-0001, ADR-0002,
+  ADR-0003, ADR-0004, ADR-0005, ADR-0006, ADR-0007) — **DEC-S-139 was prepared by
+  CDS-WP-001B and became effective at that package's integration commit
+  `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`** (the count was 138 until then)
+- **Effective range: DEC-S-001 … DEC-S-139 · Count: 139 · All Accepted · ADRs: 7.**
   **DEC-S-128 … DEC-S-131 and ADR-0004 are effective** at the Human-Maintainer
   exact-byte integration commit `42a568d823de3388e45af62967546f13ad67eff6` of the
   CDS-WP-020 Decision Integration Pass; **DEC-S-132 … DEC-S-135 and ADR-0005 are
@@ -824,7 +829,8 @@ version has been released.
   `d4409492498cf4ed989f9ee47d4ad8b2f5f6868d`), with a four-file NDF support snapshot
   (`framework/`, `docs/guides/`, `docs/templates/`) from the same tag. Never modify
   either during product work; the snapshot is NDF process material, not CDS policy
-  (DEC-S-139; lock `migration-pending` until CDS-WP-001B is integrated).
+  (DEC-S-139; lock `lock-enforced` from CDS-WP-001B's integration commit
+  `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`).
 - `.claude/rules/` is an empty placeholder. `docs/architecture/`,
   `docs/research/`, and `docs/roadmap/` are **populated** — they were empty only at
   CDS-WP-001A and have carried committed documents since CDS-WP-005 / CDS-WP-003 /

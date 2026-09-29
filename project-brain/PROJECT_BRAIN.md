@@ -7,8 +7,8 @@ summarizes; it does not duplicate the normative documents it points to.
 - **Repository:** KayKaspers/Core-Design-System
 - **Local path:** `D:\Projects\Core-Design-System`
 - **Framework:** Nova Development Framework v1.1.0 — development-process layer
-  only (DEC-S-139, prepared by CDS-WP-001B; effective only at its Human-Maintainer
-  exact-object integration commit)
+  only (DEC-S-139, prepared by CDS-WP-001B and effective at its Human-Maintainer
+  exact-object integration commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`)
 - **Phase:** Post-Candidate Foundation & Design-System Enablement — **Foundation /
   Pre-Design: Closed with Notes** (**DEC-S-127**, 2026-08-26, effective at its
   Human-Maintainer integration commit). It supersedes `Pre-Candidate Operating
@@ -60,8 +60,9 @@ areas today.
 Governance foundation established. No final design or technology decisions are
 approved.
 
-- Decisions: DEC-S-001 … DEC-S-138 (138 effective; DEC-S-139 is prepared by
-  CDS-WP-001B and effective only at its integration commit) — 6 foundation + 6 scope + 8 consumer
+- Decisions: DEC-S-001 … DEC-S-139 (139 effective; DEC-S-139 was prepared by
+  CDS-WP-001B and became effective at its integration commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`; 138
+  until then) — 6 foundation + 6 scope + 8 consumer
   and pilot scope + 12 logical architecture + 16 governance + 12 accessibility +
   4 operating enablement and pre-candidate + 8 accessibility support baseline and
   evidence + 10 machine-readable source and token format + 10 machine-readable
@@ -72,6 +73,7 @@ approved.
   authority and source identity + 4 visual identifier, scale ownership, role
   admission and theme sequencing + 1 adaptive spatial context and responsive
   architecture + 2 theme resolution, context-evidence and environmental selection
+  + 1 framework process-baseline and Skill supply-chain
   decisions ·
   **ADRs: 7 (ADR-0001, ADR-0002, ADR-0003, ADR-0004, ADR-0005, ADR-0006, ADR-0007)**
   - **Effectivity: DEC-S-128 … DEC-S-131 and ADR-0004 are effective**, at the
@@ -86,13 +88,14 @@ approved.
     **DEC-S-137, DEC-S-138 and ADR-0007 are effective**, at the Human-Maintainer
     exact-object integration commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b` of the
     CDS-WP-022 object. The
-    **effective** register is **DEC-S-001 … DEC-S-138 (138)** — **DEC-S-139 is
-    not yet effective** —
+    **effective** register is **DEC-S-001 … DEC-S-139 (139)** — **DEC-S-139 is
+    effective** at the Human-Maintainer exact-object integration commit
+    `daa5f114c1b9c02afcfc0205149ca00dc4801d8d` —
     with **7 ADRs**.
 - Risks: RISK-001 … RISK-098 (98) — **89 Monitored; RISK-031, RISK-040, RISK-044,
   RISK-066, RISK-067, RISK-068, RISK-069, RISK-071, RISK-098 Mitigating**; **owner
   model finalized**; no risk accepted or closed
-- Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
+- Completed work packages: CDS-WP-001, CDS-WP-001A, **CDS-WP-001B**, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**,
   **CDS-WP-017**, **CDS-WP-018**, **CDS-WP-019**, **CDS-WP-020**, **CDS-WP-021**,
@@ -105,12 +108,15 @@ approved.
   risk; renamed no phase; registered no capability; and activated no later work
   package. Closure became effective with the Human-Maintainer commit
   `538fbccbf6f554de3b872e9fb75a70d13318feb6`.
-- **Current work package: CDS-WP-001B — NDF v1.1.0 Skills and Framework Baseline
-  Maintenance** (Elevated; a lettered Skill-Maintenance insertion following the
-  CDS-WP-001A precedent; process-only). Execution object **`COMPLETE — READY FOR
-  INDEPENDENT REVIEW`**; **`EXECUTED ≠ ACCEPTED`**. It prepares `DEC-S-139`, effective
-  only at its own Human-Maintainer exact-object integration commit, and authorizes no
-  successor.
+- **Last authorized work package: CDS-WP-001B — NDF v1.1.0 Skills and Framework
+  Baseline Maintenance** (Elevated; a lettered Skill-Maintenance insertion following
+  the CDS-WP-001A precedent; process-only). Independently reviewed (`PASS WITH
+  NOTES`), Nova-accepted, and integrated by the Human-Maintainer exact-object commit
+  `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`, at which `DEC-S-139`, the NDF v1.1.0 process baseline and the
+  `lock-enforced` state became effective; **`EXECUTED ≠ ACCEPTED`**. It is recorded by
+  its closure object with target lifecycle `Completed` / `Closed`, effective only at
+  that object's Human-Maintainer exact-object integration commit, and authorizes no
+  successor. **Current work package: NONE.**
 - **Design work package currently authorized: NONE — no design work package is
   currently authorized** from the
   Human-Maintainer exact-object integration commit
@@ -204,8 +210,8 @@ approved.
   Layer-3 vocabulary, continuous behaviour **permitted downstream but not Core range
   identity**, fixed-geometry channels governed by **their own geometry**, and
   **`SPATIAL CONTEXT ≠ THEME RESOLUTION CONTEXT`** — recorded as **`DEC-S-136`**
-  with **`ADR-0006`**, both **effective at that integration commit**, so the
-  **effective registers are now 138 and 7**, `DEC-S-137`, `DEC-S-138` and `ADR-0007`
+  with **`ADR-0006`**, both **effective at that integration commit**, so, as of `23914ecc…`, the
+  **effective registers were 138 and 7**, `DEC-S-137`, `DEC-S-138` and `ADR-0007`
   having become effective at `23914ecc…`. **`EFFECTIVE ≠ CLOSED`**, and effectivity
   selected no value and created no identifier.
   **`WP021-D2` is DEFERRED** — **VF-4 technical root OPEN, VF-4 Source Set identity

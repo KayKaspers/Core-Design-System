@@ -14,9 +14,8 @@ Inventory of the NDF Claude Skills held locally in this repository.
 - **Status:** all 38 skills `verified` (byte-identity with the source tag);
   **`verified` is an integrity statement, not a maturity, approval, or support
   statement** — **`SKILL IMPORTED ≠ SKILL APPROVED`**
-- **Lock state:** `migration-pending` while this object is uncommitted; target
-  `lock-enforced` from the Human-Maintainer exact-object integration commit of
-  CDS-WP-001B (**DEC-S-139**)
+- **Lock state:** `lock-enforced` — effective from the Human-Maintainer exact-object
+  integration commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d` of CDS-WP-001B (**DEC-S-139**)
 - **Verification date:** 2026-09-29
 
 Every skill directory contains exactly one main file, `SKILL.md`. All skills are

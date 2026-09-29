@@ -8,8 +8,8 @@
 - Local path: `D:\Projects\Core-Design-System`
 - Primary pilot consumer: CoreOps
 - Framework: Nova Development Framework v1.1.0 — development-process layer only
-  (DEC-S-139, prepared by CDS-WP-001B; effective only at its Human-Maintainer
-  exact-object integration commit)
+  (DEC-S-139, prepared by CDS-WP-001B and effective at its Human-Maintainer
+  exact-object integration commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`)
 
 ## Project type
 
@@ -33,14 +33,17 @@ release, or publication authority, and activates no work package.
 
 ## Work package status
 
-- **Current work package: CDS-WP-001B — NDF v1.1.0 Skills and Framework Baseline
-  Maintenance** (Elevated; a lettered Skill-Maintenance insertion following the
-  CDS-WP-001A precedent, no renumbering; process-only). Execution object:
-  **`COMPLETE — READY FOR INDEPENDENT REVIEW`**; **`EXECUTED ≠ ACCEPTED`**,
-  **`PASS ≠ INTEGRATED`**, **`PREPARED DECISION ≠ EFFECTIVE DECISION`**. It prepares
-  `DEC-S-139`, effective only at its own Human-Maintainer exact-object integration
-  commit, and authorizes **no** successor (**`MAINTENANCE COMPLETE ≠ SUCCESSOR
-  AUTHORIZED`**).
+- **Last authorized work package: CDS-WP-001B — NDF v1.1.0 Skills and Framework
+  Baseline Maintenance** (Elevated; a lettered Skill-Maintenance insertion following
+  the CDS-WP-001A precedent, no renumbering; process-only). Independently reviewed
+  (`PASS WITH NOTES`), Nova-accepted, and integrated by the Human-Maintainer
+  exact-object commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`, at which `DEC-S-139`, the NDF v1.1.0 process
+  baseline and the `lock-enforced` state became effective (**`EXECUTED ≠ ACCEPTED`**,
+  **`PASS ≠ INTEGRATED`**, **`PREPARED DECISION ≠ EFFECTIVE DECISION`**). It is
+  recorded by its closure object with target lifecycle **`Completed` / `Closed`**,
+  effective only at that object's Human-Maintainer exact-object integration commit
+  (**`INTEGRATED ≠ CLOSED`**), and authorizes **no** successor (**`MAINTENANCE
+  COMPLETE ≠ SUCCESSOR AUTHORIZED`**). **Current work package: NONE.**
 - **Design work package currently authorized: NONE — no design work package is
   currently authorized** from the
   Human-Maintainer exact-object integration commit
@@ -270,7 +273,7 @@ release, or publication authority, and activates no work package.
 - **CDS-WP-016 status:** **Completed.** Its post-promotion current-state
   reconciliation was integrated by the Human-Maintainer commit
   `1fc53ae5afa40807e1950171ab700b0860ee581e`, and closure became effective there.
-- Completed work packages: CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
+- Completed work packages: CDS-WP-001, CDS-WP-001A, **CDS-WP-001B**, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**,
   **CDS-WP-017**, **CDS-WP-018**, **CDS-WP-019**, **CDS-WP-020**, **CDS-WP-021**,
@@ -770,8 +773,8 @@ Normative source:
 
 ## NDF Skills
 
-- NDF Skills Version: v1.1.0 (adopted by CDS-WP-001B; lock state `migration-pending`
-  until its integration commit, then `lock-enforced`)
+- NDF Skills Version: v1.1.0 (adopted by CDS-WP-001B; lock state `lock-enforced`,
+  effective from its integration commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`)
 - Skills Count: 38
 - Skills Status: verified (byte-identity with the source tag) and locally available
 - Skills Source Commit: `948c91dc940362f7565e28f697d0528b812797a3` (tag object
@@ -823,8 +826,9 @@ pilot contract is defined in CDS-WP-004.
 
 ## Register scope
 
-- Decisions: DEC-S-001 … DEC-S-138 (138 effective; **DEC-S-139 is prepared by
-  CDS-WP-001B and effective only at its integration commit, making it 139**) — 6
+- Decisions: DEC-S-001 … DEC-S-139 (139 effective; **DEC-S-139 was prepared by
+  CDS-WP-001B and became effective at its integration commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`**; 138
+  until then) — 6
   strategic foundation decisions
   (CDS-WP-001), 6 strategic scope decisions (CDS-WP-002), 8 consumer and pilot
   scope decisions (CDS-WP-004), 12 logical architecture decisions (CDS-WP-005),
@@ -848,7 +852,8 @@ pilot contract is defined in CDS-WP-004.
   DEC-S-132 … DEC-S-135)**, and **1 adaptive spatial context and responsive
   architecture decision (CDS-WP-021, DEC-S-136)**, and **2 theme resolution,
   context-evidence and environmental selection decisions (CDS-WP-022, DEC-S-137 …
-  DEC-S-138)**. DEC-S-001 … DEC-S-114 unchanged
+  DEC-S-138)**, and **1 framework process-baseline and Skill supply-chain decision
+  (CDS-WP-001B, DEC-S-139)**. DEC-S-001 … DEC-S-114 unchanged
   by
   CDS-WP-015; DEC-S-001 … DEC-S-125 unchanged by the rework; **DEC-S-001 …
   DEC-S-126 unchanged by the phase transition**; **DEC-S-001 … DEC-S-127 unchanged
@@ -865,8 +870,8 @@ pilot contract is defined in CDS-WP-004.
   `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`; **DEC-S-137, DEC-S-138 and ADR-0007
   are effective**, at the Human-Maintainer exact-object integration commit
   `23914ecc48c1fb3cba5e3dab97a505589e821b6b`. The **effective** register is
-  **DEC-S-001 … DEC-S-138 (138)** with **7 ADRs** — **DEC-S-139 is not yet
-  effective**.
+  **DEC-S-001 … DEC-S-139 (139)** with **7 ADRs** — **DEC-S-139 is effective** at the
+  Human-Maintainer exact-object integration commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`.
 - Risks: RISK-001 … RISK-098 (98) — **89 `Monitored`; RISK-031, RISK-040, RISK-044,
   RISK-066, RISK-067, RISK-068, RISK-069, RISK-071, and RISK-098 `Mitigating`**;
   **risk owner model finalized** by CDS-WP-006; RISK-082 … RISK-089 added by CDS-WP-014;

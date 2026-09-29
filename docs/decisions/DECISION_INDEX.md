@@ -11,11 +11,12 @@ authorized work packages.
 
 ## Register scope
 
-- **Effective decision range: DEC-S-001 … DEC-S-138**
-- **Number of effective decisions: 138** — **`DEC-S-139` is prepared by CDS-WP-001B
-  and is not yet effective**: the effective count becomes **139** only at the
-  Human-Maintainer exact-object integration commit of CDS-WP-001B — see the
-  CDS-WP-001B bullet below. **`PREPARED DECISION ≠ EFFECTIVE DECISION`.**
+- **Effective decision range: DEC-S-001 … DEC-S-139**
+- **Number of effective decisions: 139** — **`DEC-S-139` became effective at the
+  Human-Maintainer exact-object integration commit of CDS-WP-001B,
+  `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`** (the effective count was **138** until that commit) — see the
+  CDS-WP-001B bullet below. **`PREPARED DECISION ≠ EFFECTIVE DECISION`** held until
+  that commit.
 - **Effectivity.** **DEC-S-128 … DEC-S-131 are effective.** The condition their
   entries stated — the Human-Maintainer exact-byte integration commit of the
   CDS-WP-020 Decision Integration Pass, following a Fresh Independent Review and
@@ -42,9 +43,10 @@ authorized work packages.
   That review returned `REWORK REQUIRED`; a bounded two-file rework resolved
   **F-R21-01** and **F-R21-02**, and the confirmatory independent review returned
   `PASS`.
-  The **effective** register is therefore **DEC-S-001 … DEC-S-138 (138 decisions)**
+  The **effective** register is therefore **DEC-S-001 … DEC-S-139 (139 decisions)**
   and the **effective** ADR range is **ADR-0001 … ADR-0007 (7 ADRs)** — see the
-  CDS-WP-022 effectivity bullet below for the last two entries and `ADR-0007`. This
+  CDS-WP-022 effectivity bullet below for `DEC-S-137`, `DEC-S-138` and `ADR-0007`, and
+  the CDS-WP-001B bullet below for `DEC-S-139`. This
   section
   is the maintained current carrier; a
   statement inside an individual decision entry is point-in-time and is not edited
@@ -184,27 +186,32 @@ authorized work packages.
   **no work package is currently authorized**, and **`CDS-WP-020A` and
   CDS-WP-023 … CDS-WP-053 remain `Planned`, not active, and not authorized**.
   **`WP021-D2` stays deferred**, and **visual values and visual Source Sets stay 0**.
-- **`DEC-S-139` is prepared by CDS-WP-001B and is NOT yet effective.** *(Maintained
+- **`DEC-S-139` is `Accepted` and effective at the Human-Maintainer exact-object
+  integration commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d` of CDS-WP-001B.** *(Maintained
   current carrier, added 2026-09-29 by CDS-WP-001B — NDF v1.1.0 Skills and Framework
   Baseline Maintenance, an Elevated, lettered Skill-Maintenance insertion following
   the `CDS-WP-001A` precedent; no work package is renumbered.)* **DEC-S-139 — NDF
   v1.1.0 is the CDS development-process baseline; its authority is process-scoped;
   pinned Skills resolve through an exact support snapshot** is a **process-baseline
-  and Skill supply-chain decision**. It becomes effective **only** at the
-  Human-Maintainer exact-object integration commit of CDS-WP-001B, following an
-  independent review (reviewer ≠ executor) and Nova adjudication; **the uncommitted
-  Working Tree creates no authority.** **The effective register holds
-  `DEC-S-001 … DEC-S-138` (138 decisions) until that commit and holds
-  `DEC-S-001 … DEC-S-139` (139 decisions) from it; the ADR register stays at 7
-  (`ADR-0001 … ADR-0007`) and the risk register at 98 throughout** — **no ADR is
-  authorized, no risk is authorized, no `ADR-0008`, no `RISK-099`, and no
-  `DEC-S-140`.** **No existing Decision entry is edited or semantically modified,**
+  and Skill supply-chain decision**. It was prepared by CDS-WP-001B and became
+  effective **only** at that Human-Maintainer exact-object integration commit,
+  following an independent review (reviewer ≠ executor, `PASS WITH NOTES`) and Nova
+  adjudication (`ACCEPTED`); **the uncommitted Working Tree created no authority
+  before it.** **The effective register held `DEC-S-001 … DEC-S-138` (138 decisions)
+  until that commit and holds `DEC-S-001 … DEC-S-139` (139 decisions) from it; the ADR
+  register stays at 7 (`ADR-0001 … ADR-0007`) and the risk register at 98
+  throughout** — **no ADR is authorized, no risk is authorized, no `ADR-0008`, no
+  `RISK-099`, and no `DEC-S-140`.** **No existing Decision entry is edited or semantically modified,**
   and `DEC-S-037` (versioning) is unchanged. DEC-S-139 is **process-scoped**: it
   selects no value, creates no identifier or Source Set, changes no maturity,
   admits no evidence, makes no claim, and **authorizes no successor** —
   **`MAINTENANCE COMPLETE ≠ SUCCESSOR AUTHORIZED`**, and `CDS-WP-020A` and
   CDS-WP-023 … CDS-WP-053 remain `Planned`, not active, and not authorized.
-  **Statements above and inside earlier entries that "no `DEC-S-139` exists or is
+  **CDS-WP-001B is recorded with target lifecycle `Completed` / `Closed`** by its
+  closure object — see [Work Packages](../../project-system/WORK_PACKAGES.md) — effective
+  only at that object's Human-Maintainer exact-object integration commit; closing it
+  authorizes no successor and changes neither the effectivity of `DEC-S-139` nor its
+  effectivity commit. **Statements above and inside earlier entries that "no `DEC-S-139` exists or is
   prepared" are point-in-time statements about the milestones they describe and are
   not edited**, and statements that "no work package is currently authorized" refer to
   the **design-work-package** sequence as at the CDS-WP-022 closure — CDS-WP-001B owns
@@ -6489,14 +6496,16 @@ visual source sets stay 0; Stable stays `No`.** **VP-3, VP-5, VP-6 and VP-7 stay
 
 ## DEC-S-139 — NDF v1.1.0 is the CDS development-process baseline; its authority is process-scoped; pinned Skills resolve through an exact support snapshot
 
-- **Status:** **Prepared — not effective.** **DEC-S-139 becomes effective only at the
-  Human-Maintainer exact-object integration commit of CDS-WP-001B**, which must
-  follow an independent review (reviewer ≠ executor, a fresh session) and Nova
-  adjudication. Until that commit this entry is **uncommitted executor output**
-  prepared under an explicit Human-Maintainer authorization and it changes **no**
-  authoritative CDS state. **`PREPARED DECISION ≠ EFFECTIVE DECISION`**,
+- **Status:** **`Accepted` — effective.** **DEC-S-139 became effective at the
+  Human-Maintainer exact-object integration commit of CDS-WP-001B,
+  `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`**, after an independent review (reviewer ≠ executor, a fresh
+  session; `PASS WITH NOTES`) and Nova adjudication (`ACCEPTED`). It was prepared on
+  2026-09-29 as **uncommitted executor output** under an explicit Human-Maintainer
+  authorization and changed **no** authoritative CDS state until that commit — the
+  integration commit is the authority event, and the Working Tree candidate carried no
+  authority before it. **`PREPARED DECISION ≠ EFFECTIVE DECISION`**,
   **`EXECUTED ≠ ACCEPTED`**, **`PASS ≠ INTEGRATED`**, and **a Nova recommendation is
-  not an approval.** **The effective register holds 138 decisions until that commit
+  not an approval.** **The effective register held 138 decisions until that commit
   and holds 139 from it**; ADRs stay at 7 and risks at 98.
 - **Date:** 2026-09-29
 - **Type:** Framework process-baseline and Skill supply-chain decision

@@ -185,8 +185,8 @@ obligations, and the grid, container and content-width contracts. It selects **n
 value** and creates **no identifier**, **no responsive-range name**, and **no VF-4
 technical root**. The **response mechanism is decided** by the Human Maintainer and
 recorded as **`DEC-S-136`** with **`ADR-0006`** — both **effective at that
-integration commit**, so the
-effective registers are now **138 decisions and 7 ADRs** — `DEC-S-137`, `DEC-S-138`
+integration commit**, so, as of `23914ecc…`, the
+effective registers were **138 decisions and 7 ADRs** — `DEC-S-137`, `DEC-S-138`
 and `ADR-0007` having become effective at `23914ecc…` — and **VF-4 identity is
 deferred**. **Closure resolves no deferred question, satisfies no value
 prerequisite, and authorizes no successor.**
@@ -344,7 +344,8 @@ CDS-WP-004.
 
 This project follows the Nova Development Framework v1.1.0 — for the
 **development-process layer only** (**DEC-S-139**, prepared by CDS-WP-001B and
-effective only at that package's Human-Maintainer exact-object integration commit).
+**effective** at that package's Human-Maintainer exact-object integration commit
+`daa5f114c1b9c02afcfc0205149ca00dc4801d8d`).
 NDF gains no authority over CDS architecture, Decisions, values, maturity, evidence,
 claims, or release state.
 
@@ -363,8 +364,8 @@ for Claude work.
 **Active.** 38 locally verified docs-only Skills are available under
 `.claude/skills/`, pinned byte-identical to the released **NDF v1.1.0** tag
 (adopted by **CDS-WP-001B**, a lettered Skill-Maintenance insertion following the
-CDS-WP-001A bootstrap of NDF v1.0.0; **integration and effectivity remain pending
-until its Human-Maintainer exact-object commit**). Four NDF support files are held
+CDS-WP-001A bootstrap of NDF v1.0.0; **integrated and effective** at its
+Human-Maintainer exact-object commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`, lock state `lock-enforced`). Four NDF support files are held
 byte-identically beside them so the Skills resolve offline; they are NDF process
 material, not CDS policy. NDF release and version statements are **NDF-only** and
 never state a CDS release.
@@ -995,11 +996,15 @@ maturity or approval it does not hold.
   status of `ADR-0007`**, and **it authorizes no successor and satisfies no
   `CDS-WP-020A` prerequisite beyond the `DEC-S-135` theme-mechanism sequencing
   condition** — **`THEME GATE SATISFIED ≠ CDS-WP-020A AUTHORIZED`**.
-- **Currently authorized:** **CDS-WP-001B — NDF v1.1.0 Skills and Framework Baseline
+- **Last authorized:** **CDS-WP-001B — NDF v1.1.0 Skills and Framework Baseline
   Maintenance** (an Elevated, lettered Skill-Maintenance insertion; process-only;
-  execution object `COMPLETE — READY FOR INDEPENDENT REVIEW`; **`EXECUTED ≠
-  ACCEPTED`**; it prepares `DEC-S-139`, **effective only at its own integration
-  commit**; it authorizes no successor). **Design work package currently authorized:
+  independently reviewed `PASS WITH NOTES`, Nova-accepted, and integrated by the
+  Human-Maintainer exact-object commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`, at which `DEC-S-139`, the NDF
+  v1.1.0 process baseline and the `lock-enforced` state became effective; **`EXECUTED ≠
+  ACCEPTED`**). It is recorded by its closure object with target lifecycle
+  **`Completed` / `Closed`**, effective only at that object's Human-Maintainer
+  exact-object integration commit; it authorizes no successor. **Current work
+  package: NONE. Design work package currently authorized:
   NONE** — from the Human-Maintainer exact-object
   integration commit `ab81e197374bb9f9479105b4261cb4485a491b2a` (2026-09-28), at which
   the CDS-WP-022 closure became effective. Closing
@@ -1055,8 +1060,9 @@ phase.
 
 ## Registers
 
-- Decisions: DEC-S-001 … DEC-S-138 (138 effective; **`DEC-S-139` is prepared by
-  CDS-WP-001B and effective only at its integration commit, making it 139**) — 6
+- Decisions: DEC-S-001 … DEC-S-139 (139 effective; **`DEC-S-139` was prepared by
+  CDS-WP-001B and became effective at its integration commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`**; 138
+  until then) — 6
   strategic foundation decisions,
   6 strategic scope decisions, 8 consumer and pilot scope decisions,
   12 logical architecture decisions, 16 governance, lifecycle and publication
@@ -1071,7 +1077,8 @@ phase.
   authority and source identity decisions, 4 visual identifier, scale ownership,
   role admission and theme sequencing decisions, 1 adaptive spatial context and
   responsive architecture decision, 2 theme resolution, context-evidence and
-  environmental selection decisions · ADRs: 7 (ADR-0001, ADR-0002,
+  environmental selection decisions, 1 framework process-baseline and Skill
+  supply-chain decision · ADRs: 7 (ADR-0001, ADR-0002,
   ADR-0003, ADR-0004, ADR-0005, ADR-0006, ADR-0007)
   - **Effectivity:** **DEC-S-128 … DEC-S-131 and ADR-0004 are effective**, at the
     Human-Maintainer exact-byte integration commit
@@ -1085,8 +1092,9 @@ phase.
     **DEC-S-137, DEC-S-138 and ADR-0007 are effective**, at the Human-Maintainer
     exact-object integration commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b` of the
     CDS-WP-022 object. The
-    **effective** register is **DEC-S-001 … DEC-S-138 (138)** — **DEC-S-139, a
-    process-baseline decision prepared by CDS-WP-001B, is not yet effective** —
+    **effective** register is **DEC-S-001 … DEC-S-139 (139)** — **DEC-S-139, a
+    process-baseline decision prepared by CDS-WP-001B, is effective** at the
+    Human-Maintainer exact-object integration commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d` —
     with **7 ADRs (ADR-0001, ADR-0002, ADR-0003, ADR-0004, ADR-0005, ADR-0006,
     ADR-0007)**.
 - Risks: RISK-001 … RISK-098 (98) — 89 Monitored; 9 Mitigating (RISK-031, RISK-040,

@@ -47,8 +47,9 @@ and Environmental Presentation Model is `Completed` / `Closed`**, closure effect
 at the Human-Maintainer exact-object integration commit
 `ab81e197374bb9f9479105b4261cb4485a491b2a`. **No design work package
 is currently authorized** from that commit onward (**CDS-WP-001B**, a lettered
-Skill-Maintenance insertion, is separately authorized — see *Out-of-sequence
-maintenance insertion*), and **closing one authorizes
+Skill-Maintenance insertion, was separately authorized and integrated at
+`daa5f114c1b9c02afcfc0205149ca00dc4801d8d`, and is recorded by its closure object as `Completed` / `Closed` —
+see *Out-of-sequence maintenance insertion*), and **closing one authorizes
 no other** — **`CLOSED ≠ SUCCESSOR AUTHORIZED`**. The CDS-WP-022 authorization and
 closure are Human-Maintainer acts that this document records rather than makes.
 
@@ -174,7 +175,7 @@ activated no other work package — **a recommendation is not an authorization.*
 CDS-WP-021 delivered a **contract**, not values: it created **no** visual value,
 identifier, responsive-range name, range count or threshold, VF-4 technical root,
 source set, token source, schema, or validator rule, registered **no** risk, and
-advanced **no** maturity. **The effective registers are now 138 decisions and
+advanced **no** maturity. **As of `23914ecc…`, the effective registers were 138 decisions and
 7 ADRs** — `DEC-S-137`, `DEC-S-138` and `ADR-0007` having become effective at
 `23914ecc…` — **and the risk register stays at 98.** It first returned `DECISION_REQUIRED`;
 the
@@ -522,9 +523,14 @@ in this range.
   AUTHORIZED`**.
 - **Its purpose is NDF process-baseline and Skill-supply-chain maintenance**: it re-pins
   the local NDF Skills to v1.1.0, adds a four-file byte-identical NDF support
-  snapshot, migrates the integrity lock, and prepares `DEC-S-139` (effective only at
-  its Human-Maintainer exact-object integration commit). It selects no visual value,
+  snapshot, migrates the integrity lock, and prepared `DEC-S-139`, which became
+  effective — with the `lock-enforced` lock state — at its Human-Maintainer
+  exact-object integration commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`. It selects no visual value,
   creates no Source Set, and changes no maturity, evidence, claim, or release state.
+- **Its closure is a separate act.** CDS-WP-001B is recorded by its closure object with
+  target lifecycle `Completed` / `Closed`, effective only at that object's
+  Human-Maintainer exact-object integration commit (**`INTEGRATED ≠ CLOSED`**,
+  **`CLOSURE OBJECT PREPARED ≠ CLOSURE EFFECTIVE`**); it authorizes no successor.
 - **Its table position is registration, not sequencing** — it sits outside the design
   arcs and blocks nothing on the forward path.
 
@@ -1070,8 +1076,9 @@ authorized** from that integration onward.
 **CDS-WP-022 is `Completed` / `Closed`**, closure effective at the Human-Maintainer
 exact-object integration commit `ab81e197374bb9f9479105b4261cb4485a491b2a`
 (2026-09-28), with the execution result unchanged at **`COMPLETE WITH NOTES`**.
-**No design work package is currently authorized** (CDS-WP-001B is a process-baseline
-maintenance insertion, not a next design step). **No successor is
+**No design work package is currently authorized** (CDS-WP-001B was a process-baseline
+maintenance insertion, not a next design step, and is recorded by its closure object as
+`Completed` / `Closed`). **No successor is
 authorized**: **`CDS-WP-020A` and CDS-WP-023 … CDS-WP-053 remain `Planned`, not
 active, and not authorized** — **`CLOSED ≠ SUCCESSOR AUTHORIZED`**, **`SEQUENCED
 NEXT ≠ AUTHORIZED`** and **`THEME GATE SATISFIED ≠ CDS-WP-020A AUTHORIZED`** — and
@@ -1142,8 +1149,8 @@ identity stays **OPEN**, **DEC-S-132's root vocabulary stays closed at VF-1, VF-
 VF-3, VF-5 and VF-6**, and **no Decision and no ADR was created for it** — **at that
 deferral no `DEC-S-137` and no `ADR-0007` existed**; those identifiers were later
 allocated to **`WP022-D1`** and are **unrelated to `WP021-D2`**, and **no `RISK-099`
-and no new `OD` identifier exists.** **The
-effective registers are now 138 decisions and 7 ADRs**, `DEC-S-137` and `DEC-S-138`
+and no new `OD` identifier exists.** **As
+of `23914ecc48c1fb3cba5e3dab97a505589e821b6b`, the effective registers were 138 decisions and 7 ADRs**, `DEC-S-137` and `DEC-S-138`
 having become effective and `ADR-0007` `Accepted` and effective at
 `23914ecc48c1fb3cba5e3dab97a505589e821b6b` —
 **`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY DECISION`** held until the

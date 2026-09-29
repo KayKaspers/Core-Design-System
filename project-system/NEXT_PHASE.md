@@ -6,7 +6,7 @@
   Enablement` (**DEC-S-062**) **for current and future state only**, and DEC-S-062
   stays `Accepted` and correct for the period it governed. **A phase is an operating
   period, not a maturity state** — the transition grants nothing.
-- **Completed work packages:** CDS-WP-001, CDS-WP-001A, CDS-WP-002, CDS-WP-003,
+- **Completed work packages:** CDS-WP-001, CDS-WP-001A, **CDS-WP-001B**, CDS-WP-002, CDS-WP-003,
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**,
   **CDS-WP-017**, **CDS-WP-018**, **CDS-WP-019**, **CDS-WP-020**, **CDS-WP-021**,
@@ -19,12 +19,15 @@
   `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`, with its execution result unchanged at
   **`COMPLETE WITH NOTES`**. **`CLOSURE OBJECT PREPARED ≠ CLOSURE EFFECTIVE`** held
   until that commit.
-- **Current work package: CDS-WP-001B — NDF v1.1.0 Skills and Framework Baseline
-  Maintenance** (Elevated; a lettered Skill-Maintenance insertion following the
-  CDS-WP-001A precedent; process-only; execution object **`COMPLETE — READY FOR
-  INDEPENDENT REVIEW`**, not accepted, not integrated; prepares `DEC-S-139`,
-  effective only at its own integration commit). **Design work package currently
-  authorized: NONE.** **No design work package is currently authorized** from
+- **Current work package: NONE.** **Last authorized work package: CDS-WP-001B — NDF
+  v1.1.0 Skills and Framework Baseline Maintenance** (Elevated; a lettered
+  Skill-Maintenance insertion following the CDS-WP-001A precedent; process-only;
+  independently reviewed `PASS WITH NOTES`, Nova-accepted, and integrated by the
+  Human-Maintainer exact-object commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`, at which `DEC-S-139`, the NDF
+  v1.1.0 process baseline and the `lock-enforced` state became effective; recorded by
+  its closure object with target lifecycle **`Completed` / `Closed`**, effective only
+  at that object's integration commit; authorizes no successor). **Design work package
+  currently authorized: NONE.** **No design work package is currently authorized** from
   the Human-Maintainer exact-object integration commit
   `ab81e197374bb9f9479105b4261cb4485a491b2a` (2026-09-28), at which the CDS-WP-022
   closure became effective. **Next authorized work package: NONE** — this document
@@ -393,12 +396,14 @@ controlled roadmap.
 `9dcadc12fb960914b9a5baeff2ab1aee75912b57` (historical; superseded as the live pin by
 CDS-WP-001B → NDF v1.1.0); Skills-first mode active.
 
-### CDS-WP-001B — NDF v1.1.0 Skills and Framework Baseline Maintenance — Authorized (`Next`); execution object ready for independent review
+### CDS-WP-001B — NDF v1.1.0 Skills and Framework Baseline Maintenance — Completed / Closed (closure object; effective at its integration commit)
 
-Re-pins the local NDF Skills to v1.1.0 (7 changed, 32 unchanged pack files), adds
-a four-file NDF support snapshot, migrates the lock, provenance and inventory, and
-prepares `DEC-S-139` (effective only at its integration commit). Process-only; no
-successor authorized.
+Re-pinned the local NDF Skills to v1.1.0 (7 changed, 32 unchanged pack files), added
+a four-file NDF support snapshot, migrated the lock, provenance and inventory, and
+prepared `DEC-S-139`, which became effective — with the `lock-enforced` state — at the
+Human-Maintainer exact-object integration commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`. Closure is recorded
+by its closure object and is effective only at that object's integration commit.
+Process-only; no successor authorized.
 
 ### CDS-WP-002 — Concept and Scope Registration — Completed
 
@@ -1110,7 +1115,7 @@ commit `ab81e197374bb9f9479105b4261cb4485a491b2a`** (step 26d, 2026-09-28).
 **`DEC-S-136` and `ADR-0006` were prepared under the CDS-WP-021 execution
 authorization and became effective at its integration commit
 `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`** — the
-effective registers are now **138 decisions and 7 ADRs**, `DEC-S-137`, `DEC-S-138` and
+effective registers were, as of `23914ecc…`, **138 decisions and 7 ADRs**, `DEC-S-137`, `DEC-S-138` and
 `ADR-0007` having become effective at `23914ecc48c1fb3cba5e3dab97a505589e821b6b` — and
 **the CDS-WP-021 closure changes neither their effectivity nor their effectivity
 commit**. **`PREPARED ≠
