@@ -335,6 +335,44 @@ The ordering is a **dependency statement**, not a schedule. Nothing later may be
 pulled forward past a prerequisite it depends on, and reaching an arc's end
 grants no maturity to anything inside it.
 
+**Arc semantics — a dependency architecture, not a universal phase lock.**
+*(Human-Maintainer disposition **P5**, integrated by the Post-WP-022 Decision &
+Contract Integration Pass, 2026-09-29; **prepared, not effective** until that pass's
+Human-Maintainer exact-object integration commit.)* The arc sequence records **which
+work depends on which**; it does **not** require every work package of an earlier arc
+to be complete before any work package of a later arc may start. **A later-arc work
+package may proceed before every earlier-arc work package is complete only when all
+four hold:**
+
+1. it does **not depend** on the incomplete earlier work;
+2. its **own declared prerequisites are satisfied**;
+3. its scope does **not consume outputs that are not yet available**; and
+4. the **Human Maintainer explicitly authorizes it**.
+
+**`ROADMAP ORDER ≠ UNIVERSAL PHASE GATE`** — and equally **`NO DEPENDENCY ≠ AUTOMATIC
+AUTHORIZATION`**: satisfying conditions 1 to 3 authorizes nothing, and condition 4 is
+always a separate Human-Maintainer act. Under this reading the following sequence is
+**legitimate** — a sequence, **not** an authorization of any step in it:
+
+```text
+Post-WP-022 Decision & Contract Integration Pass
+        ↓
+CDS-WP-023 — Semantic Status Visual Binding Contract (contract only)
+        ↓
+Prerequisite Decision Pass(es) — Routes A … D
+        ↓
+CDS-WP-020A — staged (S1 · S2 · S3, each separately authorized)
+        ↓
+CDS-WP-024
+        ↓
+CDS-WP-025
+```
+
+**CDS-WP-023 is not authorized by this reading.** After successful integration and
+review of that pass it **may be considered** as the next design-work-package
+authorization candidate — **`SEQUENCE ESTABLISHED ≠ SUCCESSOR AUTHORIZED`** and
+**`READY ≠ AUTHORIZED`**.
+
 ## Development arcs and work packages
 
 Each work package is mapped to the layer it primarily serves in the normative
@@ -355,7 +393,7 @@ normative source.
 | --- | --- | --- | --- |
 | CDS-WP-019 | Core Visual Foundation Architecture | 3 | **Closed** |
 | CDS-WP-020 | Reference and Semantic Token Foundation | 3 | **Closed** *(effective at the Human-Maintainer commit `3f37ecf…`)* |
-| CDS-WP-020A | Visual Token Source Authoring and Source Set Realization | 3 | Planned · not active · not authorized |
+| CDS-WP-020A | Visual Token Source Authoring and Source Set Realization | 3 | Planned · not active · not authorized — **staged contract S1 · S2 · S3** (P3); **no stage authorized** |
 | CDS-WP-021 | Adaptive Layout and Responsive Foundation | 3 | **Completed / Closed** — executed with `COMPLETE WITH NOTES`; **closure effective at the Human-Maintainer integration commit `01145b8a…`** |
 | CDS-WP-022 | Theme and Environmental Presentation Model | 3 | **Completed / Closed** — authorized separately and explicitly by the Human Maintainer; executed with `COMPLETE WITH NOTES` after first returning `DECISION_REQUIRED`; **`WP022-D1` … `WP022-D5` decided**, recorded as **`DEC-S-137`**, **`DEC-S-138`** and **`ADR-0007`**, all **`Accepted` and effective at `23914ecc48c1fb3cba5e3dab97a505589e821b6b`**; integrated; **closure effective at the Human-Maintainer exact-object integration commit `ab81e197…`**; **no successor, no value** |
 
@@ -413,6 +451,21 @@ context-sensitive value selection and says nothing about M2's composition. See
 re-derive it either**: it satisfies only the temporal trigger *"reached after
 CDS-WP-022"*, and M2's composition stays unadjudicated — see *Milestones*.
 
+**Superseded in part — M2 split and staged CDS-WP-020A (2026-09-29).** *(Prepared,
+not effective until the Human-Maintainer exact-object integration commit of the
+Post-WP-022 Decision & Contract Integration Pass.)* The paragraph above was true at
+its date and is **not rewritten**. The Human Maintainer has since **decided M2's
+composition** (**P1**): M2 is split, without renumbering, into **M2A — Visual
+Foundation Architecture Ready** and **M2B — Visual Sources Ready**, and `CDS-WP-020A`
+belongs to **M2B**, not M2A — see *Milestones*. **`F-020C-02` and `F-022-06` are
+resolved by that disposition.** The Human Maintainer has also changed the
+**`CDS-WP-020A` contract** (**P3**) to a **staged execution model** — **S1** structural
+and source-identity realization, **S2** reference source authoring per eligible
+family, **S3** semantic source and alias authoring — held in
+[Work Packages](../../project-system/WORK_PACKAGES.md). **It stays one work package,
+`Planned`, not active, and not authorized, and no stage is authorized**:
+**`STAGE DEFINED ≠ STAGE AUTHORIZED`**.
+
 ### Phase S — Semantic Presentation
 
 | ID | Title | Layer | Status |
@@ -420,6 +473,33 @@ CDS-WP-022"*, and M2's composition stays unadjudicated — see *Milestones*.
 | CDS-WP-023 | Semantic Status Visual Binding Contract | 3 → 4 | Planned · not active |
 | CDS-WP-024 | Semantic Validation and Render-Gate Architecture | 8 | Planned · not active |
 | CDS-WP-025 | Semantic Validation Negative-Fixture Expansion | 8 | Planned · not active |
+
+**CDS-WP-023 boundary — contract only.** *(Recorded 2026-09-29 by the Post-WP-022
+Decision & Contract Integration Pass; **prepared, not effective** until that pass's
+Human-Maintainer exact-object integration commit.)* **CDS-WP-023 is `Planned`, not
+active, and not authorized.** It is eligible **only** as the **Semantic Status Visual
+Binding Contract**, at the level of:
+
+- **role classes** a status-to-visual binding may draw on — the registered classes,
+  never new ones;
+- **semantic obligations** a binding must carry;
+- **binding rules**, including the rule that visual encoding is **redundant** to the
+  text-first status meaning and never a substitute for it;
+- **redundancy requirements** — no status meaning carried by one modality alone;
+- **fail-closed constraints** — a status that cannot be validated must not be rendered
+  as though it were;
+- **validation and rendering preconditions** handed to **CDS-WP-024** and
+  **CDS-WP-025**.
+
+**It must not author** concrete visual role identifiers, the concrete role vocabulary,
+visual values, Source Sets, Theme Context identifiers, Resolver instances, schemas,
+validators, renderer behaviour, or any byte of the Semantic Status source. **It may
+produce requirements and input for a later vocabulary decision; it may not admit the
+vocabulary itself** (DEC-S-134, DEC-S-140). **`STATUS MEANING ≠ VISUAL ENCODING`**,
+**`COLOUR ≠ STATUS`**, **`ICON ≠ STATUS`**, **`MOTION ≠ STATUS`** and **`ELEVATION ≠
+STATUS`**. Under the arc semantics above its `Depends on` entry — CDS-WP-022 — is
+satisfied, and **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`**: its execution requires a
+separate, explicit Human-Maintainer authorization, which **has not occurred**.
 
 ### Phase C — Component System
 
@@ -543,7 +623,8 @@ subject to its own gate.
 | Milestone | Name | Reached after | Grants |
 | --- | --- | --- | --- |
 | **M1** | Reconciled Baseline | CDS-WP-018 | Nothing |
-| **M2** | Visual Foundation Ready | CDS-WP-022 | Nothing |
+| **M2A** | Visual Foundation Architecture Ready | CDS-WP-022 — effective closure | Nothing |
+| **M2B** | Visual Sources Ready | The applicable **CDS-WP-020A** stages | Nothing |
 | **M3** | Semantic Presentation Ready | CDS-WP-025 | Nothing |
 | **M4** | Core Component Foundation Ready | CDS-WP-029 | Nothing |
 | **M5** | Evidence-Ready Component System | CDS-WP-031 | Nothing |
@@ -570,6 +651,29 @@ deferred**: whether `CDS-WP-020A` belongs before or inside M2's composition is
 direction. **`MILESTONE TEMPORAL TRIGGER SATISFIED ≠ MILESTONE COMPOSITION
 ADJUDICATED`**, **`MILESTONE REACHED ≠ MATURITY AWARDED`**, and **`M2 ≠ CDS-WP-020A
 AUTHORIZED`**.
+
+**M2 split into M2A and M2B — Human-Maintainer disposition P1 (2026-09-29).**
+*(Integrated by the Post-WP-022 Decision & Contract Integration Pass; **prepared, not
+effective** until that pass's Human-Maintainer exact-object integration commit.)* The
+paragraph above was true at its date — including that the table was not then rewritten
+— and is **preserved as that record**. The Human Maintainer has since decided M2's
+composition and **chose to split the former single milestone** rather than treat it as
+one. The table above now carries the split; **no later milestone is renumbered**.
+
+| Milestone | Meaning | Condition | State |
+| --- | --- | --- | --- |
+| **M2A — Visual Foundation Architecture Ready** | The architecture and governance foundation required through **CDS-WP-022** is complete. | Reached after the **effective closure of CDS-WP-022**. | **Condition met** at the Human-Maintainer exact-object integration commit `ab81e197374bb9f9479105b4261cb4485a491b2a`; **M2A is recorded as reached from the integration commit of this pass**. **Grants nothing.** |
+| **M2B — Visual Sources Ready** | The required concrete Visual Source Set and reference-source realization has been completed through the **applicable CDS-WP-020A stages**. | Reached after those stages complete. | **Not reached** — no CDS-WP-020A stage is authorized, and **visual Source Sets are 0**. **Grants nothing.** |
+
+**`ARCHITECTURE READY ≠ VISUAL SOURCES READY`**, **`M2A ≠ M2B`**, and **`MILESTONE
+REACHED ≠ AUTHORITY GRANTED`** — reaching M2A authorizes no work package, no stage,
+no value selection, and no maturity. **M3 — Semantic Presentation Ready is not
+renumbered and its row is unchanged.** M2A does not make M3 reachable, and **M2B ≠
+M3**. Where CDS-WP-024 or CDS-WP-025 validates visual sources, it consumes what
+CDS-WP-020A authored (see *Authoring and validation separation*), so that validation
+cannot precede the source realization M2B records; **M3's composition is not otherwise
+re-derived here**. **`F-020C-02` and `F-022-06` are resolved by this disposition** —
+see *Dispositions by the Post-WP-022 Decision & Contract Integration Pass* below.
 
 ## Standing gates on the forward path
 
@@ -1070,6 +1174,62 @@ authorized** from that integration onward.
 | --- | --- | --- |
 | **`F-022C-01`** | **POST-CLOSURE CURRENT-STATE RECONCILIATION.** The Human-Maintainer exact-object integration commit `ab81e197374bb9f9479105b4261cb4485a491b2a` (2026-09-28; parent `d8b5857e1eda2066e61fda47b694afbc466aa6d8`) integrated the independently reviewed CDS-WP-022 closure object — independent review **`PASS WITH NOTES`**, Nova final adjudication **`ACCEPTED`**, **0 material blockers** — and **completed the CDS-WP-022 closure**. Maintained current-state carriers still used the closure object's pre-integration wording — *recorded by this closure object with target lifecycle*, *this prepared Working Tree has no authority*, *closure state effective only at the Human-Maintainer exact-object integration commit of this independently reviewed closure object*, and the step-26 rows *Prepared* and *Precondition of step 26d* — although that commit had occurred. Those formulations were truthful **before** that commit; they are stale only as **live** current state. | **RESOLVED → the separately authorized CDS-WP-022 post-closure current-state reconciliation** (2026-09-28), on the **`F-020C-04`** precedent. The maintained carriers now record CDS-WP-022 as **`Completed` / `Closed`, closure effective at `ab81e197374bb9f9479105b4261cb4485a491b2a`**, with the execution result unchanged at **`COMPLETE WITH NOTES`**, and **no work package as currently authorized**. In the normative [Adaptive Layout and Responsive Foundation](../architecture/ADAPTIVE_LAYOUT_AND_RESPONSIVE_FOUNDATION.md), [Architecture Requirements Traceability](../architecture/ARCHITECTURE_REQUIREMENTS_TRACEABILITY.md) and [Visual Semantic Token Foundation](../architecture/VISUAL_SEMANTIC_TOKEN_FOUNDATION.md) **only the effectivity qualifier** of a closure-time note changed, the [Visual Foundation Theme Architecture](../architecture/VISUAL_FOUNDATION_THEME_ARCHITECTURE.md) needed **no** change, and **no architecture clause changed meaning**. It **records a completed Human-Maintainer act and performs none** — **no architecture, product, implementation, value-selection, or authorization act** — and it is **not a reopening of CDS-WP-022 and not a successor work package**. **Point-in-time and historical records were preserved**, not rewritten — including the dated 2026-09-15 supersession note and closure-time disposition above and the event-time CDS-WP-022 changelog entries: **`CURRENT STATE CHANGED ≠ HISTORICAL RECORD WAS WRONG`**. **No successor was activated**; **no Decision, ADR, or risk was added, changed, or removed** — the registers stay at **138**, **7** and **98**; **`F-022-01`, `F-022-04` and `F-022-06` stay open and routed**, and **`F-020C-02` and `WP021-D2` stay deferred**. **`F-022C-01` is a reconciliation finding — not a Decision, an ADR, a risk, a work package, or a successor authorization.** |
 
+### Dispositions by the Post-WP-022 Decision & Contract Integration Pass
+
+*(2026-09-29. The **Post-WP-022 Sequence & WP-020A Readiness Reconciliation** ended
+**`DECISION_REQUIRED`**; the Human Maintainer then authorized Nova's adjudicated
+recommendation as the dispositions **P1 … P5**, and this bounded pass integrates them.
+It is **not** a work package and occupies no work-package identifier. **Everything in
+this section is prepared, not effective, until the Human-Maintainer exact-object
+integration commit of this pass** — **`HUMAN DECISION INTEGRATED ≠ DESIGN EXECUTION
+AUTHORIZED`**. The findings tables above are **not rewritten**. **No new finding
+identifier is created** — **`OBSERVATION ≠ FINDING ID REQUIRED`**.)*
+
+| Disposition | Carrier | Result |
+| --- | --- | --- |
+| **P1** — M2 composition | *Milestones* above | **M2 split into M2A and M2B**, no renumbering. |
+| **P2** — role vocabulary and VP-6 existence semantics | **`DEC-S-140`** in the [Decision Index](../decisions/DECISION_INDEX.md) | Declaration is not materialization; SR-11 and the source-bound realization of VP-6 are fulfilled at the Source-Set materialization boundary; **RA-1 not redefined**. |
+| **P3** — CDS-WP-020A granularity | [Work Packages](../../project-system/WORK_PACKAGES.md) | **One work package, staged S1 · S2 · S3**; every stage separately authorized; **no stage authorized**. |
+| **P4** — open prerequisite routing | *Prerequisite decision routes* below | **Routes A … D** to separately authorized future Decision Passes; **`ROUTED ≠ DECIDED`**. |
+| **P5** — arc semantics and sequence | *Strategic development path* above; *CDS-WP-023 boundary* | **Dependency architecture, not a universal phase lock**; CDS-WP-023 bounded as contract only; **not authorized**. |
+
+| Finding | Disposition |
+| --- | --- |
+| **`F-020C-02`** | **RESOLVED BY HUMAN-MAINTAINER DISPOSITION P1** — **effective only at the Human-Maintainer exact-object integration commit of this pass**; until then it remains deferred. The question it deferred — whether `CDS-WP-020A` belongs before or inside M2 — is answered by the split: **`CDS-WP-020A` belongs to M2B**, and **M2A** records the architecture foundation through CDS-WP-022. |
+| **`F-022-06`** | **RESOLVED WITH `F-020C-02`**, on the same effectivity condition. It recorded only that `F-020C-02` had not been opportunistically closed; the Human Maintainer has now dispositioned it deliberately. |
+| **`F-022-01`** | **REMAINS OPEN / ROUTED — not decided.** Its routing is **sharpened** to **Route D** below; **no schema, validator, test, or fixture changes**, and **`MECHANISM DECIDED ≠ REPRESENTATION AVAILABLE`** still holds. |
+| **`F-022-04`** | **REMAINS OPEN / ROUTED — unchanged.** An evidence-honesty limitation that does not block this pass and **is not evidence for maturity**; **`COULD` ≠ `MUST`**. |
+
+**`WP021-D2` stays DEFERRED.** Its relevance stays bounded primarily to **VF-4**
+machine-readable and source realization; it is **not** a general blocker for
+CDS-WP-023 or for VF-1, VF-2, VF-3, VF-5 and VF-6 planning.
+
+#### Prerequisite decision routes
+
+**Each route names a destination, not an answer.** Every destination is a **separately
+authorized future Decision Pass**; **none is authorized**, and **this pass decides none
+of their substance** — **`ROUTED ≠ DECIDED`**. The route letters are routing labels in
+this section, **not governance identifiers**.
+
+| Route | Open question | Destination | Gates |
+| --- | --- | --- | --- |
+| **A** | **Per-family topology parameters** — anchor declaration, progression-rule kind, step count, extension behaviour and exclusions, for each family in `DEC-S-133` scope (VF-2, VF-3, VF-5, VF-6) | A separately authorized **topology Decision Pass** under `DEC-S-133` and ST-1 … ST-7 | **VP-3**; **CDS-WP-020A S2** per family |
+| **B** | **VF-1 tonal topology** | A separately authorized **VF-1 tonal-topology Decision Pass**, under `DEC-S-128` and `DEC-S-133` clause 11, taking account of the **OD-1 `hex`** residual and the effective Theme Resolution Contexts | **VP-3 for VF-1**; **CDS-WP-020A S2 for VF-1** |
+| **C** | **The concrete Core visual-role vocabulary** | A separately authorized **role-vocabulary Decision Pass** under `DEC-S-134` and `DEC-S-140`; **RA-1 unchanged** | **VP-6**; **CDS-WP-020A S3**. **`CDS-WP-020A` may not invent or recommend a vocabulary identifier**, and CDS-WP-023 may supply requirements but **not** admit a vocabulary |
+| **D** | **`F-022-01`** — representation and schema ownership, and the required mechanism, for context-conditional semantic realization | A separately authorized **Decision Pass** that determines ownership among the candidates — **CDS-WP-020A** authoring representation, **CDS-WP-024** validation representation, a shared schema or profile authority, or an architectural Decision / ADR **only if genuinely required** — **none is chosen here** | **CDS-WP-020A S3** for any context-conditional realization |
+
+**No topology, tonal model, role name, vocabulary entry, schema, or ownership
+assignment is created by this table**, and **no route may be answered by a work
+package that has not been separately authorized to answer it**.
+
+**Validator environment.** The pinned validator stack remains **unavailable** in the
+execution environment — the preceding reconciliation recorded `jsonschema`,
+`rfc8785`, `referencing`, `rpds-py`, `attrs` and `pytest` as missing (`F-020-07`).
+**Nothing was installed and no virtual environment was created.** The absence **does
+not block** this governance integration, Decision writing, roadmap reconciliation, or
+**CDS-WP-023** contract work; it **does** remain a gate before every **CDS-WP-020A**
+stage, and every validation stage, that authors or validates machine-readable sources.
+
 ## Immediate next step
 
 **No next work package is authorized, and no step in this section authorizes one.**
@@ -1084,6 +1244,18 @@ active, and not authorized** — **`CLOSED ≠ SUCCESSOR AUTHORIZED`**, **`SEQUE
 NEXT ≠ AUTHORIZED`** and **`THEME GATE SATISFIED ≠ CDS-WP-020A AUTHORIZED`** — and
 any next work package begins only on an explicit Nova prompt **and** a separate
 Human-Maintainer authorization.
+
+**Next step (2026-09-29): review and integration of the Post-WP-022 Decision &
+Contract Integration Pass.** Its Working Tree object — the M2A / M2B split, the prepared
+`DEC-S-140`, the staged `CDS-WP-020A` contract, Routes A … D, the arc semantics and the
+CDS-WP-023 boundary — needs a **fresh independent review** (reviewer ≠ executor), **Nova
+adjudication**, and the **Human-Maintainer exact-object integration commit**, at which
+`DEC-S-140` and the dispositions become effective. **After successful integration and
+review, CDS-WP-023 may be considered as the next design-work-package authorization
+candidate** — **contract only**, and **only by a separate, explicit Human-Maintainer
+authorization**. **`CONTRACT READY ≠ WORK AUTHORIZED`** and **`SEQUENCE ESTABLISHED ≠
+SUCCESSOR AUTHORIZED`**; until that authorization, **no design work package is
+authorized**, and **no CDS-WP-020A stage is authorized**.
 
 **The step this section previously named has been completed:** the **closure of
 CDS-WP-022** — a separate, explicit Human-Maintainer act not implied by the

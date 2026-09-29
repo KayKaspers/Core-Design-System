@@ -219,6 +219,16 @@ Controlled work-package roadmap for the Core Design System (CDS).
   unsatisfied**: the OD-5 residuals, the per-family topology parameters, VF-1 tonal
   topology, the concrete role vocabulary, **VP-3, VP-5, VP-6 and VP-7**, and the
   pinned validator stack. **Authorizing one work package activates no other.**
+  **Sequence update (2026-09-29, Human-Maintainer dispositions P3 and P5; prepared, not
+  effective until the Human-Maintainer exact-object integration commit of the
+  Post-WP-022 Decision & Contract Integration Pass).** `CDS-WP-020A` is now a **staged**
+  work package — **S1 · S2 · S3**, each separately authorized — whose stages follow the
+  prerequisite Decision Passes (**Routes A … D**). The roadmap arcs are read as a
+  **dependency architecture, not a universal phase lock**, so **CDS-WP-023 — contract
+  only — may be considered as the next design-work-package authorization candidate
+  after successful integration and review of that pass**. **It is not authorized**:
+  **`SEQUENCE ESTABLISHED ≠ SUCCESSOR AUTHORIZED`**, **`NO DEPENDENCY ≠ AUTOMATIC
+  AUTHORIZATION`**, and **`READY ≠ AUTHORIZED`**.
 - **Forward roadmap:** CDS-WP-017 … CDS-WP-053 are recorded in the
   [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
   **`CDS-WP-020A` and CDS-WP-023 … CDS-WP-053 are `Planned` only**, **CDS-WP-021 is
@@ -274,10 +284,10 @@ separate, explicit Human-Maintainer authorization**.
 | CDS-WP-018 | Deferred Governance and Repository Hygiene Reconciliation | Completed | CDS-WP-017 |
 | CDS-WP-019 | Core Visual Foundation Architecture | Completed | CDS-WP-018 |
 | CDS-WP-020 | Reference and Semantic Token Foundation | Completed | CDS-WP-019 |
-| CDS-WP-020A | Visual Token Source Authoring and Source Set Realization | Planned | CDS-WP-020 + OD-4, OD-5, OD-6 decided — **OD-4 answered, OD-5 only partially, OD-6A policy only**; **VP-3, VP-5, VP-6, VP-7 unsatisfied**; pinned validator stack absent |
+| CDS-WP-020A | Visual Token Source Authoring and Source Set Realization | Planned — **staged S1 · S2 · S3; no stage authorized** | CDS-WP-020 + OD-4, OD-5, OD-6 decided — **OD-4 answered, OD-5 only partially, OD-6A policy only**; **VP-3, VP-5, VP-6, VP-7 unsatisfied**; pinned validator stack absent; **per-stage gates and Routes A … D** — see the description below |
 | CDS-WP-021 | Adaptive Layout and Responsive Foundation | **Completed / Closed** — executed with `COMPLETE WITH NOTES`; **closure effective at the Human-Maintainer exact-object integration commit `01145b8a…`** | CDS-WP-020 |
 | CDS-WP-022 | Theme and Environmental Presentation Model | **Completed / Closed** — executed with `COMPLETE WITH NOTES` after first returning `DECISION_REQUIRED`; **`WP022-D1` … `WP022-D5` decided**, recorded as **`DEC-S-137`**, **`DEC-S-138`** and **`ADR-0007`**, all **`Accepted` and effective at `23914ecc…`**; integrated; **closure effective at the Human-Maintainer exact-object integration commit `ab81e197…`** | CDS-WP-021 |
-| CDS-WP-023 | Semantic Status Visual Binding Contract | Planned | CDS-WP-022 |
+| CDS-WP-023 | Semantic Status Visual Binding Contract | Planned — **contract only**; not authorized | CDS-WP-022 |
 | CDS-WP-024 | Semantic Validation and Render-Gate Architecture | Planned | CDS-WP-023 |
 | CDS-WP-025 | Semantic Validation Negative-Fixture Expansion | Planned | CDS-WP-024 |
 | CDS-WP-026 | Universal Component Contract Model | Planned | CDS-WP-025 |
@@ -1065,6 +1075,42 @@ the [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPM
 - The pinned validator stack available in the execution environment (`F-020-07`).
 - An explicit Nova prompt **and** separate Human-Maintainer authorization.
 
+**Staged execution contract — Human-Maintainer disposition P3 (2026-09-29).**
+*(Integrated by the Post-WP-022 Decision & Contract Integration Pass; **prepared, not
+effective** until that pass's Human-Maintainer exact-object integration commit.)*
+**`CDS-WP-020A` stays one work package with one identifier** — **no `CDS-WP-020B`** and
+no replacement work package is created. Its execution is divided into **three stages**,
+which are **logical authorization boundaries inside CDS-WP-020A, not separate work
+packages**. The prerequisites above are refined **per stage** below; where a stage names
+a gate, that gate must hold **for that stage** before it may be authorized.
+
+| Stage | Owns | Must not include | Gates before the stage may be authorized |
+| --- | --- | --- | --- |
+| **S1 — Structural / Source Identity Realization** | Where valid: Source Set structural realization; `sourceSetId`; `sourceRevision`; provenance; manifest and source topology; family × token-flow-layer identity structures; realization of the **already-decided** identifier grammar (`DEC-S-131`, `DEC-S-132`) | Speculative values; invented roles; **placeholder values solely to satisfy VP-5**; semantic aliases; context-conditional semantic realization | The identity decisions it realizes are effective; the pinned authoring and validation environment is available; **separate explicit Human-Maintainer authorization of S1** |
+| **S2 — Reference Source Authoring** | Concrete **reference-token** source authoring, **per eligible family** | Semantic roles or aliases; any family whose own gates are open | **Per family, independently:** VP-3 (**Route A**, and **Route B** for VF-1); the family's topology decisions; identifier grammar (VP-4); source identity (VP-5); representation rules (VP-2); role and vocabulary prerequisites **where VP-6 requires them** (**Route C**, `DEC-S-140`); **VP-7** authorization; the pinned environment. **`FAMILY A READY ≠ FAMILY B READY`** — no family inherits readiness from another |
+| **S3 — Semantic Source / Alias Authoring** | Authorized semantic visual-role and alias source realization | Any vocabulary it would have to invent; any default alias (TS-1) | At least: an **authorized concrete role vocabulary** (**Route C**); the applicable **reference sources** from S2; **`DEC-S-140` effective**; **SR-11 satisfiable** and **VP-6 satisfiable**; **VP-7** authorization; **Theme Resolution Context authority** (`DEC-S-137`, `DEC-S-138`); **resolution of the relevant `F-022-01` representation issue** (**Route D**); the required machine-readable environment |
+
+**No empty Source Set is manufactured to create readiness.** S1 does not require
+creating meaningless empty Source Sets merely to satisfy a prerequisite. **Where a valid
+Source Set instance requires content, S1 may be executed together with the first valid
+content-bearing stage** rather than producing empty artifacts; in that case the S1
+identity statements (`sourceSetId`, topology, `sourceRevision` identity, provenance) are
+fixed and recorded before any value is authored into that revision. **This contract
+does not reinterpret VP-5**: if, at the authorization of a combined S1 and S2 stage,
+VP-5 cannot be shown satisfiable without an empty Source Set, that is escalated to the
+Human Maintainer before the stage is authorized — never resolved by a placeholder.
+
+**S3 must not invent vocabulary.** **`AUTHOR ≠ VALIDATE`** holds in every stage:
+`CDS-WP-020A` authors sources, and **CDS-WP-024** validates them.
+
+**Stage authority.** **Every stage requires its own separate, explicit Human-Maintainer
+authorization.** Updating this contract authorizes **no** stage: **`WP REGISTERED ≠
+STAGE AUTHORIZED`**, **`STAGE DEFINED ≠ STAGE AUTHORIZED`**, **`S1 READY ≠ S1
+AUTHORIZED`**, **`S1 COMPLETE ≠ S2 AUTHORIZED`**, and **`S2 COMPLETE ≠ S3
+AUTHORIZED`**. **M2B — Visual Sources Ready** is reached only after the applicable
+stages complete, and **grants nothing** (see the
+[Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md)).
+
 **CDS-WP-020A is `Planned`, not active, and not authorized.** It has created no
 visual value, no identifier, no token source file, no manifest, no resolver, no
 schema, no validator rule, no test, and no fixture; it holds no evidence, no
@@ -1302,6 +1348,40 @@ Foundation Ready** grants **nothing**: the closure satisfies its temporal trigge
 *"after CDS-WP-022"* and **adjudicates nothing about its composition** —
 **`F-020C-02` remains deferred** (see the
 [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md)).
+*(Point-in-time at the CDS-WP-022 closure. **Superseded in part** by Human-Maintainer
+disposition **P1**, integrated by the Post-WP-022 Decision & Contract Integration Pass
+and **prepared, not effective** until that pass's integration commit: M2 is split into
+**M2A — Visual Foundation Architecture Ready** and **M2B — Visual Sources Ready**, and
+**`F-020C-02` and `F-022-06` are resolved** by that split.)*
+
+### CDS-WP-023 — Semantic Status Visual Binding Contract
+
+**Status:** Planned *(not active, not authorized, work not started)*
+
+**Boundary — contract only** *(recorded 2026-09-29 by the Post-WP-022 Decision &
+Contract Integration Pass; **prepared, not effective** until that pass's
+Human-Maintainer exact-object integration commit)*. CDS-WP-023 is eligible **only** as
+the **Semantic Status Visual Binding Contract**, at the level of **role classes**,
+**semantic obligations**, **binding rules**, **redundancy requirements**, **fail-closed
+constraints**, and **validation and rendering preconditions** for CDS-WP-024 and
+CDS-WP-025. **It must not author** concrete visual role identifiers, the concrete role
+vocabulary, visual values, Source Sets, Theme Context identifiers, Resolver instances,
+schemas, validators, renderer behaviour, or any byte of the Semantic Status source. It
+may produce requirements and input for a later vocabulary decision (**Route C**); **it
+may not admit the vocabulary itself**. **`STATUS MEANING ≠ VISUAL ENCODING`**,
+**`COLOUR ≠ STATUS`**, **`ICON ≠ STATUS`**, **`MOTION ≠ STATUS`**, **`ELEVATION ≠
+STATUS`**.
+
+**Sequence.** Under the dependency reading of the roadmap arcs (**P5**) CDS-WP-023 does
+not depend on `CDS-WP-020A`, and its `Depends on` entry — CDS-WP-022 — is satisfied. **It
+may therefore be considered as the next design-work-package authorization candidate
+after successful integration and review of that pass — and nothing more.**
+**`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`**, **`CONTRACT READY ≠ WORK AUTHORIZED`**,
+and its execution requires a **separate, explicit Human-Maintainer authorization**,
+which **has not occurred**. The missing pinned validator stack does **not** block its
+contract work. Full boundary: the
+[Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md),
+*Phase S*.
 
 ## Roadmap evolution
 
@@ -1313,6 +1393,13 @@ Maintainer approval; work packages are not added ad hoc during execution.
 The insertion was a controlled extension under this section: **Nova planning with
 Human-Maintainer approval**, adjudicating **`FR-N-03`**. It **renumbered nothing**,
 occupied **no** number, activated **no** work package, and granted **no** authority.
+
+**The Post-WP-022 Decision & Contract Integration Pass staged `CDS-WP-020A`
+(2026-09-29).** A controlled refinement under this section, integrating the
+Human-Maintainer dispositions **P1 … P5**: `CDS-WP-020A` keeps its single identifier and
+gains **stages S1 · S2 · S3**; **no work package is added, renumbered, or activated**,
+**no stage is authorized**, and the refinement is **prepared, not effective** until that
+pass's Human-Maintainer exact-object integration commit.
 
 **CDS-WP-017 extended the sequence to CDS-WP-053 as a planning record only.** The
 extension activated nothing: exactly one work package is authorized at a time, and

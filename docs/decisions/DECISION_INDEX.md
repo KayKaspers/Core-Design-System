@@ -16,7 +16,10 @@ authorized work packages.
   Human-Maintainer exact-object integration commit of CDS-WP-001B,
   `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`** (the effective count was **138** until that commit) — see the
   CDS-WP-001B bullet below. **`PREPARED DECISION ≠ EFFECTIVE DECISION`** held until
-  that commit.
+  that commit. **`DEC-S-140` is prepared by the Post-WP-022 Decision & Contract
+  Integration Pass and is NOT yet effective**: the effective count becomes **140**
+  only at that pass's Human-Maintainer exact-object integration commit — see the
+  `DEC-S-140` bullet below.
 - **Effectivity.** **DEC-S-128 … DEC-S-131 are effective.** The condition their
   entries stated — the Human-Maintainer exact-byte integration commit of the
   CDS-WP-020 Decision Integration Pass, following a Fresh Independent Review and
@@ -216,6 +219,30 @@ authorized work packages.
   not edited**, and statements that "no work package is currently authorized" refer to
   the **design-work-package** sequence as at the CDS-WP-022 closure — CDS-WP-001B owns
   no design scope.
+- **`DEC-S-140` is prepared and is NOT yet effective.** *(Maintained current carrier,
+  added 2026-09-29 by the **Post-WP-022 Decision & Contract Integration Pass** — a
+  bounded governance integration of the Human-Maintainer dispositions **P1 … P5**; it
+  is **not** a work package and occupies no work-package identifier.)* **DEC-S-140 —
+  Role Vocabulary Declaration Is Not Role Token Materialization** records **P2** only:
+  a normative vocabulary decision may declare and admit a visual role without creating
+  a machine-readable role token instance, and **SR-11** and the concrete source-bound
+  realization of **VP-6** are fulfilled at the **Source-Set materialization boundary**.
+  It becomes effective **only** at the Human-Maintainer exact-object integration commit
+  of that pass, following an independent review (reviewer ≠ executor) and Nova
+  adjudication; **until then the uncommitted Working Tree creates no authority** —
+  **`PREPARED DECISION ≠ EFFECTIVE DECISION`**. **The effective register holds
+  `DEC-S-001 … DEC-S-139` (139 decisions) until that commit and
+  `DEC-S-001 … DEC-S-140` (140 decisions) from it; the ADR register stays at 7 and the
+  risk register at 98 throughout — no `ADR-0008`, no `RISK-099`.** **No existing
+  Decision entry is edited**: **`DEC-S-133` and `DEC-S-134` are unchanged in byte and
+  in substance**, and DEC-S-140 is an interpretation recorded beside them, not an
+  amendment of them. It selects **no** value, creates **no** role, role identifier,
+  vocabulary, Source Set or alias, **does not redefine RA-1** — **`WCAG OBLIGATION ≠
+  CROSS-CONSUMER EVIDENCE`** — and **authorizes no work package**: **`CDS-WP-020A`** and
+  **CDS-WP-023 … CDS-WP-053** remain `Planned`, not active, and not authorized.
+  **VP-6 stays `UNSATISFIED` for every family**, because no vocabulary decision exists.
+  **Statements above and inside earlier entries that "no `DEC-S-140`" exists are
+  point-in-time statements about the milestones they describe and are not edited.**
 - Decision record format: index entries, plus ADR files where a decision warrants an
   Architecture Decision Record. **Effective ADR range: ADR-0001 … ADR-0007
   (7 ADRs)**.
@@ -276,6 +303,7 @@ authorized work packages.
 | Adaptive spatial context and responsive architecture decision | DEC-S-136 | CDS-WP-021 | The declared **Adaptation Container** as the primary responsive Layer-3 reference frame — technology-neutral, never a device class or viewport identity, and satisfiable by a root or application context; **named discrete available-space ranges** as the Core Layer-3 response vocabulary, with `RANGE ≠ BEHAVIOUR`; continuous transformation **permitted downstream where separately authorized** but **not Core range identity**, requiring no new `$type` and altering DEC-S-130 in no way; fixed-geometry channels governed by **their own channel geometry** rather than forced responsive ranges; and **`SPATIAL CONTEXT ≠ THEME RESOLUTION CONTEXT`**, with any composition reserved to CDS-WP-022 (ADR-0006 for DEC-S-136 only). **Effective at the Human-Maintainer integration commit `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`.** It selects **no** value, creates **no** range name, identifier, VF-4 root or source set, defers **`WP021-D2`**, and grants **no** maturity. |
 | Theme resolution, context-evidence and environmental selection decision | DEC-S-137 … DEC-S-138 | CDS-WP-022 | Theme/context-sensitive binding represented through the existing **Resolver / Composition** architecture over the existing Source-Set graph, with **no per-context Source Set**, **no context or theme segment in any identifier**, the **Source Set remaining the sole independently evaluable maturity unit**, and context-specific evidence staying bound to `(sourceSetId, sourceRevision)` while recording the **Resolver / Composition revision** and the **Theme Resolution Context** as exact evidence inputs; **Light and Dark** as the initial supported Core Theme Resolution Contexts, **equal peers with no default**; **forced colours and platform high contrast as an environmental accessibility condition and not a Core context**; **explicit viewer choice over inferred environment preference**, with mandatory platform accessibility conditions outside Theme precedence and always binding; and **no default or fallback Theme, with missing, unsupported and unresolved-conflict resolution failing closed** (**ADR-0007** for **DEC-S-137 only**). **Accepted and effective at the Human-Maintainer exact-object integration commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b`.** They select **no** value, create **no** identifier, Source Set, or resolver instance, and grant **no** maturity. |
 | Framework process-baseline and Skill supply-chain decision | DEC-S-139 | CDS-WP-001B | NDF v1.1.0 as the CDS **development-process** baseline only — execution contracts, work-package execution, process verification and evidence, session and handoff rules, Skill routing and Human-Maintainer gates — with **no** authority over CDS product or domain authority; NDF normative process rules as a **floor** that CDS may tighten and never silently relax; exactly four support files imported byte-identically and **not** independent CDS policy or architecture; one integrity lock (SHA-256, raw committed bytes, lowercase hex) binding the pack and snapshot to one source release and commit; and NDF release/version language that is **NDF-only** and cannot satisfy or alter DEC-S-037. **Prepared; effective only at the Human-Maintainer exact-object integration commit of CDS-WP-001B.** It selects **no** value, creates **no** identifier, and grants **no** maturity, evidence, claim, conformance, release, or publication authority. |
+| Visual role vocabulary and materialization-boundary decision | DEC-S-140 | — (Post-WP-022 Decision & Contract Integration Pass) | A normative **vocabulary decision** may declare and admit a visual role — identifier, purpose, obligations, **SR-1 … SR-10 and SR-12**, and evidence and admission conditions — **without** creating a machine-readable role token instance: **`ROLE VOCABULARY DECLARED ≠ ROLE TOKEN INSTANCE CREATED`**, **`DECISION ≠ SOURCE-SET MATERIALIZATION`**; a concrete visual-role artifact is materially instantiated **only** when authored into an authorized Visual Source Set revision, where **SR-11** and the concrete source-bound realization of **VP-6** are fulfilled; no prerequisite is read to require its own output (the `DEC-S-133` precedent); **RA-1, RA-3, SR-11, VP-6, evidence binding, Source Set authority and fail-closed behaviour are not weakened**, and **`WCAG OBLIGATION ≠ CROSS-CONSUMER EVIDENCE`**. **Prepared; effective only at the Human-Maintainer exact-object integration commit of that pass.** It selects **no** value, creates **no** role, role identifier, vocabulary or Source Set, and grants **no** maturity. |
 
 None of these types is an implementation decision. Logical architecture decisions
 define structure, responsibility, and flow — they select no technology, format,
@@ -6653,3 +6681,188 @@ authorized** — and it adds **no** ADR and **no** risk entry: ADRs stay at **7*
 risk register stays at **98**, with **no `ADR-0008`, no `RISK-099` and no
 `DEC-S-140`.** **VF-1 … VF-9 stay `Proposed`; visual values stay 0; visual Source
 Sets stay 0; Stable stays `No`; publication stays `Private Development`.**
+
+---
+
+## DEC-S-140 — Role Vocabulary Declaration Is Not Role Token Materialization; SR-11 and VP-6 Are Fulfilled at the Source-Set Materialization Boundary
+
+- **Status:** **Prepared — not effective.** **DEC-S-140 becomes effective only at the
+  Human-Maintainer exact-object integration commit of the Post-WP-022 Decision &
+  Contract Integration Pass**, which must follow an independent review (reviewer ≠
+  executor, a fresh session) and Nova adjudication. Until that commit this entry is
+  **uncommitted executor output** prepared under an explicit Human-Maintainer
+  authorization and it changes **no** authoritative CDS state.
+  **`PREPARED DECISION ≠ EFFECTIVE DECISION`**, **`EXECUTED ≠ ACCEPTED`**, **`PASS ≠
+  INTEGRATED`**, and **a Nova recommendation is not an approval.** **The effective
+  register holds 139 decisions until that commit and holds 140 from it**; ADRs stay at
+  7 and risks at 98.
+- **Date:** 2026-09-29
+- **Type:** Visual role vocabulary and materialization-boundary decision
+- **Work package:** — none. Prepared by the **Post-WP-022 Decision & Contract
+  Integration Pass**, a bounded governance integration that is **not** a work package
+  and occupies no work-package identifier. **This decision authorizes no work package
+  and no work-package stage.**
+- **Human-Maintainer authorization:** 2026-09-29, authorizing Nova's adjudicated
+  recommendation on the `DECISION_REQUIRED` result of the Post-WP-022 Sequence &
+  WP-020A Readiness Reconciliation — disposition **P2** (role vocabulary and VP-6
+  existence semantics), and the allocation of exactly this identifier
+- **Architecture record:** **none.** **No ADR is created for this decision.** It is an
+  interpretation of a semantic and accessibility-obligation gate, not representation or
+  identity architecture — the same boundary **DEC-S-134** and **DEC-S-129** hold.
+
+### Decision
+
+#### A — Two acts, two boundaries
+
+1. **Declaring a role and materializing a role are two distinct acts.** A **normative
+   vocabulary decision** is a separately authorized Decision, taken under **DEC-S-134**
+   (RA-1 … RA-5), that declares and admits a CDS Core visual semantic role. **Source-Set
+   materialization** is the authoring of a concrete machine-readable role token instance
+   into an **authorized Visual Source Set revision** — a declared `sourceSetId` at an
+   immutable `sourceRevision` (DEC-S-131) — by a separately authorized authoring stage.
+
+2. **Binding invariants: `ROLE VOCABULARY DECLARED ≠ ROLE TOKEN INSTANCE CREATED`** and
+   **`DECISION ≠ SOURCE-SET MATERIALIZATION`.**
+
+3. **A normative vocabulary decision may define and admit** a role's **identifier**, its
+   **semantic purpose**, its **required obligations**, its declarations under
+   **SR-1 … SR-10** and **SR-12**, and its **required evidence and admission
+   conditions** — **without thereby creating** a machine-readable role or token
+   instance, an alias, a Source Set, a `sourceRevision`, or a value.
+
+4. **A concrete visual-role artifact is materially instantiated only when it is
+   authored into an authorized Visual Source Set revision.** No Decision, register,
+   roadmap, work-package contract, fixture, example, research note, design-tool
+   representation, or generated artifact materializes a role.
+
+#### B — SR-11, VP-6 and RA-3 at the materialization boundary
+
+5. **SR-11 is fulfilled at the materialization boundary.** SR-11 declares a role's
+   **resolution target** — the reference primitive it aliases, and in which contexts. A
+   resolution target is a relation to a concrete primitive inside a Source Set revision;
+   it cannot exist before that primitive exists. **A role token instance declares its
+   resolution target in the same authorized materialization in which it is authored.**
+   A vocabulary decision records that SR-11 is owed and **does not discharge it**, and it
+   names **no** concrete primitive and **no** value.
+
+6. **The concrete source-bound realization of VP-6 is fulfilled at the same boundary.**
+   VP-6 requires that every role a value will serve declares its obligations. **A role
+   admitted by an effective vocabulary decision with complete SR-1 … SR-10 and SR-12
+   declarations is a role that has declared those obligations**, so a reference value
+   can be evaluated against something; **VP-6 is realized in full — including SR-11 —
+   only when the role token instance and its resolution target are authored into an
+   authorized Source Set revision.** **VP-6 is not satisfied by a vocabulary decision
+   alone**, and **a policy is still not an authored role** (DEC-S-134 clause 13).
+
+7. **No prerequisite is read so that it requires its own output.** VP-6, SR-11 and RA-3
+   must **not** be read so that *a role may only be decided after its primitive exists*
+   while *a primitive may only be created after its role is decided*. **A prerequisite
+   is not interpreted in a way that requires the output in order to permit creation of
+   that output** — the precedent **DEC-S-133** clause 6 set for VP-3. That reading would
+   make every visual role, and with it every semantic visual value, permanently
+   unreachable, and it is **rejected**.
+
+8. **RA-3 is preserved, not weakened, and binds at both boundaries.** **A role exists as
+   a machine-readable role only as a materialized role token instance**, and **every such
+   instance satisfies SR-1 … SR-12 in full — SR-11 included — from the moment it
+   exists**; an instance lacking any of them is **inadmissible, not provisional**, and
+   **fails closed** (AL-4). **A role admitted by a vocabulary decision carries
+   SR-1 … SR-10 and SR-12 in full from the moment of admission**; a vocabulary entry
+   lacking any of them is **inadmissible**. **Accessibility obligations therefore attach
+   earlier than before — at declaration — and never later.**
+
+#### C — What is not changed
+
+9. **RA-1 is unchanged, and it is not redefined.** *Cross-consumer need* stays **need
+   demonstrated by more than one consumer** wherever that criterion is invoked. **A
+   CDS-only requirement is not a cross-consumer need, and a WCAG or other
+   standards/accessibility obligation is not a consumer**: **`WCAG OBLIGATION ≠
+   CROSS-CONSUMER EVIDENCE`**. Whether a standards or accessibility obligation may
+   become a **distinct future admission basis** is **not decided** here and requires its
+   own separately authorized Decision.
+
+10. **RA-2, RA-4 and RA-5 are unchanged.** Classification precedes design; the role
+    classification stays closed; the concrete role vocabulary stays **OPEN**; and
+    **`CDS-WP-020A` may not invent, adopt, reserve, or recommend a CDS Core role
+    identifier** — it may materialize **only** roles admitted by an effective vocabulary
+    decision.
+
+11. **Evidence binding and Source Set authority are unchanged.** Evidence stays bound to
+    (`sourceSetId`, `sourceRevision`) (DEC-S-126, DEC-S-131), with context evidence
+    recording its inputs under **DEC-S-137** (TM-7 … TM-10); **the Source Set remains the
+    sole independently evaluable maturity unit**. **A vocabulary decision is not
+    evidence, admits no evidence, and carries no maturity.**
+
+12. **Fail-closed behaviour is unchanged.** A role token instance whose role is not
+    admitted by an effective vocabulary decision, whose SR-11 target is missing or
+    unresolved, or whose alias fails type compatibility **fails closed** (AL-3, AL-4,
+    DEC-S-078). **TS-1** still binds — **no semantic visual role carries a default
+    alias** (DEC-S-135, DEC-S-138 part E) — and **no context-conditional SR-11
+    realization may be authored while `F-022-01` is unresolved** under its own
+    authorization.
+
+13. **This decision does not decide:** any role name; the concrete role vocabulary; any
+    per-family topology or VF-1 tonal topology; any value; any Source Set content; any
+    Theme alias; the `F-022-01` representation or schema ownership; or the authorization
+    of any work package or work-package stage. **VP-6 remains `UNSATISFIED` for every
+    family**, because **no vocabulary decision exists**; **VP-3, VP-5 and VP-7 are
+    unchanged and `UNSATISFIED`.**
+
+### Rationale
+
+Read together, RA-3 (*every admitted role satisfies SR-1 … SR-12 from the moment it
+exists*), SR-11 (*its resolution target — the reference primitive it aliases*) and VP-6
+(*every role the value will serve declares its obligations*) could be read so that a role
+could be admitted only once its primitive exists, while the primitive could be selected
+only once its role has declared its obligations. Under that reading neither could ever be
+created. The Post-WP-022 Sequence & WP-020A Readiness Reconciliation identified this as a
+self-blocking interpretation and escalated it.
+
+The repository had already met this shape once. **DEC-S-133** clause 6 found that VP-3's
+word *base*, read as a magnitude, would require a value in order to permit a value, and
+fixed the structural reading instead. The same move applies here, and it is **narrower
+than a relaxation**: every obligation except the one that is *by nature* a relation to a
+concrete primitive attaches at declaration — earlier than a materialization-only reading
+would attach it — and the source-bound obligation attaches, in full and fail-closed, the
+moment a role token exists at all.
+
+Clause 9 exists because the natural shortcut out of the cycle — admitting a role on the
+strength of a WCAG obligation or a CDS-internal requirement instead of demonstrated
+cross-consumer need — would silently rewrite **RA-1** and re-open exactly the
+unevidenced-structure risk **DEC-S-134** closed (**RISK-021**, **RISK-026**,
+**F-019-06**, **F-020-06**). The Human Maintainer declined that shortcut explicitly.
+
+### Consequences
+
+- The
+  [Visual Semantic Token Foundation](../architecture/VISUAL_SEMANTIC_TOKEN_FOUNDATION.md)
+  and the
+  [Visual Token Value Selection Rules](../governance/VISUAL_TOKEN_VALUE_SELECTION_RULES.md)
+  each carry an **additive** note recording this reading beside **RA-3** and **VP-6**;
+  **RA-1 … RA-5, SR-1 … SR-12 and VP-1 … VP-7 are unchanged in text**.
+- The staged **`CDS-WP-020A`** contract in
+  [Work Packages](../../project-system/WORK_PACKAGES.md) requires this decision to be
+  **effective** before its semantic-authoring stage **S3** may be authorized.
+- The concrete Core visual-role vocabulary stays **OPEN** and is routed to a separately
+  authorized future Decision Pass taken under DEC-S-134 and this decision — see the
+  **non-normative**
+  [Visual Token Foundation Open Decisions](../roadmap/VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md)
+  register.
+- **No schema, validator, test, or fixture is changed**, and **no existing Decision entry
+  is edited** — **DEC-S-133 and DEC-S-134 are unchanged in byte and in substance**.
+
+### Boundary
+
+This decision fixes **the boundary between declaring and materializing a role** — not a
+role, not a vocabulary, and not an authorization. It selects no colour, typography,
+spacing, shape, surface, breakpoint, or theme value; creates no role, role identifier,
+vocabulary entry, primitive, alias, Source Set, `sourceSetId`, `sourceRevision`, token
+manifest, resolver instance, schema, validator rule, test, fixture, generated output,
+Product Profile, or extension point; and awards no maturity, Candidate, Stable, evidence,
+admission, claim, conformance, pilot, licence, release, tag, or publication authority.
+**It activates no work package and no work-package stage** — **`CDS-WP-020A` and
+CDS-WP-023 … CDS-WP-053 remain `Planned`, not active, and not authorized** — and it adds
+**no** ADR and **no** risk entry: ADRs stay at **7** and the risk register at **98**,
+with **no `ADR-0008` and no `RISK-099`**. **VF-1 … VF-9 stay `Proposed`; visual values
+stay 0; visual Source Sets stay 0; Stable stays `No`; publication stays `Private
+Development`.**

@@ -21,6 +21,12 @@
   no role, no role identifier, no binding and no value**, and SR-1 … SR-12,
   SN-1 … SN-9, PN-1 … PN-5, TC-1 … TC-7, SS-1 … SS-8, IS-1 … IS-4, the alias model,
   the closed role classification, and the focus role set are unchanged.
+- **Amended by:** Post-WP-022 Decision & Contract Integration Pass, 2026-09-29 — **one
+  additive note** under *Role admission*, recording **DEC-S-140** (declaration versus
+  materialization). **Prepared, not effective** until the Human-Maintainer exact-object
+  integration commit of that pass. **It creates no role, no role identifier, no binding
+  and no value**, and RA-1 … RA-5, SR-1 … SR-12 and every other rule are unchanged in
+  text.
 - **Artifact class:** **1 — Normative human-readable source** (DEC-S-022)
 - **Status:** **Normative for what a CDS visual semantic role is and what it must
   declare** — token-flow layer **2 Semantic** inside the visual foundation. It
@@ -266,6 +272,27 @@ DEC-S-134 is deliberately not an architecture dependency of ADR-0005.)*
 
 **VP-6 remains UNSATISFIED for every family.** A policy is not an authored role with
 SR-1 … SR-12 declarations, and no role exists to declare anything.
+
+#### Declaration and materialization — DEC-S-140
+
+*(**Additive note — PREPARED, NOT EFFECTIVE.** Added 2026-09-29 by the Post-WP-022
+Decision & Contract Integration Pass to record **DEC-S-140**; it becomes effective
+**only** at the Human-Maintainer exact-object integration commit of that pass. **RA-1 …
+RA-5 and SR-1 … SR-12 above are unchanged in text.**)*
+
+**Declaring a role and materializing a role are two acts:
+`ROLE VOCABULARY DECLARED ≠ ROLE TOKEN INSTANCE CREATED`.** A separately authorized
+vocabulary decision under RA-1 … RA-5 may admit a role with its identifier, purpose,
+obligations, **SR-1 … SR-10** and **SR-12**, and its evidence and admission conditions,
+without creating a role token instance. **A role token instance exists only once it is
+authored into an authorized Visual Source Set revision**, and **SR-11** — its resolution
+target — is declared there, because a resolution target is a relation to a primitive
+that must itself exist. **RA-3 binds at both boundaries**: an admitted role carries
+SR-1 … SR-10 and SR-12 in full from admission, and a role token instance carries
+SR-1 … SR-12 in full, SR-11 included, from the moment it exists — **otherwise it is
+inadmissible and fails closed**. **RA-1 is not redefined: `WCAG OBLIGATION ≠
+CROSS-CONSUMER EVIDENCE`.** **No role, vocabulary entry, or alias is created by this
+note, and VP-6 remains `UNSATISFIED`.**
 
 ### Sequencing against the theme mechanism
 

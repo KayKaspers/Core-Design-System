@@ -9,6 +9,27 @@ released and no release is announced.
 
 ### Added
 
+- **Post-WP-022 Decision & Contract Integration Pass — object prepared; integration and
+  effectivity pending.** Integrates the Human-Maintainer dispositions **P1 … P5** on the
+  `DECISION_REQUIRED` result of the Post-WP-022 Sequence & WP-020A Readiness
+  Reconciliation. **Not a work package; the prepared Working Tree has no authority** —
+  everything below becomes effective only at the Human-Maintainer exact-object
+  integration commit, after an independent review and Nova adjudication. **P1:** M2 is
+  split, without renumbering, into **M2A — Visual Foundation Architecture Ready** and
+  **M2B — Visual Sources Ready**, resolving **`F-020C-02`** and **`F-022-06`**. **P2:**
+  **`DEC-S-140` — Role Vocabulary Declaration Is Not Role Token Materialization** is
+  prepared — SR-11 and the source-bound realization of VP-6 are fulfilled at the
+  Source-Set materialization boundary, **RA-1 is not redefined**, and **VP-6 stays
+  `UNSATISFIED`**. **P3:** `CDS-WP-020A` stays one work package and is **staged S1 · S2 ·
+  S3**, each stage separately authorized; **no stage is authorized**. **P4:** **Routes
+  A … D** route per-family topology, VF-1 tonal topology, the concrete role vocabulary
+  and `F-022-01` to separately authorized future Decision Passes, deciding none.
+  **P5:** the roadmap arcs are a **dependency architecture, not a universal phase lock**,
+  and **CDS-WP-023** is bounded as **contract only** — **not authorized**. **Registers
+  after integration: 140 Decisions, 7 ADRs, 98 risks**; no ADR or risk is added. **No
+  value, role, vocabulary, Source Set, schema, validator rule, test or fixture is
+  created; no evidence, maturity, claim, release or publication changes; the validator
+  stack is not installed.**
 - **CDS-WP-001B — NDF v1.1.0 Skills and Framework Baseline Maintenance — execution
   object prepared; integration and effectivity pending.** An **Elevated**, lettered
   Skill-Maintenance insertion following the `CDS-WP-001A` precedent; **no work package

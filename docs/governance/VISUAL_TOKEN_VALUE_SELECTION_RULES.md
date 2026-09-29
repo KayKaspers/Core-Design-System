@@ -53,6 +53,12 @@
   are **preserved as the record of the periods they governed**. **No value is
   selected**, and VP-1 … VP-7, VE-1 … VE-12, IG-1 … IG-10, VD-1 … VD-8,
   VA-1 … VA-10 and VS-1 … VS-6 are unchanged.
+- **Amended by:** Post-WP-022 Decision & Contract Integration Pass, 2026-09-29 — **one
+  additive VP-6 reading note**, recording **DEC-S-140**. **Prepared, not effective**
+  until the Human-Maintainer exact-object integration commit of that pass. **The VP-6
+  verdict does not change — VP-6 remains `UNSATISFIED`** — **no prerequisite text is
+  rewritten**, **no value is selected**, and VP-1 … VP-7, VE-1 … VE-12, IG-1 … IG-10,
+  VD-1 … VD-8, VA-1 … VA-10 and VS-1 … VS-6 are unchanged.
 - **Artifact class:** **1 — Normative human-readable source** (DEC-S-022)
 - **Status:** **Normative for how a visual value may be selected** — the discipline
   every future value must satisfy before it may enter CDS. It **selects no value**.
@@ -336,6 +342,35 @@ composites, and **VP-4 is unchanged**, including **`UNSATISFIED` for VF-4**:
 **`WP021-D2` stays deferred**, and **no VF-4 technical root or source-set identity
 exists.** **The closure satisfies no prerequisite in this document.** **No visual
 value may be selected**, and **visual values and visual source sets remain 0.**
+
+### VP-6 reading note — DEC-S-140 — 2026-09-29
+
+*(**Additive — PREPARED, NOT EFFECTIVE.** Added by the Post-WP-022 Decision & Contract
+Integration Pass to record **DEC-S-140**; it becomes effective **only** at the
+Human-Maintainer exact-object integration commit of that pass. The dated notes and
+tables above are **not rewritten**, and **VP-1 … VP-7 are unchanged in text**.)*
+
+**The VP-6 verdict is unchanged: `UNSATISFIED` for every family.** Only the reading of
+*how* VP-6 can ever be satisfied is fixed, so that it cannot block itself.
+
+- **VP-6 has a declaration part and a materialization part.** A role admitted by an
+  effective vocabulary decision with complete **SR-1 … SR-10** and **SR-12**
+  declarations has declared those obligations, so a value can be evaluated against
+  them. **The concrete source-bound realization of VP-6 — including SR-11, the
+  resolution target — is fulfilled only when the role token instance and its target
+  are authored into an authorized Visual Source Set revision.**
+- **No prerequisite is read to require its own output** — the precedent **DEC-S-133**
+  set for VP-3. VP-6 is **not** read as *"a role may only be declared after its
+  primitive exists"* while *"a primitive may only be created after its role is
+  declared"*.
+- **Nothing is weakened.** A vocabulary decision alone does **not** satisfy VP-6; a role
+  token instance lacking any of SR-1 … SR-12 **fails closed**; and **RA-1 is not
+  redefined** — **`WCAG OBLIGATION ≠ CROSS-CONSUMER EVIDENCE`**.
+
+**VP-6 stays `UNSATISFIED`** because **no vocabulary decision exists** — the concrete
+Core visual-role vocabulary is still **OPEN** and routed to a separately authorized
+future Decision Pass. **VP-3, VP-5 and VP-7 are unchanged and `UNSATISFIED`.** **No
+visual value may be selected**, and **visual values and visual source sets remain 0.**
 
 ## The evaluation
 

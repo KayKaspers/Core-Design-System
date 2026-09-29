@@ -238,6 +238,17 @@ release, or publication authority, and activates no work package.
   AUTHORIZED`**. **`CDS-WP-020A` remains `Planned`, not active, and not authorized**;
   **VP-3, VP-5, VP-6 and VP-7 stay `UNSATISFIED`**, and **VP-4 stays `UNSATISFIED` for
   VF-4**.
+  **Sequence update (2026-09-29; prepared, not effective until the Human-Maintainer
+  exact-object integration commit of the Post-WP-022 Decision & Contract Integration
+  Pass).** Under Human-Maintainer dispositions **P1 … P5**: M2 is split into **M2A —
+  Visual Foundation Architecture Ready** and **M2B — Visual Sources Ready**;
+  **`DEC-S-140`** is prepared (role vocabulary declared ≠ role token instance created);
+  `CDS-WP-020A` is **staged S1 · S2 · S3** behind **Routes A … D**, with **no stage
+  authorized**; and the arcs are read as a **dependency architecture, not a universal
+  phase lock**, so **CDS-WP-023 — contract only — may be considered as the next
+  design-work-package authorization candidate** after that pass is reviewed and
+  integrated. **Nothing is authorized** — see
+  [Work Packages](WORK_PACKAGES.md).
 - Earlier work package: **CDS-WP-016 — Semantic Status Foundation
   Independent Evidence Review and Candidate Gate.** Its review work was
   **executed**: Independent Review **PASS**, Candidate Recommendation **GO**.

@@ -1211,6 +1211,24 @@ SATISFIED ≠ WORK PACKAGE AUTHORIZED`**. **`CDS-WP-020A` remains `Planned`, not
 and not authorized**; **VP-3, VP-5, VP-6 and VP-7 stay `UNSATISFIED`**, and **VP-4
 stays `UNSATISFIED` for VF-4**.
 
+**Sequence update — Post-WP-022 Decision & Contract Integration Pass (2026-09-29;
+prepared, not effective until its Human-Maintainer exact-object integration
+commit).** The Post-WP-022 Sequence & WP-020A Readiness Reconciliation ended
+`DECISION_REQUIRED`, and the Human Maintainer authorized Nova's adjudicated
+dispositions **P1 … P5**: **M2 split** into **M2A — Visual Foundation Architecture
+Ready** (condition met by the CDS-WP-022 closure) and **M2B — Visual Sources Ready**
+(not reached), resolving **`F-020C-02`** and **`F-022-06`**; **`DEC-S-140`** prepared —
+**`ROLE VOCABULARY DECLARED ≠ ROLE TOKEN INSTANCE CREATED`**, SR-11 and the
+source-bound realization of VP-6 fulfilled at the Source-Set materialization boundary,
+**RA-1 not redefined** (**`WCAG OBLIGATION ≠ CROSS-CONSUMER EVIDENCE`**);
+**`CDS-WP-020A` staged S1 · S2 · S3**, one identifier, **no stage authorized**; **Routes
+A … D** for per-family topology, VF-1 tonal topology, the concrete role vocabulary and
+`F-022-01` — **`ROUTED ≠ DECIDED`**; and the arcs read as a **dependency architecture,
+not a universal phase lock**, so **CDS-WP-023 — contract only — may be considered as
+the next design-work-package authorization candidate** after the pass is reviewed and
+integrated. **It is not authorized**, `F-022-04` stays open, `WP021-D2` stays deferred,
+and **visual values and visual Source Sets stay 0.**
+
 ## Core Visual Foundation Architecture (CDS-WP-019)
 
 **Architecture only. No visual value exists in CDS, and CDS-WP-019 created none.**
