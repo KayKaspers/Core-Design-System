@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="cds-mark-title cds-mark-desc">
+  <title id="cds-mark-title">Core Design System (CDS) mark</title>
+  <desc id="cds-mark-desc">The Core Grid: a three by three grid of rounded squares on a dark rounded tile. The solid centre square is the core; a smaller inner square sits inside it, separated by a thin ring. Four filled modules sit directly above, right, below and left of the core, each joined to it by a short connector. The four corner squares are outlines only, suggesting that the grid continues. Repository identity artwork; not a CDS design token or normative visual value.</desc>
+  <rect x="1" y="1" width="510" height="510" rx="111" fill="#0D0B1E" stroke="#2B2752" stroke-width="2"/>
+  <g fill="none" stroke="#3A3570" stroke-width="6">
+    <rect x="75" y="75" width="98" height="98" rx="19"/>
+    <rect x="339" y="75" width="98" height="98" rx="19"/>
+    <rect x="75" y="339" width="98" height="98" rx="19"/>
+    <rect x="339" y="339" width="98" height="98" rx="19"/>
+  </g>
+  <g fill="#4C42C9">
+    <rect x="204" y="72" width="104" height="104" rx="22"/>
+    <rect x="336" y="204" width="104" height="104" rx="22"/>
+    <rect x="204" y="336" width="104" height="104" rx="22"/>
+    <rect x="72" y="204" width="104" height="104" rx="22"/>
+  </g>
+  <g fill="#5EE3F2">
+    <rect x="248" y="170" width="16" height="40" rx="4"/>
+    <rect x="302" y="248" width="40" height="16" rx="4"/>
+    <rect x="248" y="302" width="16" height="40" rx="4"/>
+    <rect x="170" y="248" width="40" height="16" rx="4"/>
+  </g>
+  <path fill="#8B7BFF" fill-rule="evenodd" d="M226 204H286A22 22 0 0 1 308 226V286A22 22 0 0 1 286 308H226A22 22 0 0 1 204 286V226A22 22 0 0 1 226 204ZM239 228H273A11 11 0 0 1 284 239V273A11 11 0 0 1 273 284H239A11 11 0 0 1 228 273V239A11 11 0 0 1 239 228Z"/>
+  <rect x="236" y="236" width="40" height="40" rx="8" fill="#EEEBFF"/>
+</svg>

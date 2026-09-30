@@ -9,6 +9,36 @@ released and no release is announced.
 
 ### Added
 
+- **Public Identity & README Pass — Negative Core repository identity and README landing
+  page prepared; integration pending.** A repository-presentation and documentation pass,
+  **not a work package**. Adds the **Negative Core** repository identity under
+  [`branding/`](branding/README.md): six assets — `cds-mark`, `cds-mark-mono-white`,
+  `cds-mark-mono-black`, `cds-logo`, `cds-banner` and `cds-social-preview` — each a
+  standalone SVG source with outlined Space Grotesk / Inter lettering and a PNG
+  derivative rendered from it; a Brand Guide; a font provenance record pinned to
+  immutable upstream commits, which records the undocumented authorization of the
+  original font download as an open process gap; the two font licence notices; and a
+  portable branding kit ZIP with deterministic contents and verified SHA-256 checksums,
+  regenerated from those files.
+  It also rewrites the root `README.md` from a chronological project ledger
+  into a bilingual DE/EN landing page (understand · start · navigate) that links to the
+  authoritative registers instead of duplicating them; **no history is removed from the
+  repository**, since every removed README narrative remains in `WORK_PACKAGES.md`, this
+  CHANGELOG, the Decision Index, the Project Profile and the individual records. The
+  Human Maintainer selected the creative direction and accepted the displayed visual
+  implementation in conversation on 2026-09-30. Following independent review, a
+  corrective pass removed the "by Blackhole Dynamics" endorsement lettering and set the
+  social-preview claim on one line, with the mark unchanged. That corrected kit awaits
+  independent review. An earlier **Core Grid** design iteration was superseded before
+  integration; it was never an integrated identity and is retained only as an archive
+  under `branding/archive/core-grid/`. **The artwork is non-normative with respect to
+  CDS Core visual token values**: its colours, shapes and type are not design tokens,
+  not visual values, not Source Set content, and not a Brand and Identity (Layer 2) or
+  logo-architecture decision; it establishes **no** endorsement, parent-brand or
+  product-family relationship — `BRAND ART COLOUR ≠ CDS CORE TOKEN`. **No Decision,
+  ADR, risk, work-package state, value, Source Set, evidence, maturity, claim, licence,
+  release or publication state changes**; registers stay at **140 · 7 · 98**, no work
+  package is current or authorized, and publication stays `Private Development`.
 - **Post-WP-022 Decision & Contract Integration Pass — object prepared; integration and
   effectivity pending.** Integrates the Human-Maintainer dispositions **P1 … P5** on the
   `DECISION_REQUIRED` result of the Post-WP-022 Sequence & WP-020A Readiness

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="500" viewBox="0 0 1600 500" role="img" aria-labelledby="cds-banner-title cds-banner-desc">
+  <title id="cds-banner-title">Core Design System (CDS) banner</title>
+  <desc id="cds-banner-desc">Repository banner on a dark background. Left: the overline Design system for the Core ecosystem, the title Core Design System, the line Foundations. Components. Experiences., and the line Tokens, Accessibility, Evidence, Governance. Right: the Core Grid extended to a five by five field; a solid core in the centre is connected to four modules, and the surrounding squares fade from filled to faint outlines as they move away from the core. Repository identity artwork; not a CDS design token or normative visual value.</desc>
+  <rect width="1600" height="500" fill="#0D0B1E"/>
+  <g fill="none" stroke="#1F1C40" stroke-width="2">
+    <rect x="1101" y="61" width="58" height="58" rx="12"/>
+    <rect x="1421" y="61" width="58" height="58" rx="12"/>
+    <rect x="1101" y="381" width="58" height="58" rx="12"/>
+    <rect x="1421" y="381" width="58" height="58" rx="12"/>
+  </g>
+  <g fill="none" stroke="#2A2654" stroke-width="2">
+    <rect x="1181" y="61" width="58" height="58" rx="12"/>
+    <rect x="1341" y="61" width="58" height="58" rx="12"/>
+    <rect x="1101" y="141" width="58" height="58" rx="12"/>
+    <rect x="1421" y="141" width="58" height="58" rx="12"/>
+    <rect x="1101" y="301" width="58" height="58" rx="12"/>
+    <rect x="1421" y="301" width="58" height="58" rx="12"/>
+    <rect x="1181" y="381" width="58" height="58" rx="12"/>
+    <rect x="1341" y="381" width="58" height="58" rx="12"/>
+  </g>
+  <g fill="none" stroke="#3A3570" stroke-width="3">
+    <rect x="1181.5" y="141.5" width="57" height="57" rx="12"/>
+    <rect x="1341.5" y="141.5" width="57" height="57" rx="12"/>
+    <rect x="1181.5" y="301.5" width="57" height="57" rx="12"/>
+    <rect x="1341.5" y="301.5" width="57" height="57" rx="12"/>
+  </g>
+  <g fill="#2A2468">
+    <rect x="1260" y="60" width="60" height="60" rx="13"/>
+    <rect x="1420" y="220" width="60" height="60" rx="13"/>
+    <rect x="1260" y="380" width="60" height="60" rx="13"/>
+    <rect x="1100" y="220" width="60" height="60" rx="13"/>
+  </g>
+  <g fill="#4C42C9">
+    <rect x="1260" y="140" width="60" height="60" rx="13"/>
+    <rect x="1340" y="220" width="60" height="60" rx="13"/>
+    <rect x="1260" y="300" width="60" height="60" rx="13"/>
+    <rect x="1180" y="220" width="60" height="60" rx="13"/>
+  </g>
+  <g fill="#5EE3F2" opacity="0.45">
+    <rect x="1284" y="116" width="12" height="28" rx="3"/>
+    <rect x="1396" y="244" width="28" height="12" rx="3"/>
+    <rect x="1284" y="356" width="12" height="28" rx="3"/>
+    <rect x="1156" y="244" width="28" height="12" rx="3"/>
+  </g>
+  <g fill="#5EE3F2">
+    <rect x="1284" y="196" width="12" height="28" rx="3"/>
+    <rect x="1316" y="244" width="28" height="12" rx="3"/>
+    <rect x="1284" y="276" width="12" height="28" rx="3"/>
+    <rect x="1236" y="244" width="28" height="12" rx="3"/>
+  </g>
+  <path fill="#8B7BFF" fill-rule="evenodd" d="M1273 220H1307A13 13 0 0 1 1320 233V267A13 13 0 0 1 1307 280H1273A13 13 0 0 1 1260 267V233A13 13 0 0 1 1273 220ZM1281 234H1299A7 7 0 0 1 1306 241V259A7 7 0 0 1 1299 266H1281A7 7 0 0 1 1274 259V241A7 7 0 0 1 1281 234Z"/>
+  <rect x="1279" y="239" width="22" height="22" rx="5" fill="#EEEBFF"/>
+  <rect x="120" y="148" width="36" height="4" rx="2" fill="#5EE3F2"/>
+  <g font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', sans-serif">
+    <text x="170" y="156" font-size="17" font-weight="600" fill="#9C96C8" letter-spacing="4">DESIGN SYSTEM FOR THE CORE ECOSYSTEM</text>
+    <text x="116" y="248" font-size="86" font-weight="700" fill="#F3F1FF" letter-spacing="-1">Core Design System</text>
+    <text x="120" y="308" font-size="34" font-weight="400" fill="#B9B2F0">Foundations. Components. Experiences.</text>
+    <text x="120" y="362" font-size="20" font-weight="400" fill="#7E79AD" letter-spacing="1">Tokens · Accessibility · Evidence · Governance</text>
+  </g>
+</svg>

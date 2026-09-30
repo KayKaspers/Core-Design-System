@@ -1,1129 +1,511 @@
-# Core Design System
+<p align="center">
+  <img
+    src="branding/assets/png/cds-banner.png"
+    alt="Core Design System. Foundations. Components. Experiences."
+    width="100%"
+  />
+</p>
 
-The Core Design System (CDS) is the central design, brand, user-experience,
-interface, component, token, document, and multi-channel foundation for the Core
-product ecosystem.
+<h1 align="center">Core Design System (CDS)</h1>
 
-CDS is being built as a versioned platform product with a normative Single
-Source of Truth. It is deliberately **not**:
+<p align="center">
+  <a href="docs/governance/NDF_SKILLS_PROVENANCE.md"><img src="https://img.shields.io/badge/process-NDF%20v1.1.0-7950F2?style=flat-square&labelColor=05080D" alt="Development process: Nova Development Framework v1.1.0, process layer only"></a>
+  <a href="docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md"><img src="https://img.shields.io/badge/token%20format-DTCG%202025.10%20profile-7950F2?style=flat-square&labelColor=05080D" alt="Token source format: DTCG 2025.10-based CDS profile in strict JSON"></a>
+  <a href="docs/governance/GOVERNANCE_OPERATING_MODEL.md"><img src="https://img.shields.io/badge/authority-human--controlled-7950F2?style=flat-square&labelColor=05080D" alt="Authority: human-controlled; the Human Maintainer holds final approval"></a>
+  <a href="docs/governance/LICENSING_AND_PUBLICATION_DECISION_MODEL.md"><img src="https://img.shields.io/badge/publication-Private%20Development-C8D4E0?style=flat-square&labelColor=05080D" alt="Publication state: Private Development; no release"></a>
+</p>
 
-- a logo-only project,
-- a branding kit,
-- an isolated UI component library,
-- a design project scoped exclusively to CoreOps.
+<p align="center"><strong>Foundations · Components · Experiences</strong></p>
+<p align="center">Semantic-first · Accessibility as policy · Evidence-bound · Human-controlled</p>
 
-## Project status
+**DE:** Das Core Design System (CDS) ist ein gesteuertes Design System, mit dem digitale
+Produkte über verschiedene Consumer und Kanäle hinweg konsistent, barrierearm und
+nachweisbasiert gestaltet werden. Es trennt bewusst Foundations, Tokens, Komponenten,
+Patterns, Experiences, Kanal- und Produktanpassung sowie Evidenz und Reifegrad — und
+bildet dafür eine versionierte, normative Single Source of Truth.
 
-**Post-Candidate Foundation & Design-System Enablement — Foundation / Pre-Design:
-Closed with Notes**
+**EN:** The Core Design System (CDS) is a governed design system for building
+consistent, accessible and evidence-backed digital products across different consumers
+and channels. It deliberately separates foundations, tokens, components, patterns,
+experiences, channel and product adaptation, and evidence and maturity — held in one
+versioned, normative Single Source of Truth.
 
-**First Candidate transition completed (2026-08-19).** Exactly one artifact family
-has passed the Candidate gate. Details in
-[Candidate promotion — 2026-08-19](#candidate-promotion--2026-08-19) below.
+> [!NOTE]
+> **DE:** CDS befindet sich in aktiver, strukturierter Entwicklung. Es gibt kein Release,
+> kein `Stable`-Artefakt, keine visuellen Werte und keine gültige Konformitätsaussage —
+> siehe [Aktueller Entwicklungsstand](#current-development-status--aktueller-entwicklungsstand).
+>
+> **EN:** CDS is under active, structured development. There is no release, no `Stable`
+> artifact, no visual value and no valid conformance claim — see
+> [Current Development Status](#current-development-status--aktueller-entwicklungsstand).
 
-**The phase label changed on 2026-08-26 (DEC-S-127), and nothing else did.** The
-phase established by DEC-S-062, `Pre-Candidate Operating Enablement`, completed its
-operating purpose; **DEC-S-127 supersedes it for current and future state only**,
-and DEC-S-062 stays `Accepted` and correct for the period it governed. **A phase is
-an operating period, not a maturity state:** the transition awards no maturity,
-admits no evidence, creates no visual value, activates no work package, and grants
-no release, publication, Product Profile, or pilot authority.
+## Contents / Inhalt
 
-The Foundation is **closed with mandatory notes** (CDS-WP-009): governance, scope,
-architecture, requirements, and the accessibility policy are established, and the
-committed governance is now operationalized for daily use. A lightweight
-[operating playbook](docs/operations/FOUNDATION_OPERATING_PLAYBOOK.md) and
-[Standard](docs/operations/STANDARD_CHANGE_DOSSIER_TEMPLATE.md) /
-[Elevated](docs/operations/ELEVATED_CHANGE_DOSSIER_TEMPLATE.md) change-dossier
-templates exist, and the twelve Critical Risks are made actionable in a
-[Critical Risk Action Register](docs/operations/CRITICAL_RISK_ACTION_REGISTER.md).
-The first **accessibility support baseline** (A11Y-BL-001) is **declared and
-committed** (CDS-WP-010) — a **test contract, not evidence**. The **machine-readable source
-format is decided** (CDS-WP-011): a **DTCG 2025.10-based CDS profile** in **strict
-JSON** ([ADR-0001](docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)), and
-its **value-neutral bootstrap is implemented** (CDS-WP-012): four CDS-owned JSON Schema
-2020-12 contracts, synthetic-only fixtures, a V1–V4 validation contract, and an RFC 8785
-+ SHA-256 serialization decision ([ADR-0002](docs/decisions/ADR-0002-DETERMINISTIC_JSON_SERIALIZATION.md))
-— **Experimental, no real token value**. The **offline validator and fixture harness
-are implemented and executed** (CDS-WP-013): the `python -m tools.cds_validator` CLI
-on a pinned Python/`jsonschema`/`rfc8785` stack
-([ADR-0003](docs/decisions/ADR-0003-OFFLINE_TOKEN_VALIDATOR_IMPLEMENTATION_STACK.md)),
-71/71 unit tests, and **15/15 validation cases matching their committed expected
-outcomes** — **executor-produced evidence, since independently reviewed by CDS-WP-016
-(Independent Review PASS)**. **No
-manual, keyboard, or assistive-technology accessibility test has been run; every
-artifact is AE-0 except the channel-independent Semantic Status source/contract
-family at admitted **AE-1**; **exactly one Candidate artifact family exists and no
-Stable artifact exists**, no claim is valid, no licence is selected, and the
-publication state remains `Private Development`.** The **first concrete design
-foundation is defined**
-(CDS-WP-014): the **Semantic Status Foundation Contract** — five independent status
-axes with a fixed 25-value vocabulary and explicit `unknown`, ten invariants,
-combination/communication/token contracts, and a gated
-[First Semantic Status Candidate Plan](docs/roadmap/FIRST_SEMANTIC_STATUS_CANDIDATE_PLAN.md)
-— at that point **Experimental, with no Candidate status and no visual value; it
-still has no visual value** — and its **machine-readable source set is
-implemented** (CDS-WP-015): the
-[`semantic/status` source set](tokens/semantic/status/semantic-status.tokens.json)
-with 25 non-visual tokens, a 24/24 validation harness, 25/25 DE/EN terminology,
-and a [Candidate Dossier](docs/operations/SEMANTIC_STATUS_CANDIDATE_DOSSIER.md)
-— **executor-produced evidence, since independently reviewed; not Candidate at
-that milestone**. The earlier authorized work package was **CDS-WP-016 — Semantic Status
-Foundation Independent Evidence Review and Candidate Gate**; its review work is
-**executed**:
-**Independent Review PASS**, **Candidate Recommendation GO**. **GO is not a Candidate
-award.** The subsequent **Nova Candidate Maturity Review returned NO-GO — the
-Candidate Accessibility Gate was unmet** — a read-only gap assessment **confirmed**
-it (9/9 requirements not demonstrated), and the Human Maintainer **authorized the
-CDS-WP-016 Candidate Accessibility Gate Remediation** as internal rework, not a new
-work package. That remediation is **executed**: DEC-S-125, a Candidate-scope WCAG
-and responsibility mapping, a 25/25 per-value evidence matrix, an AE-1
-evidence package, an AE-2 plan, a support-baseline plan (A11Y-BL-001 freshness
-**`Current`**), a 15-trigger regression plan, and 16 recorded limitations. The
-remediation implementation and the clean-HEAD evidence package were then
-**independently reviewed** (PASS WITH NOTES and PASS) and integrated, and on
-2026-08-17 the Human Maintainer **admitted `AE1-CDS-WP016-SEMSTATUS-002` at AE-1**
-for the **channel-independent Semantic Status source/contract scope only** — see the
-[AE-1 Admission Record](docs/governance/SEMANTIC_STATUS_AE1_ADMISSION_RECORD.md).
-That admission is bound to source revision `semantic-status-rev-0001` and is now
-**historical**; at that milestone Candidate was still **No**, maturity
-**Experimental**, approval **Unapproved**. **Every other CDS artifact remains
-AE-0**, and no channel, consumer, or product evidence exists.
+- **Start:** [What is CDS?](#what-is-cds--was-ist-cds) · [Quick Start](#quick-start--schnellstart) · [Why CDS?](#why-cds--warum-cds)
+- **Design System:** [Design-System Model](#design-system-model--design-system-modell) · [Foundations & Tokens](#foundations--tokens) · [Components & Patterns](#components--patterns--komponenten--patterns) · [Accessibility](#accessibility--barrierefreiheit) · [Evidence & Maturity](#evidence--maturity--evidenz--reifegrad)
+- **Integration:** [Consumer Model](#consumer-model--consumer-modell) · [NDF & CDS](#ndf--cds)
+- **Development / Entwicklung:** [Governance & Authority](#governance--authority--governance--autorität) · [Current Development Status](#current-development-status--aktueller-entwicklungsstand) · [Work Packages](#work-packages)
+- **Reference / Referenz:** [Documentation Map](#documentation-map--dokumentationsübersicht) · [Repository Structure](#repository-structure--repository-struktur) · [Language](#language--sprache) · [Project Status](#project-status--projektstatus)
 
-On 2026-08-18 the Human Maintainer authorized a further internal rework of
-CDS-WP-016 — the **Candidate Finalization Governance Rework** — after a read-only
-bootstrap assessment found a circular dependency between the Candidate metadata a
-Candidate revision must declare and the revision-bound evidence that same revision
-requires. It is **executed** and adds governance and tooling only: **DEC-S-126**
-(a named, non-authoritative **Proposed Candidate Revision**; target metadata that
-grants nothing; evidence that never transfers across a source revision; exact-byte
-pre-commit evidence binding; **AE-1 admission before Candidate approval**; the
-**Promotion Commit** as the actual maturity transition point), **RISK-098**, the
-[Candidate Approval Record Template](docs/operations/CANDIDATE_APPROVAL_RECORD_TEMPLATE.md),
-and a v2 evidence runner that holds no governance state of its own. At that
-milestone the identity `semantic-status-rev-0002-candidate` was **reserved and not
-yet created**, the authoritative source revision was still
-`semantic-status-rev-0001`, and **that rework produced no Candidate evidence,
-admitted no evidence, and granted no Candidate approval**.
+## What is CDS? / Was ist CDS?
 
-### Candidate promotion — 2026-08-19
+**DE:** CDS ist die zentrale Design-, Marken-, UX-, UI-, Token-, Komponenten-, Dokument-
+und Multi-Channel-Grundlage des Core-Ökosystems. Es legt fest, wie Core-Produkte
+aussehen, sich verhalten, kommunizieren und über Kanäle hinweg barrierearm bleiben —
+als normative, versionierte und offline nutzbare Quelle statt als verstreute
+Produktkonventionen. CDS ist **kein** reines Logo- oder Branding-Kit, **keine** isolierte
+UI-Komponentenbibliothek und **kein** Designprojekt nur für ein einzelnes Produkt.
 
-The Candidate sequence defined by DEC-S-126 then ran to completion: fresh
-revision-bound AE-1 evidence **`AE1-CDS-WP016-SEMSTATUS-004`** → a **fresh
-independent evidence review (PASS WITH NOTES)** → the **Human-Maintainer evidence
-admission (APPROVED / ADMITTED)** → the **Nova Candidate Finalization Review
-(GO WITH NOTES)** → the **Human-Maintainer Candidate approval
-(`AUTHORIZED_PENDING_EXACT_BYTE_INTEGRATION`)** → the **Human-Maintainer exact-byte
-Promotion Commit `22fa0710e2b75df22e7b420c2f9d86bbe67b2777`**, which passed its
-exact-byte gate with 15/15 committed blob identities exact and post-commit
-regression 47/47 · 64/64 · 184/184 · 24/24/0/0.
+**EN:** CDS is the central design, brand, UX, UI, token, component, document and
+multi-channel foundation of the Core ecosystem. It defines how Core products look,
+behave, communicate and remain accessible across channels — as a normative, versioned
+source usable offline rather than scattered product conventions. CDS is **not** a
+logo-only or branding kit, **not** an isolated UI component library, and **not** a
+design project scoped to a single product.
 
-**Current state:**
-
-| Item | Value |
+| Available today / Heute verfügbar | Not yet / Noch nicht |
 | --- | --- |
-| Candidate artifact families | **1** — Semantic Status Foundation / `semantic/status` |
-| Source revision | **`semantic-status-rev-0002-candidate`** |
-| Maturity · approval | **`Candidate`** · **`Approved`** |
-| Admitted evidence in force | **`AE1-CDS-WP016-SEMSTATUS-004`** at **AE-1**, source/contract scope only |
-| Stable | **none** |
-| Claims · conformance | **none** · **none** |
-| AE-2 / AE-3 / AE-4, channel and consumer evidence | **none** |
-| Publication | **`Private Development`** |
+| Governance, scope, architecture and accessibility policy as normative documents | Visual values — colour, type, spacing, radius, elevation, motion: **0** |
+| A decided machine-readable token format: DTCG 2025.10-based CDS profile in strict JSON | Visual Source Sets: **0** |
+| Five CDS-owned JSON Schema 2020-12 contracts and an offline validator | Components or patterns specified: **0** |
+| The Visual Foundation architecture and the reference/semantic token-layer contracts — structure only | `Stable` artifacts: **0** |
+| The **Semantic Status Foundation** — the one `Candidate` artifact family (non-visual) | Release, tag, licence, public availability |
 
-See the
-[Candidate Promotion Effectivity Record](docs/governance/SEMANTIC_STATUS_CANDIDATE_PROMOTION_EFFECTIVITY_RECORD.md),
-the [Candidate Approval Record](docs/operations/SEMANTIC_STATUS_CANDIDATE_APPROVAL_RECORD.md),
-and the [AE1-004 Admission Record](docs/governance/SEMANTIC_STATUS_AE1_004_ADMISSION_RECORD.md).
-**Candidate is bounded validation only and is never normative** — it is not
-Stable, not a claim, not conformance, and not a release.
+Consumers: CoreOps is the first reference consumer; further Core products are
+anticipated — see [Consumer Model](#consumer-model--consumer-modell).
 
-**CDS-WP-016 … CDS-WP-019 are closed** — the Human-Maintainer commits
-`1fc53ae5afa40807e1950171ab700b0860ee581e`,
-`df9b8f21ff3bde4607b1c9ff7fdcbe3144366040`,
-`e5d5d492619071655ba956713980d1ee261d9213` and
-`538fbccbf6f554de3b872e9fb75a70d13318feb6` integrated their work. The most recent,
-**CDS-WP-019 — Core Visual Foundation Architecture**, was **architecture only.** It
-defines *how* the visual foundation is structured, governed, represented, extended,
-validated, and consumed — nine visual foundation families, fourteen invariants, a
-naming model, and the accessibility, channel, brand, and governance boundaries. It
-selects **no colour, typeface, size, spacing, radius, stroke, shadow, opacity, icon,
-illustration, motion value, breakpoint, or theme**, and creates no token source,
-component, brand, or Product Profile. The **CDS Phase Transition Governance
-Package** (DEC-S-127) then changed project-phase authority only.
-**CDS-WP-020 — Reference and Semantic Token Foundation** is **`Completed`**:
-**executed with result `DECISION_REQUIRED`** and **integrated** by the
-Human-Maintainer commit `42a568d823de3388e45af62967546f13ad67eff6`. **Its closure
-was recorded in the CDS-WP-020 closure and routing object and became effective at
-that object's Human-Maintainer integration commit `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.** It is **contract only**: it defines what a visual **reference primitive**
-and a visual **semantic role** are, what each must declare, how a role aliases a
-primitive, and the discipline any future value must satisfy — and it records the
-**seven** normative choices (**OD-1 … OD-7**) that gate every concrete value and
-every machine-readable visual source. It selects **no value** and creates **no
-identifier**. A separately authorized **Decision Integration Pass** (2026-08-27)
-has since registered DEC-S-128 … DEC-S-131 and ADR-0004, answering **OD-1, OD-2
-and OD-3** — the canonical colour representation, the admitted `$type` set, the
-contrast evaluation authority, and the source-set identity model. **They are
-effective at commit `42a568d8…`, and they select no value.** A further
-Human-Maintainer decision on **2026-09-05** answered **OD-4** and **OD-7**,
-partially answered **OD-5**, policy-answered **OD-6A**, and dispositioned **OD-6B**
-as already covered by existing authority — registered as **DEC-S-132 … DEC-S-135**
-and **ADR-0005** by a separately authorized **Step-9 Decision Integration Pass**.
-**They are effective at commit `2cb244e8…`, and they select no value.** **No value
-is selected.**
-**CDS-WP-021 — Adaptive Layout and Responsive Foundation** is **`Completed`**:
-authorized for execution by a separate, explicit
-Human-Maintainer decision, **executed with result `COMPLETE WITH NOTES`**,
-**integrated** at `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` (2026-09-11), and
-**closed by a further, separate Human-Maintainer authorization, effective at the
-Human-Maintainer exact-object integration commit
-`01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`**. It confirms the
-**Layer 3 / Layer 5 / Layer 6** ownership split — **CR-004
-stays at Layer 5** — and records the spatial-context model, the **Adaptation
-Container**, the responsive-range
-obligations, and the grid, container and content-width contracts. It selects **no
-value** and creates **no identifier**, **no responsive-range name**, and **no VF-4
-technical root**. The **response mechanism is decided** by the Human Maintainer and
-recorded as **`DEC-S-136`** with **`ADR-0006`** — both **effective at that
-integration commit**, so, as of `23914ecc…`, the
-effective registers were **138 decisions and 7 ADRs** — `DEC-S-137`, `DEC-S-138`
-and `ADR-0007` having become effective at `23914ecc…` — and **VF-4 identity is
-deferred**. **Closure resolves no deferred question, satisfies no value
-prerequisite, and authorizes no successor.**
+## Quick Start / Schnellstart
 
-**CDS-WP-022 — Theme and Environmental Presentation Model** is **`Completed` /
-`Closed`**: authorized for execution by a separate, explicit Human-Maintainer act —
-not by the CDS-WP-021 closure and not by the roadmap — and **closed by a further,
-separate Human-Maintainer authorization, effective at the Human-Maintainer
-exact-object integration commit `ab81e197374bb9f9479105b4261cb4485a491b2a`**
-(2026-09-28). It is **contract only**: it defines what a **Theme
-Resolution Context** is, what a decision to support one must affirm, how a context is
-identified without becoming a path segment, how a **requested** context enters
-resolution, where resolution **fails closed**, and how a context relates to a channel,
-a Spatial Context, a Product Profile, a semantic role, a status and a Source Set. It
-**first executed with result `DECISION_REQUIRED`**, escalating **five normative
-choices it may not invent**; the **Human Maintainer decided all five on 2026-09-12**,
-a bounded rework applied them, and the **execution result is now `COMPLETE WITH
-NOTES`** — the initial `DECISION_REQUIRED` **stands as execution history**.
+**DE:** CDS hat kein Installationskommando und kein Paket — der Einstieg führt über
+Dokumente. Neu hier? Mit Pfad **A** beginnen.
 
-**The theme mechanism is a Resolver-Modifier Context over the existing Source-Set
-graph**, with **no per-context Source Set**, **no context or theme segment in any
-identifier**, **no second maturity unit**, and context-specific evidence bound to
-(`sourceSetId`, `sourceRevision`) while recording the **Resolver / Composition
-revision** and the **Theme Resolution Context** as **exact evidence inputs** —
-recorded as **`DEC-S-137`** with **`ADR-0007`** (covering `DEC-S-137` only). The
-**initial supported Core contexts are `Light` and `Dark`**, **equal peers with no
-default**; **forced colours and platform high contrast are an environmental
-accessibility condition, not a Core context**; **an explicit viewer choice takes
-precedence over an inferred environment preference**, with mandatory platform
-accessibility conditions **outside** Theme precedence and always binding; and there is
-**no default or fallback Theme** — missing, unsupported and unresolved-conflict
-resolution **fails closed**, with **`Not Applicable`** where Theme resolution genuinely
-does not apply — recorded as **`DEC-S-138`**.
+**EN:** CDS has no install command and no package — you start from its documents. New
+here? Begin with path **A**.
 
-**All three records are `Accepted` and effective at the Human-Maintainer exact-object
-integration commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b`**, which integrated the
-reviewed CDS-WP-022 object — **`APPROVED PROPOSITION ≠ EFFECTIVE REPOSITORY
-DECISION`** held until that commit. **The registers held 136 decisions and 6 ADRs
-until it and hold 138 and 7 from it; the risk register stays at 98 throughout.**
-**Supported Core Theme Resolution Contexts: 0 before it and 2 — `Light` and `Dark` —
-from it**, and **`Light` and `Dark` are
-human-readable architectural names, not machine-readable identifiers**. It creates
-**no theme instance, no machine-readable context identifier, no default alias, and no
-value**, and **`TS-1` still binds** — no semantic role carries a default alias.
-**Closure resolves no deferred question, satisfies no value prerequisite, and
-authorizes no successor: no work package is currently authorized** from the closure
-object's integration onward — **`CLOSED ≠ SUCCESSOR AUTHORIZED`** — and
-**`CDS-WP-020A` and CDS-WP-023 … CDS-WP-053 are planned only — not active, not
-authorized, work not started** — and are recorded in the
-[Post-Candidate Development Roadmap](docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
+| Path / Pfad | Goal / Ziel | Start here / Einstieg | Next / Danach |
+| --- | --- | --- | --- |
+| **A** | Understand CDS / CDS verstehen | [Concept and Scope](docs/governance/CONCEPT_AND_SCOPE.md) | [Project Charter](docs/governance/PROJECT_CHARTER.md) · [Scope Boundary Matrix](docs/governance/SCOPE_BOUNDARY_MATRIX.md) |
+| **B** | Understand the architecture / Architektur verstehen | [Design System Architecture](docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md) | [Source of Truth and Authority Model](docs/architecture/SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md) · [Token and Theme Architecture](docs/architecture/TOKEN_AND_THEME_ARCHITECTURE.md) |
+| **C** | Explore foundations / Foundations erkunden | [Visual Foundation Architecture](docs/architecture/VISUAL_FOUNDATION_ARCHITECTURE.md) | [Semantic Status Foundation Contract](docs/foundations/SEMANTIC_STATUS_FOUNDATION_CONTRACT.md) · [Visual Semantic Token Foundation](docs/architecture/VISUAL_SEMANTIC_TOKEN_FOUNDATION.md) |
+| **D** | Work with tokens and validation / Mit Tokens und Validierung arbeiten | [Machine-Readable Source Model](docs/architecture/MACHINE_READABLE_SOURCE_MODEL.md) | [CDS Token Format Profile](docs/architecture/CDS_TOKEN_FORMAT_PROFILE.md) · [Offline Token Validator Usage](docs/operations/OFFLINE_TOKEN_VALIDATOR_USAGE.md) |
+| **E** | Understand consumers / Consumer verstehen | [Consumer and Stakeholder Model](docs/governance/CONSUMER_AND_STAKEHOLDER_MODEL.md) | [Consumer Requirements Model](docs/governance/CONSUMER_REQUIREMENTS_MODEL.md) · [CoreOps Pilot Contract](docs/governance/COREOPS_PILOT_CONTRACT.md) |
+| **F** | Understand governance / Governance verstehen | [Governance Operating Model](docs/governance/GOVERNANCE_OPERATING_MODEL.md) | [Project Profile](project-system/PROJECT_PROFILE.md) · [Foundation Operating Playbook](docs/operations/FOUNDATION_OPERATING_PLAYBOOK.md) |
+| **G** | Follow development / Entwicklung verfolgen | [Work Packages](project-system/WORK_PACKAGES.md) | [Post-Candidate Development Roadmap](docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md) · [Decision Index](docs/decisions/DECISION_INDEX.md) · [CHANGELOG](CHANGELOG.md) |
 
-**The project does not yet produce visual design.** Defining the architecture of
-the visual foundation, and then the contract for its token layers, is not designing
-it: **no visual value exists in CDS**, and all nine visual foundation families are
-`Proposed`.
+The offline validator runs locally on Python 3.11+ with the exactly pinned stack in
+[requirements-validator.lock](requirements-validator.lock), installed into a virtual
+environment outside the repository — see
+[Validator Usage](docs/operations/OFFLINE_TOKEN_VALIDATOR_USAGE.md):
 
-The concept and scope are registered. See
-[Concept and Scope](docs/governance/CONCEPT_AND_SCOPE.md) for the normative
-source.
+```bash
+python -m tools.cds_validator validate-file <document> --report <out.json>
+```
 
-No final decision exists for:
+## Why CDS? / Warum CDS?
 
-- logo and logo architecture,
-- colors,
-- typography,
-- icons, illustration, and imagery,
-- light and dark themes,
-- design tool,
-- component framework,
-- token build system,
-- documentation platform,
-- package architecture and repository split,
-- license, public release, and contribution model,
-- long-term compatibility commitments,
-- concrete product signatures.
+**DE:** Ohne gemeinsame Grundlage entscheidet jedes Produkt dieselben Designfragen neu —
+mit anderen Antworten und ohne gemeinsame Begründung. Designabsicht lebt in Tools,
+Screenshots und Erinnerung statt in einer prüfbaren Quelle; Produkte driften
+auseinander; Barrierefreiheit wird spät und uneinheitlich behandelt; Design, Code und
+Dokumentation beschreiben verschiedene Wirklichkeiten. CDS löst das strukturell statt
+pro Produkt.
 
-These areas remain open until an explicitly authorized work package decides
-them. **CDS-WP-019 closed none of them:** defining what a colour role must declare
-is not choosing a colour, and defining what a theme may not do is not creating one.
-**CDS-WP-022 closed none of them either.** **Light and dark are now decided as
-supported Core Theme *contexts*** — `Light` and `Dark`, equal peers with no default,
-from the effectivity of `DEC-S-138` — but **no light or dark *value* exists, and none
-may be selected**: **defining a presentation context is not designing one**, and
-**`Light` and `Dark` are human-readable architectural names, not machine-readable
-identifiers**. **VP-3, VP-5, VP-6 and VP-7 stay `UNSATISFIED`**, and **visual values
-stay 0.**
+**EN:** Without a shared foundation, every product re-decides the same design questions —
+with different answers and no shared rationale. Design intent lives in tools,
+screenshots and memory instead of a reviewable source; products drift apart;
+accessibility is handled late and inconsistently; design, code and documentation
+describe different realities. CDS solves this structurally rather than per product.
 
-The **versioning and maturity model** and the **conformance and adoption policy**
-were previously listed here and are **no longer open**: both were decided by
-CDS-WP-006 and are governed by the
-[Artifact Maturity Lifecycle](docs/governance/ARTIFACT_MATURITY_LIFECYCLE.md), the
-[Versioning, Compatibility and Deprecation Policy](docs/governance/VERSIONING_COMPATIBILITY_AND_DEPRECATION_POLICY.md),
-and the
-[Adoption, Conformance and Claims Policy](docs/governance/ADOPTION_CONFORMANCE_AND_CLAIMS_POLICY.md).
-The **token format** is likewise decided (CDS-WP-011, ADR-0001); the **token build
-system** above is a different question and stays open. **A decided model is not an
-applied one** — no version has been released, no artifact is `Stable`, and no
-adoption or conformance claim is valid.
+| Principle | DE | EN |
+| --- | --- | --- |
+| **Semantics first** | Bedeutung kommt vor Wert: Rollen und Status werden definiert, bevor ein visueller Wert sie trägt. | Meaning precedes value: roles and status are defined before any visual value carries them. |
+| **One authoritative source** | Nur normative Quellen binden; generierte Artefakte, Tool-Zustände und Beispiele nie. Konflikte schlagen fail-closed fehl. | Only normative sources bind; generated artifacts, tool state and examples never do. Conflicts fail closed. |
+| **Accessibility as policy** | WCAG 2.2 AA ist das Ziel — mit Evidenzstufen statt Behauptungen. | WCAG 2.2 AA is the target — with evidence levels instead of assertions. |
+| **Evidence-bound maturity** | Reifegrad wird an Revisionen und zugelassene Evidenz gebunden, nie vererbt. | Maturity is bound to revisions and admitted evidence, never inherited. |
+| **Multi-consumer by design** | CoreOps ist Referenz-Consumer, aber nicht das einzige Designziel. | CoreOps is a reference consumer, not the sole design target. |
+| **Offline and self-hosted** | Quellen, Schemas und Validator funktionieren ohne Netzwerk. | Sources, schemas and validator work without a network. |
 
-## Scope
+Details: [Concept and Scope](docs/governance/CONCEPT_AND_SCOPE.md) ·
+[Design System Benchmark](docs/research/DESIGN_SYSTEM_BENCHMARK.md) (research — not normative) ·
+[CDS Differentiation Hypotheses](docs/research/CDS_DIFFERENTIATION_HYPOTHESES.md) (hypotheses — not claims)
 
-The long-term scope is classified through six capability domains:
+## Design-System Model / Design-System-Modell
 
-1. **Brand and Identity**
-2. **Experience and Interaction**
-3. **Foundations and Tokens**
-4. **Components and Patterns**
-5. **Channels and Communication**
-6. **Governance and Enablement**
+**DE:** Die logische Architektur (DEC-S-021) ordnet CDS in acht Schichten. Eine Schicht
+darf nur von den darüberliegenden abhängen — nie umgekehrt. Das Modell ist logisch und
+bildet weder Verzeichnisse noch Pakete oder Tools ab.
 
-Cross-cutting quality concerns apply across all six, including accessibility,
-inclusive design, localization, offline and self-hosted use, maintainability,
-and design-code-documentation alignment.
+**EN:** The logical architecture (DEC-S-021) arranges CDS in eight layers. A layer may
+depend only on the layers above it — never the reverse. The model is logical and maps to
+no directory, package or tool.
 
-**Registration is not availability.** Long-term scope creates no delivery,
-stability, support, release, or compatibility commitment. Cross-cutting
-concerns are quality requirements — CDS makes no certification, legal-
-compliance, or accessibility-conformance claim.
+```text
+1  Strategy & Governance       mission, scope, decisions, maturity, change control
+2  Brand & Identity            masterbrand, product identity, verbal identity, brand assets
+3  Foundations & Tokens        colour, type, space, layout, shape, surface, icons, themes, status
+4  Components                  contract-bearing components: anatomy, states, accessibility
+5  Patterns & Experiences      task flows, navigation, feedback, safe actions, complex data
+6  Channels & Communication    product UI, docs, PDF and reports, presentations, repository presentation
+7  Distribution & Enablement   consumable artifacts, offline use, transformation, migration
+8  Evidence & Quality          traceability, provenance, accessibility and validation evidence
+                               (observes every layer, commands none)
+```
 
-Active in this phase: concept, scope and non-goals, user groups, consumer
-classes, ownership boundaries, governance foundations, and planning for the
-remaining Foundation work packages.
+Across these layers, design tokens flow strictly downward through five token-flow
+layers (DEC-S-024) — semantic-first, with no shortcut from a component to a raw value:
 
-## Consumers
+```text
+Reference  →  Semantic  →  Component  →  Product Profile  →  Channel / platform
+(values)      (meaning)     (contracts)   (approved            outputs
+                                           extension points)  (generated, never normative)
+```
 
-CDS distinguishes three consumer relationship classes:
+- **A theme is a resolution context, not a layer.** It re-binds roles to primitives; it
+  never redefines meaning or weakens an accessibility guarantee.
+- **A Product Profile enters at token-flow layer 4 only** and may never redefine shared
+  semantics. Consumers that already hold design decisions are **reconciled, not
+  overwritten**.
+- **Generated outputs never become a source.** A channel may change form, never meaning.
 
-| Class | Meaning |
+Details: [Design System Architecture](docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md) ·
+[Token and Theme Architecture](docs/architecture/TOKEN_AND_THEME_ARCHITECTURE.md) ·
+[Product Profile and Extension Model](docs/architecture/PRODUCT_PROFILE_AND_EXTENSION_MODEL.md) ·
+[Artifact Distribution and Channel Model](docs/architecture/ARTIFACT_DISTRIBUTION_AND_CHANNEL_MODEL.md)
+
+## Foundations & Tokens
+
+**DE:** Die Foundations sind architektonisch definiert, aber noch nicht mit visuellen
+Werten belegt. Verfügbar sind das Token-Format, die Validierungsmaschinerie, die
+Strukturverträge der visuellen Foundation und eine erste, nicht-visuelle Foundation.
+
+**EN:** The foundations are defined architecturally but carry no visual values yet. What
+exists is the token format, the validation machinery, the structural contracts of the
+visual foundation, and one first, non-visual foundation.
+
+| Area | State | Start here |
+| --- | --- | --- |
+| **Token source format** | Decided: DTCG 2025.10-based CDS profile, strict JSON `.tokens.json` — a Final Community Group Report, not a W3C Standard | [ADR-0001](docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md) · [Token Format Profile](docs/architecture/CDS_TOKEN_FORMAT_PROFILE.md) |
+| **Schemas and validation** | Five JSON Schema 2020-12 contracts, V1–V4 validation contract, RFC 8785 + SHA-256 digests (integrity aids, not signatures), offline validator — `Experimental` | [Validation Contract](docs/architecture/MACHINE_READABLE_VALIDATION_CONTRACT.md) · [Validator Architecture](docs/architecture/OFFLINE_TOKEN_VALIDATOR_ARCHITECTURE.md) |
+| **Semantic Status Foundation** | Five independent status axes, a fixed 25-value vocabulary with explicit `unknown`, the non-visual [`semantic/status`](tokens/semantic/status/semantic-status.tokens.json) source set — **`Candidate`** | [Foundation Contract](docs/foundations/SEMANTIC_STATUS_FOUNDATION_CONTRACT.md) · [DE/EN Terminology](docs/foundations/SEMANTIC_STATUS_TERMINOLOGY_DE_EN.md) |
+| **Visual foundation** | Nine families (colour, typography, space and size, layout and grid, shape, surface and elevation, iconography, motion boundary, theme and context) — all `Proposed`, **structure only** | [Visual Foundation Architecture](docs/architecture/VISUAL_FOUNDATION_ARCHITECTURE.md) |
+| **Reference and semantic token layers** | Contracts for primitives, roles and aliases, plus value-selection rules; no value and no identifier instance | [Reference](docs/architecture/VISUAL_REFERENCE_TOKEN_FOUNDATION.md) · [Semantic](docs/architecture/VISUAL_SEMANTIC_TOKEN_FOUNDATION.md) · [Value Selection Rules](docs/governance/VISUAL_TOKEN_VALUE_SELECTION_RULES.md) |
+| **Adaptive layout** | Container-relative named-range architecture (DEC-S-136); no range name, count or threshold | [Adaptive Layout Foundation](docs/architecture/ADAPTIVE_LAYOUT_AND_RESPONSIVE_FOUNDATION.md) |
+| **Theme model** | Resolver-modifier contexts; `Light` and `Dark` decided as equal supported contexts with no default and fail-closed resolution — no theme value exists | [Theme Architecture](docs/architecture/VISUAL_FOUNDATION_THEME_ARCHITECTURE.md) |
+
+**Colour is never status.** Status meaning stays with the Semantic Status Foundation;
+any visual encoding is redundant to it, never a substitute. **Focus visibility has no
+permitted mechanism of removal.**
+
+## Components & Patterns / Komponenten & Patterns
+
+**DE:** Komponenten (Schicht 4) sind in der Architektur als vertragstragende Einheiten
+definiert — mit Anatomie, Zuständen, Inhaltsregeln und Barrierefreiheitsverhalten.
+Patterns (Schicht 5) beschreiben wiederkehrende Abläufe wie Navigation, Feedback,
+sichere Aktionen und komplexe Daten. **Heute ist noch keine Komponente und kein Pattern
+spezifiziert.** Beide folgen den Foundations im Roadmap-Verlauf.
+
+**EN:** Components (Layer 4) are defined in the architecture as contract-bearing units —
+with anatomy, states, content rules and accessibility behaviour. Patterns (Layer 5)
+describe recurring flows such as navigation, feedback, safe actions and complex data.
+**No component and no pattern is specified today.** Both follow the foundations in the
+roadmap.
+
+The planned component arc — a universal component contract model, a StatusDisclosure
+contract, and core control and feedback sets (CDS-WP-026 … CDS-WP-029) — is **`Planned`,
+not active, and not authorized**. **No component-specific foundation may exist:** a
+token never exists because one component wants it.
+
+Details: [Design System Architecture](docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md) ·
+[Consumer Contract and Reconciliation Model](docs/architecture/CONSUMER_CONTRACT_AND_RECONCILIATION_MODEL.md) ·
+[Post-Candidate Development Roadmap](docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md)
+
+## Accessibility / Barrierefreiheit
+
+**DE:** Das Ziel ist **WCAG 2.2 Level AA** für den anwendbaren webbasierten Umfang. Das
+ist ein **Ziel, keine Konformitätsaussage** — keine Barrierefreiheitsaussage irgendeiner
+Stufe ist derzeit gültig. Barrierefreie Bausteine ergeben nicht automatisch ein
+barrierefreies Produkt: 49 der 55 anwendbaren Kriterien erfordern Beiträge von CDS
+**und** vom Consumer.
+
+**EN:** The target is **WCAG 2.2 Level AA** for the applicable web-based scope. It is a
+**target, not a conformance statement** — no accessibility claim of any level is
+currently valid. Accessible building blocks do not by themselves make an accessible
+product: 49 of the 55 applicable criteria need action from CDS **and** the consumer.
+
+- **Evidence levels AE-0 … AE-4.** Every CDS artifact is **AE-0**, except the
+  channel-independent Semantic Status source/contract family at admitted **AE-1**.
+- **Support baseline A11Y-BL-001** is declared — a test contract, not evidence. No test
+  has been run in any baseline environment.
+- **An automated check is never sufficient**, and accessibility cannot be waived by an
+  ordinary exception. CDS makes no legal or certification statement.
+
+Details: [Accessibility and Inclusive Design Policy](docs/governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md) ·
+[WCAG 2.2 AA Applicability Matrix](docs/governance/WCAG_2_2_AA_APPLICABILITY_MATRIX.md) ·
+[Evidence and Claims Model](docs/governance/ACCESSIBILITY_EVIDENCE_AND_CLAIMS_MODEL.md) ·
+[Accessibility Support Baseline](docs/governance/ACCESSIBILITY_SUPPORT_BASELINE.md) ·
+[Channel Profiles](docs/governance/ACCESSIBILITY_CHANNEL_PROFILES.md)
+
+## Evidence & Maturity / Evidenz & Reifegrad
+
+**DE:** Jedes Artefakt durchläuft einen eigenen Reifegrad-Lebenszyklus. Reifegrad,
+Release-Version und Veröffentlichungsstatus sind drei **unabhängige** Achsen. Evidenz ist
+an eine Quellrevision gebunden und überträgt sich nie auf eine andere.
+
+**EN:** Every artifact runs its own maturity lifecycle. Maturity, release version and
+publication state are three **independent** axes. Evidence is bound to a source revision
+and never transfers to another.
+
+```text
+Proposed · Exploratory · Experimental · Candidate · Stable · Deprecated · Removed
+```
+
+`Candidate` is mandatory before `Stable`.
+
+| Item | Current value |
 | --- | --- |
-| Core Product Consumer | A Core ecosystem product that may pursue comprehensive or profiled adoption. |
-| Associated Project Consumer | An associated project that may use selected foundations without full master-brand membership. |
-| Potential External Consumer | A possible future external user. Availability, licensing, and support are undecided. |
+| `Candidate` artifact families | **1** — Semantic Status Foundation, `semantic/status` at `semantic-status-rev-0002-candidate` |
+| Admitted evidence in force | `AE1-CDS-WP016-SEMSTATUS-004` at **AE-1**, source/contract scope only |
+| `Stable` artifacts | **none** |
+| Adoption, validation or conformance claims | **none valid** — by anyone, including CDS itself |
 
-Classification grants no brand endorsement, public availability, licensing
-rights, or support. It is a relationship model, not a brand architecture.
+**A Candidate award is not Stable, not a claim, not conformance and not a release.**
+Four graded claim types exist; `CDS certified` is prohibited.
 
-The per-area responsibility split between CDS and consumer projects is
-registered in the [Scope Boundary Matrix](docs/governance/SCOPE_BOUNDARY_MATRIX.md).
+Details: [Artifact Maturity Lifecycle](docs/governance/ARTIFACT_MATURITY_LIFECYCLE.md) ·
+[Adoption, Conformance and Claims Policy](docs/governance/ADOPTION_CONFORMANCE_AND_CLAIMS_POLICY.md) ·
+[Evidence, Traceability and Status Semantics](docs/architecture/EVIDENCE_TRACEABILITY_AND_STATUS_SEMANTICS.md) ·
+[Candidate Promotion Effectivity Record](docs/governance/SEMANTIC_STATUS_CANDIDATE_PROMOTION_EFFECTIVITY_RECORD.md)
 
-## Pilot consumer
+## Consumer Model / Consumer-Modell
 
-CoreOps is the first reference consumer of stable CDS foundations and provides
-adoption evidence.
+| Class | DE | EN |
+| --- | --- | --- |
+| **Core Product Consumer** | Ein Produkt des Core-Ökosystems; umfassende oder profilierte Übernahme möglich. | A Core ecosystem product; comprehensive or profiled adoption possible. |
+| **Associated Project Consumer** | Ein assoziiertes Projekt, das ausgewählte Foundations ohne volle Masterbrand-Zugehörigkeit nutzt. | An associated project using selected foundations without full master-brand membership. |
+| **Potential External Consumer** | Ein möglicher künftiger externer Nutzer; Verfügbarkeit, Lizenz und Support sind offen. | A possible future external user; availability, licensing and support are undecided. |
 
-CoreOps is a reference consumer — not the sole design target and not the sole
-source of requirements. SpeakCore, CastCore, AirCore, and future Core products
-are anticipated consumers.
+**DE:** CoreOps ist der erste Referenz-Consumer — nicht das einzige Designziel und nicht
+die einzige Anforderungsquelle; SpeakCore, CastCore, AirCore und künftige Core-Produkte
+sind erwartete Consumer. 40 Anforderungen (CR-001 … CR-040) wurden read-only aus
+committeten Revisionen erhoben. Consumer verantworten ihre eigene Komposition, Inhalte
+und Produktaussagen.
 
-CoreOps does not alone determine CDS architecture. CoreOps-specific solutions
-remain CoreOps-owned unless they are generalized and explicitly accepted
-through a CDS work package. The concrete pilot contract is defined in
-CDS-WP-004.
+**EN:** CoreOps is the first reference consumer — not the sole design target and not the
+sole source of requirements; SpeakCore, CastCore, AirCore and future Core products are
+anticipated consumers. 40 requirements (CR-001 … CR-040) were gathered read-only from
+committed revisions. Consumers own their composition, content and product claims.
 
-## Operating model
+The CoreOps pilot contract is committed but **not active**. Classification grants no
+brand endorsement, availability, licence or support, and **no Product Profile can be
+approved today**.
 
-This project follows the Nova Development Framework v1.1.0 — for the
-**development-process layer only** (**DEC-S-139**, prepared by CDS-WP-001B and
-**effective** at that package's Human-Maintainer exact-object integration commit
-`daa5f114c1b9c02afcfc0205149ca00dc4801d8d`).
-NDF gains no authority over CDS architecture, Decisions, values, maturity, evidence,
-claims, or release state.
+Details: [Consumer and Stakeholder Model](docs/governance/CONSUMER_AND_STAKEHOLDER_MODEL.md) ·
+[Consumer Requirements Traceability](docs/governance/CONSUMER_REQUIREMENTS_TRACEABILITY.md) ·
+[CoreOps Pilot Contract](docs/governance/COREOPS_PILOT_CONTRACT.md) ·
+[Exception and Product Profile Governance](docs/governance/EXCEPTION_AND_PRODUCT_PROFILE_GOVERNANCE.md)
+
+## NDF & CDS
+
+### Nova Development Framework
+
+**[NDF](https://github.com/KayKaspers/Nova-Development-Framework) owns the
+development process** of this repository: execution contracts, work-package execution,
+process verification, session and handoff rules, Skill routing and the Human-Maintainer
+gates (DEC-S-139). 38 pinned docs-only NDF v1.1.0 Skills live under `.claude/skills/`,
+together with four byte-verified NDF support files, so the process works offline.
+**NDF is not a runtime dependency** — no external NDF checkout is needed, and no CDS
+token source, schema or tool requires NDF to work.
+
+### Core Design System
+
+**CDS owns design-system semantics and design authority within its scope:**
+architecture, Decisions, ADRs, risks, visual values, Source Sets, maturity, evidence
+admission, validation, claims, publication and CDS release state. NDF gains no
+authority over any of them, and NDF release or version statements never state a CDS
+release.
+
+```text
+NDF ≠ CDS
+PROCESS GOVERNANCE ≠ DESIGN AUTHORITY
+```
+
+Details: [NDF Skills Provenance](docs/governance/NDF_SKILLS_PROVENANCE.md) ·
+[NDF Skills Inventory](project-system/NDF_SKILLS_INVENTORY.md) ·
+[Decision Index — DEC-S-139](docs/decisions/DECISION_INDEX.md)
+
+## Governance & Authority / Governance & Autorität
 
 | Role | Authority |
 | --- | --- |
-| Human Maintainer | Final normative approvals; exclusive authority over commit, push, merge, branch operations, tag, release, and publication. |
-| Nova | Strategy, architecture, work-package planning, review, project control, approval recommendations. |
-| Claude | Scoped local analysis and file work; no Git writes, no publication. |
-| Consumer projects | Requirements input and adoption evidence. |
-
-Claude Desktop with a locally connected repository is the execution environment
-for Claude work.
-
-### Skills-first operating mode
-
-**Active.** 38 locally verified docs-only Skills are available under
-`.claude/skills/`, pinned byte-identical to the released **NDF v1.1.0** tag
-(adopted by **CDS-WP-001B**, a lettered Skill-Maintenance insertion following the
-CDS-WP-001A bootstrap of NDF v1.0.0; **integrated and effective** at its
-Human-Maintainer exact-object commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`, lock state `lock-enforced`). Four NDF support files are held
-byte-identically beside them so the Skills resolve offline; they are NDF process
-material, not CDS policy. NDF release and version statements are **NDF-only** and
-never state a CDS release.
-
-Claude selects only the Skills relevant to a given work package rather than
-loading all of them. Skills provide procedural support; they never extend scope
-or override the work-package prompt or the Human Maintainer gates.
-
-- [NDF Skills Provenance](docs/governance/NDF_SKILLS_PROVENANCE.md)
-- [NDF Skills Inventory](project-system/NDF_SKILLS_INVENTORY.md)
-
-## Benchmark research
-
-Benchmark and differentiation research is complete. Ten established design
-systems were reviewed against 14 dimensions using official publisher sources
-only, and eight CDS differentiation hypotheses were assessed.
-
-**The research is not normative.** It is evidence and hypotheses — not
-decisions, principles, or technology recommendations. No hypothesis reached
-"Strongly supported", and no decision was added or changed by the research.
-
-- [Design System Benchmark](docs/research/DESIGN_SYSTEM_BENCHMARK.md)
-- [Benchmark Evidence Matrix](docs/research/BENCHMARK_EVIDENCE_MATRIX.md)
-- [Benchmark Source Register](docs/research/BENCHMARK_SOURCE_REGISTER.md)
-- [CDS Differentiation Hypotheses](docs/research/CDS_DIFFERENTIATION_HYPOTHESES.md)
-- [Research Limitations](docs/research/RESEARCH_LIMITATIONS.md)
-
-## Consumer requirements and the CoreOps pilot
-
-Requirements from real consumer projects are registered, and a bounded CoreOps
-pilot contract is defined.
-
-Three consumers were analyzed **read-only** at committed revisions: CoreOps as
-primary pilot consumer, with SpeakCore and CastCore as secondary cross-product
-evidence. 40 requirements (CR-001 … CR-040) are registered and traced to their
-source revisions.
-
-The CoreOps pilot is a **bounded representative slice**, not a redesign, across
-five groups: Application Foundation · Operations Overview · Inventory and Dense
-Data · State and Safety Patterns · Help, Accessibility and Localization.
-
-The eight research hypotheses were assessed against consumer evidence.
-
-**Boundaries:** evidence is committed documentation only — no user research,
-interviews, or usability testing took place. No requirement is an accepted CDS
-standard. The pilot contract is committed and is not active. **Nothing here
-constitutes CDS adoption, conformance, certification, or endorsement.**
-
-- [Consumer Requirements Model](docs/governance/CONSUMER_REQUIREMENTS_MODEL.md)
-- [Consumer Requirements Traceability](docs/governance/CONSUMER_REQUIREMENTS_TRACEABILITY.md)
-- [CoreOps Pilot Scope and Scenarios](docs/governance/COREOPS_PILOT_SCOPE_AND_SCENARIOS.md)
-- [CoreOps Pilot Contract](docs/governance/COREOPS_PILOT_CONTRACT.md)
-- [Consumer Validation Plan](docs/governance/CONSUMER_VALIDATION_PLAN.md)
-- [Consumer Evidence Register](docs/research/CONSUMER_EVIDENCE_REGISTER.md)
-- [Consumer Hypothesis Validation](docs/research/CONSUMER_HYPOTHESIS_VALIDATION.md)
-
-## Logical architecture
-
-The CDS logical architecture is defined. It describes structure, responsibility,
-authority, and flow — and **selects no technology and no design**.
-
-**Eight architecture layers:** Strategy and Governance · Brand and Identity ·
-Foundations and Tokens · Components · Patterns and Experiences · Channels and
-Communication · Distribution and Enablement · Evidence and Quality.
-
-**Source-of-Truth and Authority Model** — eight artifact classes with an explicit
-authority matrix. Only normative sources bind; generated artifacts, design-tool
-state, examples, and research never do. Conflicts fail closed, and recency
-confers no authority.
-
-**Conceptual token flow** — Reference → Semantic → Component → Product Profile
-Overrides → Channel/Platform Outputs. Semantic-first. No format, naming
-convention, or tool is chosen.
-
-**Product Profile and Reconciliation Model** — variation happens at approved
-extension points only, and may never redefine shared semantics, weaken
-accessibility, distort status truth, or break contracts. Consumers that already
-hold their own design decisions are **reconciled, not overwritten**.
-
-**Architecture traceability** — all 40 consumer requirements (CR-001 … CR-040)
-are mapped to the architecture, with deferred items named rather than hidden.
-
-**Boundaries:** this is structure, not implementation. Nothing is built, no
-component or token exists, no repository topology, tool, format, framework, or
-licence is selected, and no accessibility conformance level is claimed. Governance
-policy and an accessibility target now exist; the architecture still awaits design,
-implementation, and evidence.
-
-- [Design System Architecture](docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md)
-- [Source of Truth and Authority Model](docs/architecture/SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md)
-- [Token and Theme Architecture](docs/architecture/TOKEN_AND_THEME_ARCHITECTURE.md)
-- [Product Profile and Extension Model](docs/architecture/PRODUCT_PROFILE_AND_EXTENSION_MODEL.md)
-- [Artifact Distribution and Channel Model](docs/architecture/ARTIFACT_DISTRIBUTION_AND_CHANNEL_MODEL.md)
-- [Consumer Contract and Reconciliation Model](docs/architecture/CONSUMER_CONTRACT_AND_RECONCILIATION_MODEL.md)
-- [Evidence, Traceability and Status Semantics](docs/architecture/EVIDENCE_TRACEABILITY_AND_STATUS_SEMANTICS.md)
-- [Architecture Requirements Traceability](docs/architecture/ARCHITECTURE_REQUIREMENTS_TRACEABILITY.md)
-
-### Visual foundation architecture (CDS-WP-019)
-
-The Layer-3 visual foundation now has an architecture — **and still no values**.
-
-**Nine visual foundation families:** Colour · Typography · Space and Size · Layout
-and Grid · Shape · Surface and Elevation · Iconography · Motion (boundary only) ·
-Theme and Context Mechanism. Each is a separate artifact family; **maturity is never
-inherited**; all nine are `Proposed`.
-
-**It introduces no layer.** Visual constructs occupy positions in the existing
-eight-layer model and five-layer token flow. A theme is a **resolution context**,
-not a layer; a Product Profile enters at token-flow layer 4 only.
-
-**Boundaries that later work inherits:** **colour is never status**; an interaction
-state is never a semantic status; a theme **re-binds and never redefines**; roles
-are mandatory while values vary only at **named extension points** — and **that set
-is empty**; every semantic colour role declares its contrast obligation; and
-**focus visibility has no permitted mechanism of removal**.
-
-**Accessibility:** 14 WCAG 2.2 A/AA criteria map to Layer 3, and **all five
-criteria CDS owns without the consumer** are among them. Every visual artifact is
-**AE-0**; nothing has been evaluated; **no accessibility claim is valid**.
-
-**Honesty:** no registered consumer requirement asks for a palette, a type scale, a
-spacing scale, a radius scale, an elevation model, an icon library, or
-illustration. Four of the nine families carry **no consumer demand evidence at
-all**.
-
-- [Visual Foundation Architecture](docs/architecture/VISUAL_FOUNDATION_ARCHITECTURE.md) — entry point
-- [Colour](docs/architecture/VISUAL_FOUNDATION_COLOR_ARCHITECTURE.md) · [Typography](docs/architecture/VISUAL_FOUNDATION_TYPOGRAPHY_ARCHITECTURE.md) · [Spatial](docs/architecture/VISUAL_FOUNDATION_SPATIAL_ARCHITECTURE.md)
-- [Shape and Surface](docs/architecture/VISUAL_FOUNDATION_SHAPE_AND_SURFACE_ARCHITECTURE.md) · [Iconography and Imagery](docs/architecture/VISUAL_FOUNDATION_ICONOGRAPHY_AND_IMAGERY_ARCHITECTURE.md) · [Theme](docs/architecture/VISUAL_FOUNDATION_THEME_ARCHITECTURE.md)
-- [Accessibility Mapping](docs/governance/VISUAL_FOUNDATION_ACCESSIBILITY_MAPPING.md) · [Channel Mapping](docs/governance/VISUAL_FOUNDATION_CHANNEL_MAPPING.md)
-- [Brand and Product Profile Boundary](docs/governance/VISUAL_FOUNDATION_BRAND_AND_PROFILE_BOUNDARY.md) · [Governance and Lifecycle](docs/governance/VISUAL_FOUNDATION_GOVERNANCE_AND_LIFECYCLE.md)
-
-### Reference and semantic visual token foundation (CDS-WP-020)
-
-The two token layers under those families now have a **contract** — **and still no
-values and no names**.
-
-**A reference token is a value without a purpose.** The moment it acquires a role,
-a state, a status, a component, a product, a channel, or a context, it belongs at
-another layer. Ten obligations bind every one, and a reference token that satisfies
-all ten **is still not usable by anyone** — layer 1 is deliberately unusable alone.
-
-**A reference token cannot be accessible.** Accessibility is a property of a
-**pair, a composition, and a context**, none of which exists at layer 1. A colour
-primitive has no contrast ratio; a *pair of roles resolved in a context* does.
-
-**A semantic role is a named purpose that resolves to a value it does not own.**
-Twelve obligations bind every role. **A role that does not declare its contrast
-obligation and its pairings must not exist** — an unstated obligation is how a theme
-or a profile silently breaks conformance capability with nobody able to detect it.
-
-**An alias transports a value, never an obligation.** A role never holds a raw
-literal, never aliases another role, and an unresolved alias **fails closed**.
-
-**No value without a recorded reason someone else can disagree with.** Ten grounds
-are inadmissible on their own: taste, imitation of another design system, a consumer
-asking, a tool default, a generated artifact, an example or fixture, a validator
-pass, prior existence, schedule pressure, and making a failing check pass.
-
-**Result: `DECISION_REQUIRED`.** **The machinery was always sufficient; the
-decisions were not.** Nothing in the format profile, the schemas, the validator, or
-the serialization contract blocks a visual source set — **seven normative choices
-did**: the colour space, the admitted `$type` set, the visual source-set identity
-and topology, the identifier grammar, scale topology, the role vocabulary and family
-granularity, and the sequencing against the theme model.
-
-**Three of those seven are now answered** — by **DEC-S-128** (one canonical `srgb`
-colour representation, OKLCH derivational only), **DEC-S-130** (an explicit,
-minimal, closed `$type` admission profile: `color`, `dimension`, `number`) and
-**DEC-S-131** (the **Source Set** as the independently evaluable unit;
-**AGGREGATED is not MATURE**), with **DEC-S-129** adding **WCAG 2.2** as the
-contrast evaluation authority and **ADR-0004** recording the architecture rationale.
-**All five are effective**, at the Human-Maintainer exact-byte integration commit
-`42a568d823de3388e45af62967546f13ad67eff6`.
-
-**And the value half is still gated.** The Step-9 package answers OD-4 and
-OD-7, partially answers OD-5, and policy-answers OD-6A — and **VP-3, VP-5, VP-6 and
-VP-7 remain unsatisfied for every family**, with VP-2 unsatisfied for typeface
-identity, weight identity and composites. **Only VP-4 moves**, for VF-1, VF-2,
-VF-3, VF-5 and VF-6, and an identifier grammar with fixed roots creates **no
-identifier instance**. So **no visual value may be selected**. **Visual values: 0 ·
-visual source sets: 0 · visual Candidate families: 0 · Stable: 0.**
-
-- [Visual Reference Token Foundation](docs/architecture/VISUAL_REFERENCE_TOKEN_FOUNDATION.md) · [Visual Semantic Token Foundation](docs/architecture/VISUAL_SEMANTIC_TOKEN_FOUNDATION.md)
-- [Visual Token Value Selection Rules](docs/governance/VISUAL_TOKEN_VALUE_SELECTION_RULES.md)
-- [Visual Token Foundation Open Decisions](docs/roadmap/VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md) — **non-normative**; OD-1 … OD-7 (OD-1 … OD-3 answered and effective; OD-4 and OD-7 answered, OD-5 partially answered, OD-6A policy-answered, OD-6B answered by existing authority — all four **effective**; the concrete role vocabulary, the per-family topology parameters and VF-1 tonal topology stay open)
-- [ADR-0004 — Visual Token Representation and Source Identity Architecture](docs/decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md) — **`Accepted`, effective at commit `42a568d8…`**
-- [ADR-0005 — Visual Identifier Grammar and Identity Spaces](docs/decisions/ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md) — **`Accepted`, effective at commit `2cb244e8…`**; covers **DEC-S-132** only
-
-### Adaptive layout and responsive foundation (CDS-WP-021)
-
-**Contract only. No visual value, and no identifier.** CDS-WP-021 defines the
-technology-neutral Layer-3 adaptive-layout and responsive foundation of **VF-4
-Layout and Grid** — the reusable spatial vocabulary and the structural context
-model — **without absorbing the Layer-5 pattern strategy**.
-
-**The layer split is confirmed**, discharging the obligation the Spatial
-Architecture placed on this work package and answering the deferred finding
-`F-019-03`:
-
-> **Layer 3 owns the spatial vocabulary and the structural context model.**
-> **Layer 5 owns the product or pattern response selected for a context.**
-> **Layer 6 owns channel-imposed geometry and degradation constraints.**
-
-**`RANGE ≠ BEHAVIOUR` · `CONTEXT ≠ PATTERN` · `FOUNDATION ≠ COMPOSITION`.**
-**CR-004 remains registered at Layer 5**, and no traceability row is re-mapped — the
-roadmap places CDS-WP-021 at Layer 3 because it owns the VF-4 **vocabulary**, while
-CR-004 asks for a **strategy**. Both are correct at once.
-
-**The model reconciles the two binding sources that pulled apart.** RR-6 requires
-the model to survive in non-web channels; the channel table says ranges do not
-apply in paginated ones. **Both hold only if the reference frame generalizes and
-the range construct does not** — so a spatial context declares a
-channel-determined frame, and **continuity decides whether a range applies at all.**
-Ranges apply in product UI and documentation; **page and slide geometry replace
-them** in PDF and presentations, as a **declared limitation, never a silent drop**.
-
-**Accessibility is incorporated structurally and claimed nowhere.** Orientation,
-reading order, reflow, resize, text spacing, target sizing, localization, and the
-rule that **no meaning may be carried by proximity or position alone** all bind —
-and the rows that need a renderer are routed to **CDS-WP-031**, not asserted.
-**`TARGET ≠ CLAIM` · `STRUCTURAL CONTRACT ≠ RENDERING EVIDENCE`.** Every VF-3 and
-VF-4 artifact remains **AE-0**.
-
-**It first returned `DECISION_REQUIRED`, and that was the honest result.** Existing
-authority excluded none of the four admissible response mechanisms, so CDS-WP-021
-escalated the choice rather than making it. **That result is execution history and
-is not rewritten.**
-
-**The Human Maintainer decided it on 2026-09-06: the Container-Relative Named-Range
-Foundation.** The primary reference frame is a **declared Adaptation Container** — a
-technology-neutral spatial reference boundary, never a device class or a viewport
-identity, and satisfiable by a root or application context, so that **`viewport`,
-`desktop`, `tablet` and `mobile` never become Core identifiers**. The Core Layer-3
-vocabulary is **named discrete available-space ranges**: a foundation needs a
-**term**, not a transition, and a named span is declarable, policeable, reviewable
-and migratable in a way a continuous relation is not. **Continuous transformation
-stays permitted downstream** where separately authorized — **`CORE RANGE IDENTITY ≠
-DOWNSTREAM RESPONSE BEHAVIOUR`** — and it **needs no new `$type` and alters
-DEC-S-130 in no way**; the closed `$type` profile is **not** the reason.
-**Fixed-geometry channels keep their own geometry**, and **`SPATIAL CONTEXT ≠ THEME
-RESOLUTION CONTEXT`**, with any composition reserved to **CDS-WP-022**.
-
-This is recorded as **`DEC-S-136`** with **`ADR-0006`**, both **effective at the
-Human-Maintainer integration commit `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`**.
-**The architecture
-is decided; the vocabulary is not** — no range name, count, threshold or boundary is
-selected. **`WP021-D2` — whether VF-4 acquires a technical root and source-set
-identity — is DEFERRED, not rejected**, and has **no Decision and no ADR of its own** —
-**`DEC-S-137` and `ADR-0007` record `WP022-D1`, not `WP021-D2`, and are
-unrelated to it** — with **no `RISK-099`**, and **no work package is activated**.
-
-- [Adaptive Layout and Responsive Foundation](docs/architecture/ADAPTIVE_LAYOUT_AND_RESPONSIVE_FOUNDATION.md)
-- [ADR-0006 — Adaptive Spatial Context and Named-Range Architecture](docs/decisions/ADR-0006-ADAPTIVE_SPATIAL_CONTEXT_AND_NAMED_RANGE_ARCHITECTURE.md) — **`Accepted` and effective at `a6bd7bf0…`**
-- [Visual Foundation Theme Architecture](docs/architecture/VISUAL_FOUNDATION_THEME_ARCHITECTURE.md) — VF-9; T-1 … T-10, TM-1 … TM-12, CA, CI, CS, CE, CF, CB
-- [ADR-0007 — Theme Resolution and Context-Evidence Architecture](docs/decisions/ADR-0007-THEME-RESOLUTION-AND-CONTEXT-EVIDENCE-ARCHITECTURE.md) — **DEC-S-137 only**; **`Accepted` and effective at `23914ecc…`**
-
-## Governance
-
-The CDS governance model is defined. It states who decides what, and under which
-conditions — and **selects no licence, publication state, technology, or design**.
-
-**Six roles** — Human Maintainer (final approval; exclusive Git, release,
-publication, and licensing authority) · Nova (governance and risk control,
-review) · Claude (scoped executor) · Consumer Maintainer · Contributor ·
-Evidence Reviewer. Creating, implementing, or using an artifact grants no
-authority.
-
-**Two governance tracks** — Standard and Elevated. Ceremony scales with risk;
-the mandatory gates do not.
-
-**Seven maturity states** — Proposed · Exploratory · Experimental · Candidate ·
-Stable · Deprecated · Removed. Candidate is mandatory before Stable. Maturity,
-release version, and publication state are three **independent** axes.
-**Exactly one artifact family is currently Candidate** — the Semantic Status
-Foundation / `semantic/status` — and **no artifact is Stable.**
-
-**Versioning and compatibility** — MAJOR.MINOR.PATCH with an honest pre-1.0
-policy. Compatibility is declared across eight contract axes; an unassessed axis
-is never reported as compatible. `latest` is not a valid identity.
-
-**Contribution and exception governance** — a controlled acceptance process where
-keeping something consumer-local is a first-class outcome. Exceptions are
-bounded, owned, and expiring.
-
-**Adoption claims** — four graded, scope- and version-bound claim types. The
-claim `CDS certified` is prohibited. **No adoption, validation, or conformance
-claim is currently valid — by anyone, including CDS itself.**
-
-**Risk ownership is finalized** — the Human Maintainer is accountable for all 48
-risks; Nova is the Risk Controller.
-
-**Publication state: `Private Development`.** Licensing is decided per ten
-artifact classes, and **no licence has been selected for any of them**. A
-publication-state change requires an explicit gate that cannot currently be
-satisfied.
-
-- [Governance Operating Model](docs/governance/GOVERNANCE_OPERATING_MODEL.md)
-- [Source Conflict Resolution Policy](docs/governance/SOURCE_CONFLICT_RESOLUTION_POLICY.md)
-- [Artifact Maturity Lifecycle](docs/governance/ARTIFACT_MATURITY_LIFECYCLE.md)
-- [Versioning, Compatibility and Deprecation Policy](docs/governance/VERSIONING_COMPATIBILITY_AND_DEPRECATION_POLICY.md)
-- [Contribution and Acceptance Model](docs/governance/CONTRIBUTION_AND_ACCEPTANCE_MODEL.md)
-- [Exception and Product Profile Governance](docs/governance/EXCEPTION_AND_PRODUCT_PROFILE_GOVERNANCE.md)
-- [Adoption, Conformance and Claims Policy](docs/governance/ADOPTION_CONFORMANCE_AND_CLAIMS_POLICY.md)
-- [Risk Governance Model](docs/governance/RISK_GOVERNANCE_MODEL.md)
-- [Licensing and Publication Decision Model](docs/governance/LICENSING_AND_PUBLICATION_DECISION_MODEL.md)
-- [Release and Change Control Policy](docs/governance/RELEASE_AND_CHANGE_CONTROL_POLICY.md)
-
-## Accessibility
-
-The CDS **accessibility and inclusive-design policy is defined**. It sets a
-target and an evidence discipline — and **claims nothing**.
-
-**Target: WCAG 2.2 Level AA** for the applicable web-based scope, resolving CR-024
-at policy level. This is a **target, not current conformance** — no CDS artifact
-has been evaluated against the target, every artifact is at evidence level **AE-0**
-except the Semantic Status source/contract family at admitted **AE-1**, and **no
-accessibility claim of any level is valid**, by anyone.
-
-**Applicability matrix** — all Level A and AA success criteria are mapped: 56
-listed, 55 applicable (the obsolete 4.1.1 excluded by the standard itself). No
-pass/fail judgement is made. **49 of the 55 need action from both CDS and the
-consumer** — accessible artifacts do not compose into an accessible product by
-themselves.
-
-**Five evidence levels** — AE-0 (not assessed) through AE-4 (consumer complete
-process). Automated checking alone is never sufficient; AE-3 requires a declared
-support baseline — now **declared and committed** as **A11Y-BL-001** (CDS-WP-010):
-three tiers, a 14-entry environment matrix, an evidence strategy, a maintenance
-policy, and a defect/regression model. The baseline is a **test contract, not
-evidence** — **no test has been run in any baseline environment**, and every artifact
-remains AE-0 apart from the one admitted source-level AE-1 scope.
-
-**Six channel profiles** — only web UI and web documentation carry a WCAG target;
-non-web channels each need their own profile and are never presented as WCAG
-conformant. **No channel artifact is Candidate- or Stable-eligible today**, and no
-channel evidence exists. The one Candidate family is **channel-independent**
-(DEC-S-125) and confers nothing on any channel.
-
-Accessibility cannot be waived by an ordinary exception, and CDS makes no legal or
-certification statement.
-
-- [Accessibility and Inclusive Design Policy](docs/governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md)
-- [Accessibility Responsibility Model](docs/governance/ACCESSIBILITY_RESPONSIBILITY_MODEL.md)
-- [Accessibility Requirements Baseline](docs/governance/ACCESSIBILITY_REQUIREMENTS_BASELINE.md)
-- [WCAG 2.2 AA Applicability Matrix](docs/governance/WCAG_2_2_AA_APPLICABILITY_MATRIX.md)
-- [Accessibility Evidence and Claims Model](docs/governance/ACCESSIBILITY_EVIDENCE_AND_CLAIMS_MODEL.md)
-- [Accessibility Channel Profiles](docs/governance/ACCESSIBILITY_CHANNEL_PROFILES.md)
-- [Accessibility Limitations and Exception Policy](docs/governance/ACCESSIBILITY_LIMITATIONS_AND_EXCEPTION_POLICY.md)
-- [CoreOps Pilot Accessibility Criterion](docs/governance/COREOPS_PILOT_ACCESSIBILITY_CRITERION.md)
-- [Accessibility Architecture Alignment](docs/architecture/ACCESSIBILITY_ARCHITECTURE_ALIGNMENT.md)
-- [Accessibility Support Baseline (A11Y-BL-001)](docs/governance/ACCESSIBILITY_SUPPORT_BASELINE.md)
-- [Accessibility Environment and Scope Matrix](docs/governance/ACCESSIBILITY_ENVIRONMENT_AND_SCOPE_MATRIX.md)
-- [Accessibility Baseline Maintenance Policy](docs/governance/ACCESSIBILITY_BASELINE_MAINTENANCE_POLICY.md)
-- [Accessibility Evidence Strategy](docs/governance/ACCESSIBILITY_EVIDENCE_STRATEGY.md)
-- [Accessibility Defect and Regression Model](docs/governance/ACCESSIBILITY_DEFECT_AND_REGRESSION_MODEL.md)
-
-## Machine-readable source and token format
-
-The **normative machine-readable source format is decided** (CDS-WP-011), and
-**nothing is implemented**. CDS adopts the **Design Tokens Community Group Technical
-Reports 2025.10** (Format, Color, Resolver) — a **Final Community Group Report, not a
-W3C Standard** — as the external basis, in **strict JSON (`.tokens.json`)**, under a
-**CDS Token Format Profile**, with **JSON Schema 2020-12** as the future
-profile-schema foundation. Source sets are layered (Reference → Semantic → Component →
-Product Profile); channel outputs are generated and non-normative; references and
-resolution **fail closed**; four validation layers separate syntax, DTCG, CDS profile,
-and semantic/governance checks.
-
-Its **value-neutral bootstrap is implemented** (CDS-WP-012): **four CDS-owned JSON Schema
-Draft 2020-12 contracts** (token document, source-set manifest, resolver document,
-validation case; stable `tag:` identifiers, offline), the `io.github.kaykaspers.cds`
-extension payload, **six synthetic positive and nine synthetic negative fixtures**, a
-**15-case validation-case matrix** binding every fixture to expected V1–V4 outcomes, an
-explicit **V1–V4 Validation Contract** (duplicate keys fail V1; no aggregate score), and
-the **RFC 8785 + SHA-256** deterministic-serialization decision. **The fixtures are
-synthetic, test-only, and non-normative — not real design tokens.**
-
-The **offline token profile validator is implemented and executed** (CDS-WP-013,
-Experimental): `python -m tools.cds_validator` on Python 3.11+ with exactly pinned
-`jsonschema` 4.26.0 and `rfc8785` 0.1.4 ([requirements-validator.lock](requirements-validator.lock)),
-a single duplicate-key-rejecting loader, a local five-schema registry (including the
-new [validation-result schema](schemas/cds-validation-result.schema.json)), layered
-V1–V4 execution, and RFC 8785 + SHA-256 digests. The fixture harness executed
-**15/15 cases with 15/15 expected/actual matches** (71/71 unit tests); evidence lives
-in [artifacts/validation/](artifacts/validation/) and the
-[Execution Review](docs/reviews/OFFLINE_TOKEN_VALIDATOR_EXECUTION_REVIEW.md).
-**V2 covers a bounded DTCG subset — this is not a full-DTCG conformance statement.
-The evidence is executor-produced and was independently reviewed by CDS-WP-016
-(Independent Review PASS); the validator and bootstrap remain Experimental, not
-Candidate.**
-
-- [ADR-0001 — Machine-Readable Token Source Format](docs/decisions/ADR-0001-MACHINE_READABLE_TOKEN_SOURCE_FORMAT.md)
-- [ADR-0002 — Deterministic JSON Serialization](docs/decisions/ADR-0002-DETERMINISTIC_JSON_SERIALIZATION.md)
-- [ADR-0003 — Offline Token Validator Implementation Stack](docs/decisions/ADR-0003-OFFLINE_TOKEN_VALIDATOR_IMPLEMENTATION_STACK.md)
-- [ADR-0004 — Visual Token Representation and Source Identity Architecture](docs/decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md) — **`Accepted`, effective at commit `42a568d8…`**
-- [Offline Token Validator Architecture](docs/architecture/OFFLINE_TOKEN_VALIDATOR_ARCHITECTURE.md) ·
-  [Validator Usage](docs/operations/OFFLINE_TOKEN_VALIDATOR_USAGE.md)
-- [Dependency Source Register](docs/research/OFFLINE_VALIDATOR_DEPENDENCY_SOURCE_REGISTER.md) ·
-  [Stack Evaluation](docs/research/OFFLINE_VALIDATOR_STACK_EVALUATION.md)
-- [Machine-Readable Source Model](docs/architecture/MACHINE_READABLE_SOURCE_MODEL.md)
-- [CDS Token Format Profile](docs/architecture/CDS_TOKEN_FORMAT_PROFILE.md)
-- [Token Reference, Resolution and Validation Model](docs/architecture/TOKEN_REFERENCE_RESOLUTION_AND_VALIDATION_MODEL.md)
-- [Token Metadata, Provenance and Identity Model](docs/architecture/TOKEN_METADATA_PROVENANCE_AND_IDENTITY_MODEL.md)
-- [Machine-Readable Validation Contract](docs/architecture/MACHINE_READABLE_VALIDATION_CONTRACT.md)
-- [Deterministic Serialization and Digest Model](docs/architecture/DETERMINISTIC_SERIALIZATION_AND_DIGEST_MODEL.md)
-- [Token Format Evaluation](docs/research/TOKEN_FORMAT_EVALUATION.md) ·
-  [Source Register](docs/research/TOKEN_FORMAT_SOURCE_REGISTER.md)
-- [Implementation Plan](docs/roadmap/MACHINE_READABLE_SOURCE_IMPLEMENTATION_PLAN.md)
-
-## Semantic Status Foundation
-
-The **first concrete CDS design foundation is defined** (CDS-WP-014, Experimental
-at that time; **now `Candidate` / `Approved`**): the channel-independent
-**Semantic Status Foundation Contract** — **five independent
-status axes** (`condition` · `severity` · `confidence` · `freshness` · `evidence`)
-with a fixed **25-value vocabulary** (`unknown` explicit on every axis), **ten
-invariants** (no aggregate health score; unknown/stale/unverified never represented
-as success), explicit **combination and conflict rules**, a text-first
-**communication/accessibility/localization contract** (DE/EN semantic parity, no
-colour-/icon-only meaning), and a value-neutral **Semantic Status Token Contract**.
-**No visual value and no component exists.** Since CDS-WP-015 the
-**machine-readable source set [`semantic/status`](tokens/semantic/status/semantic-status.tokens.json)**
-exists (25 non-visual identity tokens, manifest, resolver) with executed
-**24/24 validation-case evidence**, a
-[25/25 DE/EN terminology mapping](docs/foundations/SEMANTIC_STATUS_TERMINOLOGY_DE_EN.md),
-four executor-produced reviews, and a
-[Candidate Dossier](docs/operations/SEMANTIC_STATUS_CANDIDATE_DOSSIER.md) —
-**independently reviewed by CDS-WP-016 (PASS, Candidate Recommendation GO); the
-Nova Candidate Maturity Review then returned NO-GO on the Candidate Accessibility
-Gate, whose remediation was executed, independently reviewed, and admitted at AE-1
-for the source scope.**
-
-**The Candidate gate is now closed for this family.** Fresh revision-bound evidence
-`AE1-CDS-WP016-SEMSTATUS-004` was admitted at **AE-1**, the Human Maintainer
-approved Candidate, and the exact-byte Promotion Commit
-`22fa0710e2b75df22e7b420c2f9d86bbe67b2777` made it effective on 2026-08-19. The
-current source revision is **`semantic-status-rev-0002-candidate`**, maturity
-**`Candidate`**, approval **`Approved`**.
-
-**Candidate is bounded validation only and is never normative.** It is **not
-Stable**, not a claim, not conformance, and not a release; there is no AE-2, AE-3,
-AE-4, channel evidence, or consumer evidence, and there is still **no visual
-value**. DEC-S-124 continues to prohibit presenting any artifact as carrying a
-maturity or approval it does not hold.
-
-- [Semantic Status Foundation Contract](docs/foundations/SEMANTIC_STATUS_FOUNDATION_CONTRACT.md)
-- [Status Axis Vocabulary](docs/foundations/STATUS_AXIS_VOCABULARY.md)
-- [Status Composition and Conflict Rules](docs/foundations/STATUS_COMPOSITION_AND_CONFLICT_RULES.md)
-- [Status Communication and Accessibility Contract](docs/foundations/STATUS_COMMUNICATION_AND_ACCESSIBILITY_CONTRACT.md)
-- [Semantic Status Token Contract](docs/foundations/SEMANTIC_STATUS_TOKEN_CONTRACT.md)
-- [First Semantic Status Candidate Plan](docs/roadmap/FIRST_SEMANTIC_STATUS_CANDIDATE_PLAN.md) ·
-  [Readiness Review](docs/reviews/SEMANTIC_STATUS_FOUNDATION_READINESS_REVIEW.md)
-
-## Work packages
-
-- **Completed:** CDS-WP-001 — Project Governance and NDF Bootstrap
-- **Completed:** CDS-WP-001A — NDF Skills Bootstrap
-- **Completed:** CDS-WP-002 — Concept and Scope Registration
-- **Completed:** CDS-WP-003 — Benchmark and Differentiation Research
-- **Completed:** CDS-WP-004 — Consumer Requirements and CoreOps Pilot Contract
-- **Completed:** CDS-WP-005 — Design System Architecture
-- **Completed:** CDS-WP-006 — Governance, Versioning, and Contribution Model
-- **Completed:** CDS-WP-007 — Accessibility and Inclusive Design Policy
-- **Completed:** CDS-WP-008 — Foundation Milestone Review
-- **Completed:** CDS-WP-009 — Operating Enablement and Pre-Candidate Readiness
-- **Completed:** CDS-WP-010 — Accessibility Support Baseline and Evidence Strategy
-- **Completed:** CDS-WP-011 — Machine-Readable Source and Token Format Decision
-- **Completed:** CDS-WP-012 — Machine-Readable Source Bootstrap and Validation Contract
-- **Completed:** CDS-WP-013 — Offline Token Profile Validator and Fixture Harness
-- **Completed:** CDS-WP-014 — Semantic Status Foundation Contract and First Candidate Plan
-- **Completed:** CDS-WP-015 — Semantic Status Foundation Source Set and Candidate Evidence
-- **Completed:** **CDS-WP-016 — Semantic Status Foundation Independent Evidence Review
-  and Candidate Gate** — closed by the Human-Maintainer commit
-  `1fc53ae5afa40807e1950171ab700b0860ee581e`. Its review work is
-  **executed** (Independent Review PASS, Candidate Recommendation GO), the **Nova
-  Candidate Maturity Review returned NO-GO** (Candidate Accessibility Gate unmet),
-  and the Human-Maintainer-authorized **Candidate Accessibility Gate Remediation**
-  was executed as internal rework of the same work package. The remediation and its
-  clean-HEAD evidence were **independently reviewed** and
-  `AE1-CDS-WP016-SEMSTATUS-002` was **admitted at AE-1 for the source scope only**
-  at `semantic-status-rev-0001`. A further internal rework — the **Candidate
-  Finalization Governance Rework** (DEC-S-126) — then defined the promotion
-  sequence, and that sequence completed: `AE1-CDS-WP016-SEMSTATUS-004` **admitted at
-  AE-1**, **Human-Maintainer Candidate approval granted**, and the exact-byte
-  **Promotion Commit `22fa0710e2b75df22e7b420c2f9d86bbe67b2777`** performed on
-  2026-08-19. **Candidate is now YES** for that one family at
-  `semantic-status-rev-0002-candidate`; every other artifact remains AE-0 and no
-  artifact is Stable.
-- **CDS-WP-017 — Post-WP-016 Roadmap, Authority and Scope Reconciliation:**
-  **closed** by the Human-Maintainer commit
-  `df9b8f21ff3bde4607b1c9ff7fdcbe3144366040`. It reconciled the state reached after
-  CDS-WP-016 with the accepted forward planning basis so that exactly one active
-  future sequence exists, and recorded the twelve development arcs, milestones
-  **M1 … M12**, standing gates, and requirement classification model. It created
-  **no** design, token, component, evidence, maturity, claim, Product Profile,
-  pilot, release, or publication effect.
-- **Completed:** **CDS-WP-018 — Deferred Governance and Repository Hygiene
-  Reconciliation** — a bounded documentary pass that reconciled stale current-state
-  and mirror text against the normative sources, corrected already-decided areas
-  still listed as open, and repaired repository hygiene. Closed by commit
-  `e5d5d492619071655ba956713980d1ee261d9213`.
-- **Completed:** **CDS-WP-019 — Core Visual Foundation Architecture.**
-  **Architecture only:** nine visual foundation families, fourteen invariants, a
-  naming model, the machine-readable representation boundary, and the accessibility,
-  channel, brand, and governance boundaries. It created **no** visual value, token
-  source, schema, validator rule, component, brand, or Product Profile; produced and
-  admitted **no** evidence; changed **no** maturity; added **no** ADR, Decision, or
-  risk; **renamed no phase**; and **registered no capability**. Closed by commit
-  `538fbccbf6f554de3b872e9fb75a70d13318feb6`.
-- **Completed:** **CDS-WP-020 — Reference and Semantic Token Foundation**,
-  authorized separately by the Human Maintainer on 2026-08-26, **executed with
-  result `DECISION_REQUIRED`**, and **integrated** by the Human-Maintainer commit
-  `42a568d823de3388e45af62967546f13ad67eff6`. **Closure was recorded in the
-  CDS-WP-020 closure and routing object and became effective at that object's
-  Human-Maintainer integration commit `3f37ecfe54dad82f8064aaff521ff9e3aec65fd7`.** **Contract only:** the
-  [Visual Reference Token Foundation](docs/architecture/VISUAL_REFERENCE_TOKEN_FOUNDATION.md)
-  (token-flow layer 1), the
-  [Visual Semantic Token Foundation](docs/architecture/VISUAL_SEMANTIC_TOKEN_FOUNDATION.md)
-  (token-flow layer 2), the
-  [Visual Token Value Selection Rules](docs/governance/VISUAL_TOKEN_VALUE_SELECTION_RULES.md),
-  and the **non-normative**
-  [Visual Token Foundation Open Decisions](docs/roadmap/VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md)
-  register (**OD-1 … OD-7**). It created **no** visual value, **no** identifier, and
-  no token source, schema, validator rule, test, component, brand, or Product
-  Profile; produced and admitted **no** evidence; changed **no** maturity;
-  **renamed no phase**; and **registered no capability**. The **CDS Phase Transition
-  Governance Package** (**DEC-S-127**) sat between CDS-WP-019 closure and this
-  authorization and changed **project-phase authority only**.
-  - **Decision Integration Pass — 2026-08-27, effective at commit `42a568d8…`.**
-    Separately authorized after Nova adjudicated OD-1 … OD-7, it prepared
-    **DEC-S-128** (one canonical `srgb` colour representation; OKLCH derivational
-    only), **DEC-S-129** (**WCAG 2.2** as contrast evaluation authority,
-    full-precision comparison, APCA and other methods informational only),
-    **DEC-S-130** (an explicit, minimal, closed `$type` admission profile —
-    `color`, `dimension`, `number`; explicit own typing; no composites;
-    `profileVersion` stays `1`), **DEC-S-131** (the **Source Set** as the
-    independently evaluable unit; **AGGREGATED is not MATURE**), and
-    [**ADR-0004**](docs/decisions/ADR-0004-VISUAL_TOKEN_REPRESENTATION_AND_SOURCE_IDENTITY_ARCHITECTURE.md).
-    They answer **OD-1, OD-2 and OD-3**. They create
-    **no** visual value and **no** identifier, admit **no** evidence, change **no**
-    maturity, add **no** risk entry — **`RISK-099` is not required** — and **did not
-    themselves close CDS-WP-020**. Effectivity occurred only at the Human-Maintainer
-    exact-byte integration commit `42a568d823de3388e45af62967546f13ad67eff6`.
-    *(Their effectivity qualification was not reconciled by the closure and routing
-    pass; the separately authorized post-integration effectiveness reconciliation
-    has since done so — see `F-020C-01` in the
-    [Post-Candidate Development Roadmap](docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).)*
-  - **Closure and routing — `FR-N-03` RESOLVED BY EXPLICIT AUTHORING-WP
-    DESTINATION.** Nova adjudicated the routing with Human-Maintainer approval —
-    **Option 2**: **AUTHOR is not VALIDATE.** The concrete machine-readable Visual
-    Token Source and Value Authoring work is routed to **`CDS-WP-020A`** and is
-    **not** absorbed into CDS-WP-024.
-- **Decided and EFFECTIVE:** the **CDS Step-9 Decision
-  Integration Pass** (2026-09-05). The Human Maintainer decided **OD-4, OD-5, OD-6A
-  and OD-7**, and this pass prepared **DEC-S-132** (family-rooted identifier
-  grammar with a declared `qualifier` position, the layer kept out of every token
-  path, two separate identity spaces, and the fixed roots `color`, `typography`,
-  `space`, `shape`, `surface` with the ten source-set identities
-  `reference/color` … `semantic/surface`), **DEC-S-133** (per-family scale
-  ownership under the unchanged ST-1 … ST-7 contract, **no universal cross-family
-  base**, and `SCALE TOPOLOGY ≠ SCALE VALUES`), **DEC-S-134** (a cross-consumer role
-  **admission rule** only — the concrete vocabulary stays open), **DEC-S-135** (no
-  default role binding before CDS-WP-022, which precedes context-sensitive value
-  selection), and
-  [**ADR-0005**](docs/decisions/ADR-0005-VISUAL_IDENTIFIER_GRAMMAR_AND_IDENTITY_SPACES.md)
-  for DEC-S-132 only. **OD-6B needed no Decision** — VF-1 … VF-9 remain separate
-  artifact families under AF-1, AF-3 and AF-4, and **BATCHED REVIEW ≠ SHARED
-  MATURITY**. All five are **effective**, at the Human-Maintainer exact integration
-  commit `2cb244e889c1a6b5a278afb233995a0379b5d9ef`. They create **no**
-  visual value, **no** identifier instance, **no** Source Set and **no** role, admit
-  **no** evidence, change **no** maturity, add **no** risk, and **activate no work
-  package.**
-- **Planned:** **`CDS-WP-020A` — Visual Token Source Authoring and Source Set
-  Realization** — **not active, not authorized, work not started.** The `FR-N-03`
-  destination for the value and machine-readable half of the visual token
-  foundation. An **inserted** identifier on the existing **`CDS-WP-001A`**
-  precedent: **no work package was renumbered.** It owns visual source sets,
-  machine-readable source authoring at token-flow layers 1 and 2, source-set
-  identity, revision, provenance, and family × layer topology — and, only once
-  **OD-4** and **OD-5** are decided and **VP-1 … VP-7** are satisfied, identifier
-  realization and concrete normative values. **OD-4 is now answered and OD-5
-  partially answered by the Step-9 package, but VP-3, VP-5, VP-6 and VP-7
-  remain unsatisfied**, so its authorization prerequisites are **not** met. It
-  **never** acquires validator
-  implementation, validation authority, conformance determination, evidence
-  admission, maturity promotion, Product Profile activation, pilot activation,
-  release authority, `Stable` declaration, or runtime renderer implementation.
-  **CDS-WP-024 keeps its validation, render-gate, and conformance boundary
-  unchanged.**
-- **Completed:** **CDS-WP-021 — Adaptive Layout and Responsive
-  Foundation** — **executed with result `COMPLETE WITH NOTES`**, **integrated** at
-  `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`, and **closed effective at the
-  Human-Maintainer exact-object integration commit
-  `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`**. **Contract only.** It confirms the
-  **Layer 3 / Layer 5 / Layer 6** ownership split — **`F-019-03` answered** and
-  **CR-004 unchanged at Layer 5** — and records the spatial-context model, the
-  **Adaptation Container**, the
-  responsive-range obligations, the grid, container and content-width contracts, and
-  the density and adaptation interaction. It creates **no** visual value,
-  identifier, responsive-range name, range count or threshold, VF-4 technical root,
-  source set, token source,
-  schema, validator rule, test, component, brand, or Product Profile; admits **no**
-  evidence; changes **no** maturity; and adds **no** risk. **`WP021-D1` is
-  APPROVED** — the **Container-Relative Named-Range Foundation** — and recorded as
-  **`DEC-S-136`** with **`ADR-0006`**, both **effective at that commit**;
-  **`WP021-D2` is
-  DEFERRED**, leaving the **VF-4 technical root and Source Set identity OPEN** with
-  **no Decision and no ADR** — **closure resolves it in no way**, and **`DEFERRED
-  OPEN QUESTION ≠ INCOMPLETE WORK PACKAGE`**.
-- **Completed:** **`CDS-WP-022` — Theme and Environmental Presentation Model** —
-  authorized for execution by a separate, explicit Human-Maintainer act. Closing
-  CDS-WP-021 authorized no successor — **`CLOSED ≠ SUCCESSOR AUTHORIZED`** and
-  **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`** — and neither did the `DEC-S-135`
-  recommendation that named it: **`SEQUENCED NEXT ≠ AUTHORIZED`**. It was **executed
-  with result `COMPLETE WITH NOTES`**, after first returning `DECISION_REQUIRED` and
-  escalating **`WP022-D1` … `WP022-D5`** — **report keys, not governance
-  identifiers** — which the **Human Maintainer decided on 2026-09-12**. The decisions
-  are recorded as **`DEC-S-137`** (with **`ADR-0007`**, covering `DEC-S-137` only)
-  and **`DEC-S-138`**, all **`Accepted` and effective at the Human-Maintainer
-  exact-object integration commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b`** —
-  **136/6 until it, 138/7 from it, risks 98 throughout**. It **created no theme
-  instance, no machine-readable context identifier, no default alias, and no value,
-  identifier, role, Source Set, schema, validator rule, test, or fixture**. **It is
-  `Completed` / `Closed`**, closed by a further, separate Human-Maintainer
-  authorization, **effective at the Human-Maintainer exact-object integration commit
-  `ab81e197374bb9f9479105b4261cb4485a491b2a`** (2026-09-28);
-  **closure changes neither the effectivity of `DEC-S-137` and `DEC-S-138` nor the
-  status of `ADR-0007`**, and **it authorizes no successor and satisfies no
-  `CDS-WP-020A` prerequisite beyond the `DEC-S-135` theme-mechanism sequencing
-  condition** — **`THEME GATE SATISFIED ≠ CDS-WP-020A AUTHORIZED`**.
-- **Last authorized:** **CDS-WP-001B — NDF v1.1.0 Skills and Framework Baseline
-  Maintenance** (an Elevated, lettered Skill-Maintenance insertion; process-only;
-  independently reviewed `PASS WITH NOTES`, Nova-accepted, and integrated by the
-  Human-Maintainer exact-object commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`, at which `DEC-S-139`, the NDF
-  v1.1.0 process baseline and the `lock-enforced` state became effective; **`EXECUTED ≠
-  ACCEPTED`**). It is recorded by its closure object with target lifecycle
-  **`Completed` / `Closed`**, effective only at that object's Human-Maintainer
-  exact-object integration commit; it authorizes no successor. **Current work
-  package: NONE. Design work package currently authorized:
-  NONE** — from the Human-Maintainer exact-object
-  integration commit `ab81e197374bb9f9479105b4261cb4485a491b2a` (2026-09-28), at which
-  the CDS-WP-022 closure became effective. Closing
-  CDS-WP-022 authorizes no successor — **`CLOSED ≠ SUCCESSOR AUTHORIZED`** and
-  **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`**.
-- **Planned:** **`CDS-WP-020A`** and **CDS-WP-023 … CDS-WP-053** — **not active, not
-  authorized, work not started.** They remain inactive until separately authorized
-  by the Human Maintainer. **OD-7 is answered by `DEC-S-135`: CDS-WP-022 precedes
-  context-sensitive value selection**, and **CDS-WP-022 was authorized by a separate
-  act and is recorded as `Completed` / `Closed`** — **SEQUENCED NEXT ≠ AUTHORIZED**,
-  then and now. **Value selection remains unauthorized — VP-7 stays `UNSATISFIED`** —
-  because **no currently authorized work package may select visual values**:
-  CDS-WP-022 never carried value-selection authority, and **its closure creates
-  none** — **`CLOSED ≠ VALUE SELECTION AUTHORIZED`**.
-
-The full controlled roadmap is in
-[project-system/WORK_PACKAGES.md](project-system/WORK_PACKAGES.md); the forward
-arcs, milestones, and gates are in the
-[Post-Candidate Development Roadmap](docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
-
-## Foundation Milestone Review
-
-The Foundation / Pre-Design phase has been **reviewed** (CDS-WP-008). Across twelve
-dimensions (55 criteria), three governance dry runs, four-axis Candidate readiness,
-an eight-criterion CoreOps pilot entry matrix, and all 48 risks, the review found
-**zero Foundation blockers** and recommends the milestone outcome **`GO WITH
-NOTES`**.
-
-The review was a **recommendation, not an approval**. The Human Maintainer
-subsequently **accepted `GO WITH NOTES`** — by committing CDS-WP-008 and initiating
-CDS-WP-009 — so the **Foundation is now Closed with Notes** (see the
-[Foundation Closure Record](docs/governance/FOUNDATION_CLOSURE_RECORD.md)). Closure
-promoted, designed, and published nothing: **at that milestone no artifact was
-Candidate or Stable**, no claim was made, no licence or technology was selected,
-and the publication state remained `Private Development`. Of those, what still
-holds today is that **no artifact is Stable, no claim is valid, no licence is
-selected, and publication remains `Private Development`**; the first Candidate came
-later, through the separately gated CDS-WP-016 sequence. The mandatory notes —
-governance affordability, an
-accessibility support baseline, risk actionability, licensing, role staffing, and
-user-research honesty — are carried into the Pre-Candidate Operating Enablement
-phase.
-
-- [Foundation Milestone Review](docs/reviews/FOUNDATION_MILESTONE_REVIEW.md)
-- [Foundation Closure Record](docs/governance/FOUNDATION_CLOSURE_RECORD.md)
-- [Foundation Completeness Matrix](docs/reviews/FOUNDATION_COMPLETENESS_MATRIX.md)
-- [Governance Affordability and Operating Readiness](docs/reviews/GOVERNANCE_AFFORDABILITY_AND_OPERATING_READINESS.md)
-- [Foundation Candidate and Pilot Readiness](docs/reviews/FOUNDATION_CANDIDATE_AND_PILOT_READINESS.md)
-- [Foundation Open Gaps and Dependencies](docs/reviews/FOUNDATION_OPEN_GAPS_AND_DEPENDENCIES.md)
-- [Next-phase Recommendation](docs/reviews/NEXT_PHASE_RECOMMENDATION.md)
-- [Foundation Reference Integrity Review](docs/reviews/FOUNDATION_REFERENCE_INTEGRITY_REVIEW.md)
-- [Pre-Candidate Operating Plan](docs/roadmap/PRE_CANDIDATE_OPERATING_PLAN.md)
-
-## Registers
-
-- Decisions: DEC-S-001 … DEC-S-140 (140 effective; **`DEC-S-140` became effective
-  at the Human-Maintainer exact-object integration commit
-  `e87ff702f8d96a8850b18b93454028a094c6b80a`**; 139 until then; **`DEC-S-139` was
-  prepared by CDS-WP-001B and became effective at its integration commit
-  `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`**; 138 until that commit) — 6
-  strategic foundation decisions,
-  6 strategic scope decisions, 8 consumer and pilot scope decisions,
-  12 logical architecture decisions, 16 governance, lifecycle and publication
-  decisions, 12 accessibility and inclusive design decisions, 4 operating
-  enablement and pre-candidate decisions, 8 accessibility support baseline and
-  evidence decisions, 10 machine-readable source and token format decisions,
-  10 machine-readable bootstrap and validation decisions, 12 offline validator
-  implementation decisions, 10 semantic status foundation decisions, 10 semantic
-  status source and evidence decisions, 1 accessibility / maturity / channel
-  boundary decision, 1 candidate finalization / maturity / evidence transition
-  decision, 1 phase transition decision, 4 visual token representation, evaluation
-  authority and source identity decisions, 4 visual identifier, scale ownership,
-  role admission and theme sequencing decisions, 1 adaptive spatial context and
-  responsive architecture decision, 2 theme resolution, context-evidence and
-  environmental selection decisions, 1 framework process-baseline and Skill
-  supply-chain decision, 1 visual role vocabulary and materialization-boundary
-  decision · ADRs: 7 (ADR-0001, ADR-0002,
-  ADR-0003, ADR-0004, ADR-0005, ADR-0006, ADR-0007)
-  - **Effectivity:** **DEC-S-128 … DEC-S-131 and ADR-0004 are effective**, at the
-    Human-Maintainer exact-byte integration commit
-    `42a568d823de3388e45af62967546f13ad67eff6` of the CDS-WP-020 Decision
-    Integration Pass; **DEC-S-132 … DEC-S-135 and ADR-0005 are effective**, at the
-    Human-Maintainer exact integration commit
-    `2cb244e889c1a6b5a278afb233995a0379b5d9ef` of the CDS Step-9 Decision
-    Integration Pass; **DEC-S-136 and ADR-0006 are effective**, at the
-    Human-Maintainer exact-object integration commit
-    `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9` of the CDS-WP-021 object;
-    **DEC-S-137, DEC-S-138 and ADR-0007 are effective**, at the Human-Maintainer
-    exact-object integration commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b` of the
-    CDS-WP-022 object. The
-    **effective** register is **DEC-S-001 … DEC-S-140 (140)** — **DEC-S-140 is
-    effective** at the Human-Maintainer exact-object integration commit
-    `e87ff702f8d96a8850b18b93454028a094c6b80a`; **DEC-S-139, a
-    process-baseline decision prepared by CDS-WP-001B, is effective** at the
-    Human-Maintainer exact-object integration commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d` —
-    with **7 ADRs (ADR-0001, ADR-0002, ADR-0003, ADR-0004, ADR-0005, ADR-0006,
-    ADR-0007)**.
-- Risks: RISK-001 … RISK-098 (98) — 89 Monitored; 9 Mitigating (RISK-031, RISK-040,
-  RISK-044, RISK-066, RISK-067, RISK-068, RISK-069, RISK-071, RISK-098); owner
-  model finalized; no risk accepted or closed
-
-## Governance documents
-
-- [Concept and Scope](docs/governance/CONCEPT_AND_SCOPE.md) — normative scope source
-- [Consumer and Stakeholder Model](docs/governance/CONSUMER_AND_STAKEHOLDER_MODEL.md)
-- [Scope Boundary Matrix](docs/governance/SCOPE_BOUNDARY_MATRIX.md)
-- [Project Charter](docs/governance/PROJECT_CHARTER.md)
-- [Decision Index](docs/decisions/DECISION_INDEX.md)
-- [Risk Register](docs/risks/RISK_REGISTER.md)
-- [Project Profile](project-system/PROJECT_PROFILE.md)
-- [Foundation Context Pack](project-system/CONTEXT_PACK_FOUNDATION.md)
-- [Work Packages](project-system/WORK_PACKAGES.md)
-- [Next Phase](project-system/NEXT_PHASE.md)
-- [Project Brain](project-brain/PROJECT_BRAIN.md)
-- [Claude working instructions](CLAUDE.md)
-
-## Repository status
-
-This repository is initially private.
-
-Licensing, public-release policy, contribution policy, and compatibility
-commitments remain intentionally undecided.
+| **Human Maintainer** | Final normative approvals; exclusive authority over commit, push, merge, branches, tags, release, publication and licensing. |
+| **Nova (ChatGPT)** | The ChatGPT-based planning, architecture and review role: strategy, work-package planning, review, risk control and approval recommendations. |
+| **Claude** | Scoped local analysis and file work inside an authorized work package; no Git writes, no publication. |
+| **Consumer projects** | Requirements input and adoption evidence. |
+
+**DE:** Jede Änderung läuft auf einem von zwei Tracks — **Standard** oder **Elevated**.
+Der Aufwand skaliert mit dem Risiko, die Pflichten nicht. Bei Quellkonflikten gilt
+fail-closed: stoppen, dokumentieren, eskalieren — nie nach Aktualität entscheiden.
+
+**EN:** Every change runs on one of two tracks — **Standard** or **Elevated**. Ceremony
+scales with risk; obligations do not. Source conflicts fail closed: stop, record,
+escalate — never resolve by recency.
+
+```text
+EXECUTED ≠ ACCEPTED
+PREPARED ≠ EFFECTIVE
+TARGET ≠ CLAIM
+CANDIDATE ≠ STABLE
+AGGREGATED ≠ MATURE
+CLOSED ≠ SUCCESSOR AUTHORIZED
+SEQUENCED NEXT ≠ AUTHORIZED
+```
+
+Details: [Governance Operating Model](docs/governance/GOVERNANCE_OPERATING_MODEL.md) ·
+[Source of Truth and Authority Model](docs/architecture/SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md) ·
+[Source Conflict Resolution Policy](docs/governance/SOURCE_CONFLICT_RESOLUTION_POLICY.md) ·
+[Release and Change Control Policy](docs/governance/RELEASE_AND_CHANGE_CONTROL_POLICY.md) ·
+[Risk Governance Model](docs/governance/RISK_GOVERNANCE_MODEL.md) ·
+[Foundation Closure Record](docs/governance/FOUNDATION_CLOSURE_RECORD.md)
+
+## Current Development Status / Aktueller Entwicklungsstand
+
+**Phase:** Post-Candidate Foundation & Design-System Enablement (DEC-S-127) — an
+operating period, not a maturity state. **Foundation / Pre-Design:** Closed with Notes.
+
+| Item | State |
+| --- | --- |
+| Decisions · ADRs · Risks | **140** effective · **7** · **98** (89 `Monitored`, 9 `Mitigating`; none accepted or closed) |
+| Current work package · design work package · successor | **none** · **none** · **none** |
+| `CDS-WP-020A` — Visual Token Source Authoring | `Planned` · not authorized (staged S1 · S2 · S3; no stage authorized) |
+| `CDS-WP-023` — Semantic Status Visual Binding Contract | `Planned` · not authorized |
+| Visual values · Visual Source Sets | **0** · **0** |
+| `Candidate` families · `Stable` artifacts | **1** (Semantic Status) · **0** |
+| Publication · release · licence | `Private Development` · none · none selected |
+
+**DE:** Dies ist eine Momentaufnahme. Der vollständige Lebenszyklus jedes Work Packages,
+jede Entscheidung und jeder Effektivitätsnachweis stehen in den verlinkten Registern —
+nicht in dieser README.
+
+**EN:** This is a snapshot. The full lifecycle of every work package, every decision and
+every effectivity record lives in the linked registers — not in this README.
+
+Details: [Work Packages](project-system/WORK_PACKAGES.md) ·
+[Post-Candidate Development Roadmap](docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md) ·
+[Decision Index](docs/decisions/DECISION_INDEX.md) ·
+[Risk Register](docs/risks/RISK_REGISTER.md) ·
+[CHANGELOG](CHANGELOG.md) ·
+[Project Brain](project-brain/PROJECT_BRAIN.md)
+
+## Work Packages
+
+**DE:** Arbeit wird in Work Packages zerlegt, jedes mit eigenem Scope, erlaubten Dateien
+und Akzeptanzkriterien. Jedes beginnt erst mit einer expliziten Freigabe des Human
+Maintainers — eine Empfehlung oder Reihenfolge ist keine Freigabe.
+
+**EN:** Work is cut into work packages, each with its own scope, allowed files and
+acceptance criteria. Each begins only with an explicit Human-Maintainer authorization —
+a recommendation or a sequence is not an authorization.
+
+| Completed | Focus |
+| --- | --- |
+| CDS-WP-001 … CDS-WP-009 | Foundation: governance bootstrap, concept and scope, benchmark research, consumer requirements, architecture, governance model, accessibility policy, milestone review, operating enablement |
+| CDS-WP-010 … CDS-WP-016 | Machine-readable basis and first Candidate: support baseline, token format, bootstrap, offline validator, Semantic Status foundation, source set, Candidate gate |
+| CDS-WP-017 … CDS-WP-018 | Roadmap, authority and hygiene reconciliation |
+| CDS-WP-019 … CDS-WP-022 | Visual foundation architecture: visual architecture, reference and semantic token layers, adaptive layout, theme model |
+| CDS-WP-001A · CDS-WP-001B | NDF Skills bootstrap and NDF v1.1.0 process-baseline maintenance |
+
+**Planned, not active, not authorized:** `CDS-WP-020A` and CDS-WP-023 … CDS-WP-053,
+across roadmap arcs including semantic presentation, components, accessibility and
+evidence, profiles and consumers, experience, distribution, and quality and release.
+
+Details: [Work Packages](project-system/WORK_PACKAGES.md) ·
+[Post-Candidate Development Roadmap](docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md) ·
+[Next Phase](project-system/NEXT_PHASE.md)
+
+## Documentation Map / Dokumentationsübersicht
+
+| I want to … / Ich möchte … | Start here / Einstieg |
+| --- | --- |
+| get oriented quickly / mich schnell orientieren | [Foundation Context Pack](project-system/CONTEXT_PACK_FOUNDATION.md) (summary, not normative) · [Project Profile](project-system/PROJECT_PROFILE.md) |
+| understand scope and ownership / Scope und Zuständigkeit verstehen | [Concept and Scope](docs/governance/CONCEPT_AND_SCOPE.md) · [Scope Boundary Matrix](docs/governance/SCOPE_BOUNDARY_MATRIX.md) · [Project Charter](docs/governance/PROJECT_CHARTER.md) |
+| understand the architecture / die Architektur verstehen | [Design System Architecture](docs/architecture/DESIGN_SYSTEM_ARCHITECTURE.md) · [Source of Truth and Authority Model](docs/architecture/SOURCE_OF_TRUTH_AND_AUTHORITY_MODEL.md) · [Architecture Requirements Traceability](docs/architecture/ARCHITECTURE_REQUIREMENTS_TRACEABILITY.md) |
+| explore the visual foundation / die visuelle Foundation erkunden | [Visual Foundation Architecture](docs/architecture/VISUAL_FOUNDATION_ARCHITECTURE.md) · [Colour](docs/architecture/VISUAL_FOUNDATION_COLOR_ARCHITECTURE.md) · [Typography](docs/architecture/VISUAL_FOUNDATION_TYPOGRAPHY_ARCHITECTURE.md) · [Spatial](docs/architecture/VISUAL_FOUNDATION_SPATIAL_ARCHITECTURE.md) · [Theme](docs/architecture/VISUAL_FOUNDATION_THEME_ARCHITECTURE.md) |
+| work with tokens, schemas and the validator / mit Tokens, Schemas und Validator arbeiten | [Machine-Readable Source Model](docs/architecture/MACHINE_READABLE_SOURCE_MODEL.md) · [schemas/](schemas/) · [Validator Usage](docs/operations/OFFLINE_TOKEN_VALIDATOR_USAGE.md) · [Serialization and Digest Model](docs/architecture/DETERMINISTIC_SERIALIZATION_AND_DIGEST_MODEL.md) |
+| check accessibility / Barrierefreiheit prüfen | [Accessibility Policy](docs/governance/ACCESSIBILITY_AND_INCLUSIVE_DESIGN_POLICY.md) · [Responsibility Model](docs/governance/ACCESSIBILITY_RESPONSIBILITY_MODEL.md) · [Support Baseline](docs/governance/ACCESSIBILITY_SUPPORT_BASELINE.md) |
+| review evidence / Evidenz prüfen | [Semantic Status Candidate Dossier](docs/operations/SEMANTIC_STATUS_CANDIDATE_DOSSIER.md) · [AE1-004 Admission Record](docs/governance/SEMANTIC_STATUS_AE1_004_ADMISSION_RECORD.md) · [Validator Execution Review](docs/reviews/OFFLINE_TOKEN_VALIDATOR_EXECUTION_REVIEW.md) · [artifacts/validation/](artifacts/validation/) |
+| follow decisions, ADRs and risks / Entscheidungen, ADRs und Risiken nachvollziehen | [Decision Index](docs/decisions/DECISION_INDEX.md) · [ADR-0001 … ADR-0007](docs/decisions/) · [Risk Register](docs/risks/RISK_REGISTER.md) · [Critical Risk Action Register](docs/operations/CRITICAL_RISK_ACTION_REGISTER.md) |
+| run a change / eine Änderung durchführen | [Foundation Operating Playbook](docs/operations/FOUNDATION_OPERATING_PLAYBOOK.md) · [Standard](docs/operations/STANDARD_CHANGE_DOSSIER_TEMPLATE.md) / [Elevated](docs/operations/ELEVATED_CHANGE_DOSSIER_TEMPLATE.md) change dossiers |
+| follow the roadmap / die Roadmap verfolgen | [Work Packages](project-system/WORK_PACKAGES.md) · [Post-Candidate Development Roadmap](docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md) · [Visual Token Foundation Open Decisions](docs/roadmap/VISUAL_TOKEN_FOUNDATION_OPEN_DECISIONS.md) |
+| read the research / die Recherche lesen | [Design System Benchmark](docs/research/DESIGN_SYSTEM_BENCHMARK.md) · [Consumer Evidence Register](docs/research/CONSUMER_EVIDENCE_REGISTER.md) · [Research Limitations](docs/research/RESEARCH_LIMITATIONS.md) — evidence, not decisions |
+| use the project identity / die Projektidentität nutzen | [Branding](branding/README.md) — repository artwork, not design tokens |
+
+## Repository Structure / Repository-Struktur
+
+```text
+Core-Design-System/
+├── .claude/skills/       38 pinned docs-only NDF v1.1.0 Skills (process support)
+├── artifacts/            executor-produced validation evidence
+├── branding/             repository identity artwork: marks, logo, banner, social preview
+├── docs/
+│   ├── architecture/     logical, token, visual, layout and theme architecture
+│   ├── decisions/        Decision Index and ADRs
+│   ├── foundations/      Semantic Status Foundation contracts
+│   ├── governance/       scope, governance, accessibility and lifecycle policies, records
+│   ├── operations/       playbook, dossier templates, evidence and approval records
+│   ├── research/         benchmark and source research (not normative)
+│   ├── reviews/          milestone, readiness and execution reviews
+│   ├── risks/            Risk Register
+│   └── roadmap/          development roadmap and plans
+├── framework/            part of the byte-verified NDF v1.1.0 support snapshot (process material)
+├── project-brain/        work-package notes and project memory
+├── project-system/       project profile, work packages, context pack, Skills manifest
+├── schemas/              CDS-owned JSON Schema 2020-12 contracts
+├── tests/                validator tests and synthetic, non-normative fixtures
+├── tokens/               normative machine-readable sources (semantic/status)
+├── tools/                offline token profile validator (tools.cds_validator)
+├── CHANGELOG.md
+├── CLAUDE.md             binding working instructions for Claude
+└── requirements-validator.lock
+```
+
+## Language / Sprache
+
+**DE:** Normative Repository-Dokumentation ist englisch; Dateinamen und Identifier sind
+englisch, Projekt- und Produktnamen werden nicht übersetzt. Diese README stellt Deutsch
+und Englisch abschnittsweise nebeneinander. Die Semantic-Status-Terminologie ist für
+DE/EN vollständig abgebildet.
+
+**EN:** Normative repository documentation is written in English; file names and
+identifiers are English, and project and product names are not translated. This README
+pairs German and English section by section. The Semantic Status terminology is fully
+mapped for DE/EN.
+
+Details: [Semantic Status Terminology DE/EN](docs/foundations/SEMANTIC_STATUS_TERMINOLOGY_DE_EN.md)
+
+## Project Status / Projektstatus
+
+**DE:** Veröffentlichungsstatus ist `Private Development`. Es gibt kein Release und keinen
+Tag, für keine Artefaktklasse ist eine Lizenz gewählt, und Beitragsmodell,
+Veröffentlichungspolitik und Kompatibilitätszusagen sind bewusst offen. Registrierter
+Scope ist keine Verfügbarkeit.
+
+**EN:** The publication state is `Private Development`. There is no release and no tag,
+no licence is selected for any artifact class, and the contribution model, public-release
+policy and compatibility commitments remain intentionally undecided. Registered scope is
+not availability.
+
+Still open until an explicitly authorized work package decides them: logo architecture ·
+colours · typography · icons, illustration and imagery · theme **values** (the `Light`
+and `Dark` contexts are decided, their values are not) · design tool · component
+framework · token build system · documentation platform · package architecture and
+repository split · licence, public release and contribution model · compatibility
+commitments · concrete product signatures.
+
+> [!NOTE]
+> The [repository identity artwork](branding/README.md) is project presentation only. It
+> decides no logo architecture, establishes no endorsement or product-family
+> relationship, selects no colour, and creates no design token.
+
+Details: [Licensing and Publication Decision Model](docs/governance/LICENSING_AND_PUBLICATION_DECISION_MODEL.md) ·
+[Versioning, Compatibility and Deprecation Policy](docs/governance/VERSIONING_COMPATIBILITY_AND_DEPRECATION_POLICY.md) ·
+[Contribution and Acceptance Model](docs/governance/CONTRIBUTION_AND_ACCEPTANCE_MODEL.md)

@@ -27,3 +27,5 @@
 *.woff2 binary
 *.ttf binary
 *.otf binary
+*.zip binary
+branding/licenses/*.txt text eol=lf -whitespace

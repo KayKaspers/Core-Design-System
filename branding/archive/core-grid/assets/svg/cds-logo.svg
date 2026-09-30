@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="cds-logo-title cds-logo-desc">
+  <title id="cds-logo-title">Core Design System (CDS) logo</title>
+  <desc id="cds-logo-desc">Horizontal lock-up on a dark background: the Core Grid mark on the left, a three by three grid of squares with a solid core in the centre, four connected modules around it and outlined corners; on the right the words Core Design System and the line Foundations, Components, Experiences. Repository identity artwork; not a CDS design token or normative visual value.</desc>
+  <rect width="1200" height="320" rx="28" fill="#0D0B1E"/>
+  <g transform="translate(11 0) scale(0.625)">
+    <g fill="none" stroke="#3A3570" stroke-width="6">
+      <rect x="75" y="75" width="98" height="98" rx="19"/>
+      <rect x="339" y="75" width="98" height="98" rx="19"/>
+      <rect x="75" y="339" width="98" height="98" rx="19"/>
+      <rect x="339" y="339" width="98" height="98" rx="19"/>
+    </g>
+    <g fill="#4C42C9">
+      <rect x="204" y="72" width="104" height="104" rx="22"/>
+      <rect x="336" y="204" width="104" height="104" rx="22"/>
+      <rect x="204" y="336" width="104" height="104" rx="22"/>
+      <rect x="72" y="204" width="104" height="104" rx="22"/>
+    </g>
+    <g fill="#5EE3F2">
+      <rect x="248" y="170" width="16" height="40" rx="4"/>
+      <rect x="302" y="248" width="40" height="16" rx="4"/>
+      <rect x="248" y="302" width="16" height="40" rx="4"/>
+      <rect x="170" y="248" width="40" height="16" rx="4"/>
+    </g>
+    <path fill="#8B7BFF" fill-rule="evenodd" d="M226 204H286A22 22 0 0 1 308 226V286A22 22 0 0 1 286 308H226A22 22 0 0 1 204 286V226A22 22 0 0 1 226 204ZM239 228H273A11 11 0 0 1 284 239V273A11 11 0 0 1 273 284H239A11 11 0 0 1 228 273V239A11 11 0 0 1 239 228Z"/>
+    <rect x="236" y="236" width="40" height="40" rx="8" fill="#EEEBFF"/>
+  </g>
+  <rect x="330" y="72" width="2" height="176" fill="#2B2752"/>
+  <g font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', sans-serif">
+    <text x="372" y="160" font-size="70" font-weight="700" fill="#F3F1FF" letter-spacing="-0.5">Core Design System</text>
+    <text x="374" y="214" font-size="27" font-weight="400" fill="#B9B2F0" letter-spacing="1">Foundations · Components · Experiences</text>
+  </g>
+</svg>

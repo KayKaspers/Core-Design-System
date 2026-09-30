@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="cds-mark-mono-white-title cds-mark-mono-white-desc">
+<title id="cds-mark-mono-white-title">Core Design System — light monochrome mark</title>
+<desc id="cds-mark-mono-white-desc">Single-colour light Negative Core mark for dark backgrounds, on a transparent canvas. Repository identity artwork, not normative CDS visual tokens.</desc>
+<path d="M448 244H359.277A100 100 0 1 0 359.277 268H448V352Q448 448 352 448H160Q64 448 64 352V160Q64 64 160 64H352Q448 64 448 160Z" fill="#F4F7FA" transform="translate(0 0) scale(1.0000000)"/>
+</svg>
