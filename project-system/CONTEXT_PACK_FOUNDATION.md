@@ -99,9 +99,10 @@ Nova-accepted, it was integrated by the Human-Maintainer exact-object commit
 **`daa5f114c1b9c02afcfc0205149ca00dc4801d8d`**, at which **`DEC-S-139`**, the NDF v1.1.0 process baseline and the
 `lock-enforced` state **became effective**; **`EXECUTED ≠ ACCEPTED`**, **`PASS ≠
 INTEGRATED`** and **`PREPARED DECISION ≠ EFFECTIVE DECISION`** held until that commit.
-It is recorded by its closure object with target lifecycle **`Completed` /
-`Closed`**, effective only at that object's Human-Maintainer exact-object integration
-commit (**`INTEGRATED ≠ CLOSED`**), and authorizes **no** successor. **Current work
+It is **`Completed` / `Closed`**, with the closure **effective at** the
+Human-Maintainer exact-object integration commit
+`17b191416031d847573687b4ebce99fcea929386` of its closure object (**`INTEGRATED ≠
+CLOSED`**), and authorizes **no** successor. **Current work
 package: NONE.**
 
 **No design work package is currently authorized** from the Human-Maintainer exact-object
@@ -294,7 +295,7 @@ this is a **summary, never a normative source**.)*
 | --- | --- | --- |
 | CDS-WP-001 | Project Governance and NDF Bootstrap | Charter, authority model, DEC-S-001…006, RISK-001…005, initial roadmap. |
 | CDS-WP-001A | NDF Skills Bootstrap | 38 verified docs-only NDF v1.0.0 Skills (the pin at that time; the live pin is v1.1.0 — see CDS-WP-001B); provenance, manifest, inventory; Skills-first mode active. |
-| CDS-WP-001B | NDF v1.1.0 Skills and Framework Baseline Maintenance | Pin re-based to NDF v1.1.0 (7 changed / 32 unchanged pack files), four-file NDF support snapshot, lock migrated (43 records, `lock-enforced`), DEC-S-139 effective at `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`; process-only. Closure recorded by its closure object, effective at that object's integration commit. |
+| CDS-WP-001B | NDF v1.1.0 Skills and Framework Baseline Maintenance | Pin re-based to NDF v1.1.0 (7 changed / 32 unchanged pack files), four-file NDF support snapshot, lock migrated (43 records, `lock-enforced`), DEC-S-139 effective at `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`; process-only. Closure effective at the Human-Maintainer exact-object integration commit of its closure object, `17b191416031d847573687b4ebce99fcea929386`. |
 | CDS-WP-002 | Concept and Scope Registration | Concept and scope, consumer model, boundary matrix, DEC-S-007…012, RISK-006…009, this pack. |
 | CDS-WP-003 | Benchmark and Differentiation Research | Ten systems reviewed against 14 dimensions from official sources; HYP-001…008 assessed; RISK-010…013. **Non-normative.** No decision changed. |
 | CDS-WP-004 | Consumer Requirements and CoreOps Pilot Contract | 3 consumers analyzed at committed revisions; CR-001…040 registered and traced; CoreOps pilot Groups A–E with 9 scenarios; pilot contract; HYP consumer layer; DEC-S-013…020; RISK-014…019. |

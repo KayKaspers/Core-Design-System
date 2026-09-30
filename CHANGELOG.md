@@ -855,6 +855,36 @@ released and no release is announced.
 
 ### Changed
 
+- **Post-integration reconciliation — Public Identity & README integration and
+  CDS-WP-001B closure effectivity recorded; two findings routed.** A narrow
+  reconciliation pass, **not a work package**. **Public Identity & README:** the
+  Human-Maintainer commit **`ccc7b2d421b13e35efe1fd311b03082cf024f9b0`**
+  (`feat(branding): establish public identity and README`) integrated the object that
+  the Public Identity & README entry above described as *"integration pending"*. That
+  entry was truthful when written and is **not rewritten**; the live wording in
+  `branding/README.md` and `branding/BRAND_GUIDE.md` now records the integration, and
+  the portable branding kit ZIP and its `SHA256SUMS.txt` were regenerated from them by
+  the documented procedure. The integration implies **no release or tag**, no
+  independent-review outcome is recorded by these documents, and publication stays
+  `Private Development`. **CDS-WP-001B:** its closure object was integrated by the
+  Human-Maintainer exact-object commit **`17b191416031d847573687b4ebce99fcea929386`**
+  (2026-09-29; parent `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`), at which the closure
+  became effective; the live carriers now record it as **`Completed` / `Closed`** with
+  that commit (**finding `F-001BC-01`**, on the `F-022C-01` precedent). The CDS-WP-001B
+  entries above and below remain point-in-time records and are unchanged;
+  **`DEC-S-139` and its effectivity commit `daa5f114…` are unchanged**, CDS-WP-001B is
+  **not** reopened, and closing it authorized no successor. **Routed, not resolved:**
+  **`F-PIR-01`** acknowledges the historical font-download authorization gap already
+  documented in `branding/FONT_PROVENANCE.md` — no retrospective approval is asserted,
+  and verified provenance of the current assets is not proof that the original download
+  was authorized; **`F-PIR-02`** registers the open Layer-2 question of any Blackhole
+  Dynamics parent-brand, master-brand or product-family relationship as unresolved, with
+  **Core Vision** as the authority for that ecosystem-level decision and CDS only
+  implementing an authorized result. Both live in the roadmap findings; the artwork
+  is unchanged. **No Decision, ADR, risk, value, Source Set, evidence, maturity, claim,
+  release, publication, work-package state or phase changes**; registers stay at
+  **140 · 7 · 98**, no work package is current or authorized, and **CDS-WP-023 is not
+  started or authorized**.
 - **Post-WP-022 Decision & Contract Integration Pass effectivity recorded — `DEC-S-140`
   effective, M2A reached.** The condition the pass's entry above stated — the
   Human-Maintainer exact-object integration commit — was met by commit

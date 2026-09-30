@@ -48,24 +48,26 @@ Controlled work-package roadmap for the Core Design System (CDS).
   activated **no** later work package. Its architecture was integrated by the
   Human-Maintainer commit **`538fbccbf6f554de3b872e9fb75a70d13318feb6`**, and
   closure became effective there.
-- **CDS-WP-001B — NDF v1.1.0 Skills and Framework Baseline Maintenance — is recorded
-  by this closure object with target lifecycle `Completed` / `Closed`.** An
+- **CDS-WP-001B — NDF v1.1.0 Skills and Framework Baseline Maintenance — is
+  `Completed` / `Closed`; the closure is effective at the Human-Maintainer exact-object
+  integration commit `17b191416031d847573687b4ebce99fcea929386`** (2026-09-29; parent
+  `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`), which integrated its closure object. An
   **Elevated**, lettered Skill-Maintenance insertion following the `CDS-WP-001A`
   precedent (**no work package is renumbered**), it was authorized, executed,
   independently reviewed (`PASS WITH NOTES`), Nova-accepted and Human-Maintainer
   integrated at the exact-object commit **`daa5f114c1b9c02afcfc0205149ca00dc4801d8d`**, **at which `DEC-S-139`,
   the NDF v1.1.0 process baseline and the `lock-enforced` lock state became
   effective** (execution result unchanged: `COMPLETE — READY FOR INDEPENDENT REVIEW`
-  at preparation). **The closure state is a separate act:** this prepared Working Tree
-  has no authority, and **the closure is effective only at the Human-Maintainer
-  exact-object integration commit of this independently reviewed closure object**.
-  **`EXECUTED ≠ ACCEPTED`**, **`PASS ≠ INTEGRATED`**, **`INTEGRATED ≠ CLOSED`**,
-  **`CLOSURE OBJECT PREPARED ≠ CLOSURE EFFECTIVE`** and **`MAINTENANCE COMPLETE ≠
-  SUCCESSOR AUTHORIZED`**: an uncommitted working tree closes no work package, and the
-  closure **authorizes no successor**.
+  at preparation). **The closure state was a separate act:** the prepared closure
+  object carried no authority before that commit, and **the closure became effective
+  only at it**. **`EXECUTED ≠ ACCEPTED`**, **`PASS ≠ INTEGRATED`**, **`INTEGRATED ≠
+  CLOSED`**, **`CLOSURE OBJECT PREPARED ≠ CLOSURE EFFECTIVE`** and **`MAINTENANCE
+  COMPLETE ≠ SUCCESSOR AUTHORIZED`**: the closure **authorizes no successor**, and it
+  changes neither the effectivity of `DEC-S-139` nor its effectivity commit
+  `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`.
 - **Current work package: NONE. Current design work package: NONE. Successor:
-  NONE** — from the Human-Maintainer exact-object integration commit of this closure
-  object.
+  NONE** — from the Human-Maintainer exact-object integration commit
+  `17b191416031d847573687b4ebce99fcea929386` of the CDS-WP-001B closure object.
 - **Design work package currently authorized: NONE — no design work package is
   currently authorized** from the
   Human-Maintainer exact-object integration commit
@@ -252,7 +254,7 @@ Controlled work-package roadmap for the Core Design System (CDS).
 current authorized one — never that its execution has or has not started. Execution,
 review, and authority state are recorded per work package below.
 
-**No work package holds `Next`.** **`CDS-WP-001B`** — a process-maintenance insertion — held it until its closure object became effective at the Human-Maintainer exact-object integration commit of that closure object; no design work package held it after CDS-WP-022. **CDS-WP-022** held `Next` from its separate,
+**No work package holds `Next`.** **`CDS-WP-001B`** — a process-maintenance insertion — held it until its closure object became effective at the Human-Maintainer exact-object integration commit `17b191416031d847573687b4ebce99fcea929386` of that closure object; no design work package held it after CDS-WP-022. **CDS-WP-022** held `Next` from its separate,
 explicit Human-Maintainer authorization after the CDS-WP-021 closure until its own
 closure, effective at the Human-Maintainer exact-object integration commit
 `ab81e197374bb9f9479105b4261cb4485a491b2a` (2026-09-28). **The CDS-WP-022 closure
@@ -265,7 +267,7 @@ separate, explicit Human-Maintainer authorization**.
 | --- | --- | --- | --- |
 | CDS-WP-001 | Project Governance and NDF Bootstrap | Completed | — |
 | CDS-WP-001A | NDF Skills Bootstrap | Completed | CDS-WP-001 |
-| CDS-WP-001B | NDF v1.1.0 Skills and Framework Baseline Maintenance | **Completed / Closed** — integrated by the Human-Maintainer exact-object commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`, at which `DEC-S-139` and the `lock-enforced` lock state became effective; **closure state effective only at the Human-Maintainer exact-object integration commit of the closure object**; authorizes no successor | CDS-WP-001A |
+| CDS-WP-001B | NDF v1.1.0 Skills and Framework Baseline Maintenance | **Completed / Closed** — integrated by the Human-Maintainer exact-object commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`, at which `DEC-S-139` and the `lock-enforced` lock state became effective; **closure effective at the Human-Maintainer exact-object integration commit `17b191416031d847573687b4ebce99fcea929386`** (the closure object's integration); authorizes no successor | CDS-WP-001A |
 | CDS-WP-002 | Concept and Scope Registration | Completed | CDS-WP-001A |
 | CDS-WP-003 | Benchmark and Differentiation Research | Completed | CDS-WP-002 |
 | CDS-WP-004 | Consumer Requirements and CoreOps Pilot Contract | Completed | CDS-WP-002 |
@@ -451,9 +453,10 @@ INDEPENDENT REVIEW`** at preparation) was independently reviewed (`PASS WITH NOT
 Nova-accepted and integrated by the Human-Maintainer exact-object commit
 `daa5f114c1b9c02afcfc0205149ca00dc4801d8d` (**`EXECUTED ≠ ACCEPTED`**, **`PASS ≠ INTEGRATED`**), at which
 `DEC-S-139` and the `lock-enforced` state became effective. **The closure state is
-recorded by this closure object and is effective only at the Human-Maintainer
-exact-object integration commit of that independently reviewed closure object**
-(**`INTEGRATED ≠ CLOSED`**, **`CLOSURE OBJECT PREPARED ≠ CLOSURE EFFECTIVE`**).
+recorded by its closure object and is effective at the Human-Maintainer
+exact-object integration commit `17b191416031d847573687b4ebce99fcea929386` of that
+closure object** (**`INTEGRATED ≠ CLOSED`**, **`CLOSURE OBJECT PREPARED ≠ CLOSURE
+EFFECTIVE`** — the latter held until that commit).
 Closure authorizes **no successor** (**`MAINTENANCE COMPLETE ≠ SUCCESSOR
 AUTHORIZED`**).
 

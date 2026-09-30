@@ -48,7 +48,7 @@ at the Human-Maintainer exact-object integration commit
 `ab81e197374bb9f9479105b4261cb4485a491b2a`. **No design work package
 is currently authorized** from that commit onward (**CDS-WP-001B**, a lettered
 Skill-Maintenance insertion, was separately authorized and integrated at
-`daa5f114c1b9c02afcfc0205149ca00dc4801d8d`, and is recorded by its closure object as `Completed` / `Closed` —
+`daa5f114c1b9c02afcfc0205149ca00dc4801d8d`, and is `Completed` / `Closed`, closure effective at `17b191416031d847573687b4ebce99fcea929386` —
 see *Out-of-sequence maintenance insertion*), and **closing one authorizes
 no other** — **`CLOSED ≠ SUCCESSOR AUTHORIZED`**. The CDS-WP-022 authorization and
 closure are Human-Maintainer acts that this document records rather than makes.
@@ -608,10 +608,11 @@ in this range.
   effective — with the `lock-enforced` lock state — at its Human-Maintainer
   exact-object integration commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`. It selects no visual value,
   creates no Source Set, and changes no maturity, evidence, claim, or release state.
-- **Its closure is a separate act.** CDS-WP-001B is recorded by its closure object with
-  target lifecycle `Completed` / `Closed`, effective only at that object's
-  Human-Maintainer exact-object integration commit (**`INTEGRATED ≠ CLOSED`**,
-  **`CLOSURE OBJECT PREPARED ≠ CLOSURE EFFECTIVE`**); it authorizes no successor.
+- **Its closure was a separate act.** CDS-WP-001B is `Completed` / `Closed`, closure
+  effective at the Human-Maintainer exact-object integration commit
+  `17b191416031d847573687b4ebce99fcea929386` of its closure object (**`INTEGRATED ≠
+  CLOSED`**, **`CLOSURE OBJECT PREPARED ≠ CLOSURE EFFECTIVE`** — the latter held until
+  that commit); it authorizes no successor.
 - **Its table position is registration, not sequencing** — it sits outside the design
   arcs and blocks nothing on the forward path.
 
@@ -1231,6 +1232,25 @@ not block** this governance integration, Decision writing, roadmap reconciliatio
 **CDS-WP-023** contract work; it **does** remain a gate before every **CDS-WP-020A**
 stage, and every validation stage, that authors or validates machine-readable sources.
 
+### Findings observed after the Public Identity & README integration commit
+
+*(2026-09-30. A narrow reconciliation pass — **not** a work package, occupying no
+work-package identifier — following the post-integration next-work intake. The finding
+identifiers below are finding labels in this non-normative planning view, **not**
+Decisions, ADRs, risks, or governance identifiers. The findings tables above are **not
+rewritten**.)*
+
+| ID | Observation | Disposition |
+| --- | --- | --- |
+| **`F-001BC-01`** | **POST-CLOSURE CURRENT-STATE RECONCILIATION (CDS-WP-001B).** The Human-Maintainer exact-object integration commit `17b191416031d847573687b4ebce99fcea929386` (2026-09-29; parent `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`) integrated the CDS-WP-001B closure object and **completed the CDS-WP-001B closure**. Maintained current-state carriers still used the closure object's pre-integration wording — *recorded by its closure object with target lifecycle*, *effective only at that object's Human-Maintainer exact-object integration commit*, and *this prepared Working Tree has no authority* — although that commit had occurred and was recorded in no live carrier. Those formulations were truthful **before** that commit; they are stale only as **live** current state. | **RESOLVED → this narrow reconciliation**, on the **`F-022C-01`** precedent. The maintained carriers now record CDS-WP-001B as **`Completed` / `Closed`, closure effective at `17b191416031d847573687b4ebce99fcea929386`**, with **`DEC-S-139` and the `lock-enforced` state still effective at `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`** — unchanged — and **no successor authorized**. **Point-in-time and historical records were preserved**, including the CDS-WP-001B execution and closure-preparation changelog entries: **`CURRENT STATE CHANGED ≠ HISTORICAL RECORD WAS WRONG`**. It **records a completed Human-Maintainer act and performs none**, is **not a reopening of CDS-WP-001B and not a successor work package**, and adds **no Decision, ADR, or risk** — the registers stay at **140 · 7 · 98**. **`F-001BC-01` is a reconciliation finding — not a Decision, an ADR, a risk, a work package, or a successor authorization.** |
+| **`F-PIR-01`** | **HISTORICAL PROCESS GAP — font-file download authorization (Public Identity & README).** The two font files used to outline the identity lettering were downloaded to a local working folder outside the repository, and **no record of an explicit Human-Maintainer authorization for that download is available**. The gap is documented in [`branding/FONT_PROVENANCE.md`](../../branding/FONT_PROVENANCE.md) (*Acquisition and authorization*). | **ACKNOWLEDGED AS A HISTORICAL PROCESS GAP — NOT RESOLVED, NOT EXCUSED, NOT RETROSPECTIVELY APPROVED.** The provenance and licensing of the **current** assets were checked independently of the download: upstream immutable commits and Git blob hashes are recorded and were compared against read-only upstream metadata, and both fonts are under the SIL Open Font License 1.1 (see the provenance record). **That check is not evidence that the original download process was compliant**, and the continued presence and use of the existing integrated branding assets **must not be read as** retrospective authorization, proof of compliance, or acceptance of the gap. **No authorization evidence is claimed that does not exist.** No font binary is embedded or distributed. Any future acquisition of font files, or of any other external asset, needs its own explicit authorization beforehand. **`PROVENANCE VERIFIED ≠ ACQUISITION AUTHORIZED`.** No risk or Decision is created — none is required for a documented, bounded historical gap; the register stays at **98**. |
+| **`F-PIR-02`** | **OPEN LAYER-2 ECOSYSTEM QUESTION — Blackhole Dynamics relationship.** Whether **Blackhole Dynamics** has a parent-brand, master-brand, product-family, or equivalent ecosystem relationship to Core Design System is **unresolved**. The [Brand Guide](../../branding/BRAND_GUIDE.md) (*Design reference*) records it as belonging to Brand and Identity (Layer 2) and open. | **OPEN / ROUTED — NOT ANSWERED, NOT DECIDED.** The **authority** for the ecosystem and portfolio **WHAT / WHY / WHERE** decision is **Core Vision**, not CDS. CDS **may later implement an authorized result inside its Layer-2 scope**; **CDS-WP-045** (`Planned`, not active, not authorized) may be cross-referenced as a possible later implementation carrier, but **it and any other CDS work package must not become the authority that decides the ecosystem-level relationship**. Until such a decision is made by that authority, **no endorsement, parent-brand, master-brand, or product-family status is established or implied**, and active branding is **not** modified to imply an answer. **`CDS IMPLEMENTS ≠ CDS DECIDES`**, **`ROUTED ≠ DECIDED`**. No risk, Decision, or work-package activation is created. |
+
+**None of these findings** changes the phase, activates or authorizes any work package —
+**`CDS-WP-020A` and CDS-WP-023 … CDS-WP-053 remain `Planned`, not active, and not
+authorized** — creates any visual value, Source Set, or identifier, admits evidence,
+changes maturity, or changes publication, which stays `Private Development`.
+
 ## Immediate next step
 
 **No next work package is authorized, and no step in this section authorizes one.**
@@ -1238,8 +1258,8 @@ stage, and every validation stage, that authors or validates machine-readable so
 exact-object integration commit `ab81e197374bb9f9479105b4261cb4485a491b2a`
 (2026-09-28), with the execution result unchanged at **`COMPLETE WITH NOTES`**.
 **No design work package is currently authorized** (CDS-WP-001B was a process-baseline
-maintenance insertion, not a next design step, and is recorded by its closure object as
-`Completed` / `Closed`). **No successor is
+maintenance insertion, not a next design step, and is `Completed` / `Closed`, closure effective at
+`17b191416031d847573687b4ebce99fcea929386`). **No successor is
 authorized**: **`CDS-WP-020A` and CDS-WP-023 … CDS-WP-053 remain `Planned`, not
 active, and not authorized** — **`CLOSED ≠ SUCCESSOR AUTHORIZED`**, **`SEQUENCED
 NEXT ≠ AUTHORIZED`** and **`THEME GATE SATISFIED ≠ CDS-WP-020A AUTHORIZED`** — and

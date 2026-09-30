@@ -24,9 +24,10 @@
   Skill-Maintenance insertion following the CDS-WP-001A precedent; process-only;
   independently reviewed `PASS WITH NOTES`, Nova-accepted, and integrated by the
   Human-Maintainer exact-object commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`, at which `DEC-S-139`, the NDF
-  v1.1.0 process baseline and the `lock-enforced` state became effective; recorded by
-  its closure object with target lifecycle **`Completed` / `Closed`**, effective only
-  at that object's integration commit; authorizes no successor). **Design work package
+  v1.1.0 process baseline and the `lock-enforced` state became effective; `Completed`
+  / `Closed`, closure effective at the Human-Maintainer exact-object integration
+  commit `17b191416031d847573687b4ebce99fcea929386` of its closure object; authorizes
+  no successor). **Design work package
   currently authorized: NONE.** **No design work package is currently authorized** from
   the Human-Maintainer exact-object integration commit
   `ab81e197374bb9f9479105b4261cb4485a491b2a` (2026-09-28), at which the CDS-WP-022
@@ -419,13 +420,14 @@ controlled roadmap.
 `9dcadc12fb960914b9a5baeff2ab1aee75912b57` (historical; superseded as the live pin by
 CDS-WP-001B → NDF v1.1.0); Skills-first mode active.
 
-### CDS-WP-001B — NDF v1.1.0 Skills and Framework Baseline Maintenance — Completed / Closed (closure object; effective at its integration commit)
+### CDS-WP-001B — NDF v1.1.0 Skills and Framework Baseline Maintenance — Completed / Closed (closure effective at `17b191416031d847573687b4ebce99fcea929386`)
 
 Re-pinned the local NDF Skills to v1.1.0 (7 changed, 32 unchanged pack files), added
 a four-file NDF support snapshot, migrated the lock, provenance and inventory, and
 prepared `DEC-S-139`, which became effective — with the `lock-enforced` state — at the
 Human-Maintainer exact-object integration commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`. Closure is recorded
-by its closure object and is effective only at that object's integration commit.
+by its closure object and became effective at that object's Human-Maintainer
+exact-object integration commit `17b191416031d847573687b4ebce99fcea929386`.
 Process-only; no successor authorized.
 
 ### CDS-WP-002 — Concept and Scope Registration — Completed

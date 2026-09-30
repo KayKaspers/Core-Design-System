@@ -8,8 +8,10 @@ The Human Maintainer selected the creative direction and accepted the displayed
 visual implementation in conversation on 2026-09-30 ("ok, weiter"). A subsequent
 corrective pass removed the organizational endorsement lettering from the logo,
 banner and social preview, and set the social-preview claim on one line; the mark
-geometry is unchanged. Independent review of the corrected kit and repository
-integration remain pending.
+geometry is unchanged. The corrected kit is integrated in the repository by the
+Human-Maintainer commit `ccc7b2d421b13e35efe1fd311b03082cf024f9b0`. That integration
+implies no release or tag; publication remains `Private Development`. This document
+records no independent-review outcome for the corrected kit.
 
 [Brand Guide](BRAND_GUIDE.md) · [Font provenance](FONT_PROVENANCE.md)
 

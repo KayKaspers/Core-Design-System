@@ -40,9 +40,9 @@ release, or publication authority, and activates no work package.
   exact-object commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`, at which `DEC-S-139`, the NDF v1.1.0 process
   baseline and the `lock-enforced` state became effective (**`EXECUTED ≠ ACCEPTED`**,
   **`PASS ≠ INTEGRATED`**, **`PREPARED DECISION ≠ EFFECTIVE DECISION`**). It is
-  recorded by its closure object with target lifecycle **`Completed` / `Closed`**,
-  effective only at that object's Human-Maintainer exact-object integration commit
-  (**`INTEGRATED ≠ CLOSED`**), and authorizes **no** successor (**`MAINTENANCE
+  **`Completed` / `Closed`**, with the closure **effective at** the Human-Maintainer
+  exact-object integration commit `17b191416031d847573687b4ebce99fcea929386` of its
+  closure object (**`INTEGRATED ≠ CLOSED`**), and authorizes **no** successor (**`MAINTENANCE
   COMPLETE ≠ SUCCESSOR AUTHORIZED`**). **Current work package: NONE.**
 - **Design work package currently authorized: NONE — no design work package is
   currently authorized** from the

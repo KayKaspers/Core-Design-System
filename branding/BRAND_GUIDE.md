@@ -5,8 +5,11 @@
 Creative direction and displayed visual implementation accepted by the Human
 Maintainer in conversation on 2026-09-30 ("ok, weiter"). A later corrective pass
 removed the organizational endorsement lettering and set the social-preview claim
-on one line; the mark is unchanged. Independent review of the corrected kit and
-repository integration remain pending. No publication is implied.
+on one line; the mark is unchanged. The corrected kit is integrated in the
+repository by the Human-Maintainer commit `ccc7b2d421b13e35efe1fd311b03082cf024f9b0`.
+That integration implies no release, tag or publication; status remains
+`Private Development`. This document records no independent-review outcome for the
+corrected kit.
 
 ![Logo](assets/png/cds-logo.png)
 

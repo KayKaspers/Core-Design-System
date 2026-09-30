@@ -65,11 +65,13 @@ library, or a design project scoped exclusively to CoreOps.
   Post-WP-022 Decision & Contract Integration Pass, **became effective** at that pass's
   Human-Maintainer exact-object integration commit
   **`e87ff702f8d96a8850b18b93454028a094c6b80a`**: the **current effective registers are
-  140 · 7 · 98** — **`PREPARED ≠ EFFECTIVE`** held until that commit.)* **Closure is a
-  separate act:** CDS-WP-001B is recorded by its
-  closure object with target lifecycle **`Completed` / `Closed`**, effective only at
-  that object's Human-Maintainer exact-object integration commit
-  (**`INTEGRATED ≠ CLOSED`**, **`CLOSURE OBJECT PREPARED ≠ CLOSURE EFFECTIVE`**), and
+  140 · 7 · 98** — **`PREPARED ≠ EFFECTIVE`** held until that commit.)* **Closure was a
+  separate act:** CDS-WP-001B is `Completed` / `Closed`, its closure **effective at the
+  Human-Maintainer exact-object integration commit
+  `17b191416031d847573687b4ebce99fcea929386`** (2026-09-29; parent
+  `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`), which integrated its closure object
+  (**`INTEGRATED ≠ CLOSED`**, **`CLOSURE OBJECT PREPARED ≠ CLOSURE EFFECTIVE`** — the
+  latter held until that commit), and
   **closing it authorizes no successor**.
 - **Design work package currently authorized: NONE** — from the Human-Maintainer
   exact-object integration commit `ab81e197374bb9f9479105b4261cb4485a491b2a`
@@ -77,8 +79,8 @@ library, or a design project scoped exclusively to CoreOps.
   in this file and elsewhere that "no work package is currently authorized" describe
   the design-work-package sequence as of that commit**, and CDS-WP-001B owned no design
   scope. **Current work package: NONE** (from the effectivity of the CDS-WP-001B
-  closure object). **Successor: NONE.** **`CLOSURE OBJECT
-  PREPARED ≠ CLOSURE EFFECTIVE`** held until that commit. **`CLOSED ≠ SUCCESSOR
+  closure object at `17b191416031d847573687b4ebce99fcea929386`). **Successor: NONE.**
+  **`CLOSURE OBJECT PREPARED ≠ CLOSURE EFFECTIVE`** held until that commit. **`CLOSED ≠ SUCCESSOR
   AUTHORIZED`**, **`CLOSED ≠ VALUE
   SELECTION AUTHORIZED`**, **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`**,
   **`SEQUENCED NEXT ≠ AUTHORIZED`**, and **a recommendation is not an

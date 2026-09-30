@@ -117,10 +117,10 @@ approved.
   the CDS-WP-001A precedent; process-only). Independently reviewed (`PASS WITH
   NOTES`), Nova-accepted, and integrated by the Human-Maintainer exact-object commit
   `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`, at which `DEC-S-139`, the NDF v1.1.0 process baseline and the
-  `lock-enforced` state became effective; **`EXECUTED ≠ ACCEPTED`**. It is recorded by
-  its closure object with target lifecycle `Completed` / `Closed`, effective only at
-  that object's Human-Maintainer exact-object integration commit, and authorizes no
-  successor. **Current work package: NONE.**
+  `lock-enforced` state became effective; **`EXECUTED ≠ ACCEPTED`**. It is
+  `Completed` / `Closed`, with the closure effective at the Human-Maintainer
+  exact-object integration commit `17b191416031d847573687b4ebce99fcea929386` of its
+  closure object, and authorizes no successor. **Current work package: NONE.**
 - **Design work package currently authorized: NONE — no design work package is
   currently authorized** from the
   Human-Maintainer exact-object integration commit
