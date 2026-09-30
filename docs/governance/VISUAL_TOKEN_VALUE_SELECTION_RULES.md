@@ -66,6 +66,12 @@
   remains `UNSATISFIED`** — **no prerequisite text is rewritten**, **no value is
   selected**, and VP-1 … VP-7, VE-1 … VE-12, IG-1 … IG-10, VD-1 … VD-8, VA-1 … VA-10
   and VS-1 … VS-6 are unchanged.
+- **Amended by:** CDS-WP-023 closure object, 2026-09-30 — **one additive VP-7 closure
+  reading note**, **effective only at that object's Human-Maintainer exact-object
+  integration commit**. **The VP-7 verdict does not change — VP-7 remains
+  `UNSATISFIED`** — no prerequisite text is rewritten, **no value is selected**, and
+  VP-1 … VP-7, VE-1 … VE-12, IG-1 … IG-10, VD-1 … VD-8, VA-1 … VA-10 and VS-1 … VS-6
+  are unchanged.
 - **Artifact class:** **1 — Normative human-readable source** (DEC-S-022)
 - **Status:** **Normative for how a visual value may be selected** — the discipline
   every future value must satisfy before it may enter CDS. It **selects no value**.
@@ -405,6 +411,26 @@ remain `UNSATISFIED` for every family**, **VP-4 is unchanged**, including
 **`UNSATISFIED` for VF-4**, **`CDS-WP-020A` and CDS-WP-024 … CDS-WP-053 remain
 `Planned`, not active, and not authorized**, and **visual values and visual source
 sets remain 0.**
+
+### VP-7 closure reading — CDS-WP-023 — 2026-09-30
+
+*(**Additive.** Prepared by the CDS-WP-023 closure object; **effective only at that
+object's Human-Maintainer exact-object integration commit**. The dated notes above are
+**not rewritten**: the note above correctly recorded, **at its date**, that CDS-WP-023
+was authorized for execution. The CDS-WP-023 execution object was integrated at
+`0ea15ff080c377d7494876efdb6197404fa3cf40`.)*
+
+**The VP-7 verdict is unchanged: `UNSATISFIED`.** Once the CDS-WP-023 closure is
+effective, **no work package is authorized at all**, so the reason reads again:
+
+> **VP-7 — `UNSATISFIED`.** **No work package is currently authorized to select visual
+> values.** CDS-WP-023 was contract only and selected none, and **closing it creates no
+> such authority** — **`CLOSED ≠ VALUE SELECTION AUTHORIZED`**.
+
+**VP-3, VP-5 and VP-6 remain `UNSATISFIED` for every family**, **VP-4 is unchanged**,
+including **`UNSATISFIED` for VF-4**, **`CDS-WP-020A` and CDS-WP-024 … CDS-WP-053 remain
+`Planned`, not active, and not authorized**, and **visual values and visual source sets
+remain 0.**
 
 ## The evaluation
 

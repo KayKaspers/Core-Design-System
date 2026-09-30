@@ -33,8 +33,10 @@ release, or publication authority, and activates no work package.
 
 ## Work package status
 
-- **Last authorized work package: `CDS-WP-023`** — `AUTHORIZED` / `ACTIVE FOR
-  EXECUTION`, not integrated, not closed, **Successor: NONE** (see the next item).
+- **Last authorized work package: `CDS-WP-023`** — execution **integrated** at
+  `0ea15ff080c377d7494876efdb6197404fa3cf40`; recorded `Completed` / `Closed` by its
+  closure object, **effective only at that object's Human-Maintainer exact-object
+  integration commit**; **Successor: NONE** (see the next items).
   *(Point-in-time until the CDS-WP-023 authorization on 2026-09-30:)* **Last
   authorized work package before CDS-WP-023: CDS-WP-001B — NDF v1.1.0 Skills and
   Framework Baseline Maintenance** (Elevated; a lettered Skill-Maintenance insertion following
@@ -46,16 +48,23 @@ release, or publication authority, and activates no work package.
   **`Completed` / `Closed`**, with the closure **effective at** the Human-Maintainer
   exact-object integration commit `17b191416031d847573687b4ebce99fcea929386` of its
   closure object (**`INTEGRATED ≠ CLOSED`**), and authorizes **no** successor (**`MAINTENANCE
-  COMPLETE ≠ SUCCESSOR AUTHORIZED`**). **Current work package: `CDS-WP-023`** (from
-  2026-09-30; NONE before).
-- **Current design work package: `CDS-WP-023` — Semantic Status Visual Binding
-  Contract** — **`AUTHORIZED` / `ACTIVE FOR EXECUTION`**, authorized separately and
-  explicitly by the Human Maintainer on 2026-09-30 **for execution only, contract
-  only**. Its execution object is **uncommitted executor output — not integrated, not
-  closed** — reworked under a Human-Maintainer-authorized limited rework after the
-  independent review and awaiting Nova review of the rework; it authorizes **no** successor,
-  **no** Route A … D decision, and **no** value, role, Source Set, schema, validator,
-  fixture, maturity, evidence, release, or publication change. **Successor: NONE.**
+  COMPLETE ≠ SUCCESSOR AUTHORIZED`**). **Current work package: NONE** (target state of
+  the CDS-WP-023 closure object; `CDS-WP-023` was the current work package from
+  2026-09-30 until that closure's effectivity, NONE before).
+- **Current design work package: NONE. Successor: NONE.** *(Target state of the
+  CDS-WP-023 closure object, effective from that object's Human-Maintainer
+  exact-object integration commit; from the authorization of 2026-09-30 until then
+  `CDS-WP-023` — Semantic Status Visual Binding Contract — was the current design work
+  package, `AUTHORIZED` / `ACTIVE FOR EXECUTION`, for execution only, contract only.)*
+  The CDS-WP-023 execution object was independently reviewed, reworked under a
+  Human-Maintainer-authorized limited rework, re-reviewed in a final delta review, and
+  **integrated** by the Human-Maintainer exact-object commit
+  `0ea15ff080c377d7494876efdb6197404fa3cf40` (**the execution-integration event**); its
+  closure is a **separate, later** act — **`INTEGRATED ≠ CLOSED`**, **`CLOSURE OBJECT
+  PREPARED ≠ CLOSURE EFFECTIVE`**. Closing it authorizes **no** successor, **no** Route
+  A … D decision, and **no** value, role, Source Set, schema, validator, fixture,
+  maturity, evidence, release, or publication change; **`F-023-01` stays `OPEN /
+  UNRESOLVED`** with no owner.
   *(From the Human-Maintainer exact-object integration commit
   `ab81e197374bb9f9479105b4261cb4485a491b2a` (2026-09-28), at which the CDS-WP-022
   closure became effective, until that authorization, no design work package was
@@ -64,8 +73,22 @@ release, or publication authority, and activates no work package.
   **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`**, and **`SEQUENCED NEXT ≠
   AUTHORIZED`**: the next work package begins only on an explicit Nova prompt **and**
   a separate Human-Maintainer authorization.
-- **Most recently executed work package: `CDS-WP-022` — Theme and Environmental
-  Presentation Model.** **`Completed` / `Closed`** — authorized for execution by a
+- **Most recent closed design work package: `CDS-WP-023` — Semantic Status Visual
+  Binding Contract** — **`Completed` / `Closed`** as recorded by this closure object
+  (**closure effective only at that object's Human-Maintainer exact-object integration
+  commit**); **contract only**; execution integrated at
+  `0ea15ff080c377d7494876efdb6197404fa3cf40`. It defines the binding model (**BM-1 …
+  BM-10**), the semantic obligations (**BO-1 … BO-11**), role-class eligibility (**BE-1
+  … BE-6**), binding rules (**BR-1 … BR-14**), redundancy and accessibility rules
+  (**RD-1 … RD-11**), theme invariants (**TI-1 … TI-10**), the four-subject binding-state
+  model with fail-closed rules (**BF-1 … BF-11**), realization preconditions (**BP-1 …
+  BP-8**; **BP-2 … BP-8 are not met**), Route C requirements (**VQ-1 … VQ-10**), and inputs
+  to CDS-WP-024 and CDS-WP-025. **It created no role, value, identifier, binding
+  instance, Source Set, schema, validator, or fixture**; the registers stay at
+  **140 · 7 · 98**. **`CLOSED ≠ SUCCESSOR AUTHORIZED`**: CDS-WP-024, CDS-WP-025 and
+  `CDS-WP-020A` remain `Planned` and not authorized.
+- **Preceding closed design work package (before CDS-WP-023): `CDS-WP-022` — Theme and
+  Environmental Presentation Model.** **`Completed` / `Closed`** — authorized for execution by a
   separate, explicit Human-Maintainer act taken after the CDS-WP-021 closure, and
   **closed by a further, separate Human-Maintainer authorization, effective at the
   Human-Maintainer exact-object integration commit
@@ -235,8 +258,9 @@ release, or publication authority, and activates no work package.
   [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
 - **Next planned work package: `CDS-WP-020A` — Visual Token Source Authoring and
   Source Set Realization** — **`Planned`, not active, not authorized, work not
-  started**, as are CDS-WP-024 … CDS-WP-053. *(CDS-WP-023 is `AUTHORIZED` / `ACTIVE
-  FOR EXECUTION` since 2026-09-30 — see above.)*
+  started**, as are CDS-WP-024 … CDS-WP-053. *(CDS-WP-023 was `AUTHORIZED` / `ACTIVE
+  FOR EXECUTION` from 2026-09-30, integrated at `0ea15ff0…`, and is recorded closed by
+  its closure object — see above; it authorizes no successor.)*
   **The effective `DEC-S-135` rules that CDS-WP-022 precedes context-sensitive value
   selection and made it the recommended and sequenced Step-10 candidate**;
   **SEQUENCED NEXT ≠ AUTHORIZED**, and it authorized nothing. **The Human Maintainer
@@ -303,7 +327,9 @@ release, or publication authority, and activates no work package.
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**,
   **CDS-WP-017**, **CDS-WP-018**, **CDS-WP-019**, **CDS-WP-020**, **CDS-WP-021**,
-  **CDS-WP-022** — **CDS-WP-021 is `Completed` / `Closed`**, its closure authoritative
+  **CDS-WP-022**, **CDS-WP-023** *(CDS-WP-023: target lifecycle recorded by its closure
+  object; closure effective only at that object's Human-Maintainer exact-object
+  integration commit)* — **CDS-WP-021 is `Completed` / `Closed`**, its closure authoritative
   at the Human-Maintainer exact-object integration commit
   `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`, and **CDS-WP-022 is `Completed` /
   `Closed`**, its closure authoritative at the Human-Maintainer exact-object

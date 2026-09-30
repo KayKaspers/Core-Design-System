@@ -906,6 +906,44 @@ released and no release is announced.
 
 ### Changed
 
+- **CDS-WP-023 execution integration recorded and closure object prepared — target
+  lifecycle `Completed` / `Closed`; two INFO notes resolved.** The condition the
+  CDS-WP-023 execution object stated — the Human-Maintainer exact-object integration
+  commit — was met by commit **`0ea15ff080c377d7494876efdb6197404fa3cf40`**
+  (`feat(architecture): establish semantic status visual binding contract`; tree
+  `89fcc3d3b946ef3d7c90a856e86cb4dd2b80b8bc`), which integrated the execution object after
+  an independent review, Nova's adjudication *NO-GO FOR INTEGRATION — LIMITED REWORK
+  REQUIRED*, a Human-Maintainer-authorized limited rework, and a final delta review
+  (accepted, with two INFO notes). **That commit is the execution-integration event**: the
+  [Semantic Status Visual Binding Contract](docs/architecture/SEMANTIC_STATUS_VISUAL_BINDING_CONTRACT.md)
+  is normative from it. **This entry is part of a separate closure object**: the closure
+  was authorized by the Human Maintainer as a closure reconciliation, and CDS-WP-023 is
+  recorded with target lifecycle `Completed` / `Closed`, **effective only at the later
+  Human-Maintainer exact-object integration commit of this closure object** — **`INTEGRATED
+  ≠ CLOSED`**, **`CLOSURE OBJECT PREPARED ≠ CLOSURE EFFECTIVE`**; no commit identifier is
+  stated for a commit that does not yet exist. **INFO-1 (output wording) is resolved** by a
+  wording clarification in the contract's *Binding states* evaluation text and the
+  *Invalid* effect: an Invalid or Incomplete binding blocks every **visual output resolved
+  from that binding**, according to the fail-closed rules; a separate Valid binding for
+  another axis does not become Invalid merely because another binding is Invalid or
+  Incomplete; no representation-level aggregate Semantic Status is introduced; BF-4 and
+  every other fail-closed rule, and the binding-state model, are unchanged. **INFO-3
+  ("most recently executed") is resolved**: the project-profile and project-brain fields now
+  read *Most recent closed design work package: `CDS-WP-023`*. **Current work package: none;
+  current design work package: none; successor: none** — **`CLOSED ≠ SUCCESSOR
+  AUTHORIZED`**; CDS-WP-024, CDS-WP-025 and `CDS-WP-020A` remain `Planned`, not active, and
+  not authorized, **Routes A … D stay unresolved, `F-023-01` stays `OPEN / UNRESOLVED`**
+  with no owner and survives the closure, and **`F-PIR-02` stays routed to Core Vision**.
+  The Visual Token Value Selection Rules gain an additive VP-7 closure reading note (**VP-7
+  stays `UNSATISFIED`**). Historical and point-in-time records, including the CDS-WP-023
+  execution entry above, are preserved, not rewritten. **No** role, role identifier,
+  vocabulary, visual value, binding instance, Theme or context identifier, Source Set,
+  schema, validator, fixture, renderer, or evidence is created; **no** Semantic Status byte
+  changes; **no** Decision, ADR, or risk is added — the registers stay at **140 · 7 · 98**;
+  **no** maturity, claim, conformance, release, tag, or publication authority changes;
+  publication stays `Private Development`. **The Working Tree is uncommitted executor
+  output**: `EXECUTED ≠ ACCEPTED`, `PASS ≠ INTEGRATED`, `INTEGRATED ≠ CLOSED`.
+  (CDS-WP-023 closure reconciliation)
 - **Post-integration reconciliation — Public Identity & README integration and
   CDS-WP-001B closure effectivity recorded; two findings routed.** A narrow
   reconciliation pass, **not a work package**. **Public Identity & README:** the

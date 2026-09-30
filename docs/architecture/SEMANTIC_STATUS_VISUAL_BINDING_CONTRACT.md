@@ -8,10 +8,16 @@
   visual representation must be, may never be, and must declare**, and for the
   binding states, fail-closed behaviour, and downstream preconditions that follow —
   **upon the Human-Maintainer exact-object integration commit of the reviewed
-  CDS-WP-023 object, and not before.** Until that commit this document is
-  **uncommitted executor output** prepared under the explicit Human-Maintainer
-  authorization of CDS-WP-023 for **execution only**, and it changes **no**
-  authoritative CDS state. **`EXECUTED ≠ ACCEPTED`**, **`PASS ≠ INTEGRATED`**, and
+  CDS-WP-023 object, and not before.** That condition was met by the commit
+  **`0ea15ff080c377d7494876efdb6197404fa3cf40`** (tree
+  `89fcc3d3b946ef3d7c90a856e86cb4dd2b80b8bc`), which integrated the CDS-WP-023
+  execution object: **this document is normative from that commit.** Before it, the
+  document was uncommitted executor output prepared under the explicit
+  Human-Maintainer authorization of CDS-WP-023 for **execution only**.
+  **`EXECUTION INTEGRATED ≠ WP CLOSURE EFFECTIVE`**: a separate closure reconciliation
+  object is prepared in the Working Tree, and the CDS-WP-023 closure becomes effective
+  only at the later Human-Maintainer exact-object integration commit of that closure
+  object. **Successor: NONE.** **`EXECUTED ≠ ACCEPTED`**, **`PASS ≠ INTEGRATED`**, and
   **`INTEGRATED ≠ CLOSED`**.
 - **Rework:** a **limited rework** (2026-09-30), authorized by the Human Maintainer
   after the independent review and Nova's adjudication *NO-GO FOR INTEGRATION —
@@ -350,12 +356,16 @@ otherwise-valid disposition** for the axes it governs even where a **separate** 
 applied to another axis is Incomplete or Invalid. **An Incomplete or Invalid binding
 contributes no axis disposition** for the axes it governs, and its visual-binding use
 fails closed (step 2). **The representation still obeys every fail-closed consequence
-of that binding**: an Invalid binding blocks the rendering of every output resolved
-from it (*Binding validity*, BF-4), and a Valid binding applied to another axis neither
-overrides nor relaxes that consequence. **No representation-level aggregate** of
-binding validity, axis disposition, or setting applicability **exists or may be
-derived** — the axes stay independent, and no aggregate status signal is created
-(BO-3, BO-5).
+of that binding**: an Invalid or Incomplete binding blocks every **visual output
+resolved from that binding**, according to the fail-closed rules (*Binding validity*,
+BF-2, BF-4), and a Valid binding applied to another axis neither overrides nor relaxes
+that consequence. **That blocking is a consequence for the visual outputs resolved from
+the failing binding; it is not a judgement on any other binding.** A separate Valid
+binding for another axis **does not become Invalid** because another binding is Invalid
+or Incomplete, and **the blocking weakens no rule in BF-1 … BF-11** — in particular,
+BF-4 is unchanged. **No representation-level aggregate** of binding validity, axis
+disposition, or setting applicability **exists or may be derived** — the axes stay
+independent, and no aggregate status signal is created (BO-3, BO-5).
 
 ### Binding validity
 
@@ -363,7 +373,7 @@ derived** — the axes stay independent, and no aggregate status signal is creat
 | --- | --- | --- |
 | **Valid** | A binding that satisfies every rule in this document and references only admitted and materialized roles of a Bindable class. **Validity is structural and context-independent**; whether the binding can be satisfied in a given setting is **setting applicability**, never validity. | May be used **once the realization preconditions are met** (*Realization and rendering preconditions*), in each setting where it **Holds**. Being Valid is **not** evidence and grants **no** accessibility statement. |
 | **Incomplete** | A binding that omits a required disposition (BR-3), a required declaration (BR-6, BR-7, BR-8, RD-4, RD-5), or a required revision binding (BM-8, BF-11). | **Fails closed.** Not distributable, not renderable as a CDS binding. **No automatic completion** — in particular, an omitted disposition is **never** filled with `no visual encoding` — and **no degradation to Missing** (*Axis disposition*). |
-| **Invalid** | A binding that contradicts semantic authority or this contract: aggregation (BR-1, BR-2); a shared affirmative disposition (BR-4, BR-5); a non-Bindable class (BE-1); a non-bindable role treated as a binding carrier (BE-2); an unregistered construct (BE-4); **a Data-class element before the required data-visualization binding authority exists** (*Role classes*, Data); context variance (TI-1); contradiction (BR-12); an interaction or focus reuse (BR-10); a non-status state (BM-10); a profile or consumer re-binding (BR-13); or an unknown, unadmitted, or unmaterialized reference (BF-7, BF-9). | **Fails closed — in every setting**, because the defect is structural and independent of context. Blocks distribution of the binding and rendering of every output resolved from it. **No automatic repair, no nearest match, no substitution, and no degradation to Missing**; the defect is recorded and escalated. A conflict between a class-1 meaning source and a class-2 value source **invalidates the affected artifact state** (DEC-S-034, CF-10), and recency never resolves it (DEC-S-023). |
+| **Invalid** | A binding that contradicts semantic authority or this contract: aggregation (BR-1, BR-2); a shared affirmative disposition (BR-4, BR-5); a non-Bindable class (BE-1); a non-bindable role treated as a binding carrier (BE-2); an unregistered construct (BE-4); **a Data-class element before the required data-visualization binding authority exists** (*Role classes*, Data); context variance (TI-1); contradiction (BR-12); an interaction or focus reuse (BR-10); a non-status state (BM-10); a profile or consumer re-binding (BR-13); or an unknown, unadmitted, or unmaterialized reference (BF-7, BF-9). | **Fails closed — in every setting**, because the defect is structural and independent of context. Blocks distribution of the binding and rendering of every visual output resolved from that binding. **No automatic repair, no nearest match, no substitution, and no degradation to Missing**; the defect is recorded and escalated. A conflict between a class-1 meaning source and a class-2 value source **invalidates the affected artifact state** (DEC-S-034, CF-10), and recency never resolves it (DEC-S-023). |
 
 ### Axis disposition
 
@@ -431,7 +441,7 @@ holds**. Each is independent; satisfying one satisfies none of the others.
 
 | # | Precondition | State today |
 | --- | --- | --- |
-| **BP-1** | This contract is **effective** at a Human-Maintainer exact-object integration commit | **Not met** — this document is uncommitted executor output |
+| **BP-1** | This contract is **effective** at a Human-Maintainer exact-object integration commit | **Met** — the CDS-WP-023 execution object, including this contract, was integrated at the Human-Maintainer exact-object commit `0ea15ff080c377d7494876efdb6197404fa3cf40`. **`EXECUTION INTEGRATED ≠ WP CLOSURE EFFECTIVE`** — BP-1 does not depend on the closure, and meeting it satisfies no other precondition |
 | **BP-2** | Every bound role is **admitted by an effective Route C vocabulary decision**, in a Bindable class, satisfying *Requirements on the Route C vocabulary decision* | **Not met** — no vocabulary decision exists; **VP-6 is `UNSATISFIED`** |
 | **BP-3** | Every bound role is **materialized** in an authorized Visual Source Set revision with **SR-1 … SR-12** in full, and every value it resolves to satisfies **VP-1 … VP-7** | **Not met** — visual Source Sets **0**, visual values **0**; **VP-3, VP-5, VP-6, VP-7 `UNSATISFIED`** |
 | **BP-4** | **Context-conditional realization is representable** — **`F-022-01` / Route D** resolved under its own authorization | **Not met** — routed, undecided (DEC-S-140 clause 12) |
@@ -585,7 +595,7 @@ assessable"**, never **"yes"**.)*
 | **Does it preserve semantic meaning?** | BO-3 … BO-9, BR-1, BR-2, BR-4, BR-5, BR-12, BR-14 | No aggregation, no affirmative sharing, no contradiction, no conversion of review-required or fail-closed states |
 | **Is it accessible according to existing CDS authority?** | RD-1 … RD-11 structurally; **CDS-WP-031** evidence for anything perceptual | **Structurally conformant to this contract — which is not an accessibility statement.** Any accessibility statement requires admitted evidence; **none exists**, and **every visual artifact is AE-0** |
 | **Is the failure state defined?** | *Binding states*, BF-1 … BF-11 | For each subject — binding, axis, setting, output — exactly one outcome of its own classification applies wherever the tabled evaluation order assigns one, and its effect is the one tabled; an axis whose applied binding is Incomplete or Invalid receives **no** disposition, and its visual-binding use fails closed |
-| **Is implementation allowed to proceed?** | BP-1 … BP-8 | **Every** precondition met — **today none is** |
+| **Is implementation allowed to proceed?** | BP-1 … BP-8 | **Every** precondition met — **today BP-1 is met and BP-2 … BP-8 are not** |
 
 ## Evidence and claim boundary
 
