@@ -59,6 +59,13 @@
   verdict does not change — VP-6 remains `UNSATISFIED`** — **no prerequisite text is
   rewritten**, **no value is selected**, and VP-1 … VP-7, VE-1 … VE-12, IG-1 … IG-10,
   VD-1 … VD-8, VA-1 … VA-10 and VS-1 … VS-6 are unchanged.
+- **Amended by:** CDS-WP-023 — Semantic Status Visual Binding Contract, 2026-09-30 —
+  **one additive VP-7 current-state note, advancing the VP-7 justification only.**
+  **Uncommitted executor output until the Human-Maintainer exact-object integration
+  commit of the reviewed CDS-WP-023 object.** **The VP-7 verdict does not change — VP-7
+  remains `UNSATISFIED`** — **no prerequisite text is rewritten**, **no value is
+  selected**, and VP-1 … VP-7, VE-1 … VE-12, IG-1 … IG-10, VD-1 … VD-8, VA-1 … VA-10
+  and VS-1 … VS-6 are unchanged.
 - **Artifact class:** **1 — Normative human-readable source** (DEC-S-022)
 - **Status:** **Normative for how a visual value may be selected** — the discipline
   every future value must satisfy before it may enter CDS. It **selects no value**.
@@ -371,6 +378,33 @@ tables above are **not rewritten**, and **VP-1 … VP-7 are unchanged in text**.
 Core visual-role vocabulary is still **OPEN** and routed to a separately authorized
 future Decision Pass. **VP-3, VP-5 and VP-7 are unchanged and `UNSATISFIED`.** **No
 visual value may be selected**, and **visual values and visual source sets remain 0.**
+
+### VP-7 current-state note — CDS-WP-023 — 2026-09-30
+
+*(**Additive.** Prepared by the CDS-WP-023 execution; **uncommitted executor output
+until the Human-Maintainer exact-object integration commit of the reviewed CDS-WP-023
+object**. The dated notes and tables above are **not rewritten**: the 2026-09-15 note
+correctly recorded that no work package was authorized **at that date**.)*
+
+**The VP-7 verdict is unchanged: `UNSATISFIED`.** Only its **justification**
+advances.
+
+**CDS-WP-023 — Semantic Status Visual Binding Contract** is now **`AUTHORIZED` /
+`ACTIVE FOR EXECUTION`**, by a separate, explicit Human-Maintainer act, **for
+execution only and as a contract-only work package**. So *"CDS-WP-023 … remain
+`Planned`, not active, and not authorized"* is no longer accurate for CDS-WP-023. The
+correct reason is:
+
+> **VP-7 — `UNSATISFIED`.** **CDS-WP-023 is currently authorized, but it is not
+> authorized to select visual values** — it is contract only, and its
+> [Semantic Status Visual Binding Contract](../architecture/SEMANTIC_STATUS_VISUAL_BINDING_CONTRACT.md)
+> selects none. **No work package is currently authorized to select visual values.**
+
+**`AUTHORIZED WORK PACKAGE ≠ VALUE SELECTION AUTHORIZED`.** **VP-3, VP-5 and VP-6
+remain `UNSATISFIED` for every family**, **VP-4 is unchanged**, including
+**`UNSATISFIED` for VF-4**, **`CDS-WP-020A` and CDS-WP-024 … CDS-WP-053 remain
+`Planned`, not active, and not authorized**, and **visual values and visual source
+sets remain 0.**
 
 ## The evaluation
 

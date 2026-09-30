@@ -375,9 +375,10 @@ operating period, not a maturity state. **Foundation / Pre-Design:** Closed with
 | Item | State |
 | --- | --- |
 | Decisions · ADRs · Risks | **140** effective · **7** · **98** (89 `Monitored`, 9 `Mitigating`; none accepted or closed) |
-| Current work package · design work package · successor | **none** · **none** · **none** |
+| Current work package · design work package · successor | **`CDS-WP-023`** · **`CDS-WP-023`** · **none** |
 | `CDS-WP-020A` — Visual Token Source Authoring | `Planned` · not authorized (staged S1 · S2 · S3; no stage authorized) |
-| `CDS-WP-023` — Semantic Status Visual Binding Contract | `Planned` · not authorized |
+| `CDS-WP-023` — Semantic Status Visual Binding Contract | `AUTHORIZED` / `ACTIVE FOR EXECUTION` · contract only · executed; limited rework after independent review · not integrated, not closed |
+| `CDS-WP-024` · `CDS-WP-025` | `Planned` · not authorized |
 | Visual values · Visual Source Sets | **0** · **0** |
 | `Candidate` families · `Stable` artifacts | **1** (Semantic Status) · **0** |
 | Publication · release · licence | `Private Development` · none · none selected |
@@ -414,7 +415,10 @@ a recommendation or a sequence is not an authorization.
 | CDS-WP-019 … CDS-WP-022 | Visual foundation architecture: visual architecture, reference and semantic token layers, adaptive layout, theme model |
 | CDS-WP-001A · CDS-WP-001B | NDF Skills bootstrap and NDF v1.1.0 process-baseline maintenance |
 
-**Planned, not active, not authorized:** `CDS-WP-020A` and CDS-WP-023 … CDS-WP-053,
+**Authorized and active for execution:** `CDS-WP-023` — Semantic Status Visual Binding
+Contract (contract only; executed, not integrated, not closed; no successor).
+
+**Planned, not active, not authorized:** `CDS-WP-020A` and CDS-WP-024 … CDS-WP-053,
 across roadmap arcs including semantic presentation, components, accessibility and
 evidence, profiles and consumers, experience, distribution, and quality and release.
 

@@ -19,7 +19,22 @@
   `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`, with its execution result unchanged at
   **`COMPLETE WITH NOTES`**. **`CLOSURE OBJECT PREPARED ≠ CLOSURE EFFECTIVE`** held
   until that commit.
-- **Current work package: NONE.** **Last authorized work package: CDS-WP-001B — NDF
+- **Current work package: `CDS-WP-023` — Semantic Status Visual Binding Contract** —
+  **`AUTHORIZED` / `ACTIVE FOR EXECUTION`**, authorized separately and explicitly by
+  the Human Maintainer on 2026-09-30 **for execution only, as a contract-only work
+  package**. **Current design work package: `CDS-WP-023`. Successor: NONE.** Its
+  execution object — the new
+  [Semantic Status Visual Binding Contract](../docs/architecture/SEMANTIC_STATUS_VISUAL_BINDING_CONTRACT.md)
+  and the state updates recording its activation — is **uncommitted executor output**,
+  **not integrated and not closed**, reworked under a Human-Maintainer-authorized
+  limited rework after the independent review and awaiting Nova review of the rework
+  (steps 30 … 30e); it creates no
+  value, role, vocabulary, Source Set, schema, validator, or fixture and adds no
+  Decision, ADR, or risk (registers **140 · 7 · 98**). **CDS-WP-024, CDS-WP-025,
+  `CDS-WP-020A` and every later identifier remain `Planned`, not active, and not
+  authorized.** *(The rest of this bullet records the state from the CDS-WP-022 and
+  CDS-WP-001B closures until that authorization and is not rewritten.)*
+- **Current work package until 2026-09-30: NONE.** **Last authorized work package: CDS-WP-001B — NDF
   v1.1.0 Skills and Framework Baseline Maintenance** (Elevated; a lettered
   Skill-Maintenance insertion following the CDS-WP-001A precedent; process-only;
   independently reviewed `PASS WITH NOTES`, Nova-accepted, and integrated by the
@@ -206,7 +221,10 @@
   **Contract only**: **no theme instance, no machine-readable context identifier, no
   default alias, no value, no identifier, no role, no source set, no schema, no
   validator rule, no test and no fixture.**
-- **CDS-WP-023 … CDS-WP-053 and `CDS-WP-020A`:** **`Planned`, not active, not
+- **CDS-WP-023:** **`AUTHORIZED` / `ACTIVE FOR EXECUTION`** since 2026-09-30 —
+  contract only; executed; limited rework after independent review applied; **not
+  integrated, not closed**; **successor: NONE**. See the first bullets of this file.
+- **CDS-WP-024 … CDS-WP-053 and `CDS-WP-020A`:** **`Planned`, not active, not
   authorized, work not started** — see the
   [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
   *(2026-09-29, **effective** from the Human-Maintainer exact-object integration commit
@@ -214,7 +232,8 @@
   `CDS-WP-020A` is **staged S1 · S2 · S3** with **no stage authorized**, and
   **CDS-WP-023 is bounded as contract only** and **may be considered as the next
   design-work-package authorization candidate** — **it is not authorized, not current,
-  not the successor, and has not started**. See steps 27 … 29 below.)*
+  not the successor, and has not started**. See steps 27 … 29 below. *Point-in-time at
+  2026-09-29: CDS-WP-023 was authorized on 2026-09-30 — step 29.*)*
 
 ## Next allowed authority sequence
 
@@ -278,7 +297,13 @@ then authorized separately** and has been executed. The remaining sequence is:
 | 28c | **Nova adjudication** of that review | Nova — recommendation only, never approval | **Done** — preceded step 28d |
 | 28d | **Human-Maintainer exact-object integration commit** of that object | Human Maintainer | **Done** — `e87ff702f8d96a8850b18b93454028a094c6b80a` (2026-09-29) |
 | 28e | **`DEC-S-140` and the P1 … P5 carriers become effective**; M2A recorded as reached; `F-020C-02` and `F-022-06` resolved | Effective at step 28d | **Done** — effective at `e87ff702…`; **140 · 7 · 98**; **M2B not reached**; **no work package authorized** |
-| 29 | **Authorization of a next design work package** — a separate, explicit Human-Maintainer decision, **not** implied by step 28e. **CDS-WP-023 (contract only) may be considered as the candidate** | Human Maintainer | **Not taken** — **nothing is authorized** |
+| 29 | **Authorization of a next design work package** — a separate, explicit Human-Maintainer decision, **not** implied by step 28e. **CDS-WP-023 (contract only) may be considered as the candidate** | Human Maintainer | **Done (2026-09-30)** — **CDS-WP-023 authorized for execution only, contract only**; nothing else is authorized; **successor: NONE** |
+| 30 | **CDS-WP-023 execution** — the Semantic Status Visual Binding Contract and the state updates | Claude, under that authorization | **Done** — uncommitted Working Tree object |
+| 30a | **Independent review** (reviewer ≠ executor) and **Nova adjudication** | Independent reviewer · Nova | **Done** — review `GO WITH NOTES`; Nova: **NO-GO FOR INTEGRATION — LIMITED REWORK REQUIRED** |
+| 30b | **Limited rework** of the findings authorized by the Human Maintainer | Claude, under that authorization | **Done** — applied to the Working Tree; **not integrated, not closed** |
+| 30c | **Nova review of the reworked object** | Nova | **Pending** — precondition of step 30d |
+| 30d | **Human-Maintainer exact-object integration commit** | Human Maintainer | **Not taken** |
+| 30e | **Closure of CDS-WP-023** — a further, separate Human-Maintainer act | Human Maintainer | **Not taken** — **`INTEGRATED ≠ CLOSED`**, and closure authorizes no successor |
 
 **Step 8 is not reached before step 7**, **step 9e is not reached before step 9d**,
 **step 13 does not reach step 14**, **step 17 is not reached before step 16**,
@@ -304,9 +329,10 @@ makes an architecture normative and satisfies **no** VP gate. **Deciding an iden
 **Registering `CDS-WP-020A` at step 5 activates nothing**: it stays `Planned`, not
 active, and not authorized until its own separate Human-Maintainer authorization,
 which has **not** occurred. **The step-10 authorization named CDS-WP-021 and nothing
-else**, and **the step-19 authorization named CDS-WP-022 and nothing else**: each
-activated **no** other work package, and **`CDS-WP-020A` and
-CDS-WP-023 … CDS-WP-053 remain `Planned`, not active, and not authorized.**
+else**, **the step-19 authorization named CDS-WP-022 and nothing else**, and **the
+step-29 authorization named CDS-WP-023 and nothing else**: each activated **no** other
+work package, and **`CDS-WP-020A` and CDS-WP-024 … CDS-WP-053 remain `Planned`, not
+active, and not authorized.**
 **CDS-WP-021 and CDS-WP-022 each create no value**, so the value gate is untouched by
 both. **Step 20 moved no value prerequisite either**: **CDS-WP-022 decided no theme
 mechanism at that step**, so the `DEC-S-135` gate was **not** cleared before the

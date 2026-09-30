@@ -35,18 +35,22 @@ document supersedes it **as the forward view only** and rewrites none of it.
 | Renderer behaviour | Governance authority |
 | AI or executor output | Approval |
 
-**`CDS-WP-020A` and CDS-WP-023 through CDS-WP-053 are `Planned`, `Not active`, and
+**`CDS-WP-020A` and CDS-WP-024 through CDS-WP-053 are `Planned`, `Not active`, and
 `Not authorized for execution`. Work on them has not started.** Each becomes
 executable only on an explicit Nova prompt **and** Human-Maintainer authorization,
 one work package at a time. Nothing in this document activates the next one
-automatically. **`CDS-WP-021` and `CDS-WP-022` were the exceptions** — each
-authorized by a separate, explicit Human-Maintainer act, **not** by this document.
+automatically. **`CDS-WP-021`, `CDS-WP-022` and `CDS-WP-023` were the exceptions** —
+each authorized by a separate, explicit Human-Maintainer act, **not** by this document.
+**CDS-WP-023 — Semantic Status Visual Binding Contract is `AUTHORIZED` / `ACTIVE FOR
+EXECUTION`** (2026-09-30, execution only, contract only): its executed Working Tree
+object exists, has been reworked after independent review, and is **not integrated
+and not closed**; **successor: NONE**.
 **CDS-WP-021 is `Completed` / `Closed`**, closure effective at the Human-Maintainer
 integration commit `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`; **CDS-WP-022 — Theme
 and Environmental Presentation Model is `Completed` / `Closed`**, closure effective
 at the Human-Maintainer exact-object integration commit
 `ab81e197374bb9f9479105b4261cb4485a491b2a`. **No design work package
-is currently authorized** from that commit onward (**CDS-WP-001B**, a lettered
+was authorized** from that commit until the CDS-WP-023 authorization of 2026-09-30 (**CDS-WP-001B**, a lettered
 Skill-Maintenance insertion, was separately authorized and integrated at
 `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`, and is `Completed` / `Closed`, closure effective at `17b191416031d847573687b4ebce99fcea929386` —
 see *Out-of-sequence maintenance insertion*), and **closing one authorizes
@@ -303,6 +307,16 @@ object it describes. The maturity, evidence, claim, conformance, publication and
 value-state rows above remain **unchanged** — visual values **0**, visual source
 sets **0**.
 
+**Superseded in part (2026-09-30) — CDS-WP-023 authorization.** The Human Maintainer
+separately and explicitly authorized **CDS-WP-023 — Semantic Status Visual Binding
+Contract** for execution only, as a contract-only work package. The work-package rows
+now stand at **six closed — CDS-WP-017 … CDS-WP-022 — one active — CDS-WP-023,
+`AUTHORIZED` / `ACTIVE FOR EXECUTION`, executed, not integrated, not closed — and 31
+`Planned` · not active · not authorized** (`CDS-WP-020A` and CDS-WP-024 …
+CDS-WP-053). **Successor: NONE.** The paragraphs above stay as written. The maturity,
+evidence, claim, conformance, publication and value-state rows remain **unchanged** —
+visual values **0**, visual source sets **0**.
+
 **CDS-WP-019 created no visual value.** It defined the *architecture* of the visual
 foundation — nine families, fourteen invariants, a naming model, and the
 accessibility, channel, brand, and governance boundaries — and selected **no
@@ -371,7 +385,8 @@ CDS-WP-025
 **CDS-WP-023 is not authorized by this reading.** After successful integration and
 review of that pass it **may be considered** as the next design-work-package
 authorization candidate — **`SEQUENCE ESTABLISHED ≠ SUCCESSOR AUTHORIZED`** and
-**`READY ≠ AUTHORIZED`**.
+**`READY ≠ AUTHORIZED`**. *(It was later authorized — on 2026-09-30, by a separate,
+explicit Human-Maintainer act, not by this reading; see *Phase S*.)*
 
 ## Development arcs and work packages
 
@@ -439,7 +454,8 @@ result stays `COMPLETE WITH NOTES`.** **Closing it authorizes nothing**: **`CLOS
 SUCCESSOR AUTHORIZED`**, **`CLOSED ≠ VALUE SELECTION AUTHORIZED`** and **`SEQUENCED
 NEXT ≠ AUTHORIZED`** — **`CDS-WP-020A` remains `Planned`, not active, and not
 authorized**, as do CDS-WP-023 … CDS-WP-053, and **no work package is currently
-authorized** from that commit onward.
+authorized** from that commit onward. *(Point-in-time at that closure: CDS-WP-023 has
+since been authorized, on 2026-09-30, and is `AUTHORIZED` / `ACTIVE FOR EXECUTION`.)*
 
 **The milestone mapping is not re-derived here.** **M2 — Visual Foundation Ready**
 still reads *"reached after CDS-WP-022"*, unchanged. Whether CDS-WP-020A belongs
@@ -470,7 +486,7 @@ family, **S3** semantic source and alias authoring — held in
 
 | ID | Title | Layer | Status |
 | --- | --- | --- | --- |
-| CDS-WP-023 | Semantic Status Visual Binding Contract | 3 → 4 | Planned · not active |
+| CDS-WP-023 | Semantic Status Visual Binding Contract | 3 → 4 | **`AUTHORIZED` / `ACTIVE FOR EXECUTION`** (2026-09-30) · contract only · executed; limited rework after independent review · not integrated, not closed |
 | CDS-WP-024 | Semantic Validation and Render-Gate Architecture | 8 | Planned · not active |
 | CDS-WP-025 | Semantic Validation Negative-Fixture Expansion | 8 | Planned · not active |
 
@@ -478,7 +494,7 @@ family, **S3** semantic source and alias authoring — held in
 Decision & Contract Integration Pass; **effective** from that pass's
 Human-Maintainer exact-object integration commit `e87ff702f8d96a8850b18b93454028a094c6b80a`.)*
 **CDS-WP-023 is `Planned`, not
-active, and not authorized.** It is eligible **only** as the **Semantic Status Visual
+active, and not authorized** *(at that date — see the execution-state update below)*. It is eligible **only** as the **Semantic Status Visual
 Binding Contract**, at the level of:
 
 - **role classes** a status-to-visual binding may draw on — the registered classes,
@@ -501,6 +517,22 @@ vocabulary itself** (DEC-S-134, DEC-S-140). **`STATUS MEANING ≠ VISUAL ENCODIN
 STATUS`**. Under the arc semantics above its `Depends on` entry — CDS-WP-022 — is
 satisfied, and **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`**: its execution requires a
 separate, explicit Human-Maintainer authorization, which **has not occurred**.
+
+**Execution-state update (2026-09-30, CDS-WP-023 execution).** *(Additive — the
+boundary above is not edited.)* **The Human Maintainer has separately and explicitly
+authorized CDS-WP-023 for execution only**, within exactly that boundary. It is
+**`AUTHORIZED` / `ACTIVE FOR EXECUTION`**; its execution object — the
+[Semantic Status Visual Binding Contract](../architecture/SEMANTIC_STATUS_VISUAL_BINDING_CONTRACT.md)
+— is **uncommitted executor output, not integrated and not closed**; after the
+independent review and Nova's adjudication *NO-GO FOR INTEGRATION — LIMITED REWORK
+REQUIRED*, a Human-Maintainer-authorized limited rework has been applied, and the
+reworked object awaits Nova review. It supplies **requirements** to **Route C**
+(**VQ-1 … VQ-10**) and **inputs** to **CDS-WP-024** and **CDS-WP-025**, and decides
+**no** route, role, vocabulary, or value. **The representation and ownership of a
+binding artifact stay unresolved** and are registered as **`F-023-01`** (*Findings
+observed by CDS-WP-023*), distinct from Route D. **CDS-WP-024, CDS-WP-025, `CDS-WP-020A` and every later
+identifier remain `Planned`, not active, and not authorized**, and **no successor is
+authorized**.
 
 ### Phase C — Component System
 
@@ -580,15 +612,18 @@ separate, explicit Human-Maintainer authorization, which **has not occurred**.
 renumbered**. **One inserted identifier — `CDS-WP-020A` — now sits inside that
 span**, registered by the CDS-WP-020 closure and routing pass on the `CDS-WP-001A`
 precedent; a suffix occupies no number, so the numeric range is untouched. Of the
-**38** identifiers now recorded, **32** — CDS-WP-020A and CDS-WP-023 … CDS-WP-053 —
-are `Planned · not active · not authorized`, and **six** — CDS-WP-017, CDS-WP-018,
+**38** identifiers now recorded, **31** — CDS-WP-020A and CDS-WP-024 … CDS-WP-053 —
+are `Planned · not active · not authorized`, **one** — **CDS-WP-023** — is
+**`AUTHORIZED` / `ACTIVE FOR EXECUTION`** (2026-09-30; not integrated, not closed),
+and **six** — CDS-WP-017, CDS-WP-018,
 CDS-WP-019, CDS-WP-020, CDS-WP-021 and CDS-WP-022 — are closed: **CDS-WP-021 upon the
 Human-Maintainer exact-object integration commit
 `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`**, and **CDS-WP-022 upon the
 Human-Maintainer exact-object integration commit
-`ab81e197374bb9f9479105b4261cb4485a491b2a`**. **None is active, and no identifier in
-this range is currently authorized** from that commit onward; **being recorded here authorizes
-nothing.** The **CDS Phase Transition Governance Package** occupies **no** identifier
+`ab81e197374bb9f9479105b4261cb4485a491b2a`**. **CDS-WP-023 is the only active
+identifier in this range**, authorized by a separate, explicit Human-Maintainer act on
+2026-09-30 — from `ab81e197…` until then none was active or authorized; **being
+recorded here authorizes nothing.** The **CDS Phase Transition Governance Package** occupies **no** identifier
 in this range.
 
 ## Out-of-sequence maintenance insertion — CDS-WP-001B
@@ -1250,10 +1285,41 @@ rewritten**.)*
 **`CDS-WP-020A` and CDS-WP-023 … CDS-WP-053 remain `Planned`, not active, and not
 authorized** — creates any visual value, Source Set, or identifier, admits evidence,
 changes maturity, or changes publication, which stays `Private Development`.
+*(Point-in-time at that reconciliation pass: CDS-WP-023 was later authorized on
+2026-09-30 by a separate, explicit Human-Maintainer act and is `AUTHORIZED` / `ACTIVE
+FOR EXECUTION`; `CDS-WP-020A` and CDS-WP-024 … CDS-WP-053 remain `Planned`, not active,
+and not authorized.)*
+
+### Findings observed by CDS-WP-023
+
+*(2026-09-30. Registered by the CDS-WP-023 limited rework after the independent review
+routed it here. The identifier is a finding label in this non-normative planning view,
+**not** a Decision, an ADR, a risk, or a governance identifier. **Recording is not
+routing by authority, and routing is not deciding.**)*
+
+| ID | Observation | Disposition |
+| --- | --- | --- |
+| **`F-023-01`** | **UNRESOLVED — representation and ownership of a Status Visual Binding artifact.** The [Semantic Status Visual Binding Contract](../architecture/SEMANTIC_STATUS_VISUAL_BINDING_CONTRACT.md) defines what a binding must be, may never be, and must declare, but **not where or how the binding artifact itself is represented** machine-readably, nor **which work package or artifact authors it** (*Open questions*, question 1; precondition **BP-5**). Its **BM-3**, **BM-4** and **BM-5** exclude three representations — a status-to-role alias, a write into the Semantic Status source, and a role name — and leave the rest open. | **OPEN / UNRESOLVED — NOT DECIDED, NO OWNER.** **It is not Route D and not `F-022-01`**: Route D concerns the representation, schema ownership, and mechanism of **context-conditional semantic realization**; only the **resolver-specific** aspect of a binding overlaps it, and **that aspect stays with Route D**. **No owner is chosen, routed, or implied** — not `CDS-WP-020A`, CDS-WP-024, CDS-WP-026, CDS-WP-027, or a new artifact. **Implementation and reification of any binding depend on later, separate authority**, and no Decision is created for it unless separately authorized. **Every rule of the contract binds whichever representation is later chosen.** No risk, Decision, ADR, or work-package activation is created — the registers stay at **140 · 7 · 98**. |
 
 ## Immediate next step
 
-**No next work package is authorized, and no step in this section authorizes one.**
+**Current state (2026-09-30, CDS-WP-023 execution and limited rework).** **CDS-WP-023 —
+Semantic Status Visual Binding Contract is `AUTHORIZED` / `ACTIVE FOR EXECUTION`**,
+authorized separately and explicitly by the Human Maintainer for execution only,
+contract only. Its execution object is **uncommitted executor output**: it was
+independently reviewed, Nova adjudicated it **NO-GO FOR INTEGRATION — LIMITED REWORK
+REQUIRED**, and the Human-Maintainer-authorized **limited rework** has been applied to
+the Working Tree. **The immediate next step is Nova's review of the reworked object**
+(reviewer ≠ executor), followed — only if that review and Nova adjudication permit —
+by a **Human-Maintainer exact-object integration commit**. **Current work package and
+current design work package: `CDS-WP-023`; successor: NONE**; CDS-WP-024 and
+CDS-WP-025 remain `Planned` and not authorized. **Closure of CDS-WP-023 is a further, separate Human-Maintainer
+act**, and **no successor is authorized** — **`EXECUTED ≠ ACCEPTED`**, **`PASS ≠
+INTEGRATED`**, **`INTEGRATED ≠ CLOSED`**, **`CLOSED ≠ SUCCESSOR AUTHORIZED`**. The
+paragraphs below record the state before that authorization and are not rewritten.
+
+*(Point-in-time — from `ab81e197…` until the CDS-WP-023 authorization of
+2026-09-30:)* **No next work package is authorized, and no step in this section authorizes one.**
 **CDS-WP-022 is `Completed` / `Closed`**, closure effective at the Human-Maintainer
 exact-object integration commit `ab81e197374bb9f9479105b4261cb4485a491b2a`
 (2026-09-28), with the execution result unchanged at **`COMPLETE WITH NOTES`**.
@@ -1276,7 +1342,10 @@ considered as the next design-work-package authorization candidate** — **contr
 only**, and **only by a separate, explicit Human-Maintainer authorization**, which
 **has not occurred**. **`NEXT CANDIDATE ≠ AUTHORIZED`**, **`CONTRACT READY ≠ WORK
 AUTHORIZED`** and **`SEQUENCE ESTABLISHED ≠ SUCCESSOR AUTHORIZED`**; **no design work
-package is authorized**, and **no CDS-WP-020A stage is authorized**.
+package is authorized**, and **no CDS-WP-020A stage is authorized**. *(Point-in-time
+at 2026-09-29: that authorization **has since occurred** — CDS-WP-023 was authorized
+on 2026-09-30 for execution only; see *Current state* above. **No CDS-WP-020A stage
+is authorized.**)*
 
 **The step this section previously named has been completed:** the **closure of
 CDS-WP-022** — a separate, explicit Human-Maintainer act not implied by the
@@ -1456,6 +1525,12 @@ and is NOT authorized**, and **`F-020C-02` remains deferred** — the Step-9 dec
 do not re-derive the **M2** milestone mapping.
 
 ### Standing position
+
+*(Point-in-time before the CDS-WP-023 authorization of 2026-09-30. Where this section
+says that `CDS-WP-020A` and CDS-WP-023 … CDS-WP-053 remain `Planned`, read from that
+date: **`CDS-WP-020A` and CDS-WP-024 … CDS-WP-053 remain `Planned`, not active, and
+not authorized**, and **CDS-WP-023 is `AUTHORIZED` / `ACTIVE FOR EXECUTION`** — not
+integrated, not closed; see *Immediate next step*.)*
 
 **CDS-WP-020 was authorized separately by the Human Maintainer on 2026-08-26** —
 its authorization came from that decision alone, **not** from its position in this

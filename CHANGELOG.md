@@ -9,6 +9,57 @@ released and no release is announced.
 
 ### Added
 
+- **CDS-WP-023 — Semantic Status Visual Binding Contract — executed; limited rework
+  after independent review applied; Nova review of the rework, integration and closure
+  pending.** Authorized separately and explicitly by the Human
+  Maintainer on 2026-09-30 **for execution only, as a contract-only work package**, and
+  recorded as **`AUTHORIZED` / `ACTIVE FOR EXECUTION`**. Adds the normative
+  [Semantic Status Visual Binding Contract](docs/architecture/SEMANTIC_STATUS_VISUAL_BINDING_CONTRACT.md):
+  an authority basis that distinguishes **derived requirements** from **contract
+  determinations** (**`DERIVED ≠ DETERMINED`**; DEC-S-023 invoked only for real source
+  conflicts); a binding model in which a binding is a revision-bound relation between
+  status axis values and visual roles — **`BINDING ≠ ALIAS`**, never in the Semantic Status source,
+  never expressed through a role name (**BM-1 … BM-10**); the semantic obligations every
+  status representation keeps (**BO-1 … BO-11**); a classification of the registered
+  role classes — **VF-1 Feedback bindable**, **VF-1 Data bindable in the
+  data-visualization channel only once its authority exists** (before then a Data-class
+  element is **Invalid**, never Unsupported), interaction, focus, emphasis and
+  elevation classes excluded by existing authority, every other registered class not
+  bindable — **`BINDING ROLE ≠ REDUNDANT PERCEPTUAL MODALITY`** — and **no class
+  added** (**BE-1 … BE-6**); binding rules including one axis per entry and per slot,
+  complete encoding of every encoded axis against its **authoritative value domain**
+  in the bound status source revision, and **affirmative-disposition exclusivity**
+  (**BR-1 … BR-14**); redundancy and accessibility rules with the primary text and
+  accessible-semantics carriers mandatory and **sufficient for status meaning only**
+  (**RD-1 … RD-11**); theme invariants over the supported contexts with no default and
+  no substitution (**TI-1 … TI-10**); a binding-state model that classifies **four
+  subjects separately** — binding validity (Valid · Incomplete · Invalid), axis
+  disposition (Bound · Missing), setting applicability (Holds · Unsupported · Fails in
+  setting) and output deviation (Implementation error) — in which **Missing is never a
+  fallback** from an Invalid or Incomplete binding and a context-specific failure fails
+  closed for that setting only, with fail-closed rules (**BF-1 … BF-11**);
+  realization preconditions, **none met today** (**BP-1 … BP-8**); requirements on the
+  Route C vocabulary decision (**VQ-1 … VQ-10**); 27 detection inputs and one
+  evidence-record input constraint for CDS-WP-024, and 22 invalid-state categories for
+  CDS-WP-025. The representation and ownership of a binding artifact are **unresolved**
+  and registered, with **no owner**, as the roadmap finding **`F-023-01`**, distinct
+  from Route D. *(The executed object was independently reviewed — `GO WITH NOTES` —
+  and adjudicated by Nova **NO-GO FOR INTEGRATION — LIMITED REWORK REQUIRED**; the
+  Human-Maintainer-authorized limited rework corrected the authority classification,
+  the state model, domain-based completeness, the scope of RD-1, the binding-artifact
+  routing, the Area 7 quotation, the `Not Applicable` terminology, the classification
+  of the former detection input 28, and stale live current-state statements.)* The activation is recorded in
+  the current-state carriers, and the Visual Token Value Selection Rules gain an
+  additive VP-7 current-state note (**VP-7 stays `UNSATISFIED`**). **No** role, role
+  identifier, vocabulary, visual value, binding instance, Theme or context identifier,
+  Source Set, schema, validator, fixture, renderer, or evidence is created; **no**
+  Semantic Status byte changes; **no** Route A … D decision is taken; **no** Decision,
+  ADR, or risk is added — the registers stay at **140 · 7 · 98**; maturity, evidence,
+  claims and publication (`Private Development`) are unchanged; **CDS-WP-024,
+  CDS-WP-025, `CDS-WP-020A` and every later identifier remain `Planned`, not active,
+  and not authorized**, and **no successor is authorized**. **The Working Tree is
+  uncommitted executor output**: `EXECUTED ≠ ACCEPTED`, `PASS ≠ INTEGRATED`,
+  `INTEGRATED ≠ CLOSED`.
 - **Public Identity & README Pass — Negative Core repository identity and README landing
   page prepared; integration pending.** A repository-presentation and documentation pass,
   **not a work package**. Adds the **Negative Core** repository identity under

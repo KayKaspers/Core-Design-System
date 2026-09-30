@@ -33,8 +33,11 @@ release, or publication authority, and activates no work package.
 
 ## Work package status
 
-- **Last authorized work package: CDS-WP-001B — NDF v1.1.0 Skills and Framework
-  Baseline Maintenance** (Elevated; a lettered Skill-Maintenance insertion following
+- **Last authorized work package: `CDS-WP-023`** — `AUTHORIZED` / `ACTIVE FOR
+  EXECUTION`, not integrated, not closed, **Successor: NONE** (see the next item).
+  *(Point-in-time until the CDS-WP-023 authorization on 2026-09-30:)* **Last
+  authorized work package before CDS-WP-023: CDS-WP-001B — NDF v1.1.0 Skills and
+  Framework Baseline Maintenance** (Elevated; a lettered Skill-Maintenance insertion following
   the CDS-WP-001A precedent, no renumbering; process-only). Independently reviewed
   (`PASS WITH NOTES`), Nova-accepted, and integrated by the Human-Maintainer
   exact-object commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`, at which `DEC-S-139`, the NDF v1.1.0 process
@@ -43,12 +46,20 @@ release, or publication authority, and activates no work package.
   **`Completed` / `Closed`**, with the closure **effective at** the Human-Maintainer
   exact-object integration commit `17b191416031d847573687b4ebce99fcea929386` of its
   closure object (**`INTEGRATED ≠ CLOSED`**), and authorizes **no** successor (**`MAINTENANCE
-  COMPLETE ≠ SUCCESSOR AUTHORIZED`**). **Current work package: NONE.**
-- **Design work package currently authorized: NONE — no design work package is
-  currently authorized** from the
-  Human-Maintainer exact-object integration commit
+  COMPLETE ≠ SUCCESSOR AUTHORIZED`**). **Current work package: `CDS-WP-023`** (from
+  2026-09-30; NONE before).
+- **Current design work package: `CDS-WP-023` — Semantic Status Visual Binding
+  Contract** — **`AUTHORIZED` / `ACTIVE FOR EXECUTION`**, authorized separately and
+  explicitly by the Human Maintainer on 2026-09-30 **for execution only, contract
+  only**. Its execution object is **uncommitted executor output — not integrated, not
+  closed** — reworked under a Human-Maintainer-authorized limited rework after the
+  independent review and awaiting Nova review of the rework; it authorizes **no** successor,
+  **no** Route A … D decision, and **no** value, role, Source Set, schema, validator,
+  fixture, maturity, evidence, release, or publication change. **Successor: NONE.**
+  *(From the Human-Maintainer exact-object integration commit
   `ab81e197374bb9f9479105b4261cb4485a491b2a` (2026-09-28), at which the CDS-WP-022
-  closure became effective.
+  closure became effective, until that authorization, no design work package was
+  authorized.)*
   **`CLOSED ≠ SUCCESSOR AUTHORIZED`**, **`CLOSED ≠ VALUE SELECTION AUTHORIZED`**,
   **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`**, and **`SEQUENCED NEXT ≠
   AUTHORIZED`**: the next work package begins only on an explicit Nova prompt **and**
@@ -143,6 +154,8 @@ release, or publication authority, and activates no work package.
   value selection is not authorized**, and **`CDS-WP-020A` and CDS-WP-023 …
   CDS-WP-053 remain `Planned`, not active, and not authorized** — **CDS-WP-022 was
   authorized afterwards, by a separate and explicit Human-Maintainer act.**
+  *(Point-in-time at that effectivity: CDS-WP-023 has since been authorized,
+  2026-09-30.)*
   **Closure resolves
   no deferred design question and satisfies no value prerequisite**: the authorized
   scope was executed, reviewed, integrated and reconciled, and **`DEFERRED OPEN
@@ -222,7 +235,8 @@ release, or publication authority, and activates no work package.
   [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
 - **Next planned work package: `CDS-WP-020A` — Visual Token Source Authoring and
   Source Set Realization** — **`Planned`, not active, not authorized, work not
-  started**, as are CDS-WP-023 … CDS-WP-053.
+  started**, as are CDS-WP-024 … CDS-WP-053. *(CDS-WP-023 is `AUTHORIZED` / `ACTIVE
+  FOR EXECUTION` since 2026-09-30 — see above.)*
   **The effective `DEC-S-135` rules that CDS-WP-022 precedes context-sensitive value
   selection and made it the recommended and sequenced Step-10 candidate**;
   **SEQUENCED NEXT ≠ AUTHORIZED**, and it authorized nothing. **The Human Maintainer
@@ -248,7 +262,8 @@ release, or publication authority, and activates no work package.
   authorized**; and the arcs are read as a **dependency architecture, not a universal
   phase lock**, so **CDS-WP-023 — contract only — may be considered as the next
   design-work-package authorization candidate**. **Nothing is authorized** — see
-  [Work Packages](WORK_PACKAGES.md).
+  [Work Packages](WORK_PACKAGES.md). *(Point-in-time at 2026-09-29: CDS-WP-023 was
+  authorized on 2026-09-30 by a separate Human-Maintainer act, execution only.)*
 - Earlier work package: **CDS-WP-016 — Semantic Status Foundation
   Independent Evidence Review and Candidate Gate.** Its review work was
   **executed**: Independent Review **PASS**, Candidate Recommendation **GO**.
