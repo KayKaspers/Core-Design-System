@@ -906,6 +906,40 @@ released and no release is announced.
 
 ### Changed
 
+- **CDS-WP-023 closure recorded as effective — post-closure current-state
+  reconciliation.** The condition the CDS-WP-023 closure object stated — the
+  Human-Maintainer exact-object integration commit of that closure object — was met on
+  **2026-09-30** by commit **`53c1cef44d74f502beeb282e4f399b0d3744e932`**
+  (`chore(governance): close CDS-WP-023`; tree
+  `c738386b889900e0665672f97992f6fab43204cb`; parent
+  `0ea15ff080c377d7494876efdb6197404fa3cf40`). **CDS-WP-023 is `Completed` / `Closed`,
+  closure effective at that commit**; its execution was integrated earlier, at
+  **`0ea15ff080c377d7494876efdb6197404fa3cf40`** — **`EXECUTION EFFECTIVE AT 0ea15ff ≠
+  CLOSURE EFFECTIVE AT 53c1cef`**, and the two lifecycle events are kept distinct. The
+  maintained current-state carriers no longer describe the closure as *prepared in the
+  Working Tree*, as *effective only at* a future integration commit, or as *pending*,
+  and record the effectivity commit where traceability requires it: the contract header,
+  the VP-7 amendment headers and notes, the project-system carriers, the roadmap, the
+  README, `CLAUDE.md` and the project brain. The two VP-7 traceability notes of the
+  closure review are resolved (the execution note now records `0ea15ff…` and no longer
+  reads *uncommitted*). *The older CDS-WP-019-era wording "the binding itself is
+  CDS-WP-023's" is clarified, not changed in substance:* it means the **Binding
+  Contract**, not a Binding **artifact** — **`F-023-01` stays `OPEN / UNRESOLVED`** with
+  no owner. **This records a completed Human-Maintainer act and performs none.** **No
+  successor is authorized** — **`CLOSED ≠ SUCCESSOR AUTHORIZED`**: current work package,
+  current design work package and successor stay **NONE**; **CDS-WP-024, CDS-WP-025 and
+  `CDS-WP-020A` remain `Planned`, not active, and not authorized**; **Routes A … D stay
+  unresolved**; **`F-PIR-02` stays routed to Core Vision**. **No design semantics change**
+  — the binding model, state model, role-class semantics, fail-closed rules, Route C
+  requirements and **BP-2 … BP-8** are untouched (**BP-1 remains met**) — and **VP-7
+  stays `UNSATISFIED`**, with VP-3, VP-4, VP-5 and VP-6 unchanged. Historical and
+  point-in-time records, including the CDS-WP-023 execution and closure entries below,
+  are preserved, not rewritten — **`CURRENT STATE CHANGED ≠ HISTORICAL RECORD WAS
+  WRONG`**. **No** value, role, vocabulary, Source Set, schema, validator, fixture,
+  renderer or evidence is created; **no** Decision, ADR or risk is added — the
+  registers stay at **140 · 7 · 98**; **no** maturity, claim, conformance, release, tag
+  or publication authority changes; publication stays `Private Development`.
+  (CDS-WP-023 post-closure current-state reconciliation)
 - **CDS-WP-023 execution integration recorded and closure object prepared — target
   lifecycle `Completed` / `Closed`; two INFO notes resolved.** The condition the
   CDS-WP-023 execution object stated — the Human-Maintainer exact-object integration

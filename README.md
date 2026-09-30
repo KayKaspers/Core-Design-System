@@ -377,7 +377,7 @@ operating period, not a maturity state. **Foundation / Pre-Design:** Closed with
 | Decisions · ADRs · Risks | **140** effective · **7** · **98** (89 `Monitored`, 9 `Mitigating`; none accepted or closed) |
 | Current work package · design work package · successor | **none** · **none** · **none** |
 | `CDS-WP-020A` — Visual Token Source Authoring | `Planned` · not authorized (staged S1 · S2 · S3; no stage authorized) |
-| `CDS-WP-023` — Semantic Status Visual Binding Contract | Closed (target state, recorded by its closure object) · contract only · execution integrated at `0ea15ff0…` · closure effective only at its own Human-Maintainer integration commit · authorizes no successor |
+| `CDS-WP-023` — Semantic Status Visual Binding Contract | Closed · contract only · execution integrated at `0ea15ff0…` · closure effective at `53c1cef4…` (Human-Maintainer integration commit) · authorizes no successor |
 | `CDS-WP-024` · `CDS-WP-025` | `Planned` · not authorized |
 | Visual values · Visual Source Sets | **0** · **0** |
 | `Candidate` families · `Stable` artifacts | **1** (Semantic Status) · **0** |
@@ -413,12 +413,12 @@ a recommendation or a sequence is not an authorization.
 | CDS-WP-010 … CDS-WP-016 | Machine-readable basis and first Candidate: support baseline, token format, bootstrap, offline validator, Semantic Status foundation, source set, Candidate gate |
 | CDS-WP-017 … CDS-WP-018 | Roadmap, authority and hygiene reconciliation |
 | CDS-WP-019 … CDS-WP-022 | Visual foundation architecture: visual architecture, reference and semantic token layers, adaptive layout, theme model |
-| CDS-WP-023 | Semantic Status Visual Binding Contract (contract only; closure effective only at its closure object's Human-Maintainer integration commit) |
+| CDS-WP-023 | Semantic Status Visual Binding Contract (contract only; closed, closure effective at its Human-Maintainer integration commit `53c1cef4…`) |
 | CDS-WP-001A · CDS-WP-001B | NDF Skills bootstrap and NDF v1.1.0 process-baseline maintenance |
 
 **Authorized and active:** none. `CDS-WP-023` — Semantic Status Visual Binding Contract
-(contract only) is recorded closed by its closure object, which carries no authority
-until its own Human-Maintainer integration commit; closing it authorizes no successor.
+(contract only) is closed, its closure effective at the Human-Maintainer integration
+commit `53c1cef4…`; closing it authorizes no successor.
 
 **Planned, not active, not authorized:** `CDS-WP-020A` and CDS-WP-024 … CDS-WP-053,
 across roadmap arcs including semantic presentation, components, accessibility and

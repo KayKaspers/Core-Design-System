@@ -103,9 +103,9 @@ approved.
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**,
   **CDS-WP-017**, **CDS-WP-018**, **CDS-WP-019**, **CDS-WP-020**, **CDS-WP-021**,
-  **CDS-WP-022**, **CDS-WP-023** *(CDS-WP-023: target lifecycle recorded by its closure
-  object; closure effective only at that object's Human-Maintainer exact-object
-  integration commit)*
+  **CDS-WP-022**, **CDS-WP-023** *(CDS-WP-023: `Completed` / `Closed`, closure effective
+  at the Human-Maintainer exact-object integration commit
+  `53c1cef44d74f502beeb282e4f399b0d3744e932`)*
 - Closed work package: **CDS-WP-019 — Core Visual Foundation Architecture** —
   **architecture only**: it defines how the visual foundation is structured,
   governed, represented, extended, validated, and consumed. It created **no visual
@@ -115,9 +115,10 @@ approved.
   package. Closure became effective with the Human-Maintainer commit
   `538fbccbf6f554de3b872e9fb75a70d13318feb6`.
 - **Last authorized work package: `CDS-WP-023`** — execution **integrated** at
-  `0ea15ff080c377d7494876efdb6197404fa3cf40`; recorded `Completed` / `Closed` by its
-  closure object, **effective only at that object's Human-Maintainer exact-object
-  integration commit**; **Successor: NONE** (see the next items).
+  `0ea15ff080c377d7494876efdb6197404fa3cf40`; `Completed` / `Closed`, **closure
+  effective at the Human-Maintainer exact-object integration commit
+  `53c1cef44d74f502beeb282e4f399b0d3744e932`** (2026-09-30); **Successor: NONE** (see
+  the next items).
   *(Point-in-time until the CDS-WP-023 authorization on 2026-09-30:)* **Last
   authorized work package before CDS-WP-023: CDS-WP-001B — NDF v1.1.0 Skills and
   Framework Baseline Maintenance** (Elevated; a lettered Skill-Maintenance insertion following
@@ -127,12 +128,14 @@ approved.
   `lock-enforced` state became effective; **`EXECUTED ≠ ACCEPTED`**. It is
   `Completed` / `Closed`, with the closure effective at the Human-Maintainer
   exact-object integration commit `17b191416031d847573687b4ebce99fcea929386` of its
-  closure object, and authorizes no successor. **Current work package: NONE** (target
-  state of the CDS-WP-023 closure object; `CDS-WP-023` was the current work package
-  from 2026-09-30 until that closure's effectivity, NONE before).
-- **Current design work package: NONE. Successor: NONE.** *(Target state of the
-  CDS-WP-023 closure object, effective from that object's Human-Maintainer
-  exact-object integration commit; from the authorization of 2026-09-30 until then
+  closure object, and authorizes no successor. **Current work package: NONE** (effective
+  from the CDS-WP-023 closure at `53c1cef44d74f502beeb282e4f399b0d3744e932`;
+  `CDS-WP-023` was the current work package from 2026-09-30 until that closure's
+  effectivity, NONE before).
+- **Current design work package: NONE. Successor: NONE.** *(Effective from the
+  Human-Maintainer exact-object integration commit
+  `53c1cef44d74f502beeb282e4f399b0d3744e932`, at which the CDS-WP-023 closure became
+  effective; from the authorization of 2026-09-30 until then
   `CDS-WP-023` — Semantic Status Visual Binding Contract — was the current design work
   package, `AUTHORIZED` / `ACTIVE FOR EXECUTION`, execution only, contract only.)* It
   defines the normative contract between Semantic Status meaning and its permitted
@@ -144,7 +147,9 @@ approved.
   Human-Maintainer-authorized limited rework, re-reviewed in a final delta review, and
   **integrated** by the Human-Maintainer exact-object commit
   `0ea15ff080c377d7494876efdb6197404fa3cf40` — **`INTEGRATED ≠ CLOSED`**, and the
-  closure is a separate, later act (**`CLOSURE OBJECT PREPARED ≠ CLOSURE EFFECTIVE`**).
+  closure was a separate, later act, effective at `53c1cef44d74f502beeb282e4f399b0d3744e932`
+  (**`CLOSURE OBJECT PREPARED ≠ CLOSURE EFFECTIVE`** held until that commit; **`EXECUTION
+  EFFECTIVE AT 0ea15ff ≠ CLOSURE EFFECTIVE AT 53c1cef`**).
   It creates no value, role, vocabulary, Source Set, schema, validator, or fixture and
   adds no Decision, ADR, or risk. **`F-023-01` stays `OPEN / UNRESOLVED`** with no
   owner; Routes A … D stay unresolved. *(From the Human-Maintainer exact-object
@@ -156,9 +161,9 @@ approved.
   AUTHORIZED`**; the next one begins only on an explicit Nova prompt **and** a separate
   Human-Maintainer authorization.
 - **Most recent closed design work package: `CDS-WP-023` — Semantic Status Visual
-  Binding Contract** — **`Completed` / `Closed`** as recorded by this closure object
-  (**closure effective only at that object's Human-Maintainer exact-object integration
-  commit**); **contract only**; execution integrated at
+  Binding Contract** — **`Completed` / `Closed`**, **closure effective at the
+  Human-Maintainer exact-object integration commit
+  `53c1cef44d74f502beeb282e4f399b0d3744e932`**; **contract only**; execution integrated at
   `0ea15ff080c377d7494876efdb6197404fa3cf40`; it authorizes no successor.
 - Preceding closed design work package (before CDS-WP-023): **`CDS-WP-022` — Theme and Environmental
   Presentation Model** — **`Completed` / `Closed`**. Authorized for execution by a
@@ -259,8 +264,8 @@ approved.
   `Closed`**, closure effective at `ab81e197374bb9f9479105b4261cb4485a491b2a`;
   **`CDS-WP-020A` and CDS-WP-023 … CDS-WP-053 remain `Planned`, not
   active, and not authorized**, and **`DEC-S-135` is unchanged.** *(Point-in-time:
-  CDS-WP-023 has since been authorized, 2026-09-30, integrated at `0ea15ff0…`, and is
-  recorded closed by its closure object.)*
+  CDS-WP-023 has since been authorized, 2026-09-30, integrated at `0ea15ff0…`, and
+  closed, closure effective at `53c1cef4…`.)*
 - Previous work package: **CDS-WP-020 — Reference and Semantic Token
   Foundation** was authorized separately by the Human Maintainer on 2026-08-26,
   **executed with result `DECISION_REQUIRED`**, and **integrated** by the
@@ -336,7 +341,7 @@ approved.
 | **`CDS-WP-020A`** | **PLANNED / NOT ACTIVE / NOT AUTHORIZED** — Visual Token Source Authoring and Source Set Realization; the `FR-N-03` authoring destination; **inserted** identifier, nothing renumbered; owns authoring, never validation or conformance |
 | **CDS-WP-021** | **Completed / Closed** — Adaptive Layout and Responsive Foundation; **executed with result `COMPLETE WITH NOTES`**, **integrated** at `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`, and **closed effective at the Human-Maintainer exact-object integration commit `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`**. **Contract only; no visual value, no identifier, no range name or count, no VF-4 technical root, no source set**; no token source, schema, validator rule, test, component, brand, profile, evidence, maturity change, risk, phase rename, or capability registration. **Layer 3 / Layer 5 / Layer 6 split CONFIRMED — `F-019-03` answered, CR-004 unchanged at Layer 5.** **`WP021-D1` APPROVED** — the Container-Relative Named-Range Foundation — recorded as **`DEC-S-136`** with **`ADR-0006`**, both **effective at that commit**. **`WP021-D2` DEFERRED** — VF-4 root and Source Set identity **OPEN**, with **no Decision and no ADR**; **closure resolves it in no way and authorizes no successor** |
 | **CDS-WP-022** | **Completed / Closed** — Theme and Environmental Presentation Model; authorized by a **separate, explicit Human-Maintainer act** after the CDS-WP-021 closure, **executed with result `COMPLETE WITH NOTES`** after first returning `DECISION_REQUIRED`, and **closed by a further, separate authorization, effective at the Human-Maintainer exact-object integration commit `ab81e197374bb9f9479105b4261cb4485a491b2a`**. **Contract only; no theme instance, no machine-readable context identifier, no default alias, no visual value, no identifier, no role, no source set**; no schema, validator rule, test, fixture, component, brand, profile, evidence, maturity change, risk, phase rename, or capability registration. Derives **CA-1 … CA-13**, **CI-1 … CI-6**, **CS-1 … CS-11**, **CE-1 … CE-5**, **CF-1 … CF-11**, **CB-1 … CB-7**, and records the Human-Maintainer-decided mechanism as **TM-1 … TM-12**. **`WP022-D1` … `WP022-D5` decided 2026-09-12**, recorded as **`DEC-S-137`** (with **`ADR-0007`**, covering `DEC-S-137` only) and **`DEC-S-138`** — all **`Accepted` and effective at the Human-Maintainer exact-object integration commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b`**: **136/6 until it, 138/7 from it, risks 98 throughout**. **Supported Core Theme Resolution Contexts: 0 before that commit, 2 — `Light` and `Dark`, no default — from it.** **`DEC-S-131`, `DEC-S-132`, `DEC-S-135` and `DEC-S-136` untouched**; **TS-1 still binds**; **closure changes neither that effectivity nor the `ADR-0007` status, and authorizes no successor** |
-| **CDS-WP-023** | **Completed / Closed (target lifecycle; closure effective only at its closure object's Human-Maintainer exact-object integration commit)** — Semantic Status Visual Binding Contract; **contract only**; executed, independently reviewed, reworked and **integrated** at `0ea15ff080c377d7494876efdb6197404fa3cf40` (execution only); **no role, value, identifier, binding instance, Source Set, schema, validator or fixture; `F-023-01` open**; **authorizes no successor** |
+| **CDS-WP-023** | **Completed / Closed (closure effective at the Human-Maintainer exact-object integration commit `53c1cef44d74f502beeb282e4f399b0d3744e932`)** — Semantic Status Visual Binding Contract; **contract only**; executed, independently reviewed, reworked and **integrated** at `0ea15ff080c377d7494876efdb6197404fa3cf40` (execution only); **no role, value, identifier, binding instance, Source Set, schema, validator or fixture; `F-023-01` open**; **authorizes no successor** |
 | **CDS-WP-024 … CDS-WP-053** | **PLANNED / NOT ACTIVE / NOT AUTHORIZED** — work not started |
 
 **F-001 lifecycle-metadata resolution (Human Maintainer, 2026-08-19).** The five
@@ -1295,7 +1300,7 @@ typographic value, and no dimensional value of any kind**.
 | Statement | Why it matters |
 | --- | --- |
 | **The visual foundation introduces no layer** | It occupies positions in the existing eight-layer model and five-layer token flow. The conceptual *primitive → semantic → context → brand* reading maps onto them; **context is not a layer**, and the **Component layer must not be dropped** from that reading |
-| **COLOUR ≠ STATUS · ICON ≠ STATUS · MOTION ≠ STATUS** | Status meaning stays with the Semantic Status Foundation. Visual encoding is **redundant** to meaning, never a substitute. The binding itself is **CDS-WP-023's**, gated by CDS-WP-024 |
+| **COLOUR ≠ STATUS · ICON ≠ STATUS · MOTION ≠ STATUS** | Status meaning stays with the Semantic Status Foundation. Visual encoding is **redundant** to meaning, never a substitute. The binding itself is **CDS-WP-023's**, gated by CDS-WP-024 *(after the CDS-WP-023 closure: "the binding" means the **Binding Contract**, not a Binding **artifact** — its representation and ownership stay unassigned, **`F-023-01` `OPEN / UNRESOLVED`**)* |
 | **An interaction state is not a semantic status** | A validation outcome is not a status `condition`; conflating them destroys both |
 | **A theme re-binds; it never redefines** | It may change which primitive a role resolves to; never what the role means, and never an accessibility guarantee |
 | **Roles are mandatory; values vary only at named extension points** | This is why a Core product inherits every Core *role* but not automatically every Core *value* |

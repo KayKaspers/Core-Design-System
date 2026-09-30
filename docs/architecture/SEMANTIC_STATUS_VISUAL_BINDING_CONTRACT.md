@@ -14,11 +14,16 @@
   execution object: **this document is normative from that commit.** Before it, the
   document was uncommitted executor output prepared under the explicit
   Human-Maintainer authorization of CDS-WP-023 for **execution only**.
-  **`EXECUTION INTEGRATED ≠ WP CLOSURE EFFECTIVE`**: a separate closure reconciliation
-  object is prepared in the Working Tree, and the CDS-WP-023 closure becomes effective
-  only at the later Human-Maintainer exact-object integration commit of that closure
-  object. **Successor: NONE.** **`EXECUTED ≠ ACCEPTED`**, **`PASS ≠ INTEGRATED`**, and
-  **`INTEGRATED ≠ CLOSED`**.
+  **`EXECUTION INTEGRATED ≠ WP CLOSURE EFFECTIVE`**: the CDS-WP-023 closure was a
+  separate, later act. The closure reconciliation object was integrated by the
+  Human-Maintainer exact-object commit **`53c1cef44d74f502beeb282e4f399b0d3744e932`**
+  (tree `c738386b889900e0665672f97992f6fab43204cb`; 2026-09-30), and **the CDS-WP-023
+  closure is effective from that commit — CDS-WP-023 is `Completed` / `Closed`.**
+  **`EXECUTION EFFECTIVE AT 0ea15ff ≠ CLOSURE EFFECTIVE AT 53c1cef`**: the contract's
+  normative effect dates from the former, the work-package lifecycle closure from the
+  latter. **Successor: NONE** — closing CDS-WP-023 authorizes no successor
+  (**`CLOSED ≠ SUCCESSOR AUTHORIZED`**). **`EXECUTED ≠ ACCEPTED`**, **`PASS ≠
+  INTEGRATED`**, and **`INTEGRATED ≠ CLOSED`**.
 - **Rework:** a **limited rework** (2026-09-30), authorized by the Human Maintainer
   after the independent review and Nova's adjudication *NO-GO FOR INTEGRATION —
   LIMITED REWORK REQUIRED*, corrected the authority classification, the binding-state

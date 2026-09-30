@@ -44,9 +44,9 @@ each authorized by a separate, explicit Human-Maintainer act, **not** by this do
 **CDS-WP-023 — Semantic Status Visual Binding Contract** was authorized for execution
 only, contract only (2026-09-30); its execution object was **integrated** at the
 Human-Maintainer exact-object commit `0ea15ff080c377d7494876efdb6197404fa3cf40`, and it
-is recorded by its closure object with target lifecycle **`Completed` / `Closed`**,
-**closure effective only at that object's Human-Maintainer exact-object integration
-commit**; **successor: NONE**.
+is **`Completed` / `Closed`**, **closure effective at the Human-Maintainer exact-object
+integration commit `53c1cef44d74f502beeb282e4f399b0d3744e932`** (2026-09-30);
+**successor: NONE**.
 **CDS-WP-021 is `Completed` / `Closed`**, closure effective at the Human-Maintainer
 integration commit `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`; **CDS-WP-022 — Theme
 and Environmental Presentation Model is `Completed` / `Closed`**, closure effective
@@ -319,12 +319,14 @@ CDS-WP-053). **Successor: NONE.** The paragraphs above stay as written. The matu
 evidence, claim, conformance, publication and value-state rows remain **unchanged** —
 visual values **0**, visual source sets **0**.
 
-**Superseded in part — CDS-WP-023 closure object (2026-09-30).** The CDS-WP-023
-execution object was **integrated** at the Human-Maintainer exact-object commit
-`0ea15ff080c377d7494876efdb6197404fa3cf40`, and the work package is recorded by its
-closure object with target lifecycle **`Completed` / `Closed`** — **effective only at
-that object's Human-Maintainer exact-object integration commit** (**`CLOSURE OBJECT
-PREPARED ≠ CLOSURE EFFECTIVE`**). The work-package rows then stand at **seven closed —
+**Superseded in part — CDS-WP-023 closure (2026-09-30).** The CDS-WP-023 execution
+object was **integrated** at the Human-Maintainer exact-object commit
+`0ea15ff080c377d7494876efdb6197404fa3cf40`, and the work package is **`Completed` /
+`Closed`** — **closure effective at the Human-Maintainer exact-object integration
+commit `53c1cef44d74f502beeb282e4f399b0d3744e932`**, which integrated the closure
+object (**`CLOSURE OBJECT PREPARED ≠ CLOSURE EFFECTIVE`** held until that commit;
+**`EXECUTION EFFECTIVE AT 0ea15ff ≠ CLOSURE EFFECTIVE AT 53c1cef`**). The
+work-package rows now stand at **seven closed —
 CDS-WP-017 … CDS-WP-023 — none active, and 31 `Planned` · not active · not
 authorized** (`CDS-WP-020A` and CDS-WP-024 … CDS-WP-053). **Current work package,
 current design work package and successor: NONE.** **`CLOSED ≠ SUCCESSOR
@@ -470,7 +472,7 @@ SUCCESSOR AUTHORIZED`**, **`CLOSED ≠ VALUE SELECTION AUTHORIZED`** and **`SEQU
 NEXT ≠ AUTHORIZED`** — **`CDS-WP-020A` remains `Planned`, not active, and not
 authorized**, as do CDS-WP-023 … CDS-WP-053, and **no work package is currently
 authorized** from that commit onward. *(Point-in-time at that closure: CDS-WP-023 has
-since been authorized, on 2026-09-30, then integrated at `0ea15ff080c377d7494876efdb6197404fa3cf40`, and is recorded closed by its closure object.)*
+since been authorized, on 2026-09-30, integrated at `0ea15ff080c377d7494876efdb6197404fa3cf40`, and closed, closure effective at `53c1cef44d74f502beeb282e4f399b0d3744e932`.)*
 
 **The milestone mapping is not re-derived here.** **M2 — Visual Foundation Ready**
 still reads *"reached after CDS-WP-022"*, unchanged. Whether CDS-WP-020A belongs
@@ -501,7 +503,7 @@ family, **S3** semantic source and alias authoring — held in
 
 | ID | Title | Layer | Status |
 | --- | --- | --- | --- |
-| CDS-WP-023 | Semantic Status Visual Binding Contract | 3 → 4 | **Closed (target lifecycle; closure effective only at its closure object's integration commit)** · contract only · execution integrated at `0ea15ff0…` · authorizes no successor |
+| CDS-WP-023 | Semantic Status Visual Binding Contract | 3 → 4 | **Closed** — closure effective at `53c1cef4…` · contract only · execution integrated at `0ea15ff0…` · authorizes no successor |
 | CDS-WP-024 | Semantic Validation and Render-Gate Architecture | 8 | Planned · not active |
 | CDS-WP-025 | Semantic Validation Negative-Fixture Expansion | 8 | Planned · not active |
 
@@ -534,7 +536,10 @@ satisfied, and **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`**: its execution r
 separate, explicit Human-Maintainer authorization, which **has not occurred**.
 
 **Execution-state update (2026-09-30, CDS-WP-023 execution).** *(Additive — the
-boundary above is not edited.)* **The Human Maintainer has separately and explicitly
+boundary above is not edited. **Point-in-time at the execution state, before the
+execution integration at `0ea15ff080c377d7494876efdb6197404fa3cf40` and the closure at
+`53c1cef44d74f502beeb282e4f399b0d3744e932`; superseded for current state by the
+closure state below.**)* **The Human Maintainer has separately and explicitly
 authorized CDS-WP-023 for execution only**, within exactly that boundary. It is
 **`AUTHORIZED` / `ACTIVE FOR EXECUTION`**; its execution object — the
 [Semantic Status Visual Binding Contract](../architecture/SEMANTIC_STATUS_VISUAL_BINDING_CONTRACT.md)
@@ -549,14 +554,15 @@ observed by CDS-WP-023*), distinct from Route D. **CDS-WP-024, CDS-WP-025, `CDS-
 identifier remain `Planned`, not active, and not authorized**, and **no successor is
 authorized**.
 
-**Closure state (2026-09-30, CDS-WP-023 closure object).** *(Additive — the paragraphs
+**Closure state (2026-09-30, CDS-WP-023 closure).** *(Additive — the paragraphs
 above are not rewritten.)* The execution object was independently reviewed, reworked
 under the limited rework, re-reviewed in a final delta review, and **integrated** at the
 Human-Maintainer exact-object commit `0ea15ff080c377d7494876efdb6197404fa3cf40`; the
-contract is normative from that commit. The work package is recorded by its **closure
-object** with target lifecycle **`Completed` / `Closed`**, **effective only at that
-object's Human-Maintainer exact-object integration commit**. **Closing it authorizes no
-successor**: **CDS-WP-024, CDS-WP-025, `CDS-WP-020A` and every later identifier remain
+contract is normative from that commit. The work package is **`Completed` / `Closed`**,
+its **closure object** having been integrated — and the closure made **effective** — at
+the Human-Maintainer exact-object commit `53c1cef44d74f502beeb282e4f399b0d3744e932`
+(**`EXECUTION EFFECTIVE AT 0ea15ff ≠ CLOSURE EFFECTIVE AT 53c1cef`**). **Closing it
+authorizes no successor**: **CDS-WP-024, CDS-WP-025, `CDS-WP-020A` and every later identifier remain
 `Planned`, not active, and not authorized**, **no Route A … D is decided**, and **`F-023-01`
 stays `OPEN / UNRESOLVED`** with no owner. **`CLOSED ≠ SUCCESSOR AUTHORIZED`**,
 **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`** — CDS-WP-024 lists CDS-WP-023 as its
@@ -643,16 +649,17 @@ precedent; a suffix occupies no number, so the numeric range is untouched. Of th
 **38** identifiers now recorded, **31** — CDS-WP-020A and CDS-WP-024 … CDS-WP-053 —
 are `Planned · not active · not authorized`, **none** is active, and **seven** —
 CDS-WP-017, CDS-WP-018, CDS-WP-019, CDS-WP-020, CDS-WP-021, CDS-WP-022 and
-**CDS-WP-023** — are closed (CDS-WP-023 by its closure object, **effective only at that
-object's Human-Maintainer exact-object integration commit**; its execution was
-integrated at `0ea15ff080c377d7494876efdb6197404fa3cf40`): **CDS-WP-021 upon the
+**CDS-WP-023** — are closed (CDS-WP-023 with closure effective at the Human-Maintainer
+exact-object integration commit `53c1cef44d74f502beeb282e4f399b0d3744e932`; its
+execution was integrated earlier, at `0ea15ff080c377d7494876efdb6197404fa3cf40`):
+**CDS-WP-021 upon the
 Human-Maintainer exact-object integration commit
 `01145b8a0ad2a68c4c2743205f96ec34f3c2ed15`**, and **CDS-WP-022 upon the
 Human-Maintainer exact-object integration commit
 `ab81e197374bb9f9479105b4261cb4485a491b2a`**. **No identifier in this range is active
-or authorized** from the effectivity of the CDS-WP-023 closure object — CDS-WP-023
-was the only active one, authorized by a separate, explicit Human-Maintainer act on
-2026-09-30, and from `ab81e197…` until then none was active or authorized; **being
+or authorized** from the effectivity of the CDS-WP-023 closure at `53c1cef4…` —
+CDS-WP-023 was the only active one, authorized by a separate, explicit Human-Maintainer
+act on 2026-09-30, and from `ab81e197…` until then none was active or authorized; **being
 recorded here authorizes nothing.** The **CDS Phase Transition Governance Package** occupies **no** identifier
 in this range.
 
@@ -1333,19 +1340,20 @@ routing by authority, and routing is not deciding.**)*
 
 ## Immediate next step
 
-**Current state (2026-09-30, CDS-WP-023 closure object).** **CDS-WP-023 — Semantic
+**Current state (2026-09-30, after the CDS-WP-023 closure).** **CDS-WP-023 — Semantic
 Status Visual Binding Contract** was independently reviewed, reworked under the
 Human-Maintainer-authorized limited rework, re-reviewed in a final delta review, and
 **integrated** by the Human-Maintainer exact-object commit
 `0ea15ff080c377d7494876efdb6197404fa3cf40`; the contract is normative from that commit.
-It is recorded by its **closure object** with target lifecycle **`Completed` /
-`Closed`**, **effective only at that object's Human-Maintainer exact-object integration
-commit** — **`CLOSURE OBJECT PREPARED ≠ CLOSURE EFFECTIVE`**. **The immediate next step
-is the independent review of that closure object** (reviewer ≠ executor) and Nova's
-adjudication, followed — only if they permit — by a **Human-Maintainer exact-object
-integration commit**, which alone makes the closure effective. **Current work package,
-current design work package and successor: NONE. No next work package is authorized**,
-and no step in this section authorizes one: **CDS-WP-024, CDS-WP-025, `CDS-WP-020A` and
+It is **`Completed` / `Closed`**, **closure effective at the Human-Maintainer
+exact-object integration commit `53c1cef44d74f502beeb282e4f399b0d3744e932`**, which
+integrated its closure object — **`CLOSURE OBJECT PREPARED ≠ CLOSURE EFFECTIVE`** held
+until that commit, and **`EXECUTION EFFECTIVE AT 0ea15ff ≠ CLOSURE EFFECTIVE AT
+53c1cef`**. **The CDS-WP-023 closure is effective, and this post-closure reconciliation records the
+effective post-closure current state. There is no automatic next step and no next work
+package is authorized: further work requires a separate, explicit Human-Maintainer
+authorization.** **Current work package, current design work package and successor:
+NONE.** No step in this section authorizes one: **CDS-WP-024, CDS-WP-025, `CDS-WP-020A` and
 every later identifier remain `Planned`, not active, and not authorized**; **Routes A …
 D are unresolved**; **`F-023-01` stays `OPEN / UNRESOLVED`** with no owner; and
 **`F-PIR-02` stays routed to Core Vision**. **`INTEGRATED ≠ CLOSED`**, **`CLOSED ≠
@@ -1576,9 +1584,9 @@ do not re-derive the **M2** milestone mapping.
 says that `CDS-WP-020A` and CDS-WP-023 … CDS-WP-053 remain `Planned`, read from that
 date: **`CDS-WP-020A` and CDS-WP-024 … CDS-WP-053 remain `Planned`, not active, and
 not authorized**, and **CDS-WP-023 was `AUTHORIZED` / `ACTIVE FOR EXECUTION`**, was then
-integrated at `0ea15ff080c377d7494876efdb6197404fa3cf40`, and is recorded closed by its
-closure object (effective only at that object's integration commit); see *Immediate
-next step*.)*
+integrated at `0ea15ff080c377d7494876efdb6197404fa3cf40`, and is `Completed` / `Closed`,
+closure effective at `53c1cef44d74f502beeb282e4f399b0d3744e932`; see *Immediate next
+step*.)*
 
 **CDS-WP-020 was authorized separately by the Human Maintainer on 2026-08-26** —
 its authorization came from that decision alone, **not** from its position in this

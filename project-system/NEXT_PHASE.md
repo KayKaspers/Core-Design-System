@@ -10,9 +10,11 @@
   CDS-WP-004, CDS-WP-005, CDS-WP-006, CDS-WP-007, CDS-WP-008, CDS-WP-009, CDS-WP-010,
   CDS-WP-011, CDS-WP-012, CDS-WP-013, CDS-WP-014, CDS-WP-015, **CDS-WP-016**,
   **CDS-WP-017**, **CDS-WP-018**, **CDS-WP-019**, **CDS-WP-020**, **CDS-WP-021**,
-  **CDS-WP-022**, **CDS-WP-023** *(CDS-WP-023: target lifecycle recorded by its
-  closure object; closure effective only at that object's Human-Maintainer
-  exact-object integration commit — see the next item)*. **CDS-WP-022 is `Completed` / `Closed`**, closure effective at the
+  **CDS-WP-022**, **CDS-WP-023** *(CDS-WP-023 is `Completed` / `Closed`, closure
+  effective at the Human-Maintainer exact-object integration commit
+  `53c1cef44d74f502beeb282e4f399b0d3744e932` (2026-09-30); its execution was
+  integrated earlier, at `0ea15ff080c377d7494876efdb6197404fa3cf40` — see the next
+  item)*. **CDS-WP-022 is `Completed` / `Closed`**, closure effective at the
   Human-Maintainer exact-object integration commit
   `ab81e197374bb9f9479105b4261cb4485a491b2a` (2026-09-28), with its execution result
   unchanged at **`COMPLETE WITH NOTES`**. **`CLOSURE OBJECT PREPARED ≠ CLOSURE
@@ -22,26 +24,28 @@
   **`COMPLETE WITH NOTES`**. **`CLOSURE OBJECT PREPARED ≠ CLOSURE EFFECTIVE`** held
   until that commit.
 - **Current work package: NONE. Current design work package: NONE. Successor: NONE.**
-  *(Target state of the CDS-WP-023 closure object, effective from that object's
-  Human-Maintainer exact-object integration commit.)* **Most recent closed design work
-  package: `CDS-WP-023` — Semantic Status Visual Binding Contract** — recorded by that
-  closure object with target lifecycle **`Completed` / `Closed`** (**`CLOSURE OBJECT
-  PREPARED ≠ CLOSURE EFFECTIVE`**), **contract only**, authorized separately and
-  explicitly by the Human Maintainer on 2026-09-30 **for execution only**. Its execution
+  *(Effective from the Human-Maintainer exact-object integration commit
+  `53c1cef44d74f502beeb282e4f399b0d3744e932` (2026-09-30), at which the CDS-WP-023
+  closure became effective.)* **Most recent closed design work package: `CDS-WP-023` —
+  Semantic Status Visual Binding Contract** — **`Completed` / `Closed`**, closure
+  effective at that commit (**`CLOSURE OBJECT PREPARED ≠ CLOSURE EFFECTIVE`** held until
+  it), **contract only**, authorized separately and explicitly by the Human Maintainer
+  on 2026-09-30 **for execution only**. Its execution
   object — the
   [Semantic Status Visual Binding Contract](../docs/architecture/SEMANTIC_STATUS_VISUAL_BINDING_CONTRACT.md)
   — was independently reviewed, reworked under a Human-Maintainer-authorized limited
   rework, re-reviewed in a final delta review, and **integrated** by the
   Human-Maintainer exact-object commit `0ea15ff080c377d7494876efdb6197404fa3cf40`
-  (steps 30 … 30d); **`INTEGRATED ≠ CLOSED`**, and closure is the separate, later
-  steps 30e … 30g. It creates no value, role, vocabulary, Source Set, schema,
+  (steps 30 … 30d); **`INTEGRATED ≠ CLOSED`**, and closure was the separate, later
+  steps 30e … 30g, **effective at `53c1cef44d74f502beeb282e4f399b0d3744e932`** —
+  **`EXECUTION EFFECTIVE AT 0ea15ff ≠ CLOSURE EFFECTIVE AT 53c1cef`**. It creates no value, role, vocabulary, Source Set, schema,
   validator, or fixture and adds no Decision, ADR, or risk (registers **140 · 7 ·
   98**). **`F-023-01` stays `OPEN / UNRESOLVED`**, Routes A … D are unresolved, and
   **CDS-WP-024, CDS-WP-025, `CDS-WP-020A` and every later identifier remain `Planned`,
   not active, and not authorized** — **`CLOSED ≠ SUCCESSOR AUTHORIZED`**.
-  *(From the CDS-WP-023 authorization of 2026-09-30 until the closure's effectivity,
-  `CDS-WP-023` was the current and current design work package, `AUTHORIZED` / `ACTIVE
-  FOR EXECUTION`. The rest of this bullet group records earlier states and is not
+  *(From the CDS-WP-023 authorization of 2026-09-30 until the closure's effectivity at
+  `53c1cef44d74f502beeb282e4f399b0d3744e932`, `CDS-WP-023` was the current and current
+  design work package, `AUTHORIZED` / `ACTIVE FOR EXECUTION`. The rest of this bullet group records earlier states and is not
   rewritten.)*
 - **Current work package until 2026-09-30: NONE.** **Last authorized work package: CDS-WP-001B — NDF
   v1.1.0 Skills and Framework Baseline Maintenance** (Elevated; a lettered
@@ -232,9 +236,9 @@
   validator rule, no test and no fixture.**
 - **CDS-WP-023:** authorized 2026-09-30 for execution only — contract only; executed,
   reworked after independent review, and **integrated at
-  `0ea15ff080c377d7494876efdb6197404fa3cf40`**; recorded `Completed` / `Closed` by its
-  closure object, **effective only at that object's Human-Maintainer exact-object
-  integration commit**; **successor: NONE**. See the first bullets of this file.
+  `0ea15ff080c377d7494876efdb6197404fa3cf40`**; `Completed` / `Closed`, **closure
+  effective at the Human-Maintainer exact-object integration commit
+  `53c1cef44d74f502beeb282e4f399b0d3744e932`** (2026-09-30); **successor: NONE**. See the first bullets of this file.
 - **CDS-WP-024 … CDS-WP-053 and `CDS-WP-020A`:** **`Planned`, not active, not
   authorized, work not started** — see the
   [Post-Candidate Development Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
@@ -314,9 +318,10 @@ then authorized separately** and has been executed. The remaining sequence is:
 | 30b | **Limited rework** of the findings authorized by the Human Maintainer | Claude, under that authorization | **Done** — applied to the Working Tree (integrated with the object at step 30d) |
 | 30c | **Final independent delta review and Nova review of the reworked object** | Independent reviewer · Nova | **Done** — the state model accepted, with two INFO notes (output wording; "most recently executed" field) |
 | 30d | **Human-Maintainer exact-object integration commit** of the execution object | Human Maintainer | **Done** — `0ea15ff080c377d7494876efdb6197404fa3cf40` (tree `89fcc3d3b946ef3d7c90a856e86cb4dd2b80b8bc`, 2026-09-30) — **execution integrated; `INTEGRATED ≠ CLOSED`** |
-| 30e | **Closure of CDS-WP-023** — a further, separate Human-Maintainer act; closure reconciliation authorized, with the two INFO notes resolved | Human Maintainer · Claude, under that authorization | **Done as preparation** — closure object prepared in the Working Tree; **`CLOSURE OBJECT PREPARED ≠ CLOSURE EFFECTIVE`** |
-| 30f | **Independent review of the closure object** and **Nova adjudication** | Reviewer ≠ executor · Nova — recommendation only, never approval | **Pending** — precondition of step 30g |
-| 30g | **Human-Maintainer exact-object integration commit** of the closure object | Human Maintainer | **Not taken** — the **CDS-WP-023 closure becomes effective only at this step**; **closure authorizes no successor** |
+| 30e | **Closure of CDS-WP-023** — a further, separate Human-Maintainer act; closure reconciliation authorized, with the two INFO notes resolved | Human Maintainer · Claude, under that authorization | **Done** — closure object **prepared and uncommitted**; **`CLOSURE OBJECT PREPARED ≠ CLOSURE EFFECTIVE`** held until step 30g |
+| 30f | **Independent review of the closure object** and **Nova adjudication** | Reviewer ≠ executor · Nova — recommendation only, never approval | **Done** — independent Closure Review completed, verdict **`GO WITH NOTES`** (the review neither closed nor integrated the work package); precondition of step 30g |
+| 30g | **Human-Maintainer exact-object integration commit** of the closure object | Human Maintainer | **Done** — `53c1cef44d74f502beeb282e4f399b0d3744e932` (tree `c738386b889900e0665672f97992f6fab43204cb`, 2026-09-30) — **the CDS-WP-023 closure became effective at this step**; **closure authorizes no successor** |
+| 30h | **CDS-WP-023 closure is effective** | Effective at step 30g | **Done** — effective at `53c1cef4…`; **`EXECUTION EFFECTIVE AT 0ea15ff ≠ CLOSURE EFFECTIVE AT 53c1cef`**; **no successor** |
 
 **Step 8 is not reached before step 7**, **step 9e is not reached before step 9d**,
 **step 13 does not reach step 14**, **step 17 is not reached before step 16**,
@@ -330,7 +335,8 @@ not closure**, **step 25 was reached only at step 24 and by nothing earlier**,
 **step 26 does not reach step 26e — authorizing and preparing a closure is not
 closing**, **step 26e authorizes no successor**, **step 30d does not reach step 30g —
 integration is not closure, and preparing the closure object at step 30e is not closing**,
-**step 30g authorizes no successor**,
+**step 30g authorizes no successor — and the post-closure current-state reconciliation
+that followed it authorizes none either**,
 and **no
 step below implies the one above it**. Uncommitted
 executor output changes no authoritative phase or work-package status, and a review

@@ -61,14 +61,17 @@
   VD-1 … VD-8, VA-1 … VA-10 and VS-1 … VS-6 are unchanged.
 - **Amended by:** CDS-WP-023 — Semantic Status Visual Binding Contract, 2026-09-30 —
   **one additive VP-7 current-state note, advancing the VP-7 justification only.**
-  **Uncommitted executor output until the Human-Maintainer exact-object integration
-  commit of the reviewed CDS-WP-023 object.** **The VP-7 verdict does not change — VP-7
-  remains `UNSATISFIED`** — **no prerequisite text is rewritten**, **no value is
-  selected**, and VP-1 … VP-7, VE-1 … VE-12, IG-1 … IG-10, VD-1 … VD-8, VA-1 … VA-10
-  and VS-1 … VS-6 are unchanged.
+  **Effective** at the Human-Maintainer exact-object integration commit
+  `0ea15ff080c377d7494876efdb6197404fa3cf40` (2026-09-30) of the reviewed CDS-WP-023
+  execution object; it was uncommitted executor output before that commit. **The VP-7
+  verdict does not change — VP-7 remains `UNSATISFIED`** — **no prerequisite text is
+  rewritten**, **no value is selected**, and VP-1 … VP-7, VE-1 … VE-12, IG-1 … IG-10,
+  VD-1 … VD-8, VA-1 … VA-10 and VS-1 … VS-6 are unchanged.
 - **Amended by:** CDS-WP-023 closure object, 2026-09-30 — **one additive VP-7 closure
-  reading note**, **effective only at that object's Human-Maintainer exact-object
-  integration commit**. **The VP-7 verdict does not change — VP-7 remains
+  reading note.** **Effective** at the Human-Maintainer exact-object integration commit
+  `53c1cef44d74f502beeb282e4f399b0d3744e932` (2026-09-30) of the closure object, at
+  which the CDS-WP-023 closure became effective. **`EXECUTION EFFECTIVE AT 0ea15ff ≠
+  CLOSURE EFFECTIVE AT 53c1cef`.** **The VP-7 verdict does not change — VP-7 remains
   `UNSATISFIED`** — no prerequisite text is rewritten, **no value is selected**, and
   VP-1 … VP-7, VE-1 … VE-12, IG-1 … IG-10, VD-1 … VD-8, VA-1 … VA-10 and VS-1 … VS-6
   are unchanged.
@@ -387,10 +390,13 @@ visual value may be selected**, and **visual values and visual source sets remai
 
 ### VP-7 current-state note — CDS-WP-023 — 2026-09-30
 
-*(**Additive.** Prepared by the CDS-WP-023 execution; **uncommitted executor output
-until the Human-Maintainer exact-object integration commit of the reviewed CDS-WP-023
-object**. The dated notes and tables above are **not rewritten**: the 2026-09-15 note
-correctly recorded that no work package was authorized **at that date**.)*
+*(**EFFECTIVE** at the Human-Maintainer exact-object integration commit
+`0ea15ff080c377d7494876efdb6197404fa3cf40` (2026-09-30) of the reviewed CDS-WP-023
+execution object; it was uncommitted executor output before that commit. **Additive.**
+The dated notes and tables above are **not rewritten**: the 2026-09-15 note correctly
+recorded that no work package was authorized **at that date**. **From the effectivity of
+the closure reading below, this note's VP-7 justification — *"CDS-WP-023 is currently
+authorized"* — is superseded for current state**; the verdict is unchanged.)*
 
 **The VP-7 verdict is unchanged: `UNSATISFIED`.** Only its **justification**
 advances.
@@ -414,14 +420,16 @@ sets remain 0.**
 
 ### VP-7 closure reading — CDS-WP-023 — 2026-09-30
 
-*(**Additive.** Prepared by the CDS-WP-023 closure object; **effective only at that
-object's Human-Maintainer exact-object integration commit**. The dated notes above are
-**not rewritten**: the note above correctly recorded, **at its date**, that CDS-WP-023
-was authorized for execution. The CDS-WP-023 execution object was integrated at
-`0ea15ff080c377d7494876efdb6197404fa3cf40`.)*
+*(**EFFECTIVE** at the Human-Maintainer exact-object integration commit
+`53c1cef44d74f502beeb282e4f399b0d3744e932` (2026-09-30) of the CDS-WP-023 closure
+object, at which the CDS-WP-023 closure became effective. **Additive.** The dated notes
+above are **not rewritten**: the note above correctly recorded, **at its date**, that
+CDS-WP-023 was authorized for execution. The CDS-WP-023 execution object was integrated
+at `0ea15ff080c377d7494876efdb6197404fa3cf40` — **`EXECUTION EFFECTIVE AT 0ea15ff ≠
+CLOSURE EFFECTIVE AT 53c1cef`**.)*
 
-**The VP-7 verdict is unchanged: `UNSATISFIED`.** Once the CDS-WP-023 closure is
-effective, **no work package is authorized at all**, so the reason reads again:
+**The VP-7 verdict is unchanged: `UNSATISFIED`.** With the CDS-WP-023 closure effective,
+**no work package is authorized at all**, so the reason reads again:
 
 > **VP-7 — `UNSATISFIED`.** **No work package is currently authorized to select visual
 > values.** CDS-WP-023 was contract only and selected none, and **closing it creates no
