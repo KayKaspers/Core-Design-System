@@ -69,10 +69,8 @@ release, or publication authority, and activates no work package.
   53c1cef`**. Closing it authorizes **no** successor, **no** Route
   A … D decision, and **no** value, role, Source Set, schema, validator, fixture,
   maturity, evidence, release, or publication change; **`F-023-01` stays `OPEN /
-  UNRESOLVED`** with no owner. *(Additive — `F-023-01` Routing Pass, **`PREPARED ≠
-  EFFECTIVE`**, effective only at its Human-Maintainer exact-object integration
-  commit:)* **`F-023-01` is routed to a future, separately authorized Binding-Artifact
-  Representation & Ownership Decision Pass — current effective state `OPEN / UNRESOLVED`; prepared target after that integration `OPEN / ROUTED / UNRESOLVED`, no owner**;
+  UNRESOLVED`** with no owner. *(Additive — `F-023-01` Routing Pass, **effective** at the Human-Maintainer exact-object integration commit `563109aa80aeab02ea788fe544b1d15aa39ab78c` — superseding the closure-time `OPEN / UNRESOLVED` for current state:)* **`F-023-01` is routed to a future, separately authorized Binding-Artifact
+  Representation & Ownership Decision Pass — current effective state `OPEN / ROUTED / UNRESOLVED`, no owner**;
   **`ROUTING ≠ RESOLUTION`**, **`ROUTE D ≠ F-023-01`**; not a route, work package,
   Decision, ADR or risk, and not authorized.
   *(From the Human-Maintainer exact-object integration commit

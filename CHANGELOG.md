@@ -906,6 +906,22 @@ released and no release is announced.
 
 ### Changed
 
+- **`F-023-01` routing recorded as effective — post-integration effectivity
+  reconciliation.** A narrow, Standard-track, non-semantic effectivity pass, **not a
+  work package**. The condition the `F-023-01` routing object stated — its
+  Human-Maintainer exact-object integration commit — was met on **2026-10-01** by commit
+  **`563109aa80aeab02ea788fe544b1d15aa39ab78c`** (`chore(governance): route F-023-01`; tree
+  `59934e0936243768accc6e091d10ee3c2e66e5d0`; parent `8c784b273536d8deacd29a5af4e7d09b1ed0f388`). **`F-023-01` is
+  `OPEN / ROUTED / UNRESOLVED`, with no Owner**, routed to a future, separately
+  authorized Binding-Artifact Representation & Ownership Decision Pass — **`ROUTING ≠
+  RESOLUTION`**, **`ROUTED ≠ DECIDED`**, **`ROUTING DESTINATION ≠ OWNER`**; resolution
+  still requires separate authority, and that destination is not a work package, route,
+  Decision, ADR or risk. **Route D stays unresolved and separate** (**`ROUTE D ≠
+  F-023-01`**); no Route E exists. The maintained current-state carriers no longer
+  describe the routing as prepared, pending or effective only at a future commit. No
+  Decision, ADR or risk is created (**140 · 7 · 98**); no work package changes state;
+  the Binding Contract and every design semantic are unchanged. The historical
+  prepared-object entry below is not rewritten. (`F-023-01` Routing Effectivity)
 - **`F-023-01` routed to a future Binding-Artifact Representation & Ownership Decision
   Pass — routing object prepared; review and integration pending.** A narrow,
   Standard-track, non-semantic routing and current-state pass, **not a work package**.

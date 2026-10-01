@@ -40,11 +40,10 @@ Controlled work-package roadmap for the Core Design System (CDS).
   Source Set, schema, validator, fixture, renderer, maturity, evidence, release, tag or
   publication change. **The registers are unchanged at 140 · 7 · 98.** **`F-023-01`
   (representation and ownership of a Status Visual Binding artifact) stays `OPEN /
-  UNRESOLVED` with no owner and survives the closure**; it needs later routing and
-  authority. *(Additive — `F-023-01` Routing Pass, **`PREPARED ≠ EFFECTIVE`**, effective
-  only at its Human-Maintainer exact-object integration commit:)* **`F-023-01` is routed
+  UNRESOLVED` with no owner and survives the closure**; it was routed afterwards
+  (see below), and resolution still requires separate authority. *(Additive — `F-023-01` Routing Pass, **effective** at the Human-Maintainer exact-object integration commit `563109aa80aeab02ea788fe544b1d15aa39ab78c` — superseding the closure-time `OPEN / UNRESOLVED` for current state:)* **`F-023-01` is routed
   to a future, separately authorized Binding-Artifact Representation & Ownership
-  Decision Pass — current effective state `OPEN / UNRESOLVED`; prepared target after that integration `OPEN / ROUTED / UNRESOLVED`, no owner; `ROUTING ≠ RESOLUTION`,
+  Decision Pass — current effective state `OPEN / ROUTED / UNRESOLVED`, no owner; `ROUTING ≠ RESOLUTION`,
   `ROUTE D ≠ F-023-01`.** The destination is not a work package, not a route, not a
   Decision, ADR or risk, and not authorized; see the
   [Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
@@ -1483,8 +1482,10 @@ Decision, ADR, or risk** — the registers stay at **140 · 7 · 98**. **The
 representation and ownership of a binding artifact stay unresolved** and are
 registered, with no owner, as the roadmap finding **`F-023-01`** — distinct from
 Route D — and **`F-023-01` stays `OPEN / UNRESOLVED` and survives the closure**: closing
-CDS-WP-023 assigns it no owner and chooses no representation, and it needs later
-routing and authority.
+CDS-WP-023 assigns it no owner and chooses no representation, and, as at the closure,
+it needed later routing; routing became effective at the Human-Maintainer
+exact-object integration commit `563109aa80aeab02ea788fe544b1d15aa39ab78c`, while
+resolution still requires separate authority.
 
 **Boundary — contract only** *(recorded 2026-09-29 by the Post-WP-022 Decision &
 Contract Integration Pass; **effective** from that pass's

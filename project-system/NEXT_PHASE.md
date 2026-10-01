@@ -43,10 +43,9 @@
   98**). **`F-023-01` stays `OPEN / UNRESOLVED`**, Routes A … D are unresolved, and
   **CDS-WP-024, CDS-WP-025, `CDS-WP-020A` and every later identifier remain `Planned`,
   not active, and not authorized** — **`CLOSED ≠ SUCCESSOR AUTHORIZED`**.
-  *(Additive — `F-023-01` Routing Pass, **`PREPARED ≠ EFFECTIVE`**, effective only at its
-  Human-Maintainer exact-object integration commit:)* **`F-023-01` is routed to a
+  *(Additive — `F-023-01` Routing Pass, **effective** at the Human-Maintainer exact-object integration commit `563109aa80aeab02ea788fe544b1d15aa39ab78c` — superseding the closure-time `OPEN / UNRESOLVED` for current state:)* **`F-023-01` is routed to a
   future, separately authorized Binding-Artifact Representation & Ownership Decision
-  Pass — current effective state `OPEN / UNRESOLVED`; prepared target after that integration `OPEN / ROUTED / UNRESOLVED`, no owner**; **`ROUTING ≠ RESOLUTION`**, **`ROUTE
+  Pass — current effective state `OPEN / ROUTED / UNRESOLVED`, no owner**; **`ROUTING ≠ RESOLUTION`**, **`ROUTE
   D ≠ F-023-01`**, **`SEQUENCED NEXT ≠ AUTHORIZED`**. It is not a route, a work package,
   a Decision, an ADR or a risk, and it is not authorized; no successor is assigned.
   *(From the CDS-WP-023 authorization of 2026-09-30 until the closure's effectivity at

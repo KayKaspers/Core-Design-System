@@ -103,10 +103,8 @@ library, or a design project scoped exclusively to CoreOps.
   schema, validator, fixture, renderer, maturity, evidence, release, tag, or publication
   change; the registers stay at **140 · 7 · 98**. **`F-023-01` — representation and
   ownership of a Status Visual Binding artifact — stays `OPEN / UNRESOLVED`**, with no
-  owner, and survives the closure. *(Additive — `F-023-01` Routing Pass, **`PREPARED ≠
-  EFFECTIVE`**, effective only at its Human-Maintainer exact-object integration
-  commit:)* **`F-023-01` is routed to a future, separately authorized Binding-Artifact
-  Representation & Ownership Decision Pass — current effective state `OPEN / UNRESOLVED`; prepared target after that integration `OPEN / ROUTED / UNRESOLVED`, no owner**;
+  owner, and survives the closure. *(Additive — `F-023-01` Routing Pass, **effective** at the Human-Maintainer exact-object integration commit `563109aa80aeab02ea788fe544b1d15aa39ab78c` — superseding the closure-time `OPEN / UNRESOLVED` for current state:)* **`F-023-01` is routed to a future, separately authorized Binding-Artifact
+  Representation & Ownership Decision Pass — current effective state `OPEN / ROUTED / UNRESOLVED`, no owner**;
   **`ROUTING ≠ RESOLUTION`**, **`ROUTE D ≠ F-023-01`**; the destination is not a route,
   work package, Decision, ADR or risk, and is not authorized. *(From the CDS-WP-023 authorization of 2026-09-30
   until the closure's effectivity at `53c1cef44d74f502beeb282e4f399b0d3744e932`,
