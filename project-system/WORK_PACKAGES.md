@@ -41,7 +41,14 @@ Controlled work-package roadmap for the Core Design System (CDS).
   publication change. **The registers are unchanged at 140 · 7 · 98.** **`F-023-01`
   (representation and ownership of a Status Visual Binding artifact) stays `OPEN /
   UNRESOLVED` with no owner and survives the closure**; it needs later routing and
-  authority. **Most recent closed design work package: `CDS-WP-023`** (from the closure's
+  authority. *(Additive — `F-023-01` Routing Pass, **`PREPARED ≠ EFFECTIVE`**, effective
+  only at its Human-Maintainer exact-object integration commit:)* **`F-023-01` is routed
+  to a future, separately authorized Binding-Artifact Representation & Ownership
+  Decision Pass — current effective state `OPEN / UNRESOLVED`; prepared target after that integration `OPEN / ROUTED / UNRESOLVED`, no owner; `ROUTING ≠ RESOLUTION`,
+  `ROUTE D ≠ F-023-01`.** The destination is not a work package, not a route, not a
+  Decision, ADR or risk, and not authorized; see the
+  [Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
+  **Most recent closed design work package: `CDS-WP-023`** (from the closure's
   effectivity at `53c1cef44d74f502beeb282e4f399b0d3744e932`).
 - **Current work package: NONE. Current design work package: NONE. Successor: NONE**
   — effective from the Human-Maintainer exact-object integration commit

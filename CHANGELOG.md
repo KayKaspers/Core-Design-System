@@ -906,6 +906,36 @@ released and no release is announced.
 
 ### Changed
 
+- **`F-023-01` routed to a future Binding-Artifact Representation & Ownership Decision
+  Pass — routing object prepared; review and integration pending.** A narrow,
+  Standard-track, non-semantic routing and current-state pass, **not a work package**.
+  The roadmap finding **`F-023-01`** — the representation and ownership of a Status
+  Visual Binding artifact — is routed to a **future, separately authorized
+  Binding-Artifact Representation & Ownership Decision Pass**: current effective state **`OPEN / UNRESOLVED`**, prepared target after integration
+  **`OPEN / ROUTED / UNRESOLVED`**, **no Owner assigned** — **`ROUTING ≠ RESOLUTION`**, **`ROUTED ≠
+  DECIDED`**, **`ROUTING DESTINATION ≠ OWNER`**. The destination is **not** a work
+  package, **not** active, **not** authorized for resolution, **not** a Decision
+  identifier, ADR or risk, and **not** a route: **no `Route E`** or equivalent
+  identifier is created. **Route D stays separate** — **`ROUTE D ≠ F-023-01`**; their
+  intersection is limited to the resolver-specific portion of any future Binding
+  representation, and this routing decides nothing about Route D. The minimum
+  sequencing implication is recorded — Route D Decision Pass as the preferred
+  immediate following decision candidate, Routes A and B separately authorizable,
+  Route C not currently meeting its readiness criteria for separate authorization (a
+  planning classification, not a lifecycle state) — and is **not** an authorization (**`SEQUENCED NEXT ≠
+  AUTHORIZED`**); no successor is assigned. **No** Binding representation, artifact
+  class, Owner, repository location or schema is chosen; **no** Binding Contract rule
+  (BM, BR, BP) and no schema, token file, validator, fixture or runtime code changes —
+  the [Binding Contract](docs/architecture/SEMANTIC_STATUS_VISUAL_BINDING_CONTRACT.md)
+  is untouched; **no** work package is authorized or changes state — current work
+  package, current design work package and successor stay **NONE**, and
+  **CDS-WP-020A**, **CDS-WP-024** and **CDS-WP-025** remain `Planned`, not active, and
+  not authorized; **Routes A … D stay unresolved**; **`F-PIR-02` stays routed to Core
+  Vision**; **no** Decision, ADR or risk is created — the registers stay at **140 · 7 ·
+  98**; publication stays `Private Development`, with no tag and no release.
+  **`PREPARED ≠ EFFECTIVE`**: this object is effective only at its future
+  Human-Maintainer exact-object integration commit, after independent review (reviewer
+  ≠ executor). (`F-023-01` Routing Pass)
 - **CDS-WP-023 closure recorded as effective — post-closure current-state
   reconciliation.** The condition the CDS-WP-023 closure object stated — the
   Human-Maintainer exact-object integration commit of that closure object — was met on

@@ -124,7 +124,12 @@ CLOSED`**). It creates no value, role, vocabulary, Source Set, schema, validator
 fixture and adds no Decision, ADR, or risk — **140 · 7 · 98**. **`F-023-01` stays `OPEN
 / UNRESOLVED`** with no owner; Routes A … D are unresolved; CDS-WP-024, CDS-WP-025 and
 `CDS-WP-020A` remain `Planned` and not authorized — **`CLOSED ≠ SUCCESSOR
-AUTHORIZED`**.
+AUTHORIZED`**. *(Additive — `F-023-01` Routing Pass, **`PREPARED ≠ EFFECTIVE`**,
+effective only at its Human-Maintainer exact-object integration commit:)* **`F-023-01`
+is routed to a future, separately authorized Binding-Artifact Representation &
+Ownership Decision Pass — current effective state `OPEN / UNRESOLVED`; prepared target after that integration `OPEN / ROUTED / UNRESOLVED`, no owner**; **`ROUTING ≠
+RESOLUTION`**, **`ROUTE D ≠ F-023-01`**; not a route, work package, Decision, ADR or
+risk, and not authorized.
 *(Summary only — the normative source wins.)*
 
 **No design work package was authorized** from the Human-Maintainer exact-object

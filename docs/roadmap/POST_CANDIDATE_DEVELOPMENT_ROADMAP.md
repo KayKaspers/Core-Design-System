@@ -1296,6 +1296,69 @@ this section, **not governance identifiers**.
 assignment is created by this table**, and **no route may be answered by a work
 package that has not been separately authorized to answer it**.
 
+#### Finding routing — `F-023-01` (not a route)
+
+*(Added by the `F-023-01` Routing Pass, prepared on 2026-10-01 under the
+Human-Maintainer-authorized `F-023-01` Routing Pass — a narrow, Standard-track, non-semantic routing
+and current-state pass, **not** a work package, occupying no work-package identifier.
+**`PREPARED ≠ EFFECTIVE`**: this block is effective only at that pass's
+Human-Maintainer exact-object integration commit; the authorization covers preparation
+only — **`AUTHORIZED TO PREPARE ≠ REVIEWED ≠ INTEGRATED ≠ EFFECTIVE`** — and implies no
+approval of the final object, no routing effectivity and no authorization of the future
+Resolution Pass; until then it is Working-Tree
+content under review. The table and paragraphs above are **not rewritten**.)*
+
+| Finding | Destination | State | Authority |
+| --- | --- | --- | --- |
+| **`F-023-01`** — representation and ownership of a Status Visual Binding artifact | A separately authorized future **Binding-Artifact Representation & Ownership Decision Pass** | Current effective state: **`OPEN / UNRESOLVED`**. **Prepared target** after this object's Human-Maintainer exact-object integration: **`OPEN / ROUTED / UNRESOLVED`** — **no Owner assigned** | A **future, separate Human-Maintainer authorization** is required; **none exists** |
+
+**`F-023-01` is not a route.** It is **not** Route A, B, C or D, and **no `Route E` or
+equivalent route identifier exists or is created**. The destination is a **future,
+separately authorized CDS governance action** — **not** a work package, **not**
+currently active, **not** currently authorized for resolution, **not** a Decision
+identifier, **not** an ADR, and **not** a risk. **`ROUTING ≠ RESOLUTION`**, **`ROUTED ≠
+DECIDED`** and **`ROUTING DESTINATION ≠ OWNER`**: naming the destination chooses **no**
+Binding representation, **no** artifact class, **no** Owner, **no** repository location
+and **no** schema, and it assigns authoring or validation authority to **no** work
+package or artifact. The statement in the
+[Binding Contract](../architecture/SEMANTIC_STATUS_VISUAL_BINDING_CONTRACT.md) that no
+Owner is chosen, routed or implied **remains valid and is unchanged**; this routing
+routes the **finding**, not an Owner.
+
+**`ROUTE D ≠ F-023-01`.** Route D concerns the representation and schema-ownership
+boundary of **context-conditional semantic realization** (`F-022-01`); `F-023-01`
+concerns the still-unresolved representation and ownership of the **Binding artifact**.
+Their legitimate intersection is **limited to the resolver-specific case**: if a future
+Binding representation uses or embeds the resolver mechanism, the applicable future Route D
+decision result or contract — **if one is separately authorized and established; none
+exists today** — would apply to **that resolver-specific portion**. **Route D must not silently
+absorb `F-023-01`, and this routing decides nothing about Route D.**
+
+*Informational scope of the future pass* — **future questions, none answered here**: the
+artifact class; the Binding representation; the maturity carrier under **BM-9**; the
+repository location; the schema or data representation; authoring authority;
+validation authority; whether a Decision is required; whether an ADR is required; the
+interaction with the closed Source-Set topology of **DEC-S-131** and **TM-5**; and the
+interaction with the change classification of **DEC-S-082**.
+
+*Minimum sequencing implication* (a sequence, **not** an authorization): the
+`F-023-01` routing; then the **Route D** Decision Pass as the **preferred immediate
+following decision candidate**; **Routes A and B** remain separately authorizable and
+may later be parallelized; **Route C does not currently satisfy the readiness criteria for separate
+authorization** (a planning/readiness classification derived from existing gates, **not**
+a lifecycle state): its more-than-one-consumer evidence requirement is unmet, the
+requirements are unchanged, no consumer evidence is manufactured, and CoreOps alone does
+not satisfy them. **`SEQUENCED NEXT ≠ AUTHORIZED`**; **no successor is assigned**. No Decision Pass
+in this sequence requires the pinned validator stack, whose authorization belongs with
+the first authorized stage that actually executes the validator.
+
+**Nothing changes** in the lifecycle or authority of **CDS-WP-020A**, **CDS-WP-024** or
+**CDS-WP-025** — each remains `Planned`, not active, and not authorized; current work
+package, current design work package and successor stay **NONE**; Routes A … D stay
+unresolved; **`F-PIR-02` stays `OPEN / ROUTED` to Core Vision** and is unrelated to
+this finding. No Decision, ADR or risk is created — the registers stay at **140 · 7 ·
+98**.
+
 **Validator environment.** The pinned validator stack remains **unavailable** in the
 execution environment — the preceding reconciliation recorded `jsonschema`,
 `rfc8785`, `referencing`, `rpds-py`, `attrs` and `pytest` as missing (`F-020-07`).
@@ -1336,7 +1399,7 @@ routing by authority, and routing is not deciding.**)*
 
 | ID | Observation | Disposition |
 | --- | --- | --- |
-| **`F-023-01`** | **UNRESOLVED — representation and ownership of a Status Visual Binding artifact.** The [Semantic Status Visual Binding Contract](../architecture/SEMANTIC_STATUS_VISUAL_BINDING_CONTRACT.md) defines what a binding must be, may never be, and must declare, but **not where or how the binding artifact itself is represented** machine-readably, nor **which work package or artifact authors it** (*Open questions*, question 1; precondition **BP-5**). Its **BM-3**, **BM-4** and **BM-5** exclude three representations — a status-to-role alias, a write into the Semantic Status source, and a role name — and leave the rest open. | **OPEN / UNRESOLVED — NOT DECIDED, NO OWNER.** **It is not Route D and not `F-022-01`**: Route D concerns the representation, schema ownership, and mechanism of **context-conditional semantic realization**; only the **resolver-specific** aspect of a binding overlaps it, and **that aspect stays with Route D**. **No owner is chosen, routed, or implied** — not `CDS-WP-020A`, CDS-WP-024, CDS-WP-026, CDS-WP-027, or a new artifact. **Implementation and reification of any binding depend on later, separate authority**, and no Decision is created for it unless separately authorized. **Every rule of the contract binds whichever representation is later chosen.** **`F-023-01` survives the CDS-WP-023 closure** — **`OPEN / UNRESOLVED`**, with no owner — and **requires later routing and authority**; closing the work package that observed it resolves, routes, and assigns nothing (**`OPEN / ROUTED FINDING ≠ INCOMPLETE AUTHORIZED WP SCOPE`**). No risk, Decision, ADR, or work-package activation is created — the registers stay at **140 · 7 · 98**. |
+| **`F-023-01`** | **UNRESOLVED — representation and ownership of a Status Visual Binding artifact.** The [Semantic Status Visual Binding Contract](../architecture/SEMANTIC_STATUS_VISUAL_BINDING_CONTRACT.md) defines what a binding must be, may never be, and must declare, but **not where or how the binding artifact itself is represented** machine-readably, nor **which work package or artifact authors it** (*Open questions*, question 1; precondition **BP-5**). Its **BM-3**, **BM-4** and **BM-5** exclude three representations — a status-to-role alias, a write into the Semantic Status source, and a role name — and leave the rest open. | **OPEN / UNRESOLVED — NOT DECIDED, NO OWNER.** **It is not Route D and not `F-022-01`**: Route D concerns the representation, schema ownership, and mechanism of **context-conditional semantic realization**; only the **resolver-specific** aspect of a binding overlaps it, and **that aspect stays with Route D**. **No owner is chosen, routed, or implied** — not `CDS-WP-020A`, CDS-WP-024, CDS-WP-026, CDS-WP-027, or a new artifact. **Implementation and reification of any binding depend on later, separate authority**, and no Decision is created for it unless separately authorized. **Every rule of the contract binds whichever representation is later chosen.** **`F-023-01` survives the CDS-WP-023 closure** — **`OPEN / UNRESOLVED`**, with no owner — and **requires later routing and authority** *(current effective state; the prepared routing object, effective only at its Human-Maintainer exact-object integration commit, targets `OPEN / ROUTED / UNRESOLVED` — see *Finding routing — `F-023-01`*)*; closing the work package that observed it resolves, routes, and assigns nothing (**`OPEN / ROUTED FINDING ≠ INCOMPLETE AUTHORIZED WP SCOPE`**). No risk, Decision, ADR, or work-package activation is created — the registers stay at **140 · 7 · 98**. *(Routing update — additive, **`PREPARED ≠ EFFECTIVE`**: the `F-023-01` Routing Pass routes the **finding** to a future Binding-Artifact Representation & Ownership Decision Pass, effective only at its Human-Maintainer exact-object integration commit — see *Finding routing — `F-023-01`* above. **`ROUTED ≠ DECIDED`**; the finding stays unresolved and **no owner is assigned**; the dispositions above are not rewritten.)* |
 
 ## Immediate next step
 
@@ -1360,6 +1423,14 @@ D are unresolved**; **`F-023-01` stays `OPEN / UNRESOLVED`** with no owner; and
 SUCCESSOR AUTHORIZED`**, **`DEPENDENCY SATISFIED ≠ AUTHORITY GRANTED`** and **`SEQUENCED
 NEXT ≠ AUTHORIZED`**; any next work package begins only on an explicit Nova prompt
 **and** a separate Human-Maintainer authorization.
+
+*(Additive — `F-023-01` Routing Pass, **`PREPARED ≠ EFFECTIVE`**; effective only at that
+pass's Human-Maintainer exact-object integration commit.)* **`F-023-01`** is routed to a
+future, separately authorized **Binding-Artifact Representation & Ownership Decision
+Pass** — current effective state **`OPEN / UNRESOLVED`**; prepared target after that integration **`OPEN / ROUTED / UNRESOLVED`**; no owner, **`ROUTING ≠ RESOLUTION`**; it is
+not a route, not a work package, and not currently authorized — see *Finding routing —
+`F-023-01`*. This changes no state above: current work package, current design work
+package and successor remain **NONE**.
 
 *(Point-in-time — 2026-09-30, CDS-WP-023 execution and limited rework, before its
 integration:)* **CDS-WP-023 was `AUTHORIZED` / `ACTIVE FOR EXECUTION`**, authorized

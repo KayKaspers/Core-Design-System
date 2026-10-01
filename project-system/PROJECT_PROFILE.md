@@ -69,7 +69,12 @@ release, or publication authority, and activates no work package.
   53c1cef`**. Closing it authorizes **no** successor, **no** Route
   A … D decision, and **no** value, role, Source Set, schema, validator, fixture,
   maturity, evidence, release, or publication change; **`F-023-01` stays `OPEN /
-  UNRESOLVED`** with no owner.
+  UNRESOLVED`** with no owner. *(Additive — `F-023-01` Routing Pass, **`PREPARED ≠
+  EFFECTIVE`**, effective only at its Human-Maintainer exact-object integration
+  commit:)* **`F-023-01` is routed to a future, separately authorized Binding-Artifact
+  Representation & Ownership Decision Pass — current effective state `OPEN / UNRESOLVED`; prepared target after that integration `OPEN / ROUTED / UNRESOLVED`, no owner**;
+  **`ROUTING ≠ RESOLUTION`**, **`ROUTE D ≠ F-023-01`**; not a route, work package,
+  Decision, ADR or risk, and not authorized.
   *(From the Human-Maintainer exact-object integration commit
   `ab81e197374bb9f9479105b4261cb4485a491b2a` (2026-09-28), at which the CDS-WP-022
   closure became effective, until that authorization, no design work package was
