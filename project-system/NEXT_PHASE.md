@@ -327,6 +327,16 @@ then authorized separately** and has been executed. The remaining sequence is:
 | 30f | **Independent review of the closure object** and **Nova adjudication** | Reviewer ≠ executor · Nova — recommendation only, never approval | **Done** — independent Closure Review completed, verdict **`GO WITH NOTES`** (the review neither closed nor integrated the work package); precondition of step 30g |
 | 30g | **Human-Maintainer exact-object integration commit** of the closure object | Human Maintainer | **Done** — `53c1cef44d74f502beeb282e4f399b0d3744e932` (tree `c738386b889900e0665672f97992f6fab43204cb`, 2026-09-30) — **the CDS-WP-023 closure became effective at this step**; **closure authorizes no successor** |
 | 30h | **CDS-WP-023 closure is effective** | Effective at step 30g | **Done** — effective at `53c1cef4…`; **`EXECUTION EFFECTIVE AT 0ea15ff ≠ CLOSURE EFFECTIVE AT 53c1cef`**; **no successor** |
+| 31 | **Route D Decision Pass** — Elevated, read-only; the `F-022-01` ownership and representation-boundary question | Executor — read-only | **Done** — result **`ROUTE D — DECISION RECOMMENDED`**; no repository change, no integration commit |
+| 31a | **Nova review and adjudication** of that result | Nova — recommendation only, never approval or authorization | **Done** — 2026-10-01; recommends preparing the Decision; **authorizes nothing** |
+| 31b | **Route D Decision Integration Preparation** — prepare **`DEC-S-141`** and its carriers | Claude — executor, on the prompt the Human Maintainer transmitted | **Done** — object **prepared and uncommitted**; **`PREPARED ≠ REVIEWED ≠ INTEGRATED ≠ EFFECTIVE`** |
+| 31c | **Independent Elevated review** of that object, in a new session | Reviewer ≠ executor | **Done** — **`REWORK REQUIRED`** (M1 … M4, L1 … L3); the Route D architecture itself accepted |
+| 31d | **Human-Maintainer authorization** of the **`DEC-S-141` proposition**, the **allocation of Decision ID `DEC-S-141`**, and the **preparation of the corrected Elevated Decision integration object** | Human Maintainer | **Done** — 2026-10-01; **excludes** implementation, work-package activation, schema revision, commit and push |
+| 31e | **Bounded rework** of the prepared object under step 31d | Claude — executor | **Done** — corrected object **prepared and uncommitted** |
+| 31f | **Final delta review** of the reworked object, in a new session | Reviewer ≠ executor | **Pending** |
+| 31g | **Nova adjudication** of that review | Nova — recommendation only, never approval | **Pending** |
+| 31h | **Human-Maintainer exact-object integration commit** of that object, **if separately approved** | Human Maintainer | **Pending** — no commit exists, and **none is authorized by any earlier step** |
+| 31i | **`DEC-S-141` becomes effective; Route D resolved**; registers **141 · 7 · 98** | Effective at step 31h and by nothing earlier | **Not reached** — **`F-022-01` stays `OPEN`**, **BP-4 stays `Not met`**, **`F-023-01` stays `OPEN / ROUTED / UNRESOLVED`**; **no work package or stage is authorized by any step 31 … 31i** |
 
 **Step 8 is not reached before step 7**, **step 9e is not reached before step 9d**,
 **step 13 does not reach step 14**, **step 17 is not reached before step 16**,

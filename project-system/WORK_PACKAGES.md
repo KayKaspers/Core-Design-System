@@ -1182,6 +1182,23 @@ Human Maintainer before the stage is authorized — never resolved by a placehol
 **S3 must not invent vocabulary.** **`AUTHOR ≠ VALIDATE`** holds in every stage:
 `CDS-WP-020A` authors sources, and **CDS-WP-024** validates them.
 
+**S3 and Route D — `DEC-S-141` prepared, not effective (2026-10-01).** *(Additive — the
+table above is not edited.)* The prepared
+[`DEC-S-141`](../docs/decisions/DECISION_INDEX.md) would, **only from its
+Human-Maintainer exact-object integration commit**, resolve the **ownership** half of
+the S3 gate *"resolution of the relevant `F-022-01` representation issue (Route D)"*:
+context-conditional Resolver / Composition instances are **assigned under the current
+roadmap to S3 when separately authorized** — **`ASSIGNED ≠ AUTHORIZED`** — while
+**schema authority stays with CDS governed contract authority (DEC-S-082 / DEC-S-083)**
+and **not** with `CDS-WP-020A`. **The concrete schema shape is deferred** to a
+separately authorized Elevated contract-change pass, so **S3 stays blocked** on it as
+well as on Route C and its other gates. **S1 and S2 are unchanged.** S3 must not define
+the validation contract because it authors instances, and CDS-WP-024 must not define
+the authoring contract because it validates them. **Preparing `DEC-S-141` grants no
+authorization**: **no stage is authorized**, **the status, dependencies and sequencing
+of CDS-WP-024 remain unchanged**, and **`CDS-WP-020A`, CDS-WP-024 and CDS-WP-025
+remain `Planned`, not active, and not authorized.**
+
 **Stage authority.** **Every stage requires its own separate, explicit Human-Maintainer
 authorization.** Updating this contract authorizes **no** stage: **`WP REGISTERED ≠
 STAGE AUTHORIZED`**, **`STAGE DEFINED ≠ STAGE AUTHORIZED`**, **`S1 READY ≠ S1

@@ -9,6 +9,56 @@ released and no release is announced.
 
 ### Added
 
+- **`DEC-S-141` — Context-Conditional Realization: Representation Boundary and
+  Resolver-Schema Ownership — Decision prepared; review, integration and effectivity
+  pending.** An Elevated governance integration-preparation pass, **not a work
+  package**, following the Route D read-only decision pass (`ROUTE D — DECISION
+  RECOMMENDED`) and Nova's adjudication (a recommendation, never an approval), under the
+  explicit **Human-Maintainer authorization of 2026-10-01** of the `DEC-S-141`
+  proposition, the allocation of that Decision ID and the preparation of the corrected
+  Elevated Decision integration object — **not** implementation, work-package
+  activation, schema revision, commit or push. The independent Elevated review returned
+  **`REWORK REQUIRED`** with the Route D architecture accepted, and the bounded rework
+  (M1 … M4, L1 … L3) is applied in this entry's carriers. **Prepared, not effective** —
+  **`PREPARED ≠ REVIEWED ≠ INTEGRATED ≠ EFFECTIVE`**; the Working Tree has no authority,
+  and everything below takes effect only at the Human-Maintainer exact-object
+  integration commit, if separately approved, after a final delta review (reviewer ≠
+  executor) and Nova adjudication. It
+  answers **Route D only**: the CDS **Resolver / Composition** model is the **sole
+  normative source / authoring carrier** of the context-conditional mapping, and
+  generated per-context outputs never author or redefine it; **schema authority** stays
+  with **CDS governed contract authority under DEC-S-082 / DEC-S-083**, changed only
+  through a separately authorized **Elevated contract-change pass** (the mechanism, not
+  the owner) — **not** `CDS-WP-020A`, CDS-WP-024, CDS-WP-025, a consumer, an adapter or
+  a profile; instance authorship is **assigned under the current roadmap to
+  `CDS-WP-020A` S3 when separately authorized**; CDS-WP-024 / CDS-WP-025 validate
+  against the governed contract; ADR-0007 *Future implementation obligations* #1 is
+  **refined, not modified** — instance authoring to `CDS-WP-020A` S3, validation to
+  CDS-WP-024, **resolver-schema authority to neither**; consumers own selection
+  sensing, persistence, transport, runtime, rendering and pinned-output consumption;
+  **`AUTHOR ≠ VALIDATE`**. **The concrete schema shape is deferred**; nine constraints
+  bind the future schema revision, the pinned DTCG Resolver structure and the
+  `$extensions` interaction are future prerequisites, and existing v1 resolver
+  documents stay valid against the schema revision they declare. **A Binding must not
+  carry context-conditional realization content**; whether a future Binding
+  representation references, uses or embeds the resolver mechanism stays open under
+  `F-023-01`. **No ADR** — the mechanism is ADR-0007's, byte-unchanged. Carriers: the
+  [Decision Index](docs/decisions/DECISION_INDEX.md), the
+  [roadmap](docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md) (Route D prepared
+  target, `F-022-01` prose disposition), [Work Packages](project-system/WORK_PACKAGES.md)
+  (S3 note) and [Next Phase](project-system/NEXT_PHASE.md) (steps 31 … 31i). **Route D
+  stays unresolved until integration**; **`F-022-01` stays `OPEN`** (*ownership resolved;
+  concrete representation / schema shape pending* — prose, no new lifecycle state);
+  **BP-4 stays `Not met`**; **`F-023-01` stays `OPEN / ROUTED / UNRESOLVED`** with no
+  Owner (**`ROUTE D ≠ F-023-01`**); Routes A, B and C are unchanged. **No** schema,
+  resolver document, validator, fixture, token, runtime code, Binding Contract byte,
+  ADR or DTCG material changes, and nothing is installed. Current work package, current
+  design work package and successor stay **NONE**; **`CDS-WP-020A`**, **CDS-WP-024** and
+  **CDS-WP-025** remain `Planned`, not active, and not authorized, and the status,
+  dependencies and sequencing of CDS-WP-024 remain unchanged. Registers **140 · 7 ·
+  98** now, **141 · 7 · 98** only from the integration commit; no integration commit
+  exists yet. Publication stays `Private Development`, with no tag and no release.
+  (Route D Decision Integration Preparation)
 - **CDS-WP-023 — Semantic Status Visual Binding Contract — executed; limited rework
   after independent review applied; Nova review of the rework, integration and closure
   pending.** Authorized separately and explicitly by the Human

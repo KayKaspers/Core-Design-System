@@ -1296,6 +1296,58 @@ this section, **not governance identifiers**.
 assignment is created by this table**, and **no route may be answered by a work
 package that has not been separately authorized to answer it**.
 
+**Route D — Decision prepared, not effective (2026-10-01).** *(Additive — the table
+above is not rewritten. Recorded by the **Route D Decision Integration Preparation**, a
+bounded Elevated governance integration-preparation pass that is **not** a work package
+and occupies no work-package identifier.)* The Route D Decision Pass ran **read-only** and
+concluded **`ROUTE D — DECISION RECOMMENDED`**; Nova
+reviewed and adjudicated it as a recommendation, and the **Human Maintainer explicitly
+authorized on 2026-10-01** the proposition of
+**[`DEC-S-141` — Context-Conditional Realization: Representation Boundary and
+Resolver-Schema Ownership](../decisions/DECISION_INDEX.md)**, the allocation of that
+identifier, and the preparation of the corrected Elevated Decision integration object —
+**not** implementation, work-package activation, schema revision, commit or push.
+`DEC-S-141` is **prepared and NOT yet effective**.
+
+| | Current effective state | Prepared target — only after the Human-Maintainer exact-object integration commit |
+| --- | --- | --- |
+| **Route D** | **Unresolved** | **Resolved by `DEC-S-141`** |
+| **`F-022-01`** | **`OPEN`** — routed | **`OPEN`** — disposition in prose only: *ownership resolved; concrete representation / schema shape pending*. **No new lifecycle state.** |
+| **BP-4** ([Binding Contract](../architecture/SEMANTIC_STATUS_VISUAL_BINDING_CONTRACT.md)) | **Not met** | **Not met** — deciding ownership makes nothing machine-representable |
+| **`F-023-01`** | **`OPEN / ROUTED / UNRESOLVED`**, no Owner | **Unchanged** — **`ROUTE D ≠ F-023-01`**, **`ROUTING ≠ RESOLUTION`** |
+| **Routes A, B, C** | Unresolved | **Unchanged** — Route C's evidence gate is **not** satisfied by Route D |
+
+The prepared answer, in short: the CDS **Resolver / Composition** model is the **sole
+normative source / authoring carrier** of the context-conditional mapping, and
+generated per-context outputs carry governed resolved results but **never** author or
+redefine it; **schema authority** belongs to **CDS governed contract authority under
+DEC-S-082 / DEC-S-083**, changed only through a separately authorized **Elevated
+contract-change pass** — the mechanism, **not** the owner — and **not** to
+`CDS-WP-020A`, CDS-WP-024, CDS-WP-025, a consumer, an adapter, or a profile; instance
+authorship is **assigned under the current roadmap to `CDS-WP-020A` S3 when separately
+authorized**; CDS-WP-024 validates and CDS-WP-025 covers invalid states **against the
+governed contract**; consumers own selection sensing, persistence, transport, runtime,
+rendering and the consumption of pinned generated outputs; and **`AUTHOR ≠ VALIDATE`**.
+ADR-0007 *Future implementation obligations* #1 is **refined, not modified**: it
+assigns instance-authoring responsibility to `CDS-WP-020A` S3 and validation
+responsibility to CDS-WP-024, and **resolver-schema authority to neither**.
+**The concrete schema shape is deferred**, the pinned DTCG Resolver structure and the
+`$extensions` interaction are **future** prerequisites of any schema revision, existing
+v1 resolver documents stay valid against the schema revision they declare unless a
+separately authorized migration decision changes that, and **no schema, resolver
+document, validator, fixture, token, ADR, or Binding Contract byte changes**. **A
+Binding must not carry context-conditional realization content** — the only respect in
+which Route D constrains `F-023-01`; whether a future Binding representation
+references, uses or embeds the resolver mechanism **stays open under `F-023-01`**.
+
+**Work-package truth is unchanged:** current work package, current design work package
+and successor stay **NONE**; `CDS-WP-020A` **S1 and S2 are unchanged** and **S3 stays
+blocked** (Route C, the deferred schema shape, and its other gates); **the status,
+dependencies and sequencing of CDS-WP-024 remain unchanged**; and **CDS-WP-025 stays
+blocked behind CDS-WP-024**. All three remain `Planned`, not active,
+and not authorized. **No Decision beyond `DEC-S-141`, no ADR and no risk is prepared**:
+registers **140 · 7 · 98** now, **141 · 7 · 98** only from the integration commit.
+
 #### Finding routing — `F-023-01` (not a route)
 
 *(Added by the `F-023-01` Routing Pass — a narrow, Standard-track, non-semantic routing
@@ -1432,6 +1484,17 @@ Representation & Ownership Decision Pass** — current effective state **`OPEN /
 UNRESOLVED`**; no owner, **`ROUTING ≠ RESOLUTION`**; it is not a route, not a work
 package, and not currently authorized — see *Finding routing — `F-023-01`*. This changes no state above: current work package, current design work
 package and successor remain **NONE**.
+
+*(Additive — Route D Decision Integration Preparation, 2026-10-01; **prepared, not
+effective**.)* **`DEC-S-141`** — the Route D ownership and representation-boundary
+Decision — is **prepared as uncommitted executor output** under the explicit
+Human-Maintainer authorization of 2026-10-01; after its independent review returned
+`REWORK REQUIRED`, the bounded rework was applied, and it awaits a final delta review,
+Nova adjudication and, if separately approved, a Human-Maintainer exact-object
+integration commit.
+**Until that commit Route D stays unresolved** and the registers stay at **140 · 7 ·
+98**; see *Prerequisite decision routes*. It authorizes no work package and no stage:
+current work package, current design work package and successor remain **NONE**.
 
 *(Point-in-time — 2026-09-30, CDS-WP-023 execution and limited rework, before its
 integration:)* **CDS-WP-023 was `AUTHORIZED` / `ACTIVE FOR EXECUTION`**, authorized
