@@ -60,7 +60,10 @@ areas today.
 Governance foundation established. No final design or technology decisions are
 approved.
 
-- Decisions: DEC-S-001 … DEC-S-140 (140 effective; DEC-S-140 was prepared by the
+- Decisions: DEC-S-001 … DEC-S-141 (141 effective; DEC-S-141 was prepared by the
+  Route D Decision Integration Preparation and became effective at its Human-Maintainer
+  exact-object integration commit `a61f50b14d7647de521a2cd8a42cdf18efdc7029`; 140 until
+  then; DEC-S-140 was prepared by the
   Post-WP-022 Decision & Contract Integration Pass and became effective at its
   integration commit `e87ff702f8d96a8850b18b93454028a094c6b80a`; 139 until then; DEC-S-139
   was prepared by CDS-WP-001B and became effective at its integration commit
@@ -76,7 +79,9 @@ approved.
   authority and source identity + 4 visual identifier, scale ownership, role
   admission and theme sequencing + 1 adaptive spatial context and responsive
   architecture + 2 theme resolution, context-evidence and environmental selection
-  + 1 framework process-baseline and Skill supply-chain
+  + 1 framework process-baseline and Skill supply-chain + 1 visual role vocabulary and
+  materialization-boundary + 1 context-conditional realization ownership and
+  representation-boundary
   decisions ·
   **ADRs: 7 (ADR-0001, ADR-0002, ADR-0003, ADR-0004, ADR-0005, ADR-0006, ADR-0007)**
   - **Effectivity: DEC-S-128 … DEC-S-131 and ADR-0004 are effective**, at the
@@ -91,11 +96,12 @@ approved.
     **DEC-S-137, DEC-S-138 and ADR-0007 are effective**, at the Human-Maintainer
     exact-object integration commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b` of the
     CDS-WP-022 object. The
-    **effective** register is **DEC-S-001 … DEC-S-140 (140)** — **DEC-S-139 is
+    **effective** register is **DEC-S-001 … DEC-S-141 (141)** — **DEC-S-139 is
     effective** at the Human-Maintainer exact-object integration commit
-    `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`, and **DEC-S-140 is effective** at the
-    Human-Maintainer exact-object integration commit `e87ff702f8d96a8850b18b93454028a094c6b80a` —
-    with **7 ADRs**.
+    `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`, **DEC-S-140 is effective** at the
+    Human-Maintainer exact-object integration commit `e87ff702f8d96a8850b18b93454028a094c6b80a`,
+    and **DEC-S-141 is effective** at the Human-Maintainer exact-object integration
+    commit `a61f50b14d7647de521a2cd8a42cdf18efdc7029` — with **7 ADRs**.
 - Risks: RISK-001 … RISK-098 (98) — **89 Monitored; RISK-031, RISK-040, RISK-044,
   RISK-066, RISK-067, RISK-068, RISK-069, RISK-071, RISK-098 Mitigating**; **owner
   model finalized**; no risk accepted or closed
@@ -154,7 +160,15 @@ approved.
   adds no Decision, ADR, or risk. **`F-023-01` stays `OPEN / UNRESOLVED`** with no
   owner; Routes A … D stay unresolved. *(Additive — `F-023-01` Routing Pass, **effective** at the Human-Maintainer exact-object integration commit `563109aa80aeab02ea788fe544b1d15aa39ab78c` — superseding the closure-time `OPEN / UNRESOLVED` for current state:)* **`F-023-01` is routed to a future, separately authorized
   Binding-Artifact Representation & Ownership Decision Pass — current effective state `OPEN / ROUTED / UNRESOLVED`, no owner**; **`ROUTING ≠ RESOLUTION`**, **`ROUTE D ≠ F-023-01`**; not a
-  route, work package, Decision, ADR or risk, and not authorized. *(From the Human-Maintainer exact-object
+  route, work package, Decision, ADR or risk, and not authorized. *(Additive —
+  **`DEC-S-141`**, **effective** at the Human-Maintainer exact-object integration commit
+  `a61f50b14d7647de521a2cd8a42cdf18efdc7029` — superseding the closure-time *Routes A … D
+  stay unresolved* for Route D in current state:)* **Route D is resolved by
+  `DEC-S-141`**; **Routes A, B and C stay unresolved**; registers **141 · 7 · 98**;
+  **`F-022-01` stays `OPEN`** (*ownership resolved; concrete representation / schema
+  shape pending*); **BP-4 stays `Not met`**; **`F-023-01` stays `OPEN / ROUTED /
+  UNRESOLVED`**, no owner. No work package, stage, successor or schema revision is
+  authorized. *(From the Human-Maintainer exact-object
   integration commit `ab81e197374bb9f9479105b4261cb4485a491b2a` (2026-09-28), at which
   the CDS-WP-022 closure became effective, until the CDS-WP-023 authorization, no
   design work package was authorized.)*

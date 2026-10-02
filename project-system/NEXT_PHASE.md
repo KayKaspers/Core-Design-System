@@ -48,6 +48,14 @@
   Pass — current effective state `OPEN / ROUTED / UNRESOLVED`, no owner**; **`ROUTING ≠ RESOLUTION`**, **`ROUTE
   D ≠ F-023-01`**, **`SEQUENCED NEXT ≠ AUTHORIZED`**. It is not a route, a work package,
   a Decision, an ADR or a risk, and it is not authorized; no successor is assigned.
+  *(Additive — **`DEC-S-141`**, **effective** at the Human-Maintainer exact-object
+  integration commit `a61f50b14d7647de521a2cd8a42cdf18efdc7029` (step 31h) — superseding
+  the closure-time *Routes A … D are unresolved* and *registers 140 · 7 · 98* for current
+  state:)* **Route D is resolved by `DEC-S-141`**; the registers are **141 · 7 · 98**;
+  **Routes A, B and C stay unresolved**; **`F-022-01` stays `OPEN`** (*ownership resolved;
+  concrete representation / schema shape pending*); **BP-4 stays `Not met`**; and
+  **`F-023-01` stays `OPEN / ROUTED / UNRESOLVED`**, no owner — **`ROUTE D ≠ F-023-01`**.
+  It authorizes no work package, stage, successor or schema revision.
   *(From the CDS-WP-023 authorization of 2026-09-30 until the closure's effectivity at
   `53c1cef44d74f502beeb282e4f399b0d3744e932`, `CDS-WP-023` was the current and current
   design work package, `AUTHORIZED` / `ACTIVE FOR EXECUTION`. The rest of this bullet group records earlier states and is not
@@ -333,10 +341,10 @@ then authorized separately** and has been executed. The remaining sequence is:
 | 31c | **Independent Elevated review** of that object, in a new session | Reviewer ≠ executor | **Done** — **`REWORK REQUIRED`** (M1 … M4, L1 … L3); the Route D architecture itself accepted |
 | 31d | **Human-Maintainer authorization** of the **`DEC-S-141` proposition**, the **allocation of Decision ID `DEC-S-141`**, and the **preparation of the corrected Elevated Decision integration object** | Human Maintainer | **Done** — 2026-10-01; **excludes** implementation, work-package activation, schema revision, commit and push |
 | 31e | **Bounded rework** of the prepared object under step 31d | Claude — executor | **Done** — corrected object **prepared and uncommitted** |
-| 31f | **Final delta review** of the reworked object, in a new session | Reviewer ≠ executor | **Pending** |
-| 31g | **Nova adjudication** of that review | Nova — recommendation only, never approval | **Pending** |
-| 31h | **Human-Maintainer exact-object integration commit** of that object, **if separately approved** | Human Maintainer | **Pending** — no commit exists, and **none is authorized by any earlier step** |
-| 31i | **`DEC-S-141` becomes effective; Route D resolved**; registers **141 · 7 · 98** | Effective at step 31h and by nothing earlier | **Not reached** — **`F-022-01` stays `OPEN`**, **BP-4 stays `Not met`**, **`F-023-01` stays `OPEN / ROUTED / UNRESOLVED`**; **no work package or stage is authorized by any step 31 … 31i** |
+| 31f | **Final delta review** of the reworked object, in a new session | Reviewer ≠ executor | **Done** — independent final delta review completed (the review neither integrated nor made anything effective); precondition of step 31g |
+| 31g | **Nova adjudication** of that review | Nova — recommendation only, never approval | **Done** — completed; **authorizes nothing**; precondition of step 31h |
+| 31h | **Human-Maintainer exact-object integration commit** of that object, **if separately approved** | Human Maintainer | **Done** — `a61f50b14d7647de521a2cd8a42cdf18efdc7029` (tree `66ee9ebcfa113468b11adad5531a3c86d5fb91f4`, parent `75f15450a1237a442f9e3b242aa6ecfb9c0bc16d`, 2026-10-01), pushed to `origin/main` by the Human Maintainer — **`DEC-S-141` became effective at this step** |
+| 31i | **`DEC-S-141` becomes effective; Route D resolved**; registers **141 · 7 · 98** | Effective at step 31h and by nothing earlier | **Done** — effective at `a61f50b1…`; **Route D resolved by `DEC-S-141`**; **`F-022-01` stays `OPEN`** (*ownership resolved; concrete representation / schema shape pending*), **BP-4 stays `Not met`**, **`F-023-01` stays `OPEN / ROUTED / UNRESOLVED`**, Routes A, B and C stay unresolved; **no work package, stage, successor or schema revision is authorized by any step 31 … 31i** |
 
 **Step 8 is not reached before step 7**, **step 9e is not reached before step 9d**,
 **step 13 does not reach step 14**, **step 17 is not reached before step 16**,
@@ -351,7 +359,9 @@ not closure**, **step 25 was reached only at step 24 and by nothing earlier**,
 closing**, **step 26e authorizes no successor**, **step 30d does not reach step 30g —
 integration is not closure, and preparing the closure object at step 30e is not closing**,
 **step 30g authorizes no successor — and the post-closure current-state reconciliation
-that followed it authorizes none either**,
+that followed it authorizes none either**, **step 31i authorizes no work package, stage,
+successor or schema revision — and the post-integration effectivity reconciliation that
+followed it authorizes none either**,
 and **no
 step below implies the one above it**. Uncommitted
 executor output changes no authoritative phase or work-package status, and a review

@@ -11,19 +11,19 @@ authorized work packages.
 
 ## Register scope
 
-- **Effective decision range: DEC-S-001 … DEC-S-140**
-- **Number of effective decisions: 140** — **`DEC-S-140` became effective at the
-  Human-Maintainer exact-object integration commit of the Post-WP-022 Decision &
-  Contract Integration Pass, `e87ff702f8d96a8850b18b93454028a094c6b80a`**
-  (the effective count was **139** until that commit) — see the `DEC-S-140` bullet
-  below. **`DEC-S-139` became effective at the Human-Maintainer exact-object
-  integration commit of CDS-WP-001B,
+- **Effective decision range: DEC-S-001 … DEC-S-141**
+- **Number of effective decisions: 141** — **`DEC-S-141` became effective at the
+  Human-Maintainer exact-object integration commit of the Route D Decision Integration
+  Preparation object, `a61f50b14d7647de521a2cd8a42cdf18efdc7029`** (the effective count
+  was **140** until that commit) — see the `DEC-S-141` bullet below. **`DEC-S-140`
+  became effective at the Human-Maintainer exact-object integration commit of the
+  Post-WP-022 Decision & Contract Integration Pass,
+  `e87ff702f8d96a8850b18b93454028a094c6b80a`** (the effective count was **139** until
+  that commit) — see the `DEC-S-140` bullet below. **`DEC-S-139` became effective at the
+  Human-Maintainer exact-object integration commit of CDS-WP-001B,
   `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`** (the effective count was **138** until
   that commit) — see the CDS-WP-001B bullet below. **`PREPARED DECISION ≠ EFFECTIVE
-  DECISION`** held for each until its own commit. **`DEC-S-141` is prepared by the Route D
-  Decision Integration Preparation and is NOT yet effective**: the effective count becomes
-  **141** only at that object's Human-Maintainer exact-object integration commit — see
-  the `DEC-S-141` bullet below.
+  DECISION`** held for each until its own commit.
 - **Effectivity.** **DEC-S-128 … DEC-S-131 are effective.** The condition their
   entries stated — the Human-Maintainer exact-byte integration commit of the
   CDS-WP-020 Decision Integration Pass, following a Fresh Independent Review and
@@ -50,10 +50,11 @@ authorized work packages.
   That review returned `REWORK REQUIRED`; a bounded two-file rework resolved
   **F-R21-01** and **F-R21-02**, and the confirmatory independent review returned
   `PASS`.
-  The **effective** register is therefore **DEC-S-001 … DEC-S-140 (140 decisions)**
+  The **effective** register is therefore **DEC-S-001 … DEC-S-141 (141 decisions)**
   and the **effective** ADR range is **ADR-0001 … ADR-0007 (7 ADRs)** — see the
   CDS-WP-022 effectivity bullet below for `DEC-S-137`, `DEC-S-138` and `ADR-0007`, the
-  CDS-WP-001B bullet below for `DEC-S-139`, and the `DEC-S-140` bullet below. This
+  CDS-WP-001B bullet below for `DEC-S-139`, and the `DEC-S-140` and `DEC-S-141` bullets
+  below. This
   section
   is the maintained current carrier; a
   statement inside an individual decision entry is point-in-time and is not edited
@@ -248,7 +249,11 @@ authorized work packages.
   **VP-6 stays `UNSATISFIED` for every family**, because no vocabulary decision exists.
   **Statements above and inside earlier entries that "no `DEC-S-140`" exists are
   point-in-time statements about the milestones they describe and are not edited.**
-- **`DEC-S-141` is prepared and is NOT yet effective.** *(Maintained current carrier,
+- **`DEC-S-141` is `Accepted` and effective at the Human-Maintainer exact-object
+  integration commit `a61f50b14d7647de521a2cd8a42cdf18efdc7029`** of the Route D
+  Decision Integration Preparation object (parent
+  `75f15450a1237a442f9e3b242aa6ecfb9c0bc16d`, tree
+  `66ee9ebcfa113468b11adad5531a3c86d5fb91f4`). *(Maintained current carrier,
   added 2026-10-01 by the **Route D Decision Integration Preparation** — a bounded
   Elevated governance integration-preparation pass following the Route D read-only
   decision pass (`ROUTE D — DECISION RECOMMENDED`) and Nova's adjudication, under the
@@ -265,21 +270,28 @@ authorized work packages.
   S3 when separately authorized**; CDS-WP-024 / CDS-WP-025 validate against the
   governed contract; consumers own selection sensing, persistence, transport, runtime,
   rendering and the consumption of pinned generated outputs; and **`AUTHOR ≠
-  VALIDATE`** is preserved. **The concrete schema shape is deferred.** It becomes
-  effective **only** at the Human-Maintainer exact-object integration commit of that
-  object, following an independent review (reviewer ≠ executor), the bounded rework it
-  required, a final delta review and Nova adjudication; **until then the uncommitted
-  Working Tree creates no authority** — **`PREPARED ≠ REVIEWED ≠ INTEGRATED ≠ EFFECTIVE`**. **The effective register holds
-  `DEC-S-001 … DEC-S-140` (140 decisions) until that commit and
+  VALIDATE`** is preserved. **The concrete schema shape is deferred.** It was prepared
+  by that pass and became effective **only** at that Human-Maintainer exact-object
+  integration commit, following an independent review (reviewer ≠ executor; `REWORK
+  REQUIRED`), the bounded rework it required, a final delta review (reviewer ≠
+  executor) and Nova adjudication; **the uncommitted Working Tree created no authority
+  before it** — **`PREPARED ≠ REVIEWED ≠ INTEGRATED ≠ EFFECTIVE`**. **Route D is
+  resolved by `DEC-S-141` from that commit.** **The effective register held
+  `DEC-S-001 … DEC-S-140` (140 decisions) until that commit and holds
   `DEC-S-001 … DEC-S-141` (141 decisions) from it; the ADR register stays at 7 and the
   risk register at 98 throughout — no `ADR-0008`, no `RISK-099`.** **No existing
   Decision entry is edited**: `DEC-S-137`, `DEC-S-138` and `DEC-S-140` are unchanged in
   byte and in substance, and **ADR-0007 is not modified**. It creates **no** schema,
   schema fragment, resolver instance, context identifier, value or Source Set;
-  **`F-022-01` stays `OPEN`**, **`F-023-01` stays `OPEN / ROUTED / UNRESOLVED`** with no
-  Owner, **BP-4 stays `Not met`**, Routes A, B and C stay unresolved, and it
-  **authorizes no work package and no stage**: **`CDS-WP-020A`**, **CDS-WP-024** and
-  **CDS-WP-025** remain `Planned`, not active, and not authorized.
+  **`F-022-01` stays `OPEN`** (*ownership resolved; concrete representation / schema
+  shape pending* — a prose disposition, not a lifecycle state), **`F-023-01` stays
+  `OPEN / ROUTED / UNRESOLVED`** with no Owner (**`ROUTE D ≠ F-023-01`**), **BP-4 stays
+  `Not met`**, Routes A, B and C stay unresolved, and it **authorizes no work package and
+  no stage**: **`CDS-WP-020A`**, **CDS-WP-024** and **CDS-WP-025** remain `Planned`, not
+  active, and not authorized, and **no successor is assigned**. **Statements inside
+  earlier entries that "no `DEC-S-141`" exists, and statements in the body of the
+  `DEC-S-141` entry below that describe a prepared target or pending integration, are
+  point-in-time statements about the preparation milestone and are not edited.**
 - Decision record format: index entries, plus ADR files where a decision warrants an
   Architecture Decision Record. **Effective ADR range: ADR-0001 … ADR-0007
   (7 ADRs)**.
@@ -341,7 +353,7 @@ authorized work packages.
 | Theme resolution, context-evidence and environmental selection decision | DEC-S-137 … DEC-S-138 | CDS-WP-022 | Theme/context-sensitive binding represented through the existing **Resolver / Composition** architecture over the existing Source-Set graph, with **no per-context Source Set**, **no context or theme segment in any identifier**, the **Source Set remaining the sole independently evaluable maturity unit**, and context-specific evidence staying bound to `(sourceSetId, sourceRevision)` while recording the **Resolver / Composition revision** and the **Theme Resolution Context** as exact evidence inputs; **Light and Dark** as the initial supported Core Theme Resolution Contexts, **equal peers with no default**; **forced colours and platform high contrast as an environmental accessibility condition and not a Core context**; **explicit viewer choice over inferred environment preference**, with mandatory platform accessibility conditions outside Theme precedence and always binding; and **no default or fallback Theme, with missing, unsupported and unresolved-conflict resolution failing closed** (**ADR-0007** for **DEC-S-137 only**). **Accepted and effective at the Human-Maintainer exact-object integration commit `23914ecc48c1fb3cba5e3dab97a505589e821b6b`.** They select **no** value, create **no** identifier, Source Set, or resolver instance, and grant **no** maturity. |
 | Framework process-baseline and Skill supply-chain decision | DEC-S-139 | CDS-WP-001B | NDF v1.1.0 as the CDS **development-process** baseline only — execution contracts, work-package execution, process verification and evidence, session and handoff rules, Skill routing and Human-Maintainer gates — with **no** authority over CDS product or domain authority; NDF normative process rules as a **floor** that CDS may tighten and never silently relax; exactly four support files imported byte-identically and **not** independent CDS policy or architecture; one integrity lock (SHA-256, raw committed bytes, lowercase hex) binding the pack and snapshot to one source release and commit; and NDF release/version language that is **NDF-only** and cannot satisfy or alter DEC-S-037. **Effective at the Human-Maintainer exact-object integration commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d` of CDS-WP-001B.** The later CDS-WP-001B closure, effective at `17b191416031d847573687b4ebce99fcea929386`, did not change this Decision or its effectivity. It selects **no** value, creates **no** identifier, and grants **no** maturity, evidence, claim, conformance, release, or publication authority. |
 | Visual role vocabulary and materialization-boundary decision | DEC-S-140 | — (Post-WP-022 Decision & Contract Integration Pass) | A normative **vocabulary decision** may declare and admit a visual role — identifier, purpose, obligations, **SR-1 … SR-10 and SR-12**, and evidence and admission conditions — **without** creating a machine-readable role token instance: **`ROLE VOCABULARY DECLARED ≠ ROLE TOKEN INSTANCE CREATED`**, **`DECISION ≠ SOURCE-SET MATERIALIZATION`**; a concrete visual-role artifact is materially instantiated **only** when authored into an authorized Visual Source Set revision, where **SR-11** and the concrete source-bound realization of **VP-6** are fulfilled; no prerequisite is read to require its own output (the `DEC-S-133` precedent); **RA-1, RA-3, SR-11, VP-6, evidence binding, Source Set authority and fail-closed behaviour are not weakened**, and **`WCAG OBLIGATION ≠ CROSS-CONSUMER EVIDENCE`**. **Effective at the Human-Maintainer exact-object integration commit `e87ff702f8d96a8850b18b93454028a094c6b80a` of that pass.** It selects **no** value, creates **no** role, role identifier, vocabulary or Source Set, and grants **no** maturity. |
-| Context-conditional realization ownership and representation-boundary decision | DEC-S-141 | — (Route D Decision Integration Preparation) | The CDS **Resolver / Composition** model as the **sole normative source / authoring carrier** of the context-conditional mapping, with generated per-context outputs carrying governed resolved results and **never** authoring or redefining it; **schema authority** with **CDS governed contract authority under DEC-S-082 / DEC-S-083**, changed only through a separately authorized **Elevated contract-change pass** that is the mechanism, **not** the owner; instance authorship **assigned under the current roadmap to `CDS-WP-020A` S3 when separately authorized**; validation by **CDS-WP-024 / CDS-WP-025** against the governed contract; **ADR-0007 future implementation obligation #1 refined as instance-authoring and validation responsibility, not schema authority** (ADR-0007 unchanged); consumer ownership of selection sensing, persistence, transport, runtime, rendering and pinned-output consumption; **`AUTHOR ≠ VALIDATE`**; nine constraints on a future schema revision, whose **concrete shape is deferred**; v1 resolver compatibility preserved; **no context-conditional realization content in a Binding**, while whether a future Binding representation references, uses or embeds the resolver mechanism stays open under `F-023-01` (**`ROUTE D ≠ F-023-01`**). **Prepared; effective only at the Human-Maintainer exact-object integration commit of that object.** It selects **no** value, creates **no** schema, resolver instance, context identifier or Source Set, resolves **neither `F-022-01` nor `F-023-01`**, and grants **no** maturity. |
+| Context-conditional realization ownership and representation-boundary decision | DEC-S-141 | — (Route D Decision Integration Preparation) | The CDS **Resolver / Composition** model as the **sole normative source / authoring carrier** of the context-conditional mapping, with generated per-context outputs carrying governed resolved results and **never** authoring or redefining it; **schema authority** with **CDS governed contract authority under DEC-S-082 / DEC-S-083**, changed only through a separately authorized **Elevated contract-change pass** that is the mechanism, **not** the owner; instance authorship **assigned under the current roadmap to `CDS-WP-020A` S3 when separately authorized**; validation by **CDS-WP-024 / CDS-WP-025** against the governed contract; **ADR-0007 future implementation obligation #1 refined as instance-authoring and validation responsibility, not schema authority** (ADR-0007 unchanged); consumer ownership of selection sensing, persistence, transport, runtime, rendering and pinned-output consumption; **`AUTHOR ≠ VALIDATE`**; nine constraints on a future schema revision, whose **concrete shape is deferred**; v1 resolver compatibility preserved; **no context-conditional realization content in a Binding**, while whether a future Binding representation references, uses or embeds the resolver mechanism stays open under `F-023-01` (**`ROUTE D ≠ F-023-01`**). **Accepted and effective at the Human-Maintainer exact-object integration commit `a61f50b14d7647de521a2cd8a42cdf18efdc7029` of that object; Route D is resolved by it.** It selects **no** value, creates **no** schema, resolver instance, context identifier or Source Set, resolves **neither `F-022-01` nor `F-023-01`**, and grants **no** maturity. |
 
 None of these types is an implementation decision. Logical architecture decisions
 define structure, responsibility, and flow — they select no technology, format,
@@ -6910,17 +6922,21 @@ Development`.**
 
 ## DEC-S-141 — Context-Conditional Realization: Representation Boundary and Resolver-Schema Ownership
 
-- **Status:** **Prepared — not effective.** **DEC-S-141 becomes effective only at the
+- **Status:** **`Accepted` — effective.** **DEC-S-141 became effective at the
   Human-Maintainer exact-object integration commit of the Route D Decision Integration
-  Preparation object**, which must follow an independent review (reviewer ≠ executor,
-  a fresh session), the bounded rework that review required, a final delta review, and
-  Nova adjudication. Until that commit this entry is
-  **uncommitted executor output** and it changes **no** authoritative CDS state; **no
-  wording, review verdict, or adjudication confers effectivity before it.**
-  **`PREPARED ≠ REVIEWED ≠ INTEGRATED ≠ EFFECTIVE`**, **`PREPARED DECISION ≠ EFFECTIVE
-  DECISION`**, **`PASS ≠ INTEGRATED`**, and **a Nova recommendation is not an
-  approval.** **The effective register holds 140 decisions until that commit and holds
-  141 from it**; ADRs stay at 7 and risks at 98.
+  Preparation object, `a61f50b14d7647de521a2cd8a42cdf18efdc7029`** (parent
+  `75f15450a1237a442f9e3b242aa6ecfb9c0bc16d`, tree
+  `66ee9ebcfa113468b11adad5531a3c86d5fb91f4`), following an independent review
+  (reviewer ≠ executor, a fresh session; `REWORK REQUIRED`), the bounded rework that
+  review required, a final delta review (reviewer ≠ executor), and Nova adjudication.
+  It was prepared on 2026-10-01 as **uncommitted executor output** under an explicit
+  Human-Maintainer authorization and changed **no** authoritative CDS state until that
+  commit — the integration commit is the authority event; **no wording, review verdict,
+  or adjudication conferred effectivity before it.** **Route D is resolved by DEC-S-141
+  from that commit.** **`PREPARED ≠ REVIEWED ≠ INTEGRATED ≠ EFFECTIVE`**, **`PREPARED
+  DECISION ≠ EFFECTIVE DECISION`**, **`PASS ≠ INTEGRATED`**, and **a Nova
+  recommendation is not an approval.** **The effective register held 140 decisions
+  until that commit and holds 141 from it**; ADRs stay at 7 and risks at 98.
 - **Date:** 2026-10-01
 - **Type:** Context-conditional realization ownership and representation-boundary
   decision

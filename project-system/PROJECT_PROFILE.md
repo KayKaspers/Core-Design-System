@@ -73,6 +73,14 @@ release, or publication authority, and activates no work package.
   Representation & Ownership Decision Pass — current effective state `OPEN / ROUTED / UNRESOLVED`, no owner**;
   **`ROUTING ≠ RESOLUTION`**, **`ROUTE D ≠ F-023-01`**; not a route, work package,
   Decision, ADR or risk, and not authorized.
+  *(Additive — **`DEC-S-141`**, **effective** at the Human-Maintainer exact-object
+  integration commit `a61f50b14d7647de521a2cd8a42cdf18efdc7029` — superseding the
+  closure-time Route D state and register count for current state:)* **Route D is
+  resolved by `DEC-S-141`**; **Routes A, B and C stay unresolved**; registers **141 · 7 ·
+  98**; **`F-022-01` stays `OPEN`** (*ownership resolved; concrete representation /
+  schema shape pending*); **BP-4 stays `Not met`**; **`F-023-01` stays `OPEN / ROUTED /
+  UNRESOLVED`**, no owner. No work package, stage, successor or schema revision is
+  authorized.
   *(From the Human-Maintainer exact-object integration commit
   `ab81e197374bb9f9479105b4261cb4485a491b2a` (2026-09-28), at which the CDS-WP-022
   closure became effective, until that authorization, no design work package was
@@ -886,7 +894,10 @@ pilot contract is defined in CDS-WP-004.
 
 ## Register scope
 
-- Decisions: DEC-S-001 … DEC-S-140 (140 effective; **DEC-S-140 was prepared by the
+- Decisions: DEC-S-001 … DEC-S-141 (141 effective; **DEC-S-141 was prepared by the
+  Route D Decision Integration Preparation and became effective at its Human-Maintainer
+  exact-object integration commit `a61f50b14d7647de521a2cd8a42cdf18efdc7029`**; 140 until
+  then; **DEC-S-140 was prepared by the
   Post-WP-022 Decision & Contract Integration Pass and became effective at its
   integration commit `e87ff702f8d96a8850b18b93454028a094c6b80a`**; 139 until then; **DEC-S-139 was
   prepared by CDS-WP-001B and became effective at its integration commit
@@ -917,7 +928,9 @@ pilot contract is defined in CDS-WP-004.
   DEC-S-138)**, and **1 framework process-baseline and Skill supply-chain decision
   (CDS-WP-001B, DEC-S-139)**, and **1 visual role vocabulary and
   materialization-boundary decision (Post-WP-022 Decision & Contract Integration Pass,
-  DEC-S-140)**. DEC-S-001 … DEC-S-114 unchanged
+  DEC-S-140)**, and **1 context-conditional realization ownership and
+  representation-boundary decision (Route D Decision Integration Preparation,
+  DEC-S-141)**. DEC-S-001 … DEC-S-114 unchanged
   by
   CDS-WP-015; DEC-S-001 … DEC-S-125 unchanged by the rework; **DEC-S-001 …
   DEC-S-126 unchanged by the phase transition**; **DEC-S-001 … DEC-S-127 unchanged
@@ -934,10 +947,12 @@ pilot contract is defined in CDS-WP-004.
   `a6bd7bf0c290886bbe2695c0f9cf70efbef3f1e9`; **DEC-S-137, DEC-S-138 and ADR-0007
   are effective**, at the Human-Maintainer exact-object integration commit
   `23914ecc48c1fb3cba5e3dab97a505589e821b6b`. The **effective** register is
-  **DEC-S-001 … DEC-S-140 (140)** with **7 ADRs** — **DEC-S-139 is effective** at the
+  **DEC-S-001 … DEC-S-141 (141)** with **7 ADRs** — **DEC-S-139 is effective** at the
   Human-Maintainer exact-object integration commit `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`,
-  and **DEC-S-140 is effective** at the Human-Maintainer exact-object integration
-  commit `e87ff702f8d96a8850b18b93454028a094c6b80a`.
+  **DEC-S-140 is effective** at the Human-Maintainer exact-object integration
+  commit `e87ff702f8d96a8850b18b93454028a094c6b80a`, and **DEC-S-141 is effective** at
+  the Human-Maintainer exact-object integration commit
+  `a61f50b14d7647de521a2cd8a42cdf18efdc7029`.
 - Risks: RISK-001 … RISK-098 (98) — **89 `Monitored`; RISK-031, RISK-040, RISK-044,
   RISK-066, RISK-067, RISK-068, RISK-069, RISK-071, and RISK-098 `Mitigating`**;
   **risk owner model finalized** by CDS-WP-006; RISK-082 … RISK-089 added by CDS-WP-014;

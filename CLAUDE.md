@@ -73,8 +73,11 @@ library, or a design project scoped exclusively to CoreOps.
   139 · 7 · 98 from it.** *(Point-in-time at that commit. **`DEC-S-140`**, prepared by the
   Post-WP-022 Decision & Contract Integration Pass, **became effective** at that pass's
   Human-Maintainer exact-object integration commit
-  **`e87ff702f8d96a8850b18b93454028a094c6b80a`**: the **current effective registers are
-  140 · 7 · 98** — **`PREPARED ≠ EFFECTIVE`** held until that commit.)* **Closure was a
+  **`e87ff702f8d96a8850b18b93454028a094c6b80a`**, and **`DEC-S-141`**, prepared by the
+  Route D Decision Integration Preparation, **became effective** at its Human-Maintainer
+  exact-object integration commit **`a61f50b14d7647de521a2cd8a42cdf18efdc7029`**: the
+  **current effective registers are 141 · 7 · 98** — **`PREPARED ≠ EFFECTIVE`** held
+  until each commit.)* **Closure was a
   separate act:** CDS-WP-001B is `Completed` / `Closed`, its closure **effective at the
   Human-Maintainer exact-object integration commit
   `17b191416031d847573687b4ebce99fcea929386`** (2026-09-29; parent
@@ -106,7 +109,19 @@ library, or a design project scoped exclusively to CoreOps.
   owner, and survives the closure. *(Additive — `F-023-01` Routing Pass, **effective** at the Human-Maintainer exact-object integration commit `563109aa80aeab02ea788fe544b1d15aa39ab78c` — superseding the closure-time `OPEN / UNRESOLVED` for current state:)* **`F-023-01` is routed to a future, separately authorized Binding-Artifact
   Representation & Ownership Decision Pass — current effective state `OPEN / ROUTED / UNRESOLVED`, no owner**;
   **`ROUTING ≠ RESOLUTION`**, **`ROUTE D ≠ F-023-01`**; the destination is not a route,
-  work package, Decision, ADR or risk, and is not authorized. *(From the CDS-WP-023 authorization of 2026-09-30
+  work package, Decision, ADR or risk, and is not authorized. *(Additive — **`DEC-S-141`**,
+  **effective** at the Human-Maintainer exact-object integration commit
+  `a61f50b14d7647de521a2cd8a42cdf18efdc7029` — superseding the closure-time register
+  count and Route D state for current state:)* **Route D is resolved by `DEC-S-141`**
+  (the CDS Resolver / Composition model is the sole normative source / authoring carrier
+  of the context-conditional mapping; resolver-schema authority stays with CDS governed
+  contract authority; the concrete schema shape is deferred); **Routes A, B and C stay
+  unresolved**; the registers are **141 · 7 · 98**; **`F-022-01` stays `OPEN`**
+  (*ownership resolved; concrete representation / schema shape pending*); **BP-4 stays
+  `Not met`**; **`F-023-01` stays `OPEN / ROUTED / UNRESOLVED`**, no owner. **No work
+  package, stage, successor or schema revision is authorized**, and current work
+  package, current design work package and successor stay **NONE**.
+  *(From the CDS-WP-023 authorization of 2026-09-30
   until the closure's effectivity at `53c1cef44d74f502beeb282e4f399b0d3744e932`,
   CDS-WP-023 was the current work package and the current design work package,
   `AUTHORIZED` / `ACTIVE FOR EXECUTION`.)*

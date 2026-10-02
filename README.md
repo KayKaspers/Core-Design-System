@@ -374,7 +374,7 @@ operating period, not a maturity state. **Foundation / Pre-Design:** Closed with
 
 | Item | State |
 | --- | --- |
-| Decisions · ADRs · Risks | **140** effective · **7** · **98** (89 `Monitored`, 9 `Mitigating`; none accepted or closed) |
+| Decisions · ADRs · Risks | **141** effective · **7** · **98** (89 `Monitored`, 9 `Mitigating`; none accepted or closed) |
 | Current work package · design work package · successor | **none** · **none** · **none** |
 | `CDS-WP-020A` — Visual Token Source Authoring | `Planned` · not authorized (staged S1 · S2 · S3; no stage authorized) |
 | `CDS-WP-023` — Semantic Status Visual Binding Contract | Closed · contract only · execution integrated at `0ea15ff0…` · closure effective at `53c1cef4…` (Human-Maintainer integration commit) · authorizes no successor |

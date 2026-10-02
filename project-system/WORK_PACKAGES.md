@@ -47,6 +47,13 @@ Controlled work-package roadmap for the Core Design System (CDS).
   `ROUTE D ≠ F-023-01`.** The destination is not a work package, not a route, not a
   Decision, ADR or risk, and not authorized; see the
   [Roadmap](../docs/roadmap/POST_CANDIDATE_DEVELOPMENT_ROADMAP.md).
+  *(Additive — **`DEC-S-141`**, **effective** at the Human-Maintainer exact-object
+  integration commit `a61f50b14d7647de521a2cd8a42cdf18efdc7029` — superseding the
+  closure-time register count for current state:)* **Route D is resolved by
+  `DEC-S-141`**, and the registers are **141 · 7 · 98**; **Routes A, B and C stay
+  unresolved**, **`F-022-01` stays `OPEN`**, **BP-4 stays `Not met`**, and **`F-023-01`
+  stays `OPEN / ROUTED / UNRESOLVED`** with no owner. **No work package, stage or
+  successor is authorized by it** — see *S3 and Route D* below.
   **Most recent closed design work package: `CDS-WP-023`** (from the closure's
   effectivity at `53c1cef44d74f502beeb282e4f399b0d3744e932`).
 - **Current work package: NONE. Current design work package: NONE. Successor: NONE**
@@ -1182,22 +1189,26 @@ Human Maintainer before the stage is authorized — never resolved by a placehol
 **S3 must not invent vocabulary.** **`AUTHOR ≠ VALIDATE`** holds in every stage:
 `CDS-WP-020A` authors sources, and **CDS-WP-024** validates them.
 
-**S3 and Route D — `DEC-S-141` prepared, not effective (2026-10-01).** *(Additive — the
-table above is not edited.)* The prepared
-[`DEC-S-141`](../docs/decisions/DECISION_INDEX.md) would, **only from its
-Human-Maintainer exact-object integration commit**, resolve the **ownership** half of
+**S3 and Route D — Route D resolved by `DEC-S-141` (2026-10-01).** *(Additive — the
+table above is not edited.)*
+[`DEC-S-141`](../docs/decisions/DECISION_INDEX.md) is **`Accepted` and effective at the
+Human-Maintainer exact-object integration commit
+`a61f50b14d7647de521a2cd8a42cdf18efdc7029`**, and **Route D is resolved by it**. From that
+commit it resolves the **ownership** half of
 the S3 gate *"resolution of the relevant `F-022-01` representation issue (Route D)"*:
 context-conditional Resolver / Composition instances are **assigned under the current
 roadmap to S3 when separately authorized** — **`ASSIGNED ≠ AUTHORIZED`** — while
 **schema authority stays with CDS governed contract authority (DEC-S-082 / DEC-S-083)**
 and **not** with `CDS-WP-020A`. **The concrete schema shape is deferred** to a
 separately authorized Elevated contract-change pass, so **S3 stays blocked** on it as
-well as on Route C and its other gates. **S1 and S2 are unchanged.** S3 must not define
-the validation contract because it authors instances, and CDS-WP-024 must not define
-the authoring contract because it validates them. **Preparing `DEC-S-141` grants no
-authorization**: **no stage is authorized**, **the status, dependencies and sequencing
-of CDS-WP-024 remain unchanged**, and **`CDS-WP-020A`, CDS-WP-024 and CDS-WP-025
-remain `Planned`, not active, and not authorized.**
+well as on Route C and its other gates — **`F-022-01` stays `OPEN`** (*ownership
+resolved; concrete representation / schema shape pending*). **S1 and S2 are unchanged.**
+S3 must not define the validation contract because it authors instances, and CDS-WP-024
+must not define the authoring contract because it validates them. **Neither preparing
+nor the effectivity of `DEC-S-141` grants authorization**: **no stage is authorized**,
+**the status, dependencies and sequencing of CDS-WP-024 remain unchanged**, **CDS-WP-025
+stays behind CDS-WP-024**, and **`CDS-WP-020A`, CDS-WP-024 and CDS-WP-025 remain
+`Planned`, not active, and not authorized.**
 
 **Stage authority.** **Every stage requires its own separate, explicit Human-Maintainer
 authorization.** Updating this contract authorizes **no** stage: **`WP REGISTERED ≠

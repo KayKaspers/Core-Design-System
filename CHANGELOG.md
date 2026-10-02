@@ -956,6 +956,30 @@ released and no release is announced.
 
 ### Changed
 
+- **`DEC-S-141` recorded as effective; Route D resolved — post-integration effectivity
+  reconciliation.** A narrow effectivity and status reconciliation, **not a work
+  package**, separately authorized by the Human Maintainer. The condition the `DEC-S-141`
+  integration object stated — its Human-Maintainer exact-object integration commit, after
+  an independent review (`REWORK REQUIRED`), the bounded rework, a final delta review
+  (reviewer ≠ executor) and Nova adjudication — was met on **2026-10-01** by commit
+  **`a61f50b14d7647de521a2cd8a42cdf18efdc7029`** (`docs(decision): establish Route D
+  ownership boundary`; tree `66ee9ebcfa113468b11adad5531a3c86d5fb91f4`; parent
+  `75f15450a1237a442f9e3b242aa6ecfb9c0bc16d`). **That commit is the authority event**;
+  the Working Tree object carried no authority before it, and this reconciliation is not
+  an effectivity event. **From it `DEC-S-141` is `Accepted` and effective and Route D is
+  resolved by `DEC-S-141`**; **the effective registers held 140 · 7 · 98 until that
+  commit and hold 141 · 7 · 98 from it.** **`F-022-01` stays `OPEN`** — disposition in
+  prose only: *ownership resolved; concrete representation / schema shape pending*; **no
+  new lifecycle state**. **`F-023-01` stays `OPEN / ROUTED / UNRESOLVED`** with no Owner
+  (**`ROUTE D ≠ F-023-01`**); **BP-4 stays `Not met`**; **Routes A, B and C stay
+  unresolved**. The maintained current-state carriers no longer describe `DEC-S-141` as
+  prepared or Route D as unresolved. It records no new Decision, ADR or risk; revises no
+  schema; changes no Binding Contract, Theme Architecture or ADR-0007 byte; activates no
+  work package and no stage; and assigns no successor — current work package, current
+  design work package and successor stay **NONE**, and **`CDS-WP-020A`**, **CDS-WP-024**
+  and **CDS-WP-025** remain `Planned`, not active, and not authorized. Publication stays
+  `Private Development`, with no tag and no release. The historical prepared-object entry
+  under *Added* is not rewritten. (`DEC-S-141` Effectivity Reconciliation)
 - **`F-023-01` routing recorded as effective — post-integration effectivity
   reconciliation.** A narrow, Standard-track, non-semantic effectivity pass, **not a
   work package**. The condition the `F-023-01` routing object stated — its

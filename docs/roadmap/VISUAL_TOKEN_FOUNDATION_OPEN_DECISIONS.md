@@ -143,6 +143,14 @@ the finding it belongs to. **No route is authorized, and no answer is recorded h
 The OD-1, OD-2 and migration-mechanism residuals keep their 2026-09-05 state and are
 **not** routed by this pass.
 
+*(Additive status note — 2026-10-01. Non-normative; the
+[Decision Index](../decisions/DECISION_INDEX.md) is the authority.)* **Route D's
+ownership question is resolved by `DEC-S-141`**, effective at the Human-Maintainer
+exact-object integration commit `a61f50b14d7647de521a2cd8a42cdf18efdc7029`. **`F-022-01`
+itself stays `OPEN`** — *ownership resolved; concrete representation / schema shape
+pending*. **Routes A, B and C** and every residual in the tables above keep their state,
+and **no route, stage or work package is authorized**.
+
 ## Register state — 2026-08-27
 
 *(Preserved point-in-time record. It was true when written and is **not** rewritten

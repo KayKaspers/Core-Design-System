@@ -128,7 +128,14 @@ AUTHORIZED`**. *(Additive — `F-023-01` Routing Pass, **effective** at the Huma
 is routed to a future, separately authorized Binding-Artifact Representation &
 Ownership Decision Pass — current effective state `OPEN / ROUTED / UNRESOLVED`, no owner**; **`ROUTING ≠
 RESOLUTION`**, **`ROUTE D ≠ F-023-01`**; not a route, work package, Decision, ADR or
-risk, and not authorized.
+risk, and not authorized. *(Additive — **`DEC-S-141`**, **effective** at the
+Human-Maintainer exact-object integration commit
+`a61f50b14d7647de521a2cd8a42cdf18efdc7029` — superseding the closure-time Route D state
+and register count for current state:)* **Route D is resolved by `DEC-S-141`**; **Routes
+A, B and C stay unresolved**; **141 · 7 · 98**; **`F-022-01` stays `OPEN`** (*ownership
+resolved; concrete representation / schema shape pending*); **BP-4 stays `Not met`**;
+**`F-023-01` stays `OPEN / ROUTED / UNRESOLVED`**, no owner. No work package, stage,
+successor or schema revision is authorized.
 *(Summary only — the normative source wins.)*
 
 **No design work package was authorized** from the Human-Maintainer exact-object
@@ -443,14 +450,17 @@ and reference the normative policies; they do not replace them (DEC-S-063):
 
 ## Active decisions
 
-- Range: DEC-S-001 … DEC-S-140 · Count: 140 · ADRs: 7 (ADR-0001, ADR-0002,
-  ADR-0003, ADR-0004, ADR-0005, ADR-0006, ADR-0007) — **DEC-S-140 was prepared by the
+- Range: DEC-S-001 … DEC-S-141 · Count: 141 · ADRs: 7 (ADR-0001, ADR-0002,
+  ADR-0003, ADR-0004, ADR-0005, ADR-0006, ADR-0007) — **DEC-S-141 was prepared by the
+  Route D Decision Integration Preparation and became effective at its Human-Maintainer
+  exact-object integration commit `a61f50b14d7647de521a2cd8a42cdf18efdc7029`** (the count
+  was 140 until then); **DEC-S-140 was prepared by the
   Post-WP-022 Decision & Contract Integration Pass and became effective at that pass's
   integration commit `e87ff702f8d96a8850b18b93454028a094c6b80a`** (the count was 139
   until then); **DEC-S-139 was prepared by
   CDS-WP-001B and became effective at that package's integration commit
   `daa5f114c1b9c02afcfc0205149ca00dc4801d8d`** (the count was 138 until then)
-- **Effective range: DEC-S-001 … DEC-S-140 · Count: 140 · All Accepted · ADRs: 7.**
+- **Effective range: DEC-S-001 … DEC-S-141 · Count: 141 · All Accepted · ADRs: 7.**
   **DEC-S-128 … DEC-S-131 and ADR-0004 are effective** at the Human-Maintainer
   exact-byte integration commit `42a568d823de3388e45af62967546f13ad67eff6` of the
   CDS-WP-020 Decision Integration Pass; **DEC-S-132 … DEC-S-135 and ADR-0005 are
